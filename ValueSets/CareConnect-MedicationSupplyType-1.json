@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-29T01:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationSupplyType-1",
+  "name": "CareConnect-MedicationSupplyType-1",
+  "status": "draft",
+  "publisher": "HL7 UK",
+  "description": "Indicates the legal/contractual nature of a prescription. This valueset references the vocabulary for EhrSupplyType in the NPfIT Message Implementation Manual 7.2.02.",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "codeSystem": {
+    "system": "http://snomed.info/sct",
+    "concept": [
+      {
+        "code": "394823007",
+        "display": "NHS Prescription"
+      },
+      {
+        "code": "394824001",
+        "display": "Private Prescription"
+      },
+      {
+        "code": "394825000",
+        "display": "ACBS Prescription"
+      },
+      {
+        "code": "394826004",
+        "display": "OTC sale"
+      },
+      {
+        "code": "394827008",
+        "display": "Personal Administration"
+      }
+    ]
+  }
+}

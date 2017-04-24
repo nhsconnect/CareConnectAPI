@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.2.1.3.2.4.16.25"
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-PersonStatedGender-DDMAP-1",
+  "version": "1.0.0",
+  "name": "Person Stated Gender Code NHS Data Model and Dictionary",
+  "status": "active",
+  "publisher": "HL7 UK",
+  "description": "Person Stated Gender Code is self declared or inferred by observation for those unable to declare their Person Stated Gender.",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-PersonStatedGender-DDMAP-1",
+    "concept": [
+      {
+        "code": "1",
+        "display": "Male"
+      },
+      {
+        "code": "2",
+        "display": "Female"
+      },
+      {
+        "code": "9",
+        "display": "Indeterminate (unable to be classified as either male or female)"
+      },
+      {
+        "code": "X",
+        "display": "Not Known (not recorded)"
+      }
+    ]
+  }
+}

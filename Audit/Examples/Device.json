@@ -1,0 +1,25 @@
+{
+  "resourceType": "Device",
+  "id": "009f0bf0-d434-11e6-9598-0800200c9a66",
+  "meta": {
+    "profile": [
+      "https://fhir.nhs.uk/StructureDefinition/audit-device-1"
+    ]
+  },
+  "identifier": [
+    {
+      "id": "0b7677c0-d434-11e6-9598-0800200c9a66"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "462240000",
+        "display": "Patient health record information system (physical object)"
+      }
+    ]
+  },
+  "model": "AA 1001-C",
+  "version": "8.15-04"
+}

@@ -1,0 +1,303 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2015-11-01T10:00:00+00:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-sourceReference",
+      "valueUri": "http://www.datadictionary.nhs.uk/data_dictionary/data_field_notes/p/pds/pds_ethnic_category_code_de.asp?shownav=0"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.2.1.3.2.4.16.6"
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-EthnicCategory-1",
+  "version": "1.0.0",
+  "name": "Care Connect Ethnic Category",
+  "status": "active",
+  "publisher": "HL7 UK",
+  "description": "The vocabulary describes the ethnic category which the patient regards as their own, designed to be used with later versions of PDS. It is an extension of the ETHNIC CATEGORY CODE described in the NHS Data Model and Dictionary for England.",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1",
+    "concept": [
+      {
+        "code": "A",
+        "display": "British, Mixed British"
+      },
+      {
+        "code": "B",
+        "display": "Irish"
+      },
+      {
+        "code": "C",
+        "display": "Any other White background"
+      },
+      {
+        "code": "C2",
+        "display": "Northern Irish"
+      },
+      {
+        "code": "C3",
+        "display": "Other white, white unspecified"
+      },
+      {
+        "code": "CA",
+        "display": "English"
+      },
+      {
+        "code": "CB",
+        "display": "Scottish"
+      },
+      {
+        "code": "CC",
+        "display": "Welsh"
+      },
+      {
+        "code": "CD",
+        "display": "Cornish"
+      },
+      {
+        "code": "CE",
+        "display": "Cypriot (part not stated)"
+      },
+      {
+        "code": "CF",
+        "display": "Greek"
+      },
+      {
+        "code": "CG",
+        "display": "Greek Cypriot"
+      },
+      {
+        "code": "CH",
+        "display": "Turkish"
+      },
+      {
+        "code": "CJ",
+        "display": "Turkish Cypriot"
+      },
+      {
+        "code": "CK",
+        "display": "Italian"
+      },
+      {
+        "code": "CL",
+        "display": "Irish Traveller"
+      },
+      {
+        "code": "CM",
+        "display": "Traveller"
+      },
+      {
+        "code": "CN",
+        "display": "Gypsy/Romany"
+      },
+      {
+        "code": "CP",
+        "display": "Polish"
+      },
+      {
+        "code": "CQ",
+        "display": "All republics which made up the former USSR"
+      },
+      {
+        "code": "CR",
+        "display": "Kosovan"
+      },
+      {
+        "code": "CS",
+        "display": "Albanian"
+      },
+      {
+        "code": "CT",
+        "display": "Bosnian"
+      },
+      {
+        "code": "CU",
+        "display": "Croatian"
+      },
+      {
+        "code": "CV",
+        "display": "Serbian"
+      },
+      {
+        "code": "CW",
+        "display": "Other republics which made up the former Yugoslavia"
+      },
+      {
+        "code": "CX",
+        "display": "Mixed white"
+      },
+      {
+        "code": "CY",
+        "display": "Other white European, European unspecified, European mixed"
+      },
+      {
+        "code": "D",
+        "display": "White and Black Caribbean"
+      },
+      {
+        "code": "E",
+        "display": "White and Black African"
+      },
+      {
+        "code": "F",
+        "display": "White and Asian"
+      },
+      {
+        "code": "G",
+        "display": "Any other mixed background"
+      },
+      {
+        "code": "GA",
+        "display": "Black and Asian"
+      },
+      {
+        "code": "GB",
+        "display": "Black and Chinese"
+      },
+      {
+        "code": "GC",
+        "display": "Black and White"
+      },
+      {
+        "code": "GD",
+        "display": "Chinese and White"
+      },
+      {
+        "code": "GE",
+        "display": "Asian and Chinese"
+      },
+      {
+        "code": "GF",
+        "display": "Other Mixed, Mixed Unspecified"
+      },
+      {
+        "code": "H",
+        "display": "Indian or British Indian"
+      },
+      {
+        "code": "J",
+        "display": "Pakistani or British Pakistani"
+      },
+      {
+        "code": "K",
+        "display": "Bangladeshi or British Bangladeshi"
+      },
+      {
+        "code": "L",
+        "display": "Any other Asian background"
+      },
+      {
+        "code": "LA",
+        "display": "Mixed Asian"
+      },
+      {
+        "code": "LB",
+        "display": "Punjabi"
+      },
+      {
+        "code": "LC",
+        "display": "Kashmiri"
+      },
+      {
+        "code": "LD",
+        "display": "East African Asian"
+      },
+      {
+        "code": "LE",
+        "display": "Sri Lanka"
+      },
+      {
+        "code": "LF",
+        "display": "Tamil"
+      },
+      {
+        "code": "LG",
+        "display": "Sinhalese"
+      },
+      {
+        "code": "LH",
+        "display": "British Asian"
+      },
+      {
+        "code": "LJ",
+        "display": "Caribbean Asian"
+      },
+      {
+        "code": "LK",
+        "display": "Other Asian, Asian unspecified"
+      },
+      {
+        "code": "M",
+        "display": "Caribbean"
+      },
+      {
+        "code": "N",
+        "display": "African"
+      },
+      {
+        "code": "P",
+        "display": "Any other Black background"
+      },
+      {
+        "code": "PA",
+        "display": "Somali"
+      },
+      {
+        "code": "PB",
+        "display": "Mixed Black"
+      },
+      {
+        "code": "PC",
+        "display": "Nigerian"
+      },
+      {
+        "code": "PD",
+        "display": "Black British"
+      },
+      {
+        "code": "PE",
+        "display": "Other Black, Black unspecified"
+      },
+      {
+        "code": "R",
+        "display": "Chinese"
+      },
+      {
+        "code": "S",
+        "display": "Any other ethnic group"
+      },
+      {
+        "code": "SA",
+        "display": "Vietnamese"
+      },
+      {
+        "code": "SB",
+        "display": "Japanese"
+      },
+      {
+        "code": "SC",
+        "display": "Filipino"
+      },
+      {
+        "code": "SD",
+        "display": "Malaysian"
+      },
+      {
+        "code": "SE",
+        "display": "Any Other Group"
+      },
+      {
+        "code": "Z",
+        "display": "Not stated"
+      }
+    ]
+  }
+}

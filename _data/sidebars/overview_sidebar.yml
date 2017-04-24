@@ -1,0 +1,127 @@
+entries:
+- title: Care Connect
+  product: Care Connect<br/>
+  version: 1.0.0-alpha.1
+  levels: one
+  folders:
+
+  - title: Overview
+    output: web
+    folderitems:
+    - title: Introduction
+      url: /index.html
+      output: web, pdf
+      type: homepage
+    - title: Glossary
+      url: /overview_glossary.html
+      output: web
+
+  - title: Design Approach
+    output: web
+    folderitems:
+    - title: Development Roadmap
+      url: /design_development_roadmap.html
+      output: web
+    - title: Product Versioning
+      url: /design_product_versioning.html
+      output: web
+
+  - title: Development Guidance
+    output: web
+    folderitems:
+    - title: Development Assets
+      url: /development_deliverables.html
+      output: web
+    - title: API Foundations
+      url: /foundations.html
+      output: web
+    - title: FHIR&reg; API Use Cases
+      url: /foundations_use_case_api.html
+      output: web
+      subfolders:
+      - title: RESTful FHIR&reg; APIs
+        output: web
+        subfolderitems:
+
+        - title: Allergy Intolerance
+          url: /restfulapis_allergyintolerance.html
+          output: web
+        - title: Condition
+          url: /restfulapis_condition.html
+          output: web
+        - title: Encounter
+          url: /restfulapis_encounter.html  
+          output: web          
+        - title: Immunization
+          url: /restfulapis_immunization.html
+          output: web
+        - title: Medication Order
+          url: /restfulapis_medicationorder.html
+          output: web
+        - title: Medication Statement
+          url: /restfulapis_medicationstatement.html
+          output: web
+        - title: Observation
+          url: /restfulapis_observation.html
+          output: web
+        - title: Procedure
+          url: /restfulapis_procedure.html
+          output: web         
+          
+    - title: FHIR&reg; Conformance Profile
+      url: /foundations_use_case_get_the_fhir_conformance_profile.html
+      output: web
+      
+      subfolders:
+      - title: FHIR&reg; API Guidance
+        output: web
+        subfolderitems:
+
+        - title: Open Source
+          url: /development_fhir_open_source_guidance.html
+          output: web
+        - title: Security Guidance
+          url: /development_api_security_guidance.html
+          output: web
+          
+  - title: Integrate With Spine
+    output: web
+    folderitems:
+    - title: Cross Org Audit & Provenance
+      url: /integration_cross_organisation_audit_and_provenance.html
+      output: web
+    - title: Personal Demographic Service
+      url: /integration_personal_demographic_service.html
+      output: web	
+    - title: Spine Directory Services
+      url: /integration_spine_directory_service.html
+      output: web
+ 
+  - title: Help & Support
+    output: web
+    folderitems:
+    - title: Frequently Asked Questions (FAQ)
+      url: /support_faq.html
+      output: web
+    - title: Communication Channels
+      url: /support_communications.html
+      output: web
+
+  - title: Tags
+    output: web
+    folderitems:
+    - title: Introduction
+      url: /tag_overview.html
+      output: web
+    - title: FHIR&reg;
+      url: /tag_fhir.html
+      output: web
+    - title: Use Case
+      url: /tag_use_case.html
+      output: web
+    - title: Design
+      url: /tag_design.html
+      output: web	  
+    - title: Development
+      url: /tag_development.html
+      output: web

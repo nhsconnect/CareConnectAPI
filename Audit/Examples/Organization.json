@@ -1,0 +1,16 @@
+{
+  "resourceType": "Organization",
+  "id": "1a9f3c50-d434-11e6-9598-0800200c9a66",
+  "meta": {
+    "profile": [
+      "https://fhir.nhs.uk/StructureDefinition/audit-organization-1"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+      "value": "R1A02"
+    }
+  ],
+  "name": "King's College Hospital"
+}

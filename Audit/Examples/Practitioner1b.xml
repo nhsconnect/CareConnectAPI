@@ -1,0 +1,15 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+	<id value="3516e6a0-d434-11e6-9598-0800200c9a66"/>
+	<meta>
+		<profile value="https://fhir.nhs.uk/StructureDefinition/audit-practitioner-1"/>
+	</meta>
+	<identifier>
+		<system value="https://fhir.nhs.uk/Id/local-practitioner-identifier"/>
+		<value value="123456"/>
+	</identifier>
+	<practitionerRole>
+		<managingOrganization>
+			<reference value="Organization/1a9f3c50-d434-11e6-9598-0800200c9a66"/>
+		</managingOrganization>
+	</practitionerRole>
+</Practitioner>

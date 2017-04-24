@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-RegistrationStatus-1",
+  "version": "1.0.0",
+  "name": "Care Connect Registration Status",
+  "status": "active",
+  "publisher": "HL7 UK",
+  "description": "A vocabulary that identifies the status of registration for a patient at the healthcare organisation.",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-RegistrationStatus-1",
+    "concept": [
+      {
+        "code": "A",
+        "display": "Active"
+      },
+      {
+        "code": "D",
+        "display": "Deduction Pending"
+      },
+      {
+        "code": "I",
+        "display": "Inactive"
+      },
+      {
+        "code": "R",
+        "display": "Registration Pending"
+      }
+    ]
+  }
+}

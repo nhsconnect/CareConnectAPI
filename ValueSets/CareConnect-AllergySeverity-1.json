@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-AllergySeverity-1",
+  "name": "CareConnect-AllergySeverity-1",
+  "status": "draft",
+  "publisher": "HL7 UK",
+  "description": "A code from the SNOMED Clinical Terminology UK coding system that describes the severity of an allergy.",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "255604002",
+            "display": "Mild (qualifier value)"
+          },
+          {
+            "code": "6736007",
+            "display": "Moderate (severity modifier) (qualifier value)"
+          },
+          {
+            "code": "24484000",
+            "display": "Mild (qualifier value)"
+          },
+          {
+            "code": "255604002",
+            "display": "Severe (severity modifier) (qualifier value)"
+          },
+          {
+            "code": "399166001",
+            "display": "Fatal (qualifier value)"
+          }
+        ]
+      }
+    ]
+  }
+}

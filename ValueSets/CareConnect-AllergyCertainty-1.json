@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-AllergyCertainty-1",
+  "name": "CareConnect-AllergyCertainty-1",
+  "status": "draft",
+  "publisher": "HL7 UK",
+  "description": "A code from the SNOMED Clinical Terminology UK coding system that describes the certainty of an allergy.",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "1491118016",
+            "display": "Unlikely [The reaction is thought unlikely to have been caused by the agent.]"
+          },
+          {
+            "code": "5961011",
+            "display": "Likely [The reaction is thought likely to have been caused by the agent.]"
+          },
+          {
+            "code": "255545003",
+            "display": "Definite (qualifier value)"
+          },
+          {
+            "code": "410605003",
+            "display": "(Confirmed present (qualifier value))"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "resourceType": "Patient",
+  "id": "29d2d650-d434-11e6-9598-0800200c9a66",
+  "meta": {
+    "profile": [
+      "https://fhir.nhs.uk/StructureDefinition/audit-patient-1"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://fhir.nhs.uk/Id/nhs-number",
+      "value": "9900002831"
+    }
+  ]
+}

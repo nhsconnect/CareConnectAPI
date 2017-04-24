@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-TreatmentCategory-1",
+  "version": "1.0.0",
+  "name": "Care Connect Treatment Category",
+  "status": "active",
+  "publisher": "HL7 UK",
+  "description": "A vocabulary that identifies the treatment category for this patient. ",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-TreatmentCategory-1",
+    "concept": [
+      {
+        "code": "1",
+        "display": "Exempt from payment - subject to reciprocal health agreement"
+      },
+      {
+        "code": "2",
+        "display": "Exempt from payment - other"
+      },
+      {
+        "code": "3",
+        "display": "To pay hotel fees only"
+      },
+      {
+        "code": "4",
+        "display": "To pay all fees"
+      },
+      {
+        "code": "9",
+        "display": "Charging rate not known"
+      },
+      {
+        "code": "8",
+        "display": "Not applicable",
+        "definition": "Not an Overseas Visitor"
+      }
+    ]
+  }
+}

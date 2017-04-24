@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-29T01:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-ConditionClinicalStatus-1",
+  "name": "CareConnect-ConditionClinicalStatus-1",
+  "status": "draft",
+  "publisher": "HL7 UK",
+  "description": "Condition Clinical Status codes.",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-ConditionClinicalStatus",
+    "concept": [
+      {
+        "code": "active",
+        "display": "Active",
+        "definition": "The subject is currently experiencing the symptoms of the condition."
+      },
+      {
+        "code": "inactive",
+        "display": "Inactive",
+        "definition": "The subject is either in remission or resolved."
+      },
+      {
+        "code": "relapse",
+        "display": "Relapse",
+        "definition": "The subject is re-experiencing the symptoms of the condition after a period of remission or presumed resolution."
+      },
+      {
+        "code": "remission",
+        "display": "Remission",
+        "definition": "The subject is no longer experiencing the symptoms of the condition, but there is a risk of the symptoms returning."
+      },
+      {
+        "code": "resolved",
+        "display": "Resolved",
+        "definition": "The subject is no longer experiencing the symptoms of the condition and there is no perceived risk of the symptoms returning"
+      }
+    ]
+  }
+}

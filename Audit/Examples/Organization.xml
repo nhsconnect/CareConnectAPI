@@ -1,0 +1,1 @@
+<Organization xmlns="http://hl7.org/fhir"><id value="1a9f3c50-d434-11e6-9598-0800200c9a66" /><meta><profile value="https://fhir.nhs.uk/StructureDefinition/audit-organization-1" /></meta><identifier><system value="https://fhir.nhs.uk/Id/ods-organization-code" /><value value="R1A02" /></identifier><name value="King's College Hospital" /></Organization>

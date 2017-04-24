@@ -1,0 +1,22 @@
+{
+  "resourceType": "Practitioner",
+  "id": "3516e6a0-d434-11e6-9598-0800200c9a66",
+  "meta": {
+    "profile": [
+      "https://fhir.nhs.uk/StructureDefinition/audit-practitioner-1"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://fhir.nhs.uk/Id/local-practitioner-identifier",
+      "value": "123456"
+    }
+  ],
+  "practitionerRole": [
+    {
+      "managingOrganization": {
+        "reference": "Organization/1a9f3c50-d434-11e6-9598-0800200c9a66"
+      }
+    }
+  ]
+}

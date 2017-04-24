@@ -1,0 +1,15 @@
+{
+  "resourceType": "Practitioner",
+  "id": "3516e6a0-d434-11e6-9598-0800200c9a66",
+  "meta": {
+    "profile": [
+      "https://fhir.nhs.uk/StructureDefinition/audit-practitioner-1"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
+      "value": "PW1357"
+    }
+  ]
+}

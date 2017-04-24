@@ -1,0 +1,28 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.2.1.3.2.4.17.196"
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-SDSJobRoleName-1",
+  "version": "1.0.0",
+  "name": "Care Connect SDS Job Role Name",
+  "status": "active",
+  "description": "A set of RBAC codes to indicate the job role associated with the person on the smart card. This code list is externally maintained.",
+  "requirements": "This ValueSet has an inline code system: 'https://fhir.hl7.org.uk/CareConnect-SDSJobRoleName-1'.",
+  "compose": {
+    "import": [
+      "http://systems.hscic.gov.uk/rasmartcards/planning/rbacoutline"
+    ],
+    "include": [
+      {
+        "system": "https://fhir.hl7.org.uk/CareConnect-SDSJobRoleName-1"
+      }
+    ]
+  }
+}

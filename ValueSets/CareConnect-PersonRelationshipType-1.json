@@ -1,0 +1,240 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.2.1.3.2.4.16.45"
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-PersonRelationshipType-1",
+  "version": "1.0.0",
+  "name": "Care Connect Person Relationship Type",
+  "status": "active",
+  "publisher": "HL7 UK",
+  "description": "A relationship between one person and another. These relationships are not necessarily mutually exclusive, for example a parent may be a child's next of kin. Includes the set of values defined in e-GIF Person Relationship Type",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-PersonRelationshipType-1",
+    "concept": [
+      {
+        "code": "01",
+        "display": "Spouse"
+      },
+      {
+        "code": "02",
+        "display": "Partner"
+      },
+      {
+        "code": "03",
+        "display": "Parent"
+      },
+      {
+        "code": "04",
+        "display": "Next of kin"
+      },
+      {
+        "code": "05",
+        "display": "Guardian",
+        "definition": "Other than a parent"
+      },
+      {
+        "code": "06",
+        "display": "Foster parent"
+      },
+      {
+        "code": "07",
+        "display": "Step parent"
+      },
+      {
+        "code": "08",
+        "display": "Polygamous partner"
+      },
+      {
+        "code": "09",
+        "display": "Child"
+      },
+      {
+        "code": "10",
+        "display": "Dependant"
+      },
+      {
+        "code": "11",
+        "display": "Non-dependant"
+      },
+      {
+        "code": "12",
+        "display": "Mother"
+      },
+      {
+        "code": "13",
+        "display": "Father"
+      },
+      {
+        "code": "14",
+        "display": "Sister"
+      },
+      {
+        "code": "15",
+        "display": "Brother"
+      },
+      {
+        "code": "16",
+        "display": "Relative"
+      },
+      {
+        "code": "17",
+        "display": "Proxy - Contact"
+      },
+      {
+        "code": "18",
+        "display": "Proxy - Communication"
+      },
+      {
+        "code": "19",
+        "display": "Proxy - Contact and Communication"
+      },
+      {
+        "code": "20",
+        "display": "Carer"
+      },
+      {
+        "code": "21",
+        "display": "Self"
+      },
+      {
+        "code": "98",
+        "display": "Not Known"
+      },
+      {
+        "code": "99",
+        "display": "Not specified"
+      },
+      {
+        "code": "22",
+        "display": "Wife"
+      },
+      {
+        "code": "23",
+        "display": "Husband"
+      },
+      {
+        "code": "24",
+        "display": "Maternal Grand-Father"
+      },
+      {
+        "code": "25",
+        "display": "Maternal Grand-Mother"
+      },
+      {
+        "code": "26",
+        "display": "Paternal Grand-Father"
+      },
+      {
+        "code": "27",
+        "display": "Paternal Grand-Mother"
+      },
+      {
+        "code": "28",
+        "display": "Grand-Son"
+      },
+      {
+        "code": "29",
+        "display": "Grand-Daughter"
+      },
+      {
+        "code": "30",
+        "display": "Aunt"
+      },
+      {
+        "code": "31",
+        "display": "Uncle"
+      },
+      {
+        "code": "32",
+        "display": "Niece"
+      },
+      {
+        "code": "33",
+        "display": "Nephew"
+      },
+      {
+        "code": "34",
+        "display": "Step-Mother"
+      },
+      {
+        "code": "35",
+        "display": "Step-Father"
+      },
+      {
+        "code": "36",
+        "display": "Step-Son"
+      },
+      {
+        "code": "37",
+        "display": "Step-Daughter"
+      },
+      {
+        "code": "38",
+        "display": "Civil Partner"
+      },
+      {
+        "code": "39",
+        "display": "Ex-Wife"
+      },
+      {
+        "code": "40",
+        "display": "Ex-Husband"
+      },
+      {
+        "code": "41",
+        "display": "Ex-Civil Partner"
+      },
+      {
+        "code": "42",
+        "display": "Son"
+      },
+      {
+        "code": "43",
+        "display": "Daughter"
+      },
+      {
+        "code": "44",
+        "display": "Grandparent"
+      },
+      {
+        "code": "45",
+        "display": "Grandchild"
+      },
+      {
+        "code": "46",
+        "display": "Friend"
+      },
+      {
+        "code": "47",
+        "display": "Neighbour"
+      },
+      {
+        "code": "48",
+        "display": "Work Colleague"
+      },
+      {
+        "code": "49",
+        "display": "Person with Parental Responsibility"
+      },
+      {
+        "code": "50",
+        "display": "Informal Partner"
+      },
+      {
+        "code": "51",
+        "display": "Non-relative lived with for at least 5 years"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-29T01:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-ConditionCategory-1",
+  "name": "CareConnect-ConditionCategory-1",
+  "status": "draft",
+  "publisher": "HL7 UK",
+  "description": "Condition category codes.",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-ConditionCategory-1",
+    "concept": [
+      {
+        "code": "complaint",
+        "display": "Complaint"
+      },
+      {
+        "code": "symptom",
+        "display": "Symptom"
+      },
+      {
+        "code": "finding",
+        "display": "Finding"
+      },
+      {
+        "code": "diagnosis",
+        "display": "Diagnosis"
+      },
+      {
+        "code": "problem",
+        "display": "Problem"
+      },
+      {
+        "code": "need",
+        "display": "Need"
+      }
+    ]
+  }
+}

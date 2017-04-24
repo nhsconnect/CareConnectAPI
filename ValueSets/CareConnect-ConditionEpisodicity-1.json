@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-29T01:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-ConditionEpisodicity-1",
+  "name": "CareConnect-ConditionEpisodicity-1",
+  "status": "draft",
+  "publisher": "HL7 UK",
+  "description": "Specifies the episodicity of a condition.",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-ConditionEpisodicity",
+    "concept": [
+      {
+        "code": "first",
+        "display": "First",
+        "definition": "The first episode of a condition."
+      },
+      {
+        "code": "new",
+        "display": "New",
+        "definition": "A new episode of a previously recorded condition."
+      },
+      {
+        "code": "review",
+        "display": "Review",
+        "definition": "A review of an existing condition episode."
+      },
+      {
+        "code": "flare",
+        "display": "Flare",
+        "definition": "A flare-up of an existing condition episode."
+      },
+      {
+        "code": "end",
+        "display": "End",
+        "definition": "Marks the end of an existing condition episode."
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+allowed-tags:
+  - overview
+  - usecase
+  - fhir
+  - design  
+  - development

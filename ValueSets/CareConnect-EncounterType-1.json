@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-EncounterType-1",
+  "version": "1.0.0",
+  "name": "Care Connect Encounter Type",
+  "status": "active",
+  "publisher": "HL7 UK",
+  "description": "A code from the SNOMED Clinical Terminology UK coding system that describes an encounter between a care professional and the patient (or patient's record). The patient may be represented by a third party such as a carer or family member. Any code from the SNOMED CT UK 'Encounter Type' subset with subset original id 1341000000130; the corresponding SNOMED CT UK Refset fully specified name is 'Clinical document architecture encounter type simple reference set (foundation metadata concept)' with Refset Id 999000351000000101.",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "in",
+            "value": "999000351000000101"
+          }
+        ]
+      }
+    ]
+  }
+}

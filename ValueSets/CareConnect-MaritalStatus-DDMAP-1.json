@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.2.1.3.2.4.16.82"
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-MaritalStatus-DDMAP-1",
+  "name": "Marital Status NHS Data Model and Dictionary",
+  "status": "active",
+  "publisher": "HL7 UK",
+  "description": "A vocabulary that identifies the legal marital status of a person. This value set references the Person Marital Status Code from the NHS Data Model and Dictionary.",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-MaritalStatus-DDMAP-1",
+    "concept": [
+      {
+        "code": "S",
+        "display": "Single"
+      },
+      {
+        "code": "M",
+        "display": "Married/Civil Partner"
+      },
+      {
+        "code": "D",
+        "display": "Divorced/Person whose Civil Partnership has been dissolved"
+      },
+      {
+        "code": "W",
+        "display": "Widowed/Surviving Civil Partner"
+      },
+      {
+        "code": "P",
+        "display": "Separated"
+      },
+      {
+        "code": "N",
+        "display": "Not disclosed"
+      }
+    ]
+  }
+}

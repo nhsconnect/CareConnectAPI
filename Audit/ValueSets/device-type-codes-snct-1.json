@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "url": "https://fhir.nhs.uk/ValueSet/device-type-codes-snct-1",
+  "name": "Device Type Codes SnCT",
+  "status": "active",
+  "description": "The following SNOMED CT Concept ID has been proposed to classify the type of device.",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "462240000",
+            "display": "Patient health record information system (physical object)"
+          }
+        ]
+      }
+    ]
+  }
+}

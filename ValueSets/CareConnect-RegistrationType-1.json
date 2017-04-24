@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-RegistrationType-1",
+  "version": "1.0.0",
+  "name": "Care Connect Registration Type",
+  "status": "active",
+  "publisher": "HL7 UK",
+  "description": "A vocabulary that identifies the type of registration for a patient at a healthcare organisation.",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-RegistrationType-1",
+    "concept": [
+      {
+        "code": "R",
+        "display": "Regular"
+      },
+      {
+        "code": "E",
+        "display": "Emergency"
+      },
+      {
+        "code": "IN",
+        "display": "Immediately necessary"
+      },
+      {
+        "code": "T",
+        "display": "Temporary"
+      },
+      {
+        "code": "P",
+        "display": "Private"
+      },
+      {
+        "code": "O",
+        "display": "Other"
+      },
+      {
+        "code": "S",
+        "display": "Synthetic Record"
+      }
+    ]
+  }
+}

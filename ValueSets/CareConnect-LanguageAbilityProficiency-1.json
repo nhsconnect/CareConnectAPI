@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+      "valueUri": "urn:oid:2.16.840.1.113883.5.61"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-LanguageAbilityProficiency-1",
+  "version": "1.0.0",
+  "name": "Care Connect Language Ability Proficiency",
+  "status": "active",
+  "description": "A valueset to describe the level of proficiency in communicating a language.",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-LanguageAbilityProficiency-1",
+    "concept": [
+      {
+        "code": "E",
+        "display": "Excellent"
+      },
+      {
+        "code": "F",
+        "display": "Fair"
+      },
+      {
+        "code": "G",
+        "display": "Good"
+      },
+      {
+        "code": "P",
+        "display": "Poor"
+      }
+    ]
+  }
+}

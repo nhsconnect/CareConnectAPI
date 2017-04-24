@@ -1,0 +1,1 @@
+<Patient xmlns="http://hl7.org/fhir"><id value="29d2d650-d434-11e6-9598-0800200c9a66" /><meta><profile value="https://fhir.nhs.uk/StructureDefinition/audit-patient-1" /></meta><identifier><system value="https://fhir.nhs.uk/Id/nhs-number" /><value value="9900002831" /></identifier></Patient>

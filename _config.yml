@@ -1,0 +1,117 @@
+
+output: web
+# this property is useful for conditional filtering of content that is separate from the PDF.
+
+topnav_title: Care Connect  FHIR&reg; API
+# this appears on the top navigation bar next to the home button
+
+site_title: Care Connect
+# this appears in the html browser tab for the site title (seen mostly by search engines, not users)
+
+company_name: NHS Digital
+# this appears in the footer
+
+github_editme_path: /edit/master/
+# if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
+
+#disqus: true
+#disqus_shortname: disqus_shortname
+
+#gitter: true
+#gitter_room: gitter_account/gitter_room
+
+#tiny_letter: true
+#tiny_letter_username: tiny_letter_username
+
+#twitter: true
+#twitter_username: twitter_username
+#twitter_site_hashtags: twitter_site_hashtags
+
+host: 127.0.0.1
+# the preview server used. Leave as is.
+
+port: 4005
+# the port where the preview is rendered. You can leave this as is unless you have other Jekyll builds using this same port that might cause conflicts. in that case, use another port such as 4006.
+
+exclude:
+  - .vscode/
+  - .idea/
+  - .gitignore
+# these are the files and directories that jekyll will exclude from the build
+
+feedback_email: dummy@nhs.net
+# used as a contact email for the Feedback link in the top navigation bar
+
+feedback_disable: true
+# if you uncomment the previous line, the Feedback link gets removed
+
+# feedback_text: "Need help?"
+# if you uncomment the previous line, it changes the Feedback text
+
+# feedback_link: "http://helpy.io/"
+# if you uncomment the previous line, it changes where the feedback link points to
+
+highlighter: rouge
+# library used for syntax highlighting
+
+markdown: kramdown
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge
+# filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways	
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+      sidebar: overview_sidebar
+
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      search: true
+      sidebar: overview_sidebar
+
+# these are defaults used for the frontmatter for these file types
+
+sidebars:
+- overview_sidebar
+- overview_sidebar
+- designprinciples_sidebar
+- accessrecord_sidebar
+- appointments_sidebar
+- tasks_sidebar
+
+description: "Description of the site."
+# the description is used in the feed.xml file
+
+sitemap: true
+
+# needed for sitemap.xml file only
+url: https://nhsconnect.github.io/CareConnectAPI
+
+repository: nhsconnect/CareConnectAPI
+
+gist:
+  noscript: false
+
+gems:
+   - jekyll-github-metadata
+   - jekyll-mentions
+   - jemoji
+   - jekyll-redirect-from
+   - jekyll-seo-tag
+   - jekyll-sitemap
+   - jekyll-feed
+   - jekyll-gist

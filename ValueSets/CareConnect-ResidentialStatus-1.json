@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-03T00:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-ResidentialStatus-1",
+  "version": "1.0.0",
+  "name": "Care Connect Residential Status",
+  "status": "active",
+  "publisher": "HL7 UK",
+  "description": "A vocabulary that identifies the residential status of a patient. ",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-ResidentialStatus-1",
+    "concept": [
+      {
+        "code": "H",
+        "display": "UK Resident"
+      },
+      {
+        "code": "O",
+        "display": "Overseas Resident"
+      }
+    ]
+  }
+}

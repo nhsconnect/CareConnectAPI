@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2016-08-29T01:00:00+01:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-ConditionRelationship-1",
+  "name": "CareConnect-ConditionRelationship-1",
+  "status": "draft",
+  "publisher": "HL7 UK",
+  "description": "A set of codes specifying the kind of relationship that exists with a target condition.",
+  "codeSystem": {
+    "system": "https://fhir.hl7.org.uk/CareConnect-ConditionRelationship",
+    "concept": [
+      {
+        "code": "combined",
+        "display": "Combined",
+        "definition": "This condition is combined/merged with the target condition to form a single logical condition."
+      },
+      {
+        "code": "grouped",
+        "display": "Grouped",
+        "definition": "This condition is part of a group that includes the target condition as a member of the group."
+      },
+      {
+        "code": "replaces",
+        "display": "Replaces",
+        "definition": "This condition replaces a previous condition (i.e. a revised diagnosis). The target condition is now obsolete."
+      },
+      {
+        "code": "evolved-from",
+        "display": "Evolved From",
+        "definition": "This condition has evolved from the target condition."
+      },
+      {
+        "code": "onset",
+        "display": "Onset",
+        "definition": "This condition follows-on from the target onset condition. Used when specifing a relationship to a previous onset condition when this condition episodicity is Review, Flare or End."
+      }
+    ]
+  }
+}
