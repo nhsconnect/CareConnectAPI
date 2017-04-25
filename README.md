@@ -41,7 +41,6 @@ Several quick start options are available:
 - Install Windows [Jekyll](https://jekyllrb.com/docs/windows/)
 - Run Jekyll locally: `bundle exec jekyll serve`
 - Browse website [Browser](http://localhost:4000): `http://localhost:4000`
-- Install with [NuGet](https://www.nuget.org): CSS: `Install-Package bootstrap -Pre` Sass: `Install-Package bootstrap.sass -Pre` (`-Pre` is only required until Bootstrap v4 has a stable release).
 
 Read the [Getting started page](#) for information on the CareConnect API contents, templates and examples, and more.
 

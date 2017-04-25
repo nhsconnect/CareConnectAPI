@@ -1,7 +1,15 @@
 {% include custom/sidebarconfigs.html %}
 
 <ul id="mysidebar" class="nav">
-	<img src="{{ "images/logo.png" }}" alt="NHS Digital Logo"/>
+	
+    <p style="font-size:2em;">
+        <img src="{{ "images/interopen.png" }}" height="48px" alt="INTEROpen Logo"/>
+    INTEROPen</p>
+    <p style="font-size:16px;">Supported by
+    <img src="{{ "images/logo.png" }}" height="36px"  alt="NHS Digital Logo"/>
+    </p>
+    
+
     <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</li>
     {% for entry in sidebar %}
     {% for folder in entry.folders %}
