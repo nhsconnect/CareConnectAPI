@@ -2,7 +2,7 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: FHIR&reg; CareConnect API  
+topnav_title: Care Connect API | FHIR&reg;
 # this appears on the top navigation bar next to the home button
 
 site_title: Care Connect
@@ -93,7 +93,7 @@ sidebars:
 - appointments_sidebar
 - tasks_sidebar
 
-description: "Description of the site."
+description: "The Care Connect RESTful APIs support the delivery of care by opening information and data held across different clinical care settings through the use of nationally defined INTEROPen FHIR® resources."
 # the description is used in the feed.xml file
 
 sitemap: true
