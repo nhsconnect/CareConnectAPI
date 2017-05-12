@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "meta": {
-    "lastUpdated": "2017-03-01T09:46:26.686+00:00"
+    "lastUpdated": "2017-05-08T11:33:03.645+01:00"
   },
   "url": "https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationOrder-1",
   "version": "1.0.0",
@@ -475,7 +475,7 @@
       {
         "path": "MedicationOrder.extension",
         "name": "supplyType",
-        "short": "Base for all elements",
+        "short": "Medication supply type",
         "definition": "Optional Extensions Element - found in all resources.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
@@ -3079,7 +3079,7 @@
       },
       {
         "path": "MedicationOrder.reasonEnded.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
         "definition": "Optional Extensions Element - found in all resources.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -5422,7 +5422,7 @@
       },
       {
         "path": "MedicationOrder.dosageInstruction.additionalInstructions.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
         "definition": "Optional Extensions Element - found in all resources.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -8328,7 +8328,7 @@
       },
       {
         "path": "MedicationOrder.dosageInstruction.route.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
         "definition": "Optional Extensions Element - found in all resources.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -9474,7 +9474,7 @@
       },
       {
         "path": "MedicationOrder.dosageInstruction.method.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
         "definition": "Optional Extensions Element - found in all resources.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -14260,6 +14260,7 @@
       {
         "path": "MedicationOrder.extension",
         "name": "supplyType",
+        "short": "Medication supply type",
         "min": 1,
         "max": "1",
         "type": [
@@ -14351,10 +14352,8 @@
       },
       {
         "path": "MedicationOrder.reasonEnded.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
-        "definition": "Optional Extensions Element - found in all resources.",
-        "min": 0,
         "type": [
           {
             "code": "Extension",
@@ -14474,10 +14473,8 @@
       },
       {
         "path": "MedicationOrder.dosageInstruction.additionalInstructions.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
-        "definition": "Optional Extensions Element - found in all resources.",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -14539,10 +14536,8 @@
       },
       {
         "path": "MedicationOrder.dosageInstruction.route.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
-        "definition": "Optional Extensions Element - found in all resources.",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -14601,10 +14596,8 @@
       },
       {
         "path": "MedicationOrder.dosageInstruction.method.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
-        "definition": "Optional Extensions Element - found in all resources.",
-        "min": 0,
         "max": "1",
         "type": [
           {
