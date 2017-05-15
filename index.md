@@ -32,6 +32,6 @@ NHS Digital is contributing to progressing the profile developmenet and testing 
 
 The [Care Connect API roadmap](design_development_roadmap.html) outlines the resource development roadmap schedule for the RESTful APIs outlined within this site.
 
-<img src="images/roadmap/roadmap-profiles_tooling.png" style="width:100%;max-width: 100%;"> 
+<img src="images/roadmap/roadmap-profiles_tooling.PNG" style="width:100%;max-width: 100%;"> 
 
 The above roadmap illustrates the steps necessary to create, test and verify the profiles as well as some of the supporting tooling which might be necessary to build to provide viable APIs. The roadmap is not intended to be complete but to promote discussion, extension and engagement from the INTEROPen community.
