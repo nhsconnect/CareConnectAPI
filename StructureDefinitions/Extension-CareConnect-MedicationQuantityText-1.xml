@@ -1,0 +1,207 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<meta>
+		<lastUpdated value="2017-05-08T15:42:27.552+01:00"/>
+	</meta>
+	<url value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationQuantityText-1"/>
+	<version value="1.0.0"/>
+	<name value="Extension-CareConnect-MedicationQuantityText-1"/>
+	<status value="active"/>
+	<publisher value="HL7 UK"/>
+	<date value="2017-02-27T09:49:59.5717979Z"/>
+	<description value="This Extension resource is constrained to support the textual representation of a medication structured quantity."/>
+	<copyright value="Copyright © 2016 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html"/>
+	<fhirVersion value="1.0.2"/>
+	<kind value="datatype"/>
+	<constrainedType value="Extension"/>
+	<abstract value="false"/>
+	<contextType value="resource"/>
+	<context value="MedicationOrder.dispenseRequest.quantity"/>
+	<base value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+	<snapshot>
+		<element>
+			<path value="Extension"/>
+			<short value="Quantity representation"/>
+			<definition value="Quantity representation."/>
+			<min value="0"/>
+			<max value="*"/>
+			<base>
+				<path value="Element"/>
+				<min value="0"/>
+				<max value="*"/>
+			</base>
+			<type>
+				<code value="Element"/>
+			</type>
+			<condition value="ele-1"/>
+			<constraint>
+				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+					<valueString value="children()"/>
+				</extension>
+				<key value="ele-1"/>
+				<severity value="error"/>
+				<human value="All FHIR elements must have a @value or children"/>
+				<xpath value="@value|f:*|h:div"/>
+			</constraint>
+			<mapping>
+				<identity value="rim"/>
+				<map value="n/a"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value="N/A"/>
+			</mapping>
+		</element>
+		<element>
+			<path value="Extension.id"/>
+			<short value="xml:id (or equivalent in JSON)"/>
+			<definition value="unique id for the element within a resource (for internal references)."/>
+			<comments value="RFC 4122"/>
+			<min value="0"/>
+			<max value="1"/>
+			<base>
+				<path value="Element.id"/>
+				<min value="0"/>
+				<max value="1"/>
+			</base>
+			<type>
+				<code value="id"/>
+			</type>
+			<condition value="ele-1"/>
+			<constraint>
+				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+					<valueString value="children()"/>
+				</extension>
+				<key value="ele-1"/>
+				<severity value="error"/>
+				<human value="All FHIR elements must have a @value or children"/>
+				<xpath value="@value|f:*|h:div"/>
+			</constraint>
+			<mapping>
+				<identity value="rim"/>
+				<map value="n/a"/>
+			</mapping>
+		</element>
+		<element>
+			<path value="Extension.extension"/>
+			<short value="Additional Content defined by implementations"/>
+			<definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+			<comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+			<alias value="extensions"/>
+			<alias value="user content"/>
+			<min value="0"/>
+			<max value="*"/>
+			<base>
+				<path value="Element.extension"/>
+				<min value="0"/>
+				<max value="*"/>
+			</base>
+			<type>
+				<code value="Extension"/>
+			</type>
+			<condition value="ele-1"/>
+			<constraint>
+				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+					<valueString value="children()"/>
+				</extension>
+				<key value="ele-1"/>
+				<severity value="error"/>
+				<human value="All FHIR elements must have a @value or children"/>
+				<xpath value="@value|f:*|h:div"/>
+			</constraint>
+			<mapping>
+				<identity value="rim"/>
+				<map value="n/a"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value="N/A"/>
+			</mapping>
+		</element>
+		<element>
+			<path value="Extension.url"/>
+			<short value="identifies the meaning of the extension"/>
+			<definition value="Source of the definition for the extension code - a logical name or a URL."/>
+			<comments value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #."/>
+			<min value="1"/>
+			<max value="1"/>
+			<base>
+				<path value="Extension.url"/>
+				<min value="1"/>
+				<max value="1"/>
+			</base>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationQuantityText-1"/>
+			<condition value="ele-1"/>
+			<constraint>
+				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+					<valueString value="children()"/>
+				</extension>
+				<key value="ele-1"/>
+				<severity value="error"/>
+				<human value="All FHIR elements must have a @value or children"/>
+				<xpath value="@value|f:*|h:div"/>
+			</constraint>
+			<mapping>
+				<identity value="rim"/>
+				<map value="n/a"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value="N/A"/>
+			</mapping>
+		</element>
+		<element>
+			<path value="Extension.valueString"/>
+			<short value="Quantity representation"/>
+			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+			<min value="0"/>
+			<max value="1"/>
+			<base>
+				<path value="Extension.value[x]"/>
+				<min value="0"/>
+				<max value="1"/>
+			</base>
+			<type>
+				<code value="string"/>
+			</type>
+			<condition value="ele-1"/>
+			<constraint>
+				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+					<valueString value="children()"/>
+				</extension>
+				<key value="ele-1"/>
+				<severity value="error"/>
+				<human value="All FHIR elements must have a @value or children"/>
+				<xpath value="@value|f:*|h:div"/>
+			</constraint>
+			<mapping>
+				<identity value="rim"/>
+				<map value="n/a"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value="N/A"/>
+			</mapping>
+		</element>
+	</snapshot>
+	<differential>
+		<element>
+			<path value="Extension"/>
+			<short value="Quantity representation"/>
+			<definition value="Quantity representation."/>
+		</element>
+		<element>
+			<path value="Extension.url"/>
+			<fixedUri value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationQuantityText-1"/>
+		</element>
+		<element>
+			<path value="Extension.valueString"/>
+			<short value="Quantity representation"/>
+			<type>
+				<code value="string"/>
+			</type>
+		</element>
+	</differential>
+</StructureDefinition>
