@@ -11,7 +11,7 @@ site_title: Care Connect
 company_name: INTEROpen and NHS Digital
 # this appears in the footer
 
-github_editme_path: /edit/master/
+github_editme_path: /edit/develop/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 #disqus: true
@@ -39,7 +39,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_email: dummy@nhs.net
+feedback_email: careconnect@interopen.org
 # used as a contact email for the Feedback link in the top navigation bar
 
 feedback_disable: true

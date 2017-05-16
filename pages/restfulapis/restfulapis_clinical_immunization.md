@@ -1,11 +1,16 @@
 ---
-title: Immunization
+title: Clinical | Immunization
 keywords: getcarerecord, structured, rest, immunization
 tags: [structured,getcarerecord]
 sidebar: accessrecord_rest_sidebar
-permalink: restfulapis_immunization.html
-summary: "Immunization"
+permalink: restfulapis_clinical_immunization.html
+summary: "Clinical Immunization"
 ---
+
+## Prerequisites ##
+
+
+
 
 ## Immunization ##
 

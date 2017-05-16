@@ -1,11 +1,14 @@
 ---
-title: Medication Order
-keywords: getcarerecord, structured, rest, medication, order
-tags: [structured,getcarerecord]
-sidebar: accessrecord_rest_sidebar
-permalink: restfulapis_medicationorder.html
-summary: "Medication Order"
+title: Clinical | Medication Order
+keywords: usecase, medication, order
+tags: [restful_api,clinical,profile]
+sidebar: foundations_sidebar
+permalink: restfulapis_clinical_medicationorder.html
+summary: "Clinical Observation"
 ---
+
+## Prerequisites ##
+
 
 ## Medication Order ##
 

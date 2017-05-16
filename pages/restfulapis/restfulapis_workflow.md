@@ -1,13 +1,13 @@
 ---
-title: Allergy Intolerance 
+title: Workflow Overview
 keywords: getcarerecord, structured, rest, allergy, intolerance
 tags: [structured,getcarerecord]
 sidebar: accessrecord_rest_sidebar
-permalink: restfulapis_allergyintolerance.html
-summary: "Allergy Intolerance"
+permalink: restfulapis_workflow.html
+summary: "Workflow Overview"
 ---
 
-## Allergy Intolerance ##
+## Workflow Overview ##
 
 Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolerance` resources for the specified patient.
 

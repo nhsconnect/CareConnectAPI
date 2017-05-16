@@ -1,10 +1,10 @@
 ---
-title: Patient
+title: Identification | Organisation
 keywords: getcarerecord, structured, rest, patient
 tags: [structured,patient]
 sidebar: accessrecord_rest_sidebar
-permalink: restfulapis_patient.html
-summary: "Patient"
+permalink: restfulapis_identification_organisation.html
+summary: "Organisation"
 ---
 
 ## Patient ##

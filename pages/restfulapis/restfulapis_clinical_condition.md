@@ -1,10 +1,10 @@
 ---
-title: Condition
+title: Clinical | Condition
 keywords: getcarerecord, structured, rest, condition
 tags: [structured,getcarerecord]
 sidebar: accessrecord_rest_sidebar
-permalink: restfulapis_condition.html
-summary: "Condition"
+permalink: restfulapis_clinical_condition.html
+summary: "Clinical Condition"
 ---
 
 ## Condition ##
