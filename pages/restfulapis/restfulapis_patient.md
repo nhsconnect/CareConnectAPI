@@ -7,15 +7,13 @@ permalink: restfulapis_patient.html
 summary: "Patient"
 ---
 
-## Patient API ##
+## Patient ##
 
 {% include tip.html content=" [Care Connect Patient](https://fhir-test.nhs.uk/StructureDefinition/gpconnect-patient-1) Resource." %}
 
-{% include tip.html content=" [HL7 FHIR Dstu2 Patient](https://www.hl7.org/fhir/DSTU2/patient.html) Resource." %}
-
 Patient contains the demographics for the patient. Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
 
-## Parameters ##
+## Search Parameters ##
 
 Provider systems COULD implement all [search parameters for the `Patient` resource](https://www.hl7.org/fhir/DSTU2/patient.html#search){:target="_blank"}
 

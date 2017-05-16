@@ -7,14 +7,14 @@ permalink: restfulapis_medicationorder.html
 summary: "Medication Order"
 ---
 
-## Medication Order API ##
+## Medication Order ##
 
 {% include tip.html content=" [Care Connect Medication Order](https://fhir-test.nhs.uk/StructureDefinition/careconnect-gpc-medicationorder-1
 ) Resource." %}
 
 Medication order resource contains prescription information for a patient. Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 
-## Parameters ##
+## Search Parameters ##
 
 Provider systems COULD implement all [search parameters for the `MedicationOrder` resource](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search){:target="_blank"}
 

@@ -64,6 +64,9 @@ entries:
         - title: Observation
           url: /restfulapis_observation.html
           output: web
+        - title: Patient
+          url: /restfulapis_patient.html
+          output: web
         - title: Procedure
           url: /restfulapis_procedure.html
           output: web         
