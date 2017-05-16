@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "meta": {
-    "lastUpdated": "2017-03-03T08:58:49.062+00:00"
+    "lastUpdated": "2017-05-08T17:04:59.171+01:00"
   },
   "url": "https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Encounter-1",
   "version": "1.0.0",
@@ -420,9 +420,9 @@
       },
       {
         "path": "Encounter.extension",
-        "name": "Encounter Transport",
+        "name": "encounterTransport",
         "short": "Encounter transport",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "Encounter transport.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -3401,9 +3401,9 @@
       },
       {
         "path": "Encounter.type.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "The SNOMED CT Description ID for the display.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -8087,9 +8087,9 @@
       },
       {
         "path": "Encounter.reason.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "The SNOMED CT Description ID for the display.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -12121,9 +12121,9 @@
       },
       {
         "path": "Encounter.hospitalization.reAdmission.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "The SNOMED CT Description ID for the display.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -16845,7 +16845,7 @@
       },
       {
         "path": "Encounter.extension",
-        "name": "Encounter Transport",
+        "name": "encounterTransport",
         "type": [
           {
             "code": "Extension",
@@ -16911,8 +16911,7 @@
       },
       {
         "path": "Encounter.type.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
-        "short": "The SNOMED CT Description ID for the display",
+        "name": "snomedCTDescriptionID",
         "max": "1",
         "type": [
           {
@@ -16999,8 +16998,7 @@
       },
       {
         "path": "Encounter.reason.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
-        "short": "The SNOMED CT Description ID for the display",
+        "name": "snomedCTDescriptionID",
         "max": "1",
         "type": [
           {
@@ -17112,8 +17110,7 @@
       },
       {
         "path": "Encounter.hospitalization.reAdmission.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
-        "short": "The SNOMED CT Description ID for the display",
+        "name": "snomedCTDescriptionID",
         "max": "1",
         "type": [
           {

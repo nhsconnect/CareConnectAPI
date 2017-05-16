@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "meta": {
-    "lastUpdated": "2017-03-02T10:03:10.187+00:00"
+    "lastUpdated": "2017-05-08T17:15:42.466+01:00"
   },
   "url": "https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationStatement-1",
   "version": "1.0.0",
@@ -365,35 +365,266 @@
         ]
       },
       {
-        "path": "MedicationStatement.contained",
-        "short": "Contained, inline Resources",
-        "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
-        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
-        "alias": [
-          "inline resources",
-          "anonymous resources",
-          "contained resources"
-        ],
+        "path": "MedicationStatement.text.id",
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references).",
+        "comments": "RFC 4122",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "base": {
-          "path": "DomainResource.contained",
+          "path": "Element.id",
           "min": 0,
-          "max": "*"
+          "max": "1"
         },
         "type": [
           {
-            "code": "Resource"
+            "code": "id"
+          }
+        ],
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-expression",
+                "valueString": "children()"
+              }
+            ],
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "xpath": "@value|f:*|h:div"
           }
         ],
         "mapping": [
           {
             "identity": "rim",
-            "map": "Entity. Role, or Act"
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "MedicationStatement.text.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-expression",
+                "valueString": "children()"
+              }
+            ],
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "xpath": "@value|f:*|h:div"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
           },
           {
             "identity": "rim",
             "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "MedicationStatement.text.status",
+        "short": "generated | extensions | additional | empty",
+        "definition": "The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.",
+        "comments": "Note that FHIR strings may not exceed 1MB in size",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Narrative.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-expression",
+                "valueString": "children()"
+              }
+            ],
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "xpath": "@value|f:*|h:div"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "The status of a resource narrative",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/narrative-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "MedicationStatement.text.div",
+        "short": "Limited xhtml content",
+        "definition": "The actual narrative content, a stripped down version of XHTML.",
+        "comments": "The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained stylesheets. The XHTML content may not contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Narrative.div",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "xhtml"
+          }
+        ],
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-expression",
+                "valueString": "children()"
+              }
+            ],
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "xpath": "@value|f:*|h:div"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-expression",
+                "valueString": "true"
+              }
+            ],
+            "key": "txt-3",
+            "severity": "error",
+            "human": "The narrative SHALL contain only the basic html formatting attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained style attributes",
+            "xpath": "not(descendant-or-self::*/@*[not(name(.)=('abbr', 'accesskey', 'align', 'alt', 'axis', 'bgcolor', 'border', 'cellhalign', 'cellpadding', 'cellspacing', 'cellvalign', 'char', 'charoff', 'charset', 'cite', 'class', 'colspan', 'compact', 'coords', 'dir', 'frame', 'headers', 'height', 'href', 'hreflang', 'hspace', 'id', 'lang', 'longdesc', 'name', 'nowrap', 'rel', 'rev', 'rowspan', 'rules', 'scope', 'shape', 'span', 'src', 'start', 'style', 'summary', 'tabindex', 'title', 'type', 'valign', 'value', 'vspace', 'width'))])"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-expression",
+                "valueString": "true"
+              }
+            ],
+            "key": "txt-1",
+            "severity": "error",
+            "human": "The narrative SHALL contain only the basic html formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained style attributes",
+            "xpath": "not(descendant-or-self::*[not(local-name(.)=('a', 'abbr', 'acronym', 'b', 'big', 'blockquote', 'br', 'caption', 'cite', 'code', 'col', 'colgroup', 'dd', 'dfn', 'div', 'dl', 'dt', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr', 'i', 'img', 'li', 'ol', 'p', 'pre', 'q', 'samp', 'small', 'span', 'strong', 'table', 'tbody', 'td', 'tfoot', 'th', 'thead', 'tr', 'tt', 'ul', 'var'))])"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-expression",
+                "valueString": "true"
+              }
+            ],
+            "key": "txt-2",
+            "severity": "error",
+            "human": "The narrative SHALL have some non-whitespace content",
+            "xpath": "descendant::text()[normalize-space(.)!=''] or descendant::h:img[@src]"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "MedicationStatement.meta",
+        "short": "Metadata about the resource",
+        "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.meta",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Meta"
+          }
+        ],
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-expression",
+                "valueString": "children()"
+              }
+            ],
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "xpath": "@value|f:*|h:div"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
           }
         ]
       },
@@ -456,7 +687,7 @@
         "path": "MedicationStatement.extension",
         "name": "reasonForUse",
         "short": "Reason medication is being/was taken",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "Reason resource added/performed/given.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -509,7 +740,7 @@
         "path": "MedicationStatement.extension",
         "name": "reasonEnded",
         "short": "Why prescription was stopped",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "Why prescription was stopped.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -562,7 +793,7 @@
         "path": "MedicationStatement.extension",
         "name": "quantityDispensed",
         "short": "Amount of medication to supply per dispense",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "Amount of medication to supply per dispense.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -615,7 +846,7 @@
         "path": "MedicationStatement.extension",
         "name": "lastIssueDate",
         "short": "The date a prescription was last issued",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "The date a prescription was last issued.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -667,8 +898,8 @@
       {
         "path": "MedicationStatement.extension",
         "name": "repeatInformation",
-        "short": "Base for all elements",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "short": "Medication repeat information",
+        "definition": "Medication repeat information.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -720,8 +951,8 @@
       {
         "path": "MedicationStatement.extension",
         "name": "flag",
-        "short": "Flags related to the patient's medications.",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "short": "Flags related to the patient's medications",
+        "definition": "Flags related to the patient's medications.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -3543,9 +3774,9 @@
       },
       {
         "path": "MedicationStatement.reasonNotTaken.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "The SNOMED CT Description ID for the display.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -4548,7 +4779,7 @@
         "path": "MedicationStatement.dosage.extension",
         "name": "additionalInstructions",
         "short": "Supplemental instructions - e.g. \"with meals\"",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "Additional instructions for the medication.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -7203,9 +7434,9 @@
       },
       {
         "path": "MedicationStatement.dosage.route.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "The SNOMED CT Description ID for the display.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -8345,9 +8576,9 @@
       },
       {
         "path": "MedicationStatement.dosage.method.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
+        "name": "snomedCTDescriptionID",
         "short": "The SNOMED CT Description ID for the display",
-        "definition": "Optional Extensions Element - found in all resources.",
+        "definition": "The SNOMED CT Description ID for the display.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -9921,7 +10152,6 @@
       {
         "path": "MedicationStatement.extension",
         "name": "reasonEnded",
-        "short": "Why prescription was stopped",
         "max": "1",
         "type": [
           {
@@ -9935,7 +10165,6 @@
       {
         "path": "MedicationStatement.extension",
         "name": "quantityDispensed",
-        "short": "Amount of medication to supply per dispense",
         "max": "1",
         "type": [
           {
@@ -9949,7 +10178,6 @@
       {
         "path": "MedicationStatement.extension",
         "name": "lastIssueDate",
-        "short": "The date a prescription was last issued",
         "max": "1",
         "type": [
           {
@@ -9976,7 +10204,6 @@
       {
         "path": "MedicationStatement.extension",
         "name": "flag",
-        "short": "Flags related to the patient's medications.",
         "type": [
           {
             "code": "Extension",
@@ -10065,8 +10292,7 @@
       },
       {
         "path": "MedicationStatement.reasonNotTaken.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
-        "short": "The SNOMED CT Description ID for the display",
+        "name": "snomedCTDescriptionID",
         "max": "1",
         "type": [
           {
@@ -10183,8 +10409,7 @@
       },
       {
         "path": "MedicationStatement.dosage.route.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
-        "short": "The SNOMED CT Description ID for the display",
+        "name": "snomedCTDescriptionID",
         "max": "1",
         "type": [
           {
@@ -10243,8 +10468,7 @@
       },
       {
         "path": "MedicationStatement.dosage.method.coding.extension",
-        "name": "Extension-Coding-SCTDescID",
-        "short": "The SNOMED CT Description ID for the display",
+        "name": "snomedCTDescriptionID",
         "max": "1",
         "type": [
           {
