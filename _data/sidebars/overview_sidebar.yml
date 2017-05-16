@@ -35,7 +35,7 @@ entries:
     - title: API Foundations
       url: /foundations.html
       output: web
-    - title: FHIR&reg; API Use Cases
+    - title: User Stories | FHIR&reg; 
       url: /foundations_use_case_api.html
       output: web
       subfolders:
@@ -91,24 +91,24 @@ entries:
       - title: Workflow
         output: web
         subfolderitems:
-          - title: Location
+          - title: Encounter
             url: /restfulapis_workflow_encounter.html  
             output: web          
           - title: Organisation
             url: /restfulapis_workflow_familymemberhistory.html
             output: web
-          - title: Patient
+          - title: Flag
             url: /restfulapis_workflow_flag.html
             output: web
 
 
           
-    - title: FHIR&reg; Conformance Profile
+    - title: Conformance Profile | FHIR&reg; 
       url: /foundations_use_case_get_the_fhir_conformance_profile.html
       output: web
       
       subfolders:
-      - title: FHIR&reg; API Guidance
+      - title: API Guidance | FHIR&reg; 
         output: web
         subfolderitems:
 
