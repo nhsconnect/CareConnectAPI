@@ -32,6 +32,7 @@ Provider systems SHOULD implement the following search parameters:
 | `patient` | `reference` | The identity of a patient to list orders for | `MedicationOrder.patient (Patient)` |
 | `_revinclude` | `string` | Include referenced resources.  |  |
 | `_list` | `string` | Return prescriptions in the list |  |
+| `_count` | `number` | The maximum number of results per page. |  |
 
 In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. Please refer to [Paged Search](https://www.hl7.org/fhir/DSTU2/search.html#count){:target="_blank"} for further details.
 
