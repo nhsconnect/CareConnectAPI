@@ -1,10 +1,13 @@
 ---
 title: Clinical | Medication Order
 keywords: usecase, medication, order
-tags: [restful_api,clinical,profile]
+tags:
+- restful_api
+- clinical
+- profile
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationorder.html
-summary: "Clinical Observation"
+summary: Clinical Observation
 ---
 
 ## Prerequisites ##
@@ -15,21 +18,24 @@ summary: "Clinical Observation"
 {% include tip.html content=" [Care Connect Medication Order](https://fhir-test.nhs.uk/StructureDefinition/careconnect-gpc-medicationorder-1
 ) Resource." %}
 
-Medication order resource contains prescription information for a patient. Fetches a bundle of all `MedicationOrder` resources for the specified patient.
-
 ## Search Parameters ##
 
-Provider systems COULD implement all [search parameters for the `MedicationOrder` resource](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search){:target="_blank"}
+Medication order resource contains prescription information for a patient. Fetches a bundle of all `MedicationOrder` resources for the specified patient.
+
+```http
+GET /MedicationOrder?:searchParameters
+```
+
+{% include optional.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 
 Provider systems SHOULD implement the following search parameters:
 
-| Name | Type | Description | Paths |
-| `datewritten` | `date` | Return prescriptions written on this date | `MedicationOrder.dateWritten` |
-| `period.[start|end]` | `date` | Return prescriptions issued in this date range | `MedicationOrder.period` |
-| `status` | `token` | Status of the prescription | `MedicationOrder.status` |
-| `patient.identifier` | `reference` | The identity of a patient to list orders for | `MedicationOrder.patient (Patient)` |
-| `identifier` | `token` | The source system of the prescriptions for  | `MedicationOrder.identifier` |
-| `patient` | `reference` | The identity of a patient to list orders for | `MedicationOrder.patient (Patient)` |
+| Name | Type | Description | Recommended |
+| `datewritten` | `date` | Return prescriptions written on this date |  |
+| `period.[start|end]` | `date` | Return prescriptions issued in this date range | Y |
+| `status` | `token` | Status of the prescription | Y |
+| `identifier` | `token` | The source system of the prescriptions for  |  |
+| `patient` | `reference` | The identity of a patient to list orders for | Y |
 | `_revinclude` | `string` | Include referenced resources.  |  |
 | `_list` | `string` | Return prescriptions in the list |  |
 | `_count` | `number` | The maximum number of results per page. |  |

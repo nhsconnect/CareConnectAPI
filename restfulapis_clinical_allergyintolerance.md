@@ -1,10 +1,12 @@
 ---
-title: Clinical | Allergy Intolerance 
+title: Clinical | Allergy Intolerance
 keywords: getcarerecord, structured, rest, allergy, intolerance
-tags: [structured,getcarerecord]
+tags:
+- structured
+- getcarerecord
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_allergyintolerance.html
-summary: "Clinical Allergy Intolerance"
+summary: Clinical Allergy Intolerance
 ---
 
 ## Allergy Intolerance ##
@@ -31,7 +33,7 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 GET /AllergyIntollerence?:searchParameters
 ```
 
-Provider systems MAY implement any [search parameters for the `AllergyIntolerance` resource](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search){:target="_blank"}
+{% include optional.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
 
 Provider systems SHOULD implement the following search parameters:
 

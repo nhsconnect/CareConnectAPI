@@ -1,10 +1,12 @@
 ---
 title: Identification | Patient
 keywords: getcarerecord, structured, rest, patient
-tags: [structured,patient]
+tags:
+- structured
+- patient
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_patient.html
-summary: "Patient"
+summary: Patient
 ---
 
 ## Patient ##
@@ -30,7 +32,7 @@ Patient contains the demographics for the patient. Fetches a bundle of all `Pati
 GET /Patient?:searchParameters
 ```
 
-Provider systems MAY implement any [search parameters for the `Patient` resource](https://www.hl7.org/fhir/DSTU2/patient.html#search){:target="_blank"}
+{% include optional.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 
 Provider systems SHOULD implement the following search parameters:
 
