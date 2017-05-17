@@ -71,6 +71,9 @@ entries:
           - title: Condition
             url: /restfulapis_clinical_condition.html
             output: web
+          - title: Family Member History
+            url: /restfulapis_clinical_familymemberhistory.html
+            output: web
           - title: Immunization
             url: /restfulapis_clinical_immunization.html
             output: web
@@ -104,8 +107,8 @@ entries:
           - title: Patient
             url: /restfulapis_identification_patient.html
             output: web
-          - title: Practioner
-            url: /restfulapis_identification_practioner.html  
+          - title: Practitoner
+            url: /restfulapis_identification_practitoner.html  
             output: web          
       - title: Workflow
         output: web
@@ -113,9 +116,6 @@ entries:
           - title: Encounter
             url: /restfulapis_workflow_encounter.html  
             output: web          
-          - title: Organisation
-            url: /restfulapis_workflow_familymemberhistory.html
-            output: web
           - title: Flag
             url: /restfulapis_workflow_flag.html
             output: web

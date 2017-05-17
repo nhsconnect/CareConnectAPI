@@ -3,7 +3,7 @@ title: Identification | Practioner
 keywords: getcarerecord, structured, rest, patient
 tags: [structured,patient]
 sidebar: accessrecord_rest_sidebar
-permalink: restfulapis_identification_practioner.html
+permalink: restfulapis_identification_practitoner.html
 summary: "Practioner"
 ---
 
