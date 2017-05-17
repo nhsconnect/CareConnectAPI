@@ -1,15 +1,18 @@
 ---
-title: Care Connect RESTful FHIR&reg; API - Encounter
-keywords: usecase, encounter
-tags: [restful_api,use_case]
+title: Workflow | Flag
+keywords: usecase, flag
+tags:
+- restful_api
+- clinical
+- profile
 sidebar: foundations_sidebar
 permalink: restfulapis_workflow_flag.html
-summary: "restfulapis_workflow_flag"
+summary: Workflow Flag
 ---
 
-## Flag (Alert) ##
+## Flag ##
 
-{% include profile.html content="[Care Connect Flag](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Flag-1.html)" %}
+{% include profile.html content="[Care Connect Medication Flag](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-Flag-1.html)" %}
 
 ## Read Operation ##
 
@@ -53,3 +56,6 @@ TODO
 ```
 TODO
 ```
+
+
+

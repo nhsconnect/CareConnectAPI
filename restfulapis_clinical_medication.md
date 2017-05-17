@@ -1,10 +1,13 @@
 ---
 title: Clinical | Medication
 keywords: usecase, medication
-tags: [restful_api,clinical,profile]
+tags:
+- restful_api
+- clinical
+- profile
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medication.html
-summary: "Clinical Medication"
+summary: Clinical Medication
 ---
 
 ## Medication ##
@@ -13,7 +16,7 @@ summary: "Clinical Medication"
 
 ## Read Operation ##
 
-Return a single `Immunization` for the specified id
+Return a single `Medication` for the specified id
 
 ```http
 GET /Medication/:id
