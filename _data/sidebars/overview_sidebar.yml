@@ -12,34 +12,53 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
+    - title: Development Roadmap
+      url: /design_development_roadmap.html
+      output: web
+    - title: Care Connect Versioning
+      url: /design_product_versioning.html
+      output: web
     - title: Glossary
       url: /overview_glossary.html
       output: web
 
-  - title: Design Approach
+  - title: Engage
     output: web
     folderitems:
-    - title: Development Roadmap
-      url: /design_development_roadmap.html
+    - title: Overview
+      url: /engage.html
+      output: web, pdf
+      type: homepage
+    - title: User Stories | FHIR&reg; 
+      url: /engage_user_stories.html
       output: web
-    - title: Product Versioning
-      url: /design_product_versioning.html
+      subfolders:
+    - title: Using Profiles
+      url: /engage_using_profiles.html
       output: web
+      subfolders:
+    - title: Proof of Concepts
+      url: /engage_proof_of_concept.html
+      output: web
+      subfolders:
+    - title: Case Studies
+      url: /engage_case_studies.html
+      output: web
+      subfolders:
 
-  - title: Development Guidance
+  - title: Design & Build
     output: web
     folderitems:
-    - title: Development Assets
-      url: /development_deliverables.html
+    - title: Overview
+      url: /foundations.html
       output: web
     - title: API Foundations
       url: /foundations.html
       output: web
-    - title: User Stories | FHIR&reg; 
-      url: /foundations_use_case_api.html
+    - title: Cheat Sheet
+      url: /development_deliverables.html
       output: web
-      subfolders:
-    - title: RESTful APIs | FHIR&reg; 
+    - title: Overview | Profiles
       url: /restfulapis.html
       output: web
       subfolders:
@@ -65,7 +84,7 @@ entries:
             url: /restfulapis_clinical_medicationorder.html
             output: web
           - title: Medication Statement
-            url: /restfulapis_medicationstatement.html
+            url: /restfulapis_clinical_medicationstatement.html
             output: web
           - title: Observation
             url: /restfulapis_clinical_observation.html
@@ -102,11 +121,9 @@ entries:
             output: web
 
 
-          
     - title: Conformance Profile | FHIR&reg; 
       url: /foundations_use_case_get_the_fhir_conformance_profile.html
-      output: web
-      
+      output: web      
       subfolders:
       - title: API Guidance | FHIR&reg; 
         output: web
@@ -119,7 +136,31 @@ entries:
           url: /development_api_security_guidance.html
           output: web
           
-   
+  - title: Explore
+    output: web
+    folderitems:
+    - title: Overview | Coming soon
+      url: /support_coming_soon.html
+      output: web
+  - title: Test
+    output: web
+    folderitems:
+    - title: Overview | Coming soon
+      url: /support_coming_soon.html
+      output: web
+  - title: Accredit
+    output: web
+    folderitems:
+    - title: Overview | Coming soon
+      url: /support_coming_soon.html
+      output: web
+  - title: Deploy
+    output: web
+    folderitems:
+    - title: Overview | Coming soon
+      url: /support_coming_soon.html
+      output: web
+
   - title: Help & Support
     output: web
     folderitems:
