@@ -38,8 +38,6 @@ Provider systems MAY implement all [search parameters for the `Procedure` resour
 
 Provider systems SHOULD implement the following search parameters:
 
-Provider systems SHOULD implement the following search parameters:
-
 | Name | Type | Description | Recommended |
 | `patient` | `reference` | The identity of a patient to list observations for | Y |
 | `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y |
