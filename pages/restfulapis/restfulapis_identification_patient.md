@@ -9,37 +9,52 @@ summary: "Patient"
 
 ## Patient ##
 
-{% include tip.html content=" [Care Connect Patient](https://fhir-test.nhs.uk/StructureDefinition/gpconnect-patient-1) Resource." %}
+{% include profile.html content="[Care Connect Patient](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Patient-1.html)" %}
 
-Patient contains the demographics for the patient. Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
+## Read Operations ##
+
+Return a single `Patient` for the specified id. Not the NHS Number
+
+```http
+GET /Patient/:id}
+```
+```http
+GET /Patient?_id=:id}
+```
 
 ## Search Parameters ##
 
-Provider systems COULD implement all [search parameters for the `Patient` resource](https://www.hl7.org/fhir/DSTU2/patient.html#search){:target="_blank"}
+Patient contains the demographics for the patient. Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
+
+```http
+GET /Patient?:searchParameters
+```
+
+Provider systems MAY implement any [search parameters for the `Patient` resource](https://www.hl7.org/fhir/DSTU2/patient.html#search){:target="_blank"}
 
 Provider systems SHOULD implement the following search parameters:
 
-| Name | Type | Description | Paths |
-| `address` | `string` | An address in any kind of address/part of the patient | `Patient.address` |
-| `adddress-postcode` | `string` | A postalCode specified in an address | `Patient.address.postalCode` |
-| `birthdate` | `date` | The patient's date of birth | `Patient.birthDate` |
-| `careprovider` | `reference` | Patient's nominated GP | `Patient.careProvider (Practitioner)` |
-| `email` | `token` | A value in an email contact | `Patient.telecom(system=email)` |
-| `family` | `string` | A portion of the family name of the patient | `Patient.name.family` |
-| `gender` | `token` | Gender of the patient | `Patient.gender` |
-| `given` | `string` | A portion of the given name of the patient | `Patient.name.given` |
-| `identifier` | `token` | A patient identifier | `Patient.identifier` |
-| `name` | `string` | A portion of either family or given name of the patient | `Patient.name` |
-| `organization` | `reference` | The practice at which this person is a patient | `Patient.managingOrganization (Organization)` |
-| `phone` | `token` | A value in a phone contact | `Patient.telecom(system=(phone)` |
-| `telecom` | `token` | The value in any kind of telecom details of the patient | `Patient.telecom` |
+| Name | Type | Description | Recommended |
+| `address` | `string` | An address in any kind of address/part of the patient |  |
+| `adddress-postcode` | `string` | A postalCode specified in an address | Y |
+| `birthdate` | `date` | The patient's date of birth | Y |
+| `careprovider` | `reference` | Patient's nominated GP | |
+| `email` | `token` | A value in an email contact | Y |
+| `family` | `string` | A portion of the family name of the patient | Y |
+| `gender` | `token` | Gender of the patient | Y |
+| `given` | `string` | A portion of the given name of the patient | Y |
+| `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | Y |
+| `name` | `string` | A portion of either family or given name of the patient | |
+| `organization` | `reference` | The practice at which this person is a patient | |
+| `phone` | `token` | A value in a phone contact | Y |
+| `telecom` | `token` | The value in any kind of telecom details of the patient |  |
 | `_count` | `number` | The maximum number of results per page. |  |
 
 In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. Please refer to [Paged Search](https://www.hl7.org/fhir/DSTU2/search.html#count){:target="_blank"} for further details.
 
 
 
-## API Usage ##
+### identifier (NHS Number, Hospital Number, etc) ###
 
 The recommended search parameters would include:
 
@@ -47,28 +62,15 @@ The recommended search parameters would include:
 - a filter to limit the search results either using status = current, $current_medication list, period (issue date) or dateWritten
 - _revinclude=* to return all referenced resources.
 
-### Request Operation ###
-
-#### FHIR Relative Request ####
-
-```http
-GET /Dstu2/Patient?identifier=http://fhir.nhs.net/Id/nhs-number|[NHSNumber]{&other search parameters}
-```
-
-#### FHIR Absolute Request ####
-
-```http
-GET https://[proxy_server]/https://[provider_server]/[fhir_base]/Patient?identifier=http://fhir.nhs.net/Id/nhs-number|[NHSNumber]{&other search parameters}
-```
-
-#### Multiple Parameter Requests ####
+### family and given ###
 
 TODO
 
-### Request Response ###
+### birthdate ###
 
-#### Payload Response Body ####
+TODO
 
+### Multiple Parameters ###
 
 ```
 TODO

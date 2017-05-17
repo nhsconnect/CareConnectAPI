@@ -105,6 +105,10 @@ repository: nhsconnect/CareConnectAPI
 
 gist:
   noscript: false
+  
+site:
+  fhirprofiles:
+    patient: "[Care Connect Patient](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Patient-1.html)"
 
 gems:
    - jekyll-github-metadata
