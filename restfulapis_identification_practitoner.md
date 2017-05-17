@@ -5,14 +5,8 @@ tags:
 - structured
 - patient
 sidebar: accessrecord_rest_sidebar
-<<<<<<< HEAD:restfulapis_identification_practitoner.md
 permalink: restfulapis_identification_practitoner.html
 summary: "Practioner"
-=======
-permalink: restfulapis_identification_practitioner.html
-summary: Identification Practitioner
->>>>>>> 49ffc78622be5179f374ca91e41bf9232ec23ade:restfulapis_identification_practioner.md
----
 
 
 ## Practitioner ##

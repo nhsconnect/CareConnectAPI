@@ -1,7 +1,7 @@
 entries:
-- title: CareConnect
-  product: CareConnect
-  version: 1.0.0-alpha.1
+- title: Care Connect
+  product: Care Connect
+  version: alpha.0.0.1
   levels: one
   folders:
 
@@ -49,15 +49,6 @@ entries:
   - title: Design & Build
     output: web
     folderitems:
-    - title: Overview
-      url: /foundations.html
-      output: web
-    - title: API Foundations
-      url: /foundations.html
-      output: web
-    - title: Cheat Sheet
-      url: /development_deliverables.html
-      output: web
     - title: Overview | Profiles
       url: /restfulapis.html
       output: web
@@ -120,6 +111,13 @@ entries:
             url: /restfulapis_workflow_flag.html
             output: web
 
+
+    - title: API Foundations
+      url: /foundations.html
+      output: web
+    - title: Reference
+      url: /development_deliverables.html
+      output: web
 
     - title: Conformance Profile | FHIR&reg; 
       url: /foundations_use_case_get_the_fhir_conformance_profile.html
