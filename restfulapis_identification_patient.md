@@ -37,6 +37,7 @@ GET /Patient?:searchParameters
 Provider systems SHOULD implement the following search parameters:
 
 | Name | Type | Description | Recommended |
+|---------|--------|----------------|--------------------|
 | `address` | `string` | An address in any kind of address/part of the patient |  |
 | `adddress-postcode` | `string` | A postalCode specified in an address | Y |
 | `birthdate` | `date` | The patient's date of birth | Y |
