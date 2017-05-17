@@ -65,7 +65,7 @@ entries:
             url: /restfulapis_clinical_medicationorder.html
             output: web
           - title: Medication Statement
-            url: /restfulapis_medicationstatement.html
+            url: /restfulapis_clinical_medicationstatement.html
             output: web
           - title: Observation
             url: /restfulapis_clinical_observation.html
