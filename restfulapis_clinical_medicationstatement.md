@@ -29,14 +29,18 @@ GET /MedicationStatement?_id=:id
 
 ## Search Parameters ##
 
-Medication Statement resource contains current medication information for a patient. Fetches a bundle of all `MedicationOrder` resources for the specified patient.
+Medication Statement resource contains current medication information for a patient. Fetches a bundle of all `MedicationStatement` resources for the specified patient.
+
+```http
+GET /MedicationStatement?:searchParameters
+```
 
 Provider systems MAY implement all [search parameters for the `MedicationStatement` resource](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search){:target="_blank"}
 
 Provider systems SHOULD implement the following search parameters:
 
 | Name | Type | Description | Recommended |
-| `effectiveDate` | `date` | Date when patient was taking (or not taking) the medication | |
+| `effectivedate` | `date` | Date when patient was taking (or not taking) the medication | |
 | `patient` | `reference` | The identity of a patient to list statements for | Y |
 | `status` | `token` | Return statements that match the given status | Y |
 | `_revinclude` | `string` | Include referenced resources.  |  |
