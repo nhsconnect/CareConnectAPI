@@ -35,7 +35,7 @@ Medication Statement resource contains current medication information for a pati
 GET /MedicationStatement?:searchParameters
 ```
 
-Provider systems MAY implement all [search parameters for the `MedicationStatement` resource](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search){:target="_blank"}
+{% include optional.html content="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search)" %}
 
 Provider systems SHOULD implement the following search parameters:
 

@@ -36,7 +36,7 @@ Search for all flag resources for a patient. Fetches a bundle of all `Flag` reso
 GET /Flag?:searchparameters
 ```
 
-Provider systems MAY implement any [search parameters for the `Flag` resource](https://www.hl7.org/fhir/DSTU2/flag.html#search){:target="_blank"}
+{% include optional.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
 
 Provider systems SHOULD implement the following search parameters:
 

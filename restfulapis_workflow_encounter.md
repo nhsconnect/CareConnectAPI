@@ -34,7 +34,7 @@ Procedure resource contains encounter information for a patient. Fetches a bundl
 GET /Encounter?:searchParameters
 ```
 
-Provider systems MAY implement all [search parameters for the `Encounter` resource](https://www.hl7.org/fhir/DSTU2/encounter.html#search){:target="_blank"}
+{% include optional.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
 
 Provider systems SHOULD implement the following search parameters:
 

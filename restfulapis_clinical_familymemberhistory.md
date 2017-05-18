@@ -34,7 +34,7 @@ FamilyMemberHistory resource contains family member history for a patient. Fetch
 GET /FamilyMemberHistory?:searchParameters
 ```
 
-Provider systems MAY implement all [search parameters for the `FamilyMemberHistory` resource](https://www.hl7.org/fhir/DSTU2/familymemberhistory.html#search){:target="_blank"}
+{% include optional.html content="[FamilyMemberHistory](https://www.hl7.org/fhir/DSTU2/familymemberhistory.html#search)" %}
 
 Provider systems SHOULD implement the following search parameters:
 
