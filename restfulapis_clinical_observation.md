@@ -35,8 +35,7 @@ Observation resource contains observation or event information for a patient. Fe
 GET /Observation?:searchParameters
 ```
 
-
-Provider systems MAY implement all [search parameters for the `Observation` resource](https://www.hl7.org/fhir/DSTU2/observation.html#search){:target="_blank"}
+{% include optional.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
 
 Provider systems SHOULD implement the following search parameters:
 

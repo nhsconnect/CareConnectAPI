@@ -34,7 +34,7 @@ Procedure resource contains procedure information for a patient. Fetches a bundl
 GET /Procedure?:searchParameters
 ```
 
-Provider systems MAY implement all [search parameters for the `Procedure` resource](https://www.hl7.org/fhir/DSTU2/procedure.html#search){:target="_blank"}
+{% include optional.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
 
 Provider systems SHOULD implement the following search parameters:
 

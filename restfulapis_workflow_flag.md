@@ -1,20 +1,18 @@
 ---
-title: Clinical | Medication Flag
-keywords: usecase, medication, flag
+title: Workflow | Flag
+keywords: usecase, flag
 tags:
 - restful_api
 - clinical
 - profile
 sidebar: foundations_sidebar
-permalink: restfulapis_clinical_medicationflag.html
-summary: Workflow Medication Flag
+permalink: restfulapis_workflow_flag.html
+summary: Workflow Flag
 ---
 
-## Mediciation Flag ##
+## Flag ##
 
 {% include profile.html content="[Care Connect Medication Flag](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-Flag-1.html)" %}
-
-{% include note.html content="The API for Medication Flag is the same as Flag" %}
 
 ## Read Operation ##
 
@@ -30,7 +28,7 @@ GET /Flag?_id=:id
 
 ## Search Parameters ##
 
-Search for all flag resources for a patient. Fetches a bundle of all `Flag` resources for the specified patient.
+Search for all flag (alert) resources for a patient. Fetches a bundle of all `Flag` resources for the specified patient.
 
 ```http
 GET /Flag?:searchparameters

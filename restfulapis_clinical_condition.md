@@ -1,10 +1,12 @@
 ---
 title: Clinical | Condition
 keywords: getcarerecord, structured, rest, condition
-tags: [structured,getcarerecord]
+tags:
+- structured
+- getcarerecord
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_condition.html
-summary: "Clinical Condition"
+summary: Clinical Condition
 ---
 
 ## Condition ##
@@ -31,7 +33,7 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 GET /Condition?:searchParameters
 ```
 
-Provider systems MAY implement all [search parameters for the `Condition` resource](https://www.hl7.org/fhir/DSTU2/condition.html#search){:target="_blank"}
+{% include optional.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html#search)" %}
 
 Provider systems SHOULD implement the following search parameters:
 

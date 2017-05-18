@@ -1,10 +1,12 @@
 ---
 title: Clinical | Immunization
 keywords: getcarerecord, structured, rest, immunization
-tags: [structured,getcarerecord]
+tags:
+- structured
+- getcarerecord
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_immunization.html
-summary: "Clinical Immunization"
+summary: Clinical Immunization
 ---
 
 ## Immunization ##
@@ -31,7 +33,7 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 GET /Immunization?:searchparameters
 ```
 
-Provider systems MAY implement any [search parameters for the `Immunization` resource](https://www.hl7.org/fhir/DSTU2/immunization.html#search){:target="_blank"}
+{% include optional.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
 
 Provider systems SHOULD implement the following search parameters:
 
