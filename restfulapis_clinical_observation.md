@@ -102,6 +102,9 @@ GET [base]/Observation?date=ge2010-01-01&date=le2011-12-31
 ```
 
 ## Search Response ##
+```
+curl --get http://127.0.0.1:8080/careconnect-dstu2-hapi-uiDstu2/Observation?patient=1
+```
 
 | Http Header | Value |
 |-----------------|---------|
