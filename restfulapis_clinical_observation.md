@@ -101,15 +101,25 @@ See [date](https://www.hl7.org/fhir/DSTU2/search.html#date) for details on this 
 GET [base]/Observation?date=ge2010-01-01&date=le2011-12-31
 ```
 
-## Search Response ##
-```
-curl --get http://127.0.0.1:8080/careconnect-dstu2-hapi-uiDstu2/Observation?patient=1
+## Example ##
+
+### curl Request ###
+
+```curl
+curl --get http://127.0.0.1:8080/careconnect-dstu2-hapi-uiDstu2/Observation?patient=1&_format=xml
 ```
 
-| Http Header | Value |
+### Response Headers ###
+
+| Status Code |
+|----------------|
+|200 |
+
+| Header | Value |
 |-----------------|---------|
-| ResponseCode | 200 |
+| Content-Type  | application/xml+fhir;charset=UTF-8 |
 
+### Response Body ###
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
