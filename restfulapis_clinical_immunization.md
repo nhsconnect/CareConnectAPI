@@ -18,11 +18,11 @@ summary: Clinical Immunization
 Return a single `Immunization` for the specified id
 
 ```http
-GET /Immunization/:id
+GET /Immunization/[id]
 ```
 
 ```http
-GET /Immunization?_id=:id
+GET /Immunization?_id=[id]
 ```
 
 ## Search Parameters ##
@@ -30,14 +30,14 @@ GET /Immunization?_id=:id
 Search for all immunization resources for a patient. Fetches a bundle of all `Immunization` resources for the specified patient.
 
 ```http
-GET /Immunization?:searchparameters
+GET /Immunization?[searchparameters]
 ```
 
 {% include optional.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 | `date` | `date` | Vaccination (non)-Administration Date | Y |
 | `dose-sequence` | `number` | Dose number within series |  |
 | `notgiven` | `token` | Administrations which were not given |  |

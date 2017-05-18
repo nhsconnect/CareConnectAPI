@@ -18,11 +18,11 @@ summary: Identification Organization
 Return a single `Organization` for the specified id
 
 ```http
-GET /Organization/:id
+GET /Organization/[id]
 ```
 
 ```http
-GET /Organization?_id=:id
+GET /Organization?_id=[id]
 ```
 
 ## Search Parameters ##
@@ -30,14 +30,14 @@ GET /Organization?_id=:id
 Organization contains the demographics for the organisation. Fetches a bundle of all `Organization` resources for the specified search criteria.
 
 ```http
-GET /Organization?:searchParameters
+GET /Organization?[searchParameters]
 ```
 
 {% include optional.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 | `adddress-postcode` | `string` | A postalCode specified in an address | Y |
 | `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) | Y |
 | `name` | `string` | A portion of the name of the organisation | |

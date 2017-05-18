@@ -19,11 +19,11 @@ summary: Clinical Medication Statement
 Return a single `Medication Statement` for the specified id
 
 ```http
-GET /MedicationStatement/:id
+GET /MedicationStatement/[id]
 ```
 
 ```http
-GET /MedicationStatement?_id=:id
+GET /MedicationStatement?_id=[id]
 ```
 
 
@@ -32,14 +32,14 @@ GET /MedicationStatement?_id=:id
 Medication Statement resource contains current medication information for a patient. Fetches a bundle of all `MedicationStatement` resources for the specified patient.
 
 ```http
-GET /MedicationStatement?:searchParameters
+GET /MedicationStatement?[searchParameters]
 ```
 
 {% include optional.html content="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 | `effectivedate` | `date` | Date when patient was taking (or not taking) the medication | |
 | `patient` | `reference` | The identity of a patient to list statements for | Y |
 | `status` | `token` | Return statements that match the given status | Y |

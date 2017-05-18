@@ -18,11 +18,11 @@ summary: restfulapis_workflow_encounter
 Return a single `Encounter` for the specified id
 
 ```http
-GET /Encounter/:id
+GET /Encounter/[id]
 ```
 
 ```http
-GET /Encounter?_id=:id
+GET /Encounter?_id=[id]
 ```
 
 
@@ -31,14 +31,14 @@ GET /Encounter?_id=:id
 Procedure resource contains encounter information for a patient. Fetches a bundle of all `Encounter` resources for the specified patient.
 
 ```http
-GET /Encounter?:searchParameters
+GET /Encounter?[searchParameters]
 ```
 
 {% include optional.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 | `patient` | `reference` | The identity of a patient to list encounters for | Y |
 | `date` | `date` | A date within the period the Encounter lasted | |
 | `_count` | `number` | The maximum number of results per page. |  |

@@ -18,11 +18,11 @@ summary: Clinical Family Member History
 Return a single `FamilyMemberHistory` for the specified id
 
 ```http
-GET /FamilyMemberHistory/:id
+GET /FamilyMemberHistory/[id]
 ```
 
 ```http
-GET /FamilyMemberHistory?_id=:id
+GET /FamilyMemberHistory?_id=[id]
 ```
 
 
@@ -31,14 +31,14 @@ GET /FamilyMemberHistory?_id=:id
 FamilyMemberHistory resource contains family member history for a patient. Fetches a bundle of all `FamilyMemberHistory` resources for the specified patient.
 
 ```http
-GET /FamilyMemberHistory?:searchParameters
+GET /FamilyMemberHistory?[searchParameters]
 ```
 
 {% include optional.html content="[FamilyMemberHistory](https://www.hl7.org/fhir/DSTU2/familymemberhistory.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 | `patient` | `reference` | The identity of a subject to list family member history items for | Y |
 | `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y |
 | `gender` | `token` | A search by a gender code of a family member |  |

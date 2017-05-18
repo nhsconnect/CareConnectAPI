@@ -18,7 +18,7 @@ This specification describes a single use cases. For complete details and backgr
 
 Provider systems SHOULD implement all [search parameters for the `AllergyIntolerance` resource](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search){:target="_blank"}
 
-Provider systems SHALL implement the following search parameters:
+Provider systems SHOULD the following search parameters (unless indicated as a SHALL):
 
 | Name | Type | Description | Paths |
 | `category` | `token` | Category of Substance | `AllergyIntolerance.category` |

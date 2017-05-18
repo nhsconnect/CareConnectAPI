@@ -18,11 +18,11 @@ summary: Clinical Location
 Return a single `Location` for the specified id
 
 ```http
-GET /Location/:id
+GET /Location/[id]
 ```
 
 ```http
-GET /Location?_id=:id
+GET /Location?_id=[id]
 ```
 
 ## Search Parameters ##
@@ -30,14 +30,14 @@ GET /Location?_id=:id
 Location contains the details for the location. Fetches a bundle of all `Location` resources for the specified search criteria.
 
 ```http
-GET /Location?:searchParameters
+GET /Location?[searchParameters]
 ```
 
 {% include optional.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 | `adddress-postcode` | `string` | A postalCode specified in an address | Y |
 | `identifier` | `token` | 	Any identifier for the location (e.g. SDS/ODS code) | Y |
 | `name` | `string` | A portion of the name of the location | |

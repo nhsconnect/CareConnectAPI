@@ -15,13 +15,13 @@ summary: Patient
 
 ## Read Operations ##
 
-Return a single `Patient` for the specified id. Not the NHS Number
+Return a single `Patient` for the specified id (not the NHS Number).
 
 ```http
-GET /Patient/:id}
+GET /Patient/[id]
 ```
 ```http
-GET /Patient?_id=:id}
+GET /Patient?_id=[id]
 ```
 
 ## Search Parameters ##
@@ -29,14 +29,14 @@ GET /Patient?_id=:id}
 Patient contains the demographics for the patient. Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
 
 ```http
-GET /Patient?:searchParameters
+GET /Patient?[searchParameters]
 ```
 
 {% include optional.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 |---------|--------|----------------|--------------------|
 | `address` | `string` | An address in any kind of address/part of the patient |  |
 | `adddress-postcode` | `string` | A postalCode specified in an address | Y |
@@ -59,11 +59,7 @@ In order to manage the number of search results returned, the server may choose 
 
 ### identifier (NHS Number, Hospital Number, etc) ###
 
-The recommended search parameters would include:
 
-- Patient.identifier on NHSNumber, HIE or Hospital Number.
-- a filter to limit the search results either using status = current, $current_medication list, period (issue date) or dateWritten
-- _revinclude=* to return all referenced resources.
 
 ### family and given ###
 

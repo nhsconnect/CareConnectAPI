@@ -7,7 +7,7 @@ tags:
 - profile
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationorder.html
-summary: Clinical Observation
+summary: Clinical Medication Order
 ---
 
 ## Medication Order ##
@@ -20,11 +20,11 @@ summary: Clinical Observation
 Return a single `MedicationOrder` for the specified id
 
 ```http
-GET /MedicationOrder/:id
+GET /MedicationOrder/[id]
 ```
 
 ```http
-GET /MedicationOrder?_id=:id
+GET /MedicationOrder?_id=[id]
 ```
 
 ## Search Parameters ##
@@ -32,14 +32,14 @@ GET /MedicationOrder?_id=:id
 Medication order resource contains prescription information for a patient. Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 
 ```http
-GET /MedicationOrder?:searchParameters
+GET /MedicationOrder?[searchParameters]
 ```
 
 {% include optional.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 |---------|--------|----------------|--------------------|
 | `datewritten` | `date` | Return prescriptions written on this date |  |
 | `period.[start|end]` | `date` | Return prescriptions issued in this date range | Y |
@@ -66,7 +66,7 @@ The recommended search parameters would include:
 - _revinclude=* to return all referenced resources.
 
 ```http
-GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|[NHSNumber]
+GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|[NHSNumber]
 ```
 
 ### status ###
@@ -74,7 +74,7 @@ GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|[NHSNu
 To filter on current prescriptions, change the Relative Request to  
 
 ```http
-GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|9876543210&status=active
+GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&status=active
 ```
 
 ### identifier ###
@@ -82,7 +82,7 @@ GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|987654
 To filter to this list to a specific supplier, we can search for their system identifiers only.
 
 ```http
-GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/MedicationOrder|
+GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/MedicationOrder|
 ```
 
 ### datewritten ###
@@ -90,7 +90,7 @@ GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|987654
 If wish to filter the results on the data of prescription. The example below returns all prescriptions for Patient with NHS Number of 9876543210 written after 14/Mar/2017 (gt = greater than)
 
 ```http
-GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|9876543210&datewritten=gt2017-03-14
+GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&datewritten=gt2017-03-14
 ```
 
 ### __list ###
@@ -112,7 +112,7 @@ GET /MedicationOrder?patient=[id]]&_list=$current-medications
 The example searches will only return MedicationOrder resources, it will not return any referenced resources such drugs (Medications) or clinicians (Practitioner). To return referenced resources add the parameter '_revinclude=*', specific resources can be selected (see https://www.hl7.org/fhir for details)
  
 ```http
-GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|9876543210&datewritten=gt2017-03-14&_revinclude=*
+GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&datewritten=gt2017-03-14&_revinclude=*
 ```
 
 

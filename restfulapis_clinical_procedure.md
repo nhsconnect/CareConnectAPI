@@ -18,11 +18,11 @@ summary: Clinical Procedure
 Return a single `Procedure` for the specified id
 
 ```http
-GET /Procedure/:id
+GET /Procedure/[id]
 ```
 
 ```http
-GET /Procedure?_id=:id
+GET /Procedure?_id=[id]
 ```
 
 
@@ -31,14 +31,14 @@ GET /Procedure?_id=:id
 Procedure resource contains procedure information for a patient. Fetches a bundle of all `Procedure` resources for the specified patient.
 
 ```http
-GET /Procedure?:searchParameters
+GET /Procedure?[searchParameters]
 ```
 
 {% include optional.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 | `patient` | `reference` | The identity of a patient to list observations for | Y |
 | `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y |
 | `_count` | `number` | The maximum number of results per page. |  |

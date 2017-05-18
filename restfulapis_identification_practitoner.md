@@ -18,11 +18,11 @@ summary: Practitioner
 Return a single `Practitioner` for the specified id
 
 ```http
-GET /Practitioner/:id
+GET /Practitioner/[id]
 ```
 
 ```http
-GET /Practitioner?_id=:id
+GET /Practitioner?_id=[id]
 ```
 
 ## Search Parameters ##
@@ -30,14 +30,14 @@ GET /Practitioner?_id=:id
 Practitioner contains the demographics of the clinician. Fetches a bundle of all `Practitioner` resources for the specified search criteria.
 
 ```http
-GET /Practitioner?:searchParameters
+GET /Practitioner?[searchParameters]
 ```
 
 {% include optional.html content="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 | `adddress-postcode` | `string` | A postalCode specified in an address |  |
 | `identifier` | `token` | 	Any identifier for the practitioner (e.g. GMP/GMC code) | Y |
 | `name` | `string` | A portion of the name of the practitioner | |

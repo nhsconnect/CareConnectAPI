@@ -18,11 +18,11 @@ summary: Clinical Condition
 Return a single `Condition` for the specified id
 
 ```http
-GET /Condition/:id
+GET /Condition/[id]
 ```
 
 ```http
-GET /Condition?_id=:id
+GET /Condition?_id=[id]
 ```
 
 ## Search Parameters ##
@@ -30,14 +30,14 @@ GET /Condition?_id=:id
 Search for all problems and health concerns for a patient. Fetches a bundle of all `Condition` resources for the specified patient.
 
 ```http
-GET /Condition?:searchParameters
+GET /Condition?[searchParameters]
 ```
 
 {% include optional.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 | `category` | `token` | The category of the condition | Y |
 | `clinicalstatus` | `token` | The clinical status of the condition | Y |
 | `code` | `token` | Code for the condition |  |

@@ -19,11 +19,11 @@ summary: Clinical Medication
 Return a single `Medication` for the specified id
 
 ```http
-GET /Medication/:id
+GET /Medication/[id]
 ```
 
 ```http
-GET /Medication?_id=:id
+GET /Medication?_id=[id]
 ```
 
 

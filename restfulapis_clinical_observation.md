@@ -37,9 +37,9 @@ GET /Observation?[searchParameters]
 
 {% include optional.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 | `code` | `token` | The code of the observation type | Y |
 | `patient` | `reference` | The identity of a patient to list observations for | Y |
 | `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y |
@@ -61,14 +61,14 @@ GET /Observation?patient=42
 
 #### patient.identifier={systemUri}|[identifier] ####
 
-`:systemUri` is a uniform resource identifier which defines which system the identifer belongs to. For NHS Number this would be `http://fhir.nhs.net/Id/nhs-number` and `:identifier` would be the NHS Number. Suppliers and organisations can create their own systemUri's, e.g. the fictional Jorvik NHS Trust could use `http://fhir.jorvik.nhs.uk/Patient` and the identifier could be the hospital number.
+`:systemUri` is a uniform resource identifier which defines which system the identifer belongs to. For NHS Number this would be `https://fhir.nhs.uk/Id/nhs-number` and `:identifier` would be the NHS Number. Suppliers and organisations can create their own systemUri's, e.g. the fictional Jorvik NHS Trust could use `http://fhir.jorvik.nhs.uk/Patient` and the identifier could be the hospital number.
 
 ```http
-GET /Observation?patient.identifier=http://fhir.nhs.net/Id/nhs-number|9876543210
+GET /Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 ```
 
 ```http
-GET /Observation?patient.identifier=http://fhir.jorvik.nhs.uk/Patient|12345678
+GET /Observation?patient.identifier=https://fhir.jorvik.nhs.uk/Patient|12345678
 ```
 
 ### code ###

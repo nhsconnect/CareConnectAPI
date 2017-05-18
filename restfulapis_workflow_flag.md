@@ -19,11 +19,11 @@ summary: Workflow Flag
 Return a single `Flag` for the specified id
 
 ```http
-GET /Flag/:id
+GET /Flag/[id]
 ```
 
 ```http
-GET /Flag?_id=:id
+GET /Flag?_id=[id]
 ```
 
 ## Search Parameters ##
@@ -31,14 +31,14 @@ GET /Flag?_id=:id
 Search for all flag (alert) resources for a patient. Fetches a bundle of all `Flag` resources for the specified patient.
 
 ```http
-GET /Flag?:searchparameters
+GET /Flag?[searchParameters]
 ```
 
 {% include optional.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
+Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
 | `patient` | `reference` | The patient for the vaccination record | Y |
 | `status` | `token` | Flag status: active, inactive or entered-in-error | Y |
 | `date` | `date` | Time period when flag is active |  |
