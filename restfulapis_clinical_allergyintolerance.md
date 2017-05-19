@@ -29,22 +29,19 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 GET /AllergyIntollerence?[searchParameters]
 ```
 
-{% include optional.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
-
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
+{% include moscow.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
 
 | Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `category` | `token` | Category of Substance ||
 | `date` | `date` | When recorded || 
 | `patient` | `reference` | Who the sensitivity is for | Y | 
 | `status` | `token` | Status of AllergyIntolerance	| Y |
 | `type` | `token` | Underlying mechanism (if known) ||
 
-### patient ###
+{% include search.patient.html content="AllergyIntolerance" %}
 
-TODO
+{% include search.date.html content="AllergyIntolerance" %}
 
-### status ###
-
-TODO
+{% include search.status.html content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
 

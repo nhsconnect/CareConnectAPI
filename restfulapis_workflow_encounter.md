@@ -29,21 +29,16 @@ Procedure resource contains encounter information for a patient. Fetches a bundl
 GET /Encounter?[searchParameters]
 ```
 
-{% include optional.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
-
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
+{% include moscow.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
 
 | Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `patient` | `reference` | The identity of a patient to list encounters for | Y |
 | `date` | `date` | A date within the period the Encounter lasted | |
 
-### patient ###
+{% include search.patient.html content="Encounter" %}
 
-```TODO```
-
-### date ###
-
-```TODO```
+{% include search.date.html content="Encounter" %}
 
 
 

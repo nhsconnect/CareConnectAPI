@@ -31,9 +31,8 @@ Medication order resource contains prescription information for a patient. Fetch
 GET /MedicationOrder?[searchParameters]
 ```
 
-{% include optional.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
+{% include moscow.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
 | Name | Type | Description | SHALL |
 |---------|--------|----------------|--------------------|
@@ -44,25 +43,9 @@ Provider systems MAY implement the following search parameters (unless indicated
 | `patient` | `reference` | The identity of a patient to list orders for | Y |
 
 
-### patient ###
+{% include search.patient.html content="MedicationOrder" %}
 
-The recommended search parameters would include:
-
-- Patient.identifier on NHSNumber, HIE or Hospital Number.
-- a filter to limit the search results either using status = current, $current_medication list, period (issue date) or dateWritten
-- _revinclude=* to return all referenced resources.
-
-```http
-GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|[NHSNumber]
-```
-
-### status ###
-
-To filter on current prescriptions, change the Relative Request to  
-
-```http
-GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&status=active
-```
+{% include search.status.html content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
 
 ### identifier ###
 
@@ -72,38 +55,13 @@ To filter to this list to a specific supplier, we can search for their system id
 GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/MedicationOrder|
 ```
 
-### datewritten ###
+{% include search.date.plus.html content="MedicationOrder" name="datewritten"  %}
 
-If wish to filter the results on the data of prescription. The example below returns all prescriptions for Patient with NHS Number of 9876543210 written after 14/Mar/2017 (gt = greater than)
+{% include search.date.plus.html content="MedicationOrder" name="period.start"  %}
 
-```http
-GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&datewritten=gt2017-03-14
-```
+{% include search.date.plus.html content="MedicationOrder" name="period.end]"  %}
 
-### __list ###
-
-Provider systems SHOULD implement [_list](https://www.hl7.org/fhir/DSTU2/search.html#list) search mechanism.
-
-Provider systems SHALL implement the standard [current resource list](https://www.hl7.org/fhir/lifecycle.html#current) for the `MedicationOrder` resource:
-
-- `$current-medications` A list of all medications that the patient is taking.
-
-On the RESTful API, this is done using the [list search mechanism](https://www.hl7.org/fhir/DSTU2/search.html#list) as follows:
-
-```http
-GET /MedicationOrder?patient=[id]]&_list=$current-medications
-```
-
-### __revinclude ###
-
-The example searches will only return MedicationOrder resources, it will not return any referenced resources such drugs (Medications) or clinicians (Practitioner). To return referenced resources add the parameter '_revinclude=*', specific resources can be selected (see https://www.hl7.org/fhir for details)
- 
-```http
-GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&datewritten=gt2017-03-14&_revinclude=*
-```
-
-
-### Search Response ###
+### Example ###
 
 The search parameters are based around a logical model which is shown below:
 
@@ -123,51 +81,6 @@ Provider systems:
 - SHALL return a `200` **OK** HTTP status code on successful execution of the operation.
 
 ```json
-TODO
-```
-
-#### Error Handling ####
-
-The Provider system SHALL return an error if:
-
-- the `id` is invalid (i.e. no `Patient` resource with that logical id exists on the server).
-
-Provider systems SHALL return an [OperationOutcome](http://www.hl7.org/fhir/operationoutcome.html) resource that provides additional detail when one or more data fields are corrupt or a specific business rule/constraint is breached.
-
-Refer to [Development - FHIR Guidance - Error Handling](development_fhir_error_handling_guidance.html) for details of error codes.
-
-
-## Examples ##
-
-### C# ###
-
-{% include tip.html content="C# code snippets utilise Ewout Kramer's [fhir-net-api](https://github.com/ewoutkramer/fhir-net-api) library which is the official .NET API for HL7&reg; FHIR&reg;." %}
-
-#### Example 1. Retrieve all medication orders for a patient ####
-
-```csharp
-var client = new FhirClient("https://fhirtest.uhn.ca/baseDstu2");
-client.PreferredFormat = ResourceFormat.Json;
-var query = new string[] { "patient=42" };
-var bundle = client.Search<MedicationOrder>(query);
-bundle.Entry.Count().Dump();
-FhirSerializer.SerializeResourceToJson(bundle).Dump();
-```
-
-### Java ###
-
-{% include tip.html content="Java code snippets utilise James Agnew's [hapi-fhir](https://github.com/jamesagnew/hapi-fhir/
-) library." %}
-
-```java
-TODO
-```
-
-### Curl ###
-
-
-
-```curl
 TODO
 ```
 

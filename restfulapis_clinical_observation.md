@@ -30,11 +30,11 @@ Observation resource contains observation or event information for a patient. Fe
 GET /Observation?[searchParameters]
 ```
 
-{% include optional.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
+{% include moscow.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
 
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
 | Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `code` | `token` | The code of the observation type | Y |
 | `patient` | `reference` | The identity of a patient to list observations for | Y |
 | `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y |
@@ -51,47 +51,11 @@ The patient parameter can be used two ways:
 GET /Observation?patient=42
 ```
 
-#### patient.identifier={systemUri}|[identifier] ####
+{% include search.patient.html content="Observation" %}
 
-`:systemUri` is a uniform resource identifier which defines which system the identifer belongs to. For NHS Number this would be `https://fhir.nhs.uk/Id/nhs-number` and `:identifier` would be the NHS Number. Suppliers and organisations can create their own systemUri's, e.g. the fictional Jorvik NHS Trust could use `http://fhir.jorvik.nhs.uk/Patient` and the identifier could be the hospital number.
+{% include search.date.html content="Observation" %}
 
-```http
-GET /Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
-```
-
-```http
-GET /Observation?patient.identifier=https://fhir.jorvik.nhs.uk/Patient|12345678
-```
-
-### code ###
-
-#### code={systemUri}|[code] ####
-
-#### code=[code] ####
-
-`:systemUri` is a uniform resource identifier which defines which system the code belongs to. This is optional and if not present all matching codes will be returned regardles of CodeSystems. 
-
-To search for Observations with `Baseline body mass index` using SNOMED CT
-
-```http
-GET /Observation?code=http://snomed.info/sct|846931000000101
-```
-
-To search for all resources with 'Body composition measure' codes using SNOMED CT 
-
-```http
-GET /Observation?code:below=http://snomed.info/sct|363810004
-```
-
-The modifier `:below` is a modifier which returns all resources with codes that are subsumed by the specified search code and includes the specified code. 
-
-### date ###
-
-See [date](https://www.hl7.org/fhir/DSTU2/search.html#date) for details on this parameter. 'date' can be used multiple times as a search parameter 
-
-```http
-GET /Observation?date=ge2010-01-01&date=le2011-12-31
-```
+{% include search.code.html content="Observation" %}
 
 ## Example ##
 

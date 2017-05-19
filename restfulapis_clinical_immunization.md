@@ -29,11 +29,10 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 GET /Immunization?[searchparameters]
 ```
 
-{% include optional.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
-
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
+{% include moscow.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
 
 | Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `date` | `date` | Vaccination (non)-Administration Date | Y |
 | `dose-sequence` | `number` | Dose number within series |  |
 | `notgiven` | `token` | Administrations which were not given |  |
@@ -42,17 +41,11 @@ Provider systems MAY implement the following search parameters (unless indicated
 | `status` | `token` | Immunization event status | |
 | `vaccine-code` | `token` | Vaccine Product Administered |  |
 
-### patient ###
+{% include search.patient.html content="Immunization" %}
 
-```
-TODO
-```
+{% include search.date.html content="Immunization" %}
 
-### date ###
-
-```
-TODO
-```
+{% include search.status.html content="Immunization" options="in-progress | on-hold | completed | entered-in-error | stopped" selected="on-hold" %}
 
 
 

@@ -29,9 +29,8 @@ Patient contains the demographics for the patient. Fetches a bundle of all `Pati
 GET /Patient?[searchParameters]
 ```
 
-{% include optional.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
+{% include moscow.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
 | Name | Type | Description | SHALL |
 |---------|--------|----------------|--------------------|
@@ -56,17 +55,13 @@ Provider systems MAY implement the following search parameters (unless indicated
 
 ### family and given ###
 
-TODO
-
-### birthdate ###
-
-TODO
-
-### Multiple Parameters ###
 
 ```
 TODO
 ```
+
+{% include search.date.plus.html content="Patient" name="birthdate" %}
+
 
 ## Examples ##
 

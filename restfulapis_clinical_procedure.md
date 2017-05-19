@@ -29,21 +29,16 @@ Procedure resource contains procedure information for a patient. Fetches a bundl
 GET /Procedure?[searchParameters]
 ```
 
-{% include optional.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
-
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
+{% include moscow.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
 
 | Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `patient` | `reference` | The identity of a patient to list observations for | Y |
 | `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y |
 
 
-### patient ###
+{% include search.patient.html content="Procedure" %}
 
-```TODO```
-
-### date ###
-
-```TODO```
+{% include search.date.html content="Procedure" %}
 
 

@@ -29,11 +29,10 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 GET /Condition?[searchParameters]
 ```
 
-{% include optional.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html#search)" %}
-
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
+{% include moscow.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html#search)" %}
 
 | Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `category` | `token` | The category of the condition | Y |
 | `clinicalstatus` | `token` | The clinical status of the condition | Y |
 | `code` | `token` | Code for the condition |  |
@@ -43,20 +42,13 @@ Provider systems MAY implement the following search parameters (unless indicated
 | `patient` | `reference` | Who has the condition? | Y |
 | `severity` | `token` | The severity of the condition |  |
 
-### patient ###
+{% include search.patient.html content="Condition" %}
 
-TODO
+{% include search.code.html content="Condition" %}
 
 ### category ###
 
 TODO
 
-### clinicalstatus ###
+{% include search.status.plus.html content="Condition" options="active | inactive | relapse | remission | resolved" selected="relapse" name="clinicalstatus" %}
 
-TODO
-
-### Multiple Parameters ###
-
-```
-TODO
-```

@@ -30,26 +30,19 @@ Search for all flag (alert) resources for a patient. Fetches a bundle of all `Fl
 GET /Flag?[searchParameters]
 ```
 
-{% include optional.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
+{% include moscow.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
 
 Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
 | Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `patient` | `reference` | The patient for the vaccination record | Y |
 | `status` | `token` | Flag status: active, inactive or entered-in-error | Y |
 | `date` | `date` | Time period when flag is active |  |
 
-### patient ###
+{% include search.patient.html content="Flag" %}
 
-```
-TODO
-```
-
-### status ###
-
-```
-TODO
-```
+{% include search.status.html content="Flag" options="active | inactive | entered-in-error" selected="active" %}
 
 
 

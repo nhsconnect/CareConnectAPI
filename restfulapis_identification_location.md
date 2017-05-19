@@ -29,11 +29,10 @@ Location contains the details for the location. Fetches a bundle of all `Locatio
 GET /Location?[searchParameters]
 ```
 
-{% include optional.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html#search)" %}
-
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
+{% include moscow.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html#search)" %}
 
 | Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `adddress-postcode` | `string` | A postalCode specified in an address | Y |
 | `identifier` | `token` | 	Any identifier for the location (e.g. SDS/ODS code) | Y |
 | `name` | `string` | A portion of the name of the location | |

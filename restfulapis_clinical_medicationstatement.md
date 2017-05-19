@@ -30,24 +30,16 @@ Medication Statement resource contains current medication information for a pati
 GET /MedicationStatement?[searchParameters]
 ```
 
-{% include optional.html content="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search)" %}
-
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
+{% include moscow.html content="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search)" %}
 
 | Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `effectivedate` | `date` | Date when patient was taking (or not taking) the medication | |
 | `patient` | `reference` | The identity of a patient to list statements for | Y |
 | `status` | `token` | Return statements that match the given status | Y |
 
+{% include search.patient.html content="MedicationStatement" %}
 
-### patient ###
+{% include search.status.html content="MedicationStatement" options="active | completed | entered-in-error | intended" selected="active" %}
 
-```TODO```
-
-### active ###
-
-```TODO```
-
-### effectivedate ###
-
-```TODO```
+{% include search.date.plus.html content="MedicationStatement" name="effectivedate" %}

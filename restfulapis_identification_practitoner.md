@@ -29,11 +29,10 @@ Practitioner contains the demographics of the clinician. Fetches a bundle of all
 GET /Practitioner?[searchParameters]
 ```
 
-{% include optional.html content="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html#search)" %}
-
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
+{% include moscow.html content="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html#search)" %}
 
 | Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `adddress-postcode` | `string` | A postalCode specified in an address |  |
 | `identifier` | `token` | 	Any identifier for the practitioner (e.g. GMP/GMC code) | Y |
 | `name` | `string` | A portion of the name of the practitioner | |

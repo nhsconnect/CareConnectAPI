@@ -29,11 +29,10 @@ Organization contains the demographics for the organisation. Fetches a bundle of
 GET /Organization?[searchParameters]
 ```
 
-{% include optional.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
-
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
+{% include moscow.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
 
 | Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `adddress-postcode` | `string` | A postalCode specified in an address | Y |
 | `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) | Y |
 | `name` | `string` | A portion of the name of the organisation | |
