@@ -111,9 +111,6 @@ entries:
             url: /restfulapis_workflow_flag.html
             output: web
 
-    - title: Terminology
-      url: /development_terminology.html
-      output: web
     - title: API Foundations
       url: /foundations.html
       output: web

@@ -10,8 +10,6 @@ permalink: restfulapis_clinical_observation.html
 summary: Clinical Observation
 ---
 
-## Observation ##
-
 {% include profile.html content="[Care Connect Observation](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Observation-1.html)" %}
 
 ## Read ##
@@ -33,23 +31,11 @@ GET /Observation?[searchParameters]
 {% include moscow.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
 
 
-| Name | Type | Description | SHALL |
-|------|------|-------------|-------|
-| `code` | `token` | The code of the observation type | Y |
-| `patient` | `reference` | The identity of a patient to list observations for | Y |
-| `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y |
-
-### patient ###
-
-The patient parameter can be used two ways:
-
-#### patient= [id] ####
-
-`id` is the logical id of the patient on the server which is obtained by a [Patient ](restfulapis_identification_patient.html) resource query.
-
-```http
-GET /Observation?patient=42
-```
+| Name | Type | Description | SHALL | Path |
+|------|------|-------------|-------|------|
+| `code` | `token` | The code of the observation type | Y | Observation.code |
+| `patient` | `reference` | The identity of a patient to list observations for | Y | Observation.subject (Patient) |
+| `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y | Observation.effective[x] |
 
 {% include search.patient.html content="Observation" %}
 
@@ -61,8 +47,10 @@ GET /Observation?patient=42
 
 ### curl Request ###
 
+Return all Observation resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' to the actual base Url of the FHIR Server. 
+
 ```curl
-curl --get http://127.0.0.1:8080/careconnect-dstu2-hapi-uiDstu2/Observation?patient=1&_format=xml
+curl --get http://[baseUrl]/Observation?patient=1&_format=xml
 ```
 
 ### Response Headers ###
