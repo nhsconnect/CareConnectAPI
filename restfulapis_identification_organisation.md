@@ -13,16 +13,12 @@ summary: Identification Organization
 
 {% include profile.html content="[Care Connect Organization](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Organization-1.html)" %}
 
-## Read Operation ##
+## Read ##
 
 Return a single `Organization` for the specified id
 
 ```http
 GET /Organization/[id]
-```
-
-```http
-GET /Organization?_id=[id]
 ```
 
 ## Search Parameters ##
@@ -41,10 +37,6 @@ Provider systems MAY implement the following search parameters (unless indicated
 | `adddress-postcode` | `string` | A postalCode specified in an address | Y |
 | `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) | Y |
 | `name` | `string` | A portion of the name of the organisation | |
-
-
-In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. Please refer to [Paged Search](https://www.hl7.org/fhir/DSTU2/search.html#count){:target="_blank"} for further details.
-
 
 
 ### identifier (SDS/ODS Code) ###

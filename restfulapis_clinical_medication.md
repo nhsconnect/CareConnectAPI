@@ -14,7 +14,7 @@ summary: Clinical Medication
 
 {% include profile.html content="[Care Connect Medication](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-1.html)" %}
 
-## Read Operation ##
+## Read ##
 
 Return a single `Medication` for the specified id
 
@@ -22,8 +22,5 @@ Return a single `Medication` for the specified id
 GET /Medication/[id]
 ```
 
-```http
-GET /Medication?_id=[id]
-```
 
 
