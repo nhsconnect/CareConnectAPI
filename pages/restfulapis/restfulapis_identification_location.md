@@ -4,7 +4,7 @@ keywords: usecase, location, order
 tags: [rest, fhir, identification]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_location.html
-summary: Clinical Location
+summary: Identification Location
 ---
 
 ## Location ##

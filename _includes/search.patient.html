@@ -2,7 +2,7 @@
 
 <p>The patient parameter can be used two ways:</p>
 
-<div markdown="span" class="alert alert-success" role="alert"> 
+<div markdown="span" class="alert alert-success" role="alert">
 patient=[id]</div>
 
 
@@ -10,7 +10,7 @@ patient=[id]</div>
 
 <p> <code class="highlighter-rouge">id</code> is the logical id of the patient on the server which is obtained by a <a href="restfulapis_identification_patient.html">Patient </a> resource query.</p>
 <p>
-<code class="highlighter-rouge">id</code> SHALL be the national identifier (i.e. NHS Number, CHI Number & HSCNI) for national systems.
+<code class="highlighter-rouge">id</code> SHALL be the national identifier (NHS Number) for national systems.
 </p>
 
 
@@ -23,7 +23,7 @@ Return all {{include.content}} resources for Patients with a logical id of 42</p
 <div markdown="span" class="alert alert-success" role="alert">
 patient.identifier={systemUri}|[identifier]</div>
 
-<p>This SHOULD be supported for all non national provider systems for queries by national identifiers (i.e. NHS Number, CHI Number & HSCNI).</p>
+<p>This SHOULD be supported for all non national provider systems for queries by national identifiers (NHS Number).</p>
 <p>This SHALL be supported for all intermediary (e.g. Trust Integration Engines or other middleware) systems.</p>
 
 <p><code class="highlighter-rouge">systemUri</code> is a uniform resource identifier which defines which system the identifer belongs to. For NHS Number this would be <code class="highlighter-rouge">https://fhir.nhs.uk/Id/nhs-number</code> and <code class="highlighter-rouge">:identifier</code> would be the NHS Number.</p>
