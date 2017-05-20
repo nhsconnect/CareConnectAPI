@@ -1,7 +1,7 @@
 ---
 title: Clinical | Medication Flag
 keywords: usecase, medication, flag
-tags: [fhir, rest, clinical, medication]
+tags: [fhir, rest, clinical, medication, workflow]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationflag.html
 summary: Workflow Medication Flag

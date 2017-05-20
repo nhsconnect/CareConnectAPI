@@ -1,8 +1,8 @@
 ---
-title: "Medciation"
-tagName: medication
+title: "Identification"
+tagName: identification
 search: exclude
-permalink: tag_medication.html
+permalink: tag_identification.html
 sidebar: overview_sidebar
 folder: tags
 ---
