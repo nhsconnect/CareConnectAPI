@@ -2,9 +2,17 @@
 
 <p>The patient parameter can be used two ways:</p>
 
-<h4 id="patient-id">patient= [id]</h4>
+<div markdown="span" class="alert alert-success" role="alert"> 
+patient=[id]</div>
 
-<p><code class="highlighter-rouge">id</code> is the logical id of the patient on the server which is obtained by a <a href="restfulapis_identification_patient.html">Patient </a> resource query.</p>
+
+<p>This SHALL be supported for all endpoint provider systems.</p>
+
+<p> <code class="highlighter-rouge">id</code> is the logical id of the patient on the server which is obtained by a <a href="restfulapis_identification_patient.html">Patient </a> resource query.</p>
+<p>
+<code class="highlighter-rouge">id</code> SHALL be the national identifier (i.e. NHS Number, CHI Number & HSCNI) for national systems.
+</p>
+
 
 <div class="language-http highlighter-rouge">
 <pre class="highlight"><code><span class="err">GET /{{include.content}}?patient=42
@@ -12,16 +20,19 @@
 Return all {{include.content}} resources for Patients with a logical id of 42</pre>
 </div>
 
-<h4 id="patientidentifiersystemuriidentifier">patient.identifier={systemUri}|[identifier]</h4>
+<div markdown="span" class="alert alert-success" role="alert">
+patient.identifier={systemUri}|[identifier]</div>
 
-<p><code class="highlighter-rouge">systemUri</code> is a uniform resource identifier which defines which system the identifer belongs to. For NHS Number this would be <code class="highlighter-rouge">https://fhir.nhs.uk/Id/nhs-number</code> and <code class="highlighter-rouge">:identifier</code> would be the NHS Number. Suppliers and organisations can create their own systemUri’s, e.g. the fictional Jorvik NHS Trust could use <code class="highlighter-rouge">http://fhir.jorvik.nhs.uk/Patient</code> and the identifier could be the hospital number.</p>
+<p>This SHOULD be supported for all non national provider systems for queries by national identifiers (i.e. NHS Number, CHI Number & HSCNI).</p>
+<p>This SHALL be supported for all intermediary (e.g. Trust Integration Engines or other middleware) systems.</p>
 
+<p><code class="highlighter-rouge">systemUri</code> is a uniform resource identifier which defines which system the identifer belongs to. For NHS Number this would be <code class="highlighter-rouge">https://fhir.nhs.uk/Id/nhs-number</code> and <code class="highlighter-rouge">:identifier</code> would be the NHS Number.</p>
 <div class="language-http highlighter-rouge">
 <pre class="highlight"><code><span class="err">GET /{{include.content}}?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 </span></code>
 Return all {{include.content}} resources for Patients with a NHS Number of 9876543210</pre>
 </div>
-
+<p> Suppliers and organisations MAY create their own systemUri’s for local patient identifiers, e.g. the fictional Jorvik NHS Trust could use <code class="highlighter-rouge">http://fhir.jorvik.nhs.uk/Patient</code> to identify a number as the trusts hospital number.</p>
 <div class="language-http highlighter-rouge">
 <pre class="highlight"><code><span class="err">GET /{{include.content}}?patient.identifier=https://fhir.jorvik.nhs.uk/Patient|12345678
 </span></code>
