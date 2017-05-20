@@ -1,10 +1,7 @@
 ---
 title: Clinical | Medication Flag
 keywords: usecase, medication, flag
-tags:
-- restful_api
-- clinical
-- profile
+tags: [fhir, rest, clinical, medication]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationflag.html
 summary: Workflow Medication Flag
@@ -45,6 +42,3 @@ GET /Flag?[searchparameters]
 {% include search.patient.html content="Flag" %}
 
 {% include search.status.html content="Flag" options="active | inactive | entered-in-error" selected="active" %}
-
-
-

@@ -1,9 +1,7 @@
 ---
 title: Clinical | Family Member History
 keywords: usecase, familymemberhistory
-tags:
-- restful_api
-- use_case
+tags: [familymemberhistory,fhir,rest,clinical]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_familymemberhistory.html
 summary: Clinical Family Member History
@@ -40,5 +38,3 @@ GET /FamilyMemberHistory?[searchParameters]
 {% include search.patient.html content="FamilyMemberHistory" %}
 
 {% include search.date.html content="FamilyMemberHistory" %}
-
-

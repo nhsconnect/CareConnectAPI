@@ -1,9 +1,7 @@
 ---
 title: Workflow | Encounter
 keywords: usecase, encounter
-tags:
-- restful_api
-- use_case
+tags: [rest, fhir, workflow]
 sidebar: foundations_sidebar
 permalink: restfulapis_workflow_encounter.html
 summary: restfulapis_workflow_encounter
@@ -39,6 +37,3 @@ GET /Encounter?[searchParameters]
 {% include search.patient.html content="Encounter" %}
 
 {% include search.date.html content="Encounter" %}
-
-
-

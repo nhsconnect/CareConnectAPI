@@ -1,9 +1,7 @@
 ---
 title: Identification | Practitioner
 keywords: usecase, Practitioner
-tags:
-- structured
-- patient
+tags: [rest, fhir, identification]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_practitoner.html
 summary: Practitioner

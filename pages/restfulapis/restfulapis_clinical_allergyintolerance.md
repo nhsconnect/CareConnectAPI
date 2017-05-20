@@ -1,9 +1,7 @@
 ---
 title: Clinical | Allergy Intolerance
 keywords: getcarerecord, structured, rest, allergy, intolerance
-tags:
-- structured
-- getcarerecord
+tags: [fhir, clinical, rest, allergyintolerance]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_allergyintolerance.html
 summary: Clinical Allergy Intolerance
@@ -34,8 +32,8 @@ GET /AllergyIntollerence?[searchParameters]
 | Name | Type | Description | SHALL |
 |------|------|-------------|-------|
 | `category` | `token` | Category of Substance ||
-| `date` | `date` | When recorded || 
-| `patient` | `reference` | Who the sensitivity is for | Y | 
+| `date` | `date` | When recorded ||
+| `patient` | `reference` | Who the sensitivity is for | Y |
 | `status` | `token` | Status of AllergyIntolerance	| Y |
 | `type` | `token` | Underlying mechanism (if known) ||
 
@@ -44,4 +42,3 @@ GET /AllergyIntollerence?[searchParameters]
 {% include search.date.html content="AllergyIntolerance" %}
 
 {% include search.status.html content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
-

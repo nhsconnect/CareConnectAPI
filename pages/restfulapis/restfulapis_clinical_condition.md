@@ -1,9 +1,7 @@
 ---
 title: Clinical | Condition
 keywords: getcarerecord, structured, rest, condition
-tags:
-- structured
-- getcarerecord
+tags: [rest,fhir,condition,clinical]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_condition.html
 summary: Clinical Condition
@@ -51,4 +49,3 @@ GET /Condition?[searchParameters]
 TODO
 
 {% include search.status.plus.html content="Condition" options="active | inactive | relapse | remission | resolved" selected="relapse" name="clinicalstatus" %}
-

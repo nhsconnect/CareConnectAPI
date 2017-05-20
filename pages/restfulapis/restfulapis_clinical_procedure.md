@@ -1,9 +1,7 @@
 ---
 title: Clinical | Procedure
 keywords: usecase, procedure
-tags:
-- restful_api
-- use_case
+tags: [fhir, rest, clinical]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_procedure.html
 summary: Clinical Procedure
@@ -40,5 +38,3 @@ GET /Procedure?[searchParameters]
 {% include search.patient.html content="Procedure" %}
 
 {% include search.date.html content="Procedure" %}
-
-

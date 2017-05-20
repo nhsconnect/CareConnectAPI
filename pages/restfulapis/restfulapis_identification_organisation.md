@@ -1,9 +1,7 @@
 ---
 title: Identification | Organisation
 keywords: usecase, Organization
-tags:
-- structured
-- patient
+tags: [rest, fhir, identification]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_organisation.html
 summary: Identification Organization

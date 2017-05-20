@@ -1,10 +1,7 @@
 ---
 title: Clinical | Medication Statement
 keywords: usecase, clinical
-tags:
-- restful_api
-- clinical
-- profile
+tags: [fhir, rest, clinical, medication]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationstatement.html
 summary: Clinical Medication Statement

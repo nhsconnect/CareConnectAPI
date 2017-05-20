@@ -1,10 +1,7 @@
 ---
 title: Clinical | Observation
 keywords: usecase, observation
-tags:
-- restful_api
-- clinical
-- profile
+tags: [observation,fhir,rest,clinical]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_observation.html
 summary: Clinical Observation
@@ -47,7 +44,7 @@ GET /Observation?[searchParameters]
 
 ### curl Request ###
 
-Return all Observation resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' to the actual base Url of the FHIR Server. 
+Return all Observation resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' to the actual base Url of the FHIR Server.
 
 ```curl
 curl --get http://[baseUrl]/Observation?patient=1&_format=xml

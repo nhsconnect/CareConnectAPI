@@ -1,10 +1,7 @@
 ---
 title: Clinical | Medication Order
 keywords: usecase, medication, order
-tags:
-- restful_api
-- clinical
-- profile
+tags: [fhir, rest, clinical, medication]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationorder.html
 summary: Clinical Medication Order
@@ -65,16 +62,16 @@ GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|987654
 
 The search parameters are based around a logical model which is shown below:
 
-{% include image.html 
+{% include image.html
 max-width="200px" file="Bristol/Bristol.EntityRelationship.Resource.bmp" alt="Bristol ERD"
-caption="MedicationOrder Logical Model" %} 
+caption="MedicationOrder Logical Model" %}
 
 A search on MedicationOrder without the '_Revinclude=*' would return a FHIR [Bundle](https://www.hl7.org/fhir/DSTU2/bundle.html) would return only MedicationOrder resources. This is useful if you already have Patient, Medication and Practitioner data but in most case the calling system or web application won't be. In this case it is useful for all the referenced resources to be returned with the search results.
 This is done using the '_Revinclude=*' parameter and the returned search results now include the referenced parameters. The convention is to list the referenced resources before they are referenced (so they can be processed first).
 
-{% include image.html 
+{% include image.html
 max-width="200px" file="Bristol/Bristol.searchResults.includeReferenced.bmp" alt="Bristol ERD"
-caption="MedicationOrder Search Results" %} 
+caption="MedicationOrder Search Results" %}
 
 Provider systems:
 
@@ -83,5 +80,3 @@ Provider systems:
 ```json
 TODO
 ```
-
-

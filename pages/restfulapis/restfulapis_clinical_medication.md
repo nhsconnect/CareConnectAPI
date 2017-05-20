@@ -1,10 +1,7 @@
 ---
 title: Clinical | Medication
 keywords: usecase, medication
-tags:
-- restful_api
-- clinical
-- profile
+tags: [fhir, rest, clinical, medication]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medication.html
 summary: Clinical Medication
@@ -21,6 +18,3 @@ Return a single `Medication` for the specified id
 ```http
 GET /Medication/[id]
 ```
-
-
-

@@ -1,9 +1,7 @@
 ---
 title: Identification | Patient
 keywords: getcarerecord, structured, rest, patient
-tags:
-- structured
-- patient
+tags: [rest, fhir, identification]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_patient.html
 summary: Patient
@@ -91,7 +89,3 @@ TODO
 ```curl
 TODO
 ```
-
-
-
-

@@ -1,9 +1,7 @@
 ---
 title: Clinical | Immunization
 keywords: getcarerecord, structured, rest, immunization
-tags:
-- structured
-- getcarerecord
+tags: [fhir, rest, clinical, familymemberhistory]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_immunization.html
 summary: Clinical Immunization
@@ -46,6 +44,3 @@ GET /Immunization?[searchparameters]
 {% include search.date.html content="Immunization" %}
 
 {% include search.status.html content="Immunization" options="in-progress | on-hold | completed | entered-in-error | stopped" selected="on-hold" %}
-
-
-

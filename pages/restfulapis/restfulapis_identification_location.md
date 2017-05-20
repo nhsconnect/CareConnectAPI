@@ -1,7 +1,7 @@
 ---
 title: Identification | Location
 keywords: usecase, location, order
-tags:
+tags: [rest, fhir, identification]
 - structured
 - patient
 sidebar: accessrecord_rest_sidebar

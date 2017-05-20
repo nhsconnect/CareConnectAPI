@@ -1,10 +1,7 @@
 ---
 title: Workflow | Flag
 keywords: usecase, flag
-tags:
-- restful_api
-- clinical
-- profile
+tags: [rest, fhir, identification]
 sidebar: foundations_sidebar
 permalink: restfulapis_workflow_flag.html
 summary: Workflow Flag
@@ -43,6 +40,3 @@ Provider systems MAY implement the following search parameters (unless indicated
 {% include search.patient.html content="Flag" %}
 
 {% include search.status.html content="Flag" options="active | inactive | entered-in-error" selected="active" %}
-
-
-

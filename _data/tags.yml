@@ -2,5 +2,9 @@ allowed-tags:
   - overview
   - usecase
   - fhir
-  - design  
+  - design
   - development
+  - clinical
+  - identification
+  - workflow
+  - rest
