@@ -2,7 +2,7 @@
 title: Search
 keywords: getcarerecord, rest, search
 tags:
-- search
+- '[search]'
 - ''
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_search.html
