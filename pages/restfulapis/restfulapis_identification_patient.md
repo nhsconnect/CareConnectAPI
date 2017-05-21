@@ -63,29 +63,81 @@ TODO
 
 ## Examples ##
 
-### C# ###
-
-{% include tip.html content="C# code snippets utilise Ewout Kramer's [fhir-net-api](https://github.com/ewoutkramer/fhir-net-api) library which is the official .NET API for HL7&reg; FHIR&reg;." %}
-
-#### Example 1. Retrieve all medication orders for a patient ####
-
-```csharp
-TODO
-```
-
-### Java ###
-
-{% include tip.html content="Java code snippets utilise James Agnew's [hapi-fhir](https://github.com/jamesagnew/hapi-fhir/
-) library." %}
-
-```java
-TODO
-```
-
-### Curl ###
-
-
+Return all Patient resources with a NHS Number 9876543210, the format of the response body will be xml. Replace 'baseUrl' to the actual base Url of the FHIR Server.
 
 ```curl
-TODO
+curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml
+```
+
+### Response Headers ###
+
+| Status Code |
+|----------------|
+|200 |
+
+| Header | Value |
+|-----------------|---------|
+| Content-Type  | application/xml+fhir;charset=UTF-8 |
+
+```xml
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="f0566028-976e-4d4f-8e5e-f4209b29f52e"/>
+    <meta>
+        <lastUpdated value="2017-05-21T12:00:48.832-04:00"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="1"/>
+    <link>
+        <relation value="self"/>
+        <url value="http://fhirtest.uhn.ca/baseDstu2/Patient?_format=xml&amp;identifier=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number%7C9876543210"/>
+    </link>
+    <entry>
+        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Patient/31936"/>
+        <resource>
+            <Patient xmlns="http://hl7.org/fhir">
+                <id value="31936"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-05-21T11:55:59.532-04:00"/>
+                    <profile value="http://hl7.org/fhir/StructureDefinition/careconnect-patient-1"/>
+                </meta>
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/nhs-number"/>
+                    <value value="9876543210"/>
+                </identifier>
+                <active value="true"/>
+                <name>
+                    <use value="usual"/>
+                    <family value="Kanfeld"/>
+                    <given value="Bernie"/>
+                    <prefix value="Miss"/>
+                </name>
+                <gender value="female"/>
+                <birthDate value="1998-03-19"/>
+                <address>
+                    <use value="home"/>
+                    <line value="10, Field Jardin"/>
+                    <line value="Upton"/>
+                    <city value="Leeds"/>
+                    <district value="West Yorkshire"/>
+                    <postalCode value="LS10 1ZZ"/>
+                </address>
+                <maritalStatus>
+                    <coding>
+                        <system value="http://hl7.org/fhir/marital-status"/>
+                        <code value="S"/>
+                        <display value="Single"/>
+                    </coding>
+                </maritalStatus>
+                <careProvider>
+                    <reference value="https://sds.nhs.uk/Organization/Y00001"/>
+                    <display value="MGP Medical Centre"/>
+                </careProvider>
+            </Patient>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+</Bundle>
 ```
