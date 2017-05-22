@@ -7,8 +7,6 @@ permalink: restfulapis_clinical_procedure.html
 summary: Clinical Procedure
 ---
 
-## Procedure ##
-
 {% include profile.html content="[Care Connect Procedure](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Procedure-1.html)" %}
 
 ## Read ##

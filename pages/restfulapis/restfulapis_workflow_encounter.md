@@ -6,26 +6,21 @@ sidebar: foundations_sidebar
 permalink: restfulapis_workflow_encounter.html
 summary: Workflow Encounter
 ---
-
-## Encounter ##
-
+{% include search.warnbanner.html %}
 {% include profile.html content="[Care Connect Encounter](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Encounter-1.html)" %}
 
 ## Read ##
 
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Encounter/[id]</div>
 Return a single `Encounter` for the specified id
-
-```http
-GET /Encounter/[id]
-```
 
 ## Search Parameters ##
 
-Procedure resource contains encounter information for a patient. Fetches a bundle of all `Encounter` resources for the specified patient.
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Encounter?[searchParameters]</div>
 
-```http
-GET /Encounter?[searchParameters]
-```
+Procedure resource contains encounter information for a patient. Fetches a bundle of all `Encounter` resources for the specified patient.
 
 {% include moscow.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
 

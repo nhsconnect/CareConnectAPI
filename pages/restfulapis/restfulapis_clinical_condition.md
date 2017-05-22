@@ -7,8 +7,6 @@ permalink: restfulapis_clinical_condition.html
 summary: Clinical Condition
 ---
 
-## Condition ##
-
 {% include profile.html content="[Care Connect Condition](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Condition-1.html)" %}
 
 ## Read Operation ##

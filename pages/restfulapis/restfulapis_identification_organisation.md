@@ -7,8 +7,6 @@ permalink: restfulapis_identification_organisation.html
 summary: Identification Organization
 ---
 
-## Organization ##
-
 {% include profile.html content="[Care Connect Organization](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Organization-1.html)" %}
 
 ## Read ##
@@ -29,27 +27,12 @@ GET /Organization?[searchParameters]
 
 {% include moscow.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
 
-| Name | Type | Description | SHALL |
-|------|------|-------------|-------|
-| `adddress-postcode` | `string` | A postalCode specified in an address | Y |
-| `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) | Y |
-| `name` | `string` | A portion of the name of the organisation | |
+| Name | Type | Description | SHALL | Path |
+|------|------|-------------|-------|------|
+| `adddress-postcode` | `string` | A postalCode specified in an address | Y | Organization.address.postalCode |
+| `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) | Y | Organization.identifier |
+| `name` | `string` | A portion of the name of the organisation | | Organization.name |
 
+{% include search.string.html resource="Organization" content="address-postcode"  example="DE22%203NE" text1="Post Code" text2="DE22 3NE" %}
 
-### identifier (SDS/ODS Code) ###
-
-```
-TODO
-```
-
-### address-postcode
-
-```
-TODO
-```
-
-### name ###
-
-```
-TODO
-```
+{% include search.identifier.html resource="Organization" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-organization-code|RTG" text1="NHS Organisation" text2="RTG (Derby Teaching Hospitals NHS Trust)" %}

@@ -7,25 +7,23 @@ permalink: restfulapis_workflow_flag.html
 summary: Workflow Flag
 ---
 
-## Flag ##
-
+{% include search.warnbanner.html %}
 {% include profile.html content="[Care Connect Medication Flag](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-Flag-1.html)" %}
 
 ## Read ##
 
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Flag/[id]</div>
+
 Return a single `Flag` for the specified id
 
-```http
-GET /Flag/[id]
-```
 
 ## Search Parameters ##
 
-Search for all flag (alert) resources for a patient. Fetches a bundle of all `Flag` resources for the specified patient.
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Flag?[searchParameters]</div>
 
-```http
-GET /Flag?[searchParameters]
-```
+Search for all flag (alert) resources for a patient. Fetches a bundle of all `Flag` resources for the specified patient.
 
 {% include moscow.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
 

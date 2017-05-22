@@ -7,8 +7,6 @@ permalink: restfulapis_clinical_medicationstatement.html
 summary: Clinical Medication Statement
 ---
 
-## Medication Statement ##
-
 {% include profile.html content="[Care Connect Medication Statement](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-MedicationStatement-1.html)" %}
 
 ## Read ##

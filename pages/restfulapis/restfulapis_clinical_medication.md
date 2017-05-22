@@ -7,8 +7,6 @@ permalink: restfulapis_clinical_medication.html
 summary: Clinical Medication
 ---
 
-## Medication ##
-
 {% include profile.html content="[Care Connect Medication](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-1.html)" %}
 
 ## Read ##

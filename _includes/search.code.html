@@ -1,9 +1,11 @@
 <h3 id="code">code</h3>
 
 <div markdown="span" class="alert alert-success" role="alert">
-code={systemUri}|[code] <br> code=[code]</div>
+GET /{{include.content}}?code=[system]|[code] <br> code=[code]</div>
 
-<p><code class="highlighter-rouge">systemUri</code> is a uniform resource identifier which defines which system the code belongs to. This is optional and if not present all matching codes will be returned regardles of CodeSystems.</p>
+<p>See <a href="https://www.hl7.org/fhir/DSTU2/search.html#token">token</a> for details on this parameter. ‘code’ can be used multiple times as a search parameter</p>
+
+<p><code class="highlighter-rouge">system</code> is a uniform resource identifier which defines which CodeSystem the code belongs to. This is optional and if not present all matching codes will be returned regardles of CodeSystems.</p>
 
 <p>To search for {{include.content}}s with <code class="highlighter-rouge">Baseline body mass index</code> using SNOMED CT</p>
 

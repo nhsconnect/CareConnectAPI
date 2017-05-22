@@ -7,8 +7,6 @@ permalink: restfulapis_clinical_immunization.html
 summary: Clinical Immunization
 ---
 
-## Immunization ##
-
 {% include profile.html content="[Care Connect Immunization](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Immunization-1.html)" %}
 
 ## Read ##

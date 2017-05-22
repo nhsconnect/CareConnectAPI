@@ -7,8 +7,6 @@ permalink: restfulapis_clinical_familymemberhistory.html
 summary: Clinical Family Member History
 ---
 
-## Family Member History ##
-
 {% include profile.html content="[Care Connect Family Member History](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-FamilyMemberHistory-1.html)" %}
 
 ## Read ##

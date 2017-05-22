@@ -7,8 +7,6 @@ permalink: restfulapis_clinical_medicationorder.html
 summary: Clinical Medication Order
 ---
 
-## Medication Order ##
-
 {% include tip.html content=" [Care Connect Medication Order](https://fhir-test.nhs.uk/StructureDefinition/careconnect-gpc-medicationorder-1
 ) Resource." %}
 

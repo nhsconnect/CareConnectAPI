@@ -38,10 +38,9 @@
    <address>
       <use value="home"/>
       <line value="10, Field Jardin"/>
-      <line value="Upton"/>
-      <city value="Leeds"/>
-      <district value="West Yorkshire"/>
-      <postalCode value="LS10 1ZZ"/>
+      <line value="Long Eaton"/>
+      <city value="Nottingham"/> 
+      <postalCode value="NG10 1ZZ"/>
    </address>
    <maritalStatus>
       <coding>

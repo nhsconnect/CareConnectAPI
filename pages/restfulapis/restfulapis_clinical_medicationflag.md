@@ -7,8 +7,6 @@ permalink: restfulapis_clinical_medicationflag.html
 summary: Workflow Medication Flag
 ---
 
-## Mediciation Flag ##
-
 {% include profile.html content="[Care Connect Medication Flag](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-Flag-1.html)" %}
 
 {% include note.html content="The API for Medication Flag is the same as Flag" %}

@@ -1,0 +1,12 @@
+<h3 id="identifier">{{include.content}} ({{include.subtext}})</h3>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET /{{include.resource}}?identifier=[system]|[code]<br>identifier=[code]</div>
+
+<p>See <a href="https://www.hl7.org/fhir/DSTU2/search.html#token">token</a> for details on this parameter.</p>
+
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET /{{include.resource}}?{{include.content}}={{include.example}}
+</span></code>
+Return all {{include.resource}} resources that have a {{include.content}} with a {{include.text1}} of {{include.text2}} </pre>
+</div>

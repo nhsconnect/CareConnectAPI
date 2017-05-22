@@ -7,7 +7,6 @@ permalink: restfulapis_identification_patient.html
 summary: Patient
 ---
 
-## Patient ##
 
 {% include profile.html content="[Care Connect Patient](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Patient-1.html)" %}
 
@@ -30,35 +29,38 @@ GET /Patient?[searchParameters]
 {% include moscow.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 
 
-| Name | Type | Description | SHALL |
+| Name | Type | Description | SHALL | Path |
 |---------|--------|----------------|--------------------|
-| `address` | `string` | An address in any kind of address/part of the patient |  |
-| `adddress-postcode` | `string` | A postalCode specified in an address | Y |
-| `birthdate` | `date` | The patient's date of birth | Y |
-| `careprovider` | `reference` | Patient's nominated GP | |
-| `email` | `token` | A value in an email contact | Y |
-| `family` | `string` | A portion of the family name of the patient | Y |
-| `gender` | `token` | Gender of the patient | Y |
-| `given` | `string` | A portion of the given name of the patient | Y |
-| `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | Y |
-| `name` | `string` | A portion of either family or given name of the patient | |
-| `organization` | `reference` | The practice at which this person is a patient | |
-| `phone` | `token` | A value in a phone contact | Y |
-| `telecom` | `token` | The value in any kind of telecom details of the patient |  |
+| `address` | `string` | An address in any kind of address/part of the patient |  | Practitioner.address |
+| `adddress-postcode` | `string` | A postalCode specified in an address | Y | Practitioner.address.postalCode |
+| `birthdate` | `date` | The patient's date of birth | Y | Patient.birthDate |
+| `careprovider` | `reference` | Patient's nominated GP | | Patient.careProvider (Practitioner) |
+| `email` | `token` | A value in an email contact | Y | Patient.telecom(system=email) |
+| `family` | `string` | A portion of the family name of the patient | Y | Patient.name.family |
+| `gender` | `token` | Gender of the patient | Y | Patient.gender |
+| `given` | `string` | A portion of the given name of the patient | Y | Patient.name.given |
+| `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | Y | Patient.identifier |
+| `name` | `string` | A portion of either family or given name of the patient | | 	Patient.name |
+| `organization` | `reference` | The practice at which this person is a patient | | Patient.managingOrganization (Organization) |
+| `phone` | `token` | A value in a phone contact | Y | Patient.telecom(system=phone) |
+| `telecom` | `token` | The value in any kind of telecom details of the patient |  | Patient.telecom |
 
-
-### identifier (NHS Number, Hospital Number, etc) ###
-
-
-
-### family and given ###
-
-
-```
-TODO
-```
+{% include search.string.html resource="Patient" content="address-postcode"  example="NG10%201ZZ" text1="Post Code" text2="NG10 1ZZ" %}
 
 {% include search.date.plus.html content="Patient" name="birthdate" %}
+
+{% include search.string.html resource="Patient" content="email"  example="bernie.kanfeld@chumhum.com" text1="email address" text2="bernie.kanfeld@chumhum.com" %}
+
+{% include search.string.html resource="Patient" content="family"  example="kanfeld" text1="surname" text2="Kanfeld" %}
+
+{% include search.token.html resource="Patient" content="gender"  example="female" text1="Administrative Sex" text2="female" %}
+
+{% include search.string.html resource="Patient" content="given"  example="bernie" text1="forename" text2="Bernie" %}
+
+{% include search.identifier.html resource="Patient" content="identifier" subtext="NHS Number, Hospital Number, etc" example="https://fhir.nhs.uk/Id/nhs-number|9876543210" text1="NHS Number" text2="9876543210" %}
+
+{% include search.string.html resource="Patient" content="phone"  example="07999 123456" text1="phone number" text2="07999 123456" %}
+
 
 
 ## Examples ##
@@ -117,10 +119,9 @@ curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number
                 <address>
                     <use value="home"/>
                     <line value="10, Field Jardin"/>
-                    <line value="Upton"/>
-                    <city value="Leeds"/>
-                    <district value="West Yorkshire"/>
-                    <postalCode value="LS10 1ZZ"/>
+                    <line value="Long Eaton"/>
+                    <city value="Nottingham"/>
+                    <postalCode value="NG10 1ZZ"/>
                 </address>
                 <maritalStatus>
                     <coding>

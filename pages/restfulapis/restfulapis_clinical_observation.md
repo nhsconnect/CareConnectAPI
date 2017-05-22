@@ -7,23 +7,22 @@ permalink: restfulapis_clinical_observation.html
 summary: Clinical Observation
 ---
 
+{% include search.warnbanner.html %}
 {% include profile.html content="[Care Connect Observation](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Observation-1.html)" %}
 
 ## Read ##
 
-Return a single `Observation` for the specified id
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Observation/[id]</div>
 
-```http
-GET /Observation/[id]
-```
+Return a single `Observation` for the specified id
 
 ## Search Parameters ##
 
-Observation resource contains observation or event information for a patient. Fetches a bundle of all `Observation` resources for the specified patient.
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Observation?[searchParameters]</div>
 
-```http
-GET /Observation?[searchParameters]
-```
+Observation resource contains observation or event information for a patient. Fetches a bundle of all `Observation` resources for the specified patient.
 
 {% include moscow.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
 
@@ -34,11 +33,14 @@ GET /Observation?[searchParameters]
 | `patient` | `reference` | The identity of a patient to list observations for | Y | Observation.subject (Patient) |
 | `date` | `date` | Obtained date/time.<br>If the obtained element is a period, a date that falls in the period | Y | Observation.effective[x] |
 
+<div class='highlighter-rouge'>
 {% include search.patient.html content="Observation" %}
+</div>
 
 {% include search.date.html content="Observation" %}
 
 {% include search.code.html content="Observation" %}
+
 
 ## Example ##
 

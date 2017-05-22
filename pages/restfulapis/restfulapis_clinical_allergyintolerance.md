@@ -7,8 +7,6 @@ permalink: restfulapis_clinical_allergyintolerance.html
 summary: Clinical Allergy Intolerance
 ---
 
-## Allergy Intolerance ##
-
 {% include profile.html content="[Care Connect Allergy Intolerence](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-AllergyIntolerance-1.html)" %}
 
 ## Read ##
