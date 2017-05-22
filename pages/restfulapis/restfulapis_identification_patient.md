@@ -130,7 +130,7 @@ curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number
                     </coding>
                 </maritalStatus>
                 <careProvider>
-                    <reference value="https://sds.nhs.uk/Organization/Y00001"/>
+                    <reference value="https://ods.proxy.nhs.uk/Patient/Y00001"/>
                     <display value="MGP Medical Centre"/>
                 </careProvider>
             </Patient>

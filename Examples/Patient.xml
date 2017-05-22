@@ -51,7 +51,7 @@
       </coding>
    </maritalStatus>
    <careProvider>
-      <reference value="https://fhir.nhs.uk/Id/ods-organization-code/Y00001"/>
+      <reference value="https://pds.proxy.nhs.uk/Patient/Y00001"/>
       <display value="MGP Medical Centre"/>
    </careProvider>
 </Patient>

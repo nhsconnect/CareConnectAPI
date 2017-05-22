@@ -32,7 +32,7 @@ GET /Observation?[searchParameters]
 |------|------|-------------|-------|------|
 | `code` | `token` | The code of the observation type | Y | Observation.code |
 | `patient` | `reference` | The identity of a patient to list observations for | Y | Observation.subject (Patient) |
-| `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y | Observation.effective[x] |
+| `date` | `date` | Obtained date/time.<br>If the obtained element is a period, a date that falls in the period | Y | Observation.effective[x] |
 
 {% include search.patient.html content="Observation" %}
 
