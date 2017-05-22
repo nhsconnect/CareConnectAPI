@@ -1,10 +1,7 @@
 ---
 title: Clinical | Medication Flag
 keywords: usecase, medication, flag
-tags:
-- restful_api
-- clinical
-- profile
+tags: [fhir, rest, clinical, medication, workflow]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationflag.html
 summary: Workflow Medication Flag
@@ -16,48 +13,32 @@ summary: Workflow Medication Flag
 
 {% include note.html content="The API for Medication Flag is the same as Flag" %}
 
-## Read Operation ##
+## Read ##
 
 Return a single `Flag` for the specified id
 
 ```http
-GET /Flag/:id
+GET /Flag/[id]
 ```
 
-```http
-GET /Flag?_id=:id
-```
 
 ## Search Parameters ##
 
 Search for all flag resources for a patient. Fetches a bundle of all `Flag` resources for the specified patient.
 
 ```http
-GET /Flag?:searchparameters
+GET /Flag?[searchparameters]
 ```
 
-{% include optional.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
+{% include moscow.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
 
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `patient` | `reference` | The patient for the vaccination record | Y |
 | `status` | `token` | Flag status: active, inactive or entered-in-error | Y |
 | `date` | `date` | Time period when flag is active |  |
 
-In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. Please refer to [Paged Search](https://www.hl7.org/fhir/DSTU2/search.html#count){:target="_blank"} for further details.
+{% include search.patient.html content="Flag" %}
 
-### patient ###
-
-```
-TODO
-```
-
-### status ###
-
-```
-TODO
-```
-
-
-
+{% include search.status.html content="Flag" options="active | inactive | entered-in-error" selected="active" %}

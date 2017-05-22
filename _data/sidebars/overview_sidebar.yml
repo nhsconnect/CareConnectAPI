@@ -111,9 +111,11 @@ entries:
             url: /restfulapis_workflow_flag.html
             output: web
 
-
     - title: API Foundations
       url: /foundations.html
+      output: web
+    - title: Search
+      url: /restfulapis_search.html
       output: web
     - title: Reference
       url: /development_deliverables.html

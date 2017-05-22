@@ -1,9 +1,7 @@
 ---
 title: Clinical | Condition
 keywords: getcarerecord, structured, rest, condition
-tags:
-- structured
-- getcarerecord
+tags: [rest,fhir,condition,clinical]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_condition.html
 summary: Clinical Condition
@@ -18,11 +16,7 @@ summary: Clinical Condition
 Return a single `Condition` for the specified id
 
 ```http
-GET /Condition/:id
-```
-
-```http
-GET /Condition?_id=:id
+GET /Condition/[id]
 ```
 
 ## Search Parameters ##
@@ -30,14 +24,13 @@ GET /Condition?_id=:id
 Search for all problems and health concerns for a patient. Fetches a bundle of all `Condition` resources for the specified patient.
 
 ```http
-GET /Condition?:searchParameters
+GET /Condition?[searchParameters]
 ```
 
-{% include optional.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html#search)" %}
+{% include moscow.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html#search)" %}
 
-Provider systems SHOULD implement the following search parameters:
-
-| Name | Type | Description | Recommended |
+| Name | Type | Description | SHALL |
+|------|------|-------------|-------|
 | `category` | `token` | The category of the condition | Y |
 | `clinicalstatus` | `token` | The clinical status of the condition | Y |
 | `code` | `token` | Code for the condition |  |
@@ -47,24 +40,12 @@ Provider systems SHOULD implement the following search parameters:
 | `patient` | `reference` | Who has the condition? | Y |
 | `severity` | `token` | The severity of the condition |  |
 
-In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. Please refer to [Paged Search](https://www.hl7.org/fhir/DSTU2/search.html#count){:target="_blank"} for further details.
+{% include search.patient.html content="Condition" %}
 
-Provider systems SHALL return an error for any unknown or unsupported parameter inline with the `Prefer: handling=strict` search behavior.
-
-### patient ###
-
-TODO
+{% include search.code.html content="Condition" %}
 
 ### category ###
 
 TODO
 
-### clinicalstatus ###
-
-TODO
-
-### Multiple Parameters ###
-
-```
-TODO
-```
+{% include search.status.plus.html content="Condition" options="active | inactive | relapse | remission | resolved" selected="relapse" name="clinicalstatus" %}

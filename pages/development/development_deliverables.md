@@ -1,15 +1,13 @@
 ---
-title: Reference Profiles
-keywords: development deliverables
+title: Care Connect | Reference
+keywords: development Reference
 tags: [development]
 sidebar: overview_sidebar
 permalink: development_deliverables.html
 summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of Care Connect API."
 ---
 
-```
-TODO: Insert a picture here to show the overall process (e.g. TLS, Setting Audit headers, etc)]
-```
+
 
 # Care Connect Profiles:
 
@@ -30,12 +28,14 @@ TODO: Insert a picture here to show the overall process (e.g. TLS, Setting Audit
 | [CareConnect-Procedure-1](StructureDefinitions/CareConnect-Procedure-1.xml) | | 
 
 
-# Audit Profiles:
+# Identifiers #
 
-| Profile | ValueSets |
-| :--------- |:------- |
-| [Audit-Patient-1](http://fhir-test.nhs.uk/StructureDefinition/Audit-Patient-1) | Patient ([json](Audit/Examples/Patient.json)/[xml](Audit/Examples/Patient.xml)) |  | 
-| [Audit-Device-1](http://fhir-test.nhs.uk/StructureDefinition/Audit-Device-1) | Device ([json](Audit/Examples/Device.json)/[xml](Audit/Examples/Device.xml)) | [device-type-codes-snct-1](http://fhir-test.nhs.uk/ValueSet/device-type-codes-snct-1) | |
-| [Audit-Organization-1](http://fhir-test.nhs.uk/StructureDefinition/Audit-Organization-1) | Organisation ([json](Audit/Examples/Organization.json)/[xml](Audit/Examples/Organization.xml)) | | |
-| [Audit-Practitioner-1](http://fhir-test.nhs.uk/StructureDefinition/Audit-Practitioner-1) | Practitioner ([json](Audit/Examples/Practitioner.json)/[xml](Audit/Examples/Practitioner.xml)) | | |
+| identifier | URI | Comment |
+|--------------------------------------------|----------|----|
+| NHS Number | https://fhir.nhs.uk/Id/nhs-number | Patient - England and Wales |
+| SDS User Id | https://fhir.nhs.uk/Id/sds-user-id | Practitioner |
+| SDS/ODS Organisation Code | https://fhir.nhs.uk/Id/ods-organization-code | |
 
+```
+TODO: Insert a picture here to show the overall process (e.g. TLS, Setting Audit headers, etc)]
+```
