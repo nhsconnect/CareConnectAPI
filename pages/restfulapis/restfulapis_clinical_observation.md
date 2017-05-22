@@ -30,16 +30,17 @@ Observation resource contains observation or event information for a patient. Fe
 | Name | Type | Description | SHALL | Path |
 |------|------|-------------|-------|------|
 | `code` | `token` | The code of the observation type | Y | Observation.code |
-| `patient` | `reference` | The identity of a patient to list observations for | Y | Observation.subject (Patient) |
 | `date` | `date` | Obtained date/time.<br>If the obtained element is a period, a date that falls in the period | Y | Observation.effective[x] |
+| `patient` | `reference` | The identity of a patient to list observations for | Y | Observation.subject (Patient) |
+
+{% include search.code.html content="Observation" %}
+
+{% include search.date.html content="Observation" %}
 
 <div class='highlighter-rouge'>
 {% include search.patient.html content="Observation" %}
 </div>
 
-{% include search.date.html content="Observation" %}
-
-{% include search.code.html content="Observation" %}
 
 
 ## Example ##

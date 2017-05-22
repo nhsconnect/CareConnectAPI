@@ -29,11 +29,12 @@ Search for all flag (alert) resources for a patient. Fetches a bundle of all `Fl
 
 Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
-| Name | Type | Description | SHALL |
-|------|------|-------------|-------|
-| `patient` | `reference` | The patient for the vaccination record | Y |
-| `status` | `token` | Flag status: active, inactive or entered-in-error | Y |
-| `date` | `date` | Time period when flag is active |  |
+| Name | Type | Description | SHALL | Path |
+|------|------|-------------|-------|------|
+| `date` | `date` | Time period when flag is active |  | Flag.period |
+| `patient` | `reference` | The patient for the vaccination record | Y | Flag.subject <br>(Patient) |
+| `status` | `token` | Flag status: active, inactive or entered-in-error | Y | Flag.status |
+
 
 {% include search.patient.html content="Flag" %}
 

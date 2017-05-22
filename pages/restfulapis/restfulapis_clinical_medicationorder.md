@@ -6,55 +6,44 @@ sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationorder.html
 summary: Clinical Medication Order
 ---
-
+{% include search.warnbanner.html %}
 {% include tip.html content=" [Care Connect Medication Order](https://fhir-test.nhs.uk/StructureDefinition/careconnect-gpc-medicationorder-1
 ) Resource." %}
 
 ## Read ##
 
-Return a single `MedicationOrder` for the specified id
+<div markdown="span" class="alert alert-success" role="alert">
+GET /MedicationOrder/[id]</div>
 
-```http
-GET /MedicationOrder/[id]
-```
+Return a single `MedicationOrder` for the specified id
 
 ## Search Parameters ##
 
-Medication order resource contains prescription information for a patient. Fetches a bundle of all `MedicationOrder` resources for the specified patient.
+<div markdown="span" class="alert alert-success" role="alert">
+GET /MedicationOrder?[searchParameters]]</div>
 
-```http
-GET /MedicationOrder?[searchParameters]
-```
+Medication order resource contains prescription information for a patient. Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 
 {% include moscow.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 
 
-| Name | Type | Description | SHALL |
-|---------|--------|----------------|--------------------|
-| `datewritten` | `date` | Return prescriptions written on this date |  |
-| `period.[start|end]` | `date` | Return prescriptions issued in this date range | Y |
-| `status` | `token` | Status of the prescription | Y |
-| `identifier` | `token` | The source system of the prescriptions for  |  |
-| `patient` | `reference` | The identity of a patient to list orders for | Y |
+| Name    | Type   | Description    | SHALL              | Path |
+|---------|--------|----------------|--------------------|------|
+| `datewritten` | `date` | Return prescriptions written on this date |  | MedicationOrder.dateWritten |
+| `date` | `date` | Returns medication request to be administered on a specific date | Y | MedicationOrder.dosageInstruction.timing.event |
+| `identifier` | `token` | The source system of the prescriptions for  |  | MedicationOrder.identifier |
+| `patient` | `reference` | The identity of a patient to list orders for | Y | MedicationOrder.patient<br>(Patient) |
+| `status` | `token` | Status of the prescription | Y | MedicationOrder.status |
 
+{% include search.date.plus.html content="MedicationOrder" name="datewritten"  %}
+
+{% include search.date.plus.html content="MedicationOrder" name="date"  %}
+
+{% include search.identifier.html resource="MedicationOrder" content="identifier" subtext="System Filter" example="https://theccg.systemsupplier.co.uk/MedicationOrder|" text1="The CCG System Supplier" text2="not specified" %}
 
 {% include search.patient.html content="MedicationOrder" %}
 
 {% include search.status.html content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
-
-### identifier ###
-
-To filter to this list to a specific supplier, we can search for their system identifiers only.
-
-```http
-GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/MedicationOrder|
-```
-
-{% include search.date.plus.html content="MedicationOrder" name="datewritten"  %}
-
-{% include search.date.plus.html content="MedicationOrder" name="period.start"  %}
-
-{% include search.date.plus.html content="MedicationOrder" name="period.end]"  %}
 
 ### Example ###
 

@@ -6,37 +6,33 @@ sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_allergyintolerance.html
 summary: Clinical Allergy Intolerance
 ---
-
+{% include search.warnbanner.html %}
 {% include profile.html content="[Care Connect Allergy Intolerence](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-AllergyIntolerance-1.html)" %}
 
 ## Read ##
 
-Return a single `AllergyIntolerance` for the specified id
+<div markdown="span" class="alert alert-success" role="alert">
+GET /AllergyIntollerence/[id]</div>
 
-```http
-GET /AllergyIntolerence/[id]
-```
+Return a single `AllergyIntolerance` for the specified id.
 
 ## Search Parameters ##
 
-Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolerance` resources for the specified patient.
+<div markdown="span" class="alert alert-success" role="alert">
+GET /AllergyIntollerence?[searchParameters]</div>
 
-```http
-GET /AllergyIntollerence?[searchParameters]
-```
+Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolerance` resources for the specified patient.
 
 {% include moscow.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
 
-| Name | Type | Description | SHALL |
-|------|------|-------------|-------|
-| `category` | `token` | Category of Substance ||
-| `date` | `date` | When recorded ||
-| `patient` | `reference` | Who the sensitivity is for | Y |
-| `status` | `token` | Status of AllergyIntolerance	| Y |
-| `type` | `token` | Underlying mechanism (if known) ||
+| Name | Type | Description | SHALL | Path |
+|------|------|-------------|-------|------|
+| `category` | `token` | Category of Substance || AllergyIntolerance.category |
+| `date` | `date` | When recorded || AllergyIntolerance.recordedDate |
+| `patient` | `reference` | Who the sensitivity is for | Y | AllergyIntolerance.patient<br>(Patient) |
+| `status` | `token` | Status of AllergyIntolerance	| Y | AllergyIntolerance.status |
+| `type` | `token` | Underlying mechanism (if known) || AllergyIntolerance.type |
 
 {% include search.patient.html content="AllergyIntolerance" %}
-
-{% include search.date.html content="AllergyIntolerance" %}
 
 {% include search.status.html content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}

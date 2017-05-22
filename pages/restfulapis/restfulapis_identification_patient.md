@@ -7,24 +7,20 @@ permalink: restfulapis_identification_patient.html
 summary: Patient
 ---
 
-
+{% include search.warnbanner.html %}
 {% include profile.html content="[Care Connect Patient](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Patient-1.html)" %}
 
 ## Read ##
 
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Patient/[id]</div>
 Return a single `Patient` for the specified id (not the NHS Number).
-
-```http
-GET /Patient/[id]
-```
 
 ## Search Parameters ##
 
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Patient?[searchParameters]</div>
 Patient contains the demographics for the patient. Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
-
-```http
-GET /Patient?[searchParameters]
-```
 
 {% include moscow.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 
@@ -34,14 +30,14 @@ GET /Patient?[searchParameters]
 | `address` | `string` | An address in any kind of address/part of the patient |  | Practitioner.address |
 | `adddress-postcode` | `string` | A postalCode specified in an address | Y | Practitioner.address.postalCode |
 | `birthdate` | `date` | The patient's date of birth | Y | Patient.birthDate |
-| `careprovider` | `reference` | Patient's nominated GP | | Patient.careProvider (Practitioner) |
-| `email` | `token` | A value in an email contact | Y | Patient.telecom(system=email) |
+| `careprovider` | `reference` | Patient's nominated GP | | Patient.careProvider <br>(Practitioner) |
+| `email` | `token` | A value in an email contact | Y | Patient.telecom <br>(system=email) |
 | `family` | `string` | A portion of the family name of the patient | Y | Patient.name.family |
 | `gender` | `token` | Gender of the patient | Y | Patient.gender |
 | `given` | `string` | A portion of the given name of the patient | Y | Patient.name.given |
 | `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | Y | Patient.identifier |
 | `name` | `string` | A portion of either family or given name of the patient | | 	Patient.name |
-| `organization` | `reference` | The practice at which this person is a patient | | Patient.managingOrganization (Organization) |
+| `organization` | `reference` | The practice at which this person is a patient | | Patient.managingOrganization <br>(Organization) |
 | `phone` | `token` | A value in a phone contact | Y | Patient.telecom(system=phone) |
 | `telecom` | `token` | The value in any kind of telecom details of the patient |  | Patient.telecom |
 

@@ -6,24 +6,20 @@ sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_organisation.html
 summary: Identification Organization
 ---
-
+{% include search.warnbanner.html %}
 {% include profile.html content="[Care Connect Organization](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Organization-1.html)" %}
 
 ## Read ##
 
-Return a single `Organization` for the specified id
-
-```http
-GET /Organization/[id]
-```
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Organizatio/[id]</div>
+Return a single `Organization` for the specified id.
 
 ## Search Parameters ##
 
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Organization?[searchParameters]</div>
 Organization contains the demographics for the organisation. Fetches a bundle of all `Organization` resources for the specified search criteria.
-
-```http
-GET /Organization?[searchParameters]
-```
 
 {% include moscow.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
 

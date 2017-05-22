@@ -24,11 +24,11 @@ Procedure resource contains encounter information for a patient. Fetches a bundl
 
 {% include moscow.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
 
-| Name | Type | Description | SHALL |
-|------|------|-------------|-------|
-| `patient` | `reference` | The identity of a patient to list encounters for | Y |
-| `date` | `date` | A date within the period the Encounter lasted | |
-
-{% include search.patient.html content="Encounter" %}
+| Name | Type | Description | SHALL | Path |
+|------|------|-------------|-------|------|
+| `date` | `date` | A date within the period the Encounter lasted | | Encounter.period |
+| `patient` | `reference` | The identity of a patient to list encounters for | Y | Encounter.patient <br>(Patient) |
 
 {% include search.date.html content="Encounter" %}
+
+{% include search.patient.html content="Encounter" %}
