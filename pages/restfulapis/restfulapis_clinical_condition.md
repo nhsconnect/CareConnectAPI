@@ -9,14 +9,14 @@ summary: Clinical Condition
 {% include search.warnbanner.html %}
 {% include profile.html content="[Care Connect Condition](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Condition-1.html)" %}
 
-## Read Operation ##
+## 1. Read Operation ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Condition/[id]</div>
 
 Return a single `Condition` for the specified id
 
-## Search Parameters ##
+## 2. Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Condition?[searchParameters]</div>
@@ -36,10 +36,10 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 | `patient` | `reference` | Who has the condition? | Y | Condition.patient<br>(Patient) |
 | `severity` | `token` | The severity of the condition |  | Condition.severity |
 
-{% include search.status.plus.html content="Condition" options="active | inactive | relapse | remission | resolved" selected="relapse" name="clinicalstatus" %}
+{% include search.status.plus.html para="2.1." content="Condition" options="active | inactive | relapse | remission | resolved" selected="relapse" name="clinicalstatus" %}
 
-{% include search.code.html content="Condition" %}
+{% include search.code.html para="2.2." content="Condition" %}
 
-{% include search.token.html resource="Condition" content="category"  example="symptom" text1="Category Type" text2="Symptom" %}
+{% include search.token.html para="2.3." resource="Condition" content="category"  example="symptom" text1="Category Type" text2="Symptom" %}
 
-{% include search.patient.html content="Condition" %}
+{% include search.patient.html para="2.4." content="Condition" %}

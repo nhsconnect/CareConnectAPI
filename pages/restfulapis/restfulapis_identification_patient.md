@@ -10,13 +10,13 @@ summary: Patient
 {% include search.warnbanner.html %}
 {% include profile.html content="[Care Connect Patient](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Patient-1.html)" %}
 
-## Read ##
+## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Patient/[id]</div>
 Return a single `Patient` for the specified id (not the NHS Number).
 
-## Search Parameters ##
+## 2. Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Patient?[searchParameters]</div>
@@ -41,33 +41,33 @@ Patient contains the demographics for the patient. Fetches a bundle of all `Pati
 | `phone` | `token` | A value in a phone contact | Y | Patient.telecom(system=phone) |
 | `telecom` | `token` | The value in any kind of telecom details of the patient |  | Patient.telecom |
 
-{% include search.string.html resource="Patient" content="address-postcode"  example="NG10%201ZZ" text1="Post Code" text2="NG10 1ZZ" %}
+{% include search.string.html para="2.1." resource="Patient" content="address-postcode"  example="NG10%201ZZ" text1="Post Code" text2="NG10 1ZZ" %}
 
-{% include search.date.plus.html content="Patient" name="birthdate" %}
+{% include search.date.plus.html para="2.2." content="Patient" name="birthdate" %}
 
-{% include search.string.html resource="Patient" content="email"  example="bernie.kanfeld@chumhum.com" text1="email address" text2="bernie.kanfeld@chumhum.com" %}
+{% include search.string.html para="2.3." resource="Patient" content="email"  example="bernie.kanfeld@chumhum.com" text1="email address" text2="bernie.kanfeld@chumhum.com" %}
 
-{% include search.string.html resource="Patient" content="family"  example="kanfeld" text1="surname" text2="Kanfeld" %}
+{% include search.string.html para="2.4." resource="Patient" content="family"  example="kanfeld" text1="surname" text2="Kanfeld" %}
 
-{% include search.token.html resource="Patient" content="gender"  example="female" text1="Administrative Sex" text2="female" %}
+{% include search.token.html para="2.5." resource="Patient" content="gender"  example="female" text1="Administrative Sex" text2="female" %}
 
-{% include search.string.html resource="Patient" content="given"  example="bernie" text1="forename" text2="Bernie" %}
+{% include search.string.html para="2.6." resource="Patient" content="given"  example="bernie" text1="forename" text2="Bernie" %}
 
-{% include search.identifier.html resource="Patient" content="identifier" subtext="NHS Number, Hospital Number, etc" example="https://fhir.nhs.uk/Id/nhs-number|9876543210" text1="NHS Number" text2="9876543210" %}
+{% include search.identifier.html para="2.7." resource="Patient" content="identifier" subtext="NHS Number, Hospital Number, etc" example="https://fhir.nhs.uk/Id/nhs-number|9876543210" text1="NHS Number" text2="9876543210" %}
 
-{% include search.string.html resource="Patient" content="phone"  example="07999 123456" text1="phone number" text2="07999 123456" %}
+{% include search.string.html para="2.8." resource="Patient" content="phone"  example="07999 123456" text1="phone number" text2="07999 123456" %}
+
+## 3. Examples ##
 
 
-
-## Examples ##
-
+### 3.1 Query ###
 Return all Patient resources with a NHS Number 9876543210, the format of the response body will be xml. Replace 'baseUrl' to the actual base Url of the FHIR Server.
 
 ```curl
 curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml
 ```
 
-### Response Headers ###
+### 3.2 Response Headers ###
 
 | Status Code |
 |----------------|
@@ -76,6 +76,8 @@ curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number
 | Header | Value |
 |-----------------|---------|
 | Content-Type  | application/xml+fhir;charset=UTF-8 |
+
+### 3.3 Response Body ###
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
