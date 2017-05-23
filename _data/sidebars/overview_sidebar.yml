@@ -29,7 +29,7 @@ entries:
       url: /engage.html
       output: web, pdf
       type: homepage
-    - title: User Stories | FHIR&reg; 
+    - title: User Stories | FHIR&reg;
       url: /engage_user_stories.html
       output: web
       subfolders:
@@ -62,9 +62,6 @@ entries:
           - title: Condition
             url: /restfulapis_clinical_condition.html
             output: web
-          - title: Family Member History
-            url: /restfulapis_clinical_familymemberhistory.html
-            output: web
           - title: Immunization
             url: /restfulapis_clinical_immunization.html
             output: web
@@ -85,13 +82,13 @@ entries:
             output: web
           - title: Procedure
             url: /restfulapis_clinical_procedure.html
-            output: web 
+            output: web
       - title: Identification
         output: web
         subfolderitems:
           - title: Location
-            url: /restfulapis_identification_location.html  
-            output: web          
+            url: /restfulapis_identification_location.html
+            output: web
           - title: Organisation
             url: /restfulapis_identification_organisation.html
             output: web
@@ -99,17 +96,14 @@ entries:
             url: /restfulapis_identification_patient.html
             output: web
           - title: Practitoner
-            url: /restfulapis_identification_practitoner.html  
-            output: web          
+            url: /restfulapis_identification_practitoner.html
+            output: web
       - title: Workflow
         output: web
         subfolderitems:
           - title: Encounter
-            url: /restfulapis_workflow_encounter.html  
+            url: /restfulapis_workflow_encounter.html
             output: web          
-          - title: Flag
-            url: /restfulapis_workflow_flag.html
-            output: web
 
     - title: API Foundations
       url: /foundations.html
@@ -121,11 +115,11 @@ entries:
       url: /development_deliverables.html
       output: web
 
-    - title: Conformance Profile | FHIR&reg; 
+    - title: Conformance Profile | FHIR&reg;
       url: /foundations_use_case_get_the_fhir_conformance_profile.html
-      output: web      
+      output: web
       subfolders:
-      - title: API Guidance | FHIR&reg; 
+      - title: API Guidance | FHIR&reg;
         output: web
         subfolderitems:
 
@@ -135,7 +129,7 @@ entries:
         - title: Security Guidance
           url: /development_api_security_guidance.html
           output: web
-          
+
   - title: Explore
     output: web
     folderitems:
@@ -185,7 +179,7 @@ entries:
       output: web
     - title: Design
       url: /tag_design.html
-      output: web	  
+      output: web
     - title: Development
       url: /tag_development.html
       output: web

@@ -98,7 +98,7 @@ curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number
                 <meta>
                     <versionId value="1"/>
                     <lastUpdated value="2017-05-21T11:55:59.532-04:00"/>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/careconnect-patient-1"/>
+                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Patient-1"/>
                 </meta>
                 <identifier>
                     <system value="https://fhir.nhs.uk/Id/nhs-number"/>
@@ -128,7 +128,7 @@ curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number
                     </coding>
                 </maritalStatus>
                 <careProvider>
-                    <reference value="https://sds.proxy.nhs.uk/Organization/A81001"/>
+                    <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
                     <display value="Moir Medical Centre"/>
                 </careProvider>
             </Patient>

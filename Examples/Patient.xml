@@ -2,7 +2,7 @@
    <meta>
       <versionId value="1"/>
       <lastUpdated value="2017-03-13T09:56:05.964-04:00"/>
-      <profile value="http://hl7.org/fhir/StructureDefinition/careconnect-patient-1"/>
+      <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Patient-1"/>
    </meta>
    <extension url="http://hl7.org.uk/fhir/CareConnect-EthnicCategory-1-Extension">
       <valueCodeableConcept>
@@ -50,7 +50,7 @@
       </coding>
    </maritalStatus>
    <careProvider>
-      <reference value="https://sds.proxy.nhs.uk/Organization/A81001"/>
+      <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
       <display value="MGP Medical Centre"/>
    </careProvider>
 </Patient>

@@ -85,7 +85,7 @@ curl --get http://[baseUrl]/Observation?patient=1&_format=xml
                 <meta>
                     <versionId value="1"/>
                     <lastUpdated value="2017-05-18T12:06:03.140+01:00"/>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/careconnect-observation-1"/>
+                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Observation-1"/>
                 </meta>
                 <identifier>
                     <system value="http://fhir.jorvik.nhs.uk/EPR/Observation"/>
