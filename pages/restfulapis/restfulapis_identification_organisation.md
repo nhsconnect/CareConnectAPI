@@ -37,7 +37,7 @@ Organization contains the demographics for the organisation. Fetches a bundle of
 Return all Organization resources with a ODS Code of C81010, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 ```curl
-curl --get http://[baseUrl]/Organization?identifier=http://fhir.nhs.net/Id/ods-organization-code|C81010&_format=xml
+curl --get http://[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010&_format=xml
 ```
 
 ### 3.2 Response Headers ###
@@ -62,7 +62,7 @@ curl --get http://[baseUrl]/Organization?identifier=http://fhir.nhs.net/Id/ods-o
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/Organization?identifier=http%3A%2F%2Ffhir.nhs.net%2FId%2Fods-organization-code%7CC81010"/>
+        <url value="http://fhirtest.uhn.ca/baseDstu2/Organization?identifier=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fods-organization-code%7CC81010"/>
     </link>
     <entry>
         <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Organization/32369"/>
@@ -75,12 +75,12 @@ curl --get http://[baseUrl]/Organization?identifier=http://fhir.nhs.net/Id/ods-o
                     <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Organization-1"/>
                 </meta>
                 <identifier>
-                    <system value="http://fhir.nhs.net/Id/ods-organization-code"/>
+                    <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
                     <value value="C81010"/>
                 </identifier>
                 <type>
                     <coding>
-                        <system value="http://fhir.nhs.net/ValueSet/organisation-type-1"/>
+                        <system value="https://fhir.nhs.uk/ValueSet/organisation-type-1"/>
                         <code value="prov"/>
                         <display value="Healthcare Provider"/>
                     </coding>

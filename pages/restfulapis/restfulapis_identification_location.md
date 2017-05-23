@@ -38,7 +38,7 @@ Location contains the details for the location. Fetches a bundle of all `Locatio
 Return all Location resources with a Trust Site code of RTG08, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 ```curl
-curl --get http://[baseUrl]/Location?identifier=http://fhir.nhs.net/Id/ods-site-code|RTG08&_format=xml
+curl --get http://[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08&_format=xml
 ```
 
 ### 3.2 Response Headers ###
@@ -63,7 +63,7 @@ curl --get http://[baseUrl]/Location?identifier=http://fhir.nhs.net/Id/ods-site-
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/Location?identifier=http%3A%2F%2Ffhir.nhs.net%2FId%2Fods-site-code%7CRTG08"/>
+        <url value="http://fhirtest.uhn.ca/baseDstu2/Location?identifier=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fods-site-code%7CRTG08"/>
     </link>
     <entry>
         <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Location/32370"/>
@@ -77,7 +77,7 @@ curl --get http://[baseUrl]/Location?identifier=http://fhir.nhs.net/Id/ods-site-
                 </meta>
                 <identifier>
                     <use value="official"/>
-                    <system value="http://fhir.nhs.net/Id/ods-site-code"/>
+                    <system value="https://fhir.nhs.uk/Id/ods-site-code"/>
                     <value value="RTG08"/>
                 </identifier>
                 <name value="Long Eaton Clinic"/>

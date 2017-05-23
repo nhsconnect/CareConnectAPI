@@ -44,7 +44,7 @@ Return all Practitioner resources that have a ODS Practitioner/Consultant of G81
 Return all Practitioner resources with a GP Code of G8133438, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 ```curl
-curl --get http://[baseUrl]/Practitioner?identifier=http://fhir.nhs.net/Id/sds-user-id|G8133438&_format=xml
+curl --get http://[baseUrl]/Practitioner?identifier=https://fhir.nhs.uk/Id/sds-user-id|G8133438&_format=xml
 ```
 
 ### 3.2 Response Headers ###
@@ -69,7 +69,7 @@ curl --get http://[baseUrl]/Practitioner?identifier=http://fhir.nhs.net/Id/sds-u
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/Practitioner?identifier=http%3A%2F%2Ffhir.nhs.net%2FId%2Fsds-user-id%7CG8133438"/>
+        <url value="http://fhirtest.uhn.ca/baseDstu2/Practitioner?identifier=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fsds-user-id%7CG8133438"/>
     </link>
     <entry>
         <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Practitioner/32368"/>
@@ -82,7 +82,7 @@ curl --get http://[baseUrl]/Practitioner?identifier=http://fhir.nhs.net/Id/sds-u
                     <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Practitioner-1"/>
                 </meta>
                 <identifier>
-                    <system value="http://fhir.nhs.net/Id/sds-user-id"/>
+                    <system value="https://fhir.nhs.uk/Id/sds-user-id"/>
                     <value value="G8133438"/>
                 </identifier>
                 <name>
@@ -111,7 +111,7 @@ curl --get http://[baseUrl]/Practitioner?identifier=http://fhir.nhs.net/Id/sds-u
                     </managingOrganization>
                     <role>
                         <coding>
-                            <system value="http://fhir.nhs.net/ValueSet/sds-job-role-name-1"/>
+                            <system value="https://fhir.nhs.uk/ValueSet/sds-job-role-name-1"/>
                             <code value="R0260"/>
                             <display value="General Medical Practitioner"/>
                         </coding>
@@ -119,7 +119,7 @@ curl --get http://[baseUrl]/Practitioner?identifier=http://fhir.nhs.net/Id/sds-u
                 </practitionerRole>
                 <communication>
                     <coding>
-                        <system value="http://fhir.nhs.net/ValueSet/human-language-1"/>
+                        <system value="https://fhir.nhs.uk/ValueSet/human-language-1"/>
                         <code value="en"/>
                         <display value="English"/>
                     </coding>

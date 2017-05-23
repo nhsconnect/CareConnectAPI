@@ -6,7 +6,7 @@
     </meta>
     <identifier>
         <use value="official"/>
-        <system value="http://fhir.nhs.net/Id/ods-site-code"/>
+        <system value="https://fhir.nhs.uk/Id/ods-site-code"/>
         <value value="RTG08"/>
     </identifier>
     <name value="Long Eaton Clinic"/>
