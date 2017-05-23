@@ -59,7 +59,6 @@ Patient contains the demographics for the patient. Fetches a bundle of all `Pati
 
 ## 3. Examples ##
 
-
 ### 3.1 Query ###
 Return all Patient resources with a NHS Number 9876543210, the format of the response body will be xml. Replace 'baseUrl' to the actual base Url of the FHIR Server.
 
@@ -129,8 +128,8 @@ curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number
                     </coding>
                 </maritalStatus>
                 <careProvider>
-                    <reference value="https://ods.proxy.nhs.uk/Patient/Y00001"/>
-                    <display value="MGP Medical Centre"/>
+                    <reference value="https://sds.proxy.nhs.uk/Organization/A81001"/>
+                    <display value="Moir Medical Centre"/>
                 </careProvider>
             </Patient>
         </resource>

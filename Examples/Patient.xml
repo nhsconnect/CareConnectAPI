@@ -39,7 +39,7 @@
       <use value="home"/>
       <line value="10, Field Jardin"/>
       <line value="Long Eaton"/>
-      <city value="Nottingham"/> 
+      <city value="Nottingham"/>
       <postalCode value="NG10 1ZZ"/>
    </address>
    <maritalStatus>
@@ -50,7 +50,7 @@
       </coding>
    </maritalStatus>
    <careProvider>
-      <reference value="https://pds.proxy.nhs.uk/Patient/Y00001"/>
+      <reference value="https://sds.proxy.nhs.uk/Organization/A81001"/>
       <display value="MGP Medical Centre"/>
    </careProvider>
 </Patient>

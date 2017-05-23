@@ -100,11 +100,11 @@ curl --get http://[baseUrl]/Observation?patient=1&_format=xml
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/1"/>
+                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
                 </subject>
                 <effectiveDateTime value="2012-09-17"/>
                 <performer>
-                    <reference value="Practitioner/4952"/>
+                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438""/>
                 </performer>
             </Observation>
         </resource>
