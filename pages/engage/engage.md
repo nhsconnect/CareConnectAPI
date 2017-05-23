@@ -4,7 +4,7 @@ keywords: engage, care connect process, process, introduction
 tags: [engage]
 sidebar: foundations_sidebar
 permalink: engage.html
-summary: "Describes how to engage with Care Connect and the different mechanisms involved in this process."
+summary: "These pages assist with requirements gathering and mapping stages of a FHIR API development process."
 ---
 
 
@@ -30,3 +30,7 @@ Test Change
 
 
 [Case Studeis](engage_case_studies.html)
+
+***
+
+The development of the Care Connect standard relies on community engagement curated by INTEROPen. Contributions can be made, either by joining the INTEROPen or simply contacting INTEROPen using the email address careconnect@interopen.org.
