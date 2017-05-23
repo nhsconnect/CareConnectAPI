@@ -1,7 +1,8 @@
 backend:
   name: github
-  repo: markodukic/Fresh # Path to your Github repository
-  branch: master # Branch to update (master by default)
+  repo: nhsconnect/CareConnectAPI # Path to your Github repository
+  branch: develop # Branch to update (master by default)
+  site_domain: care-connect-api.netlify.com
 
 public_folder: "content" # does this do anything?
 media_folder: "content/uploads" # Folder where user uploaded files should go
