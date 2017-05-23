@@ -1,0 +1,49 @@
+<Location xmlns="http://hl7.org/fhir">
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2017-05-23T11:27:01.266-04:00"/>
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Location-1"/>
+    </meta>
+    <identifier>
+        <use value="official"/>
+        <system value="https://fhir.nhs.uk/Id/ods-site-code"/>
+        <value value="RTG08"/>
+    </identifier>
+    <name value="Long Eaton Clinic"/>
+    <type>
+        <coding>
+            <system value="http://hl7.org/fhir/ValueSet/v3-ServiceDeliveryLocationRoleType"/>
+            <code value="CSC"/>
+            <display value="Community Service Centre"/>
+        </coding>
+    </type>
+    <telecom>
+        <system value="phone"/>
+        <value value="0115 855 4034"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="fax"/>
+        <value value="0532 123 4567"/>
+        <use value="work"/>
+    </telecom>
+    <address>
+        <use value="work"/>
+        <line value="Midland Street"/>
+        <line value="Long Eaton"/>
+        <city value="Nottingham"/>
+        <postalCode value="NG10 1RY"/>
+        <country value="GBR"/>
+    </address>
+    <physicalType>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="310390009"/>
+            <display value="Hospital clinic"/>
+        </coding>
+    </physicalType>
+    <managingOrganization>
+        <reference value="https://sds.proxy.nhs.uk/Organization/Organization/RTG"/>
+        <display value="Derby Teaching Hospitals NHS Foundation Trust"/>
+    </managingOrganization>
+</Location>

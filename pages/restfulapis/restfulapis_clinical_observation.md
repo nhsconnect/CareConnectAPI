@@ -47,7 +47,7 @@ Observation resource contains observation or event information for a patient. Fe
 
 ### curl Request ###
 
-Return all Observation resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' to the actual base Url of the FHIR Server.
+Return all Observation resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 ```curl
 curl --get http://[baseUrl]/Observation?patient=1&_format=xml
@@ -85,7 +85,7 @@ curl --get http://[baseUrl]/Observation?patient=1&_format=xml
                 <meta>
                     <versionId value="1"/>
                     <lastUpdated value="2017-05-18T12:06:03.140+01:00"/>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/careconnect-observation-1"/>
+                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Observation-1"/>
                 </meta>
                 <identifier>
                     <system value="http://fhir.jorvik.nhs.uk/EPR/Observation"/>

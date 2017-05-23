@@ -1,0 +1,33 @@
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="32369"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2017-05-23T11:08:30.692-04:00"/>
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Organization-1"/>
+    </meta>
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+        <value value="C81010"/>
+    </identifier>
+    <type>
+        <coding>
+            <system value="https://fhir.nhs.uk/ValueSet/organisation-type-1"/>
+            <code value="prov"/>
+            <display value="Healthcare Provider"/>
+        </coding>
+    </type>
+    <name value="The Moir Medical Centre"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="0115 9737320"/>
+        <use value="work"/>
+    </telecom>
+    <address>
+        <use value="work"/>
+        <type value="both"/>
+        <line value="Regent Street"/>
+        <line value="Long Eaton"/>
+        <city value="Nottingham"/>
+        <postalCode value="NG10 1QQ"/>
+    </address>
+</Organization>
