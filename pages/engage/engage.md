@@ -17,12 +17,6 @@ User stories provide the following benefits when considering the clinical needs 
 - Given that it is now more readily acknowledged that we cannot identify all requirements up front, user stories support a more **opportunistic approach to development** that doesn’t rely on the clinician being able to define the exact needs in advance, and not reliant of developers fully comprehending the need from a written statement. Continual discussion of the requirements by the team also encourage **a more participatory design** approach, that **promotes the accumulation of knowledge** amongst the team, as the story is refined and elaborated throughout a development process. Ensuring a feedback loop within the Care Connect Interoperability process is essential to this approach.
 
 The accessibility of user stories over more complex and solution specific approaches to requirements gathering that make them an ideal tool to support ongoing engagement from community.  As knowledge develops and the library of user stories grow, it will accelerate the delivery of FHIR based solutions by providing an extensive and reusable mapping. Given the suitability of user stories for planning and as a basis for an iterative development process they will also offer an asset for consumers at a management level working in an agile environment.
-<details>
-<summary>Find out more about creating Care Connect user stories</summary>
-
-Given a clinical scenario, it is possible to derive several user stories that are suitable for mapping by considering the story from the perspective of the end users that will benefit from the final interface.
-
-</details>
 
 [Care Connect User Stories](engage_user_stories.html)
 ## Proof of Concepts
