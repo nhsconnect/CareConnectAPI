@@ -34,7 +34,7 @@ Organization contains the demographics for the organisation. Fetches a bundle of
 {% include search.identifier.html para="2.2." resource="Organization" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-organization-code|RTG" text1="NHS Organisation" text2="RTG (Derby Teaching Hospitals NHS Trust)" %}
 
 ### 3.1 Query ###
-Return all Practitioner resources with a GP Code of G8133438, the format of the response body will be xml. Replace 'baseUrl' to the actual base Url of the FHIR Server.
+Return all Organization resources with a ODS Code of C81010, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 ```curl
 curl --get http://[baseUrl]/Organization?identifier=http://fhir.nhs.net/Id/ods-organization-code|C81010&_format=xml

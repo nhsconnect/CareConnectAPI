@@ -1,7 +1,7 @@
 entries:
 - title: Care Connect
   product: Care Connect
-  version: alpha.0.0.1
+  version: alpha.0.0.2
   levels: one
   folders:
 
@@ -103,7 +103,7 @@ entries:
         subfolderitems:
           - title: Encounter
             url: /restfulapis_workflow_encounter.html
-            output: web          
+            output: web
 
     - title: API Foundations
       url: /foundations.html

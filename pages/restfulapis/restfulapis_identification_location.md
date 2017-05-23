@@ -35,7 +35,7 @@ Location contains the details for the location. Fetches a bundle of all `Locatio
 {% include search.identifier.html para="2.2." resource="Location" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/????|RTG08" text1="NHS Trust Site" text2="RTG08 (Long Eaton Clinic)" %}
 
 ### 3.1 Query ###
-Return all Practitioner resources with a GP Code of G8133438, the format of the response body will be xml. Replace 'baseUrl' to the actual base Url of the FHIR Server.
+Return all Location resources with a Trust Site code of RTG08, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 ```curl
 curl --get http://[baseUrl]/Location?identifier=http://fhir.nhs.net/Id/ods-site-code|RTG08&_format=xml

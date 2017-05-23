@@ -47,7 +47,7 @@ Observation resource contains observation or event information for a patient. Fe
 
 ### curl Request ###
 
-Return all Observation resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' to the actual base Url of the FHIR Server.
+Return all Observation resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 ```curl
 curl --get http://[baseUrl]/Observation?patient=1&_format=xml
