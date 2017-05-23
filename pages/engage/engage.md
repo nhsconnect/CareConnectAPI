@@ -15,12 +15,6 @@ Within the initial phase of the Care Connect API roadmap, on behalf of INTEROPen
 
 [User stories Care Connect ](engage_user_stories.html)
 
-# Using Care Connect #
-
-
-[Using Profiles](engage_using_profiles.html)
-
-
 # Proof of Concepts #
 
 
@@ -29,7 +23,7 @@ Within the initial phase of the Care Connect API roadmap, on behalf of INTEROPen
 # Case Studies #
 
 
-[Case Studeis](engage_case_studies.html)
+[Case Studies](engage_case_studies.html)
 
 ***
 
