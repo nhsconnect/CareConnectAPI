@@ -7,7 +7,7 @@ permalink: engage.html
 summary: "These pages assist with requirements gathering and mapping stages of a FHIR API development process."
 ---
 
-<img src="images/roadmap/Interoperability Process.svg" style="width:100%;max-width: 100%;">
+<img src="images/Interoperability Process.svg" style="width:100%;max-width: 100%;">
 
 ## User Stories
 It is recommended that user stories are created to identify and document requirements. This implementation guide uses non-technical stories as the foundation for identifying requirements and mapping to Care Connect profiles. This provides a reference point to help with the identification of requirements and profiles.
