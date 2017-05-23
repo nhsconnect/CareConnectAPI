@@ -60,7 +60,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "Case Studies"
     create: true # Allow users to create new documents in this collection
     files:
-      - file: "site/content/engage/engage_case_studies.md"
+      - file: "_site/content/engage/engage_case_studies.html"
         label: "Case Study"
         name: "engage_case_study"
         fields:
