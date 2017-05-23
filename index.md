@@ -30,13 +30,15 @@ The above steps outline a complete API journey from imagination and exploring to
 
 {% include contribute.html content="If you want to get involved in any part of this then please get in touch with careconnect@interopen.org "%}
 
-# The Care Connect Ecosystem Focus #
+# Care Connect Focus #
 
 The current site focuses on a typical API Developer's Journey as highlighted by the green boxes below in the developer journey:
 
 <img src="images/roadmap/guide-focus.jpg" style="width:100%;max-width: 100%;"> 
 
 NHS Digital is contributing to progressing the profile developmenet, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem. 
+
+Please see the explanation of the complete development roadmap.
 	
 {% include contribute.html content="Please contact [careconnect@interopen.org] to get involved." %}
 
@@ -44,7 +46,7 @@ NHS Digital is contributing to progressing the profile developmenet, the testing
 
 # Profile Roadmap #
 
-The [Care Connect API roadmap](design_development_roadmap.html) outlines the resource development roadmap schedule for the RESTful APIs outlined within this site.
+The [API journey](overview_api_journey.html) outlines the development roadmap for the RESTful APIs outlined within this site.
 
 <img src="images/roadmap/roadmap-online.jpg" style="width:100%;max-width: 100%;"> 
 
