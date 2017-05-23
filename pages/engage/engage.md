@@ -10,10 +10,10 @@ summary: "These pages assist with requirements gathering and mapping stages of a
 
 # User Stories #
 
+It is recommended that user stories are created to identify and document requirements. This implementation guide uses non-technical stories as the foundation for identifying requirements and mapping to Care Connect profiles. This provides a reference point to help with the identification of requirements and profiles.
+Within the initial phase of the Care Connect API roadmap, on behalf of INTEROPen, NHS Digital are building a catalogue of user stories to support proof of concept work. The vision for this catalogue is that it can be opened up for direct contributions from the community providing a referenceable catalogue, linking requirements, solutions and case studies providing further education back to the community.
 
 [User stories Care Connect ](engage_user_stories.html)
-
-Test Change
 
 # Using Care Connect #
 
