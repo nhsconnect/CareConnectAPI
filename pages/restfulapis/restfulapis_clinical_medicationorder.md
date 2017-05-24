@@ -10,14 +10,14 @@ summary: Clinical Medication Order
 {% include tip.html content=" [Care Connect Medication Order](https://fhir-test.nhs.uk/StructureDefinition/careconnect-gpc-medicationorder-1
 ) Resource." %}
 
-## Read ##
+## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /MedicationOrder/[id]</div>
 
 Return a single `MedicationOrder` for the specified id
 
-## Search Parameters ##
+## 2. Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /MedicationOrder?[searchParameters]]</div>
@@ -26,26 +26,26 @@ Medication order resource contains prescription information for a patient. Fetch
 
 {% include moscow.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 
-
 | Name    | Type   | Description    | SHALL              | Path |
 |---------|--------|----------------|--------------------|------|
-| `datewritten` | `date` | Return prescriptions written on this date |  | MedicationOrder.dateWritten |
 | `date` | `date` | Returns medication request to be administered on a specific date | Y | MedicationOrder.dosageInstruction.timing.event |
-| `identifier` | `token` | The source system of the prescriptions for  |  | MedicationOrder.identifier |
 | `patient` | `reference` | The identity of a patient to list orders for | Y | MedicationOrder.patient<br>(Patient) |
 | `status` | `token` | Status of the prescription | Y | MedicationOrder.status |
 
+<!--
+| `datewritten` | `date` | Return prescriptions written on this date |  | MedicationOrder.dateWritten |
+| `identifier` | `token` | The source system of the prescriptions for  |  | MedicationOrder.identifier |
 {% include search.date.plus.html content="MedicationOrder" name="datewritten"  %}
 
-{% include search.date.plus.html content="MedicationOrder" name="date"  %}
-
 {% include search.identifier.html resource="MedicationOrder" content="identifier" subtext="System Filter" example="https://theccg.systemsupplier.co.uk/MedicationOrder|" text1="The CCG System Supplier" text2="not specified" %}
+-->
+{% include search.date.plus.html para="2.1." content="MedicationOrder" name="date"  %}
 
-{% include search.patient.html content="MedicationOrder" %}
+{% include search.patient.html para="2.2." content="MedicationOrder" %}
 
-{% include search.status.html content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
+{% include search.status.html para="2.3." content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
 
-### Example ###
+### 3. Example ###
 
 The search parameters are based around a logical model which is shown below:
 

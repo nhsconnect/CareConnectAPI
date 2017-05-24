@@ -24,22 +24,25 @@ Patient contains the demographics for the patient. Fetches a bundle of all `Pati
 
 {% include moscow.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 
-
 | Name | Type | Description | SHALL | Path |
-|---------|--------|----------------|--------------------|
-| `address` | `string` | An address in any kind of address/part of the patient |  | Practitioner.address |
-| `adddress-postcode` | `string` | A postalCode specified in an address | Y | Practitioner.address.postalCode |
+|------|------|-------------|-------|------|
+| `adddress-postcode` | `string` | A postalCode specified in an address |  | Practitioner.address.postalCode |
 | `birthdate` | `date` | The patient's date of birth | Y | Patient.birthDate |
-| `careprovider` | `reference` | Patient's nominated GP | | Patient.careProvider <br>(Practitioner) |
-| `email` | `token` | A value in an email contact | Y | Patient.telecom <br>(system=email) |
+| `email` | `token` | A value in an email contact |  | Patient.telecom <br>(system=email) |
 | `family` | `string` | A portion of the family name of the patient | Y | Patient.name.family |
 | `gender` | `token` | Gender of the patient | Y | Patient.gender |
 | `given` | `string` | A portion of the given name of the patient | Y | Patient.name.given |
 | `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | Y | Patient.identifier |
 | `name` | `string` | A portion of either family or given name of the patient | | 	Patient.name |
+| `phone` | `token` | A value in a phone contact | | Patient.telecom(system=phone) |
+
+
+<!--
+| `address` | `string` | An address in any kind of address/part of the patient |  | Practitioner.address |
+| `careprovider` | `reference` | Patient's nominated GP | | Patient.careProvider <br>(Practitioner) |
 | `organization` | `reference` | The practice at which this person is a patient | | Patient.managingOrganization <br>(Organization) |
-| `phone` | `token` | A value in a phone contact | Y | Patient.telecom(system=phone) |
 | `telecom` | `token` | The value in any kind of telecom details of the patient |  | Patient.telecom |
+-->
 
 {% include search.string.html para="2.1." resource="Patient" content="address-postcode"  example="NG10%201ZZ" text1="Post Code" text2="NG10 1ZZ" %}
 
@@ -55,9 +58,11 @@ Patient contains the demographics for the patient. Fetches a bundle of all `Pati
 
 {% include search.identifier.html para="2.7." resource="Patient" content="identifier" subtext="NHS Number, Hospital Number, etc" example="https://fhir.nhs.uk/Id/nhs-number|9876543210" text1="NHS Number" text2="9876543210" %}
 
-{% include search.string.html para="2.8." resource="Patient" content="phone"  example="07999 123456" text1="phone number" text2="07999 123456" %}
+{% include search.string.html para="2.8." resource="Patient" content="name"  example="bernie%20kanfeld" text1="name" text2="Bernie Kanfeld" %}
 
-## 3. Examples ##
+{% include search.string.html para="2.9." resource="Patient" content="phone"  example="07999 123456" text1="phone number" text2="07999 123456" %}
+
+## 3. Example ##
 
 ### 3.1 Query ###
 Return all Patient resources with a NHS Number 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.

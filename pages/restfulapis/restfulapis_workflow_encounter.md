@@ -9,13 +9,13 @@ summary: Workflow Encounter
 {% include search.warnbanner.html %}
 {% include profile.html content="[Care Connect Encounter](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Encounter-1.html)" %}
 
-## Read ##
+## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Encounter/[id]</div>
 Return a single `Encounter` for the specified id
 
-## Search Parameters ##
+## 2. Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Encounter?[searchParameters]</div>
@@ -29,6 +29,6 @@ Procedure resource contains encounter information for a patient. Fetches a bundl
 | `date` | `date` | A date within the period the Encounter lasted | | Encounter.period |
 | `patient` | `reference` | The identity of a patient to list encounters for | Y | Encounter.patient <br>(Patient) |
 
-{% include search.date.html content="Encounter" %}
+{% include search.date.html para="2.1." content="Encounter" %}
 
-{% include search.patient.html content="Encounter" %}
+{% include search.patient.html para="2.2." content="Encounter" %}

@@ -29,17 +29,14 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 |------|------|-------------|-------|------|
 | `category` | `token` | The category of the condition | Y | Condition.category |
 | `clinicalstatus` | `token` | The clinical status of the condition | Y | 	Condition.clinicalStatus |
-| `code` | `token` | Code for the condition |  | 	Condition.code |
 | `date-recorded` | `date` | A date, when the Condition statement was documented |  | Condition.dateRecorded |
-| `encounter` | `reference` | Encounter when condition first asserted |  | Condition.encounter<br>(Encounter) |
-| `onset` | `date` | Date related onsets (dateTime and Period) |  | Condition.onset[x] |
 | `patient` | `reference` | Who has the condition? | Y | Condition.patient<br>(Patient) |
-| `severity` | `token` | The severity of the condition |  | Condition.severity |
 
-{% include search.status.plus.html para="2.1." content="Condition" options="active | inactive | relapse | remission | resolved" selected="relapse" name="clinicalstatus" %}
+{% include search.status.plus.html para="2.1." content="Condition" options="
+complaint | symptom | finding | diagnosis | problem | need" selected="symptom" name="category" %}
 
-{% include search.code.html para="2.2." content="Condition" %}
+{% include search.status.plus.html para="2.2." content="Condition" options="active | inactive | relapse | remission | resolved" selected="relapse" name="clinicalstatus" %}
 
-{% include search.token.html para="2.3." resource="Condition" content="category"  example="symptom" text1="Category Type" text2="Symptom" %}
+{% include search.date.plus.html para="2.3." content="Condition" name="date-recorded" %}
 
 {% include search.patient.html para="2.4." content="Condition" %}

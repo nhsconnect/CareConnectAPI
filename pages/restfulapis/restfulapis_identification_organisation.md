@@ -25,13 +25,18 @@ Organization contains the demographics for the organisation. Fetches a bundle of
 
 | Name | Type | Description | SHALL | Path |
 |------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address | Y | Organization.address.postalCode |
-| `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) | Y | Organization.identifier |
+| `adddress-postcode` | `string` | A postalCode specified in an address |  | Organization.address.postalCode |
+| `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) |  | Organization.identifier |
+
+<!--
 | `name` | `string` | A portion of the name of the organisation | | Organization.name |
+-->
 
 {% include search.string.html para="2.1." resource="Organization" content="address-postcode"  example="DE22%203NE" text1="Post Code" text2="DE22 3NE" %}
 
 {% include search.identifier.html para="2.2." resource="Organization" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-organization-code|RTG" text1="NHS Organisation" text2="RTG (Derby Teaching Hospitals NHS Trust)" %}
+
+## 3. Example ##
 
 ### 3.1 Query ###
 Return all Organization resources with a ODS Code of C81010, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.

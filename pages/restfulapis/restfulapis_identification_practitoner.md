@@ -27,18 +27,24 @@ Practitioner contains the demographics of the clinician. Fetches a bundle of all
 | Name | Type | Description | SHALL | Path |
 |------|------|-------------|-------|------|
 | `adddress-postcode` | `string` | A postalCode specified in an address |  | Practitioner.address.postalCode |
-| `identifier` | `token` | 	Any identifier for the practitioner (e.g. GMP/GMC code) | Y | 	Practitioner.identifier |
+| `identifier` | `token` | 	Any identifier for the practitioner (e.g. GMP/GMC code) |  | 	Practitioner.identifier |
+
+<!--
 | `name` | `string` | A portion of the name of the practitioner | | Practitioner.name |
 | `organization` | `reference` | The identity of the organization the practitioner represents / acts on behalf of | | Practitioner.practitionerRole.managingOrganization <br>(Organization) |
+-->
 
+{% include search.string.html para="2.1." resource="Practitioner" content="address-postcode"  example="NG10%201QQ" text1="Post Code" text2="NG10 1QQ" %}
 
-{% include search.identifier.html para="2.1." resource="Practitioner" content="identifier" subtext="SDS Id or ODS Code" example="https://fhir.nhs.uk/Id/sds-user-id|123456" text1="SDS User ID" text2="123456" %}
+{% include search.identifier.html para="2.2." resource="Practitioner" content="identifier" subtext="SDS Id or ODS Code" example="https://fhir.nhs.uk/Id/sds-user-id|123456" text1="SDS User ID" text2="123456" %}
 
 <div class="language-http highlighter-rouge">
 <pre class="highlight"><code><span class="err">GET /Practitioner?identifier=https://fhir.nhs.uk/Id/????????|G8133438
 </span></code>
 Return all Practitioner resources that have a ODS Practitioner/Consultant of G8133438 </pre>
 </div>
+
+## 3. Example ##
 
 ### 3.1 Query ###
 Return all Practitioner resources with a GP Code of G8133438, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.

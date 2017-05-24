@@ -25,14 +25,14 @@ Location contains the details for the location. Fetches a bundle of all `Locatio
 
 | Name | Type | Description | SHALL | Path |
 |------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address | Y | Location.address.postalCode |
-| `identifier` | `token` | 	Any identifier for the location (e.g. SDS/ODS code) | Y | 	Location.identifier |
-| `name` | `string` | A portion of the name of the location | | Location.name |
-
+| `adddress-postcode` | `string` | A postalCode specified in an address |  | Location.address.postalCode |
+| `identifier` | `token` | 	Any identifier for the location (e.g. SDS/ODS code) |  | 	Location.identifier |
 
 {% include search.string.html para="2.1." resource="Location" content="address-postcode"  example="NG10%201RY" text1="Post Code" text2="NG10 1RY" %}
 
 {% include search.identifier.html para="2.2." resource="Location" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/????|RTG08" text1="NHS Trust Site" text2="RTG08 (Long Eaton Clinic)" %}
+
+## 3. Example ##
 
 ### 3.1 Query ###
 Return all Location resources with a Trust Site code of RTG08, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.

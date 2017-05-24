@@ -27,11 +27,8 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 
 | Name | Type | Description | SHALL | Path |
 |------|------|-------------|-------|------|
-| `category` | `token` | Category of Substance || AllergyIntolerance.category |
-| `date` | `date` | When recorded || AllergyIntolerance.recordedDate |
 | `patient` | `reference` | Who the sensitivity is for | Y | AllergyIntolerance.patient<br>(Patient) |
 | `status` | `token` | Status of AllergyIntolerance	| Y | AllergyIntolerance.status |
-| `type` | `token` | Underlying mechanism (if known) || AllergyIntolerance.type |
 
 {% include search.patient.html para="2.1." content="AllergyIntolerance" %}
 

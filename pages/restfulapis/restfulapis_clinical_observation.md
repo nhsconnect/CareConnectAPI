@@ -29,21 +29,26 @@ Observation resource contains observation or event information for a patient. Fe
 
 | Name | Type | Description | SHALL | Path |
 |------|------|-------------|-------|------|
+| `category` | `token` | The classification of the type of observation | | Observation.category |
 | `code` | `token` | The code of the observation type | Y | Observation.code |
 | `date` | `date` | Obtained date/time.<br>If the obtained element is a period, a date that falls in the period | Y | Observation.effective[x] |
-| `patient` | `reference` | The identity of a patient to list observations for | Y | Observation.subject (Patient) |
-
-{% include search.code.html content="Observation" %}
-
-{% include search.date.html content="Observation" %}
-
-<div class='highlighter-rouge'>
-{% include search.patient.html content="Observation" %}
-</div>
+| `patient` | `reference` | The subject that the observation is about (if patient) | Y | Observation.subject (Patient) |
+| `subject` | `reference` | The subject that the observation is about| | Observation.subject (Patient) |
 
 
+### 2.1. category ###
 
-## Example ##
+TODO
+
+{% include search.code.html para="2.2." content="Observation" %}
+
+{% include search.date.html para="2.3." content="Observation" %}
+
+{% include search.patient.html para="2.4" content="Observation" %}
+
+{% include search.subject.html para="2.5" content="Observation" %}
+
+## 3. Example ##
 
 ### curl Request ###
 

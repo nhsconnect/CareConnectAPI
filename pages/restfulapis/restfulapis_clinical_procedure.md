@@ -9,13 +9,13 @@ summary: Clinical Procedure
 {% include search.warnbanner.html %}
 {% include profile.html content="[Care Connect Procedure](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Procedure-1.html)" %}
 
-## Read ##
+## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Procedure/[id]</div>
 Return a single `Procedure` for the specified id
 
-## Search Parameters ##
+## 2. Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Procedure?[searchParameters]</div>
@@ -27,8 +27,11 @@ Procedure resource contains procedure information for a patient. Fetches a bundl
 | Name | Type | Description | SHALL | Path |
 |------|------|-------------|-------|------|
 | `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y | Procedure.performed[x] |
-| `patient` | `reference` | The identity of a patient to list observations for | Y | Procedure.subject <br>(Patient) |
+| `patient` | `reference` | Search by subject - a patient | Y | Procedure.subject <br>(Patient) |
+| `subject` | `reference` | Search by subject |  | Procedure.subject <br>(Patient) |
 
-{% include search.date.html content="Procedure" %}
+{% include search.date.html para="2.1." content="Procedure" %}
 
-{% include search.patient.html content="Procedure" %}
+{% include search.patient.html para="2.2." content="Procedure" %}
+
+{% include search.subject.html para="2.3." content="Procedure" %}
