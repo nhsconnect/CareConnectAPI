@@ -26,8 +26,10 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 {% include moscow.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
 
 | Name | Type | Description | Conformance | Path |
-|------|------|-------------|-------|------|
+|------|------|-------------|-------------|------|
 | `patient` | `reference` | Who the sensitivity is for | SHALL | AllergyIntolerance.patient<br>(Patient) |
+
+
 <!-- | `status` | `token` | Status of AllergyIntolerance	| Y | AllergyIntolerance.status | -->
 
 {% include search.patient.html para="2.1." content="AllergyIntolerance" %}
