@@ -57,7 +57,7 @@ Return all Observation resources for Patient with a logical Id of 1, the format 
 
 #### cURL ####
 
-{% include embedcurl.html title="Search Observation" command="curl -X GET  'http://[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}'" %}
+{% include embedcurl.html title="Search Observation" command="curl -X GET  'http://[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 ### Response Headers ###
 
