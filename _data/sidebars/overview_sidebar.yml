@@ -12,11 +12,14 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
-    - title: Development Roadmap
-      url: /design_development_roadmap.html
+    - title: API Journey
+      url: /overview_api_journey.html
       output: web
-    - title: Care Connect Versioning
-      url: /design_product_versioning.html
+    - title: Provide APIs
+      url: /overview_api_provide.html
+      output: web
+    - title: Guide Versioning
+      url: /overview_guide_versioning.html
       output: web
     - title: Glossary
       url: /overview_glossary.html
@@ -51,6 +54,9 @@ entries:
     folderitems:
     - title: Overview | Profiles
       url: /restfulapis.html
+      output: web
+    - title: Care Connect Versioning
+      url: /overview_cc_versioning.html
       output: web
       subfolders:
       - title: Clinical
