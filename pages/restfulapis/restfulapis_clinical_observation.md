@@ -38,7 +38,7 @@ Observation resource contains observation or event information for a patient. Fe
 <!-- | `subject` | `reference` | The subject that the observation is about| | Observation.subject (Patient) |
 -->
 
-{% include search.status.plus.html para="2.1." content="Observation" options="(see profile)" selected="exam" name="category" %}
+{% include search.status.plus.html para="2.1." content="Observation" options="see profile/valueset" selected="exam" name="category" %}
 
 {% include search.code.html para="2.2." content="Observation" %}
 
