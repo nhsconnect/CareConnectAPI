@@ -27,27 +27,27 @@ Observation resource contains observation or event information for a patient. Fe
 {% include moscow.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
 
 
-| Name | Type | Description | SHALL | Path |
+| Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
-| `category` | `token` | The classification of the type of observation | | Observation.category |
-| `code` | `token` | The code of the observation type | Y | Observation.code |
-| `date` | `date` | Obtained date/time.<br>If the obtained element is a period, a date that falls in the period | Y | Observation.effective[x] |
-| `patient` | `reference` | The subject that the observation is about (if patient) | Y | Observation.subject (Patient) |
-| `subject` | `reference` | The subject that the observation is about| | Observation.subject (Patient) |
+| `category` | `token` | The classification of the type of observation | SHALL | Observation.category |
+| `code` | `token` | The code of the observation type | SHALL | Observation.code |
+| `date` | `date` | Obtained date/time.<br>If the obtained element is a period, a date that falls in the period | SHALL | Observation.effective[x] |
+| `patient` | `reference` | The subject that the observation is about (if patient) | SHALL | Observation.subject (Patient) |
 
 
-### 2.1. category ###
+<!-- | `subject` | `reference` | The subject that the observation is about| | Observation.subject (Patient) |
+-->
 
-TODO
+{% include search.status.plus.html para="2.1." content="Observation" options="(see profile)" selected="exam" name="category" %}
 
 {% include search.code.html para="2.2." content="Observation" %}
 
 {% include search.date.html para="2.3." content="Observation" %}
 
 {% include search.patient.html para="2.4." content="Observation" %}
-
+<!--
 {% include search.subject.html para="2.5." content="Observation" %}
-
+-->
 ## 3. Example ##
 
 ### 3.1. Request Query ###
