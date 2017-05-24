@@ -49,7 +49,7 @@ entries:
       output: web
       subfolders:
 
-  - title: Design & Build
+  - title: Explore
     output: web
     folderitems:
     - title: Overview | Profiles
@@ -136,7 +136,7 @@ entries:
           url: /development_api_security_guidance.html
           output: web
 
-  - title: Explore
+  - title: Design & Build
     output: web
     folderitems:
     - title: Overview | Coming soon
