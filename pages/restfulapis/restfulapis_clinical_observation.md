@@ -54,9 +54,10 @@ TODO
 
 Return all Observation resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-```curl
-curl --get http://[baseUrl]/Observation?patient=1&_format=xml
-```
+
+#### cURL ####
+
+{% include embedcurl.html title="Search Observation" command="curl -X GET  'http://[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}'" %}
 
 ### Response Headers ###
 
@@ -109,7 +110,7 @@ curl --get http://[baseUrl]/Observation?patient=1&_format=xml
                 </subject>
                 <effectiveDateTime value="2012-09-17"/>
                 <performer>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438""/>
+                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438" />
                 </performer>
             </Observation>
         </resource>

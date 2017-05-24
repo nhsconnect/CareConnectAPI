@@ -67,9 +67,9 @@ Patient contains the demographics for the patient. Fetches a bundle of all `Pati
 ### 3.1 Query ###
 Return all Patient resources with a NHS Number 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-```curl
-curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml
-```
+#### cURL ####
+
+{% include embedcurl.html title="Search Patient" command="curl -X GET  'http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 

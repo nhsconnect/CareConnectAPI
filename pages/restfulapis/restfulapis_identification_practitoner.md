@@ -49,9 +49,9 @@ Return all Practitioner resources that have a ODS Practitioner/Consultant of G81
 ### 3.1 Query ###
 Return all Practitioner resources with a GP Code of G8133438, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-```curl
-curl --get http://[baseUrl]/Practitioner?identifier=https://fhir.nhs.uk/Id/sds-user-id|G8133438&_format=xml
-```
+#### cURL ####
+
+{% include embedcurl.html title="Search Practitioner" command="curl -X GET  'http://[baseUrl]/Practitioner?identifier=https://fhir.nhs.uk/Id/sds-user-id|G8133438&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 

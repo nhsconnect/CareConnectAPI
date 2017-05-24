@@ -37,9 +37,9 @@ Location contains the details for the location. Fetches a bundle of all `Locatio
 ### 3.1 Query ###
 Return all Location resources with a Trust Site code of RTG08, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-```curl
-curl --get http://[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08&_format=xml
-```
+#### cURL ####
+
+{% include embedcurl.html title="Search Location" command="curl -X GET  'http://[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 
