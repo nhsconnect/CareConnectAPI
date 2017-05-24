@@ -40,3 +40,72 @@ complaint | symptom | finding | diagnosis | problem | need" selected="symptom" n
 {% include search.date.plus.html para="2.3." content="Condition" name="date-recorded" %}
 
 {% include search.patient.html para="2.4." content="Condition" %}
+
+## 3. Example ##
+
+### 3.1 Request Query ###
+
+Return all Condition resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+
+#### 3.1.1. cURL ####
+
+{% include embedcurl.html title="Search Condition" command="curl -X GET  'http://[baseUrl]/Condition?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+
+### 3.2 Response Headers ###
+
+| Status Code |
+|----------------|
+|200 |
+
+| Header | Value |
+|-----------------|---------|
+| Content-Type  | application/xml+fhir;charset=UTF-8 |
+
+### 3.3 Response Body ###
+
+```xml
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="b924f866-c8c5-4726-8efa-9535d35c3875"/>
+    <meta>
+        <lastUpdated value="2017-05-24T11:01:15.643-04:00"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="1"/>
+    <link>
+        <relation value="self"/>
+        <url value="http://fhirtest.uhn.ca/baseDstu2/Condition?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+    </link>
+    <entry>
+        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Condition/32475"/>
+        <resource>
+            <Condition xmlns="http://hl7.org/fhir">
+                <id value="32475"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-05-24T11:00:50.173-04:00"/>
+                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Condition-1"/>
+                </meta>
+                <patient>
+                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+                </patient>
+                <asserter>
+                    <reference value="https://sds.proxy.nhs.uk/Practitioner/C5206458"/>
+                </asserter>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="44054006"/>
+                        <display value="Type 2 diabetes mellitus"/>
+                    </coding>
+                </code>
+                <clinicalStatus value="active"/>
+                <verificationStatus value="confirmed"/>
+                <onsetDateTime value="2003-01-06T17:11:19-05:00"/>
+            </Condition>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+</Bundle>
+```

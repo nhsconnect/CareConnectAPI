@@ -44,15 +44,15 @@ TODO
 
 {% include search.date.html para="2.3." content="Observation" %}
 
-{% include search.patient.html para="2.4" content="Observation" %}
+{% include search.patient.html para="2.4." content="Observation" %}
 
-{% include search.subject.html para="2.5" content="Observation" %}
+{% include search.subject.html para="2.5." content="Observation" %}
 
 ## 3. Example ##
 
 ### 3.1. Request Query ###
 
-Return all Observation resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+Return all Observation resources for Patient with NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 #### 3.1.1. cURL ####
 

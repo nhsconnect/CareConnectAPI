@@ -40,11 +40,11 @@ Procedure resource contains procedure information for a patient. Fetches a bundl
 
 ### 3.1 Request Query ###
 
-Return all Procedure resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+Return all Procedure resources for Patient with NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 #### 3.1.1. cURL ####
 
-{% include embedcurl.html title="Search Observation" command="curl -X GET  'http://[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include embedcurl.html title="Search Procedure" command="curl -X GET  'http://[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 
@@ -78,6 +78,7 @@ Return all Procedure resources for Patient with a logical Id of 1, the format of
                 <meta>
                     <versionId value="1"/>
                     <lastUpdated value="2017-05-24T07:51:33.166-04:00"/>
+                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Procedure-1"/>
                 </meta>
                 <subject>
                     <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
