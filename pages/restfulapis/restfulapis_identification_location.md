@@ -34,10 +34,11 @@ Location contains the details for the location. Fetches a bundle of all `Locatio
 
 ## 3. Example ##
 
-### 3.1 Query ###
+### 3.1 Request Query ###
+
 Return all Location resources with a Trust Site code of RTG08, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-#### cURL ####
+#### 3.1.1. cURL ####
 
 {% include embedcurl.html title="Search Location" command="curl -X GET  'http://[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08&_format=xml'" %}
 

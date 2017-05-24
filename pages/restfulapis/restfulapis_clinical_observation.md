@@ -10,14 +10,14 @@ summary: Clinical Observation
 {% include search.warnbanner.html %}
 {% include profile.html content="[Care Connect Observation](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Observation-1.html)" %}
 
-## Read ##
+## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Observation/[id]</div>
 
 Return a single `Observation` for the specified id
 
-## Search Parameters ##
+## 2. Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Observation?[searchParameters]</div>
@@ -50,16 +50,15 @@ TODO
 
 ## 3. Example ##
 
-### curl Request ###
+### 3.1. Request Query ###
 
 Return all Observation resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-
-#### cURL ####
+#### 3.1.1. cURL ####
 
 {% include embedcurl.html title="Search Observation" command="curl -X GET  'http://[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
-### Response Headers ###
+### 3.2. Response Headers ###
 
 | Status Code |
 |----------------|
@@ -69,7 +68,7 @@ Return all Observation resources for Patient with a logical Id of 1, the format 
 |-----------------|---------|
 | Content-Type  | application/xml+fhir;charset=UTF-8 |
 
-### Response Body ###
+### 3.3. Response Body ###
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">

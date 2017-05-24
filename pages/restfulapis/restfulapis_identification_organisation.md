@@ -38,10 +38,11 @@ Organization contains the demographics for the organisation. Fetches a bundle of
 
 ## 3. Example ##
 
-### 3.1 Query ###
+### 3.1 Request Query ###
+
 Return all Organization resources with a ODS Code of C81010, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-#### cURL ####
+#### 3.1.1. cURL ####
 
 {% include embedcurl.html title="Search Organization" command="curl -X GET  'http://[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010&_format=xml'" %}
 

@@ -35,3 +35,80 @@ Procedure resource contains procedure information for a patient. Fetches a bundl
 {% include search.patient.html para="2.2." content="Procedure" %}
 
 {% include search.subject.html para="2.3." content="Procedure" %}
+
+## 3. Example ##
+
+### 3.1 Request Query ###
+
+Return all Procedure resources for Patient with a logical Id of 1, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+
+#### 3.1.1. cURL ####
+
+{% include embedcurl.html title="Search Observation" command="curl -X GET  'http://[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+
+### 3.2 Response Headers ###
+
+| Status Code |
+|----------------|
+|200 |
+
+| Header | Value |
+|-----------------|---------|
+| Content-Type  | application/xml+fhir;charset=UTF-8 |
+
+### 3.3 Response Body ###
+
+```xml
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="b312fad7-8fcb-4a9c-a95e-b709401937c4"/>
+    <meta>
+        <lastUpdated value="2017-05-24T07:51:46.008-04:00"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="1"/>
+    <link>
+        <relation value="self"/>
+        <url value="http://fhirtest.uhn.ca/baseDstu2/Procedure?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+    </link>
+    <entry>
+        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Procedure/32449"/>
+        <resource>
+            <Procedure xmlns="http://hl7.org/fhir">
+                <id value="32449"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-05-24T07:51:33.166-04:00"/>
+                </meta>
+                <subject>
+                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+                    <display value="Bernie Manfeld"/>
+                </subject>
+                <status value="completed"/>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="923461000000103"/>
+                        <display value="Lifestyle education for diabetes"/>
+                    </coding>
+                </code>
+                <performer>
+                    <actor>
+                        <reference value="https://sds.proxy.nhs.uk/Organization/Organization/RY8"/>
+                        <display value="Derbyshire Community Health Services NHS Foundation Trust"/>
+                    </actor>
+                </performer>
+                <performedPeriod>
+                    <start value="2017-03-22T09:30:10+01:00"/>
+                    <end value="2017-03-22T10:30:10+01:00"/>
+                </performedPeriod>
+                <followUp>
+                    <text value="described in care plan"/>
+                </followUp>
+            </Procedure>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+</Bundle>
+```
