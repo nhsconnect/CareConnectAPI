@@ -24,7 +24,7 @@ The accessibility of user stories over more complex and solution specific approa
 [Care Connect User Stories](engage_user_stories.html)
 
 ## Case Studies
-[Case Studies](engage_case_studies.html)
+[Care Connect Case Studies](engage_case_studies.html)
 
 Care Connect case studies provide examples of how real world problems have been solved using Care Connect. Following a process that shows how the project evolved from requirements gathering through to the final creation of a solution, case studies offer insight and education from the experience of other trusts and service providers.
 
