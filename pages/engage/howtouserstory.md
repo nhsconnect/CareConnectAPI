@@ -14,7 +14,7 @@ A user story in its simplest form is made up of three elements.
 | Actor | Requirement | Justification |
 | --- | --- | --- |
 
-<p align="justify">
+<p align="center">
   Lorem ipsum
 </p>
 
