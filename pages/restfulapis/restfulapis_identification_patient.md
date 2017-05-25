@@ -4,7 +4,7 @@ keywords: getcarerecord, structured, rest, patient
 tags: [rest, fhir, identification]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_patient.html
-summary: Patient
+summary: Demographics and other administrative information about an individual or animal receiving care or other health-related services.
 ---
 
 {% include custom/search.warnbanner.html %}

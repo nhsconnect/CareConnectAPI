@@ -4,7 +4,7 @@ keywords: usecase, familymemberhistory
 tags: [familymemberhistory,fhir,rest,clinical]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_familymemberhistory.html
-summary: Clinical Family Member History
+summary: Significant health events and conditions for a person related to the patient relevant in the context of care for the patient.
 ---
 {% include custom/search.warnbanner.html %}
 {% include custom/profile.html content="[Care Connect Family Member History](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-FamilyMemberHistory-1.html)" %}

@@ -4,7 +4,7 @@ keywords: usecase, observation
 tags: [observation,fhir,rest,clinical]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_observation.html
-summary: Clinical Observation
+summary: Measurements and simple assertions made about a patient, device or other subject.
 ---
 
 {% include custom/search.warnbanner.html %}

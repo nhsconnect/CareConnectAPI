@@ -4,7 +4,7 @@ keywords: usecase, encounter
 tags: [rest, fhir, workflow]
 sidebar: foundations_sidebar
 permalink: restfulapis_workflow_encounter.html
-summary: Workflow Encounter
+summary: An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
 ---
 {% include custom/search.warnbanner.html %}
 {% include custom/profile.html content="[Care Connect Encounter](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Encounter-1.html)" %}

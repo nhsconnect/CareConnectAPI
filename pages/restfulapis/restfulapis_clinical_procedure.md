@@ -4,7 +4,7 @@ keywords: usecase, procedure
 tags: [fhir, rest, clinical]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_procedure.html
-summary: Clinical Procedure
+summary: An action that is or was performed on a patient. This can be a physical intervention like an operation, or less invasive like counseling or hypnotherapy.
 ---
 {% include custom/search.warnbanner.html %}
 {% include custom/profile.html content="[Care Connect Procedure](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Procedure-1.html)" %}

@@ -4,7 +4,7 @@ keywords: usecase, location, order
 tags: [rest, fhir, identification]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_location.html
-summary: Identification Location
+summary: Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained or accommodated.
 ---
 {% include custom/search.warnbanner.html %}
 {% include custom/profile.html content="[Care Connect Location](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Location-1.html)" %}

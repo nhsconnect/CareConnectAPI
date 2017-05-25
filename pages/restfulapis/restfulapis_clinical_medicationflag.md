@@ -4,7 +4,7 @@ keywords: usecase, medication, flag
 tags: [fhir, rest, clinical, medication, workflow]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationflag.html
-summary: Workflow Medication Flag
+summary: Prospective warnings of potential medication issues when providing care to the patient.
 ---
 {% include custom/search.warnbanner.html %}
 {% include custom/profile.html content="[Care Connect Medication Flag](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-Flag-1.html)" %}
