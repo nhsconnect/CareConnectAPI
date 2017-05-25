@@ -1,7 +1,7 @@
 ---
 title: Engage with Care Connect
 keywords: engage, care connect process, process, introduction
-tags: [userstories]
+tags: [userstories,casestudies]
 sidebar: foundations_sidebar
 permalink: engage.html
 summary: "These pages assist with requirements gathering and mapping stages of a FHIR API development process."
@@ -25,7 +25,7 @@ The accessibility of user stories over more complex and solution specific approa
 
 ## Case Studies
 
-Care Connect case studies provide examples of how real world problems have been solved using Care Connect. Following a process that shows how the project evolved from requirements gathering through to the final creation of a solution, case studies offer insight and education from the experience of other trusts and service providers.
+Care Connect case studies provide examples of how real world problems have been solved using Care Connect. Following a process that shows how the project evolved from gathering business requirements through to the final creation of a solution, case studies offer insight and education from the experience of other trusts and service providers.
 
 <img src="images/engage/EngagementModel.svg" style="width:100%;max-width: 100%;" alt="Diagram showing high level stages that are discussed in each case study." title="Diagram showing high level stages that are discussed in each case study.">
 
