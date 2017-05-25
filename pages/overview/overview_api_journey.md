@@ -14,7 +14,7 @@ summary: Care Connect API journey outlines the approach of developing RESTful AP
 
 The API Journey is a guide from imagination and exploring to developing local APIs using Care Connect profiles all the way to deploying a live API.  
 
-<img src="images/roadmap/guide.jpg" style="width:100%;max-width: 100%;"> 
+<img src="images/roadmap/guide.jpg" style="width:100%;max-width: 100%;">
 
 The above steps outline a complete API journey .
 
@@ -22,22 +22,20 @@ The above steps outline a complete API journey .
 
 The current site focuses on a typical API Developer's Journey as highlighted by the green boxes below in the developer journey:
 
-<img src="images/roadmap/guide-focus.jpg" style="width:100%;max-width: 100%;"> 
+<img src="images/roadmap/guide-focus.jpg" style="width:100%;max-width: 100%;">
 
-NHS Digital is contributing to progressing the profile developmenet, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem. 
+NHS Digital is contributing to progressing the profile developmenet, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem.
 
 Please see the explanation of the complete development roadmap.
-	
-{% include contribute.html content="Please contact [careconnect@interopen.org] to get involved." %}
+
+{% include custom/contribute.html content="Please contact [careconnect@interopen.org] to get involved." %}
 
 # How this fits into the wider journey? #
 
 The current site focuses on a typical API Developer's Journey as highlighted by the green boxes below in the developer journey:
 
-<img src="images/roadmap/guide-focus.jpg" style="width:100%;max-width: 100%;"> 
+<img src="images/roadmap/guide-focus.jpg" style="width:100%;max-width: 100%;">
 
-NHS Digital is contributing to progressing the profile developmenet, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem. 
+NHS Digital is contributing to progressing the profile developmenet, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem.
 
 Please see the explanation of the complete development roadmap.
-
-
