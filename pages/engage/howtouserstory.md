@@ -7,12 +7,12 @@ permalink: howtouserstory.html
 summary: "How we create user stories for Care Connect."
 ---
 
-#How to create a Care Connect user story#
+##How to create a Care Connect user story
 Given a clinical scenario, it is possible to derive several user stories that are suitable for mapping by considering the story from the perspective of the end users that will benefit from the final interface.
 A user story in its simplest form is made up of three elements.
-Actor	Requirement	Justification
+##Actor	Requirement	Justification
 This simplicity makes the user story easy to understand and share across consumers with differing roles. To support Connect, this is supported with additional content such as the acceptance criteria (which is normally included as part of a user story) and secondary actors (which are not typically considered to be part of a user story).
-Primary Actor
+##Primary Actor
 This end user is caller the “Primary Actor” of the story. The catalogue does not consider personas but instead refers to roles. For example, a reconciliation process could be expressed from the perspective of a doctor, a pharmacist, or a pharmacy technician. While the requirements could be the same for each of these roles, there may be subtle differences that affect the requirement or differences in the associated processes that lead to additional stories being required. In this case, additional stories may be required for a pharmacy technician discussing the need to have the reconciliation validated. While some roles existing in multiple care settings (for example a pharmacist may work in hospital services or community services), others are unique and obviously work within a single care setting (for example a general practitioner). For consistency and removal of any ambiguity though we typically define a care setting if possible even if the author considers it obvious.
 •	As a patient, I want to…
 •	As a pharmacist (hospital services pharmacy), I want to…
@@ -22,14 +22,14 @@ On occasion, it may not be possible to clearly identify the role with the need t
 •	As a health care professional, I want to view a trend of results over time…
 •	As hospital services accident and emergency, I want to see all patients currently admitted to the emergency department…
 It is expected that as understanding evolves, so will the definition of the role. It is more important to express the need however as a reminder so that discussion around the story can continue and the story can be refined.
-Secondary Actor
+##Secondary Actor
 Along with the Primary Actor, Care Connect user stories also consider a “Secondary Actor”. This isn’t traditionally how a user story is defined but from the perspective of interoperability it is useful to consider who the secondary actor is to clarify the source or destination of the associated method. When presenting the user story, the secondary actor will often be omitted. If the secondary actor cannot be identified, it may suggest that the story is not actually an interoperability story at all.
 For example, consider the following user story “As a health care professional, I want a consolidated view of the patient’s current medications”. Given that a single data source is not clear, it suggests further refinement to fully implement. So, this story may be better expressed as several more granular stories:
 •	As a health care professional (hospital services) I wish to view current medication from primary care general practice…
 •	As a health care professional (hospital services) I wish to view current medication from mental health services…
 •	As a health care professional (hospital services) I wish to view current medication from community dental services…
 This begins to better specify the need for multiple interfaces at some point which may (or may not) be serviced by their own Care Connect API. Finally, the original story remains valid as a story in this context because it provides additional detail that influences how each of the interfaces are built. Here the need for a consolidated view means that the interfaces will need to be developed to send and receive structured data. This technical requirement is being expressed in a way that would be more easily understood by a non-technical audience. This technical detail, once understood would be written into the acceptance criteria of each of the user stories to facilitate the development of the consolidated user interface.
-Requirement
+##Requirement
 The requirement forms the crux of the user story. This is the requirement expressed from the perspective of a user’s need or user’s goal. While the granularity of a story can vary, a good example should be something that doesn’t have strong dependencies on other stories and something that can be measured and tested.
 Given the technical nature of interoperability, it is often tempting to think of stories in terms of the developer or the API. Ultimately, it must be remembered that the interface exists to provide clinical benefit and it shouldn’t a vehicle to demonstrate the technical proficiency of the developer or an organisation.
 Consider the example:
