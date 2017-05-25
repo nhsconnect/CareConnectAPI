@@ -7,7 +7,6 @@ permalink: howtouserstory.html
 summary: "Industry suggests various techniques for the creation of user stories. Care Connect extends this slightly to help make the creation of user stories more relevant to the creation of system interfaces."
 ---
 
-## How to create a Care Connect user story
 Given a clinical scenario, it is possible to derive several user stories that are suitable for mapping by considering the story from the perspective of the end users that will benefit from the final interface.
 A user story in its simplest form is made up of three elements.
 
