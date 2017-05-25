@@ -12,8 +12,7 @@ Given a clinical scenario, it is possible to derive several user stories that ar
 A user story in its simplest form is made up of three elements.
 
 <p align="center">
-| Actor | Requirement | Justification |
-| --- | --- | --- |
+<tr><td>Actor</td><td>Requirement</td><td>Justification</td></tr>
 </p>
 
 
