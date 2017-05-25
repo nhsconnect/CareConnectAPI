@@ -7,7 +7,7 @@ permalink: engage.html
 summary: "These pages assist with requirements gathering and mapping stages of a FHIR API development process."
 ---
 
-<img src="images/engage/Interoperability Process.svg" style="width:100%;max-width: 100%;">
+<img src="images/engage/Interoperability Process.svg" style="width:100%;max-width: 100%;" alt="Diagram showing the project stages that would benefit most from exploring user stories and case studies." title="Diagram showing the project stages that would benefit most from exploring user stories and case studies.">
 
 ## User Stories
 It is recommended that user stories are created to identify and document requirements. This implementation guide uses non-technical stories as the foundation for identifying requirements and mapping to Care Connect profiles. This provides a reference point to help with the identification of requirements and profiles.
@@ -27,7 +27,7 @@ The accessibility of user stories over more complex and solution specific approa
 
 Care Connect case studies provide examples of how real world problems have been solved using Care Connect. Following a process that shows how the project evolved from requirements gathering through to the final creation of a solution, case studies offer insight and education from the experience of other trusts and service providers.
 
-<img src="images/engage/EngagementModel.svg" style="width:100%;max-width: 100%;">
+<img src="images/engage/EngagementModel.svg" style="width:100%;max-width: 100%;" alt="Diagram showing high level stages that are discussed in each case study." title="Diagram showing high level stages that are discussed in each case study.">
 
 The development of the Care Connect standard relies on community engagement curated by INTEROPen. Contributions can be made, either by joining the INTEROPen or simply contacting INTEROPen using the email address careconnect@interopen.org.
 
