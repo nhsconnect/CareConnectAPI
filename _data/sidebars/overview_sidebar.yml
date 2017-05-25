@@ -180,8 +180,8 @@ entries:
     - title: FHIR&reg;
       url: /tag_fhir.html
       output: web
-    - title: Use Case
-      url: /tag_use_case.html
+    - title: User Stories
+      url: /tag_user_stories.html
       output: web
     - title: Design
       url: /tag_design.html
