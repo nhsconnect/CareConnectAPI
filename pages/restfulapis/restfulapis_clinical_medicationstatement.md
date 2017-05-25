@@ -6,8 +6,8 @@ sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationstatement.html
 summary: Clinical Medication Statement
 ---
-{% include search.warnbanner.html %}
-{% include profile.html content="[Care Connect Medication Statement](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-MedicationStatement-1.html)" %}
+{% include custom/search.warnbanner.html %}
+{% include custom/profile.html content="[Care Connect Medication Statement](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-MedicationStatement-1.html)" %}
 
 ## 1. Read ##
 
@@ -21,7 +21,7 @@ Return a single `Medication Statement` for the specified id.
 GET /MedicationStatement?[searchParameters]</div>
 Medication Statement resource contains current medication information for a patient. Fetches a bundle of all `MedicationStatement` resources for the specified patient.
 
-{% include moscow.html content="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search)" %}
+{% include custom/moscow.html content="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search)" %}
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
@@ -29,8 +29,8 @@ Medication Statement resource contains current medication information for a pati
 | `patient` | `reference` | The identity of a patient to list statements for | Y | MedicationStatement.patient<br>(Patient) |
 | `status` | `token` | Return statements that match the given status | Y | MedicationStatement.status |
 
-{% include search.date.plus.html para="2.1." content="MedicationStatement" name="effectivedate" %}
+{% include custom/search.date.plus.html para="2.1." content="MedicationStatement" name="effectivedate" %}
 
-{% include search.patient.html para="2.2" content="MedicationStatement" %}
+{% include custom/search.patient.html para="2.2" content="MedicationStatement" %}
 
-{% include search.status.html para="2.3." content="MedicationStatement" options="active | completed | entered-in-error | intended" selected="active" %}
+{% include custom/search.status.html para="2.3." content="MedicationStatement" options="active | completed | entered-in-error | intended" selected="active" %}

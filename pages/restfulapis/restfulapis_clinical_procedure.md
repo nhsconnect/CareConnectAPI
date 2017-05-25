@@ -6,8 +6,8 @@ sidebar: foundations_sidebar
 permalink: restfulapis_clinical_procedure.html
 summary: Clinical Procedure
 ---
-{% include search.warnbanner.html %}
-{% include profile.html content="[Care Connect Procedure](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Procedure-1.html)" %}
+{% include custom/search.warnbanner.html %}
+{% include custom/profile.html content="[Care Connect Procedure](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Procedure-1.html)" %}
 
 ## 1. Read ##
 
@@ -22,7 +22,7 @@ GET /Procedure?[searchParameters]</div>
 
 Procedure resource contains procedure information for a patient. Fetches a bundle of all `Procedure` resources for the specified patient.
 
-{% include moscow.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
+{% include custom/moscow.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
@@ -30,11 +30,11 @@ Procedure resource contains procedure information for a patient. Fetches a bundl
 | `patient` | `reference` | Search by subject - a patient | Y | Procedure.subject <br>(Patient) |
 | `subject` | `reference` | Search by subject |  | Procedure.subject <br>(Patient) |
 
-{% include search.date.html para="2.1." content="Procedure" %}
+{% include custom/search.date.html para="2.1." content="Procedure" %}
 
-{% include search.patient.html para="2.2." content="Procedure" %}
+{% include custom/search.patient.html para="2.2." content="Procedure" %}
 
-{% include search.subject.html para="2.3." content="Procedure" %}
+{% include custom/search.subject.html para="2.3." content="Procedure" %}
 
 ## 3. Example ##
 
@@ -44,7 +44,7 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
 
 #### 3.1.1. cURL ####
 
-{% include embedcurl.html title="Search Procedure" command="curl -X GET  'http://[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Procedure" command="curl -X GET  'http://[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 

@@ -6,8 +6,8 @@ sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_immunization.html
 summary: Clinical Immunization
 ---
-{% include search.warnbanner.html %}
-{% include profile.html content="[Care Connect Immunization](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Immunization-1.html)" %}
+{% include custom/search.warnbanner.html %}
+{% include custom/profile.html content="[Care Connect Immunization](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Immunization-1.html)" %}
 
 ## 1. Read ##
 
@@ -22,7 +22,7 @@ GET /Immunization?[searchParameters]</div>
 
 Search for all immunization resources for a patient. Fetches a bundle of all `Immunization` resources for the specified patient.
 
-{% include moscow.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
+{% include custom/moscow.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
 
 | Name | Type | Description | Conformance  | Post |
 |------|------|-------------|-------|------|
@@ -36,11 +36,11 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 | `lot-number` | `string` | Vaccine Batch Number |  | Immunization.lotNumber |
 | `vaccine-code` | `token` | Vaccine Product Administered |  | Immunization.vaccineCode |
 -->
-{% include search.date.html para="2.1." content="Immunization" %}
+{% include custom/search.date.html para="2.1." content="Immunization" %}
 
-{% include search.patient.html para="2.2." content="Immunization" %}
+{% include custom/search.patient.html para="2.2." content="Immunization" %}
 
-{% include search.status.html para="2.3." content="Immunization" options="in-progress | on-hold | completed | entered-in-error | stopped" selected="on-hold" %}
+{% include custom/search.status.html para="2.3." content="Immunization" options="in-progress | on-hold | completed | entered-in-error | stopped" selected="on-hold" %}
 
 ## 3. Example ##
 
@@ -50,7 +50,7 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
 
 #### 3.1.1. cURL ####
 
-{% include embedcurl.html title="Search Immunization" command="curl -X GET  'http://[baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Immunization" command="curl -X GET  'http://[baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 

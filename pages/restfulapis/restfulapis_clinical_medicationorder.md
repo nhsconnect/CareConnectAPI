@@ -6,7 +6,7 @@ sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationorder.html
 summary: Clinical Medication Order
 ---
-{% include search.warnbanner.html %}
+{% include custom/search.warnbanner.html %}
 {% include tip.html content=" [Care Connect Medication Order](https://fhir-test.nhs.uk/StructureDefinition/careconnect-gpc-medicationorder-1
 ) Resource." %}
 
@@ -24,7 +24,7 @@ GET /MedicationOrder?[searchParameters]]</div>
 
 Medication order resource contains prescription information for a patient. Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 
-{% include moscow.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
+{% include custom/moscow.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 
 | Name    | Type   | Description    | Conformance        | Path |
 |---------|--------|----------------|--------------------|------|
@@ -35,15 +35,15 @@ Medication order resource contains prescription information for a patient. Fetch
 <!--
 | `datewritten` | `date` | Return prescriptions written on this date |  | MedicationOrder.dateWritten |
 | `identifier` | `token` | The source system of the prescriptions for  |  | MedicationOrder.identifier |
-{% include search.date.plus.html content="MedicationOrder" name="datewritten"  %}
+{% include custom/search.date.plus.html content="MedicationOrder" name="datewritten"  %}
 
-{% include search.identifier.html resource="MedicationOrder" content="identifier" subtext="System Filter" example="https://theccg.systemsupplier.co.uk/MedicationOrder|" text1="The CCG System Supplier" text2="not specified" %}
+{% include custom/search.identifier.html resource="MedicationOrder" content="identifier" subtext="System Filter" example="https://theccg.systemsupplier.co.uk/MedicationOrder|" text1="The CCG System Supplier" text2="not specified" %}
 -->
-{% include search.date.plus.html para="2.1." content="MedicationOrder" name="date"  %}
+{% include custom/search.date.plus.html para="2.1." content="MedicationOrder" name="date"  %}
 
-{% include search.patient.html para="2.2." content="MedicationOrder" %}
+{% include custom/search.patient.html para="2.2." content="MedicationOrder" %}
 
-{% include search.status.html para="2.3." content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
+{% include custom/search.status.html para="2.3." content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
 
 ### 3. Example ###
 

@@ -6,8 +6,8 @@ sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_organisation.html
 summary: Identification Organization
 ---
-{% include search.warnbanner.html %}
-{% include profile.html content="[Care Connect Organization](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Organization-1.html)" %}
+{% include custom/search.warnbanner.html %}
+{% include custom/profile.html content="[Care Connect Organization](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Organization-1.html)" %}
 
 ## 1. Read ##
 
@@ -21,7 +21,7 @@ Return a single `Organization` for the specified id.
 GET /Organization?[searchParameters]</div>
 Organization contains the demographics for the organisation. Fetches a bundle of all `Organization` resources for the specified search criteria.
 
-{% include moscow.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
+{% include custom/moscow.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
@@ -32,9 +32,9 @@ Organization contains the demographics for the organisation. Fetches a bundle of
 | `name` | `string` | A portion of the name of the organisation | | Organization.name |
 -->
 
-{% include search.string.html para="2.1." resource="Organization" content="address-postcode"  example="DE22%203NE" text1="Post Code" text2="DE22 3NE" %}
+{% include custom/search.string.html para="2.1." resource="Organization" content="address-postcode"  example="DE22%203NE" text1="Post Code" text2="DE22 3NE" %}
 
-{% include search.identifier.html para="2.2." resource="Organization" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-organization-code|RTG" text1="NHS Organisation" text2="RTG (Derby Teaching Hospitals NHS Trust)" %}
+{% include custom/search.identifier.html para="2.2." resource="Organization" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-organization-code|RTG" text1="NHS Organisation" text2="RTG (Derby Teaching Hospitals NHS Trust)" %}
 
 ## 3. Example ##
 
@@ -44,7 +44,7 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
 
 #### 3.1.1. cURL ####
 
-{% include embedcurl.html title="Search Organization" command="curl -X GET  'http://[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Organization" command="curl -X GET  'http://[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 

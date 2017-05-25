@@ -7,8 +7,8 @@ permalink: restfulapis_workflow_flag.html
 summary: Workflow Flag
 ---
 
-{% include search.warnbanner.html %}
-{% include profile.html content="[Care Connect Medication Flag](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-Flag-1.html)" %}
+{% include custom/search.warnbanner.html %}
+{% include custom/profile.html content="[Care Connect Medication Flag](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-Flag-1.html)" %}
 
 ## Read ##
 
@@ -25,7 +25,7 @@ GET /Flag?[searchParameters]</div>
 
 Search for all flag (alert) resources for a patient. Fetches a bundle of all `Flag` resources for the specified patient.
 
-{% include moscow.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
+{% include custom/moscow.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
 
 Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
@@ -36,6 +36,6 @@ Provider systems MAY implement the following search parameters (unless indicated
 | `status` | `token` | Flag status: active, inactive or entered-in-error | Y | Flag.status |
 
 
-{% include search.patient.html content="Flag" %}
+{% include custom/search.patient.html content="Flag" %}
 
-{% include search.status.html content="Flag" options="active | inactive | entered-in-error" selected="active" %}
+{% include custom/search.status.html content="Flag" options="active | inactive | entered-in-error" selected="active" %}

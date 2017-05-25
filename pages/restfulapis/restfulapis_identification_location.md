@@ -6,8 +6,8 @@ sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_location.html
 summary: Identification Location
 ---
-{% include search.warnbanner.html %}
-{% include profile.html content="[Care Connect Location](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Location-1.html)" %}
+{% include custom/search.warnbanner.html %}
+{% include custom/profile.html content="[Care Connect Location](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Location-1.html)" %}
 
 ## 1. Read ##
 
@@ -21,16 +21,16 @@ Return a single `Location` for the specified id
 GET /Location?[searchParameters]</div>
 Location contains the details for the location. Fetches a bundle of all `Location` resources for the specified search criteria.
 
-{% include moscow.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html#search)" %}
+{% include custom/moscow.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html#search)" %}
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
 | `adddress-postcode` | `string` | A postalCode specified in an address |  | Location.address.postalCode |
 | `identifier` | `token` | 	Any identifier for the location (e.g. SDS/ODS code) |  | 	Location.identifier |
 
-{% include search.string.html para="2.1." resource="Location" content="address-postcode"  example="NG10%201RY" text1="Post Code" text2="NG10 1RY" %}
+{% include custom/search.string.html para="2.1." resource="Location" content="address-postcode"  example="NG10%201RY" text1="Post Code" text2="NG10 1RY" %}
 
-{% include search.identifier.html para="2.2." resource="Location" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/????|RTG08" text1="NHS Trust Site" text2="RTG08 (Long Eaton Clinic)" %}
+{% include custom/search.identifier.html para="2.2." resource="Location" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/????|RTG08" text1="NHS Trust Site" text2="RTG08 (Long Eaton Clinic)" %}
 
 ## 3. Example ##
 
@@ -40,7 +40,7 @@ Return all Location resources with a Trust Site code of RTG08, the format of the
 
 #### 3.1.1. cURL ####
 
-{% include embedcurl.html title="Search Location" command="curl -X GET  'http://[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Location" command="curl -X GET  'http://[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 

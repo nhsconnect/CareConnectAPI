@@ -6,8 +6,8 @@ sidebar: foundations_sidebar
 permalink: restfulapis_workflow_encounter.html
 summary: Workflow Encounter
 ---
-{% include search.warnbanner.html %}
-{% include profile.html content="[Care Connect Encounter](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Encounter-1.html)" %}
+{% include custom/search.warnbanner.html %}
+{% include custom/profile.html content="[Care Connect Encounter](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Encounter-1.html)" %}
 
 ## 1. Read ##
 
@@ -22,16 +22,16 @@ GET /Encounter?[searchParameters]</div>
 
 Procedure resource contains encounter information for a patient. Fetches a bundle of all `Encounter` resources for the specified patient.
 
-{% include moscow.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
+{% include custom/moscow.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
 
 | Name | Type | Description | SHALL | Path |
 |------|------|-------------|-------|------|
 | `date` | `date` | A date within the period the Encounter lasted | | Encounter.period |
 | `patient` | `reference` | The identity of a patient to list encounters for | Y | Encounter.patient <br>(Patient) |
 
-{% include search.date.html para="2.1." content="Encounter" %}
+{% include custom/search.date.html para="2.1." content="Encounter" %}
 
-{% include search.patient.html para="2.2." content="Encounter" %}
+{% include custom/search.patient.html para="2.2." content="Encounter" %}
 
 ## 3. Example ##
 
@@ -40,7 +40,7 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
 
 #### cURL ####
 
-{% include embedcurl.html title="Search Encounter" command="curl -X GET  'http://[baseUrl]/Encounter?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Encounter" command="curl -X GET  'http://[baseUrl]/Encounter?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 

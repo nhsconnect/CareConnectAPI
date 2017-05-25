@@ -6,8 +6,8 @@ sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medication.html
 summary: Clinical Medication
 ---
-{% include search.warnbanner.html %}
-{% include profile.html content="[Care Connect Medication](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-1.html)" %}
+{% include custom/search.warnbanner.html %}
+{% include custom/profile.html content="[Care Connect Medication](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-1.html)" %}
 
 ## Read ##
 

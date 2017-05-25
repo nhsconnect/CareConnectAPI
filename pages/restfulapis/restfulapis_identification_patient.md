@@ -7,8 +7,8 @@ permalink: restfulapis_identification_patient.html
 summary: Patient
 ---
 
-{% include search.warnbanner.html %}
-{% include profile.html content="[Care Connect Patient](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Patient-1.html)" %}
+{% include custom/search.warnbanner.html %}
+{% include custom/profile.html content="[Care Connect Patient](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Patient-1.html)" %}
 
 ## 1. Read ##
 
@@ -22,7 +22,7 @@ Return a single `Patient` for the specified id (not the NHS Number).
 GET /Patient?[searchParameters]</div>
 Patient contains the demographics for the patient. Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
 
-{% include moscow.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
+{% include custom/moscow.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
@@ -44,23 +44,23 @@ Patient contains the demographics for the patient. Fetches a bundle of all `Pati
 | `telecom` | `token` | The value in any kind of telecom details of the patient |  | Patient.telecom |
 -->
 
-{% include search.string.html para="2.1." resource="Patient" content="address-postcode"  example="NG10%201ZZ" text1="Post Code" text2="NG10 1ZZ" %}
+{% include custom/search.string.html para="2.1." resource="Patient" content="address-postcode"  example="NG10%201ZZ" text1="Post Code" text2="NG10 1ZZ" %}
 
-{% include search.date.plus.html para="2.2." content="Patient" name="birthdate" %}
+{% include custom/search.date.plus.html para="2.2." content="Patient" name="birthdate" %}
 
-{% include search.string.html para="2.3." resource="Patient" content="email"  example="bernie.kanfeld@chumhum.com" text1="email address" text2="bernie.kanfeld@chumhum.com" %}
+{% include custom/search.string.html para="2.3." resource="Patient" content="email"  example="bernie.kanfeld@chumhum.com" text1="email address" text2="bernie.kanfeld@chumhum.com" %}
 
-{% include search.string.html para="2.4." resource="Patient" content="family"  example="kanfeld" text1="surname" text2="Kanfeld" %}
+{% include custom/search.string.html para="2.4." resource="Patient" content="family"  example="kanfeld" text1="surname" text2="Kanfeld" %}
 
-{% include search.token.html para="2.5." resource="Patient" content="gender"  example="female" text1="Administrative Sex" text2="female" %}
+{% include custom/search.token.html para="2.5." resource="Patient" content="gender"  example="female" text1="Administrative Sex" text2="female" %}
 
-{% include search.string.html para="2.6." resource="Patient" content="given"  example="bernie" text1="forename" text2="Bernie" %}
+{% include custom/search.string.html para="2.6." resource="Patient" content="given"  example="bernie" text1="forename" text2="Bernie" %}
 
-{% include search.identifier.html para="2.7." resource="Patient" content="identifier" subtext="NHS Number, Hospital Number, etc" example="https://fhir.nhs.uk/Id/nhs-number|9876543210" text1="NHS Number" text2="9876543210" %}
+{% include custom/search.identifier.html para="2.7." resource="Patient" content="identifier" subtext="NHS Number, Hospital Number, etc" example="https://fhir.nhs.uk/Id/nhs-number|9876543210" text1="NHS Number" text2="9876543210" %}
 
-{% include search.string.html para="2.8." resource="Patient" content="name"  example="bernie%20kanfeld" text1="name" text2="Bernie Kanfeld" %}
+{% include custom/search.string.html para="2.8." resource="Patient" content="name"  example="bernie%20kanfeld" text1="name" text2="Bernie Kanfeld" %}
 
-{% include search.string.html para="2.9." resource="Patient" content="phone"  example="07999 123456" text1="phone number" text2="07999 123456" %}
+{% include custom/search.string.html para="2.9." resource="Patient" content="phone"  example="07999 123456" text1="phone number" text2="07999 123456" %}
 
 ## 3. Example ##
 
@@ -69,7 +69,7 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 
 #### 3.1.1. cURL ####
 
-{% include embedcurl.html title="Search Patient" command="curl -X GET  'http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET  'http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 

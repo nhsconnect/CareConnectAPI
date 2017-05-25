@@ -7,8 +7,8 @@ permalink: restfulapis_clinical_observation.html
 summary: Clinical Observation
 ---
 
-{% include search.warnbanner.html %}
-{% include profile.html content="[Care Connect Observation](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Observation-1.html)" %}
+{% include custom/search.warnbanner.html %}
+{% include custom/profile.html content="[Care Connect Observation](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Observation-1.html)" %}
 
 ## 1. Read ##
 
@@ -24,7 +24,7 @@ GET /Observation?[searchParameters]</div>
 
 Observation resource contains observation or event information for a patient. Fetches a bundle of all `Observation` resources for the specified patient.
 
-{% include moscow.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
+{% include custom/moscow.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
 
 
 | Name | Type | Description | Conformance | Path |
@@ -38,15 +38,15 @@ Observation resource contains observation or event information for a patient. Fe
 <!-- | `subject` | `reference` | The subject that the observation is about| | Observation.subject (Patient) |
 -->
 
-{% include search.status.plus.html para="2.1." content="Observation" options="see profile/valueset for codes" selected="exam" name="category" %}
+{% include custom/search.status.plus.html para="2.1." content="Observation" options="see profile/valueset for codes" selected="exam" name="category" %}
 
-{% include search.code.html para="2.2." content="Observation" %}
+{% include custom/search.code.html para="2.2." content="Observation" %}
 
-{% include search.date.html para="2.3." content="Observation" %}
+{% include custom/search.date.html para="2.3." content="Observation" %}
 
-{% include search.patient.html para="2.4." content="Observation" %}
+{% include custom/search.patient.html para="2.4." content="Observation" %}
 <!--
-{% include search.subject.html para="2.5." content="Observation" %}
+{% include custom/search.subject.html para="2.5." content="Observation" %}
 -->
 ## 3. Example ##
 
@@ -56,7 +56,7 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
 
 #### 3.1.1. cURL ####
 
-{% include embedcurl.html title="Search Observation" command="curl -X GET  'http://[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Observation" command="curl -X GET  'http://[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 ### 3.2. Response Headers ###
 

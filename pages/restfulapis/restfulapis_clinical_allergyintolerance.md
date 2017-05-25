@@ -6,8 +6,8 @@ sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_allergyintolerance.html
 summary: Clinical Allergy Intolerance
 ---
-{% include search.warnbanner.html %}
-{% include profile.html content="[Care Connect Allergy Intolerence](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-AllergyIntolerance-1.html)" %}
+{% include custom/search.warnbanner.html %}
+{% include custom/profile.html content="[Care Connect Allergy Intolerence](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-AllergyIntolerance-1.html)" %}
 
 ## 1. Read ##
 
@@ -23,16 +23,16 @@ GET /AllergyIntollerence?[searchParameters]</div>
 
 Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolerance` resources for the specified patient.
 
-{% include moscow.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
+{% include custom/moscow.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------------|------|
 | `patient` | `reference` | Who the sensitivity is for | SHALL | AllergyIntolerance.patient<br>(Patient) |
 | `status` | `token` | Status of AllergyIntolerance	| Y | AllergyIntolerance.status |
 
-{% include search.patient.html para="2.1." content="AllergyIntolerance" %}
+{% include custom/search.patient.html para="2.1." content="AllergyIntolerance" %}
 
-{% include search.status.html para="2.2." content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
+{% include custom/search.status.html para="2.2." content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
 
 ## 3. Example ##
 
@@ -42,7 +42,7 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
 
 #### 3.1.1. cURL ####
 
-{% include embedcurl.html title="Search AllergyIntolerance" command="curl -X GET  'http://[baseUrl]/AllergyIntolerance?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search AllergyIntolerance" command="curl -X GET  'http://[baseUrl]/AllergyIntolerance?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 
