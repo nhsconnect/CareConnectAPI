@@ -22,8 +22,7 @@ The accessibility of user stories over more complex and solution specific approa
 [Click Here](howtouserstory.html) for more information on how we create user stories for Care Connect.
 
 [Care Connect User Stories](engage_user_stories.html)
-## Proof of Concepts
-[Proof of Concepts](engage_proof_of_concepts.html)
+
 ## Case Studies
 [Case Studies](engage_case_studies.html)
 ***
