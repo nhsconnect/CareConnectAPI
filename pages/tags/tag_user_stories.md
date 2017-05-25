@@ -7,4 +7,4 @@ sidebar: overview_sidebar
 folder: tags
 ---
 {% include overview.html %}
-{% include howtouserstory %}
+{% include howtouserstory.html %}
