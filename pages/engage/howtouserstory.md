@@ -29,7 +29,10 @@ It is expected that as understanding evolves, so will the definition of the role
 ## Secondary Actor
 Along with the Primary Actor, Care Connect user stories also consider a “Secondary Actor”. This isn’t traditionally how a user story is defined but from the perspective of interoperability it is useful to consider who the secondary actor is to clarify the source or destination of the associated method. When presenting the user story, the secondary actor will often be omitted. If the secondary actor cannot be identified, it may suggest that the story is not actually an interoperability story at all.
 
-For example, consider the following user story “As a health care professional, I want a consolidated view of the patient’s current medications”. Given that a single data source is not clear, it suggests further refinement to fully implement. So, this story may be better expressed as several more granular stories:
+For example, consider the following user story
+* *“As a health care professional, I want a consolidated view of the patient’s current medications”.*
+
+Given that a single data source is not clear, it suggests further refinement to fully implement. So, this story may be better expressed as several more granular stories:
 * *As a health care professional (hospital services) I wish to view current medication from primary care general practice…*
 * *As a health care professional (hospital services) I wish to view current medication from mental health services…*
 * *As a health care professional (hospital services) I wish to view current medication from community dental services…*
