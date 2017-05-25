@@ -2,7 +2,7 @@
 title: "Case Studies"
 tagName: casestudies
 search: exclude
-permalink: tag_case_studies.html
+permalink: tag_casestudies.html
 sidebar: overview_sidebar
 folder: tags
 ---
