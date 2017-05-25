@@ -12,7 +12,6 @@ Given a clinical scenario, it is possible to derive several user stories that ar
 A user story in its simplest form is made up of three elements.
 
 | Actor | Requirement | Justification |
-| --- | --- | --- |
 
 This simplicity makes the user story easy to understand and share across consumers with differing roles. To support Connect, this is supported with additional content such as the acceptance criteria (which is normally included as part of a user story) and secondary actors (which are not typically considered to be part of a user story).
 ## Primary Actor
