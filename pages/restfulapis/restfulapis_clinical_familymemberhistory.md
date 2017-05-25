@@ -25,7 +25,7 @@ FamilyMemberHistory resource contains family member history for a patient. Fetch
 
 {% include moscow.html content="[FamilyMemberHistory](https://www.hl7.org/fhir/DSTU2/familymemberhistory.html#search)" %}
 
-| Name | Type | Description | SHALL | Path |
+| Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
 | `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y | FamilyMemberHistory.date |
 | `gender` | `token` | A search by a gender code of a family member |  | FamilyMemberHistory.gender |

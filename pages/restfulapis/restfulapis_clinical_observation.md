@@ -30,7 +30,7 @@ Observation resource contains observation or event information for a patient. Fe
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
 | `category` | `token` | The classification of the type of observation | SHALL | Observation.category |
-| `code` | `token` | The code of the observation type | SHALL | Observation.code |
+| `code` | `token` | The code of the observation type | SHALL| Observation.code |
 | `date` | `date` | Obtained date/time.<br>If the obtained element is a period, a date that falls in the period | SHALL | Observation.effective[x] |
 | `patient` | `reference` | The subject that the observation is about (if patient) | SHALL | Observation.subject (Patient) |
 
@@ -38,7 +38,7 @@ Observation resource contains observation or event information for a patient. Fe
 <!-- | `subject` | `reference` | The subject that the observation is about| | Observation.subject (Patient) |
 -->
 
-{% include search.status.plus.html para="2.1." content="Observation" options="see profile/valueset" selected="exam" name="category" %}
+{% include search.status.plus.html para="2.1." content="Observation" options="see profile/valueset for codes" selected="exam" name="category" %}
 
 {% include search.code.html para="2.2." content="Observation" %}
 

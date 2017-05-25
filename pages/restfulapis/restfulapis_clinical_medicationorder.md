@@ -26,7 +26,7 @@ Medication order resource contains prescription information for a patient. Fetch
 
 {% include moscow.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 
-| Name    | Type   | Description    | SHALL              | Path |
+| Name    | Type   | Description    | Conformance        | Path |
 |---------|--------|----------------|--------------------|------|
 | `date` | `date` | Returns medication request to be administered on a specific date | Y | MedicationOrder.dosageInstruction.timing.event |
 | `patient` | `reference` | The identity of a patient to list orders for | Y | MedicationOrder.patient<br>(Patient) |

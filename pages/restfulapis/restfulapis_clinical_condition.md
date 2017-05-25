@@ -25,12 +25,12 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 {% include moscow.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html#search)" %}
 
-| Name | Type | Description | SHALL | Path |
+| Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
-| `category` | `token` | The category of the condition | Y | Condition.category |
-| `clinicalstatus` | `token` | The clinical status of the condition | Y | 	Condition.clinicalStatus |
+| `category` | `token` | The category of the condition | SHALL| Condition.category |
+| `clinicalstatus` | `token` | The clinical status of the condition | SHALL | 	Condition.clinicalStatus |
 | `date-recorded` | `date` | A date, when the Condition statement was documented |  | Condition.dateRecorded |
-| `patient` | `reference` | Who has the condition? | Y | Condition.patient<br>(Patient) |
+| `patient` | `reference` | Who has the condition? | SHALL | Condition.patient<br>(Patient) |
 
 {% include search.status.plus.html para="2.1." content="Condition" options="
 complaint | symptom | finding | diagnosis | problem | need" selected="symptom" name="category" %}

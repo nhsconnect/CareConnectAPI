@@ -26,7 +26,7 @@ Search for all flag resources for a patient. Fetches a bundle of all `Flag` reso
 {% include moscow.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
 
 
-| Name | Type | Description | SHALL | Path |
+| Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
 | `patient` | `reference` | The patient for the vaccination record | Y | Flag.subject <br>(Patient) |
 | `status` | `token` | Flag status: active, inactive or entered-in-error |  | Flag.status

@@ -24,7 +24,7 @@ Practitioner contains the demographics of the clinician. Fetches a bundle of all
 
 {% include moscow.html content="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html#search)" %}
 
-| Name | Type | Description | SHALL | Path |
+| Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
 | `adddress-postcode` | `string` | A postalCode specified in an address |  | Practitioner.address.postalCode |
 | `identifier` | `token` | 	Any identifier for the practitioner (e.g. GMP/GMC code) |  | 	Practitioner.identifier |

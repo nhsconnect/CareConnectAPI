@@ -23,7 +23,7 @@ Location contains the details for the location. Fetches a bundle of all `Locatio
 
 {% include moscow.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html#search)" %}
 
-| Name | Type | Description | SHALL | Path |
+| Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
 | `adddress-postcode` | `string` | A postalCode specified in an address |  | Location.address.postalCode |
 | `identifier` | `token` | 	Any identifier for the location (e.g. SDS/ODS code) |  | 	Location.identifier |

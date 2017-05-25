@@ -23,7 +23,7 @@ Organization contains the demographics for the organisation. Fetches a bundle of
 
 {% include moscow.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
 
-| Name | Type | Description | SHALL | Path |
+| Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
 | `adddress-postcode` | `string` | A postalCode specified in an address |  | Organization.address.postalCode |
 | `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) |  | Organization.identifier |

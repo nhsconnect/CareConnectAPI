@@ -24,7 +24,7 @@ Procedure resource contains procedure information for a patient. Fetches a bundl
 
 {% include moscow.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
 
-| Name | Type | Description | SHALL | Path |
+| Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
 | `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y | Procedure.performed[x] |
 | `patient` | `reference` | Search by subject - a patient | Y | Procedure.subject <br>(Patient) |

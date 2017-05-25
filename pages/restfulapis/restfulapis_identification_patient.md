@@ -24,7 +24,7 @@ Patient contains the demographics for the patient. Fetches a bundle of all `Pati
 
 {% include moscow.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 
-| Name | Type | Description | SHALL | Path |
+| Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
 | `adddress-postcode` | `string` | A postalCode specified in an address |  | Practitioner.address.postalCode |
 | `birthdate` | `date` | The patient's date of birth | Y | Patient.birthDate |

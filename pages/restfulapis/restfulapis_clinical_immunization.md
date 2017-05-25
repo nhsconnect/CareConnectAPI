@@ -24,10 +24,10 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 
 {% include moscow.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
 
-| Name | Type | Description | SHALL | Post |
+| Name | Type | Description | Conformance  | Post |
 |------|------|-------------|-------|------|
-| `date` | `date` | Vaccination (non)-Administration Date | Y | Immunization.date |
-| `patient` | `reference` | The patient for the vaccination record | Y | 	Immunization.patient<br>(Patient) |
+| `date` | `date` | Vaccination (non)-Administration Date | SHALL | Immunization.date |
+| `patient` | `reference` | The patient for the vaccination record |  | 	Immunization.patient<br>(Patient) |
 | `status` | `token` | Immunization event status | | Immunization.status |
 
 <!--
