@@ -14,6 +14,10 @@ A user story in its simplest form is made up of three elements.
 | Actor | Requirement | Justification |
 | --- | --- | --- |
 
+<p align="justify">
+  Lorem ipsum
+</p>
+
 This simplicity makes the user story easy to understand and share across consumers with differing roles. To support Connect, this is supported with additional content such as the acceptance criteria (which is normally included as part of a user story) and secondary actors (which are not typically considered to be part of a user story).
 ## Primary Actor
 This end user is caller the “Primary Actor” of the story. The catalogue does not consider personas but instead refers to roles. For example, a reconciliation process could be expressed from the perspective of a doctor, a pharmacist, or a pharmacy technician. While the requirements could be the same for each of these roles, there may be subtle differences that affect the requirement or differences in the associated processes that lead to additional stories being required. In this case, additional stories may be required for a pharmacy technician discussing the need to have the reconciliation validated. While some roles existing in multiple care settings (for example a pharmacist may work in hospital services or community services), others are unique and obviously work within a single care setting (for example a general practitioner). For consistency and removal of any ambiguity though we typically define a care setting if possible even if the author considers it obvious.
