@@ -1,6 +1,6 @@
 ---
 title: How To Write A Care Connect User Story
-keywords: engage, care connect process, process, introduction, user, story, tutorial
+keywords: engage, explore, care connect process, process, introduction, user, story, tutorial, actor, primary, secondary, need, justification, acceptance, feature, epic
 tags: [engage]
 sidebar: foundations_sidebar
 permalink: howtouserstory.html
