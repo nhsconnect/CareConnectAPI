@@ -183,6 +183,9 @@ entries:
     - title: User Stories
       url: /tag_user_stories.html
       output: web
+    - title: Case Studies
+      url: /tag_casestudies.html
+      output: web
     - title: Design
       url: /tag_design.html
       output: web
