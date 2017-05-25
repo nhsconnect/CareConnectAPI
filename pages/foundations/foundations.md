@@ -15,7 +15,7 @@ The foundations capability cover the basic API requirements and prerequisites to
 
 {% include important.html content="In order to successfully make us of the Care Connect APIs, initially a level of pre-existing accredited Spine connectivity will be required along with some FHIR foundation API capabilities." %}
 
-{% include roadmap.html content="Over time the necessity to have access to pre-existing spine services (i.e. PDS and SDS integration) is likely to be replaced by FHIR based equivalents." %}
+{% include custom/roadmap.html content="Over time the necessity to have access to pre-existing spine services (i.e. PDS and SDS integration) is likely to be replaced by FHIR based equivalents." %}
 
 ## Prerequisites ##
 
@@ -33,4 +33,3 @@ Please also refer to [Development Guidance - FHIR API Guidance - Common API Guid
 
 - [Care Connect API use cases](foundations_use_case_api.html)
 - [Get the FHIR conformance profile](foundations_use_case_get_the_fhir_conformance_profile.html)
-
