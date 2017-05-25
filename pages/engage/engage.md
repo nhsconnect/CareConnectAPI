@@ -1,7 +1,7 @@
 ---
 title: Engage with Care Connect
 keywords: engage, care connect process, process, introduction
-tags: [engage]
+tags: [userstories]
 sidebar: foundations_sidebar
 permalink: engage.html
 summary: "These pages assist with requirements gathering and mapping stages of a FHIR API development process."

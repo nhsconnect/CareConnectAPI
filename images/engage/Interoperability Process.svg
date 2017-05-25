@@ -97,7 +97,7 @@
 			</g>
 			<g id="shape3-4" v:mID="3" v:groupContext="shape" transform="translate(0,-108)">
 				<title>Sheet.3</title>
-				<desc>Care Connect Interoperability Process</desc>
+				<desc>Care Connect Interoperability Process (Extract)</desc>
 				<v:userDefs>
 					<v:ud v:nameU="msvStructureType" v:prompt="" v:val="VT4(Heading)"/>
 					<v:ud v:nameU="msvSDContainerHeadingEdge" v:prompt="" v:val="VT4(Bottom)"/>
@@ -116,7 +116,7 @@
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="261" cy="128.5" width="522.01" height="36"/>
 				<path d="M0 146.5 L522 146.5 L522 110.5 L0 110.5 L0 146.5 Z" class="st2"/>
-				<text x="4" y="133.3" class="st3" v:langID="2057"><v:paragraph/><v:tabList/>Care Connect Interoperability Process</text>			</g>
+				<text x="4" y="133.3" class="st3" v:langID="2057"><v:paragraph/><v:tabList/>Care Connect Interoperability Process (Extract)</text>			</g>
 		</g>
 		<g id="shape4-7" v:mID="4" v:groupContext="shape" transform="translate(1.25,-1.25)">
 			<title>Swimlane List</title>

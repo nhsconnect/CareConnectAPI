@@ -10,7 +10,7 @@ summary: "Industry suggests various techniques for the creation of user stories.
 Given a clinical scenario, it is possible to derive several user stories that are suitable for mapping by considering the story from the perspective of the end users that will benefit from the final interface.
 A user story in its simplest form is made up of three elements.
 
-<table style="margin-left:auto;margin-right:auto;"><tr><td><b>ACTOR</b></td><td><b>REQUIREMENT</b></td><td><b>JUSTIFICATION</b></td></tr></table>
+<table style="margin-left:auto;margin-right:auto;"><tr><td><b>Actor</b></td><td><b>Requirement</b></td><td><b>Justification</b></td></tr></table>
 
 This simplicity makes the user story easy to understand and share across consumers with differing roles. To support Connect, this is supported with additional content such as the acceptance criteria (which is normally included as part of a user story) and secondary actors (which are not typically considered to be part of a user story).
 ## Actor
