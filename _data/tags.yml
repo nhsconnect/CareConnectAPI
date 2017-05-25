@@ -1,6 +1,6 @@
 allowed-tags:
   - overview
-  - usecase
+  - casestudies
   - fhir
   - design
   - development
