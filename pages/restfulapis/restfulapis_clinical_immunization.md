@@ -50,7 +50,7 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
 
 #### 3.1.1. cURL ####
 
-{% include embedcurl.html title="Search Condition" command="curl -X GET  'http://[baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include embedcurl.html title="Search Immunization" command="curl -X GET  'http://[baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 

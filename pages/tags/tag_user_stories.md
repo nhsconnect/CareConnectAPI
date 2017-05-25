@@ -6,5 +6,4 @@ permalink: tag_user_stories.html
 sidebar: overview_sidebar
 folder: tags
 ---
-{% include overview.html %}
-{% include howtouserstory.html %}
+{% include taglogic.html %}
