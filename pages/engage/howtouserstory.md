@@ -4,7 +4,7 @@ keywords: engage, care connect process, process, introduction, user, story, tuto
 tags: [engage]
 sidebar: foundations_sidebar
 permalink: howtouserstory.html
-summary: "How we create user stories for Care Connect."
+summary: "Industry suggests various techniques for the creation of user stories. Care Connect extends this slightly to help make the creation of user stories more relevant to the creation of system interfaces."
 ---
 
 ## How to create a Care Connect user story
