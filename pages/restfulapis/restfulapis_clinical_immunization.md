@@ -41,3 +41,90 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 {% include search.patient.html para="2.2." content="Immunization" %}
 
 {% include search.status.html para="2.3." content="Immunization" options="in-progress | on-hold | completed | entered-in-error | stopped" selected="on-hold" %}
+
+## 3. Example ##
+
+### 3.1 Request Query ###
+
+Return all Immunization resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+
+#### 3.1.1. cURL ####
+
+{% include embedcurl.html title="Search Condition" command="curl -X GET  'http://[baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+
+### 3.2 Response Headers ###
+
+| Status Code |
+|----------------|
+|200 |
+
+| Header | Value |
+|-----------------|---------|
+| Content-Type  | application/xml+fhir;charset=UTF-8 |
+
+### 3.3 Response Body ###
+
+```xml
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="db7b6433-5e28-4c66-a9dc-d2b8ed048496"/>
+    <meta>
+        <lastUpdated value="2017-05-25T07:43:23.057-04:00"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="1"/>
+    <link>
+        <relation value="self"/>
+        <url value="http://fhirtest.uhn.ca/baseDstu2/Immunization?_format=xml&amp;patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+    </link>
+    <entry>
+        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Immunization/32502"/>
+        <resource>
+            <Immunization xmlns="http://hl7.org/fhir">
+                <id value="32502"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-05-25T07:38:43.382-04:00"/>
+                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Immunization-1"/>
+                </meta>
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-DateRecorded-1">
+                    <valueDateTime value="2016-03-01T09:30:00+00:00"/>
+                </extension>
+                <status value="in-progress"/>
+                <date value="2016-03-01T09:30:00+00:00"/>
+                <vaccineCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="396429000"/>
+                        <display value="Measles, mumps and rubella vaccine (substance)"/>
+                    </coding>
+                </vaccineCode>
+                <patient>
+                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+                    <display value="Bernie Kanfeld"/>
+                </patient>
+                <wasNotGiven value="false"/>
+                <reported value="false"/>
+                <performer>
+                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <display value="Dr Bhatia"/>
+                </performer>
+                <lotNumber value="63259874"/>
+                <expirationDate value="2020-01-01"/>
+                <vaccinationProtocol>
+                    <doseSequence value="1"/>
+                    <doseStatus>
+                        <coding>
+                            <system value="http://hl7.org/fhir/vaccination-protocol-dose-status"/>
+                            <code value="count"/>
+                            <display value="Counts"/>
+                        </coding>
+                    </doseStatus>
+                </vaccinationProtocol>
+            </Immunization>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+</Bundle>
+```
