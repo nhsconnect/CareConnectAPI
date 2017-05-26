@@ -44,10 +44,10 @@ Return Medication resource with a logical id of 48496. Replace 'baseUrl' with th
 
 ```xml
 <Medication xmlns="http://hl7.org/fhir">
+  <id value="48496"/>
   <meta>
     <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Medication-1"/>
   </meta>
-  <id value="48496"/>
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>

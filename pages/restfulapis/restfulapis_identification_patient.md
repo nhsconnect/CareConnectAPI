@@ -85,9 +85,9 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="f0566028-976e-4d4f-8e5e-f4209b29f52e"/>
+    <id value="aa167489-c554-42f6-bfdd-53227ff1faad"/>
     <meta>
-        <lastUpdated value="2017-05-21T12:00:48.832-04:00"/>
+        <lastUpdated value="2017-05-26T05:39:27.492-04:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
@@ -96,16 +96,34 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
         <url value="http://fhirtest.uhn.ca/baseDstu2/Patient?_format=xml&amp;identifier=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number%7C9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Patient/31936"/>
+        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Patient/32898"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
-                <id value="31936"/>
+                <id value="32898"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-21T11:55:59.532-04:00"/>
+                    <lastUpdated value="2017-05-26T05:39:03.280-04:00"/>
                     <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Patient-1"/>
                 </meta>
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-EthnicCategory-1">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
+                            <code value="01"/>
+                            <display value="British, Mixed British"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
                 <identifier>
+                    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="https://fhir.hl7.org.uk/CareConnect-NHSNumberVerificationStatus-1"/>
+                                <code value="01"/>
+                                <display value="Number present and verified"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
                     <system value="https://fhir.nhs.uk/Id/nhs-number"/>
                     <value value="9876543210"/>
                 </identifier>
@@ -127,15 +145,14 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
                 </address>
                 <maritalStatus>
                     <coding>
-                        <system value="http://hl7.org/fhir/marital-status"/>
+                        <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
                         <code value="S"/>
-                        <display value="Single"/>
                     </coding>
                 </maritalStatus>
-                <careProvider>
+                <managingOrganization>
                     <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
                     <display value="Moir Medical Centre"/>
-                </careProvider>
+                </managingOrganization>
             </Patient>
         </resource>
         <search>
