@@ -22,11 +22,9 @@ The above steps outline a complete API journey .
 
 The current site focuses on a typical API Developer's Journey as highlighted by the green boxes below in the developer journey:
 
-<img src="images/roadmap/guide-focus.jpg" style="width:100%;max-width: 100%;">
+<img src="images/roadmap/profile-focus.jpg" style="width:100%;max-width: 100%;">
 
-NHS Digital is contributing to progressing the profile developmenet, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem.
-
-Please see the explanation of the complete development roadmap.
+NHS Digital is contributing to progressing the profile developmenet, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem. Please see the explanation of the complete development roadmap below.
 
 {% include custom/contribute.html content="Please contact [careconnect@interopen.org] to get involved." %}
 
