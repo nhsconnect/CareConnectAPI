@@ -18,7 +18,17 @@ Return a single `Medication` for the specified id.
 
 ## 2. Search Parameters ##
 
-TODO
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Medication?[searchparameters]</div>
+Search for all flag resources for a patient. Fetches a bundle of all `Medication` resources for the specified patient.
+
+{% include custom/moscow.html content="[Medication](https://www.hl7.org/fhir/DSTU2/medication.html#search)" %}
+
+| Name | Type | Description | Conformance | Path |
+|------|------|-------------|-------|------|
+| `code` | `token` | 	Codes that identify this medication | MAY | Medication.code |
+
+{% include custom/search.code.medication.html para="2.1." content="Medication" %}
 
 ## 3. Example ##
 
@@ -44,26 +54,25 @@ Return Medication resource with a logical id of 48496. Replace 'baseUrl' with th
 
 ```xml
 <Medication xmlns="http://hl7.org/fhir">
-  <id value="48496"/>
-  <meta>
-    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Medication-1"/>
-  </meta>
-  <code>
-    <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="134623009"/>
-      <display value="Capecitabine 150mg tablet (product)"/>
-    </coding>
-  </code>
-  <isBrand value="false"/>
-  <product>
-    <form>
+   <id value="48496"/>
+   <meta>
+      <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Medication-1"/>
+   </meta>
+   <code>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="440131009"/>
-        <display value="Oral dosage form product"/>
+         <system value="http://snomed.info/sct"/>
+         <code value="10097211000001102"/>
+         <display value="Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices"/>
       </coding>
-    </form>
-  </product>
+   </code>
+   <product>
+      <form>
+         <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="385219001"/>
+            <display value="Solution for injection"/>
+         </coding>
+      </form>
+   </product>
 </Medication>
 ```
