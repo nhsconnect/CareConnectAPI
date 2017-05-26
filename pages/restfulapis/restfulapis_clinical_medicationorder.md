@@ -7,8 +7,7 @@ permalink: restfulapis_clinical_medicationorder.html
 summary: An order for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationOrder" rather than "MedicationPrescription" to generalize the use across inpatient and outpatient settings as well as for care plans, etc.
 ---
 {% include custom/search.warnbanner.html %}
-{% include tip.html content=" [Care Connect Medication Order](https://fhir-test.nhs.uk/StructureDefinition/careconnect-gpc-medicationorder-1
-) Resource." %}
+{% include tip.html content=" [Care Connect Medication Order](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-MedicationOrder-1.html) Resource." %}
 
 ## 1. Read ##
 
