@@ -31,7 +31,9 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------------|------|
 | `patient` | `reference` | Who the sensitivity is for | SHALL | AllergyIntolerance.patient<br>(Patient) |
-| `status` | `token` | Status of AllergyIntolerance	| Y | AllergyIntolerance.status |
+| `status` | `token` | Status of AllergyIntolerance	| MAY | AllergyIntolerance.status |
+
+
 
 {% include custom/search.patient.html para="2.1." content="AllergyIntolerance" %}
 

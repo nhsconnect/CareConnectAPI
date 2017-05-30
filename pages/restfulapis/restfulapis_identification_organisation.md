@@ -28,8 +28,8 @@ Organization contains the demographics for the organisation. Fetches a bundle of
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address |  | Organization.address.postalCode |
-| `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) |  | Organization.identifier |
+| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Organization.address.postalCode |
+| `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) | MAY | Organization.identifier |
 
 <!--
 | `name` | `string` | A portion of the name of the organisation | | Organization.name |

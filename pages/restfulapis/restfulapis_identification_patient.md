@@ -29,15 +29,15 @@ Patient contains the demographics for the patient. Fetches a bundle of all `Pati
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address |  | Practitioner.address.postalCode |
-| `birthdate` | `date` | The patient's date of birth | Y | Patient.birthDate |
-| `email` | `token` | A value in an email contact |  | Patient.telecom <br>(system=email) |
-| `family` | `string` | A portion of the family name of the patient | Y | Patient.name.family |
-| `gender` | `token` | Gender of the patient | Y | Patient.gender |
-| `given` | `string` | A portion of the given name of the patient | Y | Patient.name.given |
-| `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | Y | Patient.identifier |
-| `name` | `string` | A portion of either family or given name of the patient | | 	Patient.name |
-| `phone` | `token` | A value in a phone contact | | Patient.telecom(system=phone) |
+| `adddress-postcode` | `string` | A postalCode specified in an address | SHOULD | Practitioner.address.postalCode |
+| `birthdate` | `date` | The patient's date of birth | SHALL | Patient.birthDate |
+| `email` | `token` | A value in an email contact | SHOULD | Patient.telecom <br>(system=email) |
+| `family` | `string` | A portion of the family name of the patient | SHALL | Patient.name.family |
+| `gender` | `token` | Gender of the patient | SHALL | Patient.gender |
+| `given` | `string` | A portion of the given name of the patient | SHALL | Patient.name.given |
+| `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | SHALL | Patient.identifier |
+| `name` | `string` | A portion of either family or given name of the patient | SHALL | 	Patient.name |
+| `phone` | `token` | A value in a phone contact | SHOULD | Patient.telecom(system=phone) |
 
 
 <!--

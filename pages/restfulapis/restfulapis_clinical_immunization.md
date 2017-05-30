@@ -29,9 +29,9 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 
 | Name | Type | Description | Conformance  | Post |
 |------|------|-------------|-------|------|
-| `date` | `date` | Vaccination (non)-Administration Date | SHALL | Immunization.date |
-| `patient` | `reference` | The patient for the vaccination record |  | 	Immunization.patient<br>(Patient) |
-| `status` | `token` | Immunization event status | | Immunization.status |
+| `date` | `date` | Vaccination (non)-Administration Date | SHOULD | Immunization.date |
+| `patient` | `reference` | The patient for the vaccination record | SHALL | 	Immunization.patient<br>(Patient) |
+| `status` | `token` | Immunization event status | MAY | Immunization.status |
 
 <!--
 | `dose-sequence` | `number` | Dose number within series |  | 	Immunization.vaccinationProtocol.doseSequence |

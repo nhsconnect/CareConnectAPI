@@ -32,8 +32,8 @@ Search for all flag resources for a patient. Fetches a bundle of all `Flag` reso
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
-| `patient` | `reference` | The patient for the vaccination record | Y | Flag.subject <br>(Patient) |
-| `status` | `token` | Flag status: active, inactive or entered-in-error |  | Flag.status
+| `patient` | `reference` | The patient for the vaccination record | SHOULD | Flag.subject <br>(Patient) |
+| `status` | `token` | Flag status: active, inactive or entered-in-error | MAY | Flag.status
 
 <!--
 | `date` | `date` | Time period when flag is active |  | Flag.period|

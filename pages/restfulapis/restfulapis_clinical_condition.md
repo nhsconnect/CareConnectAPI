@@ -31,9 +31,9 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
-| `category` | `token` | The category of the condition | SHALL| Condition.category |
-| `clinicalstatus` | `token` | The clinical status of the condition | SHALL | 	Condition.clinicalStatus |
-| `date-recorded` | `date` | A date, when the Condition statement was documented |  | Condition.dateRecorded |
+| `category` | `token` | The category of the condition | SHOULD| Condition.category |
+| `clinicalstatus` | `token` | The clinical status of the condition | SHOULD | 	Condition.clinicalStatus |
+| `date-recorded` | `date` | A date, when the Condition statement was documented | MAY  | Condition.dateRecorded |
 | `patient` | `reference` | Who has the condition? | SHALL | Condition.patient<br>(Patient) |
 
 {% include custom/search.status.plus.html para="2.1." content="Condition" options="

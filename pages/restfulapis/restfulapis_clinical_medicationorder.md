@@ -30,9 +30,9 @@ Medication order resource contains prescription information for a patient. Fetch
 
 | Name    | Type   | Description    | Conformance        | Path |
 |---------|--------|----------------|--------------------|------|
-| `date` | `date` | Returns medication request to be administered on a specific date | Y | MedicationOrder.dosageInstruction.timing.event |
-| `patient` | `reference` | The identity of a patient to list orders for | Y | MedicationOrder.patient<br>(Patient) |
-| `status` | `token` | Status of the prescription | Y | MedicationOrder.status |
+| `date` | `date` | Returns medication request to be administered on a specific date | SHOULD | MedicationOrder.dosageInstruction.timing.event |
+| `patient` | `reference` | The identity of a patient to list orders for | SHALL | MedicationOrder.patient<br>(Patient) |
+| `status` | `token` | Status of the prescription | SHOULD | MedicationOrder.status |
 
 <!--
 | `datewritten` | `date` | Return prescriptions written on this date |  | MedicationOrder.dateWritten |

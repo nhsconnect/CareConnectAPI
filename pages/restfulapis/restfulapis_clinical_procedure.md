@@ -30,9 +30,9 @@ Procedure resource contains procedure information for a patient. Fetches a bundl
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
-| `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y | Procedure.performed[x] |
-| `patient` | `reference` | Search by subject - a patient | Y | Procedure.subject <br>(Patient) |
-| `subject` | `reference` | Search by subject |  | Procedure.subject <br>(Patient) |
+| `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | SHALL | Procedure.performed[x] |
+| `patient` | `reference` | Search by subject - a patient | SHALL | Procedure.subject <br>(Patient) |
+| `subject` | `reference` | Search by subject | MAY | Procedure.subject <br>(Patient) |
 
 {% include custom/search.date.html para="2.1." content="Procedure" %}
 

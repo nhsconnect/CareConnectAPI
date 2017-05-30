@@ -29,8 +29,8 @@ Practitioner contains the demographics of the clinician. Fetches a bundle of all
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address |  | Practitioner.address.postalCode |
-| `identifier` | `token` | 	Any identifier for the practitioner (e.g. GMP/GMC code) |  | 	Practitioner.identifier |
+| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Practitioner.address.postalCode |
+| `identifier` | `token` | 	Any identifier for the practitioner (e.g. GMP/GMC code) | SHOULD | 	Practitioner.identifier |
 
 <!--
 | `name` | `string` | A portion of the name of the practitioner | | Practitioner.name |

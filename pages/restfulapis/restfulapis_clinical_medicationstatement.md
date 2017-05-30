@@ -28,9 +28,9 @@ Medication Statement resource contains current medication information for a pati
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
-| `effectivedate` | `date` | Date when patient was taking (or not taking) the medication |  | MedicationStatement.effective[x] |
-| `patient` | `reference` | The identity of a patient to list statements for | Y | MedicationStatement.patient<br>(Patient) |
-| `status` | `token` | Return statements that match the given status | Y | MedicationStatement.status |
+| `effectivedate` | `date` | Date when patient was taking (or not taking) the medication | SHOULD | MedicationStatement.effective[x] |
+| `patient` | `reference` | The identity of a patient to list statements for | SHALL | MedicationStatement.patient<br>(Patient) |
+| `status` | `token` | Return statements that match the given status | SHOULD | MedicationStatement.status |
 
 {% include custom/search.date.plus.html para="2.1." content="MedicationStatement" name="effectivedate" %}
 
