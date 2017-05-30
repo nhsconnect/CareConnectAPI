@@ -42,7 +42,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 | User Story    | Profile     |
 | :--- |--------------: |
-| As a clinician (hospital Services) I want to include the patient's TTO medications in the discharge summary to provide a complete and accurate list of the patient's medication to the GP. | GET MedicationStatement ](restfulapis_clinical_medicationstatement.html) |
+| As a clinician (hospital Services) I want to include the patient's TTO medications in the discharge summary to provide a complete and accurate list of the patient's medication to the GP. | [GET MedicationStatement ](restfulapis_clinical_medicationstatement.html#2-search-parameters) |
 
 
 ## Dispensing / Repeat prescriptions ##
