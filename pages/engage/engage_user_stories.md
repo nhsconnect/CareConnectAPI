@@ -28,7 +28,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 ### FEATURE: Reconcile the patient’s drug chart for discharge ###
 
-<table><th>User Story</th><th>Profile</th>
+<table><tr><th>User Story</th><th>Profile</th></tr>
 <tr><td>As a clinician (hospital services) I want to ‘stop’ medication that is present on the patient’s drug chart because a drug is no longer being taken by the patient or I do not consider it necessary to 'take out'.</td><td>[POST MedicationRequest ](restfulapis_clinical_medicationrequest.html)</td></tr>
 <tr><td>As a clinician (hospital services) I want to add additional drugs that the patient may be taking to their drug chart because the patient declares that they are taking a drug that is not currently listed.</td><td>[POST MedicationRequest ](restfulapis_clinical_medicationrequest.html)</td></tr>
 <tr><td>As a clinician (hospital services) I want to continue medication that may have been put on hold during medicines reconciliation stage 1 on admission because the reasons that the drug were put on hold during the patient's admission are no longer relevant and the patient requires the medication for their ongoing condition.</td><td>[POST MedicationRequest ](restfulapis_clinical_medicationrequest.html)</td></tr>
