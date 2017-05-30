@@ -68,3 +68,5 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 {% The "medication manager" app on Michael's mobile phone is updated with the latest changes to his medications. Michael can view his new medication list, with any medication changes highlighted. %}
 
+<img src="images/engage/MichaelsStoryImage4" style="width:100%;max-width: 100%;"> 
+
