@@ -75,3 +75,4 @@ This example refers to the reconciliation being performed by the doctor. The sto
 | User Story    |   Profile         |
 | :--- |--------------: |
 | As a patient I want to manage my medications from various care settings (and their administration) in one place. so that i can ensure that I don't run out of my meds as well as having a record that can be shown to another care provider if necessary. | GET <br> MedicationStatement |
+| As a patient I want medication changes to be highlighted when viewing my medication summary so I am less likely to miss that dosages have changed on medication I was previously taking.| |
