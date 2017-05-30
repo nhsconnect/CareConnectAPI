@@ -7,7 +7,11 @@ permalink: restfulapis_clinical_medicationflag.html
 summary: Prospective warnings of potential medication issues when providing care to the patient.
 ---
 {% include custom/search.warnbanner.html %}
+
 {% include custom/profile.html content="[Care Connect Medication Flag](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-Flag-1.html)" %}
+
+{% include custom/fhir.resource.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
+
 
 {% include note.html content="The API for Medication Flag is the same as Flag" %}
 

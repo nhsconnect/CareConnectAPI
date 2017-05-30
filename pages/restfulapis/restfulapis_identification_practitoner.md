@@ -8,6 +8,7 @@ summary: A person who is directly or indirectly involved in the provisioning of 
 ---
 
 {% include custom/search.warnbanner.html %}
+
 {% include custom/profile.html content="[Care Connect Practitioner](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Practitioner-1.html)" %}
 
 ## 1. Read ##
@@ -15,6 +16,8 @@ summary: A person who is directly or indirectly involved in the provisioning of 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Practitioner/[id]</div>
 Return a single `Practitioner` for the specified id
+
+{% include custom/fhir.resource.html content="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html#search)" %}
 
 ## 2. Search Parameters ##
 

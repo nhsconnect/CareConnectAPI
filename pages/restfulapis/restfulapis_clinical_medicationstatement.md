@@ -7,7 +7,10 @@ permalink: restfulapis_clinical_medicationstatement.html
 summary: A record of a medication that is being consumed by a patient. A MedicationStatement may indicate that the patient may be taking the medication now, or has taken the medication in the past or will be taking the medication in the future.
 ---
 {% include custom/search.warnbanner.html %}
+
 {% include custom/profile.html content="[Care Connect Medication Statement](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-MedicationStatement-1.html)" %}
+
+{% include custom/fhir.resource.html content="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search)" %}
 
 ## 1. Read ##
 

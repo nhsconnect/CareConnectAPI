@@ -8,9 +8,12 @@ summary: Workflow Flag
 ---
 
 {% include custom/search.warnbanner.html %}
+
 {% include custom/profile.html content="[Care Connect Medication Flag](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-Flag-1.html)" %}
 
-## Read ##
+{% include custom/fhir.resource.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
+
+## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Flag/[id]</div>
@@ -18,7 +21,7 @@ GET /Flag/[id]</div>
 Return a single `Flag` for the specified id
 
 
-## Search Parameters ##
+## 2. Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Flag?[searchParameters]</div>
@@ -36,6 +39,6 @@ Provider systems MAY implement the following search parameters (unless indicated
 | `status` | `token` | Flag status: active, inactive or entered-in-error | Y | Flag.status |
 
 
-{% include custom/search.patient.html content="Flag" %}
+{% include custom/search.patient.html para="2.1." content="Flag" %}
 
-{% include custom/search.status.html content="Flag" options="active | inactive | entered-in-error" selected="active" %}
+{% include custom/search.status.html para="2.2." content="Flag" options="active | inactive | entered-in-error" selected="active" %}

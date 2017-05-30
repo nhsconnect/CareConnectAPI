@@ -1,7 +1,7 @@
 entries:
 - title: Care Connect
   product: Care Connect
-  version: 0.2.0-alpha.0
+  version: 0.3.0-alpha.0
   levels: one
   folders:
 
@@ -141,6 +141,12 @@ entries:
     folderitems:
     - title: Overview | Coming soon
       url: /support_coming_soon.html
+      output: web
+    - title: Medication
+      url: /design_medication.html
+      output: web
+    - title: Vital Signs
+      url: /design_vital_signs.html
       output: web
   - title: Test
     output: web

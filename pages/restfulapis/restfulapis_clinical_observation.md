@@ -8,7 +8,9 @@ summary: Measurements and simple assertions made about a patient, device or othe
 ---
 
 {% include custom/search.warnbanner.html %}
+
 {% include custom/profile.html content="[Care Connect Observation](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Observation-1.html)" %}
+{% include custom/fhir.resource.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
 
 ## 1. Read ##
 

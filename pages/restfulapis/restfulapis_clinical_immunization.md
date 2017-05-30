@@ -7,7 +7,10 @@ permalink: restfulapis_clinical_immunization.html
 summary: Describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party and may include vaccine reaction information and what vaccination protocol was followed.
 ---
 {% include custom/search.warnbanner.html %}
+
 {% include custom/profile.html content="[Care Connect Immunization](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Immunization-1.html)" %}
+
+{% include custom/fhir.resource.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
 
 ## 1. Read ##
 

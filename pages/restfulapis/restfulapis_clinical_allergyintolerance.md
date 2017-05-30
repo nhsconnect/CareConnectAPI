@@ -7,7 +7,10 @@ permalink: restfulapis_clinical_allergyintolerance.html
 summary: Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.
 ---
 {% include custom/search.warnbanner.html %}
+
 {% include custom/profile.html content="[Care Connect Allergy Intolerence](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-AllergyIntolerance-1.html)" %}
+
+{% include custom/fhir.resource.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
 
 ## 1. Read ##
 

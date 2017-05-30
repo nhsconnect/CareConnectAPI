@@ -7,7 +7,10 @@ permalink: restfulapis_workflow_encounter.html
 summary: An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
 ---
 {% include custom/search.warnbanner.html %}
+
 {% include custom/profile.html content="[Care Connect Encounter](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Encounter-1.html)" %}
+
+{% include custom/fhir.resource.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
 
 ## 1. Read ##
 
