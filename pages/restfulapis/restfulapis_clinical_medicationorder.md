@@ -47,4 +47,93 @@ Medication order resource contains prescription information for a patient. Fetch
 
 {% include custom/search.status.html para="2.3." content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
 
-### 3. Example ###
+## 3. Example ##
+
+### 3.1 Request Query ###
+
+Return all MedciationOrder resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+
+#### 3.1.1. cURL ####
+
+{% include custom/embedcurl.html title="Search MedicationOrder" command="curl -X GET  'http://[baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+
+### 3.2 Response Headers ###
+
+| Status Code |
+|----------------|
+|200 |
+
+| Header | Value |
+|-----------------|---------|
+| Content-Type  | application/xml+fhir;charset=UTF-8 |
+
+### 3.3 Response Body ###
+
+```xml
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="8ffea902-0e00-465d-8762-d025d489a627"/>
+    <meta>
+        <lastUpdated value="2017-05-30T09:53:09.312+01:00"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="1"/>
+    <link>
+        <relation value="self"/>
+        <url value="http://127.0.0.1:8181/Dstu2/MedicationOrder?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+    </link>
+    <entry>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/MedicationOrder/14952"/>
+        <resource>
+            <MedicationOrder xmlns="http://hl7.org/fhir">
+                <id value="14952"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-05-30T09:50:23.429+01:00"/>
+                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-MedicationOrder-1"/>
+                </meta>
+                <dateWritten value="2017-05-25T00:00:00+01:00"/>
+                <status value="active"/>
+                <patient>
+                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+                    <display value="Bernie Kanfeld"/>
+                </patient>
+                <prescriber>
+                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <display value="Dr AA Bhatia"/>
+                </prescriber>
+                <note value="Please explain to Bernie how to use injector."/>
+                <medicationCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="10097211000001102"/>
+                        <display value="Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices"/>
+                    </coding>
+                </medicationCodeableConcept>
+                <dosageInstruction>
+                    <additionalInstructions>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="1521000175104"/>
+                            <display value="After dinner"/>
+                        </coding>
+                    </additionalInstructions>
+                    <timing>
+                        <code>
+                            <coding>
+                                <system value="http://hl7.org/fhir/v3/GTSAbbreviation"/>
+                                <code value="TID"/>
+                            </coding>
+                        </code>
+                    </timing>
+                </dosageInstruction>
+                <dispenseRequest>
+                    <numberOfRepeatsAllowed value="3"/>
+                </dispenseRequest>
+            </MedicationOrder>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+</Bundle>
+```
