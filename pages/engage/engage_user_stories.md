@@ -26,7 +26,7 @@ summary: "User stories to search for a Care Connect FHIR&reg; Profile."
 This example refers to the reconciliation being performed by the doctor. The stories reflect this scenario and don’t explore the other cases where the reconciliation is performed by a technician or a pharmacist. This could be significant given that reconciliation by a technician when not validated by a pharmacist would include additional workflow for review." %}
 
 
-### EPIC: Reconcile the patient’s drug chart for discharge ###
+### FEATURE: Reconcile the patient’s drug chart for discharge ###
 
 | User Story    | Profile     |
 | :--- |--------------: |
@@ -37,7 +37,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 | As hospital services I want to send the complete list of patient medication to the patient's GP so that the GP can compare the information with their own records and amend accordingly. | POST <br> MedicationStatement |
 
 
-### EPIC: Create a discharge summary ###
+### FEATURE: Create a discharge summary ###
 
 
 | User Story    | Profile     |
@@ -54,7 +54,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 <img src="images/use_cases/michaels_story-epic_2b.jpg" style="width:49%;display:inline;"> 
 
 
-### EPIC: Dispensing of TTO medication ###
+### FEATURE: Dispensing of TTO medication ###
 
 | User Story    |   Profile         |
 | :--- |--------------: |
@@ -63,4 +63,8 @@ This example refers to the reconciliation being performed by the doctor. The sto
 | As a pharmacist (hospital services) I want to dispense at least a two weeks supply of medication (or locally agreed amount) to the patient based on their final list of medication at discharge to provide the patient with the correct medication as prescribed until their GP has had enough time to reconcile the patient's TTO meds with their own record and the patient has had sufficient chance to arrange a follow-up appointment if necessary. | POST <br> MedicationDispense |
 | As a pharmacist (hospital services) I want to counsel the patient to help them understand what, why, when and how to take their medications. | POST <br> Encounter |
 | As a pharmacist (hospital services) I want to prepare a "patient friendly" medication schedule to help the patient understand what, why and how to use their medication. | GET <br> MedicationStatement |
+
+## Patient Facing Services ##
+
+{% The "medication manager" app on Michael's mobile phone is updated with the latest changes to his medications. Michael can view his new medication list, with any medication changes highlighted. %}
 
