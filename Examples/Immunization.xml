@@ -1,5 +1,5 @@
 <Immunization xmlns="http://hl7.org/fhir">
-    <id value="32502"/>
+
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2017-05-25T07:38:43.382-04:00"/>

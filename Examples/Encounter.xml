@@ -1,5 +1,4 @@
 <Encounter xmlns="http://hl7.org/fhir">
-    <id value="32445"/>
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2017-05-24T06:36:23.453-04:00"/>
