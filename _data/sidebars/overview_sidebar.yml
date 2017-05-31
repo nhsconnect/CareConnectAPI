@@ -74,9 +74,6 @@ entries:
           - title: Medication
             url: /restfulapis_clinical_medication.html
             output: web
-          - title: Medication Flag
-            url: /restfulapis_clinical_medicationflag.html
-            output: web
           - title: Medication Order
             url: /restfulapis_clinical_medicationorder.html
             output: web
