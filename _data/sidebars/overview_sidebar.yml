@@ -139,12 +139,16 @@ entries:
     - title: Overview | Coming soon
       url: /support_coming_soon.html
       output: web
+    - title: Patient Search
+      url: /design_patient_search.html
+      output: web
+    - title: Patient Care Coordination (Data)
+      url: /design_clinical_data_access.html
+      output: web
     - title: Medication
       url: /design_medication.html
       output: web
-    - title: Vital Signs
-      url: /design_vital_signs.html
-      output: web
+
   - title: Test
     output: web
     folderitems:
