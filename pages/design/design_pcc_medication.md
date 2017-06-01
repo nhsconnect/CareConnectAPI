@@ -1,5 +1,5 @@
 ---
-title: Patient Care Coordination | Medication
+title: PCC | Medication
 keywords: development
 tags: [design,development]
 sidebar: overview_sidebar

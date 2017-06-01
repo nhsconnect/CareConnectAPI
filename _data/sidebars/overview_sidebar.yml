@@ -139,7 +139,7 @@ entries:
       url: /design_patient_search.html
       output: web
       subfolders:
-      - title: Patient Care Coordination (DAF)
+      - title: Patient Care Coordination (PCC)
         output: web
         subfolderitems:
         - title: Clinical

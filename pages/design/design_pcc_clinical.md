@@ -1,5 +1,5 @@
 ---
-title: Patient Care Coordination | Clinical
+title: PCC | Clinical
 keywords: development
 tags: [design,development]
 sidebar: overview_sidebar
