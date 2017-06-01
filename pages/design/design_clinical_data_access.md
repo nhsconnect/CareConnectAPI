@@ -13,7 +13,7 @@ summary: "Guidance using FHIR Observation with Vital Signs"
 
 {% include custom/ihelink.html content="[IHE Patient Care Coordination (PCC) - A Data Access Framework using IHE Profiles](http://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_White_Paper_DAF_Rev1.0_2014-03-28.pdf)" %}
 
-### 1. Overview ###
+## 1. Overview ##
 
 {% include custom/usecase.html content="A Primary Care Doctor (GP) at Jorvik Health Centre (JHC) recently ordered
 an HbA1c test for a new patient with established Diabetes Type 1 diagnosis. The patient had

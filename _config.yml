@@ -27,6 +27,8 @@ github_editme_path: /edit/develop/
 #twitter_username: twitter_username
 #twitter_site_hashtags: twitter_site_hashtags
 
+fhir_profile_baseurl: http://www.interopen.org/candidate-profiles/care-connect/
+
 host: 127.0.0.1
 # the preview server used. Leave as is.
 

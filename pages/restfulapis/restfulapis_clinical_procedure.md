@@ -8,7 +8,7 @@ summary: An action that is or was performed on a patient. This can be a physical
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="[Care Connect Procedure](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Procedure-1.html)" %}
+{% include custom/profile.html content="Procedure" page="CareConnect-Procedure-1.html" %}
 
 {% include custom/fhir.resource.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
 

@@ -8,7 +8,7 @@ summary: A record of a medication that is being consumed by a patient. A Medicat
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="[Care Connect Medication Statement](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-MedicationStatement-1.html)" %}
+{% include custom/profile.html content="Medication Statement" page="CareConnect-MedicationStatement-1.html" %}
 
 {% include custom/fhir.resource.html content="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search)" %}
 

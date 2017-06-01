@@ -9,7 +9,7 @@ summary: Demographics and other administrative information about an individual o
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="[Care Connect Patient](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Patient-1.html)" %}
+{% include custom/profile.html content="Patient" page="CareConnect-Patient-1.html" %}
 
 {% include custom/fhir.resource.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 

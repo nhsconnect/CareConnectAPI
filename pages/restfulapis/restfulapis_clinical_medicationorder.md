@@ -8,7 +8,7 @@ summary: An order for both supply of the medication and the instructions for adm
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content=" [Care Connect Medication Order](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-MedicationOrder-1.html)" %}
+{% include custom/profile.html content="Medication Order" page="CareConnect-MedicationOrder-1.html" %}
 
 {% include custom/fhir.resource.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 

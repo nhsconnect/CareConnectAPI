@@ -9,13 +9,9 @@ summary: "Guidance on FHIR Medication resources and DM+D"
 
 {% include custom/search.warnbanner.html %}
 
-### 0. Reference ###
+{% include custom/apilink.html content="[Medication](restfulapis_clinical_medication.html) [MedicationOrder](restfulapis_clinical_medicationorder.html)   [MedicationStatement](restfulapis_clinical_medicationstatement.html)" %}
 
-{% include custom/explorelink.html content="[MedicationOrder](restfulapis_clinical_medicationorder.html)" %}
-
-{% include custom/explorelink.html content="[MedicationStatement](restfulapis_clinical_medicationstatement.html)" %}
-
-### 1. Overview ###
+## 1. Overview ##
 
 The search parameters are based around a logical model which is shown below:
 

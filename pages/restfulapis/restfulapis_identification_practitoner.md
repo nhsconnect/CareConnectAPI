@@ -9,7 +9,7 @@ summary: A person who is directly or indirectly involved in the provisioning of 
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="[Care Connect Practitioner](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Practitioner-1.html)" %}
+{% include custom/profile.html content="Practitioner" page="CareConnect-Practitioner-1.html)" %}
 
 ## 1. Read ##
 
