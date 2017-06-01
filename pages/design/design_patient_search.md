@@ -1,5 +1,5 @@
 ---
-title: Design | Patient Search
+title: Design | Patient Search (PDQ)
 keywords: development
 tags: [design,development]
 sidebar: overview_sidebar
@@ -38,11 +38,35 @@ max-width="200px" file="design/PDQ Actor Diagram.jpg" alt="Patient Search Actor 
 caption="Patient Search Actor Diagram" %}
 
 {% include image.html
-max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow PDQm" caption="Basic Process Flow PDQm" %}
+max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow PDQ FHIR" caption="Basic Process Flow PDQ FHIR" %}
 
 ## 3. National (NHS) Patient Search ##
 
 {% include image.html
-max-width="200px" file="design/National Basic Process Flow PDQm.jpg" alt="NHS Process Flow PDQm" caption="NHS Basic Process Flow PDQm" %}
+max-width="200px" file="design/National PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
+caption="National NHS Patient Search Actor Diagram" %}
 
-## 4. Federated Patient Search ##
+{% include image.html
+max-width="200px" file="design/National Basic Process Flow PDQm.jpg" alt="National NHS Process Flow PDQ FHIR" caption="National NHS Process Flow PDQ FHIR" %}
+
+## 4. Patient Search Gateway ##
+
+{% include image.html
+max-width="200px" file="design/Gateway PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
+caption=" Implementing PDQ FHIR as a gateway" %}
+
+When the Patient Demographics Supplier is grouped with actors in other IHE profiles that
+perform patient information reconciliation activities (e.g., the ADT Actor in the IHE Radiology
+Scheduled Workflow.b Profile), the Patient Demographics Supplier may use the updated
+information to respond to PDQm Queries. In addition the Patient Demographics Query for
+Mobile Profile may play an integral workflow role in conjunction with other IHE profiles.
+Those systems that manage patient demographics could implement the Patient Demographics
+Supplier in all three profiles: PDQ, PDQv3, and PDQm. In this way the Patient Demographics
+Consumer can choose the technology stack that best fits. ITI TF-2x: Appendix M.4 provides
+additional details about Patient Demographics Query Profiles and their relationship with one
+another.
+The Patient Demographics Supplier may act as a proxy to an existing PDQ or PDQv3
+environment as shown in Figures 38.6-1 and 38.6-2.
+
+{% include image.html
+max-width="200px" file="design/Gateway Process Flow PDQm.jpg" alt="Gateway Process Flow PDQ FHIR" caption="Sample PDQ FHIR gateway process flow" %}
