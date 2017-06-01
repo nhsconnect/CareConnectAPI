@@ -2,7 +2,7 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2017-05-23T11:08:30.692-04:00"/>
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Organization-1"/>
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Organization-1"/>
     </meta>
     <identifier>
         <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
@@ -10,7 +10,7 @@
     </identifier>
     <type>
         <coding>
-            <system value="https://fhir.nhs.uk/ValueSet/organisation-type-1"/>
+            <system value="https://fhir.hl7.org.uk/ValueSet/organisation-type-1"/>
             <code value="prov"/>
             <display value="Healthcare Provider"/>
         </coding>

@@ -3,7 +3,7 @@
                 <meta>
                     <versionId value="1"/>
                     <lastUpdated value="2017-05-24T07:51:33.166-04:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Procedure-1"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Procedure-1"/>
                 </meta>
                 <subject>
                     <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>

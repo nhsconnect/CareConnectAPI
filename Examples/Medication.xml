@@ -1,6 +1,6 @@
 <Medication xmlns="http://hl7.org/fhir">
    <meta>
-      <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Medication-1"/>
+      <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Medication-1"/>
    </meta>
    <code>
       <coding>

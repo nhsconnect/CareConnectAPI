@@ -2,7 +2,7 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2017-05-24T06:36:23.453-04:00"/>
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Encounter-1"/>
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Encounter-1"/>
     </meta>
     <status value="finished"/>
     <class value="outpatient"/>
@@ -23,8 +23,8 @@
         </individual>
     </participant>
     <period>
-        <start value="2017-05-24T11:34:00"/>
-        <end value="2017-05-24T11:49:00"/>
+        <start value="2017-05-24T11:34:00.453-04:00"/>
+        <end value="2017-05-24T11:49:00.453-04:00"/>
     </period>
     <reason>
         <coding>
