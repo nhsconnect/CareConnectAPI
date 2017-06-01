@@ -8,7 +8,7 @@ summary: An interaction between a patient and healthcare provider(s) for the pur
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Encounter" page="CareConnect-Encounter-1.html" %}
+{% include custom/profile.html content="Encounter" page="CareConnect-Encounter-1" %}
 
 {% include custom/fhir.resource.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
 

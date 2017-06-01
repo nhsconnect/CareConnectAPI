@@ -8,7 +8,7 @@ summary: Risk of harmful or undesirable, physiological response which is unique 
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Allergy Intolerance" page="CareConnect-AllergyIntolerance-1.html" %}
+{% include custom/profile.html content="Allergy Intolerance" page="CareConnect-AllergyIntolerance-1" %}
 
 {% include custom/fhir.resource.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
 
