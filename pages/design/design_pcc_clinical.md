@@ -1,9 +1,9 @@
 ---
-title: Design | Patient Care Coordination
+title: Patient Care Coordination | Clinical
 keywords: development
 tags: [design,development]
 sidebar: overview_sidebar
-permalink: design_clinical_data_access.html
+permalink: design_pcc_clinical.html
 summary: "Guidance using FHIR Observation with Vital Signs"
 ---
 

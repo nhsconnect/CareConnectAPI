@@ -42,4 +42,7 @@ max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process F
 
 ## 3. National (NHS) Patient Search ##
 
+{% include image.html
+max-width="200px" file="design/National Basic Process Flow PDQm.jpg" alt="NHS Process Flow PDQm" caption="NHS Basic Process Flow PDQm" %}
+
 ## 4. Federated Patient Search ##

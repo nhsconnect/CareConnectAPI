@@ -1,9 +1,9 @@
 ---
-title: Desgin | Medication
+title: Patient Care Coordination | Medication
 keywords: development
 tags: [design,development]
 sidebar: overview_sidebar
-permalink: design_medication.html
+permalink: design_pcc_medication.html
 summary: "Guidance on FHIR Medication resources and DM+D"
 ---
 

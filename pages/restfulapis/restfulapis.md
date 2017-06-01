@@ -33,3 +33,9 @@ summary: Overview
 | Patient Management |
 |--------------------|
 | [Encounter](restfulapis_workflow_encounter.html)          |
+
+## Conformance ##
+
+| Terminology | Operations Control |
+|-------------|--------------------|
+| ValueSet    | [Conformance](restfulapis_conformance_conformance.html)          |
