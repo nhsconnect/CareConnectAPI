@@ -19,7 +19,7 @@ summary: "User stories to search for a Care Connect FHIR&reg; Profile."
 {% include callout.html content="<b>Scenario:</b><br>'Michael is to be discharged from hospital, with a care plan, and Dr. Hospital prepares his discharge summary. Dr. Hospital reconciles and reviews Michael’s discharge medications and produces a reconciled list of discharge medications. This includes hospital managed medication, new medications commenced during the hospital admission, Michael’s own over-the-counter medication, ongoing medication from the GP or other sectors.' "%}
 
 
-<img src="images/use_cases/michaels_story-epic_1.jpg" style="width:50%;max-width: 50%;"> 
+<p style="text-align:center;"><img src="images/use_cases/michaels_story-epic_1.jpg" style="width:50%;max-width: 50%;"></p>
 
 
 {% include callout.html content="<b>Further Conversations:</b><br>
