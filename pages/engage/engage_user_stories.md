@@ -76,3 +76,14 @@ This example refers to the reconciliation being performed by the doctor. The sto
 <tr><td>As a patient I want to manage my medications from various care settings (and their administration) in one place. so that i can ensure that I don't run out of my meds as well as having a record that can be shown to another care provider if necessary.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
 <tr><td>As a patient I want medication changes to be highlighted when viewing my medication summary so I am less likely to miss that dosages have changed on medication I was previously taking.</td><td></td></tr>
 </table>
+
+{% include callout.html content="Michael's GP receives a discharge summary from the hospital and the GP system uses this to update Michael's GP medication and problem list." %}
+
+<img src="images/engage/MichaelsStory5.png" style="width:100%;max-width: 100%;">
+
+### FEATURE: Discharge Summary ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td></td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
+<tr><td>As a patient I want medication changes to be highlighted when viewing my medication summary so I am less likely to miss that dosages have changed on medication I was previously taking.</td><td></td></tr>
+</table>
