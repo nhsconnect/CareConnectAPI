@@ -66,7 +66,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 {% include callout.html content="The \"medication manager\" app on Michael's mobile phone is updated with the latest changes to his medications. Michael can view his new medication list, with any medication changes highlighted." %}
 
-<p style="text-align:center;"><img src="images/engage/MichaelsStoryPicture4.jpg" style="width:50%;max-width: 50%;></p>
+<p style="text-align:center;"><img src="images/engage/MichaelsStoryPicture4.jpg" style="width:50%;max-width: 50%;"></p>
 
 ### FEATURE: Medication list - Patient Facing (View) ###
 
@@ -79,7 +79,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 {% include callout.html content="Michael's GP receives a discharge summary from the hospital and the GP system uses this to update Michael's GP medication and problem list." %}
 
-<p style="text-align:center;"><img src="images/engage/MichaelsStory5.png" style="width:50%;max-width: 50%;></p>
+<p style="text-align:center;"><img src="images/engage/MichaelsStory5.png" style="width:50%;max-width: 50%;"></p>
 
 ### FEATURE: Discharge Summary ###
 
@@ -93,7 +93,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 {% include callout.html content="Michael's \"medication manager\" app provides prompts when each medication is due. Michael can record his adherence at the end of each day by responding to questions from his \"medication manager\" app, as well as record any questions he has to discuss with his care team." %}
 
-<p style="text-align:center;"><img src="images/engage/MichaelsStory6.png" style="width:50%;max-width: 50%;></p>
+<p style="text-align:center;"><img src="images/engage/MichaelsStory6.png" style="width:50%;max-width: 50%;"></p>
 
 ### FEATURE: Medication Reminder ###
 
