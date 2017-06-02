@@ -35,9 +35,9 @@ Organization contains the demographics for the organisation. Fetches a bundle of
 | `name` | `string` | A portion of the name of the organisation | | Organization.name |
 -->
 
-{% include custom/search.string.html para="2.1." resource="Organization" content="address-postcode"  example="DE22%203NE" text1="Post Code" text2="DE22 3NE" %}
+{% include custom/search.nopat.string.html para="2.1." resource="Organization" content="address-postcode"  example="DE22%203NE" text1="Post Code" text2="DE22 3NE" %}
 
-{% include custom/search.identifier.html para="2.2." resource="Organization" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-organization-code|RTG" text1="NHS Organisation" text2="RTG (Derby Teaching Hospitals NHS Trust)" %}
+{% include custom/search.nopat.identifier.html para="2.2." resource="Organization" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-organization-code|RTG" text1="NHS Organisation" text2="RTG (Derby Teaching Hospitals NHS Trust)" %}
 
 ## 3. Example ##
 

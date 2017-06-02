@@ -9,7 +9,7 @@ summary: "How to use FHIR Patient resources to perform Patient Searches"
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/apilink.html content="[Patient](restfulapis_identification_patient.html) [Practitioner](restfulapis_identification_practitoner.html)" %}
+{% include custom/apilink.html content="[Patient](restfulapis_identification_patient.html)"  %}
 
 {% include custom/ihelink.html content="[IHE Patient Demographic Query Mobile (IHE PDQM)](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)" %}
 
@@ -29,7 +29,15 @@ Most NHS trusts will typically have one central system  called the Patient Admin
 max-width="200px" file="IHE/Iti_pam_ip.jpg" alt="Patient Identity Feeds"
 caption="Patient Identity Feeds" %}
 
-Care Connect API uses a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) [resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI) to provide access to the central Patient repository which is particularly suited to mobile applications and organisations not wanting multiple copies of potentially sensitive patient data.  
+Care Connect API uses a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) [resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI) to provide access to the central Patient repository which is particularly suited:
+* A health portal securely exposing demographics data to browser based plugins
+* Medical devices which need to access patient demographic information
+* Mobile devices used by physicians (example bedside eCharts) which need to establish
+patient context by scanning a bracelet
+* Web based EPR/EHR applications which wish to provide dynamic updates of patient
+demographic information such as a non-postback search, additional demographic detail,
+etc.
+* Any low resource application which exposes patient demographic search functionality
 
 ## 2. Basic Patient Search ##
 
@@ -39,6 +47,12 @@ caption="Patient Search Actor Diagram" %}
 
 {% include image.html
 max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow PDQ FHIR" caption="Basic Process Flow PDQ FHIR" %}
+
+The patient search can use any of the search parameters defined in the [Patient](restfulapis_identification_patient.html) API. For example if the patient informs the nurse of their date of birth, first name (19th Mar 1998 Bernie Kanfeld) and surname the query would be.
+
+```
+GET /Patient?birthdate=1998-03-19
+```
 
 ## 3. National (NHS) Patient Search ##
 

@@ -31,9 +31,9 @@ Location contains the details for the location. Fetches a bundle of all `Locatio
 | `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Location.address.postalCode |
 | `identifier` | `token` | 	Any identifier for the location (e.g. SDS/ODS code) |  MAY | Location.identifier |
 
-{% include custom/search.string.html para="2.1." resource="Location" content="address-postcode"  example="NG10%201RY" text1="Post Code" text2="NG10 1RY" %}
+{% include custom/search.nopat.string.html para="2.1." resource="Location" content="address-postcode"  example="NG10%201RY" text1="Post Code" text2="NG10 1RY" %}
 
-{% include custom/search.identifier.html para="2.2." resource="Location" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/????|RTG08" text1="NHS Trust Site" text2="RTG08 (Long Eaton Clinic)" %}
+{% include custom/search.nopat.identifier.html para="2.2." resource="Location" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/????|RTG08" text1="NHS Trust Site" text2="RTG08 (Long Eaton Clinic)" %}
 
 ## 3. Example ##
 
