@@ -129,7 +129,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 {% include callout.html content="That evening Michael thinks that his OTC medication, co-codamol, has caused a rash. He calls 111 who can see his updated medication list with the recent purchase. 111 advises Michael to stop taking the medication and they send a prescription request to a local chemist for an antihistamine. 111 book an appointment for Michael to see his GP the next day to review the possible allergy" %}
 
-<p style="text-align:center;"><img src="images/engage/MichaelsStory8.png" style="width:50%;max-width: 50%;></p>
+<p style="text-align:center;"><img src="images/engage/MichaelsStory8.png" style="width:50%;max-width: 50%;"></p>
 
 ### FEATURE: Patient Record (Search) ###
 
