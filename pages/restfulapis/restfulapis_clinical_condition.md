@@ -69,25 +69,25 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="b924f866-c8c5-4726-8efa-9535d35c3875"/>
+    <id value="e5b8f35c-943a-4773-9f77-c867affb602d"/>
     <meta>
-        <lastUpdated value="2017-05-24T11:01:15.643-04:00"/>
+        <lastUpdated value="2017-06-02T08:30:07.168+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/Condition?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="http://127.0.0.1:8181/Dstu2/Condition?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Condition/32475"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/Condition/24954"/>
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
-                <id value="32475"/>
+                <id value="24954"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-24T11:00:50.173-04:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Condition-1"/>
+                    <lastUpdated value="2017-06-02T08:28:08.713+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Condition-1"/>
                 </meta>
                 <patient>
                     <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
@@ -95,6 +95,7 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
                 <asserter>
                     <reference value="https://sds.proxy.nhs.uk/Practitioner/C5206458"/>
                 </asserter>
+                <dateRecorded value="2017-01-04"/>
                 <code>
                     <coding>
                         <system value="http://snomed.info/sct"/>
@@ -102,6 +103,13 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
                         <display value="Type 2 diabetes mellitus"/>
                     </coding>
                 </code>
+                <category>
+                    <coding>
+                        <system value="https://hl7.org.uk/fhir/CareConnect-ConditionCategory-1"/>
+                        <code value="complaint"/>
+                        <display value="Complaint"/>
+                    </coding>
+                </category>
                 <clinicalStatus value="active"/>
                 <verificationStatus value="confirmed"/>
                 <onsetDateTime value="2003-01-06T17:11:19-05:00"/>

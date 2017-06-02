@@ -71,9 +71,9 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="8ffea902-0e00-465d-8762-d025d489a627"/>
+    <id value="58ef1cb1-bbc4-482c-a469-8a0d338bb02b"/>
     <meta>
-        <lastUpdated value="2017-05-30T09:53:09.312+01:00"/>
+        <lastUpdated value="2017-06-02T09:15:15.163+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
@@ -82,15 +82,24 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
         <url value="http://127.0.0.1:8181/Dstu2/MedicationOrder?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/MedicationOrder/14952"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/MedicationOrder/24961"/>
         <resource>
             <MedicationOrder xmlns="http://hl7.org/fhir">
-                <id value="14952"/>
+                <id value="24961"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-30T09:50:23.429+01:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-MedicationOrder-1"/>
+                    <lastUpdated value="2017-06-02T09:14:56.728+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationOrder-1"/>
                 </meta>
+                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationSupplyType-1">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="394823007"/>
+                            <display value="NHS Prescription"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
                 <dateWritten value="2017-05-25T00:00:00+01:00"/>
                 <status value="active"/>
                 <patient>
@@ -110,6 +119,7 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
                     </coding>
                 </medicationCodeableConcept>
                 <dosageInstruction>
+                    <text value="Three times a day"/>
                     <additionalInstructions>
                         <coding>
                             <system value="http://snomed.info/sct"/>
@@ -127,7 +137,7 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
                     </timing>
                 </dosageInstruction>
                 <dispenseRequest>
-                    <numberOfRepeatsAllowed value="3"/>
+                    <numberOfRepeatsAllowed value="5"/>
                 </dispenseRequest>
             </MedicationOrder>
         </resource>

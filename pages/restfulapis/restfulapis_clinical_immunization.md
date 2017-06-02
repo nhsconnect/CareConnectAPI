@@ -69,27 +69,27 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="db7b6433-5e28-4c66-a9dc-d2b8ed048496"/>
+    <id value="6aed30c2-dcbe-460a-8738-a5f60a4248ff"/>
     <meta>
-        <lastUpdated value="2017-05-25T07:43:23.057-04:00"/>
+        <lastUpdated value="2017-06-02T08:51:27.827+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/Immunization?_format=xml&amp;patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="http://127.0.0.1:8181/Dstu2/Immunization?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Immunization/32502"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/Immunization/24956"/>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
-                <id value="32502"/>
+                <id value="24956"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-25T07:38:43.382-04:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Immunization-1"/>
+                    <lastUpdated value="2017-06-02T08:48:28.340+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Immunization-1"/>
                 </meta>
-                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-DateRecorded-1">
+                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-DateRecorded-1">
                     <valueDateTime value="2016-03-01T09:30:00+00:00"/>
                 </extension>
                 <status value="in-progress"/>
@@ -115,6 +115,20 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
                 <expirationDate value="2020-01-01"/>
                 <vaccinationProtocol>
                     <doseSequence value="1"/>
+                    <targetDisease>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="14189004"/>
+                        </coding>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="36653000"/>
+                        </coding>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="36989005"/>
+                        </coding>
+                    </targetDisease>
                     <doseStatus>
                         <coding>
                             <system value="http://hl7.org/fhir/vaccination-protocol-dose-status"/>

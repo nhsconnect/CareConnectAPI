@@ -75,25 +75,25 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="ab49bf8e-a805-4b4c-871e-ff7cec75bcb5"/>
+    <id value="2ec19aad-e619-42c7-a32e-3f0d39c5e7ac"/>
     <meta>
-        <lastUpdated value="2017-05-18T12:06:52.948+01:00"/>
+        <lastUpdated value="2017-06-02T09:22:07.888+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8080/careconnect-dstu2-hapi-ui/Dstu2/Observation?patient=1"/>
+        <url value="http://127.0.0.1:8181/Dstu2/Observation?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8080/careconnect-dstu2-hapi-ui/Dstu2/Observation/4953"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/Observation/24964"/>
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
-                <id value="4953"/>
+                <id value="24964"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-18T12:06:03.140+01:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Observation-1"/>
+                    <lastUpdated value="2017-06-02T09:20:13.289+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Observation-1"/>
                 </meta>
                 <identifier>
                     <system value="http://fhir.jorvik.nhs.uk/EPR/Observation"/>
@@ -112,7 +112,7 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
                 </subject>
                 <effectiveDateTime value="2012-09-17"/>
                 <performer>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438" />
+                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
                 </performer>
             </Observation>
         </resource>

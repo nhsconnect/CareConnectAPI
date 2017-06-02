@@ -70,25 +70,25 @@ Return all Practitioner resources with a GP Code of G8133438, the format of the 
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="da90d3ec-29ba-42a2-8af4-3b0f3e2b2d3d"/>
+    <id value="4b552491-8e39-43da-8967-a2210536cd81"/>
     <meta>
-        <lastUpdated value="2017-05-23T10:54:09.885-04:00"/>
+        <lastUpdated value="2017-06-02T09:35:18.459+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/Practitioner?identifier=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fsds-user-id%7CG8133438"/>
+        <url value="http://127.0.0.1:8181/Dstu2/Practitioner?identifier=G8133438"/>
     </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Practitioner/32368"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/Practitioner/24967"/>
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
-                <id value="32368"/>
+                <id value="24967"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-23T10:52:43.717-04:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Practitioner-1"/>
+                    <lastUpdated value="2017-06-02T09:33:47.072+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Practitioner-1"/>
                 </meta>
                 <identifier>
                     <system value="https://fhir.nhs.uk/Id/sds-user-id"/>
@@ -120,19 +120,12 @@ Return all Practitioner resources with a GP Code of G8133438, the format of the 
                     </managingOrganization>
                     <role>
                         <coding>
-                            <system value="https://fhir.nhs.uk/ValueSet/sds-job-role-name-1"/>
+                            <system value="https://fhir.hl7.org.uk/ValueSet/sds-job-role-name-1"/>
                             <code value="R0260"/>
                             <display value="General Medical Practitioner"/>
                         </coding>
                     </role>
                 </practitionerRole>
-                <communication>
-                    <coding>
-                        <system value="https://fhir.nhs.uk/ValueSet/human-language-1"/>
-                        <code value="en"/>
-                        <display value="English"/>
-                    </coding>
-                </communication>
             </Practitioner>
         </resource>
         <search>

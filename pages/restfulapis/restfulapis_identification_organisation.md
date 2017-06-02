@@ -63,25 +63,25 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="63d0c5d3-a8ed-4da9-a711-26d686952cc8"/>
+    <id value="19d78778-5e6e-4866-9bd3-6376f863f307"/>
     <meta>
-        <lastUpdated value="2017-05-23T11:09:28.625-04:00"/>
+        <lastUpdated value="2017-06-02T09:29:08.195+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/Organization?identifier=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fods-organization-code%7CC81010"/>
+        <url value="http://127.0.0.1:8181/Dstu2/Organization?identifier=C81010"/>
     </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Organization/32369"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/Organization/24965"/>
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
-                <id value="32369"/>
+                <id value="24965"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-23T11:08:30.692-04:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Organization-1"/>
+                    <lastUpdated value="2017-06-02T09:27:43.366+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Organization-1"/>
                 </meta>
                 <identifier>
                     <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
@@ -89,7 +89,7 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
                 </identifier>
                 <type>
                     <coding>
-                        <system value="https://fhir.nhs.uk/ValueSet/organisation-type-1"/>
+                        <system value="https://fhir.hl7.org.uk/ValueSet/organisation-type-1"/>
                         <code value="prov"/>
                         <display value="Healthcare Provider"/>
                     </coding>

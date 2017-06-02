@@ -63,25 +63,25 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="d29a6ee3-f1dc-490f-9fc0-e9e6643f84b5"/>
+    <id value="77a4ee23-696f-4d7e-b8d9-9cdd8dc69a4d"/>
     <meta>
-        <lastUpdated value="2017-05-25T09:05:33.538-04:00"/>
+        <lastUpdated value="2017-06-02T08:25:54.191+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/AllergyIntolerance?_format=xml&amp;patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="http://127.0.0.1:8181/Dstu2/AllergyIntolerance?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/AllergyIntolerance/32503"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/AllergyIntolerance/24953"/>
         <resource>
             <AllergyIntolerance xmlns="http://hl7.org/fhir">
-                <id value="32503"/>
+                <id value="24953"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-25T09:01:25.409-04:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-AllergyIntolerance-1"/>
+                    <lastUpdated value="2017-06-02T08:25:01.686+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-AllergyIntolerance-1"/>
                 </meta>
                 <identifier>
                     <system value="https://epr.jorvik.nhk.uk/AllergyIntolerance "/>
@@ -115,7 +115,6 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
                         </coding>
                     </manifestation>
                     <onset value="2012-06-12"/>
-                    <severity value="severe"/>
                 </reaction>
             </AllergyIntolerance>
         </resource>

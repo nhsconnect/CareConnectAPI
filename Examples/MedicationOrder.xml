@@ -30,7 +30,7 @@
 		</coding>
 	</medicationCodeableConcept>
 	<dosageInstruction>
-		<text value='dosage for the medication'/>
+		<text value="Three times a day"/>
 		<additionalInstructions>
 			<coding>
 				<system value="http://snomed.info/sct"/>

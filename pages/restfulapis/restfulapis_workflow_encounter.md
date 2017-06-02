@@ -59,21 +59,25 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="9915a527-b22f-447d-ad02-17eb1a5203cd"/>
+    <id value="b2866816-e8f1-480b-a10c-1655ee68497f"/>
     <meta>
-        <lastUpdated value="2017-05-24T06:37:50.061-04:00"/>
+        <lastUpdated value="2017-06-02T08:55:05.472+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
+    <link>
+        <relation value="self"/>
+        <url value="http://127.0.0.1:8181/Dstu2/Encounter?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+    </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Encounter/32445"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/Encounter/24957"/>
         <resource>
             <Encounter xmlns="http://hl7.org/fhir">
-                <id value="32445"/>
+                <id value="24957"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-24T06:36:23.453-04:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Encounter-1"/>
+                    <lastUpdated value="2017-06-02T08:53:47.393+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Encounter-1"/>
                 </meta>
                 <status value="finished"/>
                 <class value="outpatient"/>
@@ -94,8 +98,8 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
                     </individual>
                 </participant>
                 <period>
-                    <start value="2017-05-24T11:34:00"/>
-                    <end value="2017-05-24T11:49:00"/>
+                    <start value="2017-05-24T11:34:00.453-00:00"/>
+                    <end value="2017-05-24T11:49:00.453-00:00"/>
                 </period>
                 <reason>
                     <coding>

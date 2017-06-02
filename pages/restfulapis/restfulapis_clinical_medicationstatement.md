@@ -62,9 +62,9 @@ Return all MedciationStatement resources for Patient with a NHS Number of 987654
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="6d428483-b147-4f0a-8fe8-0071edf0b5e6"/>
+    <id value="6097e823-f4dd-4713-9e48-88a06c68e258"/>
     <meta>
-        <lastUpdated value="2017-05-30T09:57:25.499+01:00"/>
+        <lastUpdated value="2017-06-02T09:18:44.898+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
@@ -73,14 +73,14 @@ Return all MedciationStatement resources for Patient with a NHS Number of 987654
         <url value="http://127.0.0.1:8181/Dstu2/MedicationStatement?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/MedicationStatement/14953"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/MedicationStatement/24963"/>
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
-                <id value="14953"/>
+                <id value="24963"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-30T09:57:11.153+01:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-MedicationStatement-1"/>
+                    <lastUpdated value="2017-06-02T09:18:21.553+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationStatement-1"/>
                 </meta>
                 <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationStatementLastIssueDate-1">
                     <valueDateTime value="2017-03-27T00:00:00+01:00"/>
@@ -117,6 +117,7 @@ Return all MedciationStatement resources for Patient with a NHS Number of 987654
                     </coding>
                 </medicationCodeableConcept>
                 <dosage>
+                    <text value="Three times a day"/>
                     <timing>
                         <code>
                             <coding>

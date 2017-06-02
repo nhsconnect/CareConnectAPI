@@ -59,25 +59,25 @@ Return all Location resources with a Trust Site code of RTG08, the format of the
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="cf053adf-8b96-483c-8864-808b87c5610f"/>
+    <id value="1b7d5b72-727f-4211-bc84-ecaf1ccdb459"/>
     <meta>
-        <lastUpdated value="2017-05-23T11:28:41.165-04:00"/>
+        <lastUpdated value="2017-06-02T09:09:12.219+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/Location?identifier=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fods-site-code%7CRTG08"/>
+        <url value="http://127.0.0.1:8181/Dstu2/Location?identifier=RTG08"/>
     </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Location/32370"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/Location/24959"/>
         <resource>
             <Location xmlns="http://hl7.org/fhir">
-                <id value="32370"/>
+                <id value="24959"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-23T11:27:01.266-04:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Location-1"/>
+                    <lastUpdated value="2017-06-02T09:09:10.339+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Location-1"/>
                 </meta>
                 <identifier>
                     <use value="official"/>

@@ -23,8 +23,8 @@
         </individual>
     </participant>
     <period>
-        <start value="2017-05-24T11:34:00.453-04:00"/>
-        <end value="2017-05-24T11:49:00.453-04:00"/>
+        <start value="2017-05-24T11:34:00.453-00:00"/>
+        <end value="2017-05-24T11:49:00.453-00:00"/>
     </period>
     <reason>
         <coding>

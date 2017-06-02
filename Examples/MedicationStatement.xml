@@ -37,7 +37,7 @@
 		</coding>
 	</medicationCodeableConcept>
 	<dosage>
-		<text value='dosage for the medication'/>
+		<text value='Three times a day'/>
 		<timing>
 			<code>
 				<coding>

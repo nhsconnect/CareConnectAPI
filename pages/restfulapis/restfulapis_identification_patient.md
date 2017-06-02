@@ -88,27 +88,27 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="aa167489-c554-42f6-bfdd-53227ff1faad"/>
+    <id value="78682a2e-2541-4b1b-b06c-f0ab310a1ca4"/>
     <meta>
-        <lastUpdated value="2017-05-26T05:39:27.492-04:00"/>
+        <lastUpdated value="2017-06-02T09:32:09.352+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/Patient?_format=xml&amp;identifier=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number%7C9876543210"/>
+        <url value="http://127.0.0.1:8181/Dstu2/Patient?identifier=9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Patient/32898"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/Patient/24966"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
-                <id value="32898"/>
+                <id value="24966"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-26T05:39:03.280-04:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Patient-1"/>
+                    <lastUpdated value="2017-06-02T09:30:21.875+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
                 </meta>
-                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-EthnicCategory-1">
+                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-EthnicCategory-1">
                     <valueCodeableConcept>
                         <coding>
                             <system value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
@@ -118,7 +118,7 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
                     </valueCodeableConcept>
                 </extension>
                 <identifier>
-                    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
+                    <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
                         <valueCodeableConcept>
                             <coding>
                                 <system value="https://fhir.hl7.org.uk/CareConnect-NHSNumberVerificationStatus-1"/>
@@ -150,6 +150,7 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
                     <coding>
                         <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
                         <code value="S"/>
+                        <display value="Never Married"/>
                     </coding>
                 </maritalStatus>
                 <managingOrganization>

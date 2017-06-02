@@ -15,7 +15,6 @@
   <patient>
     <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
   </patient>
-
   <substance>
     <coding>
       <system value="http://snomed.info/sct"/>
@@ -28,7 +27,6 @@
   <type value="allergy"/>
   <category value="food"/>
   <lastOccurence value="2012-06"/>
-
   <reaction>
     <manifestation>
       <coding>

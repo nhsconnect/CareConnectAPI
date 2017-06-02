@@ -64,29 +64,29 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="b312fad7-8fcb-4a9c-a95e-b709401937c4"/>
+    <id value="194901ab-76e2-419f-a33f-ac0ce205410c"/>
     <meta>
-        <lastUpdated value="2017-05-24T07:51:46.008-04:00"/>
+        <lastUpdated value="2017-06-02T09:38:26.183+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/Procedure?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="http://127.0.0.1:8181/Dstu2/Procedure?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Procedure/32449"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/Procedure/24968"/>
         <resource>
             <Procedure xmlns="http://hl7.org/fhir">
-                <id value="32449"/>
+                <id value="24968"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-24T07:51:33.166-04:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Procedure-1"/>
+                    <lastUpdated value="2017-06-02T09:36:55.159+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Procedure-1"/>
                 </meta>
                 <subject>
                     <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
-                    <display value="Bernie Manfeld"/>
+                    <display value="Bernie Kanfeld"/>
                 </subject>
                 <status value="completed"/>
                 <code>
