@@ -7,7 +7,10 @@ permalink: restfulapis_clinical_medication.html
 summary: This resource is primarily used for the identification and definition of a medication. It covers the ingredients and the packaging for a medication.
 ---
 {% include custom/search.warnbanner.html %}
-{% include custom/profile.html content="[Care Connect Medication](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Medication-1.html)" %}
+
+{% include custom/profile.html content="Medication" page="CareConnect-Medication-1" %}
+
+{% include custom/fhir.resource.html content="[Medication](https://www.hl7.org/fhir/DSTU2/medication.html#search)" %}
 
 ## 1. Read ##
 

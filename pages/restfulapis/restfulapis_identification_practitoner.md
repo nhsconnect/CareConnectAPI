@@ -8,13 +8,16 @@ summary: A person who is directly or indirectly involved in the provisioning of 
 ---
 
 {% include custom/search.warnbanner.html %}
-{% include custom/profile.html content="[Care Connect Practitioner](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Practitioner-1.html)" %}
+
+{% include custom/profile.html content="Practitioner" page="CareConnect-Practitioner-1" %}
 
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Practitioner/[id]</div>
 Return a single `Practitioner` for the specified id
+
+{% include custom/fhir.resource.html content="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html#search)" %}
 
 ## 2. Search Parameters ##
 
@@ -26,8 +29,8 @@ Practitioner contains the demographics of the clinician. Fetches a bundle of all
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address |  | Practitioner.address.postalCode |
-| `identifier` | `token` | 	Any identifier for the practitioner (e.g. GMP/GMC code) |  | 	Practitioner.identifier |
+| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Practitioner.address.postalCode |
+| `identifier` | `token` | 	Any identifier for the practitioner (e.g. GMP/GMC code) | SHOULD | 	Practitioner.identifier |
 
 <!--
 | `name` | `string` | A portion of the name of the practitioner | | Practitioner.name |

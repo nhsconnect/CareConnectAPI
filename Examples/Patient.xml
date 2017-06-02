@@ -1,8 +1,8 @@
 <Patient xmlns="http://hl7.org/fhir">
    <meta>
-      <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Patient-1"/>
+      <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
    </meta>
-   <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-EthnicCategory-1">
+   <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-EthnicCategory-1">
       <valueCodeableConcept>
          <coding>
             <system value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
@@ -12,7 +12,7 @@
       </valueCodeableConcept>
    </extension>
    <identifier>
-      <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
+      <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
          <valueCodeableConcept>
             <coding>
                <system value="https://fhir.hl7.org.uk/CareConnect-NHSNumberVerificationStatus-1"/>
@@ -44,6 +44,7 @@
       <coding>
          <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
          <code value="S"/>
+         <display value='Never Married'/>
       </coding>
    </maritalStatus>
    <managingOrganization>

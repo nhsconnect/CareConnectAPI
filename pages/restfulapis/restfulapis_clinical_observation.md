@@ -8,7 +8,10 @@ summary: Measurements and simple assertions made about a patient, device or othe
 ---
 
 {% include custom/search.warnbanner.html %}
-{% include custom/profile.html content="[Care Connect Observation](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Observation-1.html)" %}
+
+{% include custom/profile.html content="Observation" page="CareConnect-Observation-1" %}
+
+{% include custom/fhir.resource.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
 
 ## 1. Read ##
 
@@ -29,8 +32,8 @@ Observation resource contains observation or event information for a patient. Fe
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
-| `category` | `token` | The classification of the type of observation | SHALL | Observation.category |
-| `code` | `token` | The code of the observation type | SHALL| Observation.code |
+| `category` | `token` | The classification of the type of observation | SHOULD | Observation.category |
+| `code` | `token` | The code of the observation type | SHOULD| Observation.code |
 | `date` | `date` | Obtained date/time.<br>If the obtained element is a period, a date that falls in the period | SHALL | Observation.effective[x] |
 | `patient` | `reference` | The subject that the observation is about (if patient) | SHALL | Observation.subject (Patient) |
 

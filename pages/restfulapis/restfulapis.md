@@ -17,7 +17,9 @@ summary: Overview
 | [Condition](restfulapis_clinical_condition.html) (Problem) | [MedicationOrder ](restfulapis_clinical_medicationorder.html)               |
 | [Procedure](restfulapis_clinical_procedure.html)           | [MedicationStatement ](restfulapis_clinical_medicationstatement.html)           |
 | [Observation](restfulapis_clinical_observation.html) | [Immunization](restfulapis_clinical_immunization.html)                   |
-|   |  [Flag ](restfulapis_clinical_medicationflag.html)(Medication)  |
+
+
+<!--- |   |  [Flag ](restfulapis_clinical_medicationflag.html)(Medication)  | --->
 
 ## Identification ##
 
@@ -31,3 +33,9 @@ summary: Overview
 | Patient Management |
 |--------------------|
 | [Encounter](restfulapis_workflow_encounter.html)          |
+
+## Conformance ##
+
+| Terminology | Operations Control |
+|-------------|--------------------|
+| ValueSet    | [Conformance](restfulapis_conformance_conformance.html)          |

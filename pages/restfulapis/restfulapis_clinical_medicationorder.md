@@ -7,7 +7,10 @@ permalink: restfulapis_clinical_medicationorder.html
 summary: An order for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationOrder" rather than "MedicationPrescription" to generalize the use across inpatient and outpatient settings as well as for care plans, etc.
 ---
 {% include custom/search.warnbanner.html %}
-{% include tip.html content=" [Care Connect Medication Order](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-MedicationOrder-1.html) Resource." %}
+
+{% include custom/profile.html content="Medication Order" page="CareConnect-MedicationOrder-1" %}
+
+{% include custom/fhir.resource.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 
 ## 1. Read ##
 
@@ -27,9 +30,9 @@ Medication order resource contains prescription information for a patient. Fetch
 
 | Name    | Type   | Description    | Conformance        | Path |
 |---------|--------|----------------|--------------------|------|
-| `date` | `date` | Returns medication request to be administered on a specific date | Y | MedicationOrder.dosageInstruction.timing.event |
-| `patient` | `reference` | The identity of a patient to list orders for | Y | MedicationOrder.patient<br>(Patient) |
-| `status` | `token` | Status of the prescription | Y | MedicationOrder.status |
+| `date` | `date` | Returns medication request to be administered on a specific date | SHOULD | MedicationOrder.dosageInstruction.timing.event |
+| `patient` | `reference` | The identity of a patient to list orders for | SHALL | MedicationOrder.patient<br>(Patient) |
+| `status` | `token` | Status of the prescription | SHOULD | MedicationOrder.status |
 
 <!--
 | `datewritten` | `date` | Return prescriptions written on this date |  | MedicationOrder.dateWritten |
@@ -44,25 +47,93 @@ Medication order resource contains prescription information for a patient. Fetch
 
 {% include custom/search.status.html para="2.3." content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
 
-### 3. Example ###
+## 3. Example ##
 
-The search parameters are based around a logical model which is shown below:
+### 3.1 Request Query ###
 
-{% include image.html
-max-width="200px" file="Bristol/Bristol.EntityRelationship.Resource.bmp" alt="Bristol ERD"
-caption="MedicationOrder Logical Model" %}
+Return all MedciationOrder resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-A search on MedicationOrder without the '_Revinclude=*' would return a FHIR [Bundle](https://www.hl7.org/fhir/DSTU2/bundle.html) would return only MedicationOrder resources. This is useful if you already have Patient, Medication and Practitioner data but in most case the calling system or web application won't be. In this case it is useful for all the referenced resources to be returned with the search results.
-This is done using the '_Revinclude=*' parameter and the returned search results now include the referenced parameters. The convention is to list the referenced resources before they are referenced (so they can be processed first).
+#### 3.1.1. cURL ####
 
-{% include image.html
-max-width="200px" file="Bristol/Bristol.searchResults.includeReferenced.bmp" alt="Bristol ERD"
-caption="MedicationOrder Search Results" %}
+{% include custom/embedcurl.html title="Search MedicationOrder" command="curl -X GET  'http://[baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
-Provider systems:
+### 3.2 Response Headers ###
 
-- SHALL return a `200` **OK** HTTP status code on successful execution of the operation.
+| Status Code |
+|----------------|
+|200 |
 
-```json
-TODO
+| Header | Value |
+|-----------------|---------|
+| Content-Type  | application/xml+fhir;charset=UTF-8 |
+
+### 3.3 Response Body ###
+
+```xml
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="8ffea902-0e00-465d-8762-d025d489a627"/>
+    <meta>
+        <lastUpdated value="2017-05-30T09:53:09.312+01:00"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="1"/>
+    <link>
+        <relation value="self"/>
+        <url value="http://127.0.0.1:8181/Dstu2/MedicationOrder?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+    </link>
+    <entry>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/MedicationOrder/14952"/>
+        <resource>
+            <MedicationOrder xmlns="http://hl7.org/fhir">
+                <id value="14952"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-05-30T09:50:23.429+01:00"/>
+                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-MedicationOrder-1"/>
+                </meta>
+                <dateWritten value="2017-05-25T00:00:00+01:00"/>
+                <status value="active"/>
+                <patient>
+                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+                    <display value="Bernie Kanfeld"/>
+                </patient>
+                <prescriber>
+                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <display value="Dr AA Bhatia"/>
+                </prescriber>
+                <note value="Please explain to Bernie how to use injector."/>
+                <medicationCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="10097211000001102"/>
+                        <display value="Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices"/>
+                    </coding>
+                </medicationCodeableConcept>
+                <dosageInstruction>
+                    <additionalInstructions>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="1521000175104"/>
+                            <display value="After dinner"/>
+                        </coding>
+                    </additionalInstructions>
+                    <timing>
+                        <code>
+                            <coding>
+                                <system value="http://hl7.org/fhir/v3/GTSAbbreviation"/>
+                                <code value="TID"/>
+                            </coding>
+                        </code>
+                    </timing>
+                </dosageInstruction>
+                <dispenseRequest>
+                    <numberOfRepeatsAllowed value="3"/>
+                </dispenseRequest>
+            </MedicationOrder>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+</Bundle>
 ```

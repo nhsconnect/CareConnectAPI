@@ -7,7 +7,10 @@ permalink: restfulapis_identification_organisation.html
 summary: A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, etc.
 ---
 {% include custom/search.warnbanner.html %}
-{% include custom/profile.html content="[Care Connect Organization](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Organization-1.html)" %}
+
+{% include custom/profile.html content="Organization" page="CareConnect-Organization-1" %}
+
+{% include custom/fhir.resource.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
 
 ## 1. Read ##
 
@@ -25,8 +28,8 @@ Organization contains the demographics for the organisation. Fetches a bundle of
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address |  | Organization.address.postalCode |
-| `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) |  | Organization.identifier |
+| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Organization.address.postalCode |
+| `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) | MAY | Organization.identifier |
 
 <!--
 | `name` | `string` | A portion of the name of the organisation | | Organization.name |

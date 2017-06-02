@@ -7,7 +7,11 @@ permalink: restfulapis_clinical_procedure.html
 summary: An action that is or was performed on a patient. This can be a physical intervention like an operation, or less invasive like counseling or hypnotherapy.
 ---
 {% include custom/search.warnbanner.html %}
-{% include custom/profile.html content="[Care Connect Procedure](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Procedure-1.html)" %}
+
+{% include custom/profile.html content="Procedure" page="CareConnect-Procedure-1" %}
+
+{% include custom/fhir.resource.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
+
 
 ## 1. Read ##
 
@@ -26,9 +30,9 @@ Procedure resource contains procedure information for a patient. Fetches a bundl
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
-| `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | Y | Procedure.performed[x] |
-| `patient` | `reference` | Search by subject - a patient | Y | Procedure.subject <br>(Patient) |
-| `subject` | `reference` | Search by subject |  | Procedure.subject <br>(Patient) |
+| `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | SHALL | Procedure.performed[x] |
+| `patient` | `reference` | Search by subject - a patient | SHALL | Procedure.subject <br>(Patient) |
+| `subject` | `reference` | Search by subject | MAY | Procedure.subject <br>(Patient) |
 
 {% include custom/search.date.html para="2.1." content="Procedure" %}
 

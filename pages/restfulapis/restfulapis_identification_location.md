@@ -7,7 +7,10 @@ permalink: restfulapis_identification_location.html
 summary: Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained or accommodated.
 ---
 {% include custom/search.warnbanner.html %}
-{% include custom/profile.html content="[Care Connect Location](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Location-1.html)" %}
+
+{% include custom/profile.html content="Location" page="CareConnect-Location-1" %}
+
+{% include custom/fhir.resource.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html#search)" %}
 
 ## 1. Read ##
 
@@ -25,8 +28,8 @@ Location contains the details for the location. Fetches a bundle of all `Locatio
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address |  | Location.address.postalCode |
-| `identifier` | `token` | 	Any identifier for the location (e.g. SDS/ODS code) |  | 	Location.identifier |
+| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Location.address.postalCode |
+| `identifier` | `token` | 	Any identifier for the location (e.g. SDS/ODS code) |  MAY | Location.identifier |
 
 {% include custom/search.string.html para="2.1." resource="Location" content="address-postcode"  example="NG10%201RY" text1="Post Code" text2="NG10 1RY" %}
 

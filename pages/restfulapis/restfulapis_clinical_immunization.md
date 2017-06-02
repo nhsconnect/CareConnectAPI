@@ -7,7 +7,10 @@ permalink: restfulapis_clinical_immunization.html
 summary: Describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party and may include vaccine reaction information and what vaccination protocol was followed.
 ---
 {% include custom/search.warnbanner.html %}
-{% include custom/profile.html content="[Care Connect Immunization](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Immunization-1.html)" %}
+
+{% include custom/profile.html content="Immunization" page="CareConnect-Immunization-1" %}
+
+{% include custom/fhir.resource.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
 
 ## 1. Read ##
 
@@ -26,9 +29,9 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 
 | Name | Type | Description | Conformance  | Post |
 |------|------|-------------|-------|------|
-| `date` | `date` | Vaccination (non)-Administration Date | SHALL | Immunization.date |
-| `patient` | `reference` | The patient for the vaccination record |  | 	Immunization.patient<br>(Patient) |
-| `status` | `token` | Immunization event status | | Immunization.status |
+| `date` | `date` | Vaccination (non)-Administration Date | SHOULD | Immunization.date |
+| `patient` | `reference` | The patient for the vaccination record | SHALL | 	Immunization.patient<br>(Patient) |
+| `status` | `token` | Immunization event status | MAY | Immunization.status |
 
 <!--
 | `dose-sequence` | `number` | Dose number within series |  | 	Immunization.vaccinationProtocol.doseSequence |

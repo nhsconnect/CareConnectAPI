@@ -1,42 +1,41 @@
 <Immunization xmlns="http://hl7.org/fhir">
-    <id value="32502"/>
-    <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2017-05-25T07:38:43.382-04:00"/>
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Immunization-1"/>
-    </meta>
-    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-DateRecorded-1">
-        <valueDateTime value="2016-03-01T09:30:00+00:00"/>
-    </extension>
-    <status value="in-progress"/>
-    <date value="2016-03-01T09:30:00+00:00"/>
-    <vaccineCode>
-        <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="396429000"/>
-            <display value="Measles, mumps and rubella vaccine (substance)"/>
-        </coding>
-    </vaccineCode>
-    <patient>
-        <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
-        <display value="Bernie Kanfeld"/>
-    </patient>
-    <wasNotGiven value="false"/>
-    <reported value="false"/>
-    <performer>
-        <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
-        <display value="Dr Bhatia"/>
-    </performer>
-    <lotNumber value="63259874"/>
-    <expirationDate value="2020-01-01"/>
-    <vaccinationProtocol>
-        <doseSequence value="1"/>
-        <doseStatus>
-            <coding>
-                <system value="http://hl7.org/fhir/vaccination-protocol-dose-status"/>
-                <code value="count"/>
-                <display value="Counts"/>
-            </coding>
-        </doseStatus>
-    </vaccinationProtocol>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2017-05-25T07:38:43.382-04:00"/>
+		<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Immunization-1"/>
+	</meta>
+	<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-DateRecorded-1">
+		<valueDateTime value="2016-03-01T09:30:00+00:00"/>
+	</extension>
+	<status value="in-progress"/>
+	<date value="2016-03-01T09:30:00+00:00"/>
+	<vaccineCode>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="396429000"/>
+			<display value="Measles, mumps and rubella vaccine (substance)"/>
+		</coding>
+	</vaccineCode>
+	<patient>
+		<reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+		<display value="Bernie Kanfeld"/>
+	</patient>
+	<wasNotGiven value="false"/>
+	<reported value="false"/>
+	<performer>
+		<reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+		<display value="Dr Bhatia"/>
+	</performer>
+	<lotNumber value="63259874"/>
+	<expirationDate value="2020-01-01"/>
+	<vaccinationProtocol>
+		<doseSequence value="1"/>
+		<doseStatus>
+			<coding>
+				<system value="http://hl7.org/fhir/vaccination-protocol-dose-status"/>
+				<code value="count"/>
+				<display value="Counts"/>
+			</coding>
+		</doseStatus>
+	</vaccinationProtocol>
 </Immunization>

@@ -7,7 +7,10 @@ permalink: restfulapis_clinical_allergyintolerance.html
 summary: Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.
 ---
 {% include custom/search.warnbanner.html %}
-{% include custom/profile.html content="[Care Connect Allergy Intolerence](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-AllergyIntolerance-1.html)" %}
+
+{% include custom/profile.html content="Allergy Intolerance" page="CareConnect-AllergyIntolerance-1" %}
+
+{% include custom/fhir.resource.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
 
 ## 1. Read ##
 
@@ -28,7 +31,9 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------------|------|
 | `patient` | `reference` | Who the sensitivity is for | SHALL | AllergyIntolerance.patient<br>(Patient) |
-| `status` | `token` | Status of AllergyIntolerance	| Y | AllergyIntolerance.status |
+| `status` | `token` | Status of AllergyIntolerance	| MAY | AllergyIntolerance.status |
+
+
 
 {% include custom/search.patient.html para="2.1." content="AllergyIntolerance" %}
 

@@ -7,7 +7,11 @@ permalink: restfulapis_clinical_condition.html
 summary: Use to record detailed information about conditions, problems or diagnoses recognized by a clinician. There are many uses e.g. recording a diagnosis during an encounter; populating a problem list or a summary statement, such as a discharge summary.
 ---
 {% include custom/search.warnbanner.html %}
-{% include custom/profile.html content="[Care Connect Condition](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Condition-1.html)" %}
+
+{% include custom/profile.html content="Condition" page="CareConnect-Condition-1" %}
+
+{% include custom/fhir.resource.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html#search)" %}
+
 
 ## 1. Read Operation ##
 
@@ -27,9 +31,9 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|
-| `category` | `token` | The category of the condition | SHALL| Condition.category |
-| `clinicalstatus` | `token` | The clinical status of the condition | SHALL | 	Condition.clinicalStatus |
-| `date-recorded` | `date` | A date, when the Condition statement was documented |  | Condition.dateRecorded |
+| `category` | `token` | The category of the condition | SHOULD| Condition.category |
+| `clinicalstatus` | `token` | The clinical status of the condition | SHOULD | 	Condition.clinicalStatus |
+| `date-recorded` | `date` | A date, when the Condition statement was documented | MAY  | Condition.dateRecorded |
 | `patient` | `reference` | Who has the condition? | SHALL | Condition.patient<br>(Patient) |
 
 {% include custom/search.status.plus.html para="2.1." content="Condition" options="

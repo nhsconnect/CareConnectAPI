@@ -1,9 +1,9 @@
 ---
-title: Get the FHIR Conformance Profile
+title: Conformance | Conformance
 keywords: foundations, fhir
 tags: [foundations,use_case,fhir]
-sidebar: foundations_sidebar
-permalink: foundations_use_case_get_the_fhir_conformance_profile.html
+sidebar: accessrecord_rest_sidebar
+permalink: restfulapis_conformance_conformance.html
 summary: "Use case for getting the FHIR server's conformance profile."
 ---
 
@@ -71,4 +71,3 @@ client.PreferredFormat = ResourceFormat.Json;
 var resource = client.Conformance();
 FhirSerializer.SerializeResourceToXml(resource).Dump();
 ```
-

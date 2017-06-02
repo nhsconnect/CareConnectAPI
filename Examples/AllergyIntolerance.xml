@@ -2,7 +2,7 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2017-05-25T07:38:43.382-04:00"/>
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-AllergyIntolerance-1"/>
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-AllergyIntolerance-1"/>
     </meta>
   <identifier>
     <system value="https://epr.jorvik.nhk.uk/AllergyIntolerance "/>
@@ -38,6 +38,5 @@
       </coding>
     </manifestation>
     <onset value="2012-06-12"/>
-    <severity value="severe"/>
   </reaction>
 </AllergyIntolerance>
