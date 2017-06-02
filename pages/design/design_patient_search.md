@@ -29,7 +29,7 @@ Most NHS trusts will typically have one central system  called the Patient Admin
 max-width="200px" file="IHE/Iti_pam_ip.jpg" alt="Patient Identity Feeds"
 caption="Patient Identity Feeds" %}
 
-Care Connect API uses a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) [resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI) to provide access to the central Patient repository which is particularly suited:
+Care Connect API uses a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) [resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI) to provide access to the central Patient repository which is particularly suited to:
 * A health portal securely exposing demographics data to browser based plugins
 * Medical devices which need to access patient demographic information
 * Mobile devices used by physicians (example bedside eCharts) which need to establish
@@ -58,6 +58,7 @@ http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&given=bernie&family=kan
 ```
 
 A sample response is shown below
+
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
     <id value="e25d430b-e238-44a3-95cb-2c048496a448"/>
@@ -152,7 +153,7 @@ If your familiar with NHS SDS/ODS Codes you may have noticed the ODS Code as the
 </managingOrganization>
 ```
 
-If you wish to know more details about this organisation, you will need to follow the reference (the example reference is a logical reference and does not currently exist). References can be relative, the previous section be re-written as:
+If you wish to know more details about this organisation, you will need to follow the reference (the example reference is a logical reference and does not currently exist). References can be relative, the previous section be re-written as (this is the way of referring to local resources):
 
 ```xml
 <managingOrganization>
@@ -166,6 +167,7 @@ Notice the SDS/ODS code has been replaced with a number, this is the logical id 
 ```
 http://127.0.0.1:8181/Dstu2/Organization/24965
 ```
+
 The response from this request is shown below, it is not returned in a FHIR [Bundle](http://www.hl7.org/fhir/dstu2/bundle.html) as we haven't performed a search and requested the resource by it's Id. The ODS code can be found in the identifier section.
 
 ```xml
@@ -204,7 +206,9 @@ The response from this request is shown below, it is not returned in a FHIR [Bun
 </Organization>
 ```
 
+### 2.1 identifier ###
 
+To find a patient by NHS number, Hospital number, etc we use the identifier
 
 ## 3. National (NHS) Patient Search ##
 
@@ -224,7 +228,6 @@ The Patient Demographics Supplier may act as a proxy to an existing HL7v2 PDQ, F
 {% include image.html
 max-width="200px" file="design/Gateway PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
 caption=" Implementing PDQ FHIR as a gateway" %}
-
 
 {% include image.html
 max-width="200px" file="design/Gateway Process Flow PDQm.jpg" alt="Gateway Process Flow PDQ FHIR" caption="Sample PDQ FHIR gateway process flow" %}
