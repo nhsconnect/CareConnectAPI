@@ -143,8 +143,32 @@ This example refers to the reconciliation being performed by the doctor. The sto
 <tr><td>As a health advisor (Primary Care, NHS 111) I want to review a caller's current medication from Primary Care to ensure I have the most complete list of medications to help diagnose a condition, reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
 </table>
 
+### FEATURE: Allergy, Intolerance and Adverse Reaction List (Manage) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>I want to add a suspected allergy to a patient's record to alert other clinicians treating this patient that there is possibility of a reaction even though it still requires confirmation.</td><td>POST AllergyIntolerance</td></tr>
+</table>
+
 ### FEATURE: Medication List (Manage) ###
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a health advisor (Primary Care, NHS 111) I want to stop a medication on the patient's medication list that the patient has recorded themself using a patient facing solution because I think the patient is allergic to the medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">PUT MedicationStatement</a></td></tr>
+</table>
+
+### FEATURE: Resource (Search) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a health advisor (Primary Care, NHS 111) I want to find a community pharmacy near to a patient's current location to provide the patient with the most covenient chemist to collect their prescription.</td><td><a href="restfulapis_identification_location.html#2-search-parameters">GET Location</a></td></tr>
+</table>
+
+### FEATURE: Medication Order (Create) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a health advisor (Primary Care, NHS 111) I want to send a prescription for a calling patient to a pharmacy which is local to them to reduce the need for paper prescriptions, reduce interpretation errors and offer greater convenience for the patient.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
+</table>
+
+### FEATURE: Appointment Booking ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a health advisor (Primary Care, NHS 111) I want to make an appointment with a GP for a calling patient to offer the most suitable care to the patient given the condition presented with, in the most convenient way for them.</td><td><a href="restfulapis_clinical_allergyintollerance.html">POST Appointment</a></td></tr>
 </table>
