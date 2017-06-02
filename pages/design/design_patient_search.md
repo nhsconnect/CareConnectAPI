@@ -45,14 +45,166 @@ etc.
 max-width="200px" file="design/PDQ Actor Diagram.jpg" alt="Patient Search Actor Diagram"
 caption="Patient Search Actor Diagram" %}
 
-{% include image.html
-max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow PDQ FHIR" caption="Basic Process Flow PDQ FHIR" %}
-
 The patient search can use any of the search parameters defined in the [Patient](restfulapis_identification_patient.html) API. For example if the patient informs the nurse of their date of birth, first name (19th Mar 1998 Bernie Kanfeld) and surname the query would be.
 
 ```
-GET /Patient?birthdate=1998-03-19
+GET http://[baseUrl]/Patient?birthdate=1998-03-19&given=bernie&family=kanfeld
 ```
+
+`[baseUrl]` needs to be replaced with an actual url, in the example below this is `http://127.0.0.1:8181/Dstu2/`. The url would work within a web browser but a better tool to work with RESTful is [Postman](https://www.getpostman.com/)
+
+```
+http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&given=bernie&family=kanfeld
+```
+
+A sample response is shown below
+```xml
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="e25d430b-e238-44a3-95cb-2c048496a448"/>
+    <meta>
+        <lastUpdated value="2017-06-02T15:18:24.874+01:00"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="1"/>
+    <link>
+        <relation value="self"/>
+        <url value="http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&amp;family=kanfeld&amp;given=bernie"/>
+    </link>
+    <entry>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/Patient/24966"/>
+        <resource>
+            <Patient xmlns="http://hl7.org/fhir">
+                <id value="24966"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-06-02T09:30:21.875+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
+                </meta>
+                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-EthnicCategory-1">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
+                            <code value="01"/>
+                            <display value="British, Mixed British"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <identifier>
+                    <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="https://fhir.hl7.org.uk/CareConnect-NHSNumberVerificationStatus-1"/>
+                                <code value="01"/>
+                                <display value="Number present and verified"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <system value="https://fhir.nhs.uk/Id/nhs-number"/>
+                    <value value="9876543210"/>
+                </identifier>
+                <active value="true"/>
+                <name>
+                    <use value="usual"/>
+                    <family value="Kanfeld"/>
+                    <given value="Bernie"/>
+                    <prefix value="Miss"/>
+                </name>
+                <gender value="female"/>
+                <birthDate value="1998-03-19"/>
+                <address>
+                    <use value="home"/>
+                    <line value="10, Field Jardin"/>
+                    <line value="Long Eaton"/>
+                    <city value="Nottingham"/>
+                    <postalCode value="NG10 1ZZ"/>
+                </address>
+                <maritalStatus>
+                    <coding>
+                        <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+                        <code value="S"/>
+                        <display value="Never Married"/>
+                    </coding>
+                </maritalStatus>
+                <managingOrganization>
+                    <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
+                    <display value="Moir Medical Centre"/>
+                </managingOrganization>
+            </Patient>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+</Bundle>
+```
+
+What we have just described is shown in the diagram below. When entered the url we did a Patient Demographic Query and the response is called Patient Demographic Query Response.
+
+{% include image.html
+max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow PDQ FHIR" caption="Basic Process Flow PDQ FHIR" %}
+
+If your familiar with NHS SDS/ODS Codes you may have noticed the ODS Code as the managing organisation.
+
+```xml
+<managingOrganization>
+    <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
+    <display value="Moir Medical Centre"/>
+</managingOrganization>
+```
+
+If you wish to know more details about this organisation, you will need to follow the reference (the example reference is a logical reference and does not currently exist). References can be relative, the previous section be re-written as:
+
+```xml
+<managingOrganization>
+    <reference value="Organization/24965"/>
+    <display value="Moir Medical Centre"/>
+</managingOrganization>
+```
+
+Notice the SDS/ODS code has been replaced with a number, this is the logical id of the organisation and to get the ods we will need to request that resource, e.g.
+
+```
+http://127.0.0.1:8181/Dstu2/Organization/24965
+```
+The response from this request is shown below, it is not returned in a FHIR [Bundle](http://www.hl7.org/fhir/dstu2/bundle.html) as we haven't performed a search and requested the resource by it's Id. The ODS code can be found in the identifier section.
+
+```xml
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="24965"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2017-06-02T09:27:43.366+01:00"/>
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Organization-1"/>
+    </meta>
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+        <value value="C81010"/>
+    </identifier>
+    <type>
+        <coding>
+            <system value="https://fhir.hl7.org.uk/ValueSet/organisation-type-1"/>
+            <code value="prov"/>
+            <display value="Healthcare Provider"/>
+        </coding>
+    </type>
+    <name value="The Moir Medical Centre"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="0115 9737320"/>
+        <use value="work"/>
+    </telecom>
+    <address>
+        <use value="work"/>
+        <type value="both"/>
+        <line value="Regent Street"/>
+        <line value="Long Eaton"/>
+        <city value="Nottingham"/>
+        <postalCode value="NG10 1QQ"/>
+    </address>
+</Organization>
+```
+
+
 
 ## 3. National (NHS) Patient Search ##
 
