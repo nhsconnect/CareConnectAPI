@@ -101,6 +101,28 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a patient I want to be reminded when my medications are due to be taken so that I can ensure that I don't forget to take my meds when they are due.</td><td><a href="restfulapis_clinical_medicationstatement.html#patient">GET MedicationStatement</a></td></tr>
+</table>
+
+### FEATURE: Medication Administration ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a patient I want to record the actual medication I have taken so that I have a complete record of how well I have adhered to my medicatication regimen and my care team can review this, contacting me if there are any concerns.</td><td>PUT MedicationAdministration</td></tr>
 <tr><td>As a patient I want to make notes against my medications to discuss with my Care Team so if I have any concerns over my medication this can be reviewed and discussed further.</td><td>PUT MedicationAdministration</td></tr>
+</table>
+
+{% include callout.html content="Michael gets a cold and visits his pharmacy to buy something to help. He scans the over-the-counter (OTC) medication purchase using the GTIN bar code. He purchases a codeine+paracetamol combination. The dosage is 8/500mg, two tablets up to 4 times a day. His application checks for interactions and contraindications and warns him if there are any potential interactions before add the medication to his \"medication manager\" app." %}
+
+<img src="images/engage/MichaelsStory7.png" style="width:100%;max-width: 100%;">
+
+### FEATURE: Medication List (Manage) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td><tr><td>As a Patient I want to add any additional medicines that I purchase (such as over-the-counter, vitamins, natural remedies) so that I can maintain an accurate list of my medication for myself and my care team to review.</td><td>PUT MedicationStatement</td></tr>
+</td><td>PUT MedicationStatement</td></tr><tr><td>As a patient I want to scan the bar code of a drug to add that to my medications list to facilitate a rapid update of my medications list without having to type in the medication details and reducing the chance or error.</td><td>PUT MedicationStatement</td></tr>
+</table>
+
+### FEATURE: Drug Interaction Checking ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a Patient I want any additional medicines that I add to my medications list to be checked for interactions and contraindications to improve the effectiveness of my medication and offer increased safety.</td><td></td></tr>
 </table>
