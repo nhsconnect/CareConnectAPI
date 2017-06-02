@@ -146,7 +146,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 ### FEATURE: Allergy, Intolerance and Adverse Reaction List (Manage) ###
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
-<tr><td>I want to add a suspected allergy to a patient's record to alert other clinicians treating this patient that there is possibility of a reaction even though it still requires confirmation.</td><td>POST AllergyIntolerance</td></tr>
+<tr><td>I want to add a suspected allergy to a patient's record to alert other clinicians treating this patient that there is possibility of a reaction even though it still requires confirmation.</td><td><a href="restfulapis_clinical_allergyintollerance.html">POST AllergyIntolerance</a></td></tr>
 </table>
 
 ### FEATURE: Medication List (Manage) ###
@@ -170,5 +170,5 @@ This example refers to the reconciliation being performed by the doctor. The sto
 ### FEATURE: Appointment Booking ###
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
-<tr><td>As a health advisor (Primary Care, NHS 111) I want to make an appointment with a GP for a calling patient to offer the most suitable care to the patient given the condition presented with, in the most convenient way for them.</td><td><a href="restfulapis_clinical_allergyintollerance.html">POST Appointment</a></td></tr>
+<tr><td>As a health advisor (Primary Care, NHS 111) I want to make an appointment with a GP for a calling patient to offer the most suitable care to the patient given the condition presented with, in the most convenient way for them.</td><td>POST Appointment</td></tr>
 </table>
