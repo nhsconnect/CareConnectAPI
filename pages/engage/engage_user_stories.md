@@ -19,29 +19,29 @@ summary: "User stories to search for a Care Connect FHIR&reg; Profile."
 {% include callout.html content="<b>Scenario:</b><br>'Michael is to be discharged from hospital, with a care plan, and Dr. Hospital prepares his discharge summary. Dr. Hospital reconciles and reviews Michael’s discharge medications and produces a reconciled list of discharge medications. This includes hospital managed medication, new medications commenced during the hospital admission, Michael’s own over-the-counter medication, ongoing medication from the GP or other sectors.' "%}
 
 
-<img src="images/use_cases/michaels_story-epic_1.jpg" style="width:100%;max-width: 100%;"> 
+<img src="images/use_cases/michaels_story-epic_1.jpg" style="width:50%;max-width: 50%;"> 
 
 
 {% include callout.html content="<b>Further Conversations:</b><br>
 This example refers to the reconciliation being performed by the doctor. The stories reflect this scenario and don’t explore the other cases where the reconciliation is performed by a technician or a pharmacist. This could be significant given that reconciliation by a technician when not validated by a pharmacist would include additional workflow for review." %}
 
 
-### FEATURE: Reconcile the patient’s drug chart for discharge ###
+### FEATURE: Medication (Reconciliation - Discharge) ###
 
 <table style="width:100%;max-width: 100%;"><tr><th>User Story</th><th>Profile</th></tr>
-<tr><td>As a clinician (hospital services) I want to ‘stop’ medication that is present on the patient’s drug chart because a drug is no longer being taken by the patient or I do not consider it necessary to 'take out'.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
-<tr><td>As a clinician (hospital services) I want to add additional drugs that the patient may be taking to their drug chart because the patient declares that they are taking a drug that is not currently listed.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
-<tr><td>As a clinician (hospital services) I want to continue medication that may have been put on hold during medicines reconciliation stage 1 on admission because the reasons that the drug were put on hold during the patient's admission are no longer relevant and the patient requires the medication for their ongoing condition.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
-<tr><td>As a clinician (hospital services) I may wish to add additional information in the form of a note or comment against each medication change that I make so when I am unable to resolve unintentional discrepancies there will be a notification to the the GP that some further consideration may be required.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
+<tr><td>As a clinician (hospital services) I want to ‘stop’ medication that is present on the patient’s drug chart because a drug is no longer being taken by the patient or I do not consider it necessary to 'take out'.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
+<tr><td>As a clinician (hospital services) I want to add additional drugs that the patient may be taking to their drug chart because the patient declares that they are taking a drug that is not currently listed.</td><td><a href="restfulapis_clinical_medicationstatement.html">POST MedicationStatement</a></td></tr>
+<tr><td>As a clinician (hospital services) I want to continue medication that may have been put on hold during medicines reconciliation stage 1 on admission because the reasons that the drug were put on hold during the patient's admission are no longer relevant and the patient requires the medication for their ongoing condition.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
+<tr><td>As a clinician (hospital services) I may wish to add additional information in the form of a note or comment against each medication change that I make so when I am unable to resolve unintentional discrepancies there will be a notification to the the GP that some further consideration may be required.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
 <tr><td>As hospital services I want to send the complete list of patient medication to the patient's GP so that the GP can compare the information with their own records and amend accordingly.</td><td><a href="restfulapis_clinical_medicationstatement.html">POST MedicationStatement</a></td></tr>
 </table>
 
 
-### FEATURE: Create a discharge summary ###
+### FEATURE: Discharge Summary (Create) ###
 
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
-<tr><td>As a clinician (hospital Services) I want to include the patient's TTO medications in the discharge summary to provide a complete and accurate list of the patient's medication to the GP.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
+<tr><td>As a clinician (hospital Services) I want to include the patient's TTO medications in the discharge summary to provide a complete and accurate list of the patient's medication to the GP.</td><td>Refer to Bundle (Transfer of Care) <a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">MedicationStatement</a></td></tr>
 </table>
 
 
