@@ -86,7 +86,21 @@ This example refers to the reconciliation being performed by the doctor. The sto
 ### FEATURE: Discharge Summary ###
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
-<tr><td>As a general practitioner (Primary Care, General Practice) I want to review the discharge summary created as a result of my patient's stay in hospital so I can update my records with the most recent and accurate patient information.</td><td><a href="restfulapis_clinical_medicationstatement.html#patient">GET MedicationStatement</a></td></tr>
+<tr><td>As a general practitioner (Primary Care, General Practice) I want to review the discharge summary created as a result of my patient's stay in hospital so I can update my records with the most recent and accurate patient information.</td><td></td></tr>
 <tr><td>As a general practitioner (Primary Care, General Practice) I want to to update my patient's medications with the latest reconciled list from the hospital to ensure I have the most complete list of medications and reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#patient">GET MedicationStatement</a></td></tr>
 <tr><td>As a general practitioner (Primary Care, General Practice) I want to update my patient's list of problems with the latest problems added during my patient's stay in hospital to ensure I have the most complete patient history possible, better informing future contacts with the patient and providing more accurate patient care.</td><td><a href="restfulapis_clinical_condition.html#patient">GET Condition</a></td></tr>
+</table>
+
+## Patient Facing Services ##
+
+{% include callout.html content="Michael's \"medication manager\" app provides prompts when each medication is due. Michael can record his adherence at the end of each day by responding to questions from his \"medication manager\" app, as well as record any questions he has to discuss with his care team." %}
+
+<img src="images/engage/MichaelsStory6.png" style="width:100%;max-width: 100%;">
+
+### FEATURE: Medication Reminder ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a patient I want to be reminded when my medications are due to be taken so that I can ensure that I don't forget to take my meds when they are due.</td><td><a href="restfulapis_clinical_medicationstatement.html#patient">GET MedicationStatement</a></td></tr>
+<tr><td>As a patient I want to record the actual medication I have taken so that I have a complete record of how well I have adhered to my medicatication regimen and my care team can review this, contacting me if there are any concerns.</td><td>PUT MedicationAdministration</td></tr>
+<tr><td>As a patient I want to make notes against my medications to discuss with my Care Team so if I have any concerns over my medication this can be reviewed and discussed further.</td><td>PUT MedicationAdministration</td></tr>
 </table>
