@@ -66,7 +66,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 {% include callout.html content="The \"medication manager\" app on Michael's mobile phone is updated with the latest changes to his medications. Michael can view his new medication list, with any medication changes highlighted." %}
 
-<p style="text-align:center;"><img src="images/engage/MichaelsStoryPicture4.jpg" style="width:50%;max-width: 50%;></p>
+<p style="text-align:center;"><img src="images/engage/MichaelsStoryPicture4.jpg" style="width:50%;max-width: 50%;"></p>
 
 ### FEATURE: Medication list - Patient Facing (View) ###
 
@@ -79,7 +79,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 {% include callout.html content="Michael's GP receives a discharge summary from the hospital and the GP system uses this to update Michael's GP medication and problem list." %}
 
-<p style="text-align:center;"><img src="images/engage/MichaelsStory5.png" style="width:50%;max-width: 50%;></p>
+<p style="text-align:center;"><img src="images/engage/MichaelsStory5.png" style="width:50%;max-width: 50%;"></p>
 
 ### FEATURE: Discharge Summary ###
 
@@ -93,7 +93,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 {% include callout.html content="Michael's \"medication manager\" app provides prompts when each medication is due. Michael can record his adherence at the end of each day by responding to questions from his \"medication manager\" app, as well as record any questions he has to discuss with his care team." %}
 
-<p style="text-align:center;"><img src="images/engage/MichaelsStory6.png" style="width:50%;max-width: 50%;></p>
+<p style="text-align:center;"><img src="images/engage/MichaelsStory6.png" style="width:50%;max-width: 50%;"></p>
 
 ### FEATURE: Medication Reminder ###
 
@@ -115,7 +115,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 ### FEATURE: Medication List (Manage) ###
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
-<tr><td>As a Patient I want to add any additional medicines that I purchase (such as over-the-counter, vitamins, natural remedies) so that I can maintain an accurate list of my medication for myself and my care team to review.</td><td>POST MedicationStatement</td></tr>
+<tr><td>As a Patient I want to add any additional medicines that I purchase (such as over-the-counter, vitamins, natural remedies) so that I can maintain an accurate list of my medication for myself and my care team to review.</td><td><a href="restfulapis_clinical_medicationstatement.html">POST MedicationStatement</a></td></tr>
 <tr><td>As a patient I want to scan the bar code of a drug to add that to my medications list to facilitate a rapid update of my medications list without having to type in the medication details and reducing the chance or error.</td><td></td></tr>
 </table>
 
@@ -143,8 +143,90 @@ This example refers to the reconciliation being performed by the doctor. The sto
 <tr><td>As a health advisor (Primary Care, NHS 111) I want to review a caller's current medication from Primary Care to ensure I have the most complete list of medications to help diagnose a condition, reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
 </table>
 
+### FEATURE: Allergy, Intolerance and Adverse Reaction List (Manage) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>I want to add a suspected allergy to a patient's record to alert other clinicians treating this patient that there is possibility of a reaction even though it still requires confirmation.</td><td><a href="restfulapis_clinical_allergyintollerance.html">POST AllergyIntolerance</a></td></tr>
+</table>
+
 ### FEATURE: Medication List (Manage) ###
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a health advisor (Primary Care, NHS 111) I want to stop a medication on the patient's medication list that the patient has recorded themself using a patient facing solution because I think the patient is allergic to the medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">PUT MedicationStatement</a></td></tr>
 </table>
+
+### FEATURE: Resource (Search) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a health advisor (Primary Care, NHS 111) I want to find a community pharmacy near to a patient's current location to provide the patient with the most covenient chemist to collect their prescription.</td><td><a href="restfulapis_identification_location.html#2-search-parameters">GET Location</a></td></tr>
+</table>
+
+### FEATURE: Medication Order (Create) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a health advisor (Primary Care, NHS 111) I want to send a prescription for a calling patient to a pharmacy which is local to them to reduce the need for paper prescriptions, reduce interpretation errors and offer greater convenience for the patient.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
+</table>
+
+### FEATURE: Appointment Booking ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a health advisor (Primary Care, NHS 111) I want to make an appointment with a GP for a calling patient to offer the most suitable care to the patient given the condition presented with, in the most convenient way for them.</td><td>POST Appointment</td></tr>
+</table>
+
+## Primary Care - General Practice ##
+
+{% include callout.html content="Michael visits his GP the next day. Michael's GP can see the updated medication list, including other medications he is taking (e.g. private services from abroad during illness, OTC/pharmacist supervised/online purchases, unconnected NHS services). They both discuss the medication allergy and Michael's allergy record is updated. The GP reviews the treatment, changes doses and prescribes a new medication and then gerenates prescriptions for Michael's ongoing/repeat medications." %}
+
+<p style="text-align:center;"><img src="images/engage/MichaelsStory9.png" style="width:50%;max-width: 50%;"></p>
+
+### FEATURE: Medication List (View) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a general practitioner (Primary Care, General Practice) I want to see medications bought over the counter to ensure I have the most complete list of medications to help diagnose a condition and reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
+<tr><td>As a general practitioner (Primary Care, General Practice) I want to see medications obtained by the patient online to ensure I have the most complete list of medications to help diagnose a condition and reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
+<tr><td>As a general practitioner (Primary Care, General Practice) I want to see medications prescribed to a patient while abroad to ensure I have the most complete list of medications to help diagnose a condition and reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
+<tr><td>As a general practitioner (Primary Care, General Practice) I want to see medications obtained by the patient under the guidance of a Pharmacist to ensure I have the most complete list of medications to help diagnose a condition, reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
+</table>
+
+### FEATURE: Allergy, Intolerance and Adverse Reaction List (Manage) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>I want to confirm a patient's suspected allergy to ensure that the patient is not prescribed drugs or exposed to anything during their healthcare encounters that may cause an adverse reaction.</td><td><a href="restfulapis_clinical_allergyintollerance.html">PUT AllergyIntolerance</a></td></tr>
+</table>
+
+### FEATURE: Medication Order (Create) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a general practitioner (Primary Care, General Practice) I want to prescribe new medication for the patient to provide a remedy to a diagnosed condition.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
+</table>
+
+## Patient Facing Services ##
+
+{% include callout.html content="That week, Michael is running low on one of his medications and requests a repeat prescription on his \"medication manager\" app" %}
+
+<p style="text-align:center;"><img src="images/engage/MichaelsStory10.png" style="width:50%;max-width: 50%;"></p>
+
+## Community Pharmacy ##
+
+{% include callout.html content="Michael's pharmacy receives the repeat prescription request and notifies Michael on his \"medication manager\" app that it is ready to collect." %}
+
+<p style="text-align:center;"><img src="images/engage/MichaelsStory11.png" style="width:50%;max-width: 50%;"></p>
+
+## Patient Facing Services ##
+
+{% include callout.html content="On Michael's care plan it states he needs a medication review with his hospital specialist for a particular specialist medication which is arranged via a virtual consultation." %}
+
+<p style="text-align:center;"><img src="images/engage/MichaelsStory12.png" style="width:50%;max-width: 50%;"></p>
+
+## Patient Facing Services ##
+
+{% include callout.html content="Following the virtual consultation, the specialist refers Michael to the physiotherapist; Michael requests a particular medication is made private. After discussion with the specialist, Michael adds a privacy flag to his \"medication manager\" app which restricts viewing to all care professionals expect doctors and nurses." %}
+
+<p style="text-align:center;"><img src="images/engage/MichaelsStory13.png" style="width:50%;max-width: 50%;"></p>
+
+## Community Services ##
+
+{% include callout.html content="Michael's care plan is designed to support him to live independently through a self-funding domicillary care package that helps him to get up, wash and prepare for the day. His carers can also relay information about his medication compliance or side effects through the \"medication manager\" app, as well as requesting repeat prescriptions on his behalf." %}
+
+<p style="text-align:center;"><img src="images/engage/MichaelsStory14.png" style="width:50%;max-width: 50%;"></p>
+
