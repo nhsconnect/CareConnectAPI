@@ -117,8 +117,8 @@ This example refers to the reconciliation being performed by the doctor. The sto
 ### FEATURE: Medication List (Manage) ###
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
-<tr><td><tr><td>As a Patient I want to add any additional medicines that I purchase (such as over-the-counter, vitamins, natural remedies) so that I can maintain an accurate list of my medication for myself and my care team to review.</td><td>PUT MedicationStatement</td></tr>
-</td><td>PUT MedicationStatement</td></tr><tr><td>As a patient I want to scan the bar code of a drug to add that to my medications list to facilitate a rapid update of my medications list without having to type in the medication details and reducing the chance or error.</td><td>PUT MedicationStatement</td></tr>
+<tr><td>As a Patient I want to add any additional medicines that I purchase (such as over-the-counter, vitamins, natural remedies) so that I can maintain an accurate list of my medication for myself and my care team to review.</td><td>PUT MedicationStatement</td></tr>
+<tr><td>As a patient I want to scan the bar code of a drug to add that to my medications list to facilitate a rapid update of my medications list without having to type in the medication details and reducing the chance or error.</td><td>PUT MedicationStatement</td></tr>
 </table>
 
 ### FEATURE: Drug Interaction Checking ###
