@@ -77,6 +77,8 @@ This example refers to the reconciliation being performed by the doctor. The sto
 <tr><td>As a patient I want medication changes to be highlighted when viewing my medication summary so I am less likely to miss that dosages have changed on medication I was previously taking.</td><td></td></tr>
 </table>
 
+## General Practice ##
+
 {% include callout.html content="Michael's GP receives a discharge summary from the hospital and the GP system uses this to update Michael's GP medication and problem list." %}
 
 <img src="images/engage/MichaelsStory5.png" style="width:100%;max-width: 100%;">
@@ -84,6 +86,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 ### FEATURE: Discharge Summary ###
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
-<tr><td></td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
-<tr><td>As a patient I want medication changes to be highlighted when viewing my medication summary so I am less likely to miss that dosages have changed on medication I was previously taking.</td><td></td></tr>
+<tr><td>As a general practitioner (Primary Care, General Practice) I want to review the discharge summary created as a result of my patient's stay in hospital so I can update my records with the most recent and accurate patient information.</td><td><a href="restfulapis_clinical_medicationstatement.html#patient">GET MedicationStatement</a></td></tr>
+<tr><td>As a general practitioner (Primary Care, General Practice) I want to to update my patient's medications with the latest reconciled list from the hospital to ensure I have the most complete list of medications and reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#patient">GET MedicationStatement</a></td></tr>
+<tr><td>As a general practitioner (Primary Care, General Practice) I want to update my patient's list of problems with the latest problems added during my patient's stay in hospital to ensure I have the most complete patient history possible, better informing future contacts with the patient and providing more accurate patient care.</td><td><a href="restfulapis_clinical_condition.html#patient">GET Condition</a></td></tr>
 </table>
