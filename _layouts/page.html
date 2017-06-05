@@ -5,7 +5,7 @@ layout: default
  {% unless jekyll.environment != "production" %}
 
  {% if site.github_editme_path %}
- {% include github_improve_me.html %}
+ {% include custom/github_improve_me.html %}
  {% endif %}
 
  {% endunless %}
@@ -42,7 +42,7 @@ layout: default
     <div class="summary">{{page.summary}}</div>
    {% endif %}
 
-   {% include twittershare.html %}
+   {% include custom/twittershare.html %}
 
     {% unless page.toc == false %}
     {% include toc.html %}
