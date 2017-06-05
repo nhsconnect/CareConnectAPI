@@ -157,6 +157,10 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
                         <display value="Never Married"/>
                     </coding>
                 </maritalStatus>
+                <careProvider>
+                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <display value="Dr AA Bhatia"/>
+                </careProvider>
                 <managingOrganization>
                     <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
                     <display value="Moir Medical Centre"/>

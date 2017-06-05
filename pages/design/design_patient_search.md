@@ -9,7 +9,7 @@ summary: "How to use FHIR Patient resources to perform Patient Searches"
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/apilink.html content="[Patient](restfulapis_identification_patient.html)"  %}
+{% include custom/apilink.html content="[Patient](restfulapis_identification_patient.html) [Practitioner](restfulapis_identification_practitioner.html) [Organization](restfulapis_identification_organisation.html) "  %}
 
 {% include custom/ihelink.html content="[IHE Patient Demographic Query Mobile (IHE PDQM)](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)" %}
 
@@ -42,6 +42,8 @@ etc.
 
 ## 2. Basic Patient Search ##
 
+### 2.1 Foundation ###
+
 {% include image.html
 max-width="200px" file="design/PDQ Actor Diagram.jpg" alt="Patient Search Actor Diagram"
 caption="Patient Search Actor Diagram" %}
@@ -59,6 +61,8 @@ http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&given=bernie&family=kan
 ```
 
 A sample response is shown below
+
+#### XML Example 1 - Bundle Patient ####
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
@@ -131,6 +135,10 @@ A sample response is shown below
                         <display value="Never Married"/>
                     </coding>
                 </maritalStatus>
+                <careProvider>
+                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <display value="Dr AA Bhatia"/>
+                </careProvider>
                 <managingOrganization>
                     <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
                     <display value="Moir Medical Centre"/>
@@ -175,6 +183,8 @@ http://127.0.0.1:8181/Dstu2/Organization/24965
 
 The response from this request is shown below, it is not returned in a FHIR [Bundle](http://www.hl7.org/fhir/dstu2/bundle.html) as we haven't performed a search and requested the resource by it's Id. The ODS code can be found in the identifier section.
 
+#### XML Example 2 - Organization ####
+
 ```xml
 <Organization xmlns="http://hl7.org/fhir">
     <id value="24965"/>
@@ -211,6 +221,8 @@ The response from this request is shown below, it is not returned in a FHIR [Bun
 </Organization>
 ```
 
+The method for returning Practitioner is the same and an example is shown below in section 2.2
+
 ### 2.1 identifier ###
 
 To find a patient by NHS number, Hospital number, etc we use the identifier. The earlier example contained an NHS number, the number 9876543210 belongs to the system `https://fhir.nhs.uk/Id/nhs-number`, which is identifier for the NHS Number in England and Wales.
@@ -245,12 +257,103 @@ This will return all Patient resources with a NHS number of 9876543210, this may
 For these reasons the health organisation will use it's own primary identifier, often referred to as Hospital or District number. Organisation's will need to create their own system for the identifier, in the example Jorvik NHS Trust have used 'https://fhir.jorvik.nhs.uk/PAS/Patient' to indicate PAS Hospital Number. They use this with the API as shown below:
 
 ```
-http://[baseUrl]/Patient?identifier=https://fhir.jorvik.nhs.uk/PAS/Patient|123345
+GET http://[baseUrl]/Patient?identifier=https://fhir.jorvik.nhs.uk/PAS/Patient|123345
 ```
 
-### 2.2. Example Java - Basic Patient Search ###
+### 2.2. Java Example ###
 
+The examples are built using [HAPI FHIR](http://hapifhir.io/) which is an open source implementation of the HL7 FHIR specification by the University Health Network, Canada. Source code can be found on [NHSConnect GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/ImplementationGuideExplore)
 
+The first example uses the same search parameters we used earlier, we are searching for patients with a surname of Kanfeld, forename of Bernie and date of birth 19/Mar/1998. The first couple of lines setup a Dstu2 FHIR context and set the baseUrl to be `http://127.0.0.1:8181/Dstu2/`. The output from running this code is shown earlier in this guide.
+
+#### Java Example 1 - Patient Search ####
+
+```java
+       // Create a FHIR Context
+       FhirContext ctx = FhirContext.forDstu2();
+       IParser parser = ctx.newXmlParser();
+
+       // Create a client and post the transaction to the server
+       IGenericClient client = ctx.newRestfulGenericClient("http://127.0.0.1:8181/Dstu2/");
+
+       System.out.println("GET http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&given=bernie&family=kanfeld");
+       Bundle results = client
+               .search()
+               .forResource(Patient.class)
+               .where(Patient.FAMILY.matches().value("kanfeld"))
+               .and(Patient.GIVEN.matches().value("bernie"))
+               .and(Patient.BIRTHDATE.exactly().day("1998-03-19"))
+               .returnBundle(ca.uhn.fhir.model.dstu2.resource.Bundle.class)
+               .execute();
+       System.out.println(parser.setPrettyPrint(true).encodeResourceToString(results));
+```
+
+In this example we have omitted the context and client setup. This shows how a search on NHS Number would be executed, the resulting XML out would be the same as the previous listing.
+
+#### Java Example 2 - Patient Search NHS Number ####
+
+```java
+       System.out.println("GET http://127.0.0.1:8181/Dstu2/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210");
+       results = client
+               .search()
+               .forResource(Patient.class)
+               .where(Patient.IDENTIFIER.exactly().systemAndCode("https://fhir.nhs.uk/Id/nhs-number", "9876543210"))
+               .returnBundle(ca.uhn.fhir.model.dstu2.resource.Bundle.class)
+               .execute();
+       System.out.println(parser.setPrettyPrint(true).encodeResourceToString(results));
+```
+
+The examples have used a logical reference to SDS codes, this means we can't simply call Organization or Practitioner by using their Id's we must do a search on identifier
+
+```
+GET http://[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010
+```
+
+```
+GET http://[baseUrl]/Practitoner?identifier=https://fhir.nhs.uk/Id/sds-user-id|G8133438
+```
+
+#### Java Example 3 - Organization and Practitioner Search ####
+
+```java
+    if (results.getEntry().size() > 0) {
+          // Process first patient only.
+          Patient patient = (Patient) results.getEntry().get(0).getResource();
+          System.out.println();
+
+          // Assume Organisation Id is SDS/ODS Code
+          Bundle organisationResults = client
+                  .search()
+                  .forResource(Organization.class)
+                  .where(Organization.IDENTIFIER.exactly().systemAndCode("https://fhir.nhs.uk/Id/ods-organization-code",patient.getManagingOrganization().getReference().getIdPart()))
+                  .returnBundle(ca.uhn.fhir.model.dstu2.resource.Bundle.class)
+                  .execute();
+          System.out.println(parser.setPrettyPrint(true).encodeResourceToString(organisationResults));
+
+          if (patient.getCareProvider().size() > 0) {
+              Bundle gpResults = client
+                      .search()
+                      .forResource(Practitioner.class)
+                      .where(Practitioner.IDENTIFIER.exactly().systemAndCode("https://fhir.nhs.uk/Id/sds-user-id", patient.getCareProvider().get(0).getReference().getIdPart()))
+                      .returnBundle(ca.uhn.fhir.model.dstu2.resource.Bundle.class)
+                      .execute();
+              System.out.println(parser.setPrettyPrint(true).encodeResourceToString(gpResults));
+          }
+      }
+```
+
+If we did have the logical Id's returned in the Patient resources we could have retrieved the Organization (or Practitioner) resources directly. In the example below the Patients organisation Id is `24965` (this is the Id of the Organization in XML Example 2 )
+
+#### Java Example 4 - Organization Read ####
+
+```java
+            Organization gpPractice = (Organization) client.read().resource(Organization.class).withId("24965").execute();
+            System.out.println(parser.setPrettyPrint(true).encodeResourceToString(gpPractice));
+```
+
+<!--
+
+This is referring to a draft NHS Digital policy
 
 ## 3. National (NHS) Patient Search ##
 
@@ -258,11 +361,21 @@ http://[baseUrl]/Patient?identifier=https://fhir.jorvik.nhs.uk/PAS/Patient|12334
 max-width="200px" file="design/National PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
 caption="National NHS Patient Search Actor Diagram" %}
 
+National systems in England may use the logical Id as the business identiferEnglish NHS will use the NHS Number as the logical Id.  
+
+Currently, the only national resources this would apply to are:
+•	Organisation (ODS Code)
+•	Patient (NHS Number)
+•	Prescription (Prescription ID)
+•	Practitioner (SDS ID)
+
+
 {% include image.html
-max-width="200px" file="design/National Basic Process Flow PDQm.jpg" alt="National NHS Process Flow PDQ FHIR" caption="National NHS Process Flow PDQ FHIR" %}
+max-width="200px" file="design/National Basic Process Flow PDQm.jpg" alt="National NHS Process Flow PDQ FHIR" caption="National NHS Process Flow Patient Search FHIR" %}
+-->
+## 3. Patient Search Gateway ##
 
-## 4. Patient Search Gateway ##
-
+<!-- This section is introducing the facade pattern. This may not sound useful but is probably the most common patterns with FHIR in the UK -->
 Patient searches using FHIR can be used with other patient search systems such NHS Spine Mini Services Provider (SMSP), HL7v2 Patient queries, etc. In this way the Patient Demographics
 Consumer can choose the technology stack that best fits.
 The Patient Demographics Supplier may act as a proxy to an existing HL7v2 PDQ, FHIR PDQ or ITK SMSP environment as shown in the diagrams below.

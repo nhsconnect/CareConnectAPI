@@ -44,6 +44,10 @@
       <city value="Nottingham"/>
       <postalCode value="NG10 1ZZ"/>
    </address>
+   <careProvider>
+     <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+     <display value="Dr AA Bhatia"/>
+  </careProvider>
    <maritalStatus>
       <coding>
          <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
