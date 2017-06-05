@@ -28,7 +28,7 @@ The images have been taken from the [Interop Summit](https://drive.google.com/fi
 This example refers to the reconciliation being performed by the doctor. The stories reflect this scenario and don’t explore the other cases where the reconciliation is performed by a technician or a pharmacist. This could be significant given that reconciliation by a technician when not validated by a pharmacist would include additional workflow for review." %}
 
 
-### FEATURE: Medication (Reconciliation - Discharge) ###
+** FEATURE: Medication (Reconciliation - Discharge) **
 
 <table style="width:100%;max-width: 100%;"><tr><th>User Story</th><th>Profile</th></tr>
 <tr><td>As a clinician (hospital services) I want to ‘stop’ medication that is present on the patient’s drug chart because a drug is no longer being taken by the patient or I do not consider it necessary to 'take out'.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
@@ -38,9 +38,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 <tr><td>As hospital services I want to send the complete list of patient medication to the patient's GP so that the GP can compare the information with their own records and amend accordingly.</td><td><a href="restfulapis_clinical_medicationstatement.html">POST MedicationStatement</a></td></tr>
 </table>
 
-
-### FEATURE: Discharge Summary (Create) ###
-
+** FEATURE: Discharge Summary (Create) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a clinician (hospital Services) I want to include the patient's TTO medications in the discharge summary to provide a complete and accurate list of the patient's medication to the GP.</td><td>Refer to the Transfer or Care eDischarge Bundle (<a href="restfulapis_clinical_medicationstatement.html">MedicationStatement</a>)</td></tr>
@@ -54,7 +52,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 <img src="images/use_cases/michaels_story-epic_2a.jpg" style="width:49%;display:inline;"> 
 <img src="images/use_cases/michaels_story-epic_2b.jpg" style="width:49%;display:inline;"> 
 
-### FEATURE: Dispensing of TTO medication ###
+** FEATURE: Dispensing of TTO medication **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a pharmacist (hospital services) I want to validate the medications prescribed, with the patient, so that i can provide the patient with the necessary medication that supplements what they currently have, ensuring they have enough medication to last at least two weeks (or a locally agreed amount).</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
@@ -70,7 +68,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStoryPicture4.jpg" style="width:50%;max-width: 50%;"></p>
 
-### FEATURE: Medication list - Patient Facing (View) ###
+** FEATURE: Medication list - Patient Facing (View) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a patient I want to manage my medications from various care settings (and their administration) in one place so I can ensure that I don't run out of my meds as well as having a record that can be shown to another care provider if necessary.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
@@ -83,7 +81,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory5.png" style="width:50%;max-width: 50%;"></p>
 
-### FEATURE: Discharge Summary ###
+** FEATURE: Discharge Summary **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a general practitioner (Primary Care, General Practice) I want to review the discharge summary created as a result of my patient's stay in hospital so I can update my records with the most recent and accurate patient information.</td><td>Refer to the Transfer or Care eDischarge Bundle</td></tr>
@@ -103,7 +101,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 <tr><td>As a patient I want to be reminded when my medications are due to be taken so that I can ensure that I don't forget to take my meds when they are due.</td><td><a href="restfulapis_clinical_medicationstatement.html#patient">GET MedicationStatement</a></td></tr>
 </table>
 
-### FEATURE: Medication Administration ###
+** FEATURE: Medication Administration **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a patient I want to record the actual medication I have taken so that I have a complete record of how well I have adhered to my medicatication regimen and my care team can review this, contacting me if there are any concerns.</td><td>POST MedicationAdministration</td></tr>
@@ -114,14 +112,14 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory7.png" style="width:50%;max-width: 50%;"></p>
 
-### FEATURE: Medication List (Manage) ###
+** FEATURE: Medication List (Manage) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Patient I want to add any additional medicines that I purchase (such as over-the-counter, vitamins, natural remedies) so that I can maintain an accurate list of my medication for myself and my care team to review.</td><td><a href="restfulapis_clinical_medicationstatement.html">POST MedicationStatement</a></td></tr>
 <tr><td>As a patient I want to scan the bar code of a drug to add that to my medications list to facilitate a rapid update of my medications list without having to type in the medication details and reducing the chance or error.</td><td></td></tr>
 </table>
 
-### FEATURE: Drug Interaction Checking ###
+** FEATURE: Drug Interaction Checking **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Patient I want any additional medicines that I add to my medications list to be checked for interactions and contraindications to improve the effectiveness of my medication and offer increased safety.</td><td></td></tr>
@@ -133,43 +131,43 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory8.png" style="width:50%;max-width: 50%;"></p>
 
-### FEATURE: Patient Record (Search) ###
+** FEATURE: Patient Record (Search) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a health advisor (Primary Care, NHS 111) I want to retreive a patient's record based on the information they provide over phone to review the current patient information in order to offer the best possible advice.</td><td><a href="restfulapis_identification_patient.html#2-search-parameters">GET Patient</a></td></tr>
 </table>
 
-### FEATURE: Medication List (View) ###
+** FEATURE: Medication List (View) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a health advisor (Primary Care, NHS 111) I want to review a caller's current medication from Primary Care to ensure I have the most complete list of medications to help diagnose a condition, reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
 </table>
 
-### FEATURE: Allergy, Intolerance and Adverse Reaction List (Manage) ###
+** FEATURE: Allergy, Intolerance and Adverse Reaction List (Manage) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a health advisor (Primary Care, NHS 111) I want to add a suspected allergy to a patient's record to alert other clinicians treating this patient that there is possibility of a reaction even though it still requires confirmation.</td><td><a href="restfulapis_clinical_allergyintollerance.html">POST AllergyIntolerance</a></td></tr>
 </table>
 
-### FEATURE: Medication List (Manage) ###
+** FEATURE: Medication List (Manage) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a health advisor (Primary Care, NHS 111) I want to stop a medication on the patient's medication list that the patient has recorded themself using a patient facing solution because I think the patient is allergic to the medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">PUT MedicationStatement</a></td></tr>
 </table>
 
-### FEATURE: Resource (Search) ###
+** FEATURE: Resource (Search) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a health advisor (Primary Care, NHS 111) I want to find a community pharmacy near to a patient's current location to provide the patient with the most covenient chemist to collect their prescription.</td><td><a href="restfulapis_identification_location.html#2-search-parameters">GET Location</a></td></tr>
 </table>
 
-### FEATURE: Medication Order (Create) ###
+** FEATURE: Medication Order (Create) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a health advisor (Primary Care, NHS 111) I want to send a prescription for a calling patient to a pharmacy which is local to them to reduce the need for paper prescriptions, reduce interpretation errors and offer greater convenience for the patient.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
 </table>
 
-### FEATURE: Appointment Booking ###
+** FEATURE: Appointment Booking **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a health advisor (Primary Care, NHS 111) I want to make an appointment with a GP for a calling patient to offer the most suitable care to the patient given the condition presented with, in the most convenient way for them.</td><td>POST Appointment</td></tr>
@@ -181,7 +179,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory9.png" style="width:50%;max-width: 50%;"></p>
 
-### FEATURE: Medication List (View) ###
+** FEATURE: Medication List (View) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a general practitioner (Primary Care, General Practice) I want to see medications bought over the counter to ensure I have the most complete list of medications to help diagnose a condition and reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
@@ -190,13 +188,13 @@ This example refers to the reconciliation being performed by the doctor. The sto
 <tr><td>As a general practitioner (Primary Care, General Practice) I want to see medications obtained by the patient under the guidance of a Pharmacist to ensure I have the most complete list of medications to help diagnose a condition, reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
 </table>
 
-### FEATURE: Allergy, Intolerance and Adverse Reaction List (Manage) ###
+** FEATURE: Allergy, Intolerance and Adverse Reaction List (Manage) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>I want to confirm a patient's suspected allergy to ensure that the patient is not prescribed drugs or exposed to anything during their healthcare encounters that may cause an adverse reaction.</td><td><a href="restfulapis_clinical_allergyintollerance.html">PUT AllergyIntolerance</a></td></tr>
 </table>
 
-### FEATURE: Medication Order (Create) ###
+** FEATURE: Medication Order (Create) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a general practitioner (Primary Care, General Practice) I want to prescribe new medication for the patient to provide a remedy to a diagnosed condition.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
@@ -208,7 +206,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory10.png" style="width:50%;max-width: 50%;"></p>
 
-### FEATURE: Medication Order (Create) ###
+** FEATURE: Medication Order (Create) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Patient I want to request a repeat prescription without having to visit my GP to reduce the number of trips I make to the surgery.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
@@ -220,7 +218,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory11.png" style="width:50%;max-width: 50%;"></p>
 
-### FEATURE: Medication Order (Manage) ###
+** FEATURE: Medication Order (Manage) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Pharmacist (Primary Care, Pharmaceutical Services) I want to receive prescriptions directly so that I can prepare the medication before the patient arrives to collect it.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
@@ -233,13 +231,13 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory12.png" style="width:50%;max-width: 50%;"></p>
 
-### FEATURE: Referral (Create) ###
+** FEATURE: Referral (Create) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Specialty Doctor (Hospital Services) I want to refer a patient for physiotherapy  to provide the patient with the most appropriate care.</td><td>POST ReferralRequest</td></tr>
 </table>
 
-### FEATURE: Appointment Booking ###
+** FEATURE: Appointment Booking **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Patient  I want to book an appointment with a GP for a medication review so that I can ensure that I am on the most suitable regimen of medication.</td><td>POST Appointment</td></tr>
@@ -251,13 +249,13 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory13.png" style="width:50%;max-width: 50%;"></p>
 
-### FEATURE: Referral (Create) ###
+** FEATURE: Referral (Create) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Specialty Doctor (Hospital Services) I want to refer a patient for physiotherapy to provide the patient with the most appropriate care.</td><td>POST ReferralRequest</td></tr>
 </table>
 
-### FEATURE: Information Governance (Sealing) ###
+** FEATURE: Information Governance (Sealing) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Patient I want to restrict access to my medication record so that it can only be seen by doctors and nurses. so that I can protect my privacy.</td><td>POST Flag</td></tr>
@@ -269,19 +267,19 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory14.png" style="width:50%;max-width: 50%;"></p>
 
-### FEATURE: Care Plans, Treatment Plans, Guidelines and Protocols
+** FEATURE: Care Plans, Treatment Plans, Guidelines and Protocols **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Domicilary Care Worker (Community Services, Home Care) I want to review my patient's care plan to understand their needs and expectations</td><td>GET CarePlan</td></tr>
 </table>
 
-### FEATURE: Medication Administration ###
+** FEATURE: Medication Administration **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Domicilary Care Worker (Community Services, Home Care) I want to record actual medication that my client has taken to provide a record of the client's adherence to their medication regimen.</td><td>POST MedicationAdministration</td></tr>
 </table>
 
-### FEATURE: Medication Order (Create) ###
+** FEATURE: Medication Order (Create) **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Domicilary Care Worker (Community Services, Home Care) I want to request a repeat prescription for my client to reduce the number of trips they make to the surgery.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
