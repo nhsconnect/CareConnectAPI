@@ -384,5 +384,7 @@ The Patient Demographics Supplier may act as a proxy to an existing HL7v2 PDQ, F
 max-width="200px" file="design/Gateway PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
 caption=" Implementing PDQ FHIR as a gateway" %}
 
+The [gateway pattern](http://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingGateway.html) can insulate client applications from complex processing which is especially useful for web applications. This would typically be done in a Trust Integration Engine or other middleware products such as Apache Camel.
+
 {% include image.html
 max-width="200px" file="design/Gateway Process Flow PDQm.jpg" alt="Gateway Process Flow PDQ FHIR" caption="Sample PDQ FHIR gateway process flow" %}
