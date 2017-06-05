@@ -225,8 +225,6 @@ This example refers to the reconciliation being performed by the doctor. The sto
 <tr><td>As a Pharmacist (Primary Care, Pharmaceutical Services) I want to inform a patient that their prescription is available for collection so they can arrange for collection.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
 </table>
 
-## Patient Facing Services ##
-
 {% include callout.html content="On Michael's care plan it states he needs a medication review with his hospital specialist for a particular specialist medication which is arranged via a virtual consultation." %}
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory12.png" style="width:50%;max-width: 50%;"></p>
