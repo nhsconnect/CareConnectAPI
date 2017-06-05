@@ -95,7 +95,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory6.png" style="width:50%;max-width: 50%;"></p>
 
-### FEATURE: Medication Reminder ###
+** FEATURE: Medication Reminder **
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a patient I want to be reminded when my medications are due to be taken so that I can ensure that I don't forget to take my meds when they are due.</td><td><a href="restfulapis_clinical_medicationstatement.html#patient">GET MedicationStatement</a></td></tr>
