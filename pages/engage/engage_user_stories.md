@@ -28,7 +28,7 @@ The images have been taken from the [Interop Summit](https://drive.google.com/fi
 This example refers to the reconciliation being performed by the doctor. The stories reflect this scenario and don’t explore the other cases where the reconciliation is performed by a technician or a pharmacist. This could be significant given that reconciliation by a technician when not validated by a pharmacist would include additional workflow for review." %}
 
 
-* FEATURE: Medication (Reconciliation - Discharge) *
+**FEATURE: Medication (Reconciliation - Discharge)**
 
 <table style="width:100%;max-width: 100%;"><tr><th>User Story</th><th>Profile</th></tr>
 <tr><td>As a clinician (hospital services) I want to ‘stop’ medication that is present on the patient’s drug chart because a drug is no longer being taken by the patient or I do not consider it necessary to 'take out'.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
