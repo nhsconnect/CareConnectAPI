@@ -1,6 +1,4 @@
-api: "The term API (Application Programming Interface) is quite a confused term in the context of FHIR. Strictly speaking, an API is a set or services offered by a programming library that can be made use of by another application. Historically these would have been made available from a single machine although now they are available across networks.
-
-In the service/message/document categorisation, an API is a service interface although many don’t consider it so. As technology became increasingly capable of supporting distributed operations, the differences between SOA (Service Oriented Architecture) and API became blurred. In the context of FHIR we define APIs as REST based interfaces."
+api: "The term API (Application Programming Interface) is quite a confused term in the context of FHIR. Strictly speaking, an API is a set or services offered by a programming library that can be made use of by another application. Historically these would have been made available from a single machine although now they are available across networks.<br><br>In the service/message/document categorisation, an API is a service interface although many don’t consider it so. As technology became increasingly capable of supporting distributed operations, the differences between SOA (Service Oriented Architecture) and API became blurred. In the context of FHIR we define APIs as REST based interfaces."
 doh: "Department of Health"
 nhsd: "NHS Digital"
 ods: "Organisational Data Service"
