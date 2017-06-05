@@ -1,5 +1,5 @@
 ---
-title: Design | Patient Search (PDQ)
+title: Design | Patient Search
 keywords: development
 tags: [design,development]
 sidebar: overview_sidebar
@@ -38,6 +38,7 @@ patient context by scanning a bracelet
 demographic information such as a non-postback search, additional demographic detail,
 etc.
 * Any low resource application which exposes patient demographic search functionality
+* A facade providing a simple API to a complex interface
 
 ## 2. Basic Patient Search ##
 
@@ -103,6 +104,10 @@ A sample response is shown below
                     <system value="https://fhir.nhs.uk/Id/nhs-number"/>
                     <value value="9876543210"/>
                 </identifier>
+                <identifier>
+                    <system value="https://fhir.jorvik.nhs.uk/PAS/Patient"/>
+                    <value value="123345"/>
+                </identifier>
                 <active value="true"/>
                 <name>
                     <use value="usual"/>
@@ -142,7 +147,7 @@ A sample response is shown below
 What we have just described is shown in the diagram below. When entered the url we did a Patient Demographic Query and the response is called Patient Demographic Query Response.
 
 {% include image.html
-max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow PDQ FHIR" caption="Basic Process Flow PDQ FHIR" %}
+max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow PDQ FHIR" caption="Basic Process Flow" %}
 
 If your familiar with NHS SDS/ODS Codes you may have noticed the ODS Code as the managing organisation.
 
@@ -208,7 +213,44 @@ The response from this request is shown below, it is not returned in a FHIR [Bun
 
 ### 2.1 identifier ###
 
-To find a patient by NHS number, Hospital number, etc we use the identifier
+To find a patient by NHS number, Hospital number, etc we use the identifier. The earlier example contained an NHS number, the number 9876543210 belongs to the system `https://fhir.nhs.uk/Id/nhs-number`, which is identifier for the NHS Number in England and Wales.
+
+```xml
+<identifier>
+    <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
+        ... snip ...
+    </extension>
+    <system value="https://fhir.nhs.uk/Id/nhs-number"/>
+    <value value="9876543210"/>
+</identifier>
+```
+
+To search for Patients by NHS number, use the following query:
+
+```
+GET /Patient?identifier=[system]|[code]
+```
+
+The system is `https://fhir.nhs.uk/Id/nhs-number` and the code is `9876543210`, e.g.
+
+```
+http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
+```
+
+This will return all Patient resources with a NHS number of 9876543210, this may be more than one. NHS Number is not normally the main patient identifier within a trust, this is for a number of reasons:
+* Patient doesn't have a NHS Number (foreign visitor or from another home nation in the UK)
+* Patient's NHS number hasn't been validated
+* Patient has not been identified yet
+
+For these reasons the health organisation will use it's own primary identifier, often referred to as Hospital or District number. Organisation's will need to create their own system for the identifier, in the example Jorvik NHS Trust have used 'https://fhir.jorvik.nhs.uk/PAS/Patient' to indicate PAS Hospital Number. They use this with the API as shown below:
+
+```
+http://[baseUrl]/Patient?identifier=https://fhir.jorvik.nhs.uk/PAS/Patient|123345
+```
+
+### 2.2. Example Java - Basic Patient Search ###
+
+
 
 ## 3. National (NHS) Patient Search ##
 

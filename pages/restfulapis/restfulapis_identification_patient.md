@@ -130,6 +130,10 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
                     <system value="https://fhir.nhs.uk/Id/nhs-number"/>
                     <value value="9876543210"/>
                 </identifier>
+                <identifier>
+                    <system value="https://fhir.jorvik.nhs.uk/PAS/Patient"/>
+                    <value value="123345"/>
+                </identifier>
                 <active value="true"/>
                 <name>
                     <use value="usual"/>
