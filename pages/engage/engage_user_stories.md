@@ -206,11 +206,24 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory10.png" style="width:50%;max-width: 50%;"></p>
 
+### FEATURE: Medication Order (Create) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a Patient I want to request a repeat prescription without having to visit my GP to reduce the number of trips I make to the surgery.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
+</table>
+
 ## Community Pharmacy ##
 
 {% include callout.html content="Michael's pharmacy receives the repeat prescription request and notifies Michael on his \"medication manager\" app that it is ready to collect." %}
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory11.png" style="width:50%;max-width: 50%;"></p>
+
+### FEATURE: Medication Order (Manage) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a Pharmacist (Primary Care, Pharmaceutical Services) I want to receive prescriptions directly so that I can prepare the medication before the patient arrives to collect it.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
+<tr><td><tr><td>As a Pharmacist (Primary Care, Pharmaceutical Services) I want to inform a patient that their prescription is available for collection so they can arrange for collection.</td><td></td></tr></td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
+</table>
 
 ## Patient Facing Services ##
 
@@ -218,11 +231,29 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory12.png" style="width:50%;max-width: 50%;"></p>
 
+### FEATURE: Referral (Create) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a Specialty Doctor (Hospital Services) I want to refer a patient for physiotherapy  to provide the patient with the most appropriate care.</td><td>POST ReferralRequest</td></tr>
+</table>
+
+### FEATURE: Appointment Booking ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a Patient  I want to book an appointment with a GP for a medication review so that I can ensure that I am on the most suitable regimen of medication.</td><td>POST Appointment</td></tr>
+</table>
+
 ## Patient Facing Services ##
 
 {% include callout.html content="Following the virtual consultation, the specialist refers Michael to the physiotherapist; Michael requests a particular medication is made private. After discussion with the specialist, Michael adds a privacy flag to his \"medication manager\" app which restricts viewing to all care professionals expect doctors and nurses." %}
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory13.png" style="width:50%;max-width: 50%;"></p>
+
+### FEATURE: Referral (Create) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a Specialty Doctor (Hospital Services) I want to refer a patient for physiotherapy to provide the patient with the most appropriate care.</td><td>POST ReferralRequest</td></tr>
+</table>
 
 ## Community Services ##
 
