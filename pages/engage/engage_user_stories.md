@@ -146,7 +146,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 ### FEATURE: Allergy, Intolerance and Adverse Reaction List (Manage) ###
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
-<tr><td>I want to add a suspected allergy to a patient's record to alert other clinicians treating this patient that there is possibility of a reaction even though it still requires confirmation.</td><td><a href="restfulapis_clinical_allergyintollerance.html">POST AllergyIntolerance</a></td></tr>
+<tr><td>As a health advisor (Primary Care, NHS 111) I want to add a suspected allergy to a patient's record to alert other clinicians treating this patient that there is possibility of a reaction even though it still requires confirmation.</td><td><a href="restfulapis_clinical_allergyintollerance.html">POST AllergyIntolerance</a></td></tr>
 </table>
 
 ### FEATURE: Medication List (Manage) ###
@@ -222,7 +222,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 <table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
 <tr><td>As a Pharmacist (Primary Care, Pharmaceutical Services) I want to receive prescriptions directly so that I can prepare the medication before the patient arrives to collect it.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
-<tr><td><tr><td>As a Pharmacist (Primary Care, Pharmaceutical Services) I want to inform a patient that their prescription is available for collection so they can arrange for collection.</td><td></td></tr></td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
+<tr><td>As a Pharmacist (Primary Care, Pharmaceutical Services) I want to inform a patient that their prescription is available for collection so they can arrange for collection.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
 </table>
 
 ## Patient Facing Services ##
@@ -255,9 +255,32 @@ This example refers to the reconciliation being performed by the doctor. The sto
 <tr><td>As a Specialty Doctor (Hospital Services) I want to refer a patient for physiotherapy to provide the patient with the most appropriate care.</td><td>POST ReferralRequest</td></tr>
 </table>
 
+### FEATURE: Information Governance (Sealing) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a Patient I want to restrict access to my medication record so that it can only be seen by doctors and nurses. so that I can protect my privacy.</td><td>POST Flag</td></tr>
+</table>
+
 ## Community Services ##
 
 {% include callout.html content="Michael's care plan is designed to support him to live independently through a self-funding domicillary care package that helps him to get up, wash and prepare for the day. His carers can also relay information about his medication compliance or side effects through the \"medication manager\" app, as well as requesting repeat prescriptions on his behalf." %}
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory14.png" style="width:50%;max-width: 50%;"></p>
 
+### FEATURE: Care Plans, Treatment Plans, Guidelines and Protocols
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a Domicilary Care Worker (Community Services, Home Care) I want to review my patient's care plan to understand their needs and expectations</td><td>GET CarePlan</td></tr>
+</table>
+
+### FEATURE: Medication Administration ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a Domicilary Care Worker (Community Services, Home Care) I want to record actual medication that my client has taken to provide a record of the client's adherence to their medication regimen.</td><td>POST MedicationAdministration</td></tr>
+</table>
+
+### FEATURE: Medication Order (Create) ###
+
+<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<tr><td>As a Domicilary Care Worker (Community Services, Home Care) I want to request a repeat prescription for my client to reduce the number of trips they make to the surgery.</td><td><a href="restfulapis_clinical_medicationorder.html">POST MedicationOrder</a></td></tr>
+</table>
