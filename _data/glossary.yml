@@ -1,10 +1,10 @@
 api: "The term API (Application Programming Interface) is quite a confused term in the context of FHIR. Strictly speaking, an API is a set or services offered by a programming library that can be made use of by another application. Historically these would have been made available from a single machine although now they are available across networks.<br><br>In the service/message/document categorisation, an API is a service interface although many don’t consider it so. As technology became increasingly capable of supporting distributed operations, the differences between SOA (Service Oriented Architecture) and API became blurred. In the context of FHIR we define APIs as REST based interfaces."
-doh: "Department of Health"
-nhsd: "NHS Digital"
-ods: "<b>Organisational Data Service</b> Responsible for publishing organisation and practitioner codes, along with related national policies and standards. We're also responsible for the ongoing maintenance of the organisation and person nodes of the Spine Directory Service, the central data repository used within various NHS systems and services."
-pas: "<b>Patient Administration System</b> The PAS records the patient's demographics (e.g. name, home address, date of birth) and details all patient contact with the hospital, both outpatient and inpatient.<br><br>Some PAS systems do support additional clinical behaviours."
-pds: "<b>Personal Demographic Service</b> The national electronic database of NHS patient details such as name, address, date of birth and NHS Number (known as demographic information). (Implemented with HL7 v3)"
-sds: "<b>Spine Directory Service</b> NHS Spine service comprised of the Spine User Directory and Spine Accredited Systems and Services. The SDS ensures that transactions/messages are only processed from authorised users and systems. (Implemented with LDAP)"
+doh: "<i>Department of Health</i>"
+nhsd: "<i>NHS Digital</i>"
+ods: "<i>Organisational Data Service</i> Responsible for publishing organisation and practitioner codes, along with related national policies and standards. We're also responsible for the ongoing maintenance of the organisation and person nodes of the Spine Directory Service, the central data repository used within various NHS systems and services."
+pas: "<i>Patient Administration System</i> The PAS records the patient's demographics (e.g. name, home address, date of birth) and details all patient contact with the hospital, both outpatient and inpatient.<br><br>Some PAS systems do support additional clinical behaviours."
+pds: "<i>Personal Demographic Service</i> The national electronic database of NHS patient details such as name, address, date of birth and NHS Number (known as demographic information). (Implemented with HL7 v3)"
+sds: "<i>Spine Directory Service</i> NHS Spine service comprised of the Spine User Directory and Spine Accredited Systems and Services. The SDS ensures that transactions/messages are only processed from authorised users and systems. (Implemented with LDAP)"
 spine: "Is a collection of national applications, services and directories which support the health and social care sector in the exchange of information in national and local IT systems"
 
 
