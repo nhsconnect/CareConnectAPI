@@ -1,7 +1,7 @@
 entries:
 - title: Care Connect
   product: Care Connect
-  version: alpha.0.0.1
+  version: 0.3.0-alpha.0
   levels: one
   folders:
 
@@ -12,11 +12,14 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
-    - title: Development Roadmap
-      url: /design_development_roadmap.html
+    - title: API Journey
+      url: /overview_api_journey.html
       output: web
-    - title: Care Connect Versioning
-      url: /design_product_versioning.html
+    - title: Provide APIs
+      url: /overview_api_provide.html
+      output: web
+    - title: Guide Versioning
+      url: /overview_guide_versioning.html
       output: web
     - title: Glossary
       url: /overview_glossary.html
@@ -29,7 +32,7 @@ entries:
       url: /engage.html
       output: web, pdf
       type: homepage
-    - title: User Stories | FHIR&reg; 
+    - title: User Stories | FHIR&reg;
       url: /engage_user_stories.html
       output: web
       subfolders:
@@ -46,15 +49,19 @@ entries:
       output: web
       subfolders:
 
-  - title: Design & Build
+  - title: Explore
     output: web
     folderitems:
     - title: Overview | Profiles
       url: /restfulapis.html
       output: web
+    - title: Care Connect Versioning
+      url: /overview_cc_versioning.html
+      output: web
       subfolders:
       - title: Clinical
         output: web
+        subfolders:
         subfolderitems:
           - title: Allergy Intolerance
             url: /restfulapis_clinical_allergyintolerance.html
@@ -62,17 +69,11 @@ entries:
           - title: Condition
             url: /restfulapis_clinical_condition.html
             output: web
-          - title: Family Member History
-            url: /restfulapis_clinical_familymemberhistory.html
-            output: web
           - title: Immunization
             url: /restfulapis_clinical_immunization.html
             output: web
           - title: Medication
             url: /restfulapis_clinical_medication.html
-            output: web
-          - title: Medication Flag
-            url: /restfulapis_clinical_medicationflag.html
             output: web
           - title: Medication Order
             url: /restfulapis_clinical_medicationorder.html
@@ -85,13 +86,13 @@ entries:
             output: web
           - title: Procedure
             url: /restfulapis_clinical_procedure.html
-            output: web 
+            output: web
       - title: Identification
         output: web
         subfolderitems:
           - title: Location
-            url: /restfulapis_identification_location.html  
-            output: web          
+            url: /restfulapis_identification_location.html
+            output: web
           - title: Organisation
             url: /restfulapis_identification_organisation.html
             output: web
@@ -99,49 +100,54 @@ entries:
             url: /restfulapis_identification_patient.html
             output: web
           - title: Practitoner
-            url: /restfulapis_identification_practitoner.html  
-            output: web          
+            url: /restfulapis_identification_practitoner.html
+            output: web
       - title: Workflow
         output: web
         subfolderitems:
           - title: Encounter
-            url: /restfulapis_workflow_encounter.html  
-            output: web          
-          - title: Flag
-            url: /restfulapis_workflow_flag.html
+            url: /restfulapis_workflow_encounter.html
             output: web
-
-    - title: API Foundations
-      url: /foundations.html
-      output: web
-    - title: Search
-      url: /restfulapis_search.html
-      output: web
-    - title: Reference
-      url: /development_deliverables.html
-      output: web
-
-    - title: Conformance Profile | FHIR&reg; 
-      url: /foundations_use_case_get_the_fhir_conformance_profile.html
-      output: web      
-      subfolders:
-      - title: API Guidance | FHIR&reg; 
+      - title: Conformance
         output: web
         subfolderitems:
-
+        - title: Conformance
+          url: /restfulapis_conformance_conformance.html
+          output: web
+      - title: API Guidance | FHIR&reg;
+        output: web
+        subfolderitems:
+        - title: Foundations
+          url: /foundations.html
+          output: web
         - title: Open Source
           url: /development_fhir_open_source_guidance.html
           output: web
         - title: Security Guidance
           url: /development_api_security_guidance.html
           output: web
-          
-  - title: Explore
+        - title: Reference
+          url: /development_deliverables.html
+          output: web
+  - title: Design & Build
     output: web
     folderitems:
     - title: Overview | Coming soon
       url: /support_coming_soon.html
       output: web
+    - title: Patient Search
+      url: /design_patient_search.html
+      output: web
+      subfolders:
+      - title: Patient Care Coordination
+        output: web
+        subfolderitems:
+        - title: Clinical
+          url: /design_pcc_clinical.html
+          output: web
+        - title: Medication
+          url: /design_pcc_medication.html
+          output: web
   - title: Test
     output: web
     folderitems:
@@ -180,12 +186,15 @@ entries:
     - title: FHIR&reg;
       url: /tag_fhir.html
       output: web
-    - title: Use Case
-      url: /tag_use_case.html
+    - title: User Stories
+      url: /tag_user_stories.html
+      output: web
+    - title: Case Studies
+      url: /tag_casestudies.html
       output: web
     - title: Design
       url: /tag_design.html
-      output: web	  
+      output: web
     - title: Development
       url: /tag_development.html
       output: web

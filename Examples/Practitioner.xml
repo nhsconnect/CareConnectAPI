@@ -1,0 +1,41 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Practitioner-1"/>
+	</meta>
+	<identifier>
+		<system value="https://fhir.nhs.uk/Id/sds-user-id"/>
+		<value value="G8133438"/>
+	</identifier>
+	<name>
+		<family value="Bhatia"/>
+		<given value="AA"/>
+		<prefix value="Dr."/>
+	</name>
+	<telecom>
+		<system value="phone"/>
+		<value value="0115 9737320"/>
+		<use value="work"/>
+	</telecom>
+	<address>
+		<use value="work"/>
+		<line value="Regent Street"/>
+		<line value="Long Eaton"/>
+		<city value="Nottingham"/>
+		<postalCode value="NG10 1QQ"/>
+		<country value="GBR"/>
+</address>
+	<gender value="male"/>
+	<practitionerRole>
+		<managingOrganization>
+			<reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
+			<display value="The Moir Medcial Centre"/>
+		</managingOrganization>
+		<role>
+			<coding>
+				<system value="https://fhir.hl7.org.uk/ValueSet/sds-job-role-name-1"/>
+				<code value="R0260"/>
+				<display value="General Medical Practitioner"/>
+			</coding>
+		</role>
+	</practitionerRole>
+</Practitioner>

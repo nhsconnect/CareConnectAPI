@@ -11,4 +11,4 @@ summary: "A process to help get you started using Care Connect Profiles in your 
 
 INTEROPen has worked with health care providers and system vendors to help define how the INTEROPen community can start using the profiles. The process is being refined through proof of concepts and by the community. So please contribute to help improve the community and fulfill the potential of Care Connect.
 
-{% include contribute.html content="Get in touch with careconnect@interopen.org to become a Proof of Concept"%}
+{% include custom/contribute.html content="Get in touch with careconnect@interopen.org to become a Proof of Concept"%}

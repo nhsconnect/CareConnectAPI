@@ -1,23 +1,21 @@
 <Patient xmlns="http://hl7.org/fhir">
    <meta>
-      <versionId value="1"/>
-      <lastUpdated value="2017-03-13T09:56:05.964-04:00"/>
-      <profile value="http://hl7.org/fhir/StructureDefinition/careconnect-patient-1"/>
+      <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
    </meta>
-   <extension url="http://hl7.org.uk/fhir/CareConnect-EthnicCategory-1-Extension">
+   <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-EthnicCategory-1">
       <valueCodeableConcept>
          <coding>
-            <system value="http://hl7.org.uk/fhir/CareConnect-EthnicCategory-1"/>
-            <code value="A"/>
+            <system value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
+            <code value="01"/>
             <display value="British, Mixed British"/>
          </coding>
       </valueCodeableConcept>
    </extension>
    <identifier>
-      <extension url="http://hl7.org.uk/fhir/CareConnect-NhsNumberVerificationStatus-1-Extension">
+      <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
          <valueCodeableConcept>
             <coding>
-               <system value="http://hl7.org.uk/fhir/ValueSet/CareConnect-NhsNumberVerificationStatus"/>
+               <system value="https://fhir.hl7.org.uk/CareConnect-NHSNumberVerificationStatus-1"/>
                <code value="01"/>
                <display value="Number present and verified"/>
             </coding>
@@ -25,6 +23,10 @@
       </extension>
       <system value="https://fhir.nhs.uk/Id/nhs-number"/>
       <value value="9876543210"/>
+   </identifier>
+   <identifier>
+       <system value="https://fhir.jorvik.nhs.uk/PAS/Patient"/>
+       <value value="123345"/>
    </identifier>
    <active value="true"/>
    <name>
@@ -38,20 +40,19 @@
    <address>
       <use value="home"/>
       <line value="10, Field Jardin"/>
-      <line value="Upton"/>
-      <city value="Leeds"/>
-      <district value="West Yorkshire"/>
-      <postalCode value="LS10 1ZZ"/>
+      <line value="Long Eaton"/>
+      <city value="Nottingham"/>
+      <postalCode value="NG10 1ZZ"/>
    </address>
    <maritalStatus>
       <coding>
-         <system value="http://hl7.org/fhir/marital-status"/>
+         <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
          <code value="S"/>
-         <display value="Single"/>
+         <display value='Never Married'/>
       </coding>
    </maritalStatus>
-   <careProvider>
-      <reference value="https://pds.proxy.nhs.uk/Patient/Y00001"/>
-      <display value="MGP Medical Centre"/>
-   </careProvider>
+   <managingOrganization>
+      <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
+      <display value="Moir Medical Centre"/>
+   </managingOrganization>
 </Patient>

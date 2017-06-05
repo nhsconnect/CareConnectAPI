@@ -1,0 +1,13 @@
+<h3 id="status">{{include.para}} {{include.name}}</h3>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET /{{include.content}}?patient=[id]&{{include.name}}=[code]</div>
+
+<p>See <a href="https://www.hl7.org/fhir/DSTU2/search.html#token" >token</a> for details on this parameter.</p>
+<p>To filter on {{include.name}} ( <code class="highlighter-rouge">{{include.options}}</code> )</p>
+
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET /{{include.content}}?patient=1&{{include.name}}={{include.selected}}
+</span></code>
+Return all {{include.content}} resources with a {{include.name}} of {{include.selected}} and Patient with a logical id of 1.</pre>
+</div>

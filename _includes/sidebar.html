@@ -1,14 +1,14 @@
 {% include custom/sidebarconfigs.html %}
 
 <ul id="mysidebar" class="nav">
-	
+
     <p style="font-size:2em;">
         <img src="{{ "images/interopen.png" }}" height="48px" alt="INTEROpen Logo"/>
     INTEROPen</p>
     <p style="font-size:16px;">Supported by
     <img src="{{ "images/logo.png" }}" height="36px"  alt="NHS Digital Logo"/>
     </p>
-    
+
 
     <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</li>
     {% for entry in sidebar %}
@@ -49,7 +49,8 @@
             {% endif %}
             {% endfor %}
         </ul>
-        {% endif %}
+     </li>
+       {% endif %}
         {% endfor %}
         {% endfor %}
         <!-- if you aren't using the accordion, uncomment this block:
@@ -57,9 +58,7 @@
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
            </p>
            -->
-    </li>
 </ul>
-</div>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>

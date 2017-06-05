@@ -1,0 +1,50 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationStatement-1"/>
+	</meta>
+	<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationStatementLastIssueDate-1">
+		<valueDateTime value="2017-03-27T00:00:00+01:00"/>
+	</extension>
+	<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationRepeatInformation-1">
+		<extension url="reviewDate">
+			<valueDateTime value="2017-05-27T00:00:00+01:00"/>
+		</extension>
+		<extension url="numberOfRepeatsIssued">
+			<valueInteger value="1"/>
+		</extension>
+	</extension>
+	<patient>
+		<reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+		<display value="Bernie Kanfeld"/>
+	</patient>
+	<informationSource>
+		<reference value="https://sds.proxy.nhs.uk/Practitioner/G8040738"/>
+		<display value="Dr AD Jordan"/>
+	</informationSource>
+	<dateAsserted value="2017-05-29T00:00:00+01:00"/>
+	<status value="active"/>
+	<supportingInformation>
+		<reference value="MedicationOrder/1710523"/>
+	</supportingInformation>
+	<supportingInformation>
+		<reference value="MedicationOrder/1232131123"/>
+	</supportingInformation>
+	<medicationCodeableConcept>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="10097211000001102"/>
+			<display value="Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices"/>
+		</coding>
+	</medicationCodeableConcept>
+	<dosage>
+		<text value='Three times a day'/>
+		<timing>
+			<code>
+				<coding>
+					<system value="http://hl7.org/fhir/v3/GTSAbbreviation"/>
+					<code value="TID"/>
+				</coding>
+			</code>
+		</timing>
+	</dosage>
+</MedicationStatement>

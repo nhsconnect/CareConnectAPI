@@ -1,0 +1,98 @@
+backend:
+  name: github
+  repo: nhsconnect/CareConnectAPI # Path to your Github repository
+  branch: develop # Branch to update (master by default)
+  site_domain: care-connect-api.netlify.com
+
+public_folder: "content" # does this do anything?
+media_folder: "content/uploads" # Folder where user uploaded files should go
+
+publish_mode: editorial_workflow
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "engage"
+    label: "Engage"
+    files:
+    - name: "engage_overview"
+      label: "Overview"
+      file: "site/content/engage/engage.md"
+    - name: "engage_using_profiles"
+      label: "Using Profiles"
+      file: "site/content/engage/engage_using_profiles.md"
+    - name: "engage_proof_of_concept"
+      label: "PoC"
+      file: "site/content/engage/engage_proof_of_concept.md"
+    - name: "engage_using_profiles"
+      label: "Using Profiles"
+      file: "site/content/engage/engage_using_profiles.md"
+    - name: "engage_proof_of_concept"
+      label: "PoC"
+      file: "site/content/engage/engage_proof_of_concept.md"
+    - name: "engage_user_stories"
+      label: "User Story"
+      file: "site/content/engage/engage_user_stories.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Type, name: type, widget: hidden, default: products}
+        - {label: Page, name: page, widget: hidden, default: "/user_story.html"}
+        - {label: Image, name: image, widget: image}
+        - {label: Heading, name: heading, widget: string}
+        - {label: Description, name: description, widget: string}
+        - {label: Story, name: story, widget: string}
+  - name: "engage_feature_add"
+    label: "Add a feature"
+    folder: "_site/content" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "feature-{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Page, name: page, widget: hidden, default: "/feature.html"}
+      - {label: Image, name: image, widget: image}
+      - {label: Scenario, name: scenario, widget: string}
+      - {label: Conversations, name: conversations, widget: string}
+      - {label: Story, name: story, widget: string}
+      - {label: Post, name: post, widget: string}
+      - {label: Search, name: search, widget: string}
+    meta: # Meta data fields. Just like fields, but without any preview element
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+
+  - name: "case_studies"
+    label: "Case Studies"
+    create: true # Allow users to create new documents in this collection
+    files:
+      - file: "_site/content/engage/engage_case_studies.html"
+        label: "Case Study"
+        name: "engage_case_study"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Type, name: type, widget: hidden, default: products}
+          - {label: Page, name: page, widget: hidden, default: "/products.html"}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Story, name: story, widget: string}
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, ie.: "New Post"
+    folder: "_posts" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Categories", name: "categories", widget: "string"}
+    meta: # Meta data fields. Just like fields, but without any preview element
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+  - name: "blog" # Used in routes, e.g. /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "_posts/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Body", name: "body", widget: "markdown"} 

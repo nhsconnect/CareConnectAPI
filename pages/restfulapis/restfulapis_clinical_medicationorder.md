@@ -4,79 +4,146 @@ keywords: usecase, medication, order
 tags: [fhir, rest, clinical, medication]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationorder.html
-summary: Clinical Medication Order
+summary: An order for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationOrder" rather than "MedicationPrescription" to generalize the use across inpatient and outpatient settings as well as for care plans, etc.
 ---
+{% include custom/search.warnbanner.html %}
 
-## Medication Order ##
+{% include custom/profile.html content="Medication Order" page="CareConnect-MedicationOrder-1" %}
 
-{% include tip.html content=" [Care Connect Medication Order](https://fhir-test.nhs.uk/StructureDefinition/careconnect-gpc-medicationorder-1
-) Resource." %}
+{% include custom/fhir.resource.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 
-## Read ##
+## 1. Read ##
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET /MedicationOrder/[id]</div>
 
 Return a single `MedicationOrder` for the specified id
 
-```http
-GET /MedicationOrder/[id]
-```
+## 2. Search Parameters ##
 
-## Search Parameters ##
+<div markdown="span" class="alert alert-success" role="alert">
+GET /MedicationOrder?[searchParameters]]</div>
 
 Medication order resource contains prescription information for a patient. Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 
-```http
-GET /MedicationOrder?[searchParameters]
-```
+{% include custom/moscow.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 
-{% include moscow.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
+| Name    | Type   | Description    | Conformance        | Path |
+|---------|--------|----------------|--------------------|------|
+| `date` | `date` | Returns medication request to be administered on a specific date | SHOULD | MedicationOrder.dosageInstruction.timing.event |
+| `patient` | `reference` | The identity of a patient to list orders for | SHALL | MedicationOrder.patient<br>(Patient) |
+| `status` | `token` | Status of the prescription | SHOULD | MedicationOrder.status |
 
+<!--
+| `datewritten` | `date` | Return prescriptions written on this date |  | MedicationOrder.dateWritten |
+| `identifier` | `token` | The source system of the prescriptions for  |  | MedicationOrder.identifier |
+{% include custom/search.date.plus.html content="MedicationOrder" name="datewritten"  %}
 
-| Name | Type | Description | SHALL |
-|---------|--------|----------------|--------------------|
-| `datewritten` | `date` | Return prescriptions written on this date |  |
-| `period.[start|end]` | `date` | Return prescriptions issued in this date range | Y |
-| `status` | `token` | Status of the prescription | Y |
-| `identifier` | `token` | The source system of the prescriptions for  |  |
-| `patient` | `reference` | The identity of a patient to list orders for | Y |
+{% include custom/search.identifier.html resource="MedicationOrder" content="identifier" subtext="System Filter" example="https://theccg.systemsupplier.co.uk/MedicationOrder|" text1="The CCG System Supplier" text2="not specified" %}
+-->
+{% include custom/search.date.plus.html para="2.1." content="MedicationOrder" name="date"  %}
 
+{% include custom/search.patient.html para="2.2." content="MedicationOrder" %}
 
-{% include search.patient.html content="MedicationOrder" %}
+{% include custom/search.status.html para="2.3." content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
 
-{% include search.status.html content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
+## 3. Example ##
 
-### identifier ###
+### 3.1 Request Query ###
 
-To filter to this list to a specific supplier, we can search for their system identifiers only.
+Return all MedciationOrder resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-```http
-GET /MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/MedicationOrder|
-```
+#### 3.1.1. cURL ####
 
-{% include search.date.plus.html content="MedicationOrder" name="datewritten"  %}
+{% include custom/embedcurl.html title="Search MedicationOrder" command="curl -X GET  'http://[baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
-{% include search.date.plus.html content="MedicationOrder" name="period.start"  %}
+### 3.2 Response Headers ###
 
-{% include search.date.plus.html content="MedicationOrder" name="period.end]"  %}
+| Status Code |
+|----------------|
+|200 |
 
-### Example ###
+| Header | Value |
+|-----------------|---------|
+| Content-Type  | application/xml+fhir;charset=UTF-8 |
 
-The search parameters are based around a logical model which is shown below:
+### 3.3 Response Body ###
 
-{% include image.html
-max-width="200px" file="Bristol/Bristol.EntityRelationship.Resource.bmp" alt="Bristol ERD"
-caption="MedicationOrder Logical Model" %}
-
-A search on MedicationOrder without the '_Revinclude=*' would return a FHIR [Bundle](https://www.hl7.org/fhir/DSTU2/bundle.html) would return only MedicationOrder resources. This is useful if you already have Patient, Medication and Practitioner data but in most case the calling system or web application won't be. In this case it is useful for all the referenced resources to be returned with the search results.
-This is done using the '_Revinclude=*' parameter and the returned search results now include the referenced parameters. The convention is to list the referenced resources before they are referenced (so they can be processed first).
-
-{% include image.html
-max-width="200px" file="Bristol/Bristol.searchResults.includeReferenced.bmp" alt="Bristol ERD"
-caption="MedicationOrder Search Results" %}
-
-Provider systems:
-
-- SHALL return a `200` **OK** HTTP status code on successful execution of the operation.
-
-```json
-TODO
+```xml
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="58ef1cb1-bbc4-482c-a469-8a0d338bb02b"/>
+    <meta>
+        <lastUpdated value="2017-06-02T09:15:15.163+01:00"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="1"/>
+    <link>
+        <relation value="self"/>
+        <url value="http://127.0.0.1:8181/Dstu2/MedicationOrder?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+    </link>
+    <entry>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/MedicationOrder/24961"/>
+        <resource>
+            <MedicationOrder xmlns="http://hl7.org/fhir">
+                <id value="24961"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-06-02T09:14:56.728+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationOrder-1"/>
+                </meta>
+                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationSupplyType-1">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="394823007"/>
+                            <display value="NHS Prescription"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <dateWritten value="2017-05-25T00:00:00+01:00"/>
+                <status value="active"/>
+                <patient>
+                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+                    <display value="Bernie Kanfeld"/>
+                </patient>
+                <prescriber>
+                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <display value="Dr AA Bhatia"/>
+                </prescriber>
+                <note value="Please explain to Bernie how to use injector."/>
+                <medicationCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="10097211000001102"/>
+                        <display value="Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices"/>
+                    </coding>
+                </medicationCodeableConcept>
+                <dosageInstruction>
+                    <text value="Three times a day"/>
+                    <additionalInstructions>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="1521000175104"/>
+                            <display value="After dinner"/>
+                        </coding>
+                    </additionalInstructions>
+                    <timing>
+                        <code>
+                            <coding>
+                                <system value="http://hl7.org/fhir/v3/GTSAbbreviation"/>
+                                <code value="TID"/>
+                            </coding>
+                        </code>
+                    </timing>
+                </dosageInstruction>
+                <dispenseRequest>
+                    <numberOfRepeatsAllowed value="5"/>
+                </dispenseRequest>
+            </MedicationOrder>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+</Bundle>
 ```

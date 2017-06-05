@@ -8,7 +8,7 @@ topnav_title: Care Connect API | FHIR&reg;
 site_title: Care Connect
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: INTEROpen and NHS Digital
+company_name: INTEROPen and NHS Digital
 # this appears in the footer
 
 github_editme_path: /edit/develop/
@@ -26,6 +26,9 @@ github_editme_path: /edit/develop/
 #twitter: true
 #twitter_username: twitter_username
 #twitter_site_hashtags: twitter_site_hashtags
+
+fhir_profile_baseurl: https://github.com/HL7-UK/CareConnect-profiles/blob/feature/interopen/structuredefinitions/
+fhir_profile_ext: .xml
 
 host: 127.0.0.1
 # the preview server used. Leave as is.
@@ -60,7 +63,7 @@ kramdown:
  auto_ids: true
  hard_wrap: false
  syntax_highlighter: rouge
-# filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways	
+# filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
 defaults:
   -
@@ -105,7 +108,7 @@ repository: nhsconnect/CareConnectAPI
 
 gist:
   noscript: false
-  
+
 site:
   fhirprofiles:
     patient: "[Care Connect Patient](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Patient-1.html)"

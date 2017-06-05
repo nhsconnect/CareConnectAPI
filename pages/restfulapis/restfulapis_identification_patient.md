@@ -4,72 +4,77 @@ keywords: getcarerecord, structured, rest, patient
 tags: [rest, fhir, identification]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_patient.html
-summary: Patient
+summary: Demographics and other administrative information about an individual or animal receiving care or other health-related services.
 ---
 
-## Patient ##
+{% include custom/search.warnbanner.html %}
 
-{% include profile.html content="[Care Connect Patient](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Patient-1.html)" %}
+{% include custom/profile.html content="Patient" page="CareConnect-Patient-1" %}
 
-## Read ##
+{% include custom/fhir.resource.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 
+## 1. Read ##
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Patient/[id]</div>
 Return a single `Patient` for the specified id (not the NHS Number).
 
-```http
-GET /Patient/[id]
-```
+## 2. Search Parameters ##
 
-## Search Parameters ##
-
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Patient?[searchParameters]</div>
 Patient contains the demographics for the patient. Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
 
-```http
-GET /Patient?[searchParameters]
-```
+{% include custom/moscow.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 
-{% include moscow.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
-
-
-| Name | Type | Description | SHALL |
-|---------|--------|----------------|--------------------|
-| `address` | `string` | An address in any kind of address/part of the patient |  |
-| `adddress-postcode` | `string` | A postalCode specified in an address | Y |
-| `birthdate` | `date` | The patient's date of birth | Y |
-| `careprovider` | `reference` | Patient's nominated GP | |
-| `email` | `token` | A value in an email contact | Y |
-| `family` | `string` | A portion of the family name of the patient | Y |
-| `gender` | `token` | Gender of the patient | Y |
-| `given` | `string` | A portion of the given name of the patient | Y |
-| `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | Y |
-| `name` | `string` | A portion of either family or given name of the patient | |
-| `organization` | `reference` | The practice at which this person is a patient | |
-| `phone` | `token` | A value in a phone contact | Y |
-| `telecom` | `token` | The value in any kind of telecom details of the patient |  |
+| Name | Type | Description | Conformance | Path |
+|------|------|-------------|-------|------|
+| `adddress-postcode` | `string` | A postalCode specified in an address | SHOULD | Practitioner.address.postalCode |
+| `birthdate` | `date` | The patient's date of birth | SHALL | Patient.birthDate |
+| `email` | `token` | A value in an email contact | SHOULD | Patient.telecom <br>(system=email) |
+| `family` | `string` | A portion of the family name of the patient | SHALL | Patient.name.family |
+| `gender` | `token` | Gender of the patient | SHALL | Patient.gender |
+| `given` | `string` | A portion of the given name of the patient | SHALL | Patient.name.given |
+| `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | SHALL | Patient.identifier |
+| `name` | `string` | A portion of either family or given name of the patient | SHALL | 	Patient.name |
+| `phone` | `token` | A value in a phone contact | SHOULD | Patient.telecom(system=phone) |
 
 
-### identifier (NHS Number, Hospital Number, etc) ###
+<!--
+| `address` | `string` | An address in any kind of address/part of the patient |  | Practitioner.address |
+| `careprovider` | `reference` | Patient's nominated GP | | Patient.careProvider <br>(Practitioner) |
+| `organization` | `reference` | The practice at which this person is a patient | | Patient.managingOrganization <br>(Organization) |
+| `telecom` | `token` | The value in any kind of telecom details of the patient |  | Patient.telecom |
+-->
 
+{% include custom/search.nopat.string.html para="2.1." resource="Patient" content="address-postcode"  example="NG10%201ZZ" text1="Post Code" text2="NG10 1ZZ" %}
 
+{% include custom/search.nopat.date.plus.html para="2.2." content="Patient" name="birthdate" %}
 
-### family and given ###
+{% include custom/search.nopat.string.html para="2.3." resource="Patient" content="email"  example="bernie.kanfeld@chumhum.com" text1="email address" text2="bernie.kanfeld@chumhum.com" %}
 
+{% include custom/search.nopat.string.html para="2.4." resource="Patient" content="family"  example="kanfeld" text1="surname" text2="Kanfeld" %}
 
-```
-TODO
-```
+{% include custom/search.nopat.token.html para="2.5." resource="Patient" content="gender"  example="female" text1="Administrative Sex" text2="female" %}
 
-{% include search.date.plus.html content="Patient" name="birthdate" %}
+{% include custom/search.nopat.string.html para="2.6." resource="Patient" content="given"  example="bernie" text1="forename" text2="Bernie" %}
 
+{% include custom/search.nopat.identifier.html para="2.7." resource="Patient" content="identifier" subtext="NHS Number, Hospital Number, etc" example="https://fhir.nhs.uk/Id/nhs-number|9876543210" text1="NHS Number" text2="9876543210" %}
 
-## Examples ##
+{% include custom/search.nopat.string.html para="2.8." resource="Patient" content="name"  example="bernie%20kanfeld" text1="name" text2="Bernie Kanfeld" %}
 
-Return all Patient resources with a NHS Number 9876543210, the format of the response body will be xml. Replace 'baseUrl' to the actual base Url of the FHIR Server.
+{% include custom/search.nopat.string.html para="2.9." resource="Patient" content="phone"  example="07999 123456" text1="phone number" text2="07999 123456" %}
 
-```curl
-curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml
-```
+## 3. Example ##
 
-### Response Headers ###
+### 3.1 Request Query ###
+Return all Patient resources with a NHS Number 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+
+#### 3.1.1. cURL ####
+
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET  'http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+
+### 3.2 Response Headers ###
 
 | Status Code |
 |----------------|
@@ -79,31 +84,55 @@ curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number
 |-----------------|---------|
 | Content-Type  | application/xml+fhir;charset=UTF-8 |
 
+### 3.3 Response Body ###
+
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="f0566028-976e-4d4f-8e5e-f4209b29f52e"/>
+    <id value="78682a2e-2541-4b1b-b06c-f0ab310a1ca4"/>
     <meta>
-        <lastUpdated value="2017-05-21T12:00:48.832-04:00"/>
+        <lastUpdated value="2017-06-02T09:32:09.352+01:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/Patient?_format=xml&amp;identifier=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number%7C9876543210"/>
+        <url value="http://127.0.0.1:8181/Dstu2/Patient?identifier=9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Patient/31936"/>
+        <fullUrl value="http://127.0.0.1:8181/Dstu2/Patient/24966"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
-                <id value="31936"/>
+                <id value="24966"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-21T11:55:59.532-04:00"/>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/careconnect-patient-1"/>
+                    <lastUpdated value="2017-06-02T09:30:21.875+01:00"/>
+                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
                 </meta>
+                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-EthnicCategory-1">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
+                            <code value="01"/>
+                            <display value="British, Mixed British"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
                 <identifier>
+                    <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="https://fhir.hl7.org.uk/CareConnect-NHSNumberVerificationStatus-1"/>
+                                <code value="01"/>
+                                <display value="Number present and verified"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
                     <system value="https://fhir.nhs.uk/Id/nhs-number"/>
                     <value value="9876543210"/>
+                </identifier>
+                <identifier>
+                    <system value="https://fhir.jorvik.nhs.uk/PAS/Patient"/>
+                    <value value="123345"/>
                 </identifier>
                 <active value="true"/>
                 <name>
@@ -117,22 +146,21 @@ curl --get http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number
                 <address>
                     <use value="home"/>
                     <line value="10, Field Jardin"/>
-                    <line value="Upton"/>
-                    <city value="Leeds"/>
-                    <district value="West Yorkshire"/>
-                    <postalCode value="LS10 1ZZ"/>
+                    <line value="Long Eaton"/>
+                    <city value="Nottingham"/>
+                    <postalCode value="NG10 1ZZ"/>
                 </address>
                 <maritalStatus>
                     <coding>
-                        <system value="http://hl7.org/fhir/marital-status"/>
+                        <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
                         <code value="S"/>
-                        <display value="Single"/>
+                        <display value="Never Married"/>
                     </coding>
                 </maritalStatus>
-                <careProvider>
-                    <reference value="https://ods.proxy.nhs.uk/Patient/Y00001"/>
-                    <display value="MGP Medical Centre"/>
-                </careProvider>
+                <managingOrganization>
+                    <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
+                    <display value="Moir Medical Centre"/>
+                </managingOrganization>
             </Patient>
         </resource>
         <search>
