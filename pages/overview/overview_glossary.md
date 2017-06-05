@@ -10,8 +10,14 @@ toc: false
 
 Glossary of common terms and abbreviations used though-out the Care Connect documentation site.
 
+ADT
+: {{site.data.glossary.adt}}
+
 API
 : {{site.data.glossary.api}}
+
+Argonaut
+: {{site.data.glossary.argonaut}}
 
 DoH
 : {{site.data.glossary.doh}}
