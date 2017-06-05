@@ -21,6 +21,9 @@ entries:
     - title: Guide Versioning
       url: /overview_guide_versioning.html
       output: web
+    - title: Release Notes
+      url: /overview_release_notes.html
+      output: web
     - title: Glossary
       url: /overview_glossary.html
       output: web
