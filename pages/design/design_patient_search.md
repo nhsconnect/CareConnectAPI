@@ -152,7 +152,7 @@ A sample response is shown below
 </Bundle>
 ```
 
-What we have just described is shown in the diagram below. When entered the url we did a Patient Demographic Query and the response is called Patient Demographic Query Response.
+What we have just described is shown in the diagram below. When entered the url we did a Patient Search FHIR Query and the response is called Patient Search FHIR Query Response.
 
 {% include image.html
 max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow Patient Search FHIR" caption="Basic Process Flow" %}
@@ -384,14 +384,51 @@ The Patient Demographics Supplier may act as a proxy to an existing HL7v2 PDQ, F
 max-width="200px" file="design/Gateway PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
 caption=" Implementing Patient Search FHIR as a gateway" %}
 
-The [gateway pattern](http://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingGateway.html) can insulate client applications from complex processing which is especially useful for web applications. This would typically be done in a Trust Integration Engine or other middleware products such as Apache Camel.
+The [Gateway Pattern](http://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingGateway.html) or [Microservice API Gateway Pattern](http://microservices.io/patterns/apigateway.html) can insulate client applications from complex processing which is especially useful for web applications. This would typically be done in a Trust Integration Engine or other middleware products such as Apache Camel. Advantages include:
+* Insulates clients from the complexities of interoperability.
+* Transforms external calls into internal formats (e.g. XML ITK to FHIR JSON)
+* Allows the different security models to work with each other (e.g. OAuth2 based environment working with FHIR API using certificate based authentication)
+* Simplifies client access. API Gateway can retrieve demographics from multiple sources with a single query.
 
+Consider the HL7v2 Example below:
+
+#### HL7 version 2 Example - Patient Demographics Query ####
+
+```
+MSH|^~\&|TEST_HARNESS|TEST|CR1|MOH_CAAT|20090226131520-0600||QBP^Q22^QBP_Q21|TEST-CR-15-20|P|2.5
+QPD|Q22^Find Candidates^HL7|Q1520|@PID.8^F~@PID.5.1^JONES
+RCP|I|10^RD
+```
+
+This is searching for female patients with a surname of Jones. Performing a query from
+
+#### AngularJS Example 5 - Web App Client Search ####
+
+```javascript
+angular.module('App')
+.controller('PatientDetailsController', function ($scope, $http) {
+
+  $scope.search = function()
+  {
+    $http({
+        method : 'GET',
+            url : 'http://127.0.0.1:8181/Dstu2/Patient?family=jones&gender=female'
+      })
+          .success(function (bundleddata) {
+      $scope.bundle = bundleddata;
+    }).error(function (err) {     
+    })
+  }
+});
+```
+
+<!--
 | SMSP Request | FHIR Patient Search |
 |--------------|---------------------|
 | getPatientDetailsByNHSNumber| `GET http://[proxyUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|[NHSNumber]&birthdate=[DateOfBirth]` |
 | getPatientDetailsBySearch | `GET http://[proxyUrl]/Patient?birthdate=[DateOfBirth]&given=[Forename]&family=[Surname]&gender=[Gender]&adddress-postcode=[Postcode]` |
 | getPatientDetails| `GET http://[proxyUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|[NHSNumber]&birthdate=[DateOfBirth]&given=[Forename]&family=[Surname]&gender=[Gender]&adddress-postcode=[Postcode]` |
-
+-->
 
 {% include image.html
 max-width="200px" file="design/Gateway Process Flow PDQm.jpg" alt="Gateway Process Flow Patient Search FHIR" caption="Sample Patient Search FHIR gateway process flow" %}
