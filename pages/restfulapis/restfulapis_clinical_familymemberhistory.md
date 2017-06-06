@@ -24,7 +24,7 @@ Return a single `FamilyMemberHistory` for the specified id
 <div markdown="span" class="alert alert-success" role="alert">
 GET /FamilyMemberHistory?[searchParameters]</div>
 
-FamilyMemberHistory resource contains family member history for a patient. Fetches a bundle of all `FamilyMemberHistory` resources for the specified patient.
+Fetches a bundle of all `FamilyMemberHistory` resources for the specified patient.
 
 {% include custom/moscow.html content="[FamilyMemberHistory](https://www.hl7.org/fhir/DSTU2/familymemberhistory.html#search)" %}
 

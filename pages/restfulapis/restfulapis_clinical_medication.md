@@ -23,7 +23,7 @@ Return a single `Medication` for the specified id.
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Medication?[searchparameters]</div>
-Search for all flag resources for a patient. Fetches a bundle of all `Medication` resources for the specified patient.
+Search for all Medication resources for a patient. Fetches a bundle of all `Medication` resources for the specified patient.
 
 {% include custom/moscow.html content="[Medication](https://www.hl7.org/fhir/DSTU2/medication.html#search)" %}
 

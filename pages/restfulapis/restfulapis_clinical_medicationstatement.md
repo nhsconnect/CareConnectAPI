@@ -22,7 +22,8 @@ Return a single `Medication Statement` for the specified id.
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /MedicationStatement?[searchParameters]</div>
-Medication Statement resource contains current medication information for a patient. Fetches a bundle of all `MedicationStatement` resources for the specified patient.
+
+Fetches a bundle of all `MedicationStatement` resources for the specified patient.
 
 {% include custom/moscow.html content="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search)" %}
 

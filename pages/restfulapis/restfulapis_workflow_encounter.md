@@ -23,7 +23,7 @@ Return a single `Encounter` for the specified id
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Encounter?[searchParameters]</div>
 
-Encounter resource contains encounter information for a patient. Fetches a bundle of all `Encounter` resources for the specified patient.
+Fetches a bundle of all `Encounter` resources for the specified patient.
 
 {% include custom/moscow.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
 
@@ -39,7 +39,7 @@ Encounter resource contains encounter information for a patient. Fetches a bundl
 ## 3. Example ##
 
 ### 3.1 Query ###
-Return all Organization resources with a ODS Code of C81010, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+Return all Encounter resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 #### cURL ####
 

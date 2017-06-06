@@ -23,7 +23,7 @@ Return a single `Practitioner` for the specified id
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Practitioner?[searchParameters]</div>
-Practitioner contains the demographics of the clinician. Fetches a bundle of all `Practitioner` resources for the specified search criteria.
+Fetches a bundle of all `Practitioner` resources for the specified search criteria.
 
 {% include custom/moscow.html content="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html#search)" %}
 

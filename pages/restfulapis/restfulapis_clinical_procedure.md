@@ -24,7 +24,7 @@ Return a single `Procedure` for the specified id
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Procedure?[searchParameters]</div>
 
-Procedure resource contains procedure information for a patient. Fetches a bundle of all `Procedure` resources for the specified patient.
+Fetches a bundle of all `Procedure` resources for the specified patient.
 
 {% include custom/moscow.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
 

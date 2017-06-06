@@ -22,7 +22,8 @@ Return a single `Organization` for the specified id.
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Organization?[searchParameters]</div>
-Organization contains the demographics for the organisation. Fetches a bundle of all `Organization` resources for the specified search criteria.
+
+Fetches a bundle of all `Organization` resources for the specified search criteria.
 
 {% include custom/moscow.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
 

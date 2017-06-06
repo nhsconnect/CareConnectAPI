@@ -23,7 +23,7 @@ Return a single `Patient` for the specified id (not the NHS Number).
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Patient?[searchParameters]</div>
-Patient contains the demographics for the patient. Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
+Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
 
 {% include custom/moscow.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 

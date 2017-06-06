@@ -22,7 +22,7 @@ Return a single `Location` for the specified id
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Location?[searchParameters]</div>
-Location contains the details for the location. Fetches a bundle of all `Location` resources for the specified search criteria.
+Fetches a bundle of all `Location` resources for the specified search criteria.
 
 {% include custom/moscow.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html#search)" %}
 
@@ -33,7 +33,7 @@ Location contains the details for the location. Fetches a bundle of all `Locatio
 
 {% include custom/search.nopat.string.html para="2.1." resource="Location" content="address-postcode"  example="NG10%201RY" text1="Post Code" text2="NG10 1RY" %}
 
-{% include custom/search.nopat.identifier.html para="2.2." resource="Location" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/????|RTG08" text1="NHS Trust Site" text2="RTG08 (Long Eaton Clinic)" %}
+{% include custom/search.nopat.identifier.html para="2.2." resource="Location" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-site-code|RTG08" text1="NHS Trust Site" text2="RTG08 (Long Eaton Clinic)" %}
 
 ## 3. Example ##
 
