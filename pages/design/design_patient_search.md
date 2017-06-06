@@ -384,7 +384,7 @@ The Patient Demographics Supplier may act as a proxy to an existing HL7v2 PDQ, F
 max-width="200px" file="design/Gateway PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
 caption=" Implementing Patient Search FHIR as a gateway" %}
 
-The [Gateway Pattern](http://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingGateway.html) or [Microservice API Gateway Pattern](http://microservices.io/patterns/apigateway.html) can insulate client applications from complex processing which is especially useful for web applications. This would typically be done in a Trust Integration Engine or other middleware products such as Apache Camel. Advantages include:
+The [Gateway Pattern](http://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingGateway.html) and/or [Microservice API Gateway Pattern](http://microservices.io/patterns/apigateway.html) can insulate client applications from complex processing which is especially useful for web applications. This would typically be done in a Trust Integration Engine or other middleware products such as Apache Camel. Advantages include:
 * Insulates clients from the complexities of interoperability.
 * Transforms external calls into internal formats (e.g. HL7v2 / HL7v3 XML to FHIR JSON/XML)
 * Allows the different security models to work with each other (e.g. OAuth2 based environment working with FHIR API using certificate based authentication)
@@ -400,10 +400,10 @@ QPD|Q22^Find Candidates^HL7|Q1520|@PID.8^F~@PID.5.1^JONES
 RCP|I|10^RD
 ```
 
-This is searching for female patients with a surname of Jones. It is not clear from the query this is a search and also that `@PID.8^F~@PID.5.1^JONES` means a female called Jones. Also it's difficult to call from a web browser based application.
+This is searching for female patients with a surname of Jones. It is not clear from the message this is a search query and also the parameters `@PID.8^F~@PID.5.1^JONES` means a female called Jones. Also it's difficult to call from a web browser based application.
 Using a FHIR API Gateway hides this complexity from the web developer allowing them to use the $http service as shown in the example below:
 
-#### AngularJS Example 5 - Web App Client Search ####
+#### AngularJS Example 1 - Web App Client Search ####
 
 ```javascript
 angular.module('App').controller('PatientDetailsController', function ($scope, $http) {
