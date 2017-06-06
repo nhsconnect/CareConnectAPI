@@ -31,4 +31,7 @@ Mandatory and optional API Parameters defined for the following resources
     - Encounter
 (please comment via https://interopen.ryver.com or email careconnect@interopen.org)
 
-User Stories
+Engage
+- Added Overview explanation
+- Added Michael's Stories showing the example user stories
+- Linked Michael's Stories to APIs currently available and defined above
