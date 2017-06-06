@@ -45,8 +45,8 @@ etc.
 ### 2.1 Foundation ###
 
 {% include image.html
-max-width="200px" file="design/PDQ Actor Diagram.jpg" alt="Patient Search Actor Diagram"
-caption="Patient Search Actor Diagram" %}
+max-width="200px" file="design/PDQ Actor Diagram.jpg" alt="Patient Search FHIR Actor Diagram"
+caption="Patient Search FHIR Actor Diagram" %}
 
 The patient search can use any of the search parameters defined in the [Patient](restfulapis_identification_patient.html) API. For example if the patient informs the nurse of their date of birth, first name (19th Mar 1998 Bernie Kanfeld) and surname the query would be.
 
@@ -155,7 +155,7 @@ A sample response is shown below
 What we have just described is shown in the diagram below. When entered the url we did a Patient Demographic Query and the response is called Patient Demographic Query Response.
 
 {% include image.html
-max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow PDQ FHIR" caption="Basic Process Flow" %}
+max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow Patient Search FHIR" caption="Basic Process Flow" %}
 
 If your familiar with NHS SDS/ODS Codes you may have noticed the ODS Code as the managing organisation.
 
@@ -262,7 +262,7 @@ GET http://[baseUrl]/Patient?identifier=https://fhir.jorvik.nhs.uk/PAS/Patient|1
 
 ### 2.2. Java Example ###
 
-The examples are built using [HAPI FHIR](http://hapifhir.io/) which is an open source implementation of the HL7 FHIR specification by the University Health Network, Canada. Source code can be found on [NHSConnect GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/ImplementationGuideExplore)
+The examples are built using [HAPI FHIR](http://hapifhir.io/) which is an open source implementation of the HL7 FHIR specification by the University Health Network, Canada. Source code can be found on [NHSConnect GitHub](https://github.com/nhsconnect/careconnect-java-examples/blob/master/careconnect-client/src/main/java/uk/nhs/careconnect/examples/clientExampleApp.java)
 
 The first example uses the same search parameters we used earlier, we are searching for patients with a surname of Kanfeld, forename of Bernie and date of birth 19/Mar/1998. The first couple of lines setup a Dstu2 FHIR context and set the baseUrl to be `http://127.0.0.1:8181/Dstu2/`. The output from running this code is shown earlier in this guide.
 
@@ -382,9 +382,16 @@ The Patient Demographics Supplier may act as a proxy to an existing HL7v2 PDQ, F
 
 {% include image.html
 max-width="200px" file="design/Gateway PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
-caption=" Implementing PDQ FHIR as a gateway" %}
+caption=" Implementing Patient Search FHIR as a gateway" %}
 
 The [gateway pattern](http://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingGateway.html) can insulate client applications from complex processing which is especially useful for web applications. This would typically be done in a Trust Integration Engine or other middleware products such as Apache Camel.
 
+| SMSP Request | FHIR Patient Search |
+|--------------|---------------------|
+| getPatientDetailsByNHSNumber| `GET http://[proxyUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|[NHSNumber]&birthdate=[DateOfBirth]` |
+| getPatientDetailsBySearch | `GET http://[proxyUrl]/Patient?birthdate=[DateOfBirth]&given=[Forename]&family=[Surname]&gender=[Gender]&adddress-postcode=[Postcode]` |
+| getPatientDetails| `GET http://[proxyUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|[NHSNumber]&birthdate=[DateOfBirth]&given=[Forename]&family=[Surname]&gender=[Gender]&adddress-postcode=[Postcode]` |
+
+
 {% include image.html
-max-width="200px" file="design/Gateway Process Flow PDQm.jpg" alt="Gateway Process Flow PDQ FHIR" caption="Sample PDQ FHIR gateway process flow" %}
+max-width="200px" file="design/Gateway Process Flow PDQm.jpg" alt="Gateway Process Flow Patient Search FHIR" caption="Sample Patient Search FHIR gateway process flow" %}
