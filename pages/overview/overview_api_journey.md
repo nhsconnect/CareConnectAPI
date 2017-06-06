@@ -24,7 +24,7 @@ The current site focuses on a typical API Developer's Journey as highlighted by 
 
 <img src="images/roadmap/profile-focus.jpg" style="width:100%;max-width: 100%;">
 
-NHS Digital is contributing to progressing the profile developmenet, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem. Please see the explanation of the complete development roadmap below.
+NHS Digital is contributing to progressing the profile development, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem. Please see the explanation of the complete development roadmap below.
 
 {% include custom/contribute.html content="Please contact [careconnect@interopen.org] to get involved." %}
 
@@ -34,6 +34,6 @@ The current site focuses on a typical API Developer's Journey as highlighted by 
 
 <img src="images/roadmap/guide-focus.jpg" style="width:100%;max-width: 100%;">
 
-NHS Digital is contributing to progressing the profile developmenet, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem.
+NHS Digital is contributing to progressing the profile development, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem.
 
 Please see the explanation of the complete development roadmap.
