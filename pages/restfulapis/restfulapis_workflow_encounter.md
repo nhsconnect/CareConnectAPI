@@ -23,7 +23,7 @@ Return a single `Encounter` for the specified id
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Encounter?[searchParameters]</div>
 
-Procedure resource contains encounter information for a patient. Fetches a bundle of all `Encounter` resources for the specified patient.
+Encounter resource contains encounter information for a patient. Fetches a bundle of all `Encounter` resources for the specified patient.
 
 {% include custom/moscow.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
 

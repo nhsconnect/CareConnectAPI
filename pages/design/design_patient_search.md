@@ -13,6 +13,8 @@ summary: "How to use FHIR Patient resources to perform Patient Searches"
 
 {% include custom/ihelink.html content="[IHE Patient Demographic Query Mobile (IHE PDQM)](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)" %}
 
+{% include custom/patterns.html content="[Shared Repository](https://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/)" %}
+
 ## 1. Overview ##
 
 {% include custom/usecase.html content="A patient visits a emergency department for the first time. The nurse needs to register the patient; in
@@ -29,7 +31,7 @@ Most NHS trusts will typically have one central system  called the Patient Admin
 max-width="200px" file="IHE/Iti_pam_ip.jpg" alt="Patient Identity Feeds"
 caption="Patient Identity Feeds" %}
 
-Care Connect API uses a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) [resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI) to provide access to the central Patient repository which is particularly suited to:
+Care Connect API uses a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) {% include custom/patterns.inline.html content="[resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI)" %} to provide access to the central Patient repository which is particularly suited to:
 * A health portal securely exposing demographics data to browser based plugins
 * Medical devices which need to access patient demographic information
 * Mobile devices used by physicians (example bedside eCharts) which need to establish
@@ -384,7 +386,7 @@ The Patient Demographics Supplier may act as a proxy to an existing HL7v2 PDQ, F
 max-width="200px" file="design/Gateway PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
 caption=" Implementing Patient Search FHIR as a gateway" %}
 
-The [Gateway Pattern](http://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingGateway.html) and/or [Microservice API Gateway Pattern](http://microservices.io/patterns/apigateway.html) can insulate client applications from complex processing which is especially useful for web applications. This would typically be done in a Trust Integration Engine or other middleware products such as Apache Camel. Advantages include:
+The {% include custom/patterns.inline.html content="[Service Connector Pattern ](http://www.servicedesignpatterns.com/webserviceinfrastructures/serviceconnector)" %} can insulate client applications from complex processing which is especially useful for web applications. This would typically be done in a Trust Integration Engine or other middleware products such as Apache Camel. Advantages include:
 * Insulates clients from the complexities of interoperability.
 * Transforms external calls into internal formats (e.g. HL7v2 / HL7v3 XML to FHIR JSON/XML)
 * Allows the different security models to work with each other (e.g. OAuth2 based environment working with FHIR API using certificate based authentication)
