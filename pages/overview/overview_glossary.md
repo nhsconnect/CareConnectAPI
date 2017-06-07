@@ -113,7 +113,7 @@ RBAC
 : {{site.data.glossary.rbac}}
 
 REST
-: {{site.data.glossary.rbac}}
+: {{site.data.glossary.rest}}
 
 RESTful
 : {{site.data.glossary.restful}}
