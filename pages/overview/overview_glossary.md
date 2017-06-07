@@ -76,8 +76,14 @@ ITK
 JSON
 : {{site.data.glossary.json}}
 
+LRS
+: {{site.data.glossary.lrs}}
+
 Meaningful Use
 : {{site.data.glossary.meaningfuluse}}
+
+MESH
+: {{site.data.glossary.mesh}}
 
 MIG
 : {{site.data.glossary.mig}}
@@ -95,7 +101,7 @@ NHSD
 : {{site.data.glossary.nhsd}}
 
 NRLS
-{{site.data.glossary.nrls}}
+: {{site.data.glossary.nrls}}
 
 ODS
 : {{site.data.glossary.ods}}
