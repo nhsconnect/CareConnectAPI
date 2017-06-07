@@ -14,3 +14,5 @@ dos: "The <i>Directory of Services</i> searches for available service to match p
 dstu: "<i>Draft Standard for Trial Use</i>"
 eps: "<i>Electronic Prescription Service</i> (Prescribe & Dispense implemented in HL7v3/ebXML),(Prescription search Implemented with HL3 v3 RESTful) There is an inflight proprietary Restful API"
 ers: "The <i>Electronic Referrals Service</i> handles referrals from Primary Care into other services (Implemented in HL7 v3) There is an inflight FHIR API."
+fmg: "The <i>FHIR Management Group</i> provides day-to-day oversight of FHIR-related work group activities including performing quality analysis, monitoring scope and consistency with FHIR principles and aiding in the resolution of FHIR-related intra and inter-work group issues."
+fmm: "The <i>FHIR Maturity Model</i> provides a sense of how mature a resource is based on the level and types of review it has been subject to."
