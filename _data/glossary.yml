@@ -16,3 +16,4 @@ eps: "<i>Electronic Prescription Service</i> (Prescribe & Dispense implemented i
 ers: "The <i>Electronic Referrals Service</i> handles referrals from Primary Care into other services (Implemented in HL7 v3) There is an inflight FHIR API."
 fmg: "The <i>FHIR Management Group</i> provides day-to-day oversight of FHIR-related work group activities including performing quality analysis, monitoring scope and consistency with FHIR principles and aiding in the resolution of FHIR-related intra and inter-work group issues."
 fmm: "The <i>FHIR Maturity Model</i> provides a sense of how mature a resource is based on the level and types of review it has been subject to."
+gp2gp: "System transferring full GP records between GP systems when patients register with a new GP. (Implemented using HL7 v3)"
