@@ -17,13 +17,16 @@ summary: Demographics and other administrative information about an individual o
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Patient/[id]</div>
-Return a single `Patient` for the specified id (not the NHS Number).
+
+{% include custom/read.response.html resource="Patient" content=" (not the NHS Number)" %}
 
 ## 2. Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Patient?[searchParameters]</div>
 Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
 
@@ -47,27 +50,30 @@ Fetches a bundle of all `Patient` resources for the specified patient or search 
 | `telecom` | `token` | The value in any kind of telecom details of the patient |  | Patient.telecom |
 -->
 
-{% include custom/search.nopat.string.html para="2.1." resource="Patient" content="address-postcode"  example="NG10%201ZZ" text1="Post Code" text2="NG10 1ZZ" %}
+{% include custom/search.nopat.string.html para="2.1.1." resource="Patient" content="address-postcode"  example="NG10%201ZZ" text1="Post Code" text2="NG10 1ZZ" %}
 
-{% include custom/search.nopat.date.plus.html para="2.2." content="Patient" name="birthdate" %}
+{% include custom/search.nopat.date.plus.html para="2.1.2." content="Patient" name="birthdate" %}
 
-{% include custom/search.nopat.string.html para="2.3." resource="Patient" content="email"  example="bernie.kanfeld@chumhum.com" text1="email address" text2="bernie.kanfeld@chumhum.com" %}
+{% include custom/search.nopat.string.html para="2.1.3." resource="Patient" content="email"  example="bernie.kanfeld@chumhum.com" text1="email address" text2="bernie.kanfeld@chumhum.com" %}
 
-{% include custom/search.nopat.string.html para="2.4." resource="Patient" content="family"  example="kanfeld" text1="surname" text2="Kanfeld" %}
+{% include custom/search.nopat.string.html para="2.1.4." resource="Patient" content="family"  example="kanfeld" text1="surname" text2="Kanfeld" %}
 
-{% include custom/search.nopat.token.html para="2.5." resource="Patient" content="gender"  example="female" text1="Administrative Sex" text2="female" %}
+{% include custom/search.nopat.token.html para="2.1.5." resource="Patient" content="gender"  example="female" text1="Administrative Sex" text2="female" %}
 
-{% include custom/search.nopat.string.html para="2.6." resource="Patient" content="given"  example="bernie" text1="forename" text2="Bernie" %}
+{% include custom/search.nopat.string.html para="2.1.6." resource="Patient" content="given"  example="bernie" text1="forename" text2="Bernie" %}
 
-{% include custom/search.nopat.identifier.html para="2.7." resource="Patient" content="identifier" subtext="NHS Number, Hospital Number, etc" example="https://fhir.nhs.uk/Id/nhs-number|9876543210" text1="NHS Number" text2="9876543210" %}
+{% include custom/search.nopat.identifier.html para="2.1.7." resource="Patient" content="identifier" subtext="NHS Number, Hospital Number, etc" example="https://fhir.nhs.uk/Id/nhs-number|9876543210" text1="NHS Number" text2="9876543210" %}
 
-{% include custom/search.nopat.string.html para="2.8." resource="Patient" content="name"  example="bernie%20kanfeld" text1="name" text2="Bernie Kanfeld" %}
+{% include custom/search.nopat.string.html para="2.1.8." resource="Patient" content="name"  example="bernie%20kanfeld" text1="name" text2="Bernie Kanfeld" %}
 
-{% include custom/search.nopat.string.html para="2.9." resource="Patient" content="phone"  example="07999 123456" text1="phone number" text2="07999 123456" %}
+{% include custom/search.nopat.string.html para="2.1.9." resource="Patient" content="phone"  example="07999 123456" text1="phone number" text2="07999 123456" %}
+
+{% include custom/search.response.html resource="Patient"  %}
 
 ## 3. Example ##
 
 ### 3.1 Request Query ###
+
 Return all Patient resources with a NHS Number 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 #### 3.1.1. cURL ####

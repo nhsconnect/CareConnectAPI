@@ -16,7 +16,8 @@ summary: Details and position information for a physical place where services ar
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Location/[id]</div>
-Return a single `Location` for the specified id
+
+{% include custom/read.response.html resource="Location" content="" %}
 
 ## 2. Search Parameters ##
 

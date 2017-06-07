@@ -386,7 +386,7 @@ The Patient Demographics Supplier may act as a proxy to an existing HL7v2 PDQ, F
 max-width="200px" file="design/Gateway PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
 caption=" Implementing Patient Search FHIR as a gateway" %}
 
-The {% include custom/patterns.inline.html content="[Service Connector Pattern ](http://www.servicedesignpatterns.com/webserviceinfrastructures/serviceconnector)" %} can insulate client applications from complex processing which is especially useful for web applications. This would typically be done in a Trust Integration Engine or other middleware products such as Apache Camel. Advantages include:
+The {% include custom/patterns.inline.html content="[Service Connector(/Gateway) Pattern ](http://www.servicedesignpatterns.com/webserviceinfrastructures/serviceconnector)" %} can insulate client applications from complex processing which is especially useful for web applications. This would typically be done in a Trust Integration Engine or other middleware products such as Apache Camel. Advantages include:
 * Insulates clients from the complexities of interoperability.
 * Transforms external calls into internal formats (e.g. HL7v2 / HL7v3 XML to FHIR JSON/XML)
 * Allows the different security models to work with each other (e.g. OAuth2 based environment working with FHIR API using certificate based authentication)

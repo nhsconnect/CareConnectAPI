@@ -1,0 +1,26 @@
+<h3 id="readresponse">1.1. Response</h3>
+
+<p>Return a single <code class="highlighter-rouge">{{include.resource}}</code> for the specified id{{include.content}}. If no {{include.resource}} resource is found an <a href="https://www.hl7.org/fhir/DSTU2/operationoutcome.html">OperationOutcome</a> will be returned.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status Code</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Resource Found</td>
+    </tr>
+    <tr>
+      <td>404</td>
+      <td>Resource Not Found</td>
+    </tr>
+    <tr>
+      <td>410</td>
+      <td>Resource Deleted</td>
+    </tr>
+  </tbody>
+</table>

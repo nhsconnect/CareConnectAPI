@@ -15,15 +15,18 @@ summary: A formally or informally recognized grouping of people or organizations
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Organizatio/[id]</div>
-Return a single `Organization` for the specified id.
+GET /Organization/[id]</div>
 
-## 2. Search Parameters ##
+{% include custom/read.response.html resource="Organization" content="" %}
+
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Organization?[searchParameters]</div>
 
 Fetches a bundle of all `Organization` resources for the specified search criteria.
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
 
@@ -36,9 +39,11 @@ Fetches a bundle of all `Organization` resources for the specified search criter
 | `name` | `string` | A portion of the name of the organisation | | Organization.name |
 -->
 
-{% include custom/search.nopat.string.html para="2.1." resource="Organization" content="address-postcode"  example="DE22%203NE" text1="Post Code" text2="DE22 3NE" %}
+{% include custom/search.nopat.string.html para="2.1.1." resource="Organization" content="address-postcode"  example="DE22%203NE" text1="Post Code" text2="DE22 3NE" %}
 
-{% include custom/search.nopat.identifier.html para="2.2." resource="Organization" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-organization-code|RTG" text1="NHS Organisation" text2="RTG (Derby Teaching Hospitals NHS Trust)" %}
+{% include custom/search.nopat.identifier.html para="2.1.2." resource="Organization" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-organization-code|RTG" text1="NHS Organisation" text2="RTG (Derby Teaching Hospitals NHS Trust)" %}
+
+{% include custom/search.response.html resource="Organization" %}
 
 ## 3. Example ##
 
