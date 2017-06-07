@@ -37,6 +37,8 @@ Search for all Medication resources for a patient. Fetches a bundle of all `Medi
 
 {% include custom/search.code.medication.html para="2.1.1." content="Medication" %}
 
+{% include custom/search.response.html resource="Medication" %}
+
 ## 3. Example ##
 
 ### 3.1 Request Operation ###

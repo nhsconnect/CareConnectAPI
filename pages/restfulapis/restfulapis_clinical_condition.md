@@ -40,6 +40,11 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 | `date-recorded` | `date` | A date, when the Condition statement was documented | MAY  | Condition.dateRecorded |
 | `patient` | `reference` | Who has the condition? | SHALL | Condition.patient<br>(Patient) |
 
+Systems SHALL support the following search combinations:
+
+* patient + clinicalstatus
+* patient + category
+
 {% include custom/search.status.plus.html para="2.1.1." content="Condition" options="
 complaint | symptom | finding | diagnosis | problem | need" selected="symptom" name="category" %}
 
@@ -48,6 +53,8 @@ complaint | symptom | finding | diagnosis | problem | need" selected="symptom" n
 {% include custom/search.date.plus.html para="2.1.3." content="Condition" name="date-recorded" %}
 
 {% include custom/search.patient.html para="2.1.4." content="Condition" %}
+
+{% include custom/search.response.html resource="Condition" %}
 
 ## 3. Example ##
 

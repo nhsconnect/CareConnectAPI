@@ -38,11 +38,20 @@ Fetches a bundle of all `Procedure` resources for the specified patient.
 | `patient` | `reference` | Search by subject - a patient | SHALL | Procedure.subject <br>(Patient) |
 | `subject` | `reference` | Search by subject | MAY | Procedure.subject <br>(Patient) |
 
+Systems SHALL support the following search combinations:
+
+* patient + category
+* patient + category + date
+* patient + category + code
+* patient + category + code + date
+
 {% include custom/search.date.html para="2.1.1." content="Procedure" %}
 
 {% include custom/search.patient.html para="2.1.2." content="Procedure" %}
 
 {% include custom/search.subject.html para="2.1.3." content="Procedure" %}
+
+{% include custom/search.response.html resource="Procedure" %}
 
 ## 3. Example ##
 

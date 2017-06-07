@@ -41,6 +41,11 @@ Fetches a bundle of all `Observation` resources for the specified patient.
 | `date` | `date` | Obtained date/time.<br>If the obtained element is a period, a date that falls in the period | SHALL | Observation.effective[x] |
 | `patient` | `reference` | The subject that the observation is about (if patient) | SHALL | Observation.subject (Patient) |
 
+Systems SHALL support the following search combinations:
+
+* patient + clinicalstatus
+* patient + category
+
 
 <!-- | `subject` | `reference` | The subject that the observation is about| | Observation.subject (Patient) |
 -->
@@ -55,6 +60,9 @@ Fetches a bundle of all `Observation` resources for the specified patient.
 <!--
 {% include custom/search.subject.html para="2.5." content="Observation" %}
 -->
+
+{% include custom/search.response.html resource="Observation" %}
+
 ## 3. Example ##
 
 ### 3.1. Request Query ###

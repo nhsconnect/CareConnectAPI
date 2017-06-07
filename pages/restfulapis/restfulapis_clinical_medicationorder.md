@@ -34,7 +34,7 @@ Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 
 | Name    | Type   | Description    | Conformance        | Path |
 |---------|--------|----------------|--------------------|------|
-| `date` | `date` | Returns medication request to be administered on a specific date | SHOULD | MedicationOrder.dosageInstruction.timing.event |
+| `dateWritten` | `date` | Return prescriptions written on this date | MAY | MedicationOrder.dateWritten |
 | `patient` | `reference` | The identity of a patient to list orders for | SHALL | MedicationOrder.patient<br>(Patient) |
 | `status` | `token` | Status of the prescription | SHOULD | MedicationOrder.status |
 
@@ -45,11 +45,13 @@ Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 
 {% include custom/search.identifier.html resource="MedicationOrder" content="identifier" subtext="System Filter" example="https://theccg.systemsupplier.co.uk/MedicationOrder|" text1="The CCG System Supplier" text2="not specified" %}
 -->
-{% include custom/search.date.plus.html para="2.1.1." content="MedicationOrder" name="date"  %}
+{% include custom/search.date.plus.html para="2.1.1." content="MedicationOrder" name="dateWritten"  %}
 
 {% include custom/search.patient.html para="2.1.2." content="MedicationOrder" %}
 
 {% include custom/search.status.html para="2.1.3." content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
+
+{% include custom/search.response.html resource="MedicationOrder" %}
 
 ## 3. Example ##
 

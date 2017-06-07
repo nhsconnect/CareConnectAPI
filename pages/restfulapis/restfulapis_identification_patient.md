@@ -39,15 +39,15 @@ Fetches a bundle of all `Patient` resources for the specified patient or search 
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address | SHOULD | Practitioner.address.postalCode |
+| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Practitioner.address.postalCode |
 | `birthdate` | `date` | The patient's date of birth | SHALL | Patient.birthDate |
-| `email` | `token` | A value in an email contact | SHOULD | Patient.telecom <br>(system=email) |
+| `email` | `token` | A value in an email contact | MAY | Patient.telecom <br>(system=email) |
 | `family` | `string` | A portion of the family name of the patient | SHALL | Patient.name.family |
 | `gender` | `token` | Gender of the patient | SHALL | Patient.gender |
 | `given` | `string` | A portion of the given name of the patient | SHALL | Patient.name.given |
 | `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | SHALL | Patient.identifier |
 | `name` | `string` | A portion of either family or given name of the patient | SHALL | 	Patient.name |
-| `phone` | `token` | A value in a phone contact | SHOULD | Patient.telecom(system=phone) |
+| `phone` | `token` | A value in a phone contact | MAY | Patient.telecom(system=phone) |
 
 Systems SHALL support the following search combinations:
 

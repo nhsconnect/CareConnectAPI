@@ -43,6 +43,8 @@ Fetches a bundle of all `MedicationStatement` resources for the specified patien
 
 {% include custom/search.status.html para="2.1.3." content="MedicationStatement" options="active | completed | entered-in-error | intended" selected="active" %}
 
+{% include custom/search.response.html resource="MedicationStatement" %}
+
 ## 3. Example ##
 
 ### 3.1 Request Query ###

@@ -43,7 +43,7 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 
 {% include custom/search.status.html para="2.1.2." content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
 
-{% include custom/search.response.html resource="Location" %}
+{% include custom/search.response.html resource="AllergyIntolerance" %}
 
 ## 3. Example ##
 

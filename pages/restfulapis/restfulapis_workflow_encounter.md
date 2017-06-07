@@ -33,12 +33,14 @@ Fetches a bundle of all `Encounter` resources for the specified patient.
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
-| `date` | `date` | A date within the period the Encounter lasted | SHOULD | Encounter.period |
-| `patient` | `reference` | The identity of a patient to list encounters for | SHALL | Encounter.patient <br>(Patient) |
+| `date` | `date` | A date within the period the Encounter lasted | MAY | Encounter.period |
+| `patient` | `reference` | The identity of a patient to list encounters for | MAY | Encounter.patient <br>(Patient) |
 
 {% include custom/search.date.html para="2.1.1." content="Encounter" %}
 
 {% include custom/search.patient.html para="2.1.2." content="Encounter" %}
+
+{% include custom/search.response.html resource="Encounter" %}
 
 ## 3. Example ##
 

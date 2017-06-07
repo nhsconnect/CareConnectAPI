@@ -46,3 +46,5 @@ Search for all flag resources for a patient. Fetches a bundle of all `Flag` reso
 {% include custom/search.patient.html para="2.1.1." content="Flag" %}
 
 {% include custom/search.status.html para="2.1.2." content="Flag" options="active | inactive | entered-in-error" selected="active" %}
+
+{% include custom/search.response.html resource="Flag" %}

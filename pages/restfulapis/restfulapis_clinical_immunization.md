@@ -49,6 +49,8 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 
 {% include custom/search.status.html para="2.1.3." content="Immunization" options="in-progress | on-hold | completed | entered-in-error | stopped" selected="on-hold" %}
 
+{% include custom/search.response.html resource="Immunization" %}
+
 ## 3. Example ##
 
 ### 3.1 Request Query ###
