@@ -407,7 +407,7 @@ Using a FHIR API Gateway hides this complexity from the web developer allowing t
 
 #### AngularJS Example 1 - Web App Client Search ####
 
-```javascript
+```js
 angular.module('App').controller('PatientDetailsController', function ($scope, $http) {
   $scope.search = function()
   {

@@ -17,14 +17,16 @@ summary: Risk of harmful or undesirable, physiological response which is unique 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /AllergyIntollerence/[id]</div>
 
-Return a single `AllergyIntolerance` for the specified id.
+{% include custom/read.response.html resource="AllergyIntolerance" content="" %}
 
-## 2. Search Parameters ##
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /AllergyIntollerence?[searchParameters]</div>
 
 Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolerance` resources for the specified patient.
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
 
@@ -35,9 +37,11 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 
 
 
-{% include custom/search.patient.html para="2.1." content="AllergyIntolerance" %}
+{% include custom/search.patient.html para="2.1.1." content="AllergyIntolerance" %}
 
-{% include custom/search.status.html para="2.2." content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
+{% include custom/search.status.html para="2.1.2." content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
+
+{% include custom/search.response.html resource="Location" %}
 
 ## 3. Example ##
 

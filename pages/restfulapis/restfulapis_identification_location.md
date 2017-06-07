@@ -19,11 +19,13 @@ GET /Location/[id]</div>
 
 {% include custom/read.response.html resource="Location" content="" %}
 
-## 2. Search Parameters ##
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Location?[searchParameters]</div>
 Fetches a bundle of all `Location` resources for the specified search criteria.
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html#search)" %}
 
@@ -32,9 +34,11 @@ Fetches a bundle of all `Location` resources for the specified search criteria.
 | `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Location.address.postalCode |
 | `identifier` | `token` | 	Any identifier for the location (e.g. SDS/ODS code) |  MAY | Location.identifier |
 
-{% include custom/search.nopat.string.html para="2.1." resource="Location" content="address-postcode"  example="NG10%201RY" text1="Post Code" text2="NG10 1RY" %}
+{% include custom/search.nopat.string.html para="2.1.1." resource="Location" content="address-postcode"  example="NG10%201RY" text1="Post Code" text2="NG10 1RY" %}
 
-{% include custom/search.nopat.identifier.html para="2.2." resource="Location" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-site-code|RTG08" text1="NHS Trust Site" text2="RTG08 (Long Eaton Clinic)" %}
+{% include custom/search.nopat.identifier.html para="2.1.2." resource="Location" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-site-code|RTG08" text1="NHS Trust Site" text2="RTG08 (Long Eaton Clinic)" %}
+
+{% include custom/search.response.html resource="Location" %}
 
 ## 3. Example ##
 

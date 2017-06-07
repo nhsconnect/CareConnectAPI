@@ -9,9 +9,13 @@ summary: Demographics and other administrative information about an individual o
 
 {% include custom/search.warnbanner.html %}
 
+## 0. References ##
+
 {% include custom/profile.html content="Patient" page="CareConnect-Patient-1" %}
 
 {% include custom/fhir.resource.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html#search)" %}
+
+{% include custom/apicontext.userstories.html content="User Stories" page="engage_user_stories.html" %}
 
 ## 1. Read ##
 
@@ -20,11 +24,14 @@ GET /Patient/[id]</div>
 
 {% include custom/read.response.html resource="Patient" content=" (not the NHS Number)" %}
 
+
 ## 2. Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Patient?[searchParameters]</div>
 Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
+
+{% include custom/search.header.html resource="Patient" %}
 
 ### 2.1. Search Parameters ###
 
@@ -41,6 +48,13 @@ Fetches a bundle of all `Patient` resources for the specified patient or search 
 | `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | SHALL | Patient.identifier |
 | `name` | `string` | A portion of either family or given name of the patient | SHALL | 	Patient.name |
 | `phone` | `token` | A value in a phone contact | SHOULD | Patient.telecom(system=phone) |
+
+Systems SHALL support the following search combinations:
+
+* name + gender
+* name + birthdate
+* family + gender
+* given + gender
 
 
 <!--
