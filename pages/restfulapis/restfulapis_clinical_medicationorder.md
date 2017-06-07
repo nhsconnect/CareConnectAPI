@@ -19,12 +19,16 @@ GET /MedicationOrder/[id]</div>
 
 Return a single `MedicationOrder` for the specified id
 
-## 2. Search Parameters ##
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /MedicationOrder?[searchParameters]]</div>
 
 Fetches a bundle of all `MedicationOrder` resources for the specified patient.
+
+{% include custom/search.header.html resource="MedicationOrder" %}
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
 
@@ -41,11 +45,11 @@ Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 
 {% include custom/search.identifier.html resource="MedicationOrder" content="identifier" subtext="System Filter" example="https://theccg.systemsupplier.co.uk/MedicationOrder|" text1="The CCG System Supplier" text2="not specified" %}
 -->
-{% include custom/search.date.plus.html para="2.1." content="MedicationOrder" name="date"  %}
+{% include custom/search.date.plus.html para="2.1.1." content="MedicationOrder" name="date"  %}
 
-{% include custom/search.patient.html para="2.2." content="MedicationOrder" %}
+{% include custom/search.patient.html para="2.1.2." content="MedicationOrder" %}
 
-{% include custom/search.status.html para="2.3." content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
+{% include custom/search.status.html para="2.1.3." content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
 
 ## 3. Example ##
 

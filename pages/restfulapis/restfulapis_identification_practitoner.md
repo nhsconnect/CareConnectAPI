@@ -27,6 +27,8 @@ GET /Practitioner/[id]</div>
 GET /Practitioner?[searchParameters]</div>
 Fetches a bundle of all `Practitioner` resources for the specified search criteria.
 
+{% include custom/search.header.html resource="Practitioner" %}
+
 ### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html#search)" %}

@@ -21,11 +21,15 @@ summary: Prospective warnings of potential medication issues when providing care
 GET /Flag/[id]</div>
 Return a single `Flag` for the specified id
 
-## 2. Search Parameters ##
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Flag?[searchparameters]</div>
 Search for all flag resources for a patient. Fetches a bundle of all `Flag` resources for the specified patient.
+
+{% include custom/search.header.html resource="Flag" %}
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
 
@@ -39,6 +43,6 @@ Search for all flag resources for a patient. Fetches a bundle of all `Flag` reso
 | `date` | `date` | Time period when flag is active |  | Flag.period|
 -->
 
-{% include custom/search.patient.html para="2.1." content="Flag" %}
+{% include custom/search.patient.html para="2.1.1." content="Flag" %}
 
-{% include custom/search.status.html para="2.2." content="Flag" options="active | inactive | entered-in-error" selected="active" %}
+{% include custom/search.status.html para="2.1.2." content="Flag" options="active | inactive | entered-in-error" selected="active" %}

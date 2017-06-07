@@ -20,12 +20,16 @@ GET /Condition/[id]</div>
 
 Return a single `Condition` for the specified id
 
-## 2. Search Parameters ##
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Condition?[searchParameters]</div>
 
 Search for all problems and health concerns for a patient. Fetches a bundle of all `Condition` resources for the specified patient.
+
+{% include custom/search.header.html resource="Condition" %}
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html#search)" %}
 
@@ -36,14 +40,14 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 | `date-recorded` | `date` | A date, when the Condition statement was documented | MAY  | Condition.dateRecorded |
 | `patient` | `reference` | Who has the condition? | SHALL | Condition.patient<br>(Patient) |
 
-{% include custom/search.status.plus.html para="2.1." content="Condition" options="
+{% include custom/search.status.plus.html para="2.1.1." content="Condition" options="
 complaint | symptom | finding | diagnosis | problem | need" selected="symptom" name="category" %}
 
-{% include custom/search.status.plus.html para="2.2." content="Condition" options="active | inactive | relapse | remission | resolved" selected="relapse" name="clinicalstatus" %}
+{% include custom/search.status.plus.html para="2.1.2." content="Condition" options="active | inactive | relapse | remission | resolved" selected="relapse" name="clinicalstatus" %}
 
-{% include custom/search.date.plus.html para="2.3." content="Condition" name="date-recorded" %}
+{% include custom/search.date.plus.html para="2.1.3." content="Condition" name="date-recorded" %}
 
-{% include custom/search.patient.html para="2.4." content="Condition" %}
+{% include custom/search.patient.html para="2.1.4." content="Condition" %}
 
 ## 3. Example ##
 

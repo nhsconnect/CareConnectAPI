@@ -19,12 +19,16 @@ summary: An action that is or was performed on a patient. This can be a physical
 GET /Procedure/[id]</div>
 Return a single `Procedure` for the specified id
 
-## 2. Search Parameters ##
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Procedure?[searchParameters]</div>
 
 Fetches a bundle of all `Procedure` resources for the specified patient.
+
+{% include custom/search.header.html resource="Procedure" %}
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
 
@@ -34,11 +38,11 @@ Fetches a bundle of all `Procedure` resources for the specified patient.
 | `patient` | `reference` | Search by subject - a patient | SHALL | Procedure.subject <br>(Patient) |
 | `subject` | `reference` | Search by subject | MAY | Procedure.subject <br>(Patient) |
 
-{% include custom/search.date.html para="2.1." content="Procedure" %}
+{% include custom/search.date.html para="2.1.1." content="Procedure" %}
 
-{% include custom/search.patient.html para="2.2." content="Procedure" %}
+{% include custom/search.patient.html para="2.1.2." content="Procedure" %}
 
-{% include custom/search.subject.html para="2.3." content="Procedure" %}
+{% include custom/search.subject.html para="2.1.3." content="Procedure" %}
 
 ## 3. Example ##
 

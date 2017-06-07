@@ -18,12 +18,16 @@ summary: A record of a medication that is being consumed by a patient. A Medicat
 GET /MedicationStatement/[id]</div>
 Return a single `Medication Statement` for the specified id.
 
-## 2. Search Parameters ##
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /MedicationStatement?[searchParameters]</div>
 
 Fetches a bundle of all `MedicationStatement` resources for the specified patient.
+
+{% include custom/search.header.html resource="MedicationStatement" %}
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search)" %}
 
@@ -33,11 +37,11 @@ Fetches a bundle of all `MedicationStatement` resources for the specified patien
 | `patient` | `reference` | The identity of a patient to list statements for | SHALL | MedicationStatement.patient<br>(Patient) |
 | `status` | `token` | Return statements that match the given status | SHOULD | MedicationStatement.status |
 
-{% include custom/search.date.plus.html para="2.1." content="MedicationStatement" name="effectivedate" %}
+{% include custom/search.date.plus.html para="2.1.1." content="MedicationStatement" name="effectivedate" %}
 
-{% include custom/search.patient.html para="2.2" content="MedicationStatement" %}
+{% include custom/search.patient.html para="2.1.2" content="MedicationStatement" %}
 
-{% include custom/search.status.html para="2.3." content="MedicationStatement" options="active | completed | entered-in-error | intended" selected="active" %}
+{% include custom/search.status.html para="2.1.3." content="MedicationStatement" options="active | completed | entered-in-error | intended" selected="active" %}
 
 ## 3. Example ##
 

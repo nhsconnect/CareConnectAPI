@@ -18,12 +18,16 @@ summary: An interaction between a patient and healthcare provider(s) for the pur
 GET /Encounter/[id]</div>
 Return a single `Encounter` for the specified id
 
-## 2. Search Parameters ##
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Encounter?[searchParameters]</div>
 
 Fetches a bundle of all `Encounter` resources for the specified patient.
+
+{% include custom/search.header.html resource="Encounter" %}
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html#search)" %}
 
@@ -32,9 +36,9 @@ Fetches a bundle of all `Encounter` resources for the specified patient.
 | `date` | `date` | A date within the period the Encounter lasted | SHOULD | Encounter.period |
 | `patient` | `reference` | The identity of a patient to list encounters for | SHALL | Encounter.patient <br>(Patient) |
 
-{% include custom/search.date.html para="2.1." content="Encounter" %}
+{% include custom/search.date.html para="2.1.1." content="Encounter" %}
 
-{% include custom/search.patient.html para="2.2." content="Encounter" %}
+{% include custom/search.patient.html para="2.1.2." content="Encounter" %}
 
 ## 3. Example ##
 

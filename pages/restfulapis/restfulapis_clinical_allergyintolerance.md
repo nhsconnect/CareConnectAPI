@@ -26,6 +26,8 @@ GET /AllergyIntollerence?[searchParameters]</div>
 
 Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolerance` resources for the specified patient.
 
+{% include custom/search.header.html resource="Allergy Intolerance" %}
+
 ### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}

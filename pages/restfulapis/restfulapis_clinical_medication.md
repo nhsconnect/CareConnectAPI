@@ -19,11 +19,15 @@ GET /Medication/[id]</div>
 
 Return a single `Medication` for the specified id.
 
-## 2. Search Parameters ##
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Medication?[searchparameters]</div>
 Search for all Medication resources for a patient. Fetches a bundle of all `Medication` resources for the specified patient.
+
+{% include custom/search.header.html resource="Medication" %}
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[Medication](https://www.hl7.org/fhir/DSTU2/medication.html#search)" %}
 
@@ -31,7 +35,7 @@ Search for all Medication resources for a patient. Fetches a bundle of all `Medi
 |------|------|-------------|-------|------|
 | `code` | `token` | 	Codes that identify this medication | MAY | Medication.code |
 
-{% include custom/search.code.medication.html para="2.1." content="Medication" %}
+{% include custom/search.code.medication.html para="2.1.1." content="Medication" %}
 
 ## 3. Example ##
 

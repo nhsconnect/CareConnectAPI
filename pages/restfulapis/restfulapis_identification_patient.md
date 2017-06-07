@@ -96,13 +96,13 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 
 ### 3.2 Response Headers ###
 
-| Status Code |
-|----------------|
-|200 |
+**Status Code**
 
-| Header | Value |
-|-----------------|---------|
-| Content-Type  | application/xml+fhir;charset=UTF-8 |
+|200 OK|
+
+**Http Headers**
+
+| **Content-Type:** application/xml+fhir |
 
 ### 3.3 Response Body ###
 

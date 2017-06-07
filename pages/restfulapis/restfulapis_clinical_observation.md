@@ -20,12 +20,16 @@ GET /Observation/[id]</div>
 
 Return a single `Observation` for the specified id
 
-## 2. Search Parameters ##
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Observation?[searchParameters]</div>
 
 Fetches a bundle of all `Observation` resources for the specified patient.
+
+{% include custom/search.header.html resource="Observation" %}
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html#search)" %}
 
@@ -41,13 +45,13 @@ Fetches a bundle of all `Observation` resources for the specified patient.
 <!-- | `subject` | `reference` | The subject that the observation is about| | Observation.subject (Patient) |
 -->
 
-{% include custom/search.status.plus.html para="2.1." content="Observation" options="see profile/valueset for codes" selected="exam" name="category" %}
+{% include custom/search.status.plus.html para="2.1.1." content="Observation" options="see profile/valueset for codes" selected="exam" name="category" %}
 
-{% include custom/search.code.html para="2.2." content="Observation" %}
+{% include custom/search.code.html para="2.1.2." content="Observation" %}
 
-{% include custom/search.date.html para="2.3." content="Observation" %}
+{% include custom/search.date.html para="2.1.3." content="Observation" %}
 
-{% include custom/search.patient.html para="2.4." content="Observation" %}
+{% include custom/search.patient.html para="2.1.4." content="Observation" %}
 <!--
 {% include custom/search.subject.html para="2.5." content="Observation" %}
 -->

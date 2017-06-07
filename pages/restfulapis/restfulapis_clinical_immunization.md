@@ -18,12 +18,16 @@ summary: Describes the event of a patient being administered a vaccination or a 
 GET /Immunization/[id]</div>
 Return a single `Immunization` for the specified id
 
-## 2. Search Parameters ##
+## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Immunization?[searchParameters]</div>
 
 Search for all immunization resources for a patient. Fetches a bundle of all `Immunization` resources for the specified patient.
+
+{% include custom/search.header.html resource="Immunization" %}
+
+### 2.1. Search Parameters ###
 
 {% include custom/moscow.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
 
@@ -39,11 +43,11 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 | `lot-number` | `string` | Vaccine Batch Number |  | Immunization.lotNumber |
 | `vaccine-code` | `token` | Vaccine Product Administered |  | Immunization.vaccineCode |
 -->
-{% include custom/search.date.html para="2.1." content="Immunization" %}
+{% include custom/search.date.html para="2.1.1." content="Immunization" %}
 
-{% include custom/search.patient.html para="2.2." content="Immunization" %}
+{% include custom/search.patient.html para="2.1.2." content="Immunization" %}
 
-{% include custom/search.status.html para="2.3." content="Immunization" options="in-progress | on-hold | completed | entered-in-error | stopped" selected="on-hold" %}
+{% include custom/search.status.html para="2.1.3." content="Immunization" options="in-progress | on-hold | completed | entered-in-error | stopped" selected="on-hold" %}
 
 ## 3. Example ##
 
