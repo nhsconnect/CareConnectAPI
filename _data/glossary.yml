@@ -12,3 +12,5 @@ dms: "<i>Domain Message Specification</i> Description of messages definitions an
 doh: "<i>Department of Health</i>"
 dos: "The <i>Directory of Services</i> searches for available service to match patient needs as identified in the assessment in the CDSS. It can also be manually searched via a desktop of mobile device. The content services profiled on the DoS is owned and managed locally."
 dstu: "<i>Draft Standard for Trial Use</i>"
+eps: "<i>Electronic Prescription Service</i> (Prescribe & Dispense implemented in HL7v3/ebXML),(Prescription search Implemented with HL3 v3 RESTful) There is an inflight proprietary Restful API"
+ers: "The <i>Electronic Referrals Service</i> handles referrals from Primary Care into other services (Implemented in HL7 v3) There is an inflight FHIR API."
