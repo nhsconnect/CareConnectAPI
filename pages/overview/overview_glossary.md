@@ -76,8 +76,32 @@ ITK
 JSON
 : {{site.data.glossary.json}}
 
+LRS
+: {{site.data.glossary.lrs}}
+
+Meaningful Use
+: {{site.data.glossary.meaningfuluse}}
+
+MESH
+: {{site.data.glossary.mesh}}
+
+MIG
+: {{site.data.glossary.mig}}
+
+MIM
+: {{site.data.glossary.mim}}
+
+N3
+: {{site.data.glossary.n3}}
+
+.NET
+: {{site.data.glossary.net}}
+
 NHSD
 : {{site.data.glossary.nhsd}}
+
+NRLS
+: {{site.data.glossary.nrls}}
 
 ODS
 : {{site.data.glossary.ods}}
@@ -85,11 +109,59 @@ ODS
 PAS
 : {{site.data.glossary.pas}}
 
+PID
+: {{site.data.glossary.pid}}
+
 PDS
 : {{site.data.glossary.pds}}
+
+RBAC
+: {{site.data.glossary.rbac}}
+
+REST
+: {{site.data.glossary.rest}}
+
+RESTful
+: {{site.data.glossary.restful}}
+
+RIM
+: {{site.data.glossary.rim}}
+
+ROA
+: {{site.data.glossary.roa}}
 
 SDS
 : {{site.data.glossary.sds}}
 
+SNOMED-CT
+: {{site.data.glossary.snomedct}}
+
+SOA
+: {{site.data.glossary.soa}}
+
+SOAP
+: {{site.data.glossary.soap}}
+
 Spine
 : {{site.data.glossary.spine}}
+
+STU
+: {{site.data.glossary.stu}}
+
+XML
+: {{site.data.glossary.xml}}
+
+xPath
+: {{site.data.glossary.xpath}}
+
+UML
+: {{site.data.glossary.uml}}
+
+Use Case
+: {{site.data.glossary.usecase}}
+
+Use Case Diagram
+: {{site.data.glossary.usecasediagram}}
+
+VNA
+: {{site.data.glossary.vna}}
