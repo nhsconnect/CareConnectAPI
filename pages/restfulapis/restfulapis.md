@@ -9,6 +9,26 @@ permalink: restfulapis.html
 summary: Overview
 ---
 
+# Profile Structure #
+The FHIR Care Connect profiles described in the Explore section of this implementation guide have been structured consistantly in the following way:
+0. References
+1. Read
+2. Search Parameters
+3. Example
+
+
+## Profile Structure Details ##
+
+| General              |  Medication &amp; Immunisation    |
+|+---------------------|+--------------------------------+|
+| 0. References  | Links to other parts of the implementation guide which might help with context and understanding the profiles described |
+| 1. Read | A description of how to get the API |
+| 2. Search Parameters          | List of search parameters for the profile being described, including any tips for searching. This section shows examples of how to search using the provided search parameters       |
+| 3. Example | Description of of the Request & Response headers, example of how to search on a server and the expected response body as an example   |
+
+# Profiles #
+This section looks at the Care Connect profiles covered within this implementation guide.
+
 ## Clinical ##
 
 | General             |  Medication &amp; Immunisation |
