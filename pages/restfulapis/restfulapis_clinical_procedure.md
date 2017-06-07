@@ -17,7 +17,8 @@ summary: An action that is or was performed on a patient. This can be a physical
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Procedure/[id]</div>
-Return a single `Procedure` for the specified id
+
+{% include custom/read.response.html resource="Procedure" content="" %}
 
 ## 2. Search ##
 
@@ -63,15 +64,7 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
 
 {% include custom/embedcurl.html title="Search Procedure" command="curl -X GET  'http://[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
-### 3.2 Response Headers ###
-
-| Status Code |
-|----------------|
-|200 |
-
-| Header | Value |
-|-----------------|---------|
-| Content-Type  | application/xml+fhir;charset=UTF-8 |
+{% include custom/search.response.headers.html resource="Procedure" %}
 
 ### 3.3 Response Body ###
 

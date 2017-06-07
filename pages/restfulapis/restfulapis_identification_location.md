@@ -52,15 +52,7 @@ Return all Location resources with a Trust Site code of RTG08, the format of the
 
 {% include custom/embedcurl.html title="Search Location" command="curl -X GET  'http://[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08&_format=xml'" %}
 
-### 3.2 Response Headers ###
-
-| Status Code |
-|----------------|
-|200 |
-
-| Header | Value |
-|-----------------|---------|
-| Content-Type  | application/xml+fhir;charset=UTF-8 |
+{% include custom/search.response.headers.html resource="Location" %}
 
 ### 3.3 Response Body ###
 

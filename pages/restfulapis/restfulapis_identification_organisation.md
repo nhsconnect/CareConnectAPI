@@ -57,15 +57,7 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
 
 {% include custom/embedcurl.html title="Search Organization" command="curl -X GET  'http://[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010&_format=xml'" %}
 
-### 3.2 Response Headers ###
-
-| Status Code |
-|----------------|
-|200 |
-
-| Header | Value |
-|-----------------|---------|
-| Content-Type  | application/xml+fhir;charset=UTF-8 |
+{% include custom/search.response.headers.html resource="Organization" %}
 
 ### 3.3 Response Body ###
 

@@ -16,7 +16,8 @@ summary: An interaction between a patient and healthcare provider(s) for the pur
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Encounter/[id]</div>
-Return a single `Encounter` for the specified id
+
+{% include custom/read.response.html resource="Encounter" content="" %}
 
 ## 2. Search ##
 
@@ -51,15 +52,7 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
 
 {% include custom/embedcurl.html title="Search Encounter" command="curl -X GET  'http://[baseUrl]/Encounter?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
-### 3.2 Response Headers ###
-
-| Status Code |
-|----------------|
-|200 |
-
-| Header | Value |
-|-----------------|---------|
-| Content-Type  | application/xml+fhir;charset=UTF-8 |
+{% include custom/search.response.headers.html resource="Encounter" %}
 
 ### 3.3 Response Body ###
 

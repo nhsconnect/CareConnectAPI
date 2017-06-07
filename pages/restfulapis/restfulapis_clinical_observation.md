@@ -18,7 +18,7 @@ summary: Measurements and simple assertions made about a patient, device or othe
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Observation/[id]</div>
 
-Return a single `Observation` for the specified id
+{% include custom/read.response.html resource="Observation" content="" %}
 
 ## 2. Search ##
 
@@ -73,15 +73,7 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
 
 {% include custom/embedcurl.html title="Search Observation" command="curl -X GET  'http://[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
-### 3.2. Response Headers ###
-
-| Status Code |
-|----------------|
-|200 |
-
-| Header | Value |
-|-----------------|---------|
-| Content-Type  | application/xml+fhir;charset=UTF-8 |
+{% include custom/search.response.headers.html resource="Observation" %}
 
 ### 3.3. Response Body ###
 

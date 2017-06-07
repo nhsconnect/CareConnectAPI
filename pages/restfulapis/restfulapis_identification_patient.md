@@ -94,15 +94,7 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 
 {% include custom/embedcurl.html title="Search Patient" command="curl -X GET  'http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
-### 3.2 Response Headers ###
-
-**Status Code**
-
-|200 OK|
-
-**Http Headers**
-
-| **Content-Type:** application/xml+fhir |
+{% include custom/search.response.headers.html resource="Patient"  %}
 
 ### 3.3 Response Body ###
 

@@ -19,7 +19,8 @@ summary: Prospective warnings of potential medication issues when providing care
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Flag/[id]</div>
-Return a single `Flag` for the specified id
+
+{% include custom/read.response.html resource="Flag" content="" %}
 
 ## 2. Search ##
 

@@ -16,7 +16,8 @@ summary: Describes the event of a patient being administered a vaccination or a 
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Immunization/[id]</div>
-Return a single `Immunization` for the specified id
+
+{% include custom/read.response.html resource="Immunization" content="" %}
 
 ## 2. Search ##
 
@@ -61,15 +62,7 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
 
 {% include custom/embedcurl.html title="Search Immunization" command="curl -X GET  'http://[baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
-### 3.2 Response Headers ###
-
-| Status Code |
-|----------------|
-|200 |
-
-| Header | Value |
-|-----------------|---------|
-| Content-Type  | application/xml+fhir;charset=UTF-8 |
+{% include custom/search.response.headers.html resource="Immunization" %}
 
 ### 3.3 Response Body ###
 

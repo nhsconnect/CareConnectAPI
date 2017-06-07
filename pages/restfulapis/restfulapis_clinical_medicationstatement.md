@@ -16,7 +16,8 @@ summary: A record of a medication that is being consumed by a patient. A Medicat
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /MedicationStatement/[id]</div>
-Return a single `Medication Statement` for the specified id.
+
+{% include custom/read.response.html resource="MedicationStatement" content="" %}
 
 ## 2. Search ##
 
@@ -55,15 +56,7 @@ Return all MedciationStatement resources for Patient with a NHS Number of 987654
 
 {% include custom/embedcurl.html title="Search MedicationStatement" command="curl -X GET  'http://[baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
-### 3.2 Response Headers ###
-
-| Status Code |
-|----------------|
-|200 |
-
-| Header | Value |
-|-----------------|---------|
-| Content-Type  | application/xml+fhir;charset=UTF-8 |
+{% include custom/search.response.headers.html resource="MedicationStatement" %}
 
 ### 3.3 Response Body ###
 

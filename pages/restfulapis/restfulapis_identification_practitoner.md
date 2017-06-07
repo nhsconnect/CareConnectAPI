@@ -64,15 +64,7 @@ Return all Practitioner resources with a GP Code of G8133438, the format of the 
 
 {% include custom/embedcurl.html title="Search Practitioner" command="curl -X GET  'http://[baseUrl]/Practitioner?identifier=https://fhir.nhs.uk/Id/sds-user-id|G8133438&_format=xml'" %}
 
-### 3.2 Response Headers ###
-
-| Status Code |
-|----------------|
-|200 |
-
-| Header | Value |
-|-----------------|---------|
-| Content-Type  | application/xml+fhir;charset=UTF-8 |
+{% include custom/search.response.headers.html resource="Practitioner" %}
 
 ### 3.3 Response Body ###
 

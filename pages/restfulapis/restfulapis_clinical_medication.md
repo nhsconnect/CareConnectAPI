@@ -17,7 +17,7 @@ summary: This resource is primarily used for the identification and definition o
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Medication/[id]</div>
 
-Return a single `Medication` for the specified id.
+{% include custom/read.response.html resource="Medication" content="" %}
 
 ## 2. Search ##
 
@@ -49,15 +49,7 @@ Return Medication resource with a logical id of 48496. Replace 'baseUrl' with th
 
 {% include custom/embedcurl.html title="Get Medication" command="curl -X GET  'http://[baseUrl]/Medication/48496'" %}
 
-### 3.2 Response Headers ###
-
-| Status Code |
-|----------------|
-|200 |
-
-| Header | Value |
-|-----------------|---------|
-| Content-Type  | application/xml+fhir;charset=UTF-8 |
+{% include custom/search.response.headers.html resource="Immunization" %}
 
 ### 3.3 Response Body ###
 
