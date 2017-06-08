@@ -22,8 +22,6 @@ The pharmacists would like to retrieve medications history of the patient to pre
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC_POC_Case_Overview.svg" alt="The patient's medication journey demonstrating questions than are asked during medication reconciliation." style="width:90%"></p>
 
 
-{% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
-
 
 ## Problem Statement ##
 
@@ -31,4 +29,8 @@ The Pharmacist is does not have a consolidated view of a patient's medications b
 
 ## Business Process ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolPharmacists/HighLevel.png" alt="The patient's medication journey demonstrating questions than are asked during medication reconciliation." style="width:90%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolPharmacistsHighLevel.png" alt="High level business process diagram showing the requirement to display medication from either a specific system or all systems." style="width:90%"></p>
+
+
+
+{% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
