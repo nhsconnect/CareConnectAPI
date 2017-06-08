@@ -1,10 +1,10 @@
 ---
-title: User Stories | Care Connect API | FHIR&reg; 
-keywords: usecase,use case, user stories, epics, scenarios, nhsnumber
-tags: [foundations,use_case,userstories, epics, scenarios]
+title: "Michael's Story"
+keywords: user stories, epics, scenarios, nhsnumber
+tags: [foundations,userstories, epics, scenarios]
 sidebar: engage_sidebar
 permalink: engage_user_stories.html
-summary: "User stories to search for a Care Connect FHIR&reg; Profile."
+summary: "An example of Michael's Story, translated to user stories with links to profiles"
 ---
 
 {% include important.html content="This page has been added to promote discussion in INTEROPen of the use cases and scenarios. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis." %}
