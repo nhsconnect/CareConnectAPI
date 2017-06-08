@@ -4,7 +4,7 @@ keywords: case studies, usecase, user stories, epics, scenarios, business analay
 tags: [foundations,user stories, epics, scenarios, casestudy]
 sidebar: engage_sidebar
 permalink: engage_poc_bristolcc.html
-summary: "Case Studies showing the adoption process, combining the business analysis, context and technical architecture involved in delivering a project."
+summary: "A case study showing the proposed adoption of FHIR to address needs of Bristol Connecting Care during medication reconcilliation."
 ---
 
 {% include important.html content="Please write up your own Case Studies of Care Connect Profiles you have used in the wild. If possible please use the Care Connect Adoption profile. " %}
