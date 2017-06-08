@@ -35,10 +35,6 @@ entries:
       url: /engage.html
       output: web, pdf
       type: homepage
-<!--    - title: Using Profiles-->
-<!--       url: /engage_using_profiles.html-->
-<!--       output: web-->
-    subfolders:
     - title: Case Studies
       url: /engage_case_studies.html
       output: web
@@ -49,8 +45,6 @@ entries:
       - title: Proof of Concepts
         url: /engage_proof_of_concept.html
         output: web
-        subfolders:
-
   - title: Explore
     output: web
     folderitems:
