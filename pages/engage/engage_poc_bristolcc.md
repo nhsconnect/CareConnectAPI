@@ -11,16 +11,16 @@ summary: "A case study showing the proposed adoption of FHIR to address needs of
 
 INTEROPen is working with health care providers and system vendors to prove the profiles defined within Care Connect. Please get in touch with INTEROPen to become help improve the community and fulfill the potential of Care Connect.
 
-# Client's Context #
+## Client's Context ##
 
 Connecting Care is a local electronic patient record that allows health and social care professionals directly involved in your care, to share a summary of your medical record.
 
-# Case Overview #
+## Case Overview ##
 
 The pharmacists would like to retrieve medications history of the patient to prepare a list or reconciled medications. They want to know the patient's medications journey.
 
 
-<p style="text-align:center;"><img src="images/engage/BristolCC_POC_Case_Overview.svg" alt="The patient's medication journey demonstrating questions than are asked during medication reconciliation." style="width:100%;max-width: 100%;"></p>
+<p style="text-align:center;"><img src="images/engage/BristolCC_POC_Case_Overview.svg" alt="The patient's medication journey demonstrating questions than are asked during medication reconciliation." style="width:90%""></p>
 
 
 {% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
