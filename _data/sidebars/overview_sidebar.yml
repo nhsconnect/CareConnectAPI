@@ -38,12 +38,17 @@ entries:
     - title: Case Studies
       url: /engage_case_studies.html
       output: web
+      folderitems:
       - title: "Michael's Story"
         url: /engage_user_stories.html
         output: web
-      - title: Proof of Concepts
-        output: web
-
+        subfolders:
+        - title: Proof of Concepts
+          output: web
+          subfolderitems:
+          - title: Bristol Connecting Care
+          output: web
+        
   - title: Explore
     output: web
     folderitems:
