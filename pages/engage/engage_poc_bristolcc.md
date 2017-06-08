@@ -52,7 +52,7 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 
 ## Dataset ##
 
-<table style="width:100%;max-width:100%"><tr><th colspan="2">Field Description</th></tr>
+<table style="width:100%;max-width:100%">
 <tr><td style="width:50%">Drug name (generic)</td><td>Issue date</td></tr>
 <tr><td>Drug name (Brand) if applicable</td><td>Number of issues</td></tr>
 <tr><td>Product form</td><td>Number of authorised issues</td></tr>
