@@ -25,12 +25,29 @@ The pharmacists would like to retrieve medications history of the patient to pre
 
 ## Problem Statement ##
 
-The Pharmacist is does not have a consolidated view of a patient's medications because the information is distributed across a number of systems.
+The Pharmacist does not have a consolidated view of a patient's medications because the information is distributed across a number of systems.
 
 ## Business Process ##
 
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolPharmacistsHighLevel.png" alt="High level business process diagram showing the requirement to display medication from either a specific system or all systems." style="width:90%"></p>
 
+## Use Case Diagram ##
+
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolUseCaseDiagram.png" alt="Use Case Diagram showing the Pharamacists use cases being explored." style="width:90%"></p>
+
+## User Stories ##
+
+<table style="width:100%;max-width:100%;"><tr><th>Use Case</th><th>User Story</th></tr>
+<tr><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td><td></td></tr>
+<tr><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
+<tr><td>As a Pharmacist (Hospital Services) I want to view a combined list of the patient's prescriptions recorded across all care settings so that I can see all of a patient's prescriptions in one place to facilitate a quick overview of the patient's medication history or to facilitate meds reconsiliation.</td></tr>
+<tr><td>As a Pharmacist (Hospital Services) I want to retrieve all prescriptions from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
+<tr><td>As a Pharmacist (Hospital Services) I want retrieve all of a patient's prescriptions from a specifc system so I can find out which medications an organisation has prescribed to the patient.</td></tr>
+<tr><td>As a Pharmacist (Hospital Services) I want to know on which system a medication was prescribed so that I can make informed judgements about the reason the medication was originally prescribed.</td></tr>
+<tr><td>As a Pharmacist (Hospital Services) I want the patient's record displayed to indicate the trace status of an NHS Number used to lookup data so I can be confident that the system has retrieved data for the correct patient.</td></tr>
+<tr><td>As a Pharmacist (Hospital Services) I want to know if medications were not available from a specific source so I can know that there may be gaps in the data I have.</td></tr>
+<tr><td>As a Information Governance Officer (Hospital Services) I want the interface to only returned data to an authenticated user so I can be sure that only known users are accessing the data.</td></tr>
+</table>
 
 
 {% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
