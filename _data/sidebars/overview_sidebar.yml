@@ -35,22 +35,22 @@ entries:
       url: /engage.html
       output: web, pdf
       type: homepage
-    - title: User Stories | FHIR&reg;
-      url: /engage_user_stories.html
-      output: web
-      subfolders:
-    - title: Using Profiles
-      url: /engage_using_profiles.html
-      output: web
-      subfolders:
-    - title: Proof of Concepts
-      url: /engage_proof_of_concept.html
-      output: web
-      subfolders:
+<!--    - title: Using Profiles-->
+<!--       url: /engage_using_profiles.html-->
+<!--       output: web-->
+<!--       subfolders:-->
     - title: Case Studies
       url: /engage_case_studies.html
       output: web
       subfolders:
+      - title: "Michael's Story" | FHIR&reg;
+        url: /engage_user_stories.html
+        output: web
+        subfolders:
+      - title: Proof of Concepts
+        url: /engage_proof_of_concept.html
+        output: web
+        subfolders:
 
   - title: Explore
     output: web
