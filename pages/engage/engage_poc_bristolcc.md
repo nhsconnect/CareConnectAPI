@@ -37,16 +37,16 @@ The Pharmacist does not have a consolidated view of a patient's medications beca
 
 ## User Stories ##
 
-<table style="width:100%;max-width:100%;"><tr><th>User Story</th></tr>
-<tr><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td><td></td></tr>
-<tr><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
-<tr><td>As a Pharmacist (Hospital Services) I want to view a combined list of the patient's prescriptions recorded across all care settings so that I can see all of a patient's prescriptions in one place to facilitate a quick overview of the patient's medication history or to facilitate meds reconsiliation.</td></tr>
-<tr><td>As a Pharmacist (Hospital Services) I want to retrieve all prescriptions from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
-<tr><td>As a Pharmacist (Hospital Services) I want retrieve all of a patient's prescriptions from a specifc system so I can find out which medications an organisation has prescribed to the patient.</td></tr>
-<tr><td>As a Pharmacist (Hospital Services) I want to know on which system a medication was prescribed so that I can make informed judgements about the reason the medication was originally prescribed.</td></tr>
-<tr><td>As a Pharmacist (Hospital Services) I want the patient's record displayed to indicate the trace status of an NHS Number used to lookup data so I can be confident that the system has retrieved data for the correct patient.</td></tr>
-<tr><td>As a Pharmacist (Hospital Services) I want to know if medications were not available from a specific source so I can know that there may be gaps in the data I have.</td></tr>
-<tr><td>As a Information Governance Officer (Hospital Services) I want the interface to only returned data to an authenticated user so I can be sure that only known users are accessing the data.</td></tr>
+<table style="width:100%;max-width:100%;"><tr><th>Feature</th><th>User Story</th></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to view a combined list of the patient's prescriptions recorded across all care settings so that I can see all of a patient's prescriptions in one place to facilitate a quick overview of the patient's medication history or to facilitate meds reconsiliation.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve all prescriptions from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want retrieve all of a patient's prescriptions from a specific system so I can find out which medications an organisation has prescribed to the patient.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know on which system a medication was prescribed so that I can make informed judgements about the reason the medication was originally prescribed.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want the patient's record displayed to indicate the trace status of an NHS Number used to lookup data so I can be confident that the system has retrieved data for the correct patient.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if medications were not available from a specific source so I can know that there may be gaps in the data I have.</td></tr>
+<tr><td style="vertical-align: middle;">Role Based Access Control (RBAC)</td><td>As a Information Governance Officer (Hospital Services) I want the interface to only return data to an authenticated user so I can be sure that only known users are accessing the data.</td></tr>
 </table>
 
 
