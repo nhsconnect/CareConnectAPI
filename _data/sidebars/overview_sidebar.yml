@@ -38,13 +38,14 @@ entries:
     - title: Case Studies
       url: /engage_case_studies.html
       output: web
-      subfolders:
+      folderitems:
       - title: "Michael's Story"
         url: /engage_user_stories.html
         output: web
       - title: Proof of Concepts
-        url: /engage_proof_of_concept.html
         output: web
+        subfolders:
+        subfolderitems:
   - title: Explore
     output: web
     folderitems:
