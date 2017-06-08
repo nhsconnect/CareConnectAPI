@@ -37,7 +37,7 @@ The Pharmacist does not have a consolidated view of a patient's medications beca
 
 ## User Stories ##
 
-<table style="width:100%;max-width:100%;"><tr><th>Use Case</th><th>User Story</th></tr>
+<table style="width:100%;max-width:100%;"><tr><th>User Story</th></tr>
 <tr><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td><td></td></tr>
 <tr><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
 <tr><td>As a Pharmacist (Hospital Services) I want to view a combined list of the patient's prescriptions recorded across all care settings so that I can see all of a patient's prescriptions in one place to facilitate a quick overview of the patient's medication history or to facilitate meds reconsiliation.</td></tr>
