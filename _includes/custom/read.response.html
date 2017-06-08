@@ -22,8 +22,26 @@
 
 <p>If no {{include.resource}} resource is found an <a href="https://www.hl7.org/fhir/DSTU2/operationoutcome.html">OperationOutcome</a> will be returned.</p>
 <p>Response class:</p>
-<ul>
-  <li>(Status 200): successful operation</li>
-  <li>(Status 404):  resource not found</li>
-  <li>(Status 410):  resource deleted</li>
-</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status </th>
+      <th>Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>successful operation</td>
+    </tr>
+    <tr>
+      <td>404</td>
+      <td>resource not found</td>
+    </tr>
+    <tr>
+      <td>410</td>
+      <td>resource deleted</td>
+    </tr>
+  </tbody>
+</table>
