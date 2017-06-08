@@ -16,12 +16,9 @@ Connecting Care is a local electronic patient record that allows health and soci
 
 ## Case Overview ##
 
-The pharmacists would like to retrieve medications history of the patient to prepare a list or reconciled medications. They want to know the patient's medications journey.
-
+The pharmacists would like to retrieve medications history of the patient to prepare a list or reconciled medications. They want to know the patient's medications journey. While the initial scenario seemed to be around medication reconcilliation, what becomes clear is that it's really around the creation of a consolidated view of medication.
 
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC_POC_Case_Overview.svg" alt="The patient's medication journey demonstrating questions than are asked during medication reconciliation." style="width:90%"></p>
-
-
 
 ## Problem Statement ##
 
@@ -37,17 +34,20 @@ The Pharmacist does not have a consolidated view of a patient's medications beca
 
 ## User Stories ##
 
+While the scope is initially demonstrated in the use case diagram, it is possible to refine the scope further within user stories that originate from conversations with the user. For example, from the perspective of the current Care Connect specification, security is outside of the scope of profile definition and further discussions would be required within the trust to clarify where responsibility lies.
+
 <table style="width:100%;"><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr>
+<tr><td span="2">In Scope</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to view a combined list of the patient's prescriptions recorded across all care settings so that I can see all of a patient's prescriptions in one place to facilitate a quick overview of the patient's medication history or to facilitate meds reconsiliation.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve all prescriptions from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want retrieve all of a patient's prescriptions from a specific system so I can find out which medications an organisation has prescribed to the patient.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know on which system a medication was prescribed so that I can make informed judgements about the reason the medication was originally prescribed.</td></tr>
+<tr><td span="2">Out of Scope</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want the patient's record displayed to indicate the trace status of an NHS Number used to lookup data so I can be confident that the system has retrieved data for the correct patient.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if medications were not available from a specific source so I can know that there may be gaps in the data I have.</td></tr>
 <tr><td style="vertical-align: middle;">Role Based Access Control (RBAC)</td><td>As a Information Governance Officer (Hospital Services) I want the interface to only return data to an authenticated user so I can be sure that only known users are accessing the data.</td></tr>
 </table>
-
 
 {% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
