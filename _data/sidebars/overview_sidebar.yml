@@ -38,7 +38,7 @@ entries:
 <!--    - title: Using Profiles-->
 <!--       url: /engage_using_profiles.html-->
 <!--       output: web-->
-<!--       subfolders:-->
+    subfolders:
     - title: Case Studies
       url: /engage_case_studies.html
       output: web
@@ -46,7 +46,6 @@ entries:
       - title: "Michael's Story" | FHIR&reg;
         url: /engage_user_stories.html
         output: web
-        subfolders:
       - title: Proof of Concepts
         url: /engage_proof_of_concept.html
         output: web
