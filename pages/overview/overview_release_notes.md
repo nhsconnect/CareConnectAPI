@@ -38,4 +38,4 @@ Engage
 
 ## 0.4.0-alpha.0 ##
 
-Multiple updates to glossary.
+Multiple updates to glossary
