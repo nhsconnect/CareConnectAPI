@@ -36,7 +36,7 @@ The Pharmacist does not have a consolidated view of a patient's medications beca
 
 While the scope is initially demonstrated in the use case diagram, it is possible to refine the scope further within user stories that originate from conversations with the user. For example, from the perspective of the current Care Connect specification, security is outside of the scope of profile definition and further discussions would be required within the trust to clarify where responsibility lies.
 
-<table style="width:100%;"><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr>
+<table style="width:100%;max-width:100%"><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr>
 <tr><td colspan="2">In Scope</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
