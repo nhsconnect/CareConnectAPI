@@ -30,7 +30,10 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 **FEATURE: Medication (Reconciliation - Discharge)**
 
-<table style="width:100%;max-width: 100%;"><tr><th>User Story</th><th>Profile</th></tr>
+<table style="width:100%;max-width: 100%;>
+<col>
+<col style="min-width: 30em;">
+<tr><th>User Story</th><th>Profile</th></tr>
 <tr><td>As a clinician (hospital services) I want to ‘stop’ medication that is present on the patient’s drug chart because a drug is no longer being taken by the patient or I do not consider it necessary to 'take out'.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
 <tr><td>As a clinician (hospital services) I want to add additional drugs that the patient may be taking to their drug chart because the patient declares that they are taking a drug that is not currently listed.</td><td><a href="restfulapis_clinical_medicationstatement.html">POST MedicationStatement</a></td></tr>
 <tr><td>As a clinician (hospital services) I want to continue medication that may have been put on hold during medicines reconciliation stage 1 on admission because the reasons that the drug were put on hold during the patient's admission are no longer relevant and the patient requires the medication for their ongoing condition.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
@@ -40,7 +43,10 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 **FEATURE: Discharge Summary (Create)**
 
-<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<table style="width:100%;max-width: 100%;>
+<col>
+<col style="min-width: 30em;">
+<tr><th>User Story</th><th>Profile</th></tr>
 <tr><td>As a clinician (hospital Services) I want to include the patient's TTO medications in the discharge summary to provide a complete and accurate list of the patient's medication to the GP.</td><td>Refer to the Transfer or Care eDischarge Bundle (<a href="restfulapis_clinical_medicationstatement.html">MedicationStatement</a>)</td></tr>
 </table>
 
