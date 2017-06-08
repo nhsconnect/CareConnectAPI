@@ -20,7 +20,7 @@ Connecting Care is a local electronic patient record that allows health and soci
 The pharmacists would like to retrieve medications history of the patient to prepare a list or reconciled medications. They want to know the patient's medications journey.
 
 
-<p style="text-align:center;"><img src="images/engage/BristolCC_POC_Case_Overview.svg" alt="The patient's medication journey demonstrating questions than are asked during medication reconciliation." style="width:90%""></p>
+<p style="text-align:center;"><img src="images/engage/BristolCC_POC_Case_Overview.svg" alt="The patient's medication journey demonstrating questions than are asked during medication reconciliation." style="width:90%"></p>
 
 
 {% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
