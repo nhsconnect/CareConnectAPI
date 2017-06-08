@@ -38,7 +38,6 @@ entries:
     - title: Case Studies
       url: /engage_case_studies.html
       output: web
-      subfolders:
       - title: "Michael's Story"
         url: /engage_user_stories.html
         output: web
