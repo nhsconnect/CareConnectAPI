@@ -35,3 +35,7 @@ Engage
 - Added Overview explanation
 - Added Michael's Stories showing the example user stories
 - Linked Michael's Stories to APIs currently available and defined above
+
+## 0.4.0-alpha.0 ##
+
+Multiple updates to glossary.
