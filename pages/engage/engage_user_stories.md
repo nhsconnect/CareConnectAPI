@@ -30,7 +30,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 **FEATURE: Medication (Reconciliation - Discharge)**
 
-<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:20em;">Profile</th></tr>
+<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:15em;">Profile</th></tr>
 <tr><td>As a clinician (hospital services) I want to ‘stop’ medication that is present on the patient’s drug chart because a drug is no longer being taken by the patient or I do not consider it necessary to 'take out'.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
 <tr><td>As a clinician (hospital services) I want to add additional drugs that the patient may be taking to their drug chart because the patient declares that they are taking a drug that is not currently listed.</td><td><a href="restfulapis_clinical_medicationstatement.html">POST MedicationStatement</a></td></tr>
 <tr><td>As a clinician (hospital services) I want to continue medication that may have been put on hold during medicines reconciliation stage 1 on admission because the reasons that the drug were put on hold during the patient's admission are no longer relevant and the patient requires the medication for their ongoing condition.</td><td><a href="restfulapis_clinical_medicationorder.html">PUT MedicationOrder</a></td></tr>
@@ -40,7 +40,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 **FEATURE: Discharge Summary (Create)**
 
-<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:20em;">Profile</th></tr>
+<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:15em;">Profile</th></tr>
 <tr><td>As a clinician (hospital Services) I want to include the patient's TTO medications in the discharge summary to provide a complete and accurate list of the patient's medication to the GP.</td><td>Refer to the Transfer or Care eDischarge Bundle (<a href="restfulapis_clinical_medicationstatement.html">MedicationStatement</a>)</td></tr>
 </table>
 
@@ -54,7 +54,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 **FEATURE: Dispensing of TTO medication**
 
-<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:20em;">Profile</th></tr>
+<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:15em;">Profile</th></tr>
 <tr><td>As a pharmacist (hospital services) I want to validate the medications prescribed, with the patient, so that i can provide the patient with the necessary medication that supplements what they currently have, ensuring they have enough medication to last at least two weeks (or a locally agreed amount).</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
 <tr><td>As a pharmacist (hospital services) I want to know if the patient requires a compliance aid to ensure that the medication is correctly packaged for the patient's needs.</td><td></td></tr>
 <tr><td>As a pharmacist (hospital services) I want to dispense at least a two weeks supply of medication (or locally agreed amount) to the patient based on their final list of medication at discharge to provide the patient with the correct medication as prescribed until their GP has had enough time to reconcile the patient's TTO meds with their own record and the patient has had sufficient chance to arrange a follow-up appointment if necessary.</td><td><a href="restfulapis_clinical_medicationdispense.html">POST MedicationDispense</a></td></tr>
@@ -70,7 +70,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 **FEATURE: Medication list - Patient Facing (View)**
 
-<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:20em;">Profile</th></tr>
+<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:15em;">Profile</th></tr>
 <tr><td>As a patient I want to manage my medications from various care settings (and their administration) in one place so I can ensure that I don't run out of my meds as well as having a record that can be shown to another care provider if necessary.</td><td><a href="restfulapis_clinical_medicationstatement.html#2-search-parameters">GET MedicationStatement</a></td></tr>
 <tr><td>As a patient I want medication changes to be highlighted when viewing my medication summary so I am less likely to miss that dosages have changed on medication I was previously taking.</td><td></td></tr>
 </table>
@@ -83,7 +83,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 **FEATURE: Discharge Summary**
 
-<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:20em;">Profile</th></tr>
+<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:15em;">Profile</th></tr>
 <tr><td>As a general practitioner (Primary Care, General Practice) I want to review the discharge summary created as a result of my patient's stay in hospital so I can update my records with the most recent and accurate patient information.</td><td>Refer to the Transfer or Care eDischarge Bundle</td></tr>
 <tr><td>As a general practitioner (Primary Care, General Practice) I want to to update my patient's medications with the latest reconciled list from the hospital to ensure I have the most complete list of medications and reduce the chance of duplicating prescribed medications or prescribing conflicting medication.</td><td>Refer to the Transfer or Care eDischarge Bundle (<a href="restfulapis_clinical_medicationstatement.html">MedicationStatement</a>)</td></tr>
 <tr><td>As a general practitioner (Primary Care, General Practice) I want to update my patient's list of problems with the latest problems added during my patient's stay in hospital to ensure I have the most complete patient history possible, better informing future contacts with the patient and providing more accurate patient care.</td><td>Refer to the Transfer or Care eDischarge Bundle (<a href="restfulapis_clinical_condition.html">Condition</a>)</td></tr>
@@ -97,13 +97,13 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 **FEATURE: Medication Reminder**
 
-<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:20em;">Profile</th></tr>
+<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:15em;">Profile</th></tr>
 <tr><td>As a patient I want to be reminded when my medications are due to be taken so that I can ensure that I don't forget to take my meds when they are due.</td><td><a href="restfulapis_clinical_medicationstatement.html#patient">GET MedicationStatement</a></td></tr>
 </table>
 
 **FEATURE: Medication Administration**
 
-<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:15em;">Profile</th></tr>
 <tr><td>As a patient I want to record the actual medication I have taken so that I have a complete record of how well I have adhered to my medicatication regimen and my care team can review this, contacting me if there are any concerns.</td><td>POST MedicationAdministration</td></tr>
 <tr><td>As a patient I want to make notes against my medications to discuss with my Care Team so if I have any concerns over my medication this can be reviewed and discussed further.</td><td>POST MedicationAdministration</td></tr>
 </table>
@@ -114,7 +114,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 **FEATURE: Medication List (Manage)**
 
-<table style="width:100%;max-width: 100%;"><th>User Story</th><th>Profile</th>
+<table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="width:15em;">Profile</th></tr>
 <tr><td>As a Patient I want to add any additional medicines that I purchase (such as over-the-counter, vitamins, natural remedies) so that I can maintain an accurate list of my medication for myself and my care team to review.</td><td><a href="restfulapis_clinical_medicationstatement.html">POST MedicationStatement</a></td></tr>
 <tr><td>As a patient I want to scan the bar code of a drug to add that to my medications list to facilitate a rapid update of my medications list without having to type in the medication details and reducing the chance or error.</td><td></td></tr>
 </table>
