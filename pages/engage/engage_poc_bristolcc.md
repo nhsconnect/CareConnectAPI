@@ -50,4 +50,34 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td style="vertical-align: middle;">Role Based Access Control (RBAC)</td><td>As a Information Governance Officer (Hospital Services) I want the interface to only return data to an authenticated user so I can be sure that only known users are accessing the data.</td></tr>
 </table>
 
+## Dataset ##
+
+<table style="width:100%;max-width:100%"><tr><th>Field Description</th></tr>
+<tr><td>Drug name (generic)</td></tr>
+<tr><td>Drug name (Brand) if applicable</td></tr>
+<tr><td>Product form</td></tr>
+<tr><td>Product strength</td></tr>
+<tr><td>Prescribed dose</td></tr>
+<tr><td>Prescribed frequency</td></tr>
+<tr><td>Prescription data</td></tr>
+<tr><td>Additional instructions</td></tr>
+<tr><td>Status of medication</td></tr>
+<tr><td>Cancellation reason</td></tr>
+<tr><td>Person recorded</td></tr>
+<tr><td>Role of person</td></tr>
+<tr><td>Date authorised until</td></tr>
+<tr><td>Issue date</td></tr>
+<tr><td>Number of issues</td></tr>
+<tr><td>Number of authorised issues</td></tr>
+<tr><td>Source system identity</td></tr>
+<tr><td>History of courses for same ingredient</td></tr>
+<tr><td>Issue type (acute, repeat, repeat dispensing or automatic)</td></tr>
+<tr><td>Issue notes</td></tr>
+<tr><td>Prescription delivery method</td></tr>
+<tr><td>Date of first issue</td></tr>
+<tr><td>Date of last issue</td></tr>
+<tr><td>Issue quantity</td></tr>
+<tr><td>Issue status (either a date of issue or 'Not yet issued')</td></tr>
+</table>
+
 {% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
