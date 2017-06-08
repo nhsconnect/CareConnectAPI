@@ -31,22 +31,22 @@ entries:
   - title: Engage
     output: web
     folderitems:
+    
     - title: Overview
       url: /engage.html
       output: web, pdf
       type: homepage
-    - title: Case Studies
-      url: /engage_case_studies.html
-      output: web
-      folderitems:
-      - title: "Michael's Story"
-        url: /engage_user_stories.html
+      
+      subfolders:  
+      - title: Case Studies
+        url: /engage_case_studies.html
         output: web
-        subfolders:
-        - title: Proof of Concepts
+        subfolderitems:
+        
+        - title: "Michael's Story"
+          url: /engage_user_stories.html
           output: web
-          subfolderitems:
-          - title: Bristol Connecting Care
+        - title: Bristol Connecting Care POC
           output: web
         
   - title: Explore
