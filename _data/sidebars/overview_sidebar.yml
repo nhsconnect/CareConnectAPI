@@ -32,7 +32,7 @@ entries:
     output: web
     folderitems:
     
-    - title: Overview
+    - title: Engagement Approach
       url: /engage.html
       output: web, pdf
       type: homepage
@@ -47,6 +47,7 @@ entries:
           url: /engage_user_stories.html
           output: web
         - title: Bristol Connecting Care POC
+          url: /engage_poc_bristolcc.html
           output: web
         
   - title: Explore
