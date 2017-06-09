@@ -316,16 +316,16 @@ The API Journey is a guide from imagination and exploring to developing local AP
             <text id="Extensions" font-family="HelveticaNeue, Helvetica Neue" font-size="15" font-weight="normal" letter-spacing="0.0104529625" fill="#000000">
                 <tspan x="678.685309" y="190.111875">Extensions</tspan>
             </text>
-            <rect id="l-engage" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="108.641975" height="239.85">
-                <a xlink:href="/engage.html" target="_top">
+            <a xlink:href="/engage.html" target="_top">
+                <rect id="l-engage" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="108.641975" height="239.85">
                     <text x="10" y="20" width="100%" height="100%" style="text-anchor: middle">test</text>
-                </a>
-            </rect>
-            <rect id="l-explore" fill-opacity="0" fill="#FFFFFF" x="113.580247" y="0" width="108.641975" height="239.85">
-                <a xlink:href="https://nhsconnect.github.io/CareConnectAPI/restfulapis.html" target="_top">
-                    <text x="10" y="20" width="100%" height="100%" style="text-anchor: middle"> </text>
-                </a>
-            </rect>
+                </rect>
+            </a>
+            <a xlink:href="https://nhsconnect.github.io/CareConnectAPI/restfulapis.html" target="_top">
+                <rect id="l-explore" fill-opacity="0" fill="#FFFFFF" x="113.580247" y="0" width="108.641975" height="239.85">
+                        <text x="10" y="20" width="100%" height="100%" style="text-anchor: middle"> </text>
+                </rect>
+            </a>
             <rect id="l-design" fill-opacity="0" fill="#FFFFFF" x="223" y="0" width="108.641975" height="239.85"></rect>
             <rect id="l-test" fill-opacity="0" fill="#FFFFFF" x="332.098765" y="0" width="108.641975" height="239.85"></rect>
             <rect id="l-accredit" fill-opacity="0" fill="#FFFFFF" x="445.679012" y="0" width="108.641975" height="239.85"></rect>
