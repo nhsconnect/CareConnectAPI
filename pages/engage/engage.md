@@ -23,7 +23,7 @@ This process will add business value by enabling businesses to easily exchange i
 
 <table style="min-width:100%;width:100%">
 <tr><th></th><th>Step</th><th>Description</th><th style="min-width:11em;">Formal Output</th></tr>
-<tr><td>1</td><td>Document Client's Context</td><td>Give a brief description of the client we are engaging with and what led them to the business need for interoperability.</td><td><ul style="padding-left:1em;"><li>Short Textual Statement</li></ul></td></tr>
+<tr><td>1</td><td>Document Client's Context</td><td>Give a brief description of the client we are engaging with and what led them to the business need for interoperability.</td><td><ul style="padding-left:1em;padding-top:0"><li>Short Textual Statement</li></ul></td></tr>
 <tr><td>2</td><td>Document Case Overview</td><td>Description of the client's business needs and expectations.</td><td><ul style="padding-left:1em;"><li>Short Textual Statement</li></ul></td></tr>
 <tr><td>3</td><td>Document Problem Statement</td><td>Describe the current ineroperability issues.</td><td><ul style="padding-left:1em;"><li>Problem Statement Diagram</li></ul></td></tr>
 <tr><td>4</td><td>Identify Business Requirements</td><td>Visually represent the business case to confirm understanding of the problem with the client.</td><td><ul style="padding-left:1em;"><li>Business Process Model</li><li>Use Case Diagrams</li><li>User Stories</li></ul></td></tr>
