@@ -25,6 +25,8 @@ Connecting Care is a local electronic patient record that allows health and soci
 
 This case study demonstrates the application of the [Care Connect Enagement Process](/engage)
 
+---
+
 {% include important.html content="Please write up your own Case Studies of Care Connect Profiles you have used in the wild. If possible please use the Care Connect Adoption profile. " %}
 
 INTEROPen is working with health care providers and system vendors to prove the profiles defined within Care Connect. Please get in touch with INTEROPen to become help improve the community and fulfill the potential of Care Connect.
