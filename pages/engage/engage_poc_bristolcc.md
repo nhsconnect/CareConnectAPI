@@ -70,6 +70,6 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 
 ## FHIR Resources ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesUpdated.png" alt="Use Case Diagram showing the Pharamacists use cases being explored." style="width:90%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesUpdated.png" alt="Diagram showing that the resources MedicationOrder, MedicationStatement, Patient and Practitioner have been identified as necessary profiles to support a solution for Bristol Connecting Care." style="width:90%"></p>
 
 {% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
