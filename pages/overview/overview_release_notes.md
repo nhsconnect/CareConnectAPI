@@ -9,6 +9,22 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 {% include important.html content="This site is under active development by NHS Digital on behalf of INTEROPen and is intended to provide all the technical resources you need to successfully develop the Care Connect APIs. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis." %}
 
+
+## 0.4.0-alpha.0 ##
+
+Added 
+- Description of providing an API process
+- Standard definition of a API definition
+- Started Test explanation section
+
+Defined Patient definition adding :
+- References section - starting to link to user stories
+- HTTP headers 
+- Response codes - Also added a non exhaustive API Codes page to describe all of the codes
+- Search parameters - added section to include guidance on how a search can happen in practice localised on the NHS
+
+Multiple updates to glossary
+
 ## 0.3.0-alpha.0 ##
 
 Examples resources conforming to the CareConnect Profiles
@@ -36,6 +52,3 @@ Engage
 - Added Michael's Stories showing the example user stories
 - Linked Michael's Stories to APIs currently available and defined above
 
-## 0.4.0-alpha.0 ##
-
-Multiple updates to glossary
