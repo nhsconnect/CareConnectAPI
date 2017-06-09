@@ -22,7 +22,7 @@ This process will add business value by enabling businesses to easily exchange i
 ### Agree Business Requirements ###
 
 <table style="min-width:100%;width:100%">
-<tr><th></th><th>Step</th><th>Description</th><th style="min-width:11em;">Formal Output</th></tr>
+<tr><th></th><th>Step</th><th>Description</th><th style="width:11em;">Formal Output</th></tr>
 <tr><td>1</td><td>Document Client's Context</td><td>Give a brief description of the client we are engaging with and what led them to the business need for interoperability.</td><td><ul style="padding-left:1em;padding-top:0"><li style="margin:0;">Short Textual Statement</li></ul></td></tr>
 <tr><td>2</td><td>Document Case Overview</td><td>Description of the client's business needs and expectations.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Short Textual Statement</li></ul></td></tr>
 <tr><td>3</td><td>Document Problem Statement</td><td>Describe the current ineroperability issues.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Problem Statement Diagram</li></ul></td></tr>
@@ -33,7 +33,7 @@ This process will add business value by enabling businesses to easily exchange i
 ### Define the Solution ###
 
 <table style="min-width:100%;width:100%">
-<tr><th></th><th>Step</th><th>Description</th><th style="min-width:10em;">Formal Output</th></tr>
+<tr><th></th><th>Step</th><th>Description</th><th style="width:11em;">Formal Output</th></tr>
 <tr><td>6</td><td>Identify Care Connect Profiles and FHIR Resources</td><td>Identify which Care Connect profiles and FHIR resources can be used to meet the requirement. An entity relationship diagram can help to describe the profiles.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Entity Relationship Diagram</li></ul></td></tr>
 <tr><td>7</td><td>Map Dataset</td><td>Map the dataset to the profile.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Dataset Mapping</li></ul></td></tr>
 <tr><td>8</td><td>Obtain Approval</td><td>Get Profile to Dataset Mapping reviewed and approved by the client.</td><td></td></tr>
@@ -46,7 +46,7 @@ This process will add business value by enabling businesses to easily exchange i
 ### Deliver the Solution ###
 
 <table style="min-width:100%;width:100%">
-<tr><th></th><th>Step</th><th>Description</th><th style="min-width:10em;">Formal Output</th></tr>
+<tr><th></th><th>Step</th><th>Description</th><th style="width:11em;">Formal Output</th></tr>
 <tr><td>13</td><td>Present Case Study</td><td>Present final case study to stakeholders and include it into the implementation guide.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Presentation</li><li>Updated Implementation Guide</li></ul></td></tr>
 <tr><td>14</td><td>Implement Solution</td><td>Client implements solution, tests and provides feedback.</td><td></td></tr>
 <tr><td>15</td><td>Learning</td><td>Identify failures and successes of the project.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Plan to improve processes, preventing a repeat of failure and improving success rate.</li></ul></td></tr>
