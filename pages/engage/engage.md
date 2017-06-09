@@ -7,9 +7,33 @@ permalink: engage.html
 summary: "These pages assist with requirements gathering and mapping stages of a FHIR API development process."
 ---
 
-<img src="images/engage/Interoperability Process.svg" style="width:100%;max-width: 100%;" alt="Diagram showing the project stages that would benefit most from exploring user stories and case studies." title="Diagram showing the project stages that would benefit most from exploring user stories and case studies.">
+## Approach to Engagement ##
+
+This process lays down steps of engagement with the client to analyse their business requirements for interoperability in a way that it supports mapping your requirements to CareConnect Profiles (that user HL7 INTEROPen FHIR standards) and enable the development of a live interface (apis) to read or exchange information/data.
+
+It has been cited that it’s very difficult to exchange information between various business units in health care sector as most of them follow their own data structures to exchange information. This causes lot of interoperability issues and rework. Implementing this process gives us the opportunity to demonstrate and guide the business units as to how these issues can be resolved using standards- FHIR (Fast Health Information Resources) and Care Connect Profiles which adhere to interoperability standards defined by INTEROPen community (INTEROPen.org). A standardised approach will provide a common language for engagement and will more easily support a framework for sharing knowledge that can continue to assist future projects and possibly become self sustaining within the community.
+
+## Business Benefit ##
+
+This process will add business value by enabling businesses to easily exchange information in a common format as defined by FHIR and Profiles which is easily understood by rest of the organisation.
+
+## The Process ##
+
+### Business Requirements ###
+
+<table>
+<tr><th></th><th>Step</th><th>Description</th><th>Formal Output</th></tr>
+<tr><td>1</td><td>Client's Context</td><td>Give a brief description of the client we are engaging with and what led them to the business need for interoperability.</td>Short Textual Statement<td></td></tr>
+<tr><td>2</td><td>Case Overview</td><td>Description of the client's business needs and expectations.</td><td>Short Textual Statement</td></tr>
+<tr><td>3</td><td>Problem Statement</td><td>Describe the current ineroperability issues.</td><ul><li>Problem Statement Diagram</li></ul><td></td></tr>
+<tr><td>4</td><td>Business Requirements</td><td>Visually represent the business case to confirm understanding of the problem with the client.</td><ul><li>Business Process Model</li><li>Use Case Diagrams</li><li>User Stories</li></ul><td></td></tr>
+<tr><td>5</td><td>Identify Dataset</td><td>Given that the solution is likely to be implemented against existing systems it should be straightforward to identify which data items the client wants to send or receive between those systems. Get XML representation of the data structure if possible.</td><ul><li>Data Set</li><li>Data Structure</li></ul><td></td></tr>
+</table>
 
 ## User Stories
+
+<img src="images/engage/Interoperability Process.svg" style="width:100%;max-width: 100%;" alt="Diagram showing the project stages that would benefit most from exploring user stories and case studies." title="Diagram showing the project stages that would benefit most from exploring user stories and case studies.">
+
 It is recommended that user stories are created to identify and document requirements. This implementation guide uses non-technical stories as the foundation for identifying requirements and mapping to Care Connect profiles. This provides a reference point to help with the identification of requirements and profiles.
 Within the initial phase of the Care Connect API roadmap, on behalf of INTEROPen, NHS Digital are building a catalogue of user stories to support proof of concept work. The vision for this catalogue is that it can be opened up for direct contributions from the community providing a referenceable catalogue, linking requirements, solutions and case studies providing further education back to the community.
 ### Why User Stories?
