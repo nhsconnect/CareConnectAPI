@@ -23,10 +23,10 @@ This process will add business value by enabling businesses to easily exchange i
 
 <table style="min-width:100%;width:100%">
 <tr><th></th><th>Step</th><th>Description</th><th style="min-width:11em;">Formal Output</th></tr>
-<tr><td>1</td><td>Client's Context</td><td>Give a brief description of the client we are engaging with and what led them to the business need for interoperability.</td><td>Short Textual Statement</td></tr>
-<tr><td>2</td><td>Case Overview</td><td>Description of the client's business needs and expectations.</td><td>Short Textual Statement</td></tr>
-<tr><td>3</td><td>Problem Statement</td><td>Describe the current ineroperability issues.</td><td><ul style="padding-left:1em;"><li>Problem Statement Diagram</li></ul></td></tr>
-<tr><td>4</td><td>Business Requirements</td><td>Visually represent the business case to confirm understanding of the problem with the client.</td><td><ul style="padding-left:1em;"><li>Business Process Model</li><li>Use Case Diagrams</li><li>User Stories</li></ul></td></tr>
+<tr><td>1</td><td>Understand Client's Context</td><td>Give a brief description of the client we are engaging with and what led them to the business need for interoperability.</td><td><ul style="padding-left:1em;"><li>Short Textual Statement</li></ul></td></tr>
+<tr><td>2</td><td>Document Case Overview</td><td>Description of the client's business needs and expectations.</td><td><ul style="padding-left:1em;"><li>Short Textual Statement</li></ul></td></tr>
+<tr><td>3</td><td>Document Problem Statement</td><td>Describe the current ineroperability issues.</td><td><ul style="padding-left:1em;"><li>Problem Statement Diagram</li></ul></td></tr>
+<tr><td>4</td><td>Identify Business Requirements</td><td>Visually represent the business case to confirm understanding of the problem with the client.</td><td><ul style="padding-left:1em;"><li>Business Process Model</li><li>Use Case Diagrams</li><li>User Stories</li></ul></td></tr>
 <tr><td>5</td><td>Identify Dataset</td><td>Given that the solution is likely to be implemented against existing systems it should be straightforward to identify which data items the client wants to send or receive between those systems. Get XML representation of the data structure if possible.</td><td><ul style="padding-left:1em;"><li>Data Set</li><li>Data Structure</li></ul></td></tr>
 </table>
 
@@ -34,6 +34,9 @@ This process will add business value by enabling businesses to easily exchange i
 
 <table style="min-width:100%;width:100%">
 <tr><th></th><th>Step</th><th>Description</th><th style="min-width:10em;">Formal Output</th></tr>
+<tr><td>6</td><td>Identify Care Connect Profiles and FHIR Resources</td><td>Identify which Care Connect profiles and FHIR resources can be used to meet the requirement. An entity relationship diagram can help to describe the profiles.</td><td><ul style="padding-left:1em;"><li>Entity Relationship Diagram</li></ul></td></tr>
+<tr><td>7</td><td>Map Dataset</td><td>Map the dataset to the profile.</td><td><ul style="padding-left:1em;"><li>Dataset Mapping</li></ul></td></tr>
+<tr><td>8</td><td>Obtpproval</td><td>Get Profile to Dataset Mapping reviewed and approved by the client.</td><td></td></tr>
 </table>
 
 ### Deliver the Solution ###
