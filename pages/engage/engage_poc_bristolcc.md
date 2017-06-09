@@ -99,8 +99,6 @@ FHIR Relative Request for getting medications from all systems <em>using a local
 GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/System-number|9876543210&datewritten=gt2013-03-14&_revinclude=*
 ~~~
 
-{% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
-
 ## Search Query Parameters ##
 
 <table style="width:100%;max-width:100%"> 
@@ -114,3 +112,31 @@ GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/System-number|987
 <tr><td>source</td><td>reference</td><td>Who the information in the statement came from</td><td>MAY</td><td>MedicationStatement.informationSource (Patient, Practitioner, RelatedPerson))</td></tr>
 <tr><td>status</td><td>token</td><td>Return statements that match the given status</td><td>MAY</td><td>MedicationStatement.status</td></tr>
 </table>
+
+## Search Results ##
+
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRBundle.png" alt="Diagram showing the bundle that is returned following a search" style="width:90%"></p>
+
+## API Sequence Diagrams ##
+
+## Technical Architecture ##
+
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/TechnicalArchitecture.jpg" alt="Diagram showing an overview of the solution's architecture." style="width:90%"></p>
+
+## Acceptance Criteria ##
+
+While the acceptance criteria is not fully developed, below is an example of some possible criteria that could be defined.
+
+<table style="width:100%;max-width:100%"><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve all prescriptions from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
+<tr><td colspan="2">
+<ul>
+<li>I am able to call an API with the URL: GET /MedicationOrder?patient.identifier=http://fhir/nhs.net/Id/nhs-number|9876543210.</li>
+<li>I am able to pass NHS number as an input parameter</li>
+<li>The API returns profile "MedicationOrder" with medications information about patient as a populated JSON object in the following format: &lt;&lt;Json Object&gt;&gt;</li>
+</ul>
+</td></tr>
+</table>
+
+
+{% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
