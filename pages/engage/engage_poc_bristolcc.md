@@ -100,3 +100,17 @@ GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/System-number|987
 ~~~
 
 {% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
+
+## Search Query Parameters ##
+
+<table style="width:100%;max-width:100%"> 
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Conformance</th><th>Path</th></tr>
+<tr><td>effective-date</td><td>date</td><td>Date when patient was taking (or not taking) the medication</td><td>SHOULD</td><td>MedicationStatement.effective[x]</td></tr>
+<tr><td>patient</td><td>reference</td><td>The identity of a patient to list statements for</td><td>SHALL</td><td>MedicationStatement.patient (Patient)</td></tr>
+<tr><td>status</td><td>token</td><td>Return statements that match the given status</td><td>SHOULD</td><td>MedicationStatement.status</td></tr>
+<tr><td>code</td><td>token</td><td>Return administrations of this medication code</td><td>MAY</td><td>MedicationStatement.medicationCodeableConcept</td></tr>
+<tr><td>identifier</td><td>token</td><td>Return statements with this external identifier</td><td>MAY</td><td>MedicationStatement.identifier</td></tr>
+<tr><td>medication</td><td>reference</td><td>Return administrations of this medication reference</td><td>MAY</td><td>MedicationStatement.medicationReference (Medication)</td></tr>
+<tr><td>source</td><td>reference</td><td>Who the information in the statement came from</td><td>MAY</td><td>MedicationStatement.informationSource (Patient, Practitioner, RelatedPerson))</td></tr>
+<tr><td>status</td><td>token</td><td>Return statements that match the given status</td><td>MAY</td><td>MedicationStatement.status</td></tr>
+</table>
