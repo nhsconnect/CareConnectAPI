@@ -7,8 +7,6 @@ permalink: engage_userstories.html
 summary: "This page explains what user stories are and how they are applied within Care Connect"
 ---
 
-## User Stories
-
 <img src="images/engage/Interoperability Process.svg" style="width:100%;max-width: 100%;" alt="Diagram showing the project stages that would benefit most from exploring user stories and case studies." title="Diagram showing the project stages that would benefit most from exploring user stories and case studies.">
 
 It is recommended that user stories are created to identify and document requirements. This implementation guide uses non-technical stories as the foundation for identifying requirements and mapping to Care Connect profiles. This provides a reference point to help with the identification of requirements and profiles.
