@@ -1,10 +1,10 @@
 ---
-title: Providing APIs
-keywords: development,
+title: Provide API
+keywords: development,overview
 tags: [engage,development,fhir]
 sidebar: overview_sidebar
 permalink: overview_api_provide.html
-summary: Care Connect API journey outlines the approach of developing RESTful APIs and the journey taken to define and mature the Care Connect APIs
+summary: Providing an RESTful API for the first time is a journey. This page explains a starting point of the work involved in providing an API and also the part be concentrated on by Care Connect
 ---
 
 {% include important.html content="All phases outlined below are indicative and subject to on-going review." %}
