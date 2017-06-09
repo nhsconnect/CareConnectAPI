@@ -39,10 +39,12 @@ entries:
       
       subfolders:  
       - title: Case Studies
-        url: /engage_case_studies.html
         output: web
         subfolderitems:
         
+        - title: "Case Study Overview"
+          url: /engage_case_studies.html
+          output: web
         - title: "Michael's Story"
           url: /engage_michaelsstory.html
           output: web
