@@ -14,7 +14,7 @@ summary: Providing an RESTful API for the first time is a journey. This page exp
 
 The following diagram explains the elements of APIs allowing a the development of APIs:
 
-{% include custom/api_overview.svg %}
+<img src="images/roadmap/provide_api.jpg" style="width:100%;max-width: 100%;"> 
 
 NHS Digital is contributing to progressing the profile development as described below. Invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem as defined above. 
 
