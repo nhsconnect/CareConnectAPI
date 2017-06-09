@@ -51,13 +51,3 @@ This process will add business value by enabling businesses to easily exchange i
 <tr><td>14</td><td>Implement Solution</td><td>Client implements solution, tests and provides feedback.</td><td></td></tr>
 <tr><td>15</td><td>Learning</td><td>Identify failures and successes of the project.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Plan to improve processes, preventing a repeat of failure and improving success rate.</li></ul></td></tr>
 </table>
-
-## Case Studies
-
-Care Connect case studies provide examples of how real world problems have been solved using Care Connect. Following a process that shows how the project evolved from gathering business requirements through to the final creation of a solution, case studies offer insight and education from the experience of other trusts and service providers.
-
-<img src="images/engage/EngagementModel.svg" style="width:100%;max-width: 100%;" alt="Diagram showing high level stages that are discussed in each case study." title="Diagram showing high level stages that are discussed in each case study.">
-
-The development of the Care Connect standard relies on community engagement curated by INTEROPen. Contributions can be made, either by joining the INTEROPen or simply contacting INTEROPen using the email address careconnect@interopen.org.
-
-[Care Connect Case Studies](engage_case_studies.html)
