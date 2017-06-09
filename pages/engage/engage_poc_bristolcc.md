@@ -72,7 +72,7 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 
 <div style="display:flex;flex-wrap:wrap;">
 <div style="flex:3;min-width:30em;"><p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesUpdated.png" alt="Diagram showing that the resources MedicationOrder, MedicationStatement, Patient and Practitioner have been identified as necessary profiles to support a solution for Bristol Connecting Care." style="width:90%"></p></div>
-<div style="flex:1;min-width:20em;max-width:30em;borderstyle:solid;border-width:thin;border-color:#005eb8;border-radius:5px;">
+<div style="flex:1;min-width:20em;max-width:30em;border-style:solid;border-width:thin;border-color:#005eb8;border-radius:5px;">
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesOriginal.png" alt="Diagram showing the first proposal which didn't include the use of MedicationOrder" style="width:90%"></p>
 <p><small><i>The first approach considered didn't include the MedicalStatement resource but simply proposed the use of MedicalOrder. Following clinical review it was highlighted that this would assume that all medications are prescribed which is not the case. Therefore, this was extended to include both MedicationStatement and MedicationOrder.</i></small></p>
 </div>
