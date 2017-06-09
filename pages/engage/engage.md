@@ -47,7 +47,7 @@ This process will add business value by enabling businesses to easily exchange i
 
 <table style="min-width:100%;width:100%">
 <tr><th style="width:3em;"></th><th style="width:11em;">Step</th><th>Description</th><th style="width:11em;">Formal Output</th></tr>
-<tr><td>13</td><td>Present Case Study</td><td>Present final case study to stakeholders and include it into the implementation guide.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Presentation</li><li>Updated Implementation Guide</li></ul></td></tr>
+<tr><td>13</td><td>Present <a href="/engage_case_studies.html">Case Study</a></td><td>Present final case study to stakeholders and include it into the implementation guide.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Presentation</li><li>Updated Implementation Guide</li></ul></td></tr>
 <tr><td>14</td><td>Implement Solution</td><td>Client implements solution, tests and provides feedback.</td><td></td></tr>
 <tr><td>15</td><td>Learning</td><td>Identify failures and successes of the project.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Plan to improve processes, preventing a repeat of failure and improving success rate.</li></ul></td></tr>
 </table>
