@@ -11,7 +11,7 @@ summary: "Case Studies showing the adoption process, combining the business anal
 
 Care Connect case studies provide examples of how real world problems have been solved using Care Connect. Following a process that shows how the project evolved from gathering business requirements through to the final creation of a solution, case studies offer insight and education from the experience of other trusts and service providers.
 
-<img src="images/engage/EngagementProcessTall.svg" style="width:100%;max-width: 100%;" alt="Diagram showing high level stages that are discussed in each case study." title="Diagram showing high level stages that are discussed in each case study.">
+<img src="images/engage/EngagementProcessTall.svg" style="width:100%;max-width:100%;" alt="Diagram showing high level stages that are discussed in each case study." title="Diagram showing high level stages that are discussed in each case study.">
 
 The development of the Care Connect standard relies on community engagement curated by INTEROPen. Contributions can be made, either by joining the INTEROPen or simply contacting INTEROPen using the email address careconnect@interopen.org.
 
