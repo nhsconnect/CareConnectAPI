@@ -1,0 +1,53 @@
+<MedicationOrder xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationOrder-1"/>
+	</meta>
+	<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationSupplyType-1">
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="394823007"/>
+				<display value="NHS Prescription"/>
+			</coding>
+		</valueCodeableConcept>
+	</extension>
+	<dateWritten value="2017-05-25T00:00:00+01:00"/>
+	<status value="active"/>
+	<patient>
+		<reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+		<display value="Bernie Kanfeld"/>
+	</patient>
+	<prescriber>
+		<reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+		<display value="Dr AA Bhatia"/>
+	</prescriber>
+	<note value="Please explain to Bernie how to use injector."/>
+	<medicationCodeableConcept>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="10097211000001102"/>
+			<display value="Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices"/>
+		</coding>
+	</medicationCodeableConcept>
+	<dosageInstruction>
+		<text value="Three times a day"/>
+		<additionalInstructions>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="1521000175104"/>
+				<display value="After dinner"/>
+			</coding>
+		</additionalInstructions>
+		<timing>
+			<code>
+				<coding>
+					<system value="http://hl7.org/fhir/v3/GTSAbbreviation"/>
+					<code value="TID"/>
+				</coding>
+			</code>
+		</timing>
+	</dosageInstruction>
+	<dispenseRequest>
+		<numberOfRepeatsAllowed value="5"/>
+	</dispenseRequest>
+</MedicationOrder>

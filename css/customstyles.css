@@ -1162,3 +1162,8 @@ div.box.box1 {
         width: 100%;
     }
 }
+
+.s_link:hover { 
+    fill: #4F81BD;
+    fill-opacity: 0.4;
+} 

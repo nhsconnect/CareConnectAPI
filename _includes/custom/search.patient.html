@@ -1,0 +1,40 @@
+<h4 id="patient">{{include.para}} patient</h4>
+
+<p>See <a href="https://www.hl7.org/fhir/DSTU2/search.html#reference">reference</a> for details on this parameter. The patient parameter can be used two ways:</p>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET /{{include.content}}?patient=[id]</div>
+
+
+<p>This SHALL be supported for all endpoint provider systems.</p>
+
+<p> <code class="highlighter-rouge">id</code> is the logical id of the patient on the server which is obtained by a <a href="restfulapis_identification_patient.html">Patient </a> resource query.</p>
+<p>
+<code class="highlighter-rouge">id</code> SHALL be the national identifier (NHS Number) for national systems.
+</p>
+
+
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET /{{include.content}}?patient=42
+</span></code>
+Return all {{include.content}} resources for Patients with a logical id of 42</pre>
+</div>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET /{{include.content}}?patient.identifier=[system]|[code]</div>
+
+<p>This SHOULD be supported for all non national provider systems for queries by national identifiers (NHS Number).</p>
+<p>This SHALL be supported for all intermediary (e.g. Trust Integration Engines or other middleware) systems.</p>
+
+<p><code class="highlighter-rouge">system</code> is a uniform resource identifier which defines which CodeSystem the identifer belongs to. For NHS Number this would be <code class="highlighter-rouge">https://fhir.nhs.uk/Id/nhs-number</code> and <code class="highlighter-rouge">code</code> would be the NHS Number.</p>
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET /{{include.content}}?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
+</span></code>
+Return all {{include.content}} resources for Patients with a NHS Number of 9876543210</pre>
+</div>
+<p> Suppliers and organisations MAY create their own systemUri’s for local patient identifiers, e.g. the fictional Jorvik NHS Trust could use <code class="highlighter-rouge">http://fhir.jorvik.nhs.uk/Patient</code> to identify a number as the trusts hospital number.</p>
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET /{{include.content}}?patient.identifier=https://fhir.jorvik.nhs.uk/Patient|12345678
+</span></code>
+Return all {{include.content}} resources for Patients with Jorvik Trust Hospital Number of 12345678</pre>
+</div>

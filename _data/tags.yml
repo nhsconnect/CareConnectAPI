@@ -1,6 +1,11 @@
 allowed-tags:
   - overview
-  - usecase
+  - casestudies
   - fhir
-  - design  
+  - design
   - development
+  - clinical
+  - identification
+  - workflow
+  - rest
+  - userstories

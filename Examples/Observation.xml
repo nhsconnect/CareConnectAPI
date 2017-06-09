@@ -1,0 +1,26 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2017-05-23T10:36:52.408-04:00"/>
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Observation-1"/>
+    </meta>
+    <identifier>
+        <system value="http://fhir.jorvik.nhs.uk/EPR/Observation"/>
+        <value value="878281"/>
+    </identifier>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="162864005"/>
+            <display value="Body mass index 30+ - obesity"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+    </subject>
+    <effectiveDateTime value="2012-09-17"/>
+    <performer>
+        <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+    </performer>
+</Observation>

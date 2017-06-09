@@ -1,0 +1,21 @@
+<Medication xmlns="http://hl7.org/fhir">
+   <meta>
+      <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Medication-1"/>
+   </meta>
+   <code>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="10097211000001102"/>
+         <display value="Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices"/>
+      </coding>
+   </code>
+   <product>
+      <form>
+         <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="385219001"/>
+            <display value="Solution for injection"/>
+         </coding>
+      </form>
+   </product>
+</Medication>

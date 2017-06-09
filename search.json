@@ -5,28 +5,31 @@ search: exclude
 ---
 
 [
+  {% for post in site.posts %}
+    {
+      "title"    : "{{ post.title | escape }}",
+      "category" : "{{ post.category }}",
+      "tags"     : "{{ post.tags | join: ', ' }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "date"     : "{{ post.date }}",
+      "content"  : "{{ post.content | strip_html | strip_newlines }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  {% if post.title != nil %},{% endif %}
+
 {% for page in site.pages %}
-{% unless page.search == "exclude" %}
-{
-"title": "{{ page.title | escape }}",
-"tags": "{{ page.tags }}",
-"keywords": "{{page.keywords}}",
-"url": "{{ page.url | remove: "/"}}",
-"summary": "{{page.summary | strip }}"
-},
-{% endunless %}
+	{
+		{% if page.title != nil %}
+		"title": "{{ page.title | strip_html | strip_newlines | remove_chars | escape }}",
+		"tags": "{{ page.tags }}",
+		"keywords": "{{page.keywords}}",
+		"url": "{{ page.url | remove: "/"}}",
+		"summary": "{{page.summary | strip_html | strip_newlines | remove_chars | escape }}",
+		"content": {{ page.content | jsonify }}
+		{% endif %}
+	}
+	{% unless forloop.last %},{% endunless %}
 {% endfor %}
 
-{% for post in site.posts %}
-
-{
-"title": "{{ post.title | escape }}",
-"tags": "{{ post.tags }}",
-"keywords": "{{post.keywords}}",
-"url": "{{ post.url }}",
-"summary": "{{post.summary | strip }}"
-}
-{% unless forloop.last %},{% endunless %}
-{% endfor %}
 
 ]

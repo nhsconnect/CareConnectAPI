@@ -1,0 +1,13 @@
+<h4 id="status">{{include.para}} status</h4>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET /{{include.content}}?patient=[id]&status=[code]</div>
+
+<p>See <a href="https://www.hl7.org/fhir/DSTU2/search.html#token" >token</a> for details on this parameter.</p>
+<p>To filter on status ( <code class="highlighter-rouge">{{include.options}}</code> )</p>
+
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET /{{include.content}}?patient=1&status={{include.selected}}
+</span></code>
+Return all {{include.content}} resources with a status of {{include.selected}} and Patient with a logical id of 1.</pre>
+</div>
