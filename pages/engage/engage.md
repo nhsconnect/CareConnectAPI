@@ -21,7 +21,7 @@ This process will add business value by enabling businesses to easily exchange i
 
 ### Business Requirements ###
 
-<table>
+<table style="min-width:100%;width:100%">
 <tr><th></th><th>Step</th><th>Description</th><th>Formal Output</th></tr>
 <tr><td>1</td><td>Client's Context</td><td>Give a brief description of the client we are engaging with and what led them to the business need for interoperability.</td><td>Short Textual Statement</td></tr>
 <tr><td>2</td><td>Case Overview</td><td>Description of the client's business needs and expectations.</td><td>Short Textual Statement</td></tr>
