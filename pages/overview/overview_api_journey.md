@@ -15,7 +15,7 @@ summary: Care Connect API journey outlines the approach of developing RESTful AP
 The API Journey is a guide from imagination and exploring to developing local APIs using Care Connect profiles all the way to deploying a live API.  
 
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="800px" height="217px" viewBox="0 0 800 217" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="100%" viewBox="0 0 800 217" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>guide</title>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -322,7 +322,7 @@ The API Journey is a guide from imagination and exploring to developing local AP
                 </a>
             </rect>
             <rect id="l-explore" fill-opacity="0" fill="#FFFFFF" x="113.580247" y="0" width="108.641975" height="239.85">
-                <a xlink:href="/restfulapis.html.html" target="_top">
+                <a xlink:href="https://nhsconnect.github.io/CareConnectAPI/restfulapis.html" target="_top">
                     <text x="100%" y="100%" style="text-anchor: middle"> </text>
                 </a>
             </rect>
