@@ -3,7 +3,7 @@ title: "Michael's Story"
 keywords: user stories, epics, scenarios, nhsnumber
 tags: [foundations,userstories, epics, scenarios]
 sidebar: engage_sidebar
-permalink: engage_user_stories.html
+permalink: engage_michaelsstory.html
 summary: "An example of Michael's Story, translated to user stories with links to profiles"
 ---
 
