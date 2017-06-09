@@ -27,7 +27,7 @@ Defined Patient definition adding :
 
 Multiple updates to glossary
 
-Restructured 'Engage' navigation to rationalise content showing the engagement process and case studies
+Restructured 'Engage' navigation to rationalise content showing the engagement process and case studies. Pages explaining what user stories are and how we use them have been moved off the sidebar to be accessed within the pages as necessary.
 
 ## 0.3.0-alpha.0 ##
 
