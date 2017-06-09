@@ -1,21 +1,61 @@
 ---
-title: Explore  Care Connect
-keywords: explore, care connect process, process, introduction
-tags: [explore]
-sidebar: explore_sidebar
+title: Explore Overview
+keywords: getcarerecord, structured, rest, resource
+tags:
+- structured
+- getcarerecord
+sidebar: foundations_sidebar
 permalink: explore.html
-summary: "Call to action for support building the implementation guide"
+summary: "Overview of the Explore section"
 ---
 
-This page has been intentional created to show the growth of the implementation guide to support the end to end adoption of Care Connect profiles.
 
-{% include custom/contribute.html content="If you want to get involved in any part of this then please get in touch with careconnect@interopen.org "%}
+## 1. Profile Structure ##
+The FHIR Care Connect profiles described in the Explore section of this implementation guide have been structured consistantly in the following way:
+0. References
+1. Read
+2. Search Parameters
+3. Example
+
+### 1.1 Profile Structure Details ###
+
+| General              |  Medication &amp; Immunisation    |
+|+---------------------+|+--------------------------------+|
+| 0. References  | Links to other parts of the implementation guide which might help with context and understanding the profiles described |
+| 1. Read | A description of how to get the API |
+| 2. Search Parameters          | List of search parameters for the profile being described, including any tips for searching. This section shows examples of how to search using the provided search parameters       |
+| 3. Example | Description of of the Request & Response headers, example of how to search on a server and the expected response body as an example   |
 
 
-# Contribute
+## 2. Profiles ##
+This section looks at the Care Connect profiles covered within this implementation guide.
 
-This site is structured around Care Connect stakeholders including API users, developers and architects. Please get involved in the journey.
+### 2.1 Clinical ###
 
-<img src="images/roadmap/guide.jpg" style="width:100%;max-width: 100%;">
+| General             |  Medication &amp; Immunisation |
+|---------------------|--------------------------------|
+| [AllergyIntolerance](restfulapis_clinical_allergyintolerance.html)  |[ Medication](restfulapis_clinical_medication.html)                     |
+| [Condition](restfulapis_clinical_condition.html) (Problem) | [MedicationOrder ](restfulapis_clinical_medicationorder.html)               |
+| [Procedure](restfulapis_clinical_procedure.html)           | [MedicationStatement ](restfulapis_clinical_medicationstatement.html)           |
+| [Observation](restfulapis_clinical_observation.html) | [Immunization](restfulapis_clinical_immunization.html)                   |
 
-{% include custom/contribute.html content="If you want to get involved in any part of this then please get in touch with careconnect@interopen.org "%}
+<!--- |   |  [Flag ](restfulapis_clinical_medicationflag.html)(Medication)  | --->
+
+### 2.2. Identification ###
+
+| Individuals  | Groups &amp; Entities       |
+|--------------|--------------|
+| [Patient ](restfulapis_identification_patient.html)     | [Organization](restfulapis_identification_organisation.html) |   
+| [Practitioner](restfulapis_identification_practitioner.html) | [Location](restfulapis_identification_location.html)     |  
+
+### 2.3. Workflow ###
+
+| Patient Management |
+|--------------------|
+| [Encounter](restfulapis_workflow_encounter.html)          |
+
+### 3.4 Conformance ###
+
+| Terminology | Operations Control |
+|-------------|--------------------|
+| ValueSet    | [Conformance](restfulapis_conformance_conformance.html)          |
