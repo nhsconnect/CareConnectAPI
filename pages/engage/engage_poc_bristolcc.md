@@ -4,7 +4,7 @@ keywords: case studies, usecase, user stories, epics, scenarios, business analay
 tags: [foundations,user stories, epics, scenarios, casestudy]
 sidebar: engage_sidebar
 permalink: engage_poc_bristolcc.html
-summary: "A case study showing the proposed adoption of FHIR to address needs of Bristol Connecting Care during medication reconcilliation."
+summary: "A case study showing the proposed adoption of FHIR to address needs of Bristol Connecting Care during medication reconcilliation. (Currently not implemented)"
 ---
 <!--
 {% include important.html content="Please write up your own Case Studies of Care Connect Profiles you have used in the wild. If possible please use the Care Connect Engagement Approach" %}
