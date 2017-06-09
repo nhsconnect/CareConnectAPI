@@ -12,11 +12,11 @@ summary: Care Connect API journey outlines the approach of developing RESTful AP
 	
 # How to provide an API #
 
-The current site focuses on a typical API Developer's Journey as highlighted by the green boxes below in the developer journey:
+The following diagram explains the elements of APIs allowing a the development of APIs:
 
-<img src="images/roadmap/profile-focus.jpg" style="width:100%;max-width: 100%;"> 
+<img src="images/roadmap/provide_api.jpg" style="width:100%;max-width: 100%;"> 
 
-NHS Digital is contributing to progressing the profile developmenet, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem. 
+NHS Digital is contributing to progressing the profile development as described below. Invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem as defined above. 
 
 Please see the explanation of the complete development roadmap.
 
