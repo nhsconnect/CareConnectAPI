@@ -15,8 +15,6 @@ Care Connect case studies provide examples of how real world problems have been 
 
 The development of the Care Connect standard relies on community engagement curated by INTEROPen. Contributions can be made, either by joining the INTEROPen or simply contacting INTEROPen using the email address careconnect@interopen.org.
 
-[Care Connect Case Studies](engage_case_studies.html)
-
 {% include important.html content="Please write up your own Case Studies of Care Connect Profiles you have used in the wild. If possible please use the Care Connect Adoption profile. " %}
 
 INTEROPen is working with health care providers and system vendors to prove the profiles defined within Care Connect. Please get in touch with INTEROPen to become help improve the community and fulfill the potential of Care Connect.
