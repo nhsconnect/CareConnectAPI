@@ -40,13 +40,16 @@ This process will add business value by enabling businesses to easily exchange i
 <tr><td>9</td><td>Design API</td><td>Define API Signatures and use of Search Parameters</td><td><ul style="padding-left:1em;"><li>API Signature</li><li>Search Parameters</li><li>Search Results</li></ul></td></tr>
 <tr><td>10</td><td>Document Interaction Flow</td><td>Define the sequence of interactions expected including the function, input parameters, output parameters etc.</td><td><ul style="padding-left:1em;"><li>API Sequence Diagram</li></ul></td></tr>
 <tr><td>11</td><td>Document Additional Technical Context</td><td>Identify any further techincal considerations to aid understanding.</td><td><ul style="padding-left:1em;"><li>System Diagrams</li><li>Acceptance Criteria</li></ul></td></tr>
-<tr><td>12</td><td>Resolve Curation Requirements</td><td>Feedback to INTEROpen any necessary changes to Profile definitions.</td><td><ul style="padding-left:1em;"><li>System Diagrams</li><li>Acceptance Criteria</li></ul></td></tr>
+<tr><td>12</td><td>Resolve Curation Requirements</td><td>Feedback to INTEROpen any necessary changes to Profile definitions.</td><td><ul style="padding-left:1em;"><li>Updated Care Connect Standards</li></ul></td></tr>
 </table>
 
 ### Deliver the Solution ###
 
 <table style="min-width:100%;width:100%">
 <tr><th></th><th>Step</th><th>Description</th><th style="min-width:10em;">Formal Output</th></tr>
+<tr><td>13</td><td>Present Case Study</td><td>Present final case study to stakeholders and include it into the implementation guide.</td><td><ul style="padding-left:1em;"><li>Presentation</li><li>Updated Implementation Guide</li></ul></td></tr>
+<tr><td>14</td><td>Implement Solution</td><td>Client implements solution, tests and provides feedback.</td><td></td></tr>
+<tr><td>15</td><td>Learning</td><td>Identify failures and successes of the project.</td><td><ul style="padding-left:1em;"><li>Plan to improve processes, preventing a repeat of failure and improving success rate.</li></ul></td></tr>
 </table>
 
 ## User Stories
