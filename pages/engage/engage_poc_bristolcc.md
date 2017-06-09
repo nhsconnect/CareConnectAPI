@@ -119,7 +119,7 @@ GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/System-number|987
 
 ## API Sequence Diagrams ##
 
-Pending...
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCCSequenceDiagram.png" alt="Diagram showing the bundle that is returned following a search" style="width:90%"></p>
 
 ## Technical Architecture ##
 
