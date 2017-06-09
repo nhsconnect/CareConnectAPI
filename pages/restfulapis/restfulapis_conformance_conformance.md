@@ -61,6 +61,8 @@ No additional headers expected beyond those described in the HTTP and FHIR&reg; 
 
 An example Conformance profile is available [here](Conformance/Spine-VM-ConformanceStatement-1.xml) - client systems should always use the Conformance profile from the above URL as the authoritative conformance statement - this is provided as an example for reference only.
 
+{% include important.html content="The following draft conformance statement will move as the implementation guide moves on." %}
+
 ```xml
 <Conformance xmlns="http://hl7.org/fhir">
 	<version value="0.4.0-alpha.0"/>
