@@ -115,7 +115,7 @@ GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/System-number|987
 
 ## Search Results ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRBundle.png" alt="Diagram showing the bundle that is returned following a search" style="width:90%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRBundle.png" alt="Diagram showing the bundle that is returned following a search"></p>
 
 ## API Sequence Diagrams ##
 
