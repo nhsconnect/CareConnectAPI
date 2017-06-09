@@ -16,6 +16,7 @@ Added
 - Description of providing an API process
 - Standard definition of a API definition
 - Started Test explanation section
+- Bristol Connecting Care Case Study
 
 Defined Patient definition adding :
 - References section - starting to link to user stories
@@ -24,6 +25,8 @@ Defined Patient definition adding :
 - Search parameters - added section to include guidance on how a search can happen in practice localised on the NHS
 
 Multiple updates to glossary
+
+Restructured 'Engage' navigation to rationalise content showing the engagement process and case studies
 
 ## 0.3.0-alpha.0 ##
 
