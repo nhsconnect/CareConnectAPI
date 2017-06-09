@@ -24,7 +24,7 @@ Find out more on the [INTEROPen website](http://interopen.org/).
 
 This guide has been created to support the adoption of Care Connect profiles and FHIR resources. As such the site is structured around Care Connect stakeholders including API users, developers and architects.  
 
-<img src="images/roadmap/guide.jpg" style="width:100%;max-width: 100%;">
+{% include custom/api_overview.svg %}
 
 The above steps outline a complete API journey from imagination and exploring to developing local APIs using Care Connect profiles all the way to deploying a live API.
 

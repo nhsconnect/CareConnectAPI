@@ -9,6 +9,8 @@ permalink: explore.html
 summary: "Overview of the Explore section"
 ---
 
+{% include custom/api_overview.svg %}
+
 
 ## 1. Profile Structure ##
 The FHIR Care Connect profiles described in the Explore section of this implementation guide have been structured consistantly in the following way:
