@@ -78,4 +78,8 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 </div>
 </div>
 
+## Profiles ##
+
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/end.png" alt="Entity Relationship Diagram showing the applied prifiles." style="width:90%"></p>
+
 {% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
