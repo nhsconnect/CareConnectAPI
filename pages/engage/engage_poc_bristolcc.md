@@ -68,4 +68,8 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td>Date authorised until</td><td></td></tr>
 </table>
 
+## FHIR Resources ##
+
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesUpdated.png" alt="Use Case Diagram showing the Pharamacists use cases being explored." style="width:90%"></p>
+
 {% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
