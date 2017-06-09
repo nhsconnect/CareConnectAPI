@@ -318,12 +318,12 @@ The API Journey is a guide from imagination and exploring to developing local AP
             </text>
             <rect id="l-engage" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="108.641975" height="239.85">
                 <a xlink:href="/engage.html" target="_top">
-                    <text x="100%" y="100%" style="text-anchor: middle"> </text>
+                    <text x="10" y="20" width="100%" height="100%" style="text-anchor: middle">test</text>
                 </a>
             </rect>
             <rect id="l-explore" fill-opacity="0" fill="#FFFFFF" x="113.580247" y="0" width="108.641975" height="239.85">
                 <a xlink:href="https://nhsconnect.github.io/CareConnectAPI/restfulapis.html" target="_top">
-                    <text x="100%" y="100%" style="text-anchor: middle"> </text>
+                    <text x="10" y="20" width="100%" height="100%" style="text-anchor: middle"> </text>
                 </a>
             </rect>
             <rect id="l-design" fill-opacity="0" fill="#FFFFFF" x="223" y="0" width="108.641975" height="239.85"></rect>
@@ -335,7 +335,6 @@ The API Journey is a guide from imagination and exploring to developing local AP
     </g>
 </svg>
 
-<img src="images/roadmap/guide.jpg" style="width:100%;max-width: 100%;">
 
 The above steps outline a complete API journey .
 
