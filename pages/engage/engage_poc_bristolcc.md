@@ -80,6 +80,23 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 
 ## Profiles ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/end.png" alt="Entity Relationship Diagram showing the applied prifiles." style="width:90%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/ERD.png" alt="Entity Relationship Diagram showing the applied profiles." style="width:90%"></p>
+
+## API Signatures ##
+
+FHIR Relative Request for getting medications from <em>all systems</em> using NHS Number.
+~~~
+GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|9876543210&datewritten=gt2013-03-14&_revinclude=*
+~~~
+
+FHIR Relative Request for getting medications from a <em>specific system</em> using NHS Number.
+~~~
+GET /Dstu2/MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/MedicationOrder
+~~~
+
+FHIR Relative Request for getting medications from all systems <em>using a local system patient ID</em>.
+~~~
+GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/System-number|9876543210&datewritten=gt2013-03-14&_revinclude=*
+~~~
 
 {% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
