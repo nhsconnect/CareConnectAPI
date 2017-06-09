@@ -1,7 +1,7 @@
 ---
 title: Bristol Connecting Care
-keywords: case studies, usecase, user stories, epics, scenarios, business analaysis, technical architecture, context
-tags: [foundations,user stories, epics, scenarios, casestudy]
+keywords: case studies, usecase, user stories, epics, scenarios, business analaysis, technical architecture, context, Bristol, Connecting Care
+tags: [userstories,casestudy]
 sidebar: engage_sidebar
 permalink: engage_poc_bristolcc.html
 summary: "A case study showing the proposed adoption of FHIR to address needs of Bristol Connecting Care during medication reconcilliation. (Currently not implemented)"
@@ -118,6 +118,8 @@ GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/System-number|987
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRBundle.png" alt="Diagram showing the bundle that is returned following a search"></p>
 
 ## API Sequence Diagrams ##
+
+Pending...
 
 ## Technical Architecture ##
 
