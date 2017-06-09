@@ -53,8 +53,8 @@ entries:
   - title: Explore
     output: web
     folderitems:
-    - title: Overview | Profiles
-      url: /restfulapis.html
+    - title: Overview
+      url: /explore.html
       output: web
     - title: Care Connect Versioning
       url: /overview_cc_versioning.html
@@ -137,7 +137,7 @@ entries:
     output: web
     folderitems:
     - title: Overview | Coming soon
-      url: /support_coming_soon.html
+      url: /design.html
       output: web
     - title: Patient Search
       url: /design_patient_search.html
@@ -156,19 +156,19 @@ entries:
     output: web
     folderitems:
     - title: Overview | Coming soon
-      url: /support_coming_soon.html
+      url: /test.html
       output: web
   - title: Accredit
     output: web
     folderitems:
     - title: Overview | Coming soon
-      url: /support_coming_soon.html
+      url: /accredit.html
       output: web
   - title: Deploy
     output: web
     folderitems:
     - title: Overview | Coming soon
-      url: /support_coming_soon.html
+      url: /deploy.html
       output: web
 
   - title: Help & Support
