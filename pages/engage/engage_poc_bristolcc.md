@@ -119,7 +119,7 @@ GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/System-number|987
 
 ## API Sequence Diagrams ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCCSequenceDiagram.png" alt="Sequence diagram showing the flow of information between actors" alt="Sequence diagram showing the flow of information between actors" style="width:90%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCCSequenceDiagram.png" alt="Sequence diagram showing the flow of information between actors" title="Sequence diagram showing the flow of information between actors" style="width:90%"></p>
 
 ## Technical Architecture ##
 
