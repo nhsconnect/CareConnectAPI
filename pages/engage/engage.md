@@ -19,6 +19,8 @@ This process will add business value by enabling businesses to easily exchange i
 
 ## The Process ##
 
+<p style="text-align:center;"><img src="images/engage/EngagementApproach.svg" style="width:80%;max-width: 80%;"></p>
+
 ### Agree Business Requirements ###
 
 <table style="min-width:100%;width:100%">
