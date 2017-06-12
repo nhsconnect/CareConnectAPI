@@ -99,6 +99,7 @@
 				<title>Sheet.212</title>
 				<path d="M29.02 414.82 L70.87 398.3 L42.26 392.33 L0 403.03 L29.02 414.82 Z" class="st5"/>
 			</g>
+			<a xlink:href="http://google.com">
 			<g id="shape213-22" v:mID="213" v:groupContext="shape" v:layerMember="0" transform="translate(6.42108,2.84217E-13)">
 				<title>Sheet.213</title>
 				<path d="M13.67 389.4 L3.25 389.4 C2.5 389.4 1.81 389.66 1.26 390.09 C0.88 390.39 0.56 390.78 0.34 391.22 C0.12 391.66
@@ -130,9 +131,11 @@
 			<g id="shape210-34" v:mID="210" v:groupContext="groupContent" v:layerMember="0">
 				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
 				<v:textRect cx="35.4331" cy="427.219" width="167.44" height="24.8035"/>
-				<text x="-42.36" y="431.42" class="st7" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Document Client Context</text>			</g>
-		</g>
-		<g id="shape214-36" v:mID="214" v:groupContext="shape" v:layerMember="1" transform="translate(389.34,-372.048)">
+				<text x="-42.36" y="431.42" class="st7" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Document Client Context</text>
+			</g>
+			</a>
+			</g>
+			<g id="shape214-36" v:mID="214" v:groupContext="shape" v:layerMember="1" transform="translate(389.34,-372.048)">
 			<title>Dynamic connector</title>
 			<path d="M0 407.73 L122.06 407.73" class="st8"/>
 		</g>
