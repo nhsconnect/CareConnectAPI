@@ -21,11 +21,11 @@ This process will add business value by enabling businesses to easily exchange i
 
 The process is broken down into 15 descrete steps that are boradly organised onto three stages: Agree Business Requirements, Define the Solution, and Deliver the Solution.
 
-
+<br>
 <object style="width:100%;max-width: 100%;" type="image/svg+xml" data="images/engage/EngagementApproach.svg">
   <p style="text-align:center;"><img src="images/engage/EngagementApproach.svg" alt="Diagram showing the process stages for agreeing business requirements, then defining and delivering the solution" title="Diagram showing the process stages for agreeing business requirements, then defining and delivering the solution" style="width:100%;max-width: 100%;"></p>
 </object>
-
+<br>
 
 ### Agree Business Requirements ###
 
