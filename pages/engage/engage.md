@@ -23,7 +23,7 @@ The process is broken down into 15 descrete steps that are boradly organised ont
 
 <p style="text-align:center;"><img src="images/engage/EngagementApproach.svg" alt="Diagram showing the process stages for agreeing business requirements, then defining and delivering the solution" title="Diagram showing the process stages for agreeing business requirements, then defining and delivering the solution" style="width:100%;max-width: 100%;"></p>
 
-<object type="image/svg+xml" data="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo
+<object style="width:100%;max-width: 100%;" type="image/svg+xml" data="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo
 8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3
 d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPCEtLSBHZW5lcmF0Z
 WQgYnkgTWljcm9zb2Z0IFZpc2lvLCBTVkcgRXhwb3J0IEVuZ2FnZW1lbnRBcHByb2FjaC5zdmcg
