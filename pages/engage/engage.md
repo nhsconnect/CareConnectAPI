@@ -19,7 +19,7 @@ This process will add business value by enabling businesses to easily exchange i
 
 ## The Process ##
 
-<p style="text-align:center;"><img src="images/engage/EngagementApproach.svg" alt="Diagram showing the process stages for agreeing business requirements, defining the solution and delivering the solution" title="Diagram showing the process stages for agreeing business requirements, defining the solution and delivering the solution" style="width:100%;max-width: 100%;"></p>
+<p style="text-align:center;"><img src="images/engage/EngagementApproach.svg" alt="Diagram showing the process stages for agreeing business requirements, then defining and delivering the solution" title="Diagram showing the process stages for agreeing business requirements, then defining and delivering the solution" style="width:100%;max-width: 100%;"></p>
 
 ### Agree Business Requirements ###
 
