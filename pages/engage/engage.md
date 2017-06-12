@@ -23,7 +23,7 @@ The process is broken down into 15 descrete steps that are boradly organised ont
 
 <p style="text-align:center;"><img src="images/engage/EngagementApproach.svg" alt="Diagram showing the process stages for agreeing business requirements, then defining and delivering the solution" title="Diagram showing the process stages for agreeing business requirements, then defining and delivering the solution" style="width:100%;max-width: 100%;"></p>
 
-<object type="image/svg+xml" data="data:images/engage/EngagementApproach.svg;base64,[data]">
+<object type="image/svg+xml" data="data:image/svg+xml;base64,images/engage/EngagementApproach.svg">
   fallback
 </object>
 
