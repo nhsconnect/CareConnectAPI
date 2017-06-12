@@ -38,11 +38,11 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 
 <table style="width:100%;max-width:100%"><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr>
 <tr><td colspan="2">In Scope</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's prescriptions using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to view a combined list of the patient's prescriptions recorded across all care settings so that I can see all of a patient's prescriptions in one place to facilitate a quick overview of the patient's medication history or to facilitate meds reconsiliation.</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve all prescriptions from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want retrieve all of a patient's prescriptions from a specific system so I can find out which medications an organisation has prescribed to the patient.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's medications using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific system so I can find out which medications an organisation has prescribed to the patient.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to view a combined list of the patient's medications recorded across all care settings so that I can see all of a patient's medications in one place to facilitate a quick overview of the patient's medication history or to facilitate meds reconsiliation.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve all medications from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know on which system a medication was prescribed so that I can make informed judgements about the reason the medication was originally prescribed.</td></tr>
 <tr><td colspan="2">Out of Scope <i>(Behaviour that is not addressed within the API directly.)</i></td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want the patient's record displayed to indicate the trace status of an NHS Number used to lookup data so I can be confident that the system has retrieved data for the correct patient.</td></tr>
@@ -84,19 +84,19 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 
 ## API Signatures ##
 
-FHIR Relative Request for getting medications from <em>all systems</em> using NHS Number.
+As a Pharmacist (Hospital Services) I want to retreive a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.
 ~~~
-GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|9876543210&datewritten=gt2013-03-14&_revinclude=*
-~~~
-
-FHIR Relative Request for getting medications from a <em>specific system</em> using NHS Number.
-~~~
-GET /Dstu2/MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/MedicationOrder
+GET/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 ~~~
 
-FHIR Relative Request for getting medications from all systems <em>using a local system patient ID</em>.
+As a Pharmacist (Hospital Services) I want to retreive a patient's medications using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.
 ~~~
-GET /MedicationOrder?patient.identifier=http://fhir.nhs.net/Id/System-number|9876543210&datewritten=gt2013-03-14&_revinclude=*
+GET/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
+~~~
+
+As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific system so I can find out which medications an organisation has prescribed to the patient.
+~~~
+GET/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
 ~~~
 
 ## Search Query Parameters ##
