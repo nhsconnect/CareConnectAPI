@@ -40,7 +40,7 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td colspan="2">In Scope</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's medications using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific system so I can find out which medications an organisation has prescribed to the patient.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific system so I can build an accurate list of reconciled medications.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to view a combined list of the patient's medications recorded across all care settings so that I can see all of a patient's medications in one place to facilitate a quick overview of the patient's medication history or to facilitate meds reconsiliation.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve all medications from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know on which system a medication was prescribed so that I can make informed judgements about the reason the medication was originally prescribed.</td></tr>
@@ -94,7 +94,7 @@ As a Pharmacist (Hospital Services) I want to retreive a patient's medications u
 GET/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
 ~~~
 
-As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific system so I can find out which medications an organisation has prescribed to the patient.
+As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific system so I can build an accurate list of reconciled medications.
 ~~~
 GET/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
 ~~~
