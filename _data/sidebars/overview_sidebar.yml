@@ -203,6 +203,9 @@ entries:
         - title: Community
           url: /support_community.html
           output: web
+        - title: FHIR Tools
+          url: /support_fhirtools.html
+          output: web
 
   - title: Tags
     output: web
