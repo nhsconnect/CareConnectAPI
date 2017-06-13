@@ -22,7 +22,7 @@ The FHIR Care Connect profiles described in the Explore section of this implemen
 ### 1.1 Profile Structure Details ###
 
 | General              |  Medication &amp; Immunisation    |
-|+---------------------+|+--------------------------------+|
+|+---------------------|+--------------------------------+|
 | 0. References  | Links to other parts of the implementation guide which might help with context and understanding the profiles described |
 | 1. Read | A description of how to get the API |
 | 2. Search Parameters          | List of search parameters for the profile being described, including any tips for searching. This section shows examples of how to search using the provided search parameters       |

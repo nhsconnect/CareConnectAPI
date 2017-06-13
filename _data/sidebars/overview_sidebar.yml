@@ -59,7 +59,7 @@ entries:
       url: /explore.html
       output: web
     - title: Care Connect Versioning
-      url: /overview_cc_versioning.html
+      url: /explore_cc_versioning.html
       output: web
       subfolders:
       - title: Clinical
@@ -138,22 +138,33 @@ entries:
   - title: Design & Build
     output: web
     folderitems:
-    - title: Overview | Coming soon
+    - title: Overview
       url: /design.html
       output: web
-    - title: Patient Search
-      url: /design_patient_search.html
+    - title: Patterns / Topology
+      url: /design_patterns.html
       output: web
+    - title: Access
+      url: /design_access.html
+      output: web
+    - title: Security
+      url: /design_security.html
+      output: web
+
       subfolders:
-      - title: Patient Care Coordination
+      - title: Build
         output: web
         subfolderitems:
-        - title: Clinical
-          url: /design_pcc_clinical.html
-          output: web
-        - title: Medication
-          url: /design_pcc_medication.html
-          output: web
+          - title: Patient Search
+            url: /design_patient_search.html
+            output: web
+          - title: Clinical | Care Coord
+            url: /design_pcc_clinical.html
+            output: web
+          - title: Medication | Care Coord
+            url: /design_pcc_medication.html
+            output: web
+
   - title: Test
     output: web
     folderitems:

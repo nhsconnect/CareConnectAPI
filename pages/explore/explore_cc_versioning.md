@@ -3,7 +3,7 @@ title: Care Connect Profile Versioning
 keywords: development, versioning
 tags: [development]
 sidebar: overview_sidebar
-permalink: overview_cc_versioning.html
+permalink: explore_cc_versioning.html
 summary: An overview of how profiles are versioned.
 ---
 
