@@ -200,6 +200,9 @@ entries:
         - title: Organisations
           url: /support_whereelse.html
           output: web
+        - title: Community
+          url: /support_community.html
+          output: web
 
   - title: Tags
     output: web
