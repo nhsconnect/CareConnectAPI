@@ -14,6 +14,9 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 Added
 - Diagram to support the engagement process
 
+Updated
+- Communication Channels (Help & Support) revised to reference the Care Connect Inbox and the INTEROpen website.
+
 ## 0.4.0-alpha.0 ##
 
 Added 
