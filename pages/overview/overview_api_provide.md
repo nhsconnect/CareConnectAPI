@@ -1,7 +1,7 @@
 ---
 title: Provide API
-keywords: development,overview
-tags: [engage,development,fhir]
+keywords: development,overview, API
+tags: [explanation]
 sidebar: overview_sidebar
 permalink: overview_api_provide.html
 summary: Providing an RESTful API for the first time is a journey. This page explains a starting point of the work involved in providing an API and also the part be concentrated on by Care Connect
