@@ -124,7 +124,7 @@ An example Conformance profile is available [here](Conformance/Spine-VM-Conforma
 			</searchParam>
 			<searchParam>
 				<name value="family"/>
-				<definition value="A portion of the family name of the patientt"/>
+				<definition value="A portion of the family name of the patient"/>
 				<type value="string"/>
 			</searchParam>
 			<searchParam>
