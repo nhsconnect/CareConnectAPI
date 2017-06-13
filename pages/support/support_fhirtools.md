@@ -16,9 +16,9 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 The tools offered within ClinFHIR include a Patient Viewer, Scenario Builder, Logical Modeller, CodeSystem builder, Extension Definition builder and a Query Tool. The tools make use of three predefined servers and they can be extended to use other DSTU-2 or STU3 servers.
 <br><br>
-### [ClinFHIR Code System Editor](http://clinfhir.com/codeSystem.html)
+### [ClinFHIR CodeSystem Editor](http://clinfhir.com/codeSystem.html)
 
-<img src="images/support/clinfhircodesystemeditor.png" alt="ClinFHIR Code System Editor Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">The CodeSystem defines the set of possible values for a resource element. The actual 'binding' between CodeSystem and element is done by the ValueSet. This component allows you to build (and edit) a CodeSystem, and optionally builds the ValueSet as well. Once created, the created extensions are stored on the conformance server.
+<img src="images/support/clinfhircodesystemeditor.png" alt="ClinFHIR CodeSystem Editor Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">The CodeSystem defines the set of possible values for a resource element. The actual 'binding' between CodeSystem and element is done by the ValueSet. This component allows you to build (and edit) a CodeSystem, and optionally builds the ValueSet as well. Once created, the created extensions are stored on the conformance server.
 <br><br>
 ### [ClinFHIR Extension Builder](http://clinfhir.com/EDBuilder.html)
 
@@ -77,6 +77,7 @@ Forge supports the following features:
 * Define value set bindings
 * Define mappings
 * Derived profiles (“profiles on profiles”)
+
 <br><br>
 ## [HL7 FHIR Converter](http://hapifhir.io/doc_converter.html)
 This tool is under development but it is intended to offer the following tools for structure definition conversions:
