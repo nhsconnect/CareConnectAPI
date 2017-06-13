@@ -19,5 +19,5 @@ To join INTEROPen please contact <membership@interopen.org>
 
 ## Enquires
 
-For general enquires please send an email to the Care Connect Inbox at <a href="mailto:careconnect@interopen.org"></a>.
+For general enquires please send an email to the Care Connect Inbox at <a href="mailto:careconnect@interopen.org">careconnect@interopen.org</a>.
 
