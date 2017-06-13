@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="100%" viewBox="0 0 800 230" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="100%" viewBox="0 0 800 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>guide</title>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -26,8 +26,8 @@
             <text id="•" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill="#000000">
                 <tspan x="11.1990864" y="158.831838">•</tspan>
             </text>
-            <text id="Use-cases" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" letter-spacing="0.000679442543" fill="#000000">
-                <tspan x="22.3101975" y="158.831838">Use cases</tspan>
+            <text id="Case-studies" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" letter-spacing="0.000679442543" fill="#000000">
+                <tspan x="22.3101975" y="158.831838">Case Studies</tspan>
             </text>
             <text id="•" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill="#000000">
                 <tspan x="11.1990864" y="180.971838">•</tspan>
@@ -52,10 +52,7 @@
                 <tspan x="119.428309" y="95.1018382">•</tspan>
             </text>
             <text id="Impl" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" letter-spacing="0.0254413486" fill="#000000">
-                <tspan x="130.539383" y="95.1018382">Impl</tspan>
-            </text>
-            <text id="Guide" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" letter-spacing="0.00898374058" fill="#000000">
-                <tspan x="165.107284" y="95.1018382">Guide</tspan>
+                <tspan x="130.539383" y="95.1018382">Impl Guide</tspan>
             </text>
             <text id="•" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill="#000000">
                 <tspan x="119.428309" y="117.241838">•</tspan>
@@ -102,11 +99,14 @@
             <text id="•" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill="#000000">
                 <tspan x="238.657531" y="97.1018382">•</tspan>
             </text>
-            <text id="Producer-" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" letter-spacing="-0.0128339147" fill="#000000">
-                <tspan x="249.768642" y="97.1018382">Producer	</tspan>
+            <text id="Build-APIs" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" letter-spacing="-0.0128339147" fill="#000000">
+                <tspan x="249.768642" y="97.1018382">Build APIs</tspan>
+            </text>
+            <text id="•" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill="#000000">
+                <tspan x="238.657531" y="115.551838">•</tspan>
             </text>
             <text id="APIs" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" letter-spacing="-0.0057375147" fill="#000000">
-                <tspan x="249.768642" y="115.551838">APIs</tspan>
+                <tspan x="249.768642" y="115.551838">Search Ex.</tspan>
             </text>
             <text id="•" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill="#000000">
                 <tspan x="238.657531" y="137.691838">•</tspan>
@@ -173,8 +173,8 @@
                 <tspan x="356.997778" y="204.111875">Example data</tspan>
             </text>
             <path d="M446.679012,12.53 L552.234691,12.53 L578.777778,38.975123 L552.234691,65.42 L446.679012,65.42 L473.222346,38.975123 L446.679012,12.53 Z" id="Fill-11" fill="#4F81BD"></path>
-            <text id="Accredit" font-family="HelveticaNeue, Helvetica Neue" font-size="15" font-weight="normal" letter-spacing="-0.0066202092" fill="#FFFFFF">
-                <tspan x="490.42932" y="41.7087812">Accredit</tspan>
+            <text id="Assure" font-family="HelveticaNeue, Helvetica Neue" font-size="15" font-weight="normal" letter-spacing="-0.0066202092" fill="#FFFFFF">
+                <tspan x="490.42932" y="41.7087812">Assure</tspan>
             </text>
             <text id="•" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill="#000000">
                 <tspan x="459.115926" y="95.1018382">•</tspan>
@@ -209,18 +209,18 @@
             <text id="•" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill="#000000">
                 <tspan x="459.115926" y="220.561875">•</tspan>
             </text>
-            <text id="Accreditation-" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" letter-spacing="-0.0057375147" fill="#000000">
-                <tspan x="470.227037" y="220.561875">Accreditation	</tspan>
+            <text id="Assurance-" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" letter-spacing="-0.0057375147" fill="#000000">
+                <tspan x="470.227037" y="220.561875">Assurance</tspan>
             </text>
             <text id="checklist" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" letter-spacing="0.00422764197" fill="#000000">
                 <tspan x="470.227037" y="240.241875">checklist</tspan>
             </text>
             <path d="M557.790123,12.53 L663.345802,12.53 L689.888889,38.975123 L663.345802,65.42 L557.790123,65.42 L584.333457,38.975123 L557.790123,12.53 Z" id="Fill-13" fill="#4F81BD"></path>
             <text id="Deploy-" font-family="HelveticaNeue, Helvetica Neue" font-size="15" font-weight="normal" letter-spacing="0.0243031345" fill="#FFFFFF">
-                <tspan x="600.34716" y="30.2500812">Deploy	</tspan>
+                <tspan x="600.34716" y="35">Deploy	</tspan>
             </text>
             <text id="(Pilot)" font-family="HelveticaNeue, Helvetica Neue" font-size="15" font-weight="normal" letter-spacing="-0.0150696868" fill="#FFFFFF">
-                <tspan x="604.361108" y="48.7000812">(Pilot)</tspan>
+                <tspan x="604.361108" y="51">(Pilot)</tspan>
             </text>
             <text id="•" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill="#000000">
                 <tspan x="569.344938" y="94.1018382">•</tspan>
@@ -260,10 +260,10 @@
             </text>
             <path d="M668.901235,12.53 L774.456914,12.53 L801,38.975123 L774.456914,65.42 L668.901235,65.42 L695.444568,38.975123 L668.901235,12.53 Z" id="Fill-15" fill="#4F81BD"></path>
             <text id="Deploy-" font-family="HelveticaNeue, Helvetica Neue" font-size="15" font-weight="normal" letter-spacing="0.0243031345" fill="#FFFFFF">
-                <tspan x="711.57642" y="30.2500812">Deploy	</tspan>
+                <tspan x="711.57642" y="35">Deploy	</tspan>
             </text>
             <text id="(Live)" font-family="HelveticaNeue, Helvetica Neue" font-size="15" font-weight="normal" letter-spacing="-0.0150696868" fill="#FFFFFF">
-                <tspan x="717.796968" y="48.7000812">(Live)</tspan>
+                <tspan x="717.796968" y="51">(Live)</tspan>
             </text>
             <text id="•" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal" fill="#000000">
                 <tspan x="685.574198" y="92.1018382">•</tspan>
@@ -318,7 +318,7 @@
                     <text x="10" y="20" width="100%" height="100%" style="text-anchor: middle"> </text>
                 </rect>
             </a>
-            <a xlink:href="/accredit.html" target="_top" class="s_link">
+            <a xlink:href="/assure.html" target="_top" class="s_link">
                 <rect id="l-accredit" fill-opacity="0" fill="#FFFFFF" x="451.965921" y="0" width="105.824203" height="269.51751">
                     <text x="10" y="20" width="100%" height="100%" style="text-anchor: middle"> </text>
                 </rect>

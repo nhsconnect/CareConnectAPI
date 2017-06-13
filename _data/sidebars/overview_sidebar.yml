@@ -160,11 +160,11 @@ entries:
     - title: Overview | Coming soon
       url: /test.html
       output: web
-  - title: Accredit
+  - title: Assure
     output: web
     folderitems:
     - title: Overview | Coming soon
-      url: /accredit.html
+      url: /assure.html
       output: web
   - title: Deploy
     output: web

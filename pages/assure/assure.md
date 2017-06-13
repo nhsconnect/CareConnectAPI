@@ -1,9 +1,9 @@
 ---
-title: Accredit Overview
+title: Assure Overview
 keywords: engage, care connect process, process, introduction
 tags: [userstories,casestudies]
 sidebar: foundations_sidebar
-permalink: accredit.html
+permalink: assure.html
 summary: "These pages assist with requirements gathering and mapping stages of a FHIR API development process."
 ---
 
