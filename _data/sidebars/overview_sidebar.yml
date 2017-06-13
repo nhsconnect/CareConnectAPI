@@ -193,12 +193,13 @@ entries:
     - title: Communication Channels
       url: /support_communications.html
       output: web
-    - title: Where Else Can I Look?
-      output: web
-      subfolderitems:
-      - title: Organisations
-        url: /support_whereelse.html
+      subfolders
+      - title: Where Else Can I Look?
         output: web
+        subfolderitems:
+        - title: Organisations
+          url: /support_whereelse.html
+          output: web
 
   - title: Tags
     output: web
