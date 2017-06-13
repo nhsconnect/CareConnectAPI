@@ -16,7 +16,7 @@ INTEROPen is an OPEN collaboration of individuals, industry, standards organisat
 Commercial interests are put to one side in the group’s activities.
 
 To join INTEROPen please contact <membership@interopen.org>
-
+<br>
 ## Enquires
 
 For general enquires please send an email to the Care Connect Inbox at <a href="mailto:careconnect@interopen.org">careconnect@interopen.org</a>.
