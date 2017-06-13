@@ -16,8 +16,17 @@ INTEROPen is an OPEN collaboration of individuals, industry, standards organisat
 Commercial interests are put to one side in the group’s activities.
 
 To join INTEROPen please contact <membership@interopen.org>
-<br>
+<br><br>
 ## Enquires
 
 For general enquires please send an email to the Care Connect Inbox at <a href="mailto:careconnect@interopen.org">careconnect@interopen.org</a>.
+<br><br>
 
+## The INTEROpen Forum
+
+After becoming a member of INTEROpen, access will be granted to the INTEROpen Forum (hosted on [Ryver](https://interopen.ryver.com)).
+
+The Forum has a number of threads that discuss a range of topics including governance and tooling.
+
+<br><br>
+<a href="https://twitter.com/intent/tweet?screen_name=TwitterDev" class="twitter-mention-button" data-show-count="false">Tweet to @TwitterDev</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
