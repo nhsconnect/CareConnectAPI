@@ -12,7 +12,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ## [Simplifier.net](https://simplifier.net/)
 
-<img src="images/support/simplifier.png" alt="Simplifier Screenshot" style="width:40%; float:right; margin-left:3%;">Simplifier.net is a FHIR registry, a website for managing, sharing and finding FHIR profiles and Implementation Guides.
+<img src="images/support/simplifier.png" alt="Simplifier Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">Simplifier.net is a FHIR registry, a website for managing, sharing and finding FHIR profiles and Implementation Guides.
 
 The Simplifier.net FHIR registry supports the following functions:
 * Uploading profiles
