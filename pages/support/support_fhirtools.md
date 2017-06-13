@@ -10,7 +10,7 @@ summary: "A range of open source and commercial tools that can assist in the des
 
 There is no affiliation between INTEROPen and any of the suppliers listed below. Inclusion in this list does not constitute an endorsement of the tool.
 
-##[Simplifier.net](https://simplifier.net/)
+## [Simplifier.net](https://simplifier.net/)
 
 <img src="images/support/simplifier.png" alt="Simplifier Screenshot" style="width:20%; float:right; margin-left:3%;">Simplifier.net is a FHIR registry, a website for managing, sharing and finding FHIR profiles and Implementation Guides.
 
