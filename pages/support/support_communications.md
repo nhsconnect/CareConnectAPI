@@ -8,7 +8,7 @@ permalink: support_communications.html
 summary: "Communication channels used for the Care Connect FHIR&reg; API."
 ---
 
-<a class="twitter-timeline" href="https://twitter.com/INTEROPenAPI" Style="width:30%;float:right">Tweets by INTEROpen</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div Style="width:30%;float:right"><a class="twitter-timeline" href="https://twitter.com/INTEROPenAPI">Tweets by INTEROpen</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
 ## [INTEROpen](http://www.interopen.org/)
 
