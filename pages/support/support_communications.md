@@ -8,7 +8,7 @@ permalink: support_communications.html
 summary: "Communication channels used for the Care Connect FHIR&reg; API."
 ---
 
-## [INTEROpen]http://http://www.interopen.org/
+## [INTEROpen](http://http://www.interopen.org/)
 
 INTEROPen is an OPEN collaboration of individuals, industry, standards organisations and health and care providers, who have agreed to work together to accelerate the development of open standards for interoperability in the health and social care sector.
 
@@ -19,5 +19,5 @@ To join INTEROPen please contact <membership@interopen.org>
 
 ## Enquires
 
-For general enquires please send an email to the <a href="mailto:careconnect@interopen.org">Care Connect Inbox</a>.
+For general enquires please send an email to the Care Connect Inbox at <a href="mailto:careconnect@interopen.org"></a>.
 
