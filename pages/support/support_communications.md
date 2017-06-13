@@ -5,7 +5,7 @@ tags: [support]
 toc: false
 sidebar: overview_sidebar
 permalink: support_communications.html
-summary: "Communication channels used for the Care Connect FHIR&reg; API."
+summary: "INTEROPen communication channels used for the Care Connect FHIR&reg; API."
 ---
 
 <div Style="width:30%;float:right;margin-left:3%">
