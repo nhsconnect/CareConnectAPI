@@ -215,3 +215,6 @@ entries:
     - title: Development
       url: /tag_development.html
       output: web
+    - title: Development
+      url: /tag_support.html
+      output: web
