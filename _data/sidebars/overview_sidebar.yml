@@ -193,7 +193,7 @@ entries:
     - title: Communication Channels
       url: /support_communications.html
       output: web
-      subfolders
+      subfolders:
       - title: Where Else Can I Look?
         output: web
         subfolderitems:
