@@ -38,12 +38,13 @@ The ClinFHIR extension builder is designed to view and build extension definitio
 
 Patient information is on the Data Server. Profiles on the Conformance server. ValueSets on the Terminology server.
 <br><br>
-[ClinFHIR ValueSet Editor](http://clinfhir.com/valuesetCreator.html)
+### [ClinFHIR ValueSet Editor](http://clinfhir.com/valuesetCreator.html)
 
-<div>
-<img src="images/support/clinfhirvalueseteditor.png" alt="ClinFHIR Valueset Editor Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">A tool to support the creation of ValueSet’s. Predominantly works with SNOMED-CT.
-<br><br>
+<div style="display:flex">
+  <div>A tool to support the creation of ValueSet’s. Predominantly works with SNOMED-CT.</div>
+  <div style="width:40%;margin-left:3%; margin-bottom:3%;"><img src="images/support/clinfhirvalueseteditor.png" alt="ClinFHIR Valueset Editor Screenshot"></div>
 </div>
+<br><br>
 ## [FHIR Plugin for Notepad++](http://www.healthintersections.com.au/FhirServer/fhirnpp.htm)
 <img src="images/support/notepadplugin.png" alt="FHIR Plugin for Notepad++ Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">The FHIR plugin for Notepad++ is provided by Graham Grieves Health Intersections. It is delivering functionality that overlaps with Postman.
 
