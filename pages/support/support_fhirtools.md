@@ -38,9 +38,9 @@ The ClinFHIR extension builder is designed to view and build extension definitio
 
 Patient information is on the Data Server. Profiles on the Conformance server. ValueSets on the Terminology server.
 <br><br>
-<div>
-### [ClinFHIR ValueSet Editor](http://clinfhir.com/valuesetCreator.html)
+[ClinFHIR ValueSet Editor](http://clinfhir.com/valuesetCreator.html)
 
+<div>
 <img src="images/support/clinfhirvalueseteditor.png" alt="ClinFHIR Valueset Editor Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">A tool to support the creation of ValueSet’s. Predominantly works with SNOMED-CT.
 <br><br>
 </div>
