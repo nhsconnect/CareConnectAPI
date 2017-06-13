@@ -29,4 +29,6 @@ After becoming a member of INTEROpen, access will be granted to the INTEROpen Fo
 The Forum has a number of threads that discuss a range of topics including governance and tooling.
 
 <br><br>
-<a href="https://twitter.com/intent/tweet?screen_name=TwitterDev" class="twitter-mention-button" data-show-count="false">Tweet to @TwitterDev</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/intent/tweet?screen_name=INTEROPenAPI" class="twitter-mention-button" data-show-count="false">Tweet to @INTEROPenAPI</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<a class="twitter-timeline" href="https://twitter.com/<a class="twitter-timeline" href="https://twitter.com/TwitterDev">Tweets by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>">Tweets by INTEROpen</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
