@@ -8,6 +8,8 @@ permalink: support_communications.html
 summary: "Communication channels used for the Care Connect FHIR&reg; API."
 ---
 
+<a class="twitter-timeline" href="https://twitter.com/INTEROPenAPI" Style="float:right">Tweets by INTEROpen</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## [INTEROpen](http://www.interopen.org/)
 
 INTEROPen is an OPEN collaboration of individuals, industry, standards organisations and health and care providers, who have agreed to work together to accelerate the development of open standards for interoperability in the health and social care sector.
@@ -31,4 +33,3 @@ The Forum has a number of threads that discuss a range of topics including gover
 <br><br>
 <a href="https://twitter.com/intent/tweet?screen_name=INTEROPenAPI" class="twitter-mention-button" data-show-count="false">Tweet to @INTEROPenAPI</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<a class="twitter-timeline" href="https://twitter.com/<a class="twitter-timeline" href="https://twitter.com/TwitterDev">Tweets by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>">Tweets by INTEROpen</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
