@@ -1,11 +1,11 @@
 ---
-title: Reference API Servers
-keywords: support, communications, community, tools, server, api
+title: Resource Definitions
+keywords: support, communications, community, tools, server, api, hl7, gp connect, interopen
 tags: [support]
 toc: false
 sidebar: overview_sidebar
 permalink: support_referenceapiservers.html
-summary: "A number of resource definitions, while presented as human-readable, they may be served up by a FHIR Reference API Server"
+summary: "Resource definitions published by HL7, INTEROpen and GP Connect for reference or download."
 ---
 
 As each reference is described, the following features will be highlighted:
@@ -24,7 +24,7 @@ As each reference is described, the following features will be highlighted:
 <thead>
 <tr><th></th><th style="text-align:center">HL7 Core Resources</th><th style="text-align:center">INTEROPen Care Connect Profiles</th><th style="text-align:center">NHS Digital Profiles</th></tr>
 </thead>
-<tr><td style="text-align:left">API Server</td><td style="word-wrap: break-word;text-align:center"><a href="https://www.hl7.org/fhir/resourcelist.html">https://www.hl7.org/fhir/resourcelist.html</a></td><td style="word-wrap: break-word;text-align:center"><a href="http://www.interopen.org/resource-profiles">http://www.interopen.org/resource-profiles</a></td><td style="word-wrap: break-word;text-align:center"><a href="http://fhir-test.nhs.uk/">http://fhir-test.nhs.uk/</a></td></tr>
+<tr><td style="text-align:left"></td><td style="word-wrap: break-word;text-align:center"><a href="https://www.hl7.org/fhir/resourcelist.html">https://www.hl7.org/fhir/resourcelist.html</a></td><td style="word-wrap: break-word;text-align:center"><a href="http://www.interopen.org/resource-profiles">http://www.interopen.org/resource-profiles</a></td><td style="word-wrap: break-word;text-align:center"><a href="http://fhir-test.nhs.uk/">https://nhsconnect.github.io/gpconnect/datalibrary.html</a></td></tr>
 <tr><td style="text-align:left">Downloadable Content</td><td style="word-wrap: break-word;"><a href="https://www.hl7.org/fhir/downloads.html">https://www.hl7.org/fhir/downloads.html</a></td><td style="word-wrap: break-word;"><a href="https://github.com/HL7-UK/CareConnect-profiles">https://github.com/HL7-UK/CareConnect-profiles/tree/feature/interopen</a></td><td style="word-wrap: break-word;"><a  href="https://nhsconnect.github.io/gpconnect/development_deliverables.html">https://nhsconnect.github.io/gpconnect/development_deliverables.html</a></td></tr>
 <tr><td style="text-align:left">Profiles</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
 <tr><td style="text-align:left">Delta</td><td>Yes</td><td>Yes</td><td>No</td></tr>
