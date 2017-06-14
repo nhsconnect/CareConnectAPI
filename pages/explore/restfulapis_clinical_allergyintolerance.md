@@ -53,7 +53,7 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search AllergyIntolerance" command="curl -X GET  '[baseUrl]/AllergyIntolerance?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search AllergyIntolerance" command="curl -X GET -H 'Accept: application/xml+fhir'  '[baseUrl]/AllergyIntolerance?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'"  %}
 
 {% include custom/search.response.headers.html resource="AllergyIntolerance" %}
 

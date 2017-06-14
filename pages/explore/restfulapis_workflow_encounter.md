@@ -50,7 +50,7 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
 
 #### cURL ####
 
-{% include custom/embedcurl.html title="Search Encounter" command="curl -X GET  '[baseUrl]/Encounter?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Encounter" command="curl -H 'Accept: application/xml+fhir' -X GET  '[baseUrl]/Encounter?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Encounter" %}
 

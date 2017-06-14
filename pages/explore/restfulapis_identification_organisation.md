@@ -55,7 +55,7 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Organization" command="curl -X GET  '[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Organization" command="curl -H 'Accept: application/xml+fhir' -X GET  '[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010'" %}
 
 {% include custom/search.response.headers.html resource="Organization" %}
 

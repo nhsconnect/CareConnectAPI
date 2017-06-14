@@ -92,7 +92,7 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Patient" command="curl -X GET  '[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' '[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Patient"  %}
 
@@ -166,11 +166,11 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
                     </coding>
                 </maritalStatus>
                 <careProvider>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <reference value="Practitioner/24967"/>
                     <display value="Dr AA Bhatia"/>
                 </careProvider>
                 <managingOrganization>
-                    <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
+                    <reference value="Organization/24965"/>
                     <display value="Moir Medical Centre"/>
                 </managingOrganization>
             </Patient>

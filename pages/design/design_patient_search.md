@@ -138,11 +138,11 @@ A sample response is shown below
                     </coding>
                 </maritalStatus>
                 <careProvider>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <reference value="Practitioner/24967"/>
                     <display value="Dr AA Bhatia"/>
                 </careProvider>
                 <managingOrganization>
-                    <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
+                    <reference value="Organization/24965"/>
                     <display value="Moir Medical Centre"/>
                 </managingOrganization>
             </Patient>
@@ -158,6 +158,8 @@ What we have just described is shown in the diagram below. When entered the url 
 
 {% include image.html
 max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow Patient Search FHIR" caption="Basic Process Flow" %}
+
+[TODO - Example above is different]
 
 If your familiar with NHS SDS/ODS Codes you may have noticed the ODS Code as the managing organisation.
 

@@ -50,7 +50,7 @@ Return all Location resources with a Trust Site code of RTG08, the format of the
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Location" command="curl -X GET  '[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Location" command="curl -H 'Accept: application/xml+fhir' -X GET  '[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08'" %}
 
 {% include custom/search.response.headers.html resource="Location" %}
 

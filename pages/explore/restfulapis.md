@@ -57,4 +57,4 @@ This section looks at the Care Connect profiles covered within this implementati
 
 | Terminology | Operations Control |
 |-------------|--------------------|
-| ValueSet    | [Conformance](restfulapis_conformance_conformance.html)          |
+| [ValueSet](restfulapis_conformance_valueset.html)    | [Conformance](restfulapis_conformance_conformance.html)          |

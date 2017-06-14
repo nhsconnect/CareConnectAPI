@@ -31,17 +31,17 @@ entries:
   - title: Engage
     output: web
     folderitems:
-    
+
     - title: Engagement Approach
       url: /engage.html
       output: web, pdf
       type: homepage
-      
-      subfolders:  
+
+      subfolders:
       - title: Case Studies
         output: web
         subfolderitems:
-        
+
         - title: "Case Study Overview"
           url: /engage_case_studies.html
           output: web
@@ -51,7 +51,7 @@ entries:
         - title: Bristol Connecting Care POC
           url: /engage_poc_bristolcc.html
           output: web
-        
+
   - title: Explore
     output: web
     folderitems:
@@ -116,6 +116,9 @@ entries:
         subfolderitems:
         - title: Conformance
           url: /restfulapis_conformance_conformance.html
+          output: web
+        - title: ValueSet
+          url: /restfulapis_conformance_valueset.html
           output: web
       - title: API Guidance | FHIR&reg;
         output: web

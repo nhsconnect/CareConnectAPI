@@ -61,7 +61,7 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search MedicationOrder" command="curl -X GET  '[baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search MedicationOrder" command="curl -H 'Accept: application/xml+fhir' -X GET  '[baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="MedicationOrder" %}
 

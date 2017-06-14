@@ -4,62 +4,44 @@ keywords: foundations, fhir
 tags: [foundations,use_case,fhir]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_conformance_conformance.html
-summary: "Use case for getting the FHIR server's conformance profile."
+summary: A conformance statement is a set of capabilities of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 ---
 
-## API Usage ##
+{% include custom/search.warnbanner.html %}
 
-### Request Operation ###
+## 0. References ##
 
-#### FHIR Conformance Request ####
+{% include custom/fhir.resource.html content="[Conformance](http://www.hl7.org/fhir/dstu2/conformance.html)" %}
+
+## 1. Read ##
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET [baseUrl]/metadata</div>
 
 The /metadata path on the root of the FHIR server will return the Conformance statement for the FHIR server:
 
-```http
-GET https://[fhir_base]/metadata
-```
-
 Alternatively, a HTTP OPTIONS request against the root of the FHIR server will also return the conformance profile:
 
-```http
-OPTIONS https://[fhir_base]/
-```
+<div markdown="span" class="alert alert-success" role="alert">
+OPTIONS [baseUrl]/</div>
 
-- For details of this interaction - see the [HL7 FHIR specification](https://www.hl7.org/fhir/http.html#conformance)
-- Note: The mime-type can be specified to request either XML or JSON using another URL parameter `?_format=[mime-type]`, or a `Content-Type` HTTP header as per the [FHIR specification](https://www.hl7.org/fhir/http.html#mime-type).
+For details of this interaction - see the [HL7 FHIR DSTU2 RESTful API](https://www.hl7.org/fhir/DSTU2/http.html#conformance)
 
+All requests SHALL contain a valid ‘Authorization’ header and SHALL contain an ‘Accept’ header with at least one of the following application/json+fhir or application/xml+fhir.
 
-#### Request Headers ####
+## 2. Example ##
 
-Consumers SHALL include the following additional HTTP request headers:
+### 2.1 Request Query ###
 
-| Header               | Value |
-|----------------------|-------|
-| `Ssp-TraceID`        | Consumer's TraceID (i.e. GUID/UUID) |
-| `Ssp-From`           | Consumer's ASID |
-| `Ssp-To`             | Provider's ASID |
-| `Ssp-InteractionID`  | `urn:nhs:names:services:visitorsandmigrants:fhir:rest:read:metadata`|
-| `Authorization`      | This will carry the base64 encoded JSON web token required for audit - see [Cross Organisation Audit and Provenance](integration_cross_organisation_audit_and_provenance.html) for details. |
+Retrieve the Conformance statement from the FHIR Server, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-#### Payload Request Body ####
+#### 2.1.1. cURL ####
 
-N/A
+{% include custom/embedcurl.html title="Read Server Conformance Statement" command="curl -H 'Accept: application/xml+fhir' -X GET '[baseUrl]/metadata'" %}
 
-#### Error Handling ####
+{% include custom/search.response.headers.html resource="Conformance"  %}
 
-The Spine will always return a valid conformance statement.
-
-### Request Response ###
-
-#### Response Headers ####
-
-No additional headers expected beyond those described in the HTTP and FHIR&reg; standards.
-
-#### Payload Response Body ####
-
-- The Spine will return a `200` **OK** HTTP status code on successful retrival of the conformance profile.
-
-An example Conformance profile is available [here](Conformance/Spine-VM-ConformanceStatement-1.xml) - client systems should always use the Conformance profile from the above URL as the authoritative conformance statement - this is provided as an example for reference only.
+### 2.3 Response Body ###
 
 {% include important.html content="The following draft conformance statement will move as the implementation guide moves on." %}
 
@@ -153,7 +135,10 @@ An example Conformance profile is available [here](Conformance/Spine-VM-Conforma
 </Conformance>
 ```
 
-### C# ###
+{% include important.html content="The following draft conformance statement will move as the implementation guide moves on." %}
+
+
+### 2.4 C# ###
 
 {% include tip.html content="C# code snippets utilise Ewout Kramer's [fhir-net-api](https://github.com/ewoutkramer/fhir-net-api) library which is the official .NET API for HL7&reg; FHIR&reg;." %}
 
