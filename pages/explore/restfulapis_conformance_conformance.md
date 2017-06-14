@@ -37,7 +37,7 @@ Retrieve the Conformance statement from the FHIR Server, the format of the respo
 
 #### 2.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Read Server Conformance Statement" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET '[baseUrl]/metadata'" %}
+{% include custom/embedcurl.html title="Read Server Conformance Statement" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET '[baseUrl]/metadata'" %}
 
 {% include custom/search.response.headers.html resource="Conformance"  %}
 
