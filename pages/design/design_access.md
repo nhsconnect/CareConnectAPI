@@ -25,7 +25,18 @@ A possible mechanism for providing access to APIs is the provision of API keys f
 
 # Access and Care Connect APIs #
 
-Considering the design pattern / topology influences how any exposed Care Connect APIs can be used and work within a system. APIs help to expose information to all design patterns allowing great user experiences to be created quickly, securely and consistantly. This implementation guide concentrates on [Case Studies](/engage_case_studies.html) to expose and demonstrate how design pattern can use Care Connect APIs to interoperate with other systems, patterns, and level of digital maturity within and between organisations.
+Access to APIs needs to considered at the design phase to include the process of managing and maintaing valid and consistant APIs. The following design considerations become increasingly important as an accessible API moves through Test to Assure to Deployed.
+
+- Endpoints
+- Report & Monitoring
+- Traffic Management
+- Transformation
+- Versioning
+
+For more information on the wider design decisions involved in providing safe access to information please see: 
+
+- [Case Studies](/engage_case_studies.html) illustrates access decisions used to solve the challenges faced within the context and design patterns encountered.
+
 
 {% include custom/contribute.html content="Provide design patterns and API usage case studies by getting in touch with careconnect@interopen.org "%}
 
