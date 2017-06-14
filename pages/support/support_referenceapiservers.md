@@ -19,9 +19,11 @@ As each reference is described, the following features will be highlighted:
 * <b>Value Sets</b> are the associated values that relate to defined Resources.
 * <b>Operations</b> such as predefined searches are described within the reference server.
 
-
+<br><br>
 <table style="width:100%;max-width:100%">
-<tr><td></td><td>HL7 Core Resources</td><td>INTEROPen Care Connect Profiles</td><td>NHS Digital Profiles</td></tr>
+<thead>
+<tr><th></th><th>HL7 Core Resources</th><th>INTEROPen Care Connect Profiles</th><th>NHS Digital Profiles</th></tr>
+</thead?
 <tr><td>API Server</td><td><a href="https://www.hl7.org/fhir/resourcelist.html">https://www.hl7.org/fhir/resourcelist.html</a></td><td><a href="http://www.interopen.org/candidate-profiles/care-connect/">http://www.interopen.org/candidate-profiles/care-connect/</a></td><td><a href="http://fhir-test.nhs.uk/">http://fhir-test.nhs.uk/</a></td></tr>
 <tr><td>Downloadable Content</td><td><a href="https://www.hl7.org/fhir/downloads.html">https://www.hl7.org/fhir/downloads.html</a></td><td><a href="https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources">https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources</a></td><td><a  href="https://nhsconnect.github.io/gpconnect/development_deliverables.html">https://nhsconnect.github.io/gpconnect/development_deliverables.html</a></td></tr>
 <tr><td>Profiles</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
@@ -35,10 +37,4 @@ As each reference is described, the following features will be highlighted:
 <tr><td>Operations</td><td>Yes</td><td>No</td><td>Yes</td></tr>
 </table>
 
-|---
-|table|test|
-|-|-|
-|Row 1||
-|Row 2||
-|||
 |---
