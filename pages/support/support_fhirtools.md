@@ -12,7 +12,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ## [ClinFHIR](http://clinfhir.com/)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">
     <p>Developed by David Hay as a result of the HL7 FHIR workshops, ClinFHIR is aimed at helping Clinicians understand HL7 FHIR, and contribute to its development, especially in respect to profiling.</p>
     <p>The tools offered within ClinFHIR include a Patient Viewer, Scenario Builder, Logical Modeller, CodeSystem builder, Extension Definition builder and a Query Tool. The tools make use of three predefined servers and they can be extended to use other DSTU-2 or STU3 servers.</p>
@@ -24,7 +24,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ### [ClinFHIR CodeSystem Editor](http://clinfhir.com/codeSystem.html)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">
     <p>The CodeSystem defines the set of possible values for a resource element. The actual 'binding' between CodeSystem and element is done by the ValueSet. This component allows you to build (and edit) a CodeSystem, and optionally builds the ValueSet as well. Once created, the created extensions are stored on the conformance server.</p>
   </div>
@@ -35,13 +35,13 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ### [ClinFHIR Extension Builder](http://clinfhir.com/EDBuilder.html)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
 <p>The ClinFHIR extension builder is designed to view and build extension definitions. These can be defined and applied to the Logical Model, which will allow them to be included in the generated Profile.</p>
 </div>
 
 ### [ClinFHIR Logical Modeller](http://clinfhir.com/logicalModeller.html)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">
     <p>The Logical modeller allows the creation of a model that represents a particular interoperability requirement in a format that is easy to use. It uses FHIR data types, and can be based on an existing resource type or completely 'ad hoc'. It is intended to act as a 'bridge' between Modeller and User, and can act as the basis for the generation of the profiling components required by FHIR.</p>
   </div>
@@ -52,7 +52,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ### [ClinFHIR Query](http://clinfhir.com/query.html)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">
     <p>ClinFHIR Query allows ad hoc queries to be sent to a FHIR server. This tool duplicates the key feature of tools like Postman and the FHIR Plugin for Notepad++ however it is dedicated to FHIR (unlike Postman which is a generic tool) and it’s far simpler to use than the Notepad++ plugin.</p>
   </div>
@@ -63,7 +63,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ### [ClinFHIR Scenario Builder](http://clinfhir.com/builder.html)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">
     <p>The Scenario Builder is used to join together the resources needed to represent a specific clinical scenario. It can use Core Resource types, Profiles and Logical models as it does this. The intention is to help people understand how resources can tell a clinical story, and to validate that the resource types available (including profiles) are sufficient.</P>
     <P>Patient information is on the Data Server. Profiles on the Conformance server. ValueSets on the Terminology server.</p>
@@ -75,7 +75,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ### [ClinFHIR ValueSet Editor](http://clinfhir.com/valuesetCreator.html)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">A tool to support the creation of ValueSet’s. Predominantly works with SNOMED-CT.</div>
   <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
     <img style="max-width:100%;width:100%" src="images/support/clinfhirvalueseteditor.png" alt="ClinFHIR Valueset Editor Screenshot">
@@ -84,7 +84,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ## [FHIR Plugin for Notepad++](http://www.healthintersections.com.au/FhirServer/fhirnpp.htm)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">
   <p>The FHIR plugin for Notepad++ is provided by Graham Grieves Health Intersections. It is delivering functionality that overlaps with Postman.</p>
   <p>Current features for this tool are listed in the associated <a href="http://wiki.hl7.org/index.php?title=FHIR_Notepad%2B%2B_Plugin_Documentation">Wiki documentation</a> as:</p>
@@ -112,7 +112,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ## [Forge](https://fhir.furore.com/forge/)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">
     <p>Forge is a desktop application used for FHIR profiling. It has been created by Furore (free to download with paid plans offering SLA level support) and is fully integrated with Simplifier.net. It is promoted as the official profile editor for HL7 FHIR.</p>
     <p>Forge supports the following features:</p>
@@ -137,7 +137,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ## [HL7 FHIR Converter](http://hapifhir.io/doc_converter.html)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
 <p>This tool is under development but it is intended to offer the following tools for structure definition conversions:</p>
 <ul>
 <li>Converting from DSTU2 to DSTU3</li>
@@ -148,7 +148,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ## [Postman](https://www.getpostman.com/)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">
   <p>Postman is a tool to support the creation of APIs; available on MacOS, Windows, Linux or as a plug-in for the Chrome browser. While the basic version of Postman is free, there are ‘professional’ and ‘enterprise’ versions which come at a cost.</p>
   <p>Postman provides an easy interface to interact with APIs over HTTP and provides the following features:</p>
@@ -182,7 +182,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ## [Simplifier.net](https://simplifier.net/)
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">
     <p>Simplifier.net is a FHIR registry, a website for managing, sharing and finding FHIR profiles and Implementation Guides.</p>
     <p>The Simplifier.net FHIR registry supports the following functions:</p>
