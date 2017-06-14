@@ -85,7 +85,7 @@ The ClinFHIR extension builder is designed to view and build extension definitio
 <div style="display:flex;flex-wrap:wrap">
   <div style="flex:3 1 60%;padding 0 0 1em 0;">
   <p>The FHIR plugin for Notepad++ is provided by Graham Grieves Health Intersections. It is delivering functionality that overlaps with Postman.</p>
-  <p>Current features for this tool are listed in the associated <a href="http://wiki.hl7.org/index.php?title=FHIR_Notepad%2B%2B_Plugin_Documentation">Wiki documentation as:</p>
+  <p>Current features for this tool are listed in the associated <a href="http://wiki.hl7.org/index.php?title=FHIR_Notepad%2B%2B_Plugin_Documentation">Wiki documentation</a> as:</p>
   <ul>
   <li>Conversion between JSON and XML formats</li>
     <li>Instance validation</li>
@@ -110,23 +110,31 @@ The ClinFHIR extension builder is designed to view and build extension definitio
 <br><br>
 ## [Forge](https://fhir.furore.com/forge/)
 
-<img src="images/support/forge.png" alt="Forge Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">Forge is a desktop application used for FHIR profiling. It has been created by Furore (free to download with paid plans offering SLA level support) and is fully integrated with Simplifier.net. It is promoted as the official profile editor for HL7 FHIR.
-
-Forge supports the following features:
-* Create and edit FHIR Profiles
-* Create and edit FHIR extension definitions
-* Create and edit FHIR conformance packages (Introduced v0.9.2.15)
-* Validate FHIR profiles
-* Fetch and publish profiles from/to a FHIR server
-* Fetch and publish profiles from/to a FHIR registry
-* Define formal constraints
-* Define slices
-* Define value set bindings
-* Define mappings
-* Derived profiles (“profiles on profiles”)
-
+<div style="display:flex;flex-wrap:wrap">
+  <div style="flex:3 1 60%;padding 0 0 1em 0;">
+    <p>Forge is a desktop application used for FHIR profiling. It has been created by Furore (free to download with paid plans offering SLA level support) and is fully integrated with Simplifier.net. It is promoted as the official profile editor for HL7 FHIR.</p>
+    <p>Forge supports the following features:</p>
+    <ul>
+      <li>Create and edit FHIR Profiles
+      <li>Create and edit FHIR extension definitions
+      <li>Create and edit FHIR conformance packages (Introduced v0.9.2.15)
+      <li>Validate FHIR profiles
+      <li>Fetch and publish profiles from/to a FHIR server
+      <li>Fetch and publish profiles from/to a FHIR registry
+      <li>Define formal constraints
+      <li>Define slices
+      <li>Define value set bindings
+      <li>Define mappings
+      <li>Derived profiles (“profiles on profiles”)
+    </ul>
+  </div>
+  <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
+    <img style="max-width:100%;width:100%" src="images/support/forge.png" alt="Forge Screenshot">
+  </div>
+</div>
 <br><br>
 ## [HL7 FHIR Converter](http://hapifhir.io/doc_converter.html)
+
 This tool is under development but it is intended to offer the following tools for structure definition conversions:
 * Converting from DSTU2 to DSTU3
 * Converting from DSTU2.1 to DSTU3
