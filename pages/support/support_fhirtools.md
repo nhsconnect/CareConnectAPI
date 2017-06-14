@@ -74,8 +74,8 @@ The ClinFHIR extension builder is designed to view and build extension definitio
 ### [ClinFHIR ValueSet Editor](http://clinfhir.com/valuesetCreator.html)
 
 <div style="display:flex;flex-wrap:wrap">
-  <div style="flex:3 1 60%;padding 0 0 1em 0;">A tool to support the creation of ValueSet’s. Predominantly works with SNOMED-CT.</div>
-  <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
+  <div style="flex:3 1 60%;padding:0 0 1em 0;">A tool to support the creation of ValueSet’s. Predominantly works with SNOMED-CT.</div>
+  <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
     <img style="max-width:100%;width:100%" src="images/support/clinfhirvalueseteditor.png" alt="ClinFHIR Valueset Editor Screenshot">
   </div>
 </div>
@@ -83,7 +83,7 @@ The ClinFHIR extension builder is designed to view and build extension definitio
 ## [FHIR Plugin for Notepad++](http://www.healthintersections.com.au/FhirServer/fhirnpp.htm)
 
 <div style="display:flex;flex-wrap:wrap">
-  <div style="flex:3 1 60%;padding 0 0 1em 0;">
+  <div style="flex:3 1 60%;padding:0 0 1em 0;">
   <p>The FHIR plugin for Notepad++ is provided by Graham Grieves Health Intersections. It is delivering functionality that overlaps with Postman.</p>
   <p>Current features for this tool are listed in the associated <a href="http://wiki.hl7.org/index.php?title=FHIR_Notepad%2B%2B_Plugin_Documentation">Wiki documentation</a> as:</p>
   <ul>
@@ -103,7 +103,7 @@ The ClinFHIR extension builder is designed to view and build extension definitio
    </ul>
   <p>The plug-in is aimed very squarely at FHIR (unlike Postman which is a more generic API development tool).</p>
 </div>
-  <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
+  <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
     <img style="max-width:100%;width:100%" src="images/support/notepadplugin.png" alt="FHIR Plugin for Notepad++ Screenshot">
   </div>
 </div>
@@ -115,17 +115,17 @@ The ClinFHIR extension builder is designed to view and build extension definitio
     <p>Forge is a desktop application used for FHIR profiling. It has been created by Furore (free to download with paid plans offering SLA level support) and is fully integrated with Simplifier.net. It is promoted as the official profile editor for HL7 FHIR.</p>
     <p>Forge supports the following features:</p>
     <ul>
-      <li>Create and edit FHIR Profiles
-      <li>Create and edit FHIR extension definitions
-      <li>Create and edit FHIR conformance packages (Introduced v0.9.2.15)
-      <li>Validate FHIR profiles
-      <li>Fetch and publish profiles from/to a FHIR server
-      <li>Fetch and publish profiles from/to a FHIR registry
-      <li>Define formal constraints
-      <li>Define slices
-      <li>Define value set bindings
-      <li>Define mappings
-      <li>Derived profiles (“profiles on profiles”)
+    <li>Create and edit FHIR Profiles</li>
+      <li>Create and edit FHIR extension definitions</li>
+      <li>Create and edit FHIR conformance packages (Introduced v0.9.2.15)</li>
+      <li>Validate FHIR profiles</li>
+      <li>Fetch and publish profiles from/to a FHIR server</li>
+      <li>Fetch and publish profiles from/to a FHIR registry</li>
+      <li>Define formal constraints</li>
+      <li>Define slices</li>
+      <li>Define value set bindings</li>
+      <li>Define mappings</li>
+      <li>Derived profiles (“profiles on profiles”)</li>
     </ul>
   </div>
   <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
