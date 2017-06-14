@@ -17,13 +17,19 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
     <p>The tools offered within ClinFHIR include a Patient Viewer, Scenario Builder, Logical Modeller, CodeSystem builder, Extension Definition builder and a Query Tool. The tools make use of three predefined servers and they can be extended to use other DSTU-2 or STU3 servers.</p>
   </div>
   <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
-    <img style="max-width:100%;width:100%" src="images/support/clinfhirlauncher.png" alt="ClinFHIR Launcher Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">
+    <img src="images/support/clinfhirlauncher.png" alt="ClinFHIR Launcher Screenshot" style="width:100%; float:right; margin-left:3%; margin-bottom:3%;">
   </div>
 </div>
 <br><br>
 ### [ClinFHIR CodeSystem Editor](http://clinfhir.com/codeSystem.html)
-
-<img src="images/support/clinfhircodesystemeditor.png" alt="ClinFHIR CodeSystem Editor Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">The CodeSystem defines the set of possible values for a resource element. The actual 'binding' between CodeSystem and element is done by the ValueSet. This component allows you to build (and edit) a CodeSystem, and optionally builds the ValueSet as well. Once created, the created extensions are stored on the conformance server.
+<div style="display:flex;flex-wrap:wrap">
+  <div style="flex:3 1 60%;padding 0 0 1em 0;">
+    <p>The CodeSystem defines the set of possible values for a resource element. The actual 'binding' between CodeSystem and element is done by the ValueSet. This component allows you to build (and edit) a CodeSystem, and optionally builds the ValueSet as well. Once created, the created extensions are stored on the conformance server.</p>
+  </div>
+  <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
+    <img  src="images/support/clinfhircodesystemeditor.png" alt="ClinFHIR CodeSystem Editor Screenshot"  style="width:100%; float:right; margin-left:3%; margin-bottom:3%;">
+  </div>
+</div>
 <br><br>
 ### [ClinFHIR Extension Builder](http://clinfhir.com/EDBuilder.html)
 
