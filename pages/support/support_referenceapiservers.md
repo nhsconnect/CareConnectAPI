@@ -28,11 +28,11 @@ As each reference is described, the following features will be highlighted:
 <tr><td style="text-align:left;vertical-align:middle">Downloadable Content</td><td style="word-wrap: break-word;vertical-align:middle"><a href="http://www.hl7.org/fhir/dstu2/downloads.html">http://www.hl7.org/fhir/dstu2/downloads.html</a></td><td style="word-wrap: break-word;vertical-align:middle"><a href="https://github.com/HL7-UK/CareConnect-profiles/tree/feature/interopen">https://github.com/HL7-UK/CareConnect-profiles/tree/feature/interopen</a></td><td style="word-wrap: break-word;vertical-align:middle"><a  href="https://nhsconnect.github.io/gpconnect/development_deliverables.html">https://nhsconnect.github.io/gpconnect/development_deliverables.html</a></td></tr>
 <tr><td style="text-align:left">Profiles</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
 <tr><td style="text-align:left">Delta</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-<tr><td style="text-align:left">Examples</td><td>Yes</td><td>Yes</td><td>Planned</td></tr>
-<tr><td style="text-align:left">Structured</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td style="text-align:left">Examples</td><td>Yes</td><td>No</td><td>Planned</td></tr>
+<tr><td style="text-align:left">Structured</td><td>Yes</td><td>No</td><td>Yes</td></tr>
 <tr><td style="text-align:left">UML</td><td>Yes</td><td>No</td><td>No</td></tr>
 <tr><td style="text-align:left">XML</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-<tr><td style="text-align:left">JSON</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td style="text-align:left">JSON</td><td>Yes</td><td>No</td><td>Yes</td></tr>
 <tr><td style="text-align:left">Value Sets</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
 <tr><td style="text-align:left">Operations</td><td>Yes</td><td>No</td><td>Yes</td></tr>
 </table>
