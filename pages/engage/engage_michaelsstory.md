@@ -104,7 +104,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 **FEATURE: Medication Administration**
 
 <table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="max-width:18em;min-width:10em;width:25%">Profile</th></tr>
-<tr><td>As a patient I want to record the actual medication I have taken so that I have a complete record of how well I have adhered to my medicatication regimen and my care team can review this, contacting me if there are any concerns.</td><td style="vertical-align:middle;">POST MedicationAdministration</td></tr>
+<tr><td>As a patient I want to record the actual medication I have taken so that I have a complete record of how well I have adhered to my medication regimen and my care team can review this, contacting me if there are any concerns.</td><td style="vertical-align:middle;">POST MedicationAdministration</td></tr>
 <tr><td>As a patient I want to make notes against my medications to discuss with my Care Team so if I have any concerns over my medication this can be reviewed and discussed further.</td><td style="vertical-align:middle;">POST MedicationAdministration</td></tr>
 </table>
 
