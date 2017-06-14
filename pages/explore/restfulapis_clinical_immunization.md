@@ -10,7 +10,7 @@ summary: Describes the event of a patient being administered a vaccination or a 
 
 {% include custom/profile.html content="Immunization" page="CareConnect-Immunization-1" %}
 
-{% include custom/fhir.resource.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
+{% include custom/fhir.resource.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html)" %}
 
 ## 1. Read ##
 

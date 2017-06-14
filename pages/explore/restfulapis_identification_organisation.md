@@ -10,7 +10,7 @@ summary: A formally or informally recognized grouping of people or organizations
 
 {% include custom/profile.html content="Organization" page="CareConnect-Organization-1" %}
 
-{% include custom/fhir.resource.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
+{% include custom/fhir.resource.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html)" %}
 
 ## 1. Read ##
 

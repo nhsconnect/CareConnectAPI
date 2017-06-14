@@ -10,7 +10,7 @@ summary: Details and position information for a physical place where services ar
 
 {% include custom/profile.html content="Location" page="CareConnect-Location-1" %}
 
-{% include custom/fhir.resource.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html#search)" %}
+{% include custom/fhir.resource.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html)" %}
 
 ## 1. Read ##
 

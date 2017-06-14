@@ -10,7 +10,7 @@ summary: An action that is or was performed on a patient. This can be a physical
 
 {% include custom/profile.html content="Procedure" page="CareConnect-Procedure-1" %}
 
-{% include custom/fhir.resource.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
+{% include custom/fhir.resource.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html)" %}
 
 
 ## 1. Read ##

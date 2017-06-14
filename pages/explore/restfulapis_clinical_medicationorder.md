@@ -10,7 +10,7 @@ summary: An order for both supply of the medication and the instructions for adm
 
 {% include custom/profile.html content="Medication Order" page="CareConnect-MedicationOrder-1" %}
 
-{% include custom/fhir.resource.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
+{% include custom/fhir.resource.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html)" %}
 
 ## 1. Read ##
 

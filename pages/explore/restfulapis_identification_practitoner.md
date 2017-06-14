@@ -11,7 +11,7 @@ summary: A person who is directly or indirectly involved in the provisioning of 
 
 {% include custom/profile.html content="Practitioner" page="CareConnect-Practitioner-1" %}
 
-{% include custom/fhir.resource.html content="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html#search)" %}
+{% include custom/fhir.resource.html content="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html)" %}
 
 
 ## 1. Read ##
