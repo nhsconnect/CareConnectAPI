@@ -9,7 +9,7 @@ summary: "A range of open source and commercial tools that can assist in the des
 ---
 
 There is no affiliation between INTEROPen and any of the suppliers listed below. Inclusion in this list does not constitute an endorsement of the tool.
-<br><br>
+
 ## [ClinFHIR](http://clinfhir.com/)
 
 <div style="display:flex;flex-wrap:wrap">
@@ -21,7 +21,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
     <img src="images/support/clinfhirlauncher.png" alt="ClinFHIR Launcher Screenshot" style="width:100%; max-width:100%;">
   </div>
 </div>
-<br><br>
+
 ### [ClinFHIR CodeSystem Editor](http://clinfhir.com/codeSystem.html)
 
 <div style="display:flex;flex-wrap:wrap">
@@ -32,11 +32,11 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
     <img  src="images/support/clinfhircodesystemeditor.png" alt="ClinFHIR CodeSystem Editor Screenshot"  style="width:100%; max-width:100%;">
   </div>
 </div>
-<br><br>
+
 ### [ClinFHIR Extension Builder](http://clinfhir.com/EDBuilder.html)
 
 The ClinFHIR extension builder is designed to view and build extension definitions. These can be defined and applied to the Logical Model, which will allow them to be included in the generated Profile.
-<br><br>
+
 ### [ClinFHIR Logical Modeller](http://clinfhir.com/logicalModeller.html)
 
 <div style="display:flex;flex-wrap:wrap">
@@ -47,7 +47,7 @@ The ClinFHIR extension builder is designed to view and build extension definitio
     <img src="images/support/clinfhirlogicalmodeller.png" alt="ClinFHIR Logical Modeller Screenshot" style="width:100%; max-width:100%">
   </div>
 </div>
-<br><br>
+
 ### [ClinFHIR Query](http://clinfhir.com/query.html)
 
 <div style="display:flex;flex-wrap:wrap">
@@ -58,7 +58,7 @@ The ClinFHIR extension builder is designed to view and build extension definitio
     <img src="images/support/clinfhirquery.png" alt="ClinFHIR Query Screenshot" style="width:100%; max-width:100%;">
   </div>
 </div>
-<br><br>
+
 ### [ClinFHIR Scenario Builder](http://clinfhir.com/builder.html)
 
 <div style="display:flex;flex-wrap:wrap">
@@ -70,7 +70,7 @@ The ClinFHIR extension builder is designed to view and build extension definitio
     <img src="images/support/clinfhirscenariobuilder.png" alt="ClinFHIR Scenario Builder Screenshot" style="width:100%; max-width:100%">
   </div>
 </div>
-<br><br>
+
 ### [ClinFHIR ValueSet Editor](http://clinfhir.com/valuesetCreator.html)
 
 <div style="display:flex;flex-wrap:wrap">
@@ -79,7 +79,7 @@ The ClinFHIR extension builder is designed to view and build extension definitio
     <img style="max-width:100%;width:100%" src="images/support/clinfhirvalueseteditor.png" alt="ClinFHIR Valueset Editor Screenshot">
   </div>
 </div>
-<br><br>
+
 ## [FHIR Plugin for Notepad++](http://www.healthintersections.com.au/FhirServer/fhirnpp.htm)
 
 <div style="display:flex;flex-wrap:wrap">
@@ -107,7 +107,7 @@ The ClinFHIR extension builder is designed to view and build extension definitio
     <img style="max-width:100%;width:100%" src="images/support/notepadplugin.png" alt="FHIR Plugin for Notepad++ Screenshot">
   </div>
 </div>
-<br><br>
+
 ## [Forge](https://fhir.furore.com/forge/)
 
 <div style="display:flex;flex-wrap:wrap">
@@ -132,7 +132,7 @@ The ClinFHIR extension builder is designed to view and build extension definitio
     <img style="max-width:100%;width:100%" src="images/support/forge.png" alt="Forge Screenshot">
   </div>
 </div>
-<br><br>
+
 ## [HL7 FHIR Converter](http://hapifhir.io/doc_converter.html)
 
 This tool is under development but it is intended to offer the following tools for structure definition conversions:
@@ -140,7 +140,7 @@ This tool is under development but it is intended to offer the following tools f
 * Converting from DSTU2.1 to DSTU3
 
 The tool is strictly targeted at a technical audience because it requires importing into a ‘Project Object Model’ or POM.
-<br><br>
+
 ## [Postman](https://www.getpostman.com/)
 
 <div style="display:flex;flex-wrap:wrap">
@@ -175,7 +175,6 @@ The tool is strictly targeted at a technical audience because it requires import
   </div>
 </div>
 
-<br><br>
 ## [Simplifier.net](https://simplifier.net/)
 
 <div style="display:flex;flex-wrap:wrap">
