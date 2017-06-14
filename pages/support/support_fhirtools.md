@@ -12,7 +12,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ## [ClinFHIR](http://clinfhir.com/)
 
-<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0;box-shadow: 0 0.1em 0.2em rgba(0, 94, 184)"
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0;box-shadow: 0 4px 8px rgba(0, 94, 184)"
     <p>Developed by David Hay as a result of the HL7 FHIR workshops, ClinFHIR is aimed at helping Clinicians understand HL7 FHIR, and contribute to its development, especially in respect to profiling.</p>
     <p>The tools offered within ClinFHIR include a Patient Viewer, Scenario Builder, Logical Modeller, CodeSystem builder, Extension Definition builder and a Query Tool. The tools make use of three predefined servers and they can be extended to use other DSTU-2 or STU3 servers.</p>
   </div>
