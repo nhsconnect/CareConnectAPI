@@ -61,9 +61,15 @@ The ClinFHIR extension builder is designed to view and build extension definitio
 <br><br>
 ### [ClinFHIR Scenario Builder](http://clinfhir.com/builder.html)
 
-<img src="images/support/clinfhirscenariobuilder.png" alt="ClinFHIR Scenario Builder Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">The Scenario Builder is used to join together the resources needed to represent a specific clinical scenario. It can use Core Resource types, Profiles and Logical models as it does this. The intention is to help people understand how resources can tell a clinical story, and to validate that the resource types available (including profiles) are sufficient.
-
-Patient information is on the Data Server. Profiles on the Conformance server. ValueSets on the Terminology server.
+<div style="display:flex;flex-wrap:wrap">
+  <div style="flex:3 1 60%;padding:0 0 1em 0;">
+    <p>The Scenario Builder is used to join together the resources needed to represent a specific clinical scenario. It can use Core Resource types, Profiles and Logical models as it does this. The intention is to help people understand how resources can tell a clinical story, and to validate that the resource types available (including profiles) are sufficient.</P>
+    <P>Patient information is on the Data Server. Profiles on the Conformance server. ValueSets on the Terminology server.</p>
+  </div>
+  <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
+    <img src="images/support/clinfhirscenariobuilder.png" alt="ClinFHIR Scenario Builder Screenshot" style="width:100%; max-width:100%; float:right; margin-left:3%; margin-bottom:3%;">
+  </div>
+</div>
 <br><br>
 ### [ClinFHIR ValueSet Editor](http://clinfhir.com/valuesetCreator.html)
 
