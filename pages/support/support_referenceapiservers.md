@@ -9,18 +9,19 @@ summary: "A number of resource definitions, while presented as human-readable, t
 ---
 
 As each reference is described, the following features will be highlighted:
-* Profiles indicates that complete profiles are displayed and is typically expected in any reference site displaying Resources.
-* Delta indicates that the site specifically highlights the difference between the displayed Resource and the HL7 core definition.
-* Examples of the resource populated with data.
-* Structured views are profile views displayed in a graphical tree structure.
-* UML views show profiles as UML class diagrams.
-* XML indicates that a Resource’s structure can be displayed in an XML format.
-* JSON indicates that a Resource’s structure can be displayed in a JSON format.
-* Value Sets are the associated values that relate to defined Resources.
-* Operations such as predefined searches are described within the reference server.
+* <b>Profiles</b> indicates that complete profiles are displayed and is typically expected in any reference site displaying Resources.
+* <b>Delta</b> indicates that the site specifically highlights the difference between the displayed Resource and the HL7 core definition.
+* <b>Examples</b> of the resource populated with data.
+* <b>Structured</b> views are profile views displayed in a graphical tree structure.
+* <b>UML</b> views show profiles as UML class diagrams.
+* <b>XML</b> indicates that a Resource’s structure can be displayed in an XML format.
+* <b>JSON</b> indicates that a Resource’s structure can be displayed in a JSON format.
+* <b>Value Sets</b> are the associated values that relate to defined Resources.
+* <b>Operations</b> such as predefined searches are described within the reference server.
 
-<table>
-<tr><td></td><td>HL7 Core Resources</td><td>INTEROPen Care Connect ProfilesNHS Digital Profiles</td></tr>
+
+<table style="width:100%;max-width:100%">
+<tr><td></td><td>HL7 Core Resources</td><td>INTEROPen Care Connect Profiles<td></td>NHS Digital Profiles</td></tr>
 <tr><td>API Server</td><td><a href="https://www.hl7.org/fhir/resourcelist.html">https://www.hl7.org/fhir/resourcelist.html</a></td><td><a href="http://www.interopen.org/candidate-profiles/care-connect/">http://www.interopen.org/candidate-profiles/care-connect/</a></td><td><a href="http://fhir-test.nhs.uk/">http://fhir-test.nhs.uk/</a></td></tr>
 <tr><td>Downloadable Content</td><td><a href="https://www.hl7.org/fhir/downloads.html">https://www.hl7.org/fhir/downloads.html</a></td><td><a href="https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources">https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources</a></td><td><a  href="https://nhsconnect.github.io/gpconnect/development_deliverables.html">https://nhsconnect.github.io/gpconnect/development_deliverables.html</a></td></tr>
 <tr><td>Profiles</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
@@ -33,3 +34,6 @@ As each reference is described, the following features will be highlighted:
 <tr><td>Value Sets</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
 <tr><td>Operations</td><td>Yes</td><td>No</td><td>Yes</td></tr>
 </table>
+
+|table|test|
+|||
