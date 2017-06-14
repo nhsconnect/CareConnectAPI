@@ -20,20 +20,20 @@ As each reference is described, the following features will be highlighted:
 * <b>Operations</b> such as predefined searches are described within the reference server.
 
 <br><br>
-<table style="width:100%;max-width:100%;table-layout:fixed;">
+<table style="width:100%;max-width:100%;table-layout:fixed;text-align:center">
 <thead>
 <tr><th></th><th style="text-align:center">HL7 Core Resources</th><th style="text-align:center">INTEROPen Care Connect Profiles</th><th style="text-align:center">NHS Digital Profiles</th></tr>
 </thead>
-<tr><td>API Server</td><td style="word-wrap: break-word;text-align:center"><a href="https://www.hl7.org/fhir/resourcelist.html">https://www.hl7.org/fhir/resourcelist.html</a></td><td style="word-wrap: break-word;text-align:center"><a href="http://www.interopen.org/candidate-profiles/care-connect/">http://www.interopen.org/candidate-profiles/care-connect/</a></td><td style="word-wrap: break-word;text-align:center"><a href="http://fhir-test.nhs.uk/">http://fhir-test.nhs.uk/</a></td></tr>
-<tr><td>Downloadable Content</td><td style="word-wrap: break-word;"><a href="https://www.hl7.org/fhir/downloads.html">https://www.hl7.org/fhir/downloads.html</a></td><td style="word-wrap: break-word;"><a href="https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources">https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources</a></td><td style="word-wrap: break-word;"><a  href="https://nhsconnect.github.io/gpconnect/development_deliverables.html">https://nhsconnect.github.io/gpconnect/development_deliverables.html</a></td></tr>
-<tr><td>Profiles</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>Delta</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-<tr><td>Examples</td><td>Yes</td><td>Yes</td><td>Planned</td></tr>
-<tr><td>Structured</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>UML</td><td>Yes</td><td>No</td><td>No</td></tr>
-<tr><td>XML</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>JSON</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>Value Sets</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>Operations</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+<tr><td style="text-align:left">API Server</td><td style="word-wrap: break-word;text-align:center"><a href="https://www.hl7.org/fhir/resourcelist.html">https://www.hl7.org/fhir/resourcelist.html</a></td><td style="word-wrap: break-word;text-align:center"><a href="http://www.interopen.org/candidate-profiles/care-connect/">http://www.interopen.org/candidate-profiles/care-connect/</a></td><td style="word-wrap: break-word;text-align:center"><a href="http://fhir-test.nhs.uk/">http://fhir-test.nhs.uk/</a></td></tr>
+<tr><td style="text-align:left">Downloadable Content</td><td style="word-wrap: break-word;"><a href="https://www.hl7.org/fhir/downloads.html">https://www.hl7.org/fhir/downloads.html</a></td><td style="word-wrap: break-word;"><a href="https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources">https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources</a></td><td style="word-wrap: break-word;"><a  href="https://nhsconnect.github.io/gpconnect/development_deliverables.html">https://nhsconnect.github.io/gpconnect/development_deliverables.html</a></td></tr>
+<tr><td style="text-align:left">Profiles</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td style="text-align:left">Delta</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+<tr><td style="text-align:left">Examples</td><td>Yes</td><td>Yes</td><td>Planned</td></tr>
+<tr><td style="text-align:left">Structured</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td style="text-align:left">UML</td><td>Yes</td><td>No</td><td>No</td></tr>
+<tr><td style="text-align:left">XML</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td style="text-align:left">JSON</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td style="text-align:left">Value Sets</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td style="text-align:left">Operations</td><td>Yes</td><td>No</td><td>Yes</td></tr>
 </table>
 
