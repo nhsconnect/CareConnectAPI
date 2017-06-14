@@ -111,7 +111,7 @@ The ClinFHIR extension builder is designed to view and build extension definitio
 ## [Forge](https://fhir.furore.com/forge/)
 
 <div style="display:flex;flex-wrap:wrap">
-  <div style="flex:3 1 60%;padding 0 0 1em 0;">
+  <div style="flex:3 1 60%;padding:0 0 1em 0;">
     <p>Forge is a desktop application used for FHIR profiling. It has been created by Furore (free to download with paid plans offering SLA level support) and is fully integrated with Simplifier.net. It is promoted as the official profile editor for HL7 FHIR.</p>
     <p>Forge supports the following features:</p>
     <ul>
@@ -128,7 +128,7 @@ The ClinFHIR extension builder is designed to view and build extension definitio
       <li>Derived profiles (“profiles on profiles”)</li>
     </ul>
   </div>
-  <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
+  <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
     <img style="max-width:100%;width:100%" src="images/support/forge.png" alt="Forge Screenshot">
   </div>
 </div>
@@ -138,30 +138,42 @@ The ClinFHIR extension builder is designed to view and build extension definitio
 This tool is under development but it is intended to offer the following tools for structure definition conversions:
 * Converting from DSTU2 to DSTU3
 * Converting from DSTU2.1 to DSTU3
+
 The tool is strictly targeted at a technical audience because it requires importing into a ‘Project Object Model’ or POM.
 <br><br>
 ## [Postman](https://www.getpostman.com/)
-<img src="images/support/postman.png" alt="Postman Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">Postman is a tool to support the creation of APIs; available on MacOS, Windows, Linux or as a plug-in for the Chrome browser. While the basic version of Postman is free, there are ‘professional’ and ‘enterprise’ versions which come at a cost.
+<div style="display:flex;flex-wrap:wrap">
+  <div style="flex:3 1 60%;padding:0 0 1em 0;">
+  <p>Postman is a tool to support the creation of APIs; available on MacOS, Windows, Linux or as a plug-in for the Chrome browser. While the basic version of Postman is free, there are ‘professional’ and ‘enterprise’ versions which come at a cost.</p>
+  <p>Postman provides an easy interface to interact with APIs over HTTP and provides the following features:</p>
+  <p><em>Free Version</em></p>
+  <ul>
+    <li>Downloadable Chrome, Mac, Linux & Windows App
+    <li>Saved History of API requests
+  </ul>
+  <p><em>Professional</em></p>
+  <ul>
+    <li>Unlimited Collections, Environments, Tests and Sharing</ul>
+    <li>Team Library of Collections</ul>
+    <li>Extensive team collaboration tools</ul>
+    <li>Extended documentation & monitoring features</ul>
+    <li>Customisable API Documentation</ul>
+    <li>API Monitoring for uptime, performance & accuracy</ul>
+    <li>Multi-timezone email support</ul>
+  </ul>
+  <p><em>Enterprise Version (Beta)</em></p>
+  <ul>
+    <li>Phone support & extended support options</li>
+    <li>Additional invoicing & billing options</li>
+    <li>Enterprise level security, encryption & governance</li>
+  </ul>
+  <p>Postman is used in many tutorials as an easily accessible route to working with FHIR servers and testing operations without the need to create and code.</p>
+  </div>
+  <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
+    <img style="max-width:100%;width:100%" src="images/support/postman.png" alt="Postman Screenshot">
+  </div>
+</div>
 
-Postman provides an easy interface to interact with APIs over HTTP and provides the following features:
-
-<em>Free Version</em>
-* Downloadable Chrome, Mac, Linux & Windows App
-* Saved History of API requests
-<em>Professional</em>
-* Unlimited Collections, Environments, Tests and Sharing
-* Team Library of Collections
-* Extensive team collaboration tools
-* Extended documentation & monitoring features
-* Customisable API Documentation
-* API Monitoring for uptime, performance & accuracy
-* Multi-timezone email support
-<em>Enterprise Version (Beta)</em>
-* Phone support & extended support options
-* Additional invoicing & billing options
-* Enterprise level security, encryption & governance
-
-Postman is used in many tutorials as an easily accessible route to working with FHIR servers and testing operations without the need to create and code.
 <br><br>
 ## [Simplifier.net](https://simplifier.net/)
 
