@@ -2,7 +2,7 @@
 
 <p>All requests SHALL contain a valid ‘Authorization’ header and SHALL contain an ‘Accept’ header with at least one of the following <code class="highlighter-rouge">application/json+fhir</code> or <code class="highlighter-rouge">application/xml+fhir</code>.</p>
 
-<p><strong>Http Headers</strong></p>
+<p><strong>Http Headers (json)</strong></p>
 
 <table>
   <tbody>
@@ -12,7 +12,23 @@
     </tr>
     <tr>
       <td>
-<strong>Authorization:</strong> &lt;as mandated by local standard&gt;
+<strong>Authorization:</strong> &lt;as mandated by local standards&gt;
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Http Headers (xml)</strong></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>
+<strong>Accept:</strong> application/xml+fhir</td>
+    </tr>
+    <tr>
+      <td>
+<strong>Authorization:</strong> &lt;as mandated by local standards&gt;
 </td>
     </tr>
   </tbody>
