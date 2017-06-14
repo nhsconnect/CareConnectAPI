@@ -209,7 +209,7 @@ entries:
         - title: FHIR Tools
           url: /support_fhirtools.html
           output: web
-        - title: Reference API Servers
+        - title: Resource Definitions
           url: /support_referenceapiservers.html
           output: web
 
