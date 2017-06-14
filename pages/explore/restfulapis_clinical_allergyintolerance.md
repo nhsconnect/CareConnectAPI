@@ -53,7 +53,7 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search AllergyIntolerance" command="curl -X GET -H 'Accept: application/xml+fhir'  '[baseUrl]/AllergyIntolerance?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'"  %}
+{% include custom/embedcurl.html title="Search AllergyIntolerance" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr'  '[baseUrl]/AllergyIntolerance?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'"  %}
 
 {% include custom/search.response.headers.html resource="AllergyIntolerance" %}
 
@@ -81,16 +81,12 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
                     <lastUpdated value="2017-06-02T08:25:01.686+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-AllergyIntolerance-1"/>
                 </meta>
-                <identifier>
-                    <system value="https://epr.jorvik.nhk.uk/AllergyIntolerance "/>
-                    <value value="49476534"/>
-                </identifier>
                 <recordedDate value="2014-10-09T14:58:00+11:00"/>
                 <recorder>
                     <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
                 </recorder>
                 <patient>
-                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+                    <reference value="Patient/24966"/>
                 </patient>
                 <substance>
                     <coding>

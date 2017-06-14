@@ -61,7 +61,7 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search MedicationOrder" command="curl -H 'Accept: application/xml+fhir' -X GET  '[baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search MedicationOrder" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="MedicationOrder" %}
 
@@ -101,7 +101,7 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
                 <dateWritten value="2017-05-25T00:00:00+01:00"/>
                 <status value="active"/>
                 <patient>
-                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+                    <reference value="Patient/24966"/>
                     <display value="Bernie Kanfeld"/>
                 </patient>
                 <prescriber>

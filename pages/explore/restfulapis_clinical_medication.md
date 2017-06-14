@@ -47,7 +47,7 @@ Return Medication resource with a logical id of 48496. Replace 'baseUrl' with th
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Get Medication" command="curl -H 'Accept: application/xml+fhir' -X GET  '[baseUrl]/Medication/48496'" %}
+{% include custom/embedcurl.html title="Get Medication" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Medication/48496'" %}
 
 {% include custom/search.response.headers.html resource="Immunization" %}
 

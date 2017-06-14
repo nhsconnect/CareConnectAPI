@@ -14,11 +14,11 @@ Return all {{include.content}} resources for Patients with a logical id of 42</p
 </div>
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /{{include.content}}?subject:Patient.identifier=[system]|[code]</div>
+GET [baseUrl]/{{include.content}}?subject:Patient.identifier=[system]|[code]</div>
 
 <p><code class="highlighter-rouge">system</code> is a uniform resource identifier which defines which CodeSystem the identifer belongs to. For NHS Number this would be <code class="highlighter-rouge">https://fhir.nhs.uk/Id/nhs-number</code> and <code class="highlighter-rouge">code</code> would be the NHS Number.</p>
 <div class="language-http highlighter-rouge">
-<pre class="highlight"><code><span class="err">GET /{{include.content}}?subject:Patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
+<pre class="highlight"><code><span class="err">GET [baseUrl]/{{include.content}}?subject:Patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 </span></code>
 Return all {{include.content}} resources for Patients with a NHS Number of 9876543210</pre>
 </div>
