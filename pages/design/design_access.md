@@ -21,7 +21,7 @@ API access control measures need to be defined alongside API creation and need t
 - matching security with scope of use
 - access and approval for particular resources
 
-A possible mechanism for providing access to APIs is the provision of API keys for access to the APIs being provided. Please contribute for other common access methods and add to the [Case Studies](/engage_case_studies.html) to show various access mechanisms to APIs
+A possible mechanism for providing access to APIs is the provision of API keys for access to the APIs being provided. Please contribute for other common access methods and add to the [Case Studies](/engage_case_studies.html) to show various access mechanisms to APIs.
 
 # Access and Care Connect APIs #
 
