@@ -9,14 +9,25 @@ summary: "The Access page shows developers and users of the API how to access an
 
 {% include important.html content="All phases outlined below are indicative and subject to on-going review." %}
 
-This page has been intentional created to show the growth of the implementation guide to support the end to end adoption of Care Connect profiles.
+# What is API Access? #
 
-{% include custom/contribute.html content="If you want to get involved in any part of this then please get in touch with careconnect@interopen.org "%}
+API access is the process of ensuring that calls to APIs with authenticated logins are able to access the APIs. API products are also a good way to control access to a specific bundle of resources/profiles or aspects of information.
 
-# How to provide an API #
+This implementation guide identifies the need to manage any exposed APIs. When access control and monitoring is combined while creating an API, this can empower API implementing organisations to improve, control, limit and deny access to APIs and therefore the underlying data in a consistant mechanism. When APIs are the central mechanism for authorization and access control to your APIs. 
 
-The following diagram explains the elements of APIs allowing a the development of APIs:
+The normal access protocol When an app attempts to access an API , authorization is enforced by Apigee at runtime. API access control measures need to be defined alongside API creation and need to look at
+- enforcement of authorisation
+- security of payload and access
+- matching security with scope of use
+- access and approval for particular resources
+
+A possible mechanism for providing access to APIs is the provision of API keys for access to the APIs being provided. Please contribute for other common access methods and add to the [Case Studies](/engage_case_studies.html) to show various access mechanisms to APIs
+
+
+# API Considerations #
+
+Other API consideration are shown below. Please click on the parts of the API process to continue your API creation journey.
 
 {% include custom/provide_api.svg %}
 
-NHS Digital is contributing to progressing the profile development as described below. Invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem as defined above. 
+{% include custom/contribute.html content="Get in involved and contribute to the above API considerations careconnect@interopen.org"%}

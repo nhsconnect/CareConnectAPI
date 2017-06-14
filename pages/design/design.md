@@ -12,7 +12,7 @@ summary: "Describes the steps required to design & build an API using the Care C
 The Design & Build section contains descriptions of approaches and suggestions for building APIs.
 
 | Page              |  Description    |
-|---------------------+|+--------------------------------+|
+|+---------------------|+--------------------------------+|
 | Design Patterns / Topology | Describes access patterns necessary which influence the access, security and use of APIs. Depending on the pattern or topology of the requesting and responding system. The relationship between the requestor and responder influences the choice of access mechanism, security of payload and access finally build of the system |
 | Access | The access mechanism and of requesting system is influenced by many factors. This section demonstrates the design decisions to consider | 
 | Security | The security of the FHIR payload, access and data at rest are all important design decisions while building an API. This section investigates | 
