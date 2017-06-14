@@ -71,7 +71,7 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Observation" command="curl -H 'Accept: application/xml+fhir' -X GET  '[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Observation" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Observation" %}
 
@@ -112,7 +112,7 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
                     </coding>
                 </code>
                 <subject>
-                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+                    <reference value="Patient/24966"/>
                 </subject>
                 <effectiveDateTime value="2012-09-17"/>
                 <performer>

@@ -77,25 +77,14 @@
                     <path d="M32,315.5 C32,311.357865 35.3578654,308 39.5,308 C43.6421346,308 47,311.357865 47,315.5 C47,319.642135 43.6421346,323 39.5,323 C35.3578654,323 32,319.642135 32,315.5 L32,315.5 Z" id="Fill-35" stroke="#9B9B9B" stroke-width="0.5" fill="#FFFFFF"></path>
                     <path d="M190,237.500001 C190,223.416741 201.640591,212 216.000001,212 C230.359403,212 242.000002,223.416741 242.000002,237.500001 C242.000002,251.583261 230.359403,263.000002 216.000001,263.000002 C201.640591,263.000002 190,251.583261 190,237.500001 L190,237.500001 Z" id="Stroke-36" stroke="#4774AB" stroke-width="25400" stroke-linejoin="round"></path>
                     <text id="Engage" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="0.014" fill="#000000">
-                        <tspan x="202.6393" y="239.098434">E</tspan>
-                        <tspan x="207.5413" y="239.098434" letter-spacing="-0.546">n</tspan>
-                        <tspan x="211.4433" y="239.098434" letter-spacing="0.31">g</tspan>
-                        <tspan x="216.3453" y="239.098434" letter-spacing="-0.394">a</tspan>
-                        <tspan x="220.2473" y="239.098434" letter-spacing="0.31">g</tspan>
-                        <tspan x="225.1493" y="239.098434">e</tspan>
+                        <tspan x="202.6393" y="239.098434">Engage</tspan>
                     </text>
                 </a>
                 <a xlink:href="/explore.html" target="_top">
                     <path d="M122,260 C122,245.64059 133.4167,234 147.5,234 C161.5833,234 173,245.64059 173,260 C173,274.3594 161.5833,286 147.5,286 C133.4167,286 122,274.3594 122,260 L122,260 Z" id="Fill-37" stroke="#9B9B9B" fill="#FFFFFF" class="s_link"></path>
                     <path d="M122,260.000001 C122,245.640591 133.416733,234 147.500001,234 C161.583253,234 173.000002,245.640591 173.000002,260.000001 C173.000002,274.359403 161.583253,286.000002 147.500001,286.000002 C133.416733,286.000002 122,274.359403 122,260.000001 L122,260.000001 Z" id="Stroke-38" stroke="#4774AB" stroke-width="25400" stroke-linejoin="round"></path>
                     <text id="API-Docs" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="-0.023" fill="#000000">
-                        <tspan x="129.826" y="261.457184">AP</tspan>
-                        <tspan x="140.148" y="261.457184" letter-spacing="0.089">I</tspan>
-                        <tspan x="142.309" y="261.457184" letter-spacing="0.937"> </tspan>
-                        <tspan x="145.47" y="261.457184" letter-spacing="0.529">D</tspan>
-                        <tspan x="151.631" y="261.457184" letter-spacing="0.569">o</tspan>
-                        <tspan x="156.792" y="261.457184" letter-spacing="-0.135">c</tspan>
-                        <tspan x="160.953" y="261.457184">s</tspan>
+                        <tspan x="129.826" y="261.457184">API Docs</tspan>
                     </text>
                 </a>
                 <path d="M53,237.5 C53,223.41674 64.4167,212 78.5,212 C92.5833,212 104,223.41674 104,237.5 C104,251.58326 92.5833,263 78.5,263 C64.4167,263 53,251.58326 53,237.5 L53,237.5 Z" id="Fill-39" fill="#FCF8E3"></path>
@@ -112,31 +101,23 @@
                     <path d="M108,315.5 C108,311.357853 111.357853,308 115.5,308 C119.642147,308 123,311.357853 123,315.5 C123,319.642135 119.642147,323 115.5,323 C111.357853,323 108,319.642135 108,315.5 L108,315.5 Z" id="Fill-41" fill="#DFF0D8"></path>
                     <path d="M10,179.500001 C10,165.416741 21.4167405,154 35.5000008,154 C49.5832532,154 61.0000016,165.416741 61.0000016,179.500001 C61.0000016,193.583261 49.5832532,205.000002 35.5000008,205.000002 C21.4167405,205.000002 10,193.583261 10,179.500001 L10,179.500001 Z" id="Stroke-42" stroke="#4774AB" stroke-width="25400" stroke-linejoin="round"></path>
                     <text id="Topology-" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="0.408" fill="#000000">
-                        <tspan x="18.4837" y="175.972354">Topology</tspan>
+                        <tspan x="18.4837" y="175.972354">Patterns</tspan>
                     </text>
                     <text id="Patterns" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="-0.023" fill="#000000">
-                        <tspan x="18.4837" y="185.972304">/ Patterns</tspan>
+                        <tspan x="18.4837" y="185.972304">/ Topology</tspan>
                     </text>
                 </a>
                 <a xlink:href="/design_access.html" target="_top">
                     <path d="M10,106.5 C10,92.4167 21.4167,81 35.5,81 C49.5833,81 61,92.4167 61,106.5 C61,120.5833 49.5833,132 35.5,132 C21.4167,132 10,120.5833 10,106.5 L10,106.5 Z" id="Fill-43" fill="#DFF0D8" class="s_link"></path>
                     <path d="M10,106.500001 C10,92.4167326 21.4167405,81 35.5000008,81 C49.5832532,81 61.0000016,92.4167326 61.0000016,106.500001 C61.0000016,120.583253 49.5832532,132.000002 35.5000008,132.000002 C21.4167405,132.000002 10,120.583253 10,106.500001 L10,106.500001 Z" id="Stroke-44" stroke="#4774AB" stroke-width="25400" stroke-linejoin="round"></path>
                     <text id="Access" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="-0.184" fill="#000000">
-                        <tspan x="23.4837" y="108.207754">A</tspan>
-                        <tspan x="28.4837" y="108.207754" letter-spacing="-0.296">cce</tspan>
-                        <tspan x="40.4837" y="108.207754">ss</tspan>
+                        <tspan x="23.4837" y="108.207754">Access</tspan>
                     </text>
                 </a>
                 <path d="M53,48.5 C53,34.4167 64.4167,23 78.5,23 C92.5833,23 104,34.4167 104,48.5 C104,62.5833 92.5833,74 78.5,74 C64.4167,74 53,62.5833 53,48.5 L53,48.5 Z" id="Fill-45" fill="#FCF8E3"></path>
                 <path d="M53,48.5000008 C53,34.4167326 64.4167326,23 78.5000008,23 C92.5832532,23 104.000002,34.4167326 104.000002,48.5000008 C104.000002,62.5832532 92.5832532,74.0000016 78.5000008,74.0000016 C64.4167326,74.0000016 53,62.5832532 53,48.5000008 L53,48.5000008 Z" id="Stroke-46" stroke="#4774AB" stroke-width="25400" stroke-linejoin="round"></path>
                 <text id="Endpoint" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="0.014" fill="#000000">
-                    <tspan x="62.0152" y="49.6715537">E</tspan>
-                    <tspan x="66.9172" y="49.6715537" letter-spacing="-0.546">n</tspan>
-                    <tspan x="70.8192" y="49.6715537" letter-spacing="0.158">dp</tspan>
-                    <tspan x="80.6232" y="49.6715537" letter-spacing="0.31">o</tspan>
-                    <tspan x="85.5252" y="49.6715537" letter-spacing="0.126">i</tspan>
-                    <tspan x="87.4272" y="49.6715537" letter-spacing="-0.546">n</tspan>
-                    <tspan x="91.3292" y="49.6715537">t</tspan>
+                    <tspan x="62.0152" y="49.6715537">Endpoint</tspan>
                 </text>
             </g>
         </g>

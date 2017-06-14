@@ -25,7 +25,7 @@ An important influence on the Care Connect FHIR project is GP Connect. Technical
 ## NHS England and Code4Health
 Code4Health is an NHS initiative established for individuals and organisations providing a platform to bring together ideas, change working practice and build solutions to improve healthcare. Code4Health supports a rich asset and resource catalogue, a multitude of contributors and a sandpit environment for communities.
 
-Code4Health focusses on supporting the clinician in the use of technology facilitating shared learning for the ‘frontline’ of healthcare.
+Code4Health focuses on supporting the clinician in the use of technology facilitating shared learning for the ‘frontline’ of healthcare.
 
 There are four strands to Code4Health.
 * The first is the Code4health platform, built by Handi, which is used as a testing and development environment to build apps. The platform also provides direct access to open application programming interfaces (APIs).

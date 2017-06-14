@@ -54,7 +54,7 @@ Return all MedciationStatement resources for Patient with a NHS Number of 987654
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search MedicationStatement" command="curl -H 'Accept: application/xml+fhir' -X GET  '[baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search MedicationStatement" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="MedicationStatement" %}
 
@@ -94,7 +94,7 @@ Return all MedciationStatement resources for Patient with a NHS Number of 987654
                     </extension>
                 </extension>
                 <patient>
-                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+                    <reference value="Patient/24966"/>
                     <display value="Bernie Kanfeld"/>
                 </patient>
                 <informationSource>

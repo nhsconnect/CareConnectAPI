@@ -22,9 +22,9 @@ As each reference is described, the following features will be highlighted:
 <br><br>
 <table style="width:100%;max-width:100%;table-layout:fixed;">
 <thead>
-<tr><th></th><th>HL7 Core Resources</th><th>INTEROPen Care Connect Profiles</th><th>NHS Digital Profiles</th></tr>
+<tr><th></th><th style="text-align:center">HL7 Core Resources</th><th style="text-align:center">INTEROPen Care Connect Profiles</th><th style="text-align:center">NHS Digital Profiles</th></tr>
 </thead>
-<tr><td>API Server</td><td style="word-wrap: break-word;"><a href="https://www.hl7.org/fhir/resourcelist.html">https://www.hl7.org/fhir/resourcelist.html</a></td><td style="word-wrap: break-word;"><a href="http://www.interopen.org/candidate-profiles/care-connect/">http://www.interopen.org/candidate-profiles/care-connect/</a></td><td style="word-wrap: break-word;"><a href="http://fhir-test.nhs.uk/">http://fhir-test.nhs.uk/</a></td></tr>
+<tr><td>API Server</td><td style="word-wrap: break-word;text-align:center"><a href="https://www.hl7.org/fhir/resourcelist.html">https://www.hl7.org/fhir/resourcelist.html</a></td><td style="word-wrap: break-word;text-align:center"><a href="http://www.interopen.org/candidate-profiles/care-connect/">http://www.interopen.org/candidate-profiles/care-connect/</a></td><td style="word-wrap: break-word;text-align:center"><a href="http://fhir-test.nhs.uk/">http://fhir-test.nhs.uk/</a></td></tr>
 <tr><td>Downloadable Content</td><td style="word-wrap: break-word;"><a href="https://www.hl7.org/fhir/downloads.html">https://www.hl7.org/fhir/downloads.html</a></td><td style="word-wrap: break-word;"><a href="https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources">https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources</a></td><td style="word-wrap: break-word;"><a  href="https://nhsconnect.github.io/gpconnect/development_deliverables.html">https://nhsconnect.github.io/gpconnect/development_deliverables.html</a></td></tr>
 <tr><td>Profiles</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
 <tr><td>Delta</td><td>Yes</td><td>Yes</td><td>No</td></tr>

@@ -28,7 +28,7 @@ Return the ValueSet for Care Connect Administrative Gender. Replace 'baseUrl' wi
 
 #### 2.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Read Care Connect Administrative Gender ValueSet" command="curl -H 'Accept: application/xml+fhir' -X GET  '[baseUrl]/ValueSet/CareConnect-AdministrativeGender-1'" %}
+{% include custom/embedcurl.html title="Read Care Connect Administrative Gender ValueSet" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/ValueSet/CareConnect-AdministrativeGender-1'" %}
 
 {% include custom/search.response.headers.html resource="ValueSet"  %}
 

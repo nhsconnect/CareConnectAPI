@@ -64,7 +64,7 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Condition" command="curl -H 'Accept: application/xml+fhir' -X GET  '[baseUrl]/Condition?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Condition" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Condition?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Condition" %}
 
@@ -93,7 +93,7 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Condition-1"/>
                 </meta>
                 <patient>
-                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
+                    <reference value="Patient/24966"/>
                 </patient>
                 <asserter>
                     <reference value="https://sds.proxy.nhs.uk/Practitioner/C5206458"/>

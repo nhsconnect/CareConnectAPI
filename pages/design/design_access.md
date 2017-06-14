@@ -13,9 +13,9 @@ summary: "The Access page shows developers and users of the API how to access an
 
 API access is the process of ensuring that calls to APIs with authenticated logins are able to access the APIs. API products are also a good way to control access to a specific bundle of resources/profiles or aspects of information.
 
-This implementation guide identifies the need to manage any exposed APIs. When access control and monitoring is combined while creating an API, this can empower API implementing organisations to improve, control, limit and deny access to APIs and therefore the underlying data in a consistant mechanism. When APIs are the central mechanism for authorisation and access control to your APIs. 
+This implementation guide identifies the need to manage any exposed APIs. When access control and monitoring is combined while creating an API, this can empower API implementing organisations to improve, control, limit and deny access to APIs and therefore the underlying data in a consistent mechanism. When APIs are the central mechanism for authorization and access control to your APIs. 
 
-The normal access protocol When an app attempts to access an API, authorisation is enforced by Apigee at runtime. API access control measures need to be defined alongside API creation and need to look at
+API access control measures need to be defined alongside API creation and need to look for:
 - enforcement of authorisation
 - security of payload and access
 - matching security with scope of use

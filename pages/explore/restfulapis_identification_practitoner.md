@@ -62,7 +62,7 @@ Return all Practitioner resources with a GP Code of G8133438, the format of the 
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Practitioner" command="curl -H 'Accept: application/xml+fhir' -X GET  '[baseUrl]/Practitioner?identifier=https://fhir.nhs.uk/Id/sds-user-id|G8133438'" %}
+{% include custom/embedcurl.html title="Search Practitioner" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Practitioner?identifier=https://fhir.nhs.uk/Id/sds-user-id|G8133438'" %}
 
 {% include custom/search.response.headers.html resource="Practitioner" %}
 
