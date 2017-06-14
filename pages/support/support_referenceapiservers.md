@@ -20,7 +20,7 @@ As each reference is described, the following features will be highlighted:
 * <b>Operations</b> such as predefined searches are described within the reference server.
 
 <br><br>
-<table style="width:100%;max-width:100%">
+<table style="width:100%;max-width:100%;table-layout:fixed;">
 <thead>
 <tr><th></th><th>HL7 Core Resources</th><th>INTEROPen Care Connect Profiles</th><th>NHS Digital Profiles</th></tr>
 </thead?
