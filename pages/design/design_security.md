@@ -25,7 +25,7 @@ Two common ways of accessing and managing API use within API security based on t
 
 ## Authentication and Authorisation ###
 
-Authentication and autorthisation are commonly used together:
+Authentication and authorisation are commonly used together:
 
 - Authentication: reliably identify end user
 - Authorisation: identified user access to correct resources/data 
@@ -36,7 +36,7 @@ Authentication is most often implemented with a username and password. To increa
 - hardware keys and 
 - external devices. 
 
-Authorisation occures once the user is authenticated, the system decides which resources or data to allow access to. For APIs this is often some kind of access token, either obtained through an external process (e.g. when signing up for the API) or through a separate mechanism (e.g. OAuth). This token is then passed with each request to an API and is validated by the API before processing the request. 
+Authorisation occurs once the user is authenticated, the system decides which resources or data to allow access to. For APIs this is often some kind of access token, either obtained through an external process (e.g. when signing up for the API) or through a separate mechanism (e.g. OAuth). This token is then passed with each request to an API and is validated by the API before processing the request. 
 
 
 ## Encryption and Signatures ##
