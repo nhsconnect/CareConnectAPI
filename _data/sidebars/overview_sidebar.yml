@@ -206,6 +206,9 @@ entries:
         - title: FHIR Tools
           url: /support_fhirtools.html
           output: web
+        - title: FHIR Tools
+          url: /support_referenceapiservers.html
+          output: web
 
   - title: Tags
     output: web
