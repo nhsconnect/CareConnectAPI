@@ -23,7 +23,7 @@ As each reference is described, the following features will be highlighted:
 <table style="width:100%;max-width:100%;table-layout:fixed;">
 <thead>
 <tr><th></th><th>HL7 Core Resources</th><th>INTEROPen Care Connect Profiles</th><th>NHS Digital Profiles</th></tr>
-</thead?
+</thead>
 <tr><td>API Server</td><td><a href="https://www.hl7.org/fhir/resourcelist.html">https://www.hl7.org/fhir/resourcelist.html</a></td><td><a href="http://www.interopen.org/candidate-profiles/care-connect/">http://www.interopen.org/candidate-profiles/care-connect/</a></td><td><a href="http://fhir-test.nhs.uk/">http://fhir-test.nhs.uk/</a></td></tr>
 <tr><td>Downloadable Content</td><td><a href="https://www.hl7.org/fhir/downloads.html">https://www.hl7.org/fhir/downloads.html</a></td><td><a href="https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources">https://github.com/INTEROPen/Care Connect-profiles/tree/feature/initial_clinical_resources</a></td><td><a  href="https://nhsconnect.github.io/gpconnect/development_deliverables.html">https://nhsconnect.github.io/gpconnect/development_deliverables.html</a></td></tr>
 <tr><td>Profiles</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
@@ -37,4 +37,3 @@ As each reference is described, the following features will be highlighted:
 <tr><td>Operations</td><td>Yes</td><td>No</td><td>Yes</td></tr>
 </table>
 
-|---
