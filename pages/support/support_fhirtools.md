@@ -11,10 +11,15 @@ summary: "A range of open source and commercial tools that can assist in the des
 There is no affiliation between INTEROPen and any of the suppliers listed below. Inclusion in this list does not constitute an endorsement of the tool.
 <br><br>
 ## [ClinFHIR](http://clinfhir.com/)
-
-<img src="images/support/clinfhirlauncher.png" alt="ClinFHIR Launcher Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">Developed by David Hay as a result of the HL7 FHIR workshops, ClinFHIR is aimed at helping Clinicians understand HL7 FHIR, and contribute to its development, especially in respect to profiling. 
-
-The tools offered within ClinFHIR include a Patient Viewer, Scenario Builder, Logical Modeller, CodeSystem builder, Extension Definition builder and a Query Tool. The tools make use of three predefined servers and they can be extended to use other DSTU-2 or STU3 servers.
+<div style="display:flex;flex-wrap:wrap">
+  <div style="flex:3 1 60%;padding 0 0 1em 0;">
+    <p>Developed by David Hay as a result of the HL7 FHIR workshops, ClinFHIR is aimed at helping Clinicians understand HL7 FHIR, and contribute to its development, especially in respect to profiling.</p>
+    <p>The tools offered within ClinFHIR include a Patient Viewer, Scenario Builder, Logical Modeller, CodeSystem builder, Extension Definition builder and a Query Tool. The tools make use of three predefined servers and they can be extended to use other DSTU-2 or STU3 servers.</p>
+  </div>
+  <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
+    <img style="max-width:100%;width:100%" src="images/support/clinfhirlauncher.png" alt="ClinFHIR Launcher Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">
+  </div>
+</div>
 <br><br>
 ### [ClinFHIR CodeSystem Editor](http://clinfhir.com/codeSystem.html)
 
@@ -42,7 +47,7 @@ Patient information is on the Data Server. Profiles on the Conformance server. V
 
 <div style="display:flex;flex-wrap:wrap">
   <div style="flex:3 1 60%;padding 0 0 1em 0;">A tool to support the creation of ValueSet’s. Predominantly works with SNOMED-CT.</div>
-  <div style="flex:1 6 40%;[adding 0 1em 0 1em;min-width:15em;">
+  <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
     <img style="max-width:100%;width:100%" src="images/support/clinfhirvalueseteditor.png" alt="ClinFHIR Valueset Editor Screenshot">
   </div>
 </div>
