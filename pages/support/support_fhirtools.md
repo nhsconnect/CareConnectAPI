@@ -35,7 +35,9 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 
 ### [ClinFHIR Extension Builder](http://clinfhir.com/EDBuilder.html)
 
-The ClinFHIR extension builder is designed to view and build extension definitions. These can be defined and applied to the Logical Model, which will allow them to be included in the generated Profile.
+<div style="display:flex;flex-wrap:wrap">
+<p>The ClinFHIR extension builder is designed to view and build extension definitions. These can be defined and applied to the Logical Model, which will allow them to be included in the generated Profile.</p>
+</div>
 
 ### [ClinFHIR Logical Modeller](http://clinfhir.com/logicalModeller.html)
 
@@ -135,11 +137,14 @@ The ClinFHIR extension builder is designed to view and build extension definitio
 
 ## [HL7 FHIR Converter](http://hapifhir.io/doc_converter.html)
 
-This tool is under development but it is intended to offer the following tools for structure definition conversions:
-* Converting from DSTU2 to DSTU3
-* Converting from DSTU2.1 to DSTU3
-
-The tool is strictly targeted at a technical audience because it requires importing into a ‘Project Object Model’ or POM.
+<div style="display:flex;flex-wrap:wrap">
+<p>This tool is under development but it is intended to offer the following tools for structure definition conversions:</p>
+<ul>
+<li>Converting from DSTU2 to DSTU3</li>
+<li>Converting from DSTU2.1 to DSTU3</li>
+</ul>
+<p>The tool is strictly targeted at a technical audience because it requires importing into a ‘Project Object Model’ or POM.</P>
+</div>
 
 ## [Postman](https://www.getpostman.com/)
 
