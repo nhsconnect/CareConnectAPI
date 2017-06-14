@@ -88,7 +88,6 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
             <Condition xmlns="http://hl7.org/fhir">
                 <id value="24954"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T08:28:08.713+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Condition-1"/>
                 </meta>

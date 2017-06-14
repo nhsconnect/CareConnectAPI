@@ -74,7 +74,6 @@ Return all Location resources with a Trust Site code of RTG08, the format of the
             <Location xmlns="http://hl7.org/fhir">
                 <id value="24959"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:09:10.339+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Location-1"/>
                 </meta>

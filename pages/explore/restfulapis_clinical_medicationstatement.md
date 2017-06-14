@@ -78,7 +78,6 @@ Return all MedciationStatement resources for Patient with a NHS Number of 987654
             <MedicationStatement xmlns="http://hl7.org/fhir">
                 <id value="24963"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:18:21.553+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationStatement-1"/>
                 </meta>

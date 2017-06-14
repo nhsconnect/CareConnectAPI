@@ -1,6 +1,5 @@
 <Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///P:/My%20Documents/Interoperability/Tools/FHIR/temp/Validation%20Tests/CareConnect/Generation/Schemas/condition.xsd">
 	<meta>
-		<versionId value="1"/>
 		<lastUpdated value="2017-01-04T01:26:54.007-05:00"/>
 		<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Condition-1"/>
 	</meta>

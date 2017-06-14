@@ -86,7 +86,6 @@ Return all Practitioner resources with a GP Code of G8133438, the format of the 
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="24967"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:33:47.072+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Practitioner-1"/>
                 </meta>

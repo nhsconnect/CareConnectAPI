@@ -79,7 +79,6 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="24965"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:27:43.366+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Organization-1"/>
                 </meta>

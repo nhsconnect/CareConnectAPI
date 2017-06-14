@@ -84,7 +84,6 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
             <Immunization xmlns="http://hl7.org/fhir">
                 <id value="24956"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T08:48:28.340+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Immunization-1"/>
                 </meta>

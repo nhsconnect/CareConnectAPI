@@ -95,7 +95,6 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="24964"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:20:13.289+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Observation-1"/>
                 </meta>

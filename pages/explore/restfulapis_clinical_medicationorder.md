@@ -85,7 +85,6 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
             <MedicationOrder xmlns="http://hl7.org/fhir">
                 <id value="24961"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:14:56.728+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationOrder-1"/>
                 </meta>

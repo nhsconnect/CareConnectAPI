@@ -116,7 +116,6 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
             <Patient xmlns="http://hl7.org/fhir">
                 <id value="24966"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:30:21.875+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
                 </meta>

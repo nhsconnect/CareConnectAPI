@@ -74,7 +74,6 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
             <Encounter xmlns="http://hl7.org/fhir">
                 <id value="24957"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T08:53:47.393+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Encounter-1"/>
                 </meta>

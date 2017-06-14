@@ -86,7 +86,6 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
             <Procedure xmlns="http://hl7.org/fhir">
                 <id value="24968"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:36:55.159+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Procedure-1"/>
                 </meta>

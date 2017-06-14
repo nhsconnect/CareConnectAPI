@@ -77,7 +77,6 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
             <AllergyIntolerance xmlns="http://hl7.org/fhir">
                 <id value="24953"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T08:25:01.686+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-AllergyIntolerance-1"/>
                 </meta>

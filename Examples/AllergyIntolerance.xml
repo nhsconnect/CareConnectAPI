@@ -1,6 +1,5 @@
 <AllergyIntolerance xmlns="http://hl7.org/fhir">
     <meta>
-        <versionId value="1"/>
         <lastUpdated value="2017-05-25T07:38:43.382-04:00"/>
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-AllergyIntolerance-1"/>
     </meta>
