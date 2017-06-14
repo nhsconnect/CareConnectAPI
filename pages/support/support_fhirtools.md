@@ -18,7 +18,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
     <p>The tools offered within ClinFHIR include a Patient Viewer, Scenario Builder, Logical Modeller, CodeSystem builder, Extension Definition builder and a Query Tool. The tools make use of three predefined servers and they can be extended to use other DSTU-2 or STU3 servers.</p>
   </div>
   <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
-    <img src="images/support/clinfhirlauncher.png" alt="ClinFHIR Launcher Screenshot" style="width:100%; max-width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);">
+    <img src="images/support/clinfhirlauncher.png" alt="ClinFHIR Launcher Screenshot" style="width:100%; max-width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:none;">
   </div>
 </div>
 
@@ -29,7 +29,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
     <p>The CodeSystem defines the set of possible values for a resource element. The actual 'binding' between CodeSystem and element is done by the ValueSet. This component allows you to build (and edit) a CodeSystem, and optionally builds the ValueSet as well. Once created, the created extensions are stored on the conformance server.</p>
   </div>
   <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
-    <img  src="images/support/clinfhircodesystemeditor.png" alt="ClinFHIR CodeSystem Editor Screenshot"  style="width:100%; max-width:100%;">
+    <img  src="images/support/clinfhircodesystemeditor.png" alt="ClinFHIR CodeSystem Editor Screenshot"  style="width:100%; max-width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:none;">
   </div>
 </div>
 
@@ -46,7 +46,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
     <p>The Logical modeller allows the creation of a model that represents a particular interoperability requirement in a format that is easy to use. It uses FHIR data types, and can be based on an existing resource type or completely 'ad hoc'. It is intended to act as a 'bridge' between Modeller and User, and can act as the basis for the generation of the profiling components required by FHIR.</p>
   </div>
   <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
-    <img src="images/support/clinfhirlogicalmodeller.png" alt="ClinFHIR Logical Modeller Screenshot" style="width:100%; max-width:100%">
+    <img src="images/support/clinfhirlogicalmodeller.png" alt="ClinFHIR Logical Modeller Screenshot" style="width:100%; max-width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:none;">
   </div>
 </div>
 
@@ -57,7 +57,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
     <p>ClinFHIR Query allows ad hoc queries to be sent to a FHIR server. This tool duplicates the key feature of tools like Postman and the FHIR Plugin for Notepad++ however it is dedicated to FHIR (unlike Postman which is a generic tool) and it’s far simpler to use than the Notepad++ plugin.</p>
   </div>
   <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
-    <img src="images/support/clinfhirquery.png" alt="ClinFHIR Query Screenshot" style="width:100%; max-width:100%;">
+    <img src="images/support/clinfhirquery.png" alt="ClinFHIR Query Screenshot" style="width:100%; max-width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:none;">
   </div>
 </div>
 
@@ -69,7 +69,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
     <P>Patient information is on the Data Server. Profiles on the Conformance server. ValueSets on the Terminology server.</p>
   </div>
   <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
-    <img src="images/support/clinfhirscenariobuilder.png" alt="ClinFHIR Scenario Builder Screenshot" style="width:100%; max-width:100%">
+    <img src="images/support/clinfhirscenariobuilder.png" alt="ClinFHIR Scenario Builder Screenshot" style="width:100%; max-width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:none;">
   </div>
 </div>
 
@@ -78,7 +78,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 <div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">A tool to support the creation of ValueSet’s. Predominantly works with SNOMED-CT.</div>
   <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
-    <img style="max-width:100%;width:100%" src="images/support/clinfhirvalueseteditor.png" alt="ClinFHIR Valueset Editor Screenshot">
+    <img style="max-width:100%;width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:none;" src="images/support/clinfhirvalueseteditor.png" alt="ClinFHIR Valueset Editor Screenshot">
   </div>
 </div>
 
@@ -106,7 +106,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
   <p>The plug-in is aimed very squarely at FHIR (unlike Postman which is a more generic API development tool).</p>
 </div>
   <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
-    <img style="max-width:100%;width:100%" src="images/support/notepadplugin.png" alt="FHIR Plugin for Notepad++ Screenshot">
+    <img style="max-width:100%;width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:none;" src="images/support/notepadplugin.png" alt="FHIR Plugin for Notepad++ Screenshot">
   </div>
 </div>
 
@@ -131,7 +131,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
     </ul>
   </div>
   <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
-    <img style="max-width:100%;width:100%" src="images/support/forge.png" alt="Forge Screenshot">
+    <img style="max-width:100%;width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:none;" src="images/support/forge.png" alt="Forge Screenshot">
   </div>
 </div>
 
@@ -176,7 +176,7 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
   <p>Postman is used in many tutorials as an easily accessible route to working with FHIR servers and testing operations without the need to create and code.</p>
   </div>
   <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
-    <img style="max-width:100%;width:100%" src="images/support/postman.png" alt="Postman Screenshot">
+    <img style="max-width:100%;width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:none;" src="images/support/postman.png" alt="Postman Screenshot">
   </div>
 </div>
 
@@ -197,6 +197,6 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
     <p>The registry contains both projects and resources, and a quick scan can reveal hundreds of profiles that have been defined although they do range quite significantly in quality.</p>
 </div>
   <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
-    <img style="max-width:100%;width:100%" src="images/support/simplifier.png" alt="Simplifier Screenshot">
+    <img style="max-width:100%;width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:none;" src="images/support/simplifier.png" alt="Simplifier Screenshot">
   </div>
 </div>
