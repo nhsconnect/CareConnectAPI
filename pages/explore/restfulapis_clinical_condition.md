@@ -31,7 +31,7 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 ### 2.1. Search Parameters ###
 
-{% include custom/moscow.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html#search)" %}
+{% include custom/search.parameters.html resource="Condition"     link="https://www.hl7.org/fhir/DSTU2/condition.html#search" %}
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|

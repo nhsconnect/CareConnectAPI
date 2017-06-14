@@ -30,7 +30,7 @@ Fetches a bundle of all `Organization` resources for the specified search criter
 
 ### 2.1. Search Parameters ###
 
-{% include custom/moscow.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
+{% include custom/search.parameters.html resource="Organization"     link="https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|

@@ -30,7 +30,7 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 
 ### 2.1. Search Parameters ###
 
-{% include custom/moscow.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search)" %}
+{% include custom/search.parameters.html resource="AllergyIntolerance"     link="https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search" %}
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------------|------|

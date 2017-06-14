@@ -32,7 +32,7 @@ Search for all flag resources for a patient. Fetches a bundle of all `Flag` reso
 
 ### 2.1. Search Parameters ###
 
-{% include custom/moscow.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
+{% include custom/search.parameters.html resource="Flag"     link="https://www.hl7.org/fhir/DSTU2/flag.html#search" %}
 
 
 | Name | Type | Description | Conformance | Path |

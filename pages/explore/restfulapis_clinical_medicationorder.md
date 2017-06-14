@@ -30,7 +30,7 @@ Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 
 ### 2.1. Search Parameters ###
 
-{% include custom/moscow.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html#search)" %}
+{% include custom/search.parameters.html resource="MedicationOrder"     link="https://www.hl7.org/fhir/DSTU2/medicationorder.html#search" %}
 
 | Name    | Type   | Description    | Conformance        | Path |
 |---------|--------|----------------|--------------------|------|

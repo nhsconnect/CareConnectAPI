@@ -31,7 +31,7 @@ Fetches a bundle of all `Procedure` resources for the specified patient.
 
 ### 2.1. Search Parameters ###
 
-{% include custom/moscow.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html#search)" %}
+{% include custom/search.parameters.html resource="Procedure"     link="https://www.hl7.org/fhir/DSTU2/procedure.html#search" %}
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|

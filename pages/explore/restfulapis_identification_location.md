@@ -29,7 +29,7 @@ Fetches a bundle of all `Location` resources for the specified search criteria.
 
 ### 2.1. Search Parameters ###
 
-{% include custom/moscow.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html#search)" %}
+{% include custom/search.parameters.html resource="Location"     link="https://www.hl7.org/fhir/DSTU2/location.html#search" %}
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|

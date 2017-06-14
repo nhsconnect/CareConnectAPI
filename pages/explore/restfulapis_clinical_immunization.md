@@ -30,7 +30,7 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 
 ### 2.1. Search Parameters ###
 
-{% include custom/moscow.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html#search)" %}
+{% include custom/search.parameters.html resource="Immunization"     link="https://www.hl7.org/fhir/DSTU2/immunization.html#search" %}
 
 | Name | Type | Description | Conformance  | Post |
 |------|------|-------------|-------|------|

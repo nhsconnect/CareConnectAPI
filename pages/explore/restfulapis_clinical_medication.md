@@ -29,7 +29,7 @@ Search for all Medication resources for a patient. Fetches a bundle of all `Medi
 
 ### 2.1. Search Parameters ###
 
-{% include custom/moscow.html content="[Medication](https://www.hl7.org/fhir/DSTU2/medication.html#search)" %}
+{% include custom/search.parameters.html resource="Medication"     link="https://www.hl7.org/fhir/DSTU2/medication.html#search" %}
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|

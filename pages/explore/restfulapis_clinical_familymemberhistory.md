@@ -26,7 +26,7 @@ GET /FamilyMemberHistory?[searchParameters]</div>
 
 Fetches a bundle of all `FamilyMemberHistory` resources for the specified patient.
 
-{% include custom/moscow.html content="[FamilyMemberHistory](https://www.hl7.org/fhir/DSTU2/familymemberhistory.html#search)" %}
+{% include custom/search.parameters.html resource="FamilyMemberHistory"     link="https://www.hl7.org/fhir/DSTU2/familymemberhistory.html#search" %}
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|

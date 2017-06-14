@@ -30,7 +30,7 @@ Fetches a bundle of all `MedicationStatement` resources for the specified patien
 
 ### 2.1. Search Parameters ###
 
-{% include custom/moscow.html content="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search)" %}
+{% include custom/search.parameters.html resource="MedicationStatement"     link="https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search" %}
 
 | Name | Type | Description | Conformance  | Path |
 |------|------|-------------|-------|------|

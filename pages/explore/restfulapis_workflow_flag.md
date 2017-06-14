@@ -28,9 +28,8 @@ GET /Flag?[searchParameters]</div>
 
 Search for all flag (alert) resources for a patient. Fetches a bundle of all `Flag` resources for the specified patient.
 
-{% include custom/moscow.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
+{% include custom/search.parameters.html resource="Flag"     link="https://www.hl7.org/fhir/DSTU2/flag.html#search" %}
 
-Provider systems MAY implement the following search parameters (unless indicated with a SHALL):
 
 | Name | Type | Description | SHALL | Path |
 |------|------|-------------|-------|------|
