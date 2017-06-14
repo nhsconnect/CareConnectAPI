@@ -76,10 +76,10 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Immunization?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/Immunization?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Immunization/24956"/>
+        <fullUrl value="[baseUrl]/Immunization/24956"/>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
                 <id value="24956"/>
@@ -107,7 +107,7 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
                 <wasNotGiven value="false"/>
                 <reported value="false"/>
                 <performer>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <reference value="Practitioner/24967"/>
                     <display value="Dr Bhatia"/>
                 </performer>
                 <lotNumber value="63259874"/>

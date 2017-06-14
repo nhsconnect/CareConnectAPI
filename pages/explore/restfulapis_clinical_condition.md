@@ -80,10 +80,10 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Condition?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/Condition?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Condition/24954"/>
+        <fullUrl value="[baseUrl]/Condition/24954"/>
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
                 <id value="24954"/>
@@ -96,7 +96,7 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
                     <reference value="Patient/24966"/>
                 </patient>
                 <asserter>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/C5206458"/>
+                    <reference value="Practitioner/C5206458"/>
                 </asserter>
                 <dateRecorded value="2017-01-04"/>
                 <code>

@@ -69,10 +69,10 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/AllergyIntolerance?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/AllergyIntolerance?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/AllergyIntolerance/24953"/>
+        <fullUrl value="[baseUrl]/AllergyIntolerance/24953"/>
         <resource>
             <AllergyIntolerance xmlns="http://hl7.org/fhir">
                 <id value="24953"/>
@@ -83,7 +83,7 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
                 </meta>
                 <recordedDate value="2014-10-09T14:58:00+11:00"/>
                 <recorder>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <reference value="Practitioner/24967"/>
                 </recorder>
                 <patient>
                     <reference value="Patient/24966"/>

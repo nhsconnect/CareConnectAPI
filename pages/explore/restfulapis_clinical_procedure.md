@@ -78,10 +78,10 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Procedure?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/Procedure?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Procedure/24968"/>
+        <fullUrl value="[baseUrl]/Procedure/24968"/>
         <resource>
             <Procedure xmlns="http://hl7.org/fhir">
                 <id value="24968"/>
@@ -104,7 +104,7 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
                 </code>
                 <performer>
                     <actor>
-                        <reference value="https://sds.proxy.nhs.uk/Organization/Organization/RY8"/>
+                        <reference value="Organization/RY8"/>
                         <display value="Derbyshire Community Health Services NHS Foundation Trust"/>
                     </actor>
                 </performer>

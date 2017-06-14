@@ -70,10 +70,10 @@ Return all MedciationStatement resources for Patient with a NHS Number of 987654
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/MedicationStatement?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/MedicationStatement?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/MedicationStatement/24963"/>
+        <fullUrl value="[baseUrl]/MedicationStatement/24963"/>
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
                 <id value="24963"/>
@@ -98,7 +98,7 @@ Return all MedciationStatement resources for Patient with a NHS Number of 987654
                     <display value="Bernie Kanfeld"/>
                 </patient>
                 <informationSource>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8040738"/>
+                    <reference value="Practitioner/8040738"/>
                     <display value="Dr AD Jordan"/>
                 </informationSource>
                 <dateAsserted value="2017-05-29T00:00:00+01:00"/>

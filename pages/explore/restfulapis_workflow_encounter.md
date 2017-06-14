@@ -66,10 +66,10 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Encounter?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/Encounter?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Encounter/24957"/>
+        <fullUrl value="[baseUrl]/Encounter/24957"/>
         <resource>
             <Encounter xmlns="http://hl7.org/fhir">
                 <id value="24957"/>
@@ -92,7 +92,7 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
                 </patient>
                 <participant>
                     <individual>
-                        <reference value="https://sds.proxy.nhs.uk/Practitioner/C5206458"/>
+                        <reference value="Practitioner/5206458"/>
                         <display value="FF Nathani"/>
                     </individual>
                 </participant>
@@ -109,12 +109,12 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
                 </reason>
                 <location>
                     <location>
-                        <reference value="https://sds.proxy.nhs.uk/Organization/Location/RY8RK"/>
+                        <reference value="Location/RY8RK"/>
                         <display value="Long Eaton Health Clinic"/>
                     </location>
                 </location>
                 <serviceProvider>
-                    <reference value="https://sds.proxy.nhs.uk/Organization/Organization/RY8"/>
+                    <reference value="Organization/RY8"/>
                     <display value="Derbyshire Community Health Services NHS Foundation Trust"/>
                 </serviceProvider>
             </Encounter>

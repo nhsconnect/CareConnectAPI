@@ -77,10 +77,10 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/MedicationOrder?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/MedicationOrder?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/MedicationOrder/24961"/>
+        <fullUrl value="[baseUrl]/MedicationOrder/24961"/>
         <resource>
             <MedicationOrder xmlns="http://hl7.org/fhir">
                 <id value="24961"/>
@@ -105,7 +105,7 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
                     <display value="Bernie Kanfeld"/>
                 </patient>
                 <prescriber>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <reference value="Practitioner/24967"/>
                     <display value="Dr AA Bhatia"/>
                 </prescriber>
                 <note value="Please explain to Bernie how to use injector."/>

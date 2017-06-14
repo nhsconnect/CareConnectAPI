@@ -66,10 +66,10 @@ Return all Location resources with a Trust Site code of RTG08, the format of the
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Location?identifier=RTG08"/>
+        <url value="[baseUrl]/Location?identifier=RTG08"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Location/24959"/>
+        <fullUrl value="[baseUrl]/Location/24959"/>
         <resource>
             <Location xmlns="http://hl7.org/fhir">
                 <id value="24959"/>

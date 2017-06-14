@@ -71,10 +71,10 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Organization?identifier=C81010"/>
+        <url value="[baseUrl]/Organization?identifier=C81010"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Organization/24965"/>
+        <fullUrl value="[baseUrl]/Organization/24965"/>
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="24965"/>

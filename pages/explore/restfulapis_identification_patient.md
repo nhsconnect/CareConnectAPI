@@ -108,10 +108,10 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Patient?identifier=9876543210"/>
+        <url value="[baseUrl]/Patient?identifier=9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Patient/24966"/>
+        <fullUrl value="[baseUrl]/Patient/24966"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
                 <id value="24966"/>

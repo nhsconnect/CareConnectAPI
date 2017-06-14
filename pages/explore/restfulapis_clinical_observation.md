@@ -87,10 +87,10 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Observation?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/Observation?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Observation/24964"/>
+        <fullUrl value="[baseUrl]/Observation/24964"/>
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="24964"/>
@@ -99,10 +99,6 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
                     <lastUpdated value="2017-06-02T09:20:13.289+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Observation-1"/>
                 </meta>
-                <identifier>
-                    <system value="http://fhir.jorvik.nhs.uk/EPR/Observation"/>
-                    <value value="878281"/>
-                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>
@@ -116,7 +112,7 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
                 </subject>
                 <effectiveDateTime value="2012-09-17"/>
                 <performer>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <reference value="Practitioner/24967"/>
                 </performer>
             </Observation>
         </resource>

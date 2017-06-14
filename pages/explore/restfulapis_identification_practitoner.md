@@ -78,10 +78,10 @@ Return all Practitioner resources with a GP Code of G8133438, the format of the 
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Practitioner?identifier=G8133438"/>
+        <url value="[baseUrl]/Practitioner?identifier=G8133438"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Practitioner/24967"/>
+        <fullUrl value="[baseUrl]/Practitioner/24967"/>
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="24967"/>
@@ -115,7 +115,7 @@ Return all Practitioner resources with a GP Code of G8133438, the format of the 
                 <gender value="male"/>
                 <practitionerRole>
                     <managingOrganization>
-                        <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
+                        <reference value="Organization/24965"/>
                         <display value="The Moir Medcial Centre"/>
                     </managingOrganization>
                     <role>
