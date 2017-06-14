@@ -16,14 +16,14 @@ summary: An action that is or was performed on a patient. This can be a physical
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Procedure/[id]</div>
+GET [baseUrl]/Procedure/[id]</div>
 
 {% include custom/read.response.html resource="Procedure" content="" %}
 
 ## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Procedure?[searchParameters]</div>
+GET [baseUrl]/Procedure?[searchParameters]</div>
 
 Fetches a bundle of all `Procedure` resources for the specified patient.
 
@@ -62,7 +62,7 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Procedure" command="curl -X GET  'http://[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Procedure" command="curl -X GET  '[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 {% include custom/search.response.headers.html resource="Procedure" %}
 

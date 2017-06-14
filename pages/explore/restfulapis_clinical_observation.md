@@ -16,14 +16,14 @@ summary: Measurements and simple assertions made about a patient, device or othe
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Observation/[id]</div>
+GET [baseUrl]/Observation/[id]</div>
 
 {% include custom/read.response.html resource="Observation" content="" %}
 
 ## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Observation?[searchParameters]</div>
+GET [baseUrl]/Observation?[searchParameters]</div>
 
 Fetches a bundle of all `Observation` resources for the specified patient.
 
@@ -71,7 +71,7 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Observation" command="curl -X GET  'http://[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Observation" command="curl -X GET  '[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 {% include custom/search.response.headers.html resource="Observation" %}
 

@@ -15,14 +15,14 @@ summary: Describes the event of a patient being administered a vaccination or a 
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Immunization/[id]</div>
+GET [baseUrl]/Immunization/[id]</div>
 
 {% include custom/read.response.html resource="Immunization" content="" %}
 
 ## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Immunization?[searchParameters]</div>
+GET [baseUrl]/Immunization?[searchParameters]</div>
 
 Search for all immunization resources for a patient. Fetches a bundle of all `Immunization` resources for the specified patient.
 
@@ -60,7 +60,7 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Immunization" command="curl -X GET  'http://[baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Immunization" command="curl -X GET  '[baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 {% include custom/search.response.headers.html resource="Immunization" %}
 

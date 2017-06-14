@@ -15,14 +15,14 @@ summary: An interaction between a patient and healthcare provider(s) for the pur
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Encounter/[id]</div>
+GET [baseUrl]/Encounter/[id]</div>
 
 {% include custom/read.response.html resource="Encounter" content="" %}
 
 ## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Encounter?[searchParameters]</div>
+GET [baseUrl]/Encounter?[searchParameters]</div>
 
 Fetches a bundle of all `Encounter` resources for the specified patient.
 
@@ -50,7 +50,7 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
 
 #### cURL ####
 
-{% include custom/embedcurl.html title="Search Encounter" command="curl -X GET  'http://[baseUrl]/Encounter?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Encounter" command="curl -X GET  '[baseUrl]/Encounter?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 {% include custom/search.response.headers.html resource="Encounter" %}
 

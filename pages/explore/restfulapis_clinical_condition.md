@@ -16,14 +16,14 @@ summary: Use to record detailed information about conditions, problems or diagno
 ## 1. Read Operation ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Condition/[id]</div>
+GET [baseUrl]/Condition/[id]</div>
 
 {% include custom/read.response.html resource="Condition" content="" %}
 
 ## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Condition?[searchParameters]</div>
+GET [baseUrl]/Condition?[searchParameters]</div>
 
 Search for all problems and health concerns for a patient. Fetches a bundle of all `Condition` resources for the specified patient.
 
@@ -64,7 +64,7 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Condition" command="curl -X GET  'http://[baseUrl]/Condition?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Condition" command="curl -X GET  '[baseUrl]/Condition?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 {% include custom/search.response.headers.html resource="Condition" %}
 

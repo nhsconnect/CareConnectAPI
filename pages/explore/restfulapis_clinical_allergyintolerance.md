@@ -15,14 +15,14 @@ summary: Risk of harmful or undesirable, physiological response which is unique 
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /AllergyIntollerence/[id]</div>
+GET [baseUrl]/AllergyIntollerence/[id]</div>
 
 {% include custom/read.response.html resource="AllergyIntolerance" content="" %}
 
 ## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /AllergyIntollerence?[searchParameters]</div>
+GET [baseUrl]/AllergyIntollerence?[searchParameters]</div>
 
 Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolerance` resources for the specified patient.
 
@@ -53,7 +53,7 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search AllergyIntolerance" command="curl -X GET  'http://[baseUrl]/AllergyIntolerance?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search AllergyIntolerance" command="curl -X GET  '[baseUrl]/AllergyIntolerance?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 {% include custom/search.response.headers.html resource="AllergyIntolerance" %}
 

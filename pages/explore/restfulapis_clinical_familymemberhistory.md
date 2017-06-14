@@ -15,14 +15,14 @@ summary: Significant health events and conditions for a person related to the pa
 ## Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /FamilyMemberHistory/[id]</div>
+GET [baseUrl]/FamilyMemberHistory/[id]</div>
 
 Return a single `FamilyMemberHistory` for the specified id
 
 ## Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /FamilyMemberHistory?[searchParameters]</div>
+GET [baseUrl]/FamilyMemberHistory?[searchParameters]</div>
 
 Fetches a bundle of all `FamilyMemberHistory` resources for the specified patient.
 

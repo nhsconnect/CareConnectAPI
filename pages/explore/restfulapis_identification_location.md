@@ -15,14 +15,14 @@ summary: Details and position information for a physical place where services ar
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Location/[id]</div>
+GET [baseUrl]/Location/[id]</div>
 
 {% include custom/read.response.html resource="Location" content="" %}
 
 ## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Location?[searchParameters]</div>
+GET [baseUrl]/Location?[searchParameters]</div>
 Fetches a bundle of all `Location` resources for the specified search criteria.
 
 {% include custom/search.header.html resource="Location" %}
@@ -50,7 +50,7 @@ Return all Location resources with a Trust Site code of RTG08, the format of the
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Location" command="curl -X GET  'http://[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Location" command="curl -X GET  '[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08&_format=xml'" %}
 
 {% include custom/search.response.headers.html resource="Location" %}
 

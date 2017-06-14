@@ -18,14 +18,14 @@ summary: Prospective warnings of potential medication issues when providing care
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Flag/[id]</div>
+GET [baseUrl]/Flag/[id]</div>
 
 {% include custom/read.response.html resource="Flag" content="" %}
 
 ## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Flag?[searchparameters]</div>
+GET [baseUrl]/Flag?[searchparameters]</div>
 Search for all flag resources for a patient. Fetches a bundle of all `Flag` resources for the specified patient.
 
 {% include custom/search.header.html resource="Flag" %}

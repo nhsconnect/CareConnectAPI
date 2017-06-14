@@ -20,7 +20,7 @@ summary: Demographics and other administrative information about an individual r
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Patient/[id]</div>
+GET [baseUrl]/Patient/[id]</div>
 
 {% include custom/read.response.html resource="Patient" content=" (not the NHS Number)" %}
 
@@ -28,7 +28,7 @@ GET /Patient/[id]</div>
 ## 2. Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Patient?[searchParameters]</div>
+GET [baseUrl]/Patient?[searchParameters]</div>
 Fetches a bundle of all `Patient` resources for the specified patient or search criteria.
 
 {% include custom/search.header.html resource="Patient" %}
@@ -92,7 +92,7 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Patient" command="curl -X GET  'http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET  '[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 {% include custom/search.response.headers.html resource="Patient"  %}
 

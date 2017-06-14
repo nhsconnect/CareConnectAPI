@@ -15,14 +15,14 @@ summary: A formally or informally recognized grouping of people or organizations
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Organization/[id]</div>
+GET [baseUrl]/Organization/[id]</div>
 
 {% include custom/read.response.html resource="Organization" content="" %}
 
 ## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Organization?[searchParameters]</div>
+GET [baseUrl]/Organization?[searchParameters]</div>
 
 Fetches a bundle of all `Organization` resources for the specified search criteria.
 
@@ -55,7 +55,7 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Organization" command="curl -X GET  'http://[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Organization" command="curl -X GET  '[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010&_format=xml'" %}
 
 {% include custom/search.response.headers.html resource="Organization" %}
 

@@ -15,14 +15,14 @@ summary: An order for both supply of the medication and the instructions for adm
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /MedicationOrder/[id]</div>
+GET [baseUrl]/MedicationOrder/[id]</div>
 
 {% include custom/read.response.html resource="MedicationOrder" content="" %}
 
 ## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /MedicationOrder?[searchParameters]]</div>
+GET [baseUrl]/MedicationOrder?[searchParameters]]</div>
 
 Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 
@@ -61,7 +61,7 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search MedicationOrder" command="curl -X GET  'http://[baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search MedicationOrder" command="curl -X GET  '[baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 {% include custom/search.response.headers.html resource="MedicationOrder" %}
 

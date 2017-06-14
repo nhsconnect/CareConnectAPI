@@ -15,14 +15,14 @@ summary: This resource is primarily used for the identification and definition o
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Medication/[id]</div>
+GET [baseUrl]/Medication/[id]</div>
 
 {% include custom/read.response.html resource="Medication" content="" %}
 
 ## 2. Search ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /Medication?[searchparameters]</div>
+GET [baseUrl]/Medication?[searchparameters]</div>
 Search for all Medication resources for a patient. Fetches a bundle of all `Medication` resources for the specified patient.
 
 {% include custom/search.header.html resource="Medication" %}
@@ -47,7 +47,7 @@ Return Medication resource with a logical id of 48496. Replace 'baseUrl' with th
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Get Medication" command="curl -X GET  'http://[baseUrl]/Medication/48496'" %}
+{% include custom/embedcurl.html title="Get Medication" command="curl -X GET  '[baseUrl]/Medication/48496'" %}
 
 {% include custom/search.response.headers.html resource="Immunization" %}
 
