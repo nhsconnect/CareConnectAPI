@@ -22,7 +22,7 @@ summary: Demographics and other administrative information about an individual r
 <div markdown="span" class="alert alert-success" role="alert">
 GET [baseUrl]/Patient/[id]</div>
 
-{% include custom/read.response.html resource="Patient" content=" (not the NHS Number)" %}
+{% include custom/read.response.html resource="Patient" content="" %}
 
 
 ## 2. Search Parameters ##
