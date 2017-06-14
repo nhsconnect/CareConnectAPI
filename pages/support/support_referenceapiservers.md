@@ -35,5 +35,10 @@ As each reference is described, the following features will be highlighted:
 <tr><td>Operations</td><td>Yes</td><td>No</td><td>Yes</td></tr>
 </table>
 
+|---
 |table|test|
+|-|-|
+|Row 1||
+|Row 2||
 |||
+|---
