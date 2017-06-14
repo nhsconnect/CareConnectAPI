@@ -13,11 +13,11 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 ## [ClinFHIR](http://clinfhir.com/)
 
 <div style="display:flex;flex-wrap:wrap">
-  <div style="flex:3 1 60%;padding 0 0 1em 0;">
+  <div style="flex:3 1 60%;padding:0 0 1em 0;">
     <p>Developed by David Hay as a result of the HL7 FHIR workshops, ClinFHIR is aimed at helping Clinicians understand HL7 FHIR, and contribute to its development, especially in respect to profiling.</p>
     <p>The tools offered within ClinFHIR include a Patient Viewer, Scenario Builder, Logical Modeller, CodeSystem builder, Extension Definition builder and a Query Tool. The tools make use of three predefined servers and they can be extended to use other DSTU-2 or STU3 servers.</p>
   </div>
-  <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
+  <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
     <img src="images/support/clinfhirlauncher.png" alt="ClinFHIR Launcher Screenshot" style="width:100%; max-width:100%; float:right; margin-left:3%; margin-bottom:3%;">
   </div>
 </div>
@@ -25,10 +25,10 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
 ### [ClinFHIR CodeSystem Editor](http://clinfhir.com/codeSystem.html)
 
 <div style="display:flex;flex-wrap:wrap">
-  <div style="flex:3 1 60%;padding 0 0 1em 0;">
+  <div style="flex:3 1 60%;padding:0 0 1em 0;">
     <p>The CodeSystem defines the set of possible values for a resource element. The actual 'binding' between CodeSystem and element is done by the ValueSet. This component allows you to build (and edit) a CodeSystem, and optionally builds the ValueSet as well. Once created, the created extensions are stored on the conformance server.</p>
   </div>
-  <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
+  <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
     <img  src="images/support/clinfhircodesystemeditor.png" alt="ClinFHIR CodeSystem Editor Screenshot"  style="width:100%; max-width:100%; float:right; margin-left:3%; margin-bottom:3%;">
   </div>
 </div>
@@ -40,17 +40,24 @@ The ClinFHIR extension builder is designed to view and build extension definitio
 ### [ClinFHIR Logical Modeller](http://clinfhir.com/logicalModeller.html)
 
 <div style="display:flex;flex-wrap:wrap">
-  <div style="flex:3 1 60%;padding 0 0 1em 0;">
+  <div style="flex:3 1 60%;padding:0 0 1em 0;">
     <p>The Logical modeller allows the creation of a model that represents a particular interoperability requirement in a format that is easy to use. It uses FHIR data types, and can be based on an existing resource type or completely 'ad hoc'. It is intended to act as a 'bridge' between Modeller and User, and can act as the basis for the generation of the profiling components required by FHIR.</p>
   </div>
-  <div style="flex:1 6 40%;padding 0 1em 0 1em;min-width:15em;">
+  <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
     <img src="images/support/clinfhirlogicalmodeller.png" alt="ClinFHIR Logical Modeller Screenshot" style="width:100%; max-width:100%; float:right; margin-left:3%; margin-bottom:3%;">
   </div>
 </div>
 <br><br>
 ### [ClinFHIR Query](http://clinfhir.com/query.html)
 
-<img src="images/support/clinfhirquery.png" alt="ClinFHIR Query Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">ClinFHIR Query allows ad hoc queries to be sent to a FHIR server. This tool duplicates the key feature of tools like Postman and the FHIR Plugin for Notepad++ however it is dedicated to FHIR (unlike Postman which is a generic tool) and it’s far simpler to use than the Notepad++ plugin.
+<div style="display:flex;flex-wrap:wrap">
+  <div style="flex:3 1 60%;padding:0 0 1em 0;">
+    <p>ClinFHIR Query allows ad hoc queries to be sent to a FHIR server. This tool duplicates the key feature of tools like Postman and the FHIR Plugin for Notepad++ however it is dedicated to FHIR (unlike Postman which is a generic tool) and it’s far simpler to use than the Notepad++ plugin.</p>
+  </div>
+  <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
+    <img src="images/support/clinfhirquery.png" alt="ClinFHIR Query Screenshot" style="width:100%; max-width:100%; float:right; margin-left:3%; margin-bottom:3%;">
+  </div>
+</div>
 <br><br>
 ### [ClinFHIR Scenario Builder](http://clinfhir.com/builder.html)
 
