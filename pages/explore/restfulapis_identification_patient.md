@@ -39,7 +39,7 @@ Fetches a bundle of all `Patient` resources for the specified patient or search 
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Practitioner.address.postalCode |
+| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Patient.address.postalCode |
 | `birthdate` | `date` | The patient's date of birth | SHALL | Patient.birthDate |
 | `email` | `token` | A value in an email contact | MAY | Patient.telecom <br>(system=email) |
 | `family` | `string` | A portion of the family name of the patient | SHALL | Patient.name.family |
@@ -80,7 +80,7 @@ Systems SHALL support the following search combinations:
 
 {% include custom/search.nopat.string.html para="2.1.8." resource="Patient" content="name"  example="bernie%20kanfeld" text1="name" text2="Bernie Kanfeld" %}
 
-{% include custom/search.nopat.string.html para="2.1.9." resource="Patient" content="phone"  example="07999 123456" text1="phone number" text2="07999 123456" %}
+{% include custom/search.nopat.string.html para="2.1.9." resource="Patient" content="phone"  example="07999123456" text1="phone number" text2="07999 123456" %}
 
 {% include custom/search.response.html resource="Patient"  %}
 
@@ -141,10 +141,6 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
                     </extension>
                     <system value="https://fhir.nhs.uk/Id/nhs-number"/>
                     <value value="9876543210"/>
-                </identifier>
-                <identifier>
-                    <system value="https://fhir.jorvik.nhs.uk/PAS/Patient"/>
-                    <value value="123345"/>
                 </identifier>
                 <active value="true"/>
                 <name>
