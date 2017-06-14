@@ -16,7 +16,7 @@ Connecting Care is a local electronic patient record that allows health and soci
 
 ## Case Overview ##
 
-The pharmacists would like to retrieve medications history of the patient to prepare a list or reconciled medications. They want to know the patient's medications journey. While the initial scenario seemed to be around medication reconcilliation, what becomes clear is that it's really around the creation of a consolidated view of medication.
+The pharmacists would like to retrieve medications history of the patient to prepare a list or reconciled medications. They want to know the patient's medications journey. While the initial scenario seemed to be around medication reconciliation, what becomes clear is that it's really around the creation of a consolidated view of medication.
 
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC_POC_Case_Overview.svg" alt="The patient's medication journey demonstrating questions than are asked during medication reconciliation." title="The patient's medication journey demonstrating questions than are asked during medication reconciliation." style="width:90%"></p>
 
@@ -38,10 +38,10 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 
 <table style="width:100%;max-width:100%"><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr>
 <tr><td colspan="2">In Scope</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retreive a patient's medications using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific system so I can build an accurate list of reconciled medications.</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to view a combined list of the patient's medications recorded across all care settings so that I can see all of a patient's medications in one place to facilitate a quick overview of the patient's medication history or to facilitate meds reconsiliation.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to view a combined list of the patient's medications recorded across all care settings so that I can see all of a patient's medications in one place to facilitate a quick overview of the patient's medication history or to facilitate meds reconciliation.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve all medications from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know on which system a medication was prescribed so that I can make informed judgements about the reason the medication was originally prescribed.</td></tr>
 <tr><td colspan="2">Out of Scope <i>(Behaviour that is not addressed within the API directly.)</i></td></tr>
@@ -84,12 +84,12 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 
 ## API Signatures ##
 
-As a Pharmacist (Hospital Services) I want to retreive a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.
+As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.
 ~~~
 GET/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 ~~~
 
-As a Pharmacist (Hospital Services) I want to retreive a patient's medications using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.
+As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.
 ~~~
 GET/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
 ~~~
