@@ -19,7 +19,7 @@ As each reference is described, the following features will be highlighted:
 * <b>Value Sets</b> are the associated values that relate to defined Resources.
 * <b>Operations</b> such as predefined searches are described within the reference server.
 
-<br><br>
+<br>
 <table style="width:100%;max-width:100%;table-layout:fixed;text-align:center;vertical-align:middle;">
 <thead>
 <tr><th></th><th style="text-align:center">HL7 Core Resources</th><th style="text-align:center">INTEROPen Care Connect Profiles</th><th style="text-align:center">NHS Digital Profiles</th></tr>
