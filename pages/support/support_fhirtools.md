@@ -40,9 +40,9 @@ Patient information is on the Data Server. Profiles on the Conformance server. V
 <br><br>
 ### [ClinFHIR ValueSet Editor](http://clinfhir.com/valuesetCreator.html)
 
-<div style="display:flex">
+<div style="display:flex;flex-wrap:wrap">
   <div>A tool to support the creation of ValueSet’s. Predominantly works with SNOMED-CT.</div>
-  <div style="align-self:flex-start;width:40%;margin-left:3%;margin-bottom:3%;">
+  <div style="align-self:flex-start;width:40%;min-width:5em;margin-left:3%;margin-bottom:3%;">
     <img style="max-width:100%;width:100%" src="images/support/clinfhirvalueseteditor.png" alt="ClinFHIR Valueset Editor Screenshot">
   </div>
 </div>
