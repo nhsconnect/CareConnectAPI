@@ -17,7 +17,7 @@ As each reference is described, the following features will be highlighted:
 * <b>XML</b> indicates that a Resource’s structure can be displayed in an XML format.
 * <b>JSON</b> indicates that a Resource’s structure can be displayed in a JSON format.
 * <b>Value Sets</b> are the associated values that relate to defined Resources.
-* <b>Operations</b> such as predefined searches are described within the reference server.
+* <b>Operations</b> such as predefined searches are described within the reference.
 
 <br>
 <table style="width:100%;max-width:100%;table-layout:fixed;text-align:center;vertical-align:middle;">
