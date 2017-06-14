@@ -142,24 +142,25 @@ This tool is under development but it is intended to offer the following tools f
 The tool is strictly targeted at a technical audience because it requires importing into a ‘Project Object Model’ or POM.
 <br><br>
 ## [Postman](https://www.getpostman.com/)
+
 <div style="display:flex;flex-wrap:wrap">
   <div style="flex:3 1 60%;padding:0 0 1em 0;">
   <p>Postman is a tool to support the creation of APIs; available on MacOS, Windows, Linux or as a plug-in for the Chrome browser. While the basic version of Postman is free, there are ‘professional’ and ‘enterprise’ versions which come at a cost.</p>
   <p>Postman provides an easy interface to interact with APIs over HTTP and provides the following features:</p>
   <p><em>Free Version</em></p>
   <ul>
-    <li>Downloadable Chrome, Mac, Linux & Windows App
-    <li>Saved History of API requests
+    <li>Downloadable Chrome, Mac, Linux & Windows App</li>
+    <li>Saved History of API requests</li>
   </ul>
   <p><em>Professional</em></p>
   <ul>
-    <li>Unlimited Collections, Environments, Tests and Sharing</ul>
-    <li>Team Library of Collections</ul>
-    <li>Extensive team collaboration tools</ul>
-    <li>Extended documentation & monitoring features</ul>
-    <li>Customisable API Documentation</ul>
-    <li>API Monitoring for uptime, performance & accuracy</ul>
-    <li>Multi-timezone email support</ul>
+    <li>Unlimited Collections, Environments, Tests and Sharing</li>
+    <li>Team Library of Collections</li>
+    <li>Extensive team collaboration tools</li>
+    <li>Extended documentation & monitoring features</li>
+    <li>Customisable API Documentation</li>
+    <li>API Monitoring for uptime, performance & accuracy</li>
+    <li>Multi-timezone email support</li>
   </ul>
   <p><em>Enterprise Version (Beta)</em></p>
   <ul>
@@ -177,14 +178,21 @@ The tool is strictly targeted at a technical audience because it requires import
 <br><br>
 ## [Simplifier.net](https://simplifier.net/)
 
-<img src="images/support/simplifier.png" alt="Simplifier Screenshot" style="width:40%; float:right; margin-left:3%; margin-bottom:3%;">Simplifier.net is a FHIR registry, a website for managing, sharing and finding FHIR profiles and Implementation Guides.
-
-The Simplifier.net FHIR registry supports the following functions:
-* Uploading profiles
-* Downloading profiles
-* Finding profiles
-* Viewing FHIR Conformance Resources
-* Simplifier.net also offers functionality for management of FHIR Resources and collaboration within teams.
-
-Simplifier.net distinguishes between free (personal) plans and paid plans. Anyone can find and download Resources in this Registry, with or without an account. Creating Resources requires an account. Paid plans are targeted at professional users and organisations.
-The registry contains both projects and resources, and a quick scan can reveal hundreds of profiles that have been defined although they do range quite significantly in quality.
+<div style="display:flex;flex-wrap:wrap">
+  <div style="flex:3 1 60%;padding:0 0 1em 0;">
+    <p>Simplifier.net is a FHIR registry, a website for managing, sharing and finding FHIR profiles and Implementation Guides.</p>
+    <p>The Simplifier.net FHIR registry supports the following functions:</p>
+    <ul>
+      <li>Uploading profiles</li>
+      <li>Downloading profiles</li>
+      <li>Finding profiles</li>
+      <li>Viewing FHIR Conformance Resources</li>
+      <li>Simplifier.net also offers functionality for management of FHIR Resources and collaboration within teams.</li>
+    </ul>
+    <p>Simplifier.net distinguishes between free (personal) plans and paid plans. Anyone can find and download Resources in this Registry, with or without an account. Creating Resources requires an account. Paid plans are targeted at professional users and organisations.</p>
+    <p>The registry contains both projects and resources, and a quick scan can reveal hundreds of profiles that have been defined although they do range quite significantly in quality.</p>
+</div>
+  <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
+    <img style="max-width:100%;width:100%" src="images/support/simplifier.png" alt="Simplifier Screenshot">
+  </div>
+</div>
