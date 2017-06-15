@@ -28,6 +28,7 @@
 		.st18 {fill:#feffff}
 		.st19 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 		.s_link:hover {
+			    transition: 1s;
 			    fill: #4F81BD;
 			    fill-opacity: 0.2;
 		}
