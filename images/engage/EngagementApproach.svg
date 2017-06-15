@@ -31,8 +31,8 @@
 			    transition: all .4s ease-in-out;
 			    fill: #4F81BD;
 			    fill-opacity: 0.2;
-			    transform-origin: centre;
-			    transform: scale(1.01);
+			    transform-origin: 50% 50%;
+			    transform: scale(1.1);
 		}
 	]]>
 	</style>
