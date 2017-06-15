@@ -77,20 +77,11 @@ Post a OrderResponse to conform the completion of the Read Laboratory task.
             <profile value="https://fhir-test.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
          </meta>
          <identifier>
-            <system value="https://fhir.nhs.uk/Id/nhs-number"/>
-            <value value="9876543210"/>
-         </identifier>
-         <identifier>
-            <system value="https://fhir.uhs.nhs.uk/CRIS/Patient/"/>
-            <value value="ABC123"/>
-         </identifier>
-         <identifier>
             <system value="https://fhir.uhs.nhs.uk/PAS/Patient/"/>
             <value value="1234DEF"/>
          </identifier>
          <name>
             <family value="Kanfeld"/>
-            <given value="Bernie"/>
          </name>
          <gender value="female"/>
          <birthDate value="1998-03-19"/>
@@ -106,12 +97,15 @@ Post a OrderResponse to conform the completion of the Read Laboratory task.
             <system value="https://fhir.nhs.uk/Id/sds-user-id"/>
             <value value="123455"/>
          </identifier>
+         <name>
+            <family value="Example"/>
+         </name>
       </Practitioner>
    </contained>
    <request>
       <reference value="#order"/>
    </request>
-   <date value="2017-06-15T14:21:41+01:00"/>
+   <date value="2017-06-15T14:57:54+01:00"/>
    <who>
       <reference value="#prac"/>
    </who>
