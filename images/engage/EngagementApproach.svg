@@ -28,14 +28,38 @@
 		.st18 {fill:#feffff}
 		.st19 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 		.s_link:hover {
+		    -moz-transition: all .2s ease-in-out;
+		    -ms-transition: all .2s ease-in-out;
+		    -o-transition: all .2s ease-in-out;
+		    -webkit-transition: all .2s ease-in-out;
 		    transition: all .2s ease-in-out;
-		    transform-origin: 50% 50%;
+		    -moz-transform-origin: 50% 50%;
+		    -ms-transform-origin: 50% 50%;
+		    -o-transform-origin: 50% 50%;
+		    -webkit-transform-origin: 50% 50%;
+		    -moz-transform-origin: 50% 50%;
+		    -ms-transform: scale(1.2);
+		    -transform: scale(1.2);
+		    -o-transform: scale(1.2);
+		    -webkit-transform: scale(1.2);
 		    transform: scale(1.2);
 		}
 		.s_link:active {
-			transition: all 0s;
-			transform-origin: 50% 50%;
-			transform: scale(0.9);			
+		    -moz-transition: all 0;
+		    -ms-transition: all 0;
+		    -o-transition: all 0;
+		    -webkit-transition: all 0;
+		    transition: all 0;
+		    -moz-transform-origin: 50% 50%;
+		    -ms-transform-origin: 50% 50%;
+		    -o-transform-origin: 50% 50%;
+		    -webkit-transform-origin: 50% 50%;
+		    -moz-transform-origin: 50% 50%;
+		    -ms-transform: scale(0.9);
+		    -transform: scale(0.9);
+		    -o-transform: scale(0.9);
+		    -webkit-transform: scale(0.9);
+		    transform: scale(0.9);
 		}
 	]]>
 	</style>
