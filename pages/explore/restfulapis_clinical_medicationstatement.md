@@ -1,7 +1,7 @@
 ---
 title: Clinical | Medication Statement
 keywords: usecase, clinical
-tags: [fhir, rest, clinical, medication]
+tags: [fhir, rest, clinical, medication,development]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationstatement.html
 summary: A record of a medication that is being consumed by a patient. A MedicationStatement may indicate that the patient may be taking the medication now, or has taken the medication in the past or will be taking the medication in the future.

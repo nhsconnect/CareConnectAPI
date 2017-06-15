@@ -1,7 +1,7 @@
 ---
 title: Workflow | Encounter
 keywords: usecase, encounter
-tags: [rest, fhir, workflow]
+tags: [rest, fhir, workflow,development]
 sidebar: foundations_sidebar
 permalink: restfulapis_workflow_encounter.html
 summary: An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
