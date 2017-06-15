@@ -40,16 +40,14 @@
 
 		.s_link:hover {
 		    transform-origin: 50% 50%;
-		    animation: linkhover 0.2s alternate infinite;
+		    animation: linkhover 0.2s;
 		}
-
-		@-moz-document url-prefix() {.s_link:hover {transform: scale(1)}}
+		/*@-moz-document url-prefix() {.s_link:hover {transform: scale(1)}}*/
 		.s_link:active {
 		    transform-origin: 50% 50%;
-		    animation: linkpress 0s alternate infinite;
+		    animation: linkpress 0s;
 		}
-
-		@-moz-document url-prefix() {.s_link:hover {transform: none}}
+		/*@-moz-document url-prefix() {.s_link:hover {transform: none}}*/
 	]]>
 	</style>
 
