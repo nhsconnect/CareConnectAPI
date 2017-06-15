@@ -29,15 +29,11 @@
 		.st19 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 		.s_link:hover {
 		    transition: all .2s ease-in-out;
-		    /*fill: #4F81BD;*/
-		    /*fill-opacity: 0.2;*/
 		    transform-origin: 50% 50%;
 		    transform: scale(1);
-		    box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);
 		}
 		.s_link:active {
 			transition: all 0s;
-			fill: #ff9300 !important;
 			transform-origin: 50% 50%;
 			transform: scale(0.9);			
 		}
