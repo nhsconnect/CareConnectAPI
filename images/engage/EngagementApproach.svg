@@ -41,13 +41,13 @@
 		.s_link:hover {
 		    	transform-origin: 50% 50%;
 			animation-fill-mode: forwards;
-			animation: linkhover 0.2s;
+			animation: linkhover 0.2s 1;
 		}
 		/*@-moz-document url-prefix() {.s_link:hover {transform: scale(1)}}*/
 		.s_link:active {
 		    	transform-origin: 50% 50%;
 			animation-fill-mode: forwards;
-		    	animation: linkpress 0s;
+		    	animation: linkpress 0s 1;
 		}
 		/*@-moz-document url-prefix() {.s_link:hover {transform: none}}*/
 	]]>
