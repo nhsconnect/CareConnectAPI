@@ -27,16 +27,23 @@
 		.st17 {stroke:#000c9d;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
 		.st18 {fill:#feffff}
 		.st19 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+		@keyframes linkhover {
+			from {transform:scale(1);}
+			to (transform:scale(1.2);}
+		}
+		@keyframe linkpress {
+			from {transform:scale(1.2);}
+			to {transform:scale(0.9);}
+		}
+
 		.s_link:hover {
-		    transition: all .2s ease-in-out;
 		    transform-origin: 50% 50%;
-		    transform: scale(1.2);
+		    animation: linkhover 0.2s alternate infinite;
 		}
 		@-moz-document url-prefix() {.s_link:hover {transform: scale(1)}}
 		.s_link:active {
-		    transition: all 0;
 		    transform-origin: 50% 50%;
-		    transform: scale(0.9);
+		    animation: linkpress 0s alternate infinite;
 		}
 		@-moz-document url-prefix() {.s_link:hover {transform: none}}
 	]]>
