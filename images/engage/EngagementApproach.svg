@@ -33,7 +33,7 @@
 			to {transform:scale(1.2);}
 		}
 
-		@keyframe linkpress {
+		@keyframes linkpress {
 			from {transform:scale(1.2);}
 			to {transform:scale(0.9);}
 		}
