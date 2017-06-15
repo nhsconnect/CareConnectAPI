@@ -8,9 +8,7 @@ summary: A formally or informally recognized grouping of people or organizations
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Organization" page="CareConnect-Organization-1" %}
-
-{% include custom/fhir.resource.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html)" %}
+{% include custom/fhir.reference.html resource="Organization" page="CareConnect-Organization-1" fhirlink="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 

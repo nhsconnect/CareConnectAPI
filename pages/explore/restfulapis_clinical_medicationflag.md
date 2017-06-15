@@ -8,9 +8,8 @@ summary: Prospective warnings of potential medication issues when providing care
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Medication Flag" page="CareConnect-Medication-Flag-1" %}
+{% include custom/fhir.reference.html resource="Medication Flag" page="CareConnect-Medication-Flag-1" fhirlink="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
-{% include custom/fhir.resource.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html)" %}
 
 
 {% include note.html content="The API for Medication Flag is the same as Flag" %}

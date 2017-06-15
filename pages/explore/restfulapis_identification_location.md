@@ -8,9 +8,7 @@ summary: Details and position information for a physical place where services ar
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Location" page="CareConnect-Location-1" %}
-
-{% include custom/fhir.resource.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html)" %}
+{% include custom/fhir.reference.html resource="Location" page="CareConnect-Location-1" fhirlink="[Location](https://www.hl7.org/fhir/DSTU2/location.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 

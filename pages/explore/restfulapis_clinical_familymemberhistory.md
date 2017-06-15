@@ -8,9 +8,7 @@ summary: Significant health events and conditions for a person related to the pa
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Family Member History" page="CareConnect-FamilyMemberHistory-1" %}
-
-{% include custom/fhir.resource.html content="[FamilyMemberHistory](https://www.hl7.org/fhir/DSTU2/familymemberhistory.html)" %}
+{% include custom/fhir.reference.html resource="FamilyMemberHistory" page="CareConnect-FamilyMemberHistory-1" fhirlink="[FamilyMemberHistory](https://www.hl7.org/fhir/DSTU2/familymemberhistory.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## Read ##
 

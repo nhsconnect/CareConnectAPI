@@ -9,9 +9,8 @@ summary: A response to an order.
 
 {% include custom/search.warnbanner.html %}
 
-## 0. Reference ##
+{% include custom/fhir.referencemin.html resource="" page="" fhirlink="[OrderResponse](https://hl7.org/fhir/DSTU2/orderresponse.html)" content="User Stories" userlink="" %}
 
-{% include custom/fhir.resource.html content="[OrderResponse](https://hl7.org/fhir/DSTU2/orderresponse.html)" %}
 
 ## 1. Read ##
 

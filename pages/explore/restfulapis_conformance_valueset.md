@@ -9,9 +9,8 @@ summary: A value set specifies a set of codes drawn from one or more code system
 
 {% include custom/search.warnbanner.html %}
 
-## 0. References ##
+{% include custom/fhir.referencemin.html resource="" page="" fhirlink="[ValueSet](http://www.hl7.org/fhir/dstu2/valueset.html)" content="User Stories" userlink="" %}
 
-{% include custom/fhir.resource.html content="[ValueSet](http://www.hl7.org/fhir/dstu2/valueset.html)" %}
 
 ## 1. Read ##
 

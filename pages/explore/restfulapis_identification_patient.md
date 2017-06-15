@@ -9,13 +9,7 @@ summary: Demographics and other administrative information about an individual r
 
 {% include custom/search.warnbanner.html %}
 
-## 0. References ##
-
-{% include custom/profile.html content="Patient" page="CareConnect-Patient-1" %}
-
-{% include custom/fhir.resource.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html)" %}
-
-{% include custom/apicontext.userstories.html content="User Stories" page="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Patient" page="CareConnect-Patient-1" fhirlink="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 

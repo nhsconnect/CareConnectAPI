@@ -9,9 +9,8 @@ summary: Workflow Flag
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Flag" page="CareConnect-Flag-1" %}
 
-{% include custom/fhir.resource.html content="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" %}
+{% include custom/fhir.referencemin.html resource="Flag" page="CareConnect-Flag-1" fhirlink="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" content="User Stories" userlink="" %}
 
 ## 1. Read ##
 

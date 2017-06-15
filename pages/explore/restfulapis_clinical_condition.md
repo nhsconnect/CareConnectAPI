@@ -8,9 +8,7 @@ summary: Use to record detailed information about conditions, problems or diagno
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Condition" page="CareConnect-Condition-1" %}
-
-{% include custom/fhir.resource.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html)" %}
+{% include custom/fhir.reference.html resource="Condition" page="CareConnect-Condition-1" fhirlink="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 
 ## 1. Read Operation ##

@@ -9,9 +9,8 @@ summary: A conformance statement is a set of capabilities of a FHIR Server that 
 
 {% include custom/search.warnbanner.html %}
 
-## 0. References ##
+{% include custom/fhir.referencemin.html resource="" page="" fhirlink="[Conformance](http://www.hl7.org/fhir/dstu2/conformance.html)" content="User Stories" userlink="" %}
 
-{% include custom/fhir.resource.html content="[Conformance](http://www.hl7.org/fhir/dstu2/conformance.html)" %}
 
 ## 1. Read ##
 
