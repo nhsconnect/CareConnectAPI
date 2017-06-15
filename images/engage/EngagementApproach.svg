@@ -27,7 +27,7 @@
 		.st17 {stroke:#000c9d;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
 		.st18 {fill:#feffff}
 		.st19 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
-		.*[id^='st']:hover {
+		.*[id^='st'] {
 			    fill: #4F81BD;
 			    fill-opacity: 0.2;
 		}
