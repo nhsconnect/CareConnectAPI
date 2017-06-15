@@ -13,6 +13,7 @@
 		.st3 {fill:#ff9300;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5;visibility:hidden}
 		.st4 {stroke:#ff9300;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
 		.st5 {fill:#000bae;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st5:hover {fill:#000000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
 		.st6 {fill:#ff9300;font-family:Segoe UI;font-size:2.50001em;font-weight:bold}
 		.st7 {fill:#005eb8;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
 		.st8 {fill:#00a2c9}
