@@ -29,23 +29,16 @@
 		.st19 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 		.s_link:hover {
 		    transition: all .2s ease-in-out;
-		    -moz-transform-origin: 37px 37px;
-		    -ms-transform-origin: 50% 50%;
-		    -o-transform-origin: 50% 50%;
-		    -ms-transform: scale(1.2);
-		    -transform: scale(1.2);
-		    -o-transform: scale(1.2);
+		    transform-origin: 50% 50%;
+		    transform: scale(1.2);
 		}
+		@-moz-document url-prefix() {.s_link:hover {transform: scale(1)}}
 		.s_link:active {
 		    transition: all 0;
-		    -moz-transform-origin: 50% 50%;
-		    -ms-transform-origin: 50% 50%;
-		    -o-transform-origin: 50% 50%;
-		    -moz-transform-origin: 50% 50%;
-		    -ms-transform: scale(0.9);
-		    -transform: scale(0.9);
-		    -o-transform: scale(0.9);
+		    transform-origin: 50% 50%;
+		    transform: scale(0.9);
 		}
+		@-moz-document url-prefix() {.s_link:hover {transform: scale(1)}}
 	]]>
 	</style>
 
