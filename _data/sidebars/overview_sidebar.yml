@@ -171,20 +171,43 @@ entries:
   - title: Test
     output: web
     folderitems:
-    - title: Overview | Coming soon
+    - title: Overview
       url: /test.html
       output: web
+    - title: Patterns / Topology
+      url: /test_patterns.html
+      output: web
+    - title: Access
+      url: /test_access.html
+      output: web
+    - title: Security
+      url: /test_security.html
+      output: web
+
   - title: Assure
     output: web
     folderitems:
-    - title: Overview | Coming soon
+    - title: Overview
       url: /assure.html
       output: web
+    - title: Access
+      url: /assure_access.html
+      output: web
+    - title: Security
+      url: /assure_security.html
+      output: web
+
   - title: Deploy
     output: web
     folderitems:
-    - title: Overview | Coming soon
+    - title: Overview 
       url: /deploy.html
+      output: web
+    - title: Access
+      url: /deploy_access.html
+      output: web
+    - title: Security
+      url: /deploy_security.html
       output: web
 
   - title: Help & Support
