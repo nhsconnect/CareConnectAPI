@@ -37,7 +37,7 @@
 		}
 		.s_link:active {
 			transition: all 0s;
-			fill: #ff9300;
+			fill: #ff9300 !important;
 			transform-origin: 50% 50%;
 			transform: scale(0.9);			
 		}
