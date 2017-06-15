@@ -38,7 +38,7 @@
 		    transform-origin: 50% 50%;
 		    transform: scale(0.9);
 		}
-		@-moz-document url-prefix() {.s_link:hover {transform: scale(1)}}
+		@-moz-document url-prefix() {.s_link:hover {transform: none}}
 	]]>
 	</style>
 
