@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<meta>
-		<lastUpdated value="2017-03-27T08:57:15.433+01:00"/>
+		<lastUpdated value="2017-05-22T11:07:07.654+01:00"/>
 	</meta>
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
 		<valueInteger value="4"/>
@@ -72,12 +72,6 @@
 				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
 					<valueString value="identifier or name"/>
 				</extension>
-				<key value="org-1"/>
-				<severity value="error"/>
-				<human value="The organization SHALL at least have a name or an id, and possibly more than one"/>
-				<xpath value="count(f:identifier | f:name) &gt; 0"/>
-			</constraint>
-			<constraint>
 				<key value="org-1"/>
 				<severity value="error"/>
 				<human value="The organization SHALL at least have a name or an id, and possibly more than one"/>
@@ -383,7 +377,7 @@
 		<element>
 			<path value="Organization.extension"/>
 			<name value="organization-period"/>
-			<short value="The date range that this organization should be considered available."/>
+			<short value="The date range that this organization should be considered available"/>
 			<definition value="The date range that this organization should be considered available."/>
 			<comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
 			<alias value="extensions"/>
@@ -9795,18 +9789,6 @@
 			<path value="Organization"/>
 			<type>
 				<code value="Organization"/>
-			</type>
-			<constraint>
-				<key value="org-1"/>
-				<severity value="error"/>
-				<human value="The organization SHALL at least have a name or an id, and possibly more than one"/>
-				<xpath value="count(f:identifier | f:name) &gt; 0"/>
-			</constraint>
-		</element>
-		<element>
-			<path value="Organization.contained"/>
-			<type>
-				<code value="Resource"/>
 			</type>
 		</element>
 		<element>

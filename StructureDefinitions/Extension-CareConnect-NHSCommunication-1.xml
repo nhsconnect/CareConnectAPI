@@ -970,8 +970,8 @@
 		</element>
 		<element>
 			<path value="Extension.extension.valueBoolean"/>
-			<short value="Indicates whether an interperter is required for communication purposes"/>
-			<definition value="Indicates whether an interperter is required for communication purposes- True / False?"/>
+			<short value="Indicates whether an interpreter is required for communication purposes"/>
+			<definition value="Indicates whether an interpreter is required for communication purposes- True / False?"/>
 			<min value="1"/>
 			<max value="1"/>
 			<base>
@@ -1293,8 +1293,8 @@
 		</element>
 		<element>
 			<path value="Extension.extension.valueBoolean"/>
-			<short value="Indicates whether an interperter is required for communication purposes"/>
-			<definition value="Indicates whether an interperter is required for communication purposes- True / False?"/>
+			<short value="Indicates whether an interpreter is required for communication purposes"/>
+			<definition value="Indicates whether an interpreter is required for communication purposes- True / False?"/>
 			<min value="1"/>
 			<type>
 				<code value="boolean"/>

@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "meta": {
-    "lastUpdated": "2017-05-08T17:04:59.171+01:00"
+    "lastUpdated": "2017-06-14T11:20:03.707+01:00"
   },
   "url": "https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Encounter-1",
   "version": "1.0.0",
   "name": "CareConnect-Encounter-1",
-  "status": "draft",
+  "status": "active",
   "publisher": "HL7 UK",
   "date": "2017-02-22T13:44:33.2447401Z",
   "description": "The encounter resource represents an encounter between a care professional and the patient (or patient's record).",
@@ -1772,12 +1772,6 @@
           "max": "1"
         },
         "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          },
           {
             "code": "Reference",
             "profile": [
@@ -16866,12 +16860,6 @@
       {
         "path": "Encounter.identifier.assigner",
         "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          },
           {
             "code": "Reference",
             "profile": [

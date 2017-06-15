@@ -1,11 +1,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<meta>
-		<lastUpdated value="2017-05-08T17:04:59.171+01:00"/>
+		<lastUpdated value="2017-06-14T11:20:03.707+01:00"/>
 	</meta>
 	<url value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Encounter-1"/>
 	<version value="1.0.0"/>
 	<name value="CareConnect-Encounter-1"/>
-	<status value="draft"/>
+	<status value="active"/>
 	<publisher value="HL7 UK"/>
 	<date value="2017-02-22T13:44:33.2447401Z"/>
 	<description value="The encounter resource represents an encounter between a care professional and the patient (or patient's record)."/>
@@ -1379,10 +1379,6 @@
 				<min value="0"/>
 				<max value="1"/>
 			</base>
-			<type>
-				<code value="Reference"/>
-				<profile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-			</type>
 			<type>
 				<code value="Reference"/>
 				<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Organization-1"/>
@@ -13090,10 +13086,6 @@
 		</element>
 		<element>
 			<path value="Encounter.identifier.assigner"/>
-			<type>
-				<code value="Reference"/>
-				<profile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-			</type>
 			<type>
 				<code value="Reference"/>
 				<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Organization-1"/>
