@@ -62,7 +62,7 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Procedure" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Procedure" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Procedure" %}
 

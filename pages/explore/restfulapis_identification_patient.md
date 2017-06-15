@@ -92,7 +92,7 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' '[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' '[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Patient"  %}
 

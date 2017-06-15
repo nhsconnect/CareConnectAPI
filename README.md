@@ -44,19 +44,6 @@ Several quick start options are available:
 
 Read the [Getting started page](#) for information on the CareConnect API contents, templates and examples, and more.
 
-## Status
-
-[![Ryver]()](https://interopen.ryver.com/)
-[![Bower]()]()
-[![npm version]()]()
-[![Gem version]()]()
-[![Build Status]()]( )
-[![devDependency Status]()]( )
-[![Meteor Atmosphere]()]()
-[![Packagist Prerelease]()]()
-
-[![Selenium Test Status]()]()
-
 ## What's included
 
 Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:

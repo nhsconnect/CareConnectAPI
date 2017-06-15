@@ -53,13 +53,13 @@ caption="Patient Search FHIR Actor Diagram" %}
 The patient search can use any of the search parameters defined in the [Patient](restfulapis_identification_patient.html) API. For example if the patient informs the nurse of their date of birth, first name (19th Mar 1998 Bernie Kanfeld) and surname the query would be.
 
 ```
-GET http://[baseUrl]/Patient?birthdate=1998-03-19&given=bernie&family=kanfeld
+GET http://[baseUrl]/Patient?birthdate=1998-03-19&name=bernie%20kanfeld
 ```
 
 `[baseUrl]` needs to be replaced with an actual url, in the example below this is `http://127.0.0.1:8181/Dstu2/`. The url would work within a web browser but a better tool to work with RESTful is [Postman](https://www.getpostman.com/)
 
 ```
-http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&given=bernie&family=kanfeld
+http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&name=bernie%20kanfeld
 ```
 
 A sample response is shown below
@@ -76,10 +76,10 @@ A sample response is shown below
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&amp;family=kanfeld&amp;given=bernie"/>
+        <url value="[baseUrl]/Patient?birthdate=1998-03-19&amp;name=bernie%20kanfeld"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Patient/24966"/>
+        <fullUrl value="[baseUrl]/Patient/24966"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
                 <id value="24966"/>
@@ -158,18 +158,7 @@ What we have just described is shown in the diagram below. When entered the url 
 {% include image.html
 max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow Patient Search FHIR" caption="Basic Process Flow" %}
 
-[TODO - Example above is different]
-
-If your familiar with NHS SDS/ODS Codes you may have noticed the ODS Code as the managing organisation.
-
-```xml
-<managingOrganization>
-    <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
-    <display value="Moir Medical Centre"/>
-</managingOrganization>
-```
-
-If you wish to know more details about this organisation, you will need to follow the reference (the example reference is a logical reference and does not currently exist). References can be relative, the previous section be re-written as (this is the way of referring to local resources):
+ManagagingOrganisation, the patients GP Practice is given as a reference (Organization/24965)
 
 ```xml
 <managingOrganization>
@@ -178,13 +167,22 @@ If you wish to know more details about this organisation, you will need to follo
 </managingOrganization>
 ```
 
-Notice the SDS/ODS code has been replaced with a number, this is the logical id of the organisation and to get the ods we will need to request that resource, e.g.
+If you wish to know more details about this organisation, you will need to follow the reference. The Reference used in the the example is relative, they can also point to external servers, e.g.:
+
+```xml
+<managingOrganization>
+    <reference value="https://fhirserver.trust.nhs.uk/DSTU2/Organization/65"/>
+    <display value="Moir Medical Centre"/>
+</managingOrganization>
+```
+
+We retrieve the Organization resource in the similar manner to searching for the Patient but as we know the `Id` of the resource we can access it directly.
 
 ```
-http://127.0.0.1:8181/Dstu2/Organization/24965
+GET [baseUrl]/Organization/24965
 ```
 
-The response from this request is shown below, it is not returned in a FHIR [Bundle](http://www.hl7.org/fhir/dstu2/bundle.html) as we haven't performed a search and requested the resource by it's Id. The ODS code can be found in the identifier section.
+The response from this request is shown below, it is not returned in a FHIR [Bundle](http://www.hl7.org/fhir/dstu2/bundle.html) as we haven't performed a search and requested the resource by it's Id. The SDS/ODS code can be found in the identifier section.
 
 #### XML Example 2 - Organization ####
 
@@ -223,7 +221,7 @@ The response from this request is shown below, it is not returned in a FHIR [Bun
 </Organization>
 ```
 
-The method for returning Practitioner is the same and an example is shown below in section 2.2
+The method for returning Practitioner is the similar and an example is shown below in section 2.2
 
 ### 2.1 identifier ###
 
@@ -242,7 +240,7 @@ To find a patient by NHS number, Hospital number, etc we use the identifier. The
 To search for Patients by NHS number, use the following query:
 
 ```
-GET /Patient?identifier=[system]|[code]
+GET [baseUrl]/Patient?identifier=[system]|[code]
 ```
 
 The system is `https://fhir.nhs.uk/Id/nhs-number` and the code is `9876543210`, e.g.
@@ -251,16 +249,18 @@ The system is `https://fhir.nhs.uk/Id/nhs-number` and the code is `9876543210`, 
 http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 ```
 
-This will return all Patient resources with a NHS number of 9876543210, this may be more than one. NHS Number is not normally the main patient identifier within a trust, this is for a number of reasons:
+This will return all Patient resources with a NHS number of 9876543210 (this may be more than one). NHS Number is not normally the main patient identifier within a trust, this is for a number of reasons:
 * Patient doesn't have a NHS Number (foreign visitor or from another home nation in the UK)
-* Patient's NHS number hasn't been validated
+* Patient's NHS number hasn't been validated (and so can not be reliably used for communication)
 * Patient has not been identified yet
 
-For these reasons the health organisation will use it's own primary identifier, often referred to as Hospital or District number. Organisation's will need to create their own system for the identifier, in the example Jorvik NHS Trust have used 'https://fhir.jorvik.nhs.uk/PAS/Patient' to indicate PAS Hospital Number. They use this with the API as shown below:
+For these reasons the trust/health organisation will use it's own primary identifier, often referred to as Hospital or District number. Organisation's will need to create their own system for the identifier, in the example Example NHS Trust have used 'https://fhir.example.nhs.uk/PAS/Patient' to indicate PAS Hospital Number. They use this with the API as shown below:
 
 ```
-GET http://[baseUrl]/Patient?identifier=https://fhir.jorvik.nhs.uk/PAS/Patient|123345
+GET http://[baseUrl]/Patient?identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
 ```
+
+{% include note.html content="Trust or Organisation can choose to use their main identifier as the logical Id. [TODO add notes about national NHS systems using NHS Number this way.]" %}
 
 ### 2.2. Java Example ###
 

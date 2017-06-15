@@ -223,9 +223,6 @@ entries:
       - title: Where Else Can I Look?
         output: web
         subfolderitems:
-        - title: Organisations
-          url: /support_whereelse.html
-          output: web
         - title: Community
           url: /support_community.html
           output: web
