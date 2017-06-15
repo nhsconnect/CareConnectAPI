@@ -416,7 +416,7 @@
 				<path d="M0 737.44 L24.8 721.83 L0 706.23 L0 737.44 Z" class="st8"/>
 			</g>
 		</g>
-		<a target="_top" class="s_link" xlink:href="/engage.html#step1"
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step1"
 				xlink:title="Give a brief description of the client we are engaging with and what led them to the business need for interoperability.">
 			<g id="group210-61" transform="translate(602.992,-612.283)" v:mID="210" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
@@ -500,7 +500,7 @@
 			
 			<path d="M0 730.36 L122.06 730.36" class="st14"/>
 		</g>
-		<a target="_top" xlink:href="/engage.html#step2" xlink:title="Description of the client&#39;s business needs and expectations.">
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step2" xlink:title="Description of the client&#39;s business needs and expectations.">
 			<g id="group215-97" transform="translate(780.6,-612.283)" v:mID="215" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
@@ -580,13 +580,13 @@
 								x="-1.2" dy="1.2em" class="st13">Overview</tspan></text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#agree-business-requirements">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#agree-business-requirements">
 			<g id="shape219-127" v:mID="219" v:groupContext="shape" v:layerMember="2" transform="translate(673.868,-630.709)">
 				
 				<path d="M0 730.36 L100.18 730.36" class="st14"/>
 			</g>
 		</a>
-		<a target="_top" xlink:href="/engage.html#step3" xlink:title="Describe the current ineroperability issues.">
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step3" xlink:title="Describe the current ineroperability issues.">
 			<g id="group220-132" transform="translate(958.209,-612.283)" v:mID="220" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
@@ -666,13 +666,13 @@
 								x="-5.33" dy="1.2em" class="st13">Statement</tspan></text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#agree-business-requirements">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#agree-business-requirements">
 			<g id="shape224-162" v:mID="224" v:groupContext="shape" v:layerMember="2" transform="translate(851.476,-630.709)">
 				
 				<path d="M0 730.36 L100.18 730.36" class="st14"/>
 			</g>
 		</a>
-		<a target="_top" xlink:href="/engage.html#step4"
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step4"
 				xlink:title="Visually represent the business case to confirm understanding of the problem with the client.">
 			<g id="group225-167" transform="translate(1135.82,-602.362)" v:mID="225" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
@@ -717,13 +717,13 @@
 								x="-3.92" dy="1.2em" class="st13">Business </tspan><tspan x="-25.15" dy="1.2em" class="st13">Requirements</tspan></text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#agree-business-requirements">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#agree-business-requirements">
 			<g id="shape229-179" v:mID="229" v:groupContext="shape" v:layerMember="2" transform="translate(1029.08,-630.709)">
 				
 				<path d="M0 730.36 L100.18 730.36" class="st14"/>
 			</g>
 		</a>
-		<a target="_top" xlink:href="/engage.html#step5"
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step5"
 				xlink:title="Given that the solution is likely to be implemented against existing systems it should be straightforward to identify which data items the client wants to send or receive between those systems. Get XML representation of the data structure if possible.">
 			<g id="group234-184" transform="translate(1302.09,-602.362)" v:mID="234" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
@@ -753,13 +753,13 @@
 					<text x="-32.69" y="757.64" class="st12" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Identify Dataset</text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#agree-business-requirements">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#agree-business-requirements">
 			<g id="shape237-191" v:mID="237" v:groupContext="shape" v:layerMember="2" transform="translate(1195.35,-630.709)">
 				
 				<path d="M0 730.36 L100.18 730.36" class="st14"/>
 			</g>
 		</a>
-		<a target="_top" xlink:href="/engage.html#step6"
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step6"
 				xlink:title="Identify which Care Connect profiles and FHIR resources can be used to meet the requirement. An entity relationship diagram can help to describe the profiles.">
 			<g id="group238-196" transform="translate(1296.42,-350.079)" v:mID="238" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
@@ -815,7 +815,7 @@
 			
 			<path d="M4.25 737.44 L137.47 737.44 L137.47 989.73 L16.46 989.73" class="st14"/>
 		</g>
-		<a target="_top" xlink:href="/engage.html#step7" xlink:title="Map the dataset to the profile.">
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step7" xlink:title="Map the dataset to the profile.">
 			<g id="group243-218" transform="translate(1126.34,-350.079)" v:mID="243" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
@@ -846,13 +846,13 @@
 					<text x="-15.08" y="757.64" class="st12" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Map Dataset</text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#define-the-solution">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape247-227" v:mID="247" v:groupContext="shape" v:layerMember="2" transform="translate(1296.41,-378.425)">
 				
 				<path d="M0 730.36 L-92.65 730.36" class="st14"/>
 			</g>
 		</a>
-		<a target="_top" xlink:href="/engage.html#step8" xlink:title="Get Profile to Dataset Mapping reviewed and approved by the client.">
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step8" xlink:title="Get Profile to Dataset Mapping reviewed and approved by the client.">
 			<g id="group248-232" transform="translate(956.26,-350.079)" v:mID="248" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
@@ -898,13 +898,13 @@
 					<text x="-29.87" y="757.64" class="st12" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Obtain Approval</text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#define-the-solution">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape253-246" v:mID="253" v:groupContext="shape" v:layerMember="2" transform="translate(1126.33,-378.425)">
 				
 				<path d="M0 730.36 L-92.65 730.36" class="st14"/>
 			</g>
 		</a>
-		<a target="_top" xlink:href="/engage.html#step9" xlink:title="Define API Signatures and use of Search Parameters">
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step9" xlink:title="Define API Signatures and use of Search Parameters">
 			<g id="group259-251" transform="translate(786.181,-350.079)" v:mID="259" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
@@ -954,13 +954,13 @@
 					<text x="-7.68" y="757.64" class="st12" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Design API</text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#define-the-solution">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape263-267" v:mID="263" v:groupContext="shape" v:layerMember="2" transform="translate(956.251,-378.425)">
 				
 				<path d="M0 730.36 L-92.65 730.36" class="st14"/>
 			</g>
 		</a>
-		<a target="_top" xlink:href="/engage.html#step10"
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step10"
 				xlink:title="Define the sequence of interactions expected including the function, input parameters, output parameters etc.">
 			<g id="group264-272" transform="translate(601.929,-350.079)" v:mID="264" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
@@ -998,13 +998,13 @@
 								x="-28.09" dy="1.2em" class="st13">Interaction Flow</tspan></text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#define-the-solution">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape269-284" v:mID="269" v:groupContext="shape" v:layerMember="2" transform="translate(786.172,-378.425)">
 				
 				<path d="M0 730.36 L-106.83 730.36" class="st14"/>
 			</g>
 		</a>
-		<a target="_top" xlink:href="/engage.html#step11" xlink:title="Identify any further techincal considerations to aid understanding.">
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step11" xlink:title="Identify any further techincal considerations to aid understanding.">
 			<g id="group270-289" transform="translate(403.504,-350.079)" v:mID="270" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
@@ -1042,13 +1042,13 @@
 								class="st13">Context</tspan></text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#define-the-solution">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape275-302" v:mID="275" v:groupContext="shape" v:layerMember="2" transform="translate(601.92,-378.425)">
 				
 				<path d="M0 730.36 L-121 730.36" class="st14"/>
 			</g>
 		</a>
-		<a target="_top" xlink:href="/engage.html#step12" xlink:title="Feedback to INTEROpen any necessary changes to Profile definitions.">
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step12" xlink:title="Feedback to INTEROpen any necessary changes to Profile definitions.">
 			<g id="group276-307" transform="translate(205.079,-350.079)" v:mID="276" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
@@ -1099,7 +1099,7 @@
 			
 			<path d="M7.09 737.44 L-162.98 737.44 L-162.98 1002.48 L0.55 1002.48" class="st14"/>
 		</g>
-		<a target="_top" xlink:href="/engage.html#step13"
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step13"
 				xlink:title="Present final case study to stakeholders and include it into the implementation guide.">
 			<g id="group282-327" transform="translate(205.079,-85.0394)" v:mID="282" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
@@ -1140,13 +1140,13 @@
 					<text x="-40.3" y="757.64" class="st12" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Present Case Study</text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#define-the-solution">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape290-337" v:mID="290" v:groupContext="shape" v:layerMember="2" transform="translate(403.495,-378.425)">
 				
 				<path d="M0 730.36 L-121 730.36" class="st14"/>
 			</g>
 		</a>
-		<a target="_top" xlink:href="/engage.html#step14" xlink:title="Client implements solution, tests and provides feedback.">
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step14" xlink:title="Client implements solution, tests and provides feedback.">
 			<g id="group295-342" transform="translate(403.504,-85.0394)" v:mID="295" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
@@ -1177,13 +1177,13 @@
 					<text x="-42.88" y="757.64" class="st12" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Implement Solution</text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#deliver-the-solution">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#deliver-the-solution">
 			<g id="shape299-351" v:mID="299" v:groupContext="shape" v:layerMember="2" transform="translate(275.954,-113.386)">
 				
 				<path d="M0 730.36 L121 730.36" class="st14"/>
 			</g>
 		</a>
-		<a target="_top" xlink:href="/engage.html#step15" xlink:title="Identify failures and successes of the project.">
+		<a target="_top"  class="s_link" xlink:href="/engage.html#step15" xlink:title="Identify failures and successes of the project.">
 			<g id="group300-356" transform="translate(601.929,-85.0394)" v:mID="300" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
@@ -1239,7 +1239,7 @@
 					<text x="-22.59" y="757.64" class="st12" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Lessons Learnt</text>				</g>
 			</g>
 		</a>
-		<a target="_top" xlink:href="..\EngagementApproach.html#deliver-the-solution">
+		<a target="_top"  class="s_link" xlink:href="..\EngagementApproach.html#deliver-the-solution">
 			<g id="shape305-370" v:mID="305" v:groupContext="shape" v:layerMember="2" transform="translate(474.379,-113.386)">
 				
 				<path d="M0 730.36 L121 730.36" class="st14"/>
