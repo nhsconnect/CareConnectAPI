@@ -49,7 +49,7 @@ Fetches a bundle of all `Patient` resources for the specified patient or search 
 | `name` | `string` | A portion of either family or given name of the patient | SHALL | 	Patient.name |
 | `phone` | `token` | A value in a phone contact | MAY | Patient.telecom(system=phone) |
 
-Systems SHALL support the following search combinations:
+Client systems SHALL provide at least two parameters of differing types, unless searching on identifier where one parameter is permitted. Systems SHALL support the following search combinations:
 
 * name + gender
 * name + birthdate
