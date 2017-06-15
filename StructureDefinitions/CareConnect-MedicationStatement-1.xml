@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<meta>
-		<lastUpdated value="2017-05-08T17:15:42.466+01:00"/>
+		<lastUpdated value="2017-05-22T11:07:05.055+01:00"/>
 	</meta>
 	<url value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationStatement-1"/>
 	<version value="1.0.0"/>
@@ -83,18 +83,6 @@
 				<severity value="error"/>
 				<human value="Reason not taken is only permitted if wasNotTaken is true"/>
 				<xpath value="not(exists(f:reasonNotTaken) and f:wasNotTaken/@value=false())"/>
-			</constraint>
-			<constraint>
-				<key value="mst-1"/>
-				<severity value="error"/>
-				<human value="Reason not taken is only permitted if wasNotTaken is true"/>
-				<xpath value="not(exists(f:reasonNotTaken) and f:wasNotTaken/@value=false())"/>
-			</constraint>
-			<constraint>
-				<key value="mst-2"/>
-				<severity value="error"/>
-				<human value="Reason for use is only permitted if wasNotTaken is false"/>
-				<xpath value="not(exists(*[starts-with(local-name(.), 'reasonForUse')]) and f:wasNotTaken/@value=true())"/>
 			</constraint>
 			<isSummary value="true"/>
 			<mapping>
@@ -282,201 +270,30 @@
 			</mapping>
 		</element>
 		<element>
-			<path value="MedicationStatement.text.id"/>
-			<short value="xml:id (or equivalent in JSON)"/>
-			<definition value="unique id for the element within a resource (for internal references)."/>
-			<comments value="RFC 4122"/>
-			<min value="0"/>
-			<max value="1"/>
-			<base>
-				<path value="Element.id"/>
-				<min value="0"/>
-				<max value="1"/>
-			</base>
-			<type>
-				<code value="id"/>
-			</type>
-			<condition value="ele-1"/>
-			<constraint>
-				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-					<valueString value="children()"/>
-				</extension>
-				<key value="ele-1"/>
-				<severity value="error"/>
-				<human value="All FHIR elements must have a @value or children"/>
-				<xpath value="@value|f:*|h:div"/>
-			</constraint>
-			<mapping>
-				<identity value="rim"/>
-				<map value="n/a"/>
-			</mapping>
-		</element>
-		<element>
-			<path value="MedicationStatement.text.extension"/>
-			<short value="Additional Content defined by implementations"/>
-			<definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-			<comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-			<alias value="extensions"/>
-			<alias value="user content"/>
+			<path value="MedicationStatement.contained"/>
+			<short value="Contained, inline Resources"/>
+			<definition value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+			<comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+			<alias value="inline resources"/>
+			<alias value="anonymous resources"/>
+			<alias value="contained resources"/>
 			<min value="0"/>
 			<max value="*"/>
 			<base>
-				<path value="Element.extension"/>
+				<path value="DomainResource.contained"/>
 				<min value="0"/>
 				<max value="*"/>
 			</base>
 			<type>
-				<code value="Extension"/>
+				<code value="Resource"/>
 			</type>
-			<condition value="ele-1"/>
-			<constraint>
-				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-					<valueString value="children()"/>
-				</extension>
-				<key value="ele-1"/>
-				<severity value="error"/>
-				<human value="All FHIR elements must have a @value or children"/>
-				<xpath value="@value|f:*|h:div"/>
-			</constraint>
 			<mapping>
 				<identity value="rim"/>
-				<map value="n/a"/>
+				<map value="Entity. Role, or Act"/>
 			</mapping>
 			<mapping>
 				<identity value="rim"/>
 				<map value="N/A"/>
-			</mapping>
-		</element>
-		<element>
-			<path value="MedicationStatement.text.status"/>
-			<short value="generated | extensions | additional | empty"/>
-			<definition value="The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data."/>
-			<comments value="Note that FHIR strings may not exceed 1MB in size"/>
-			<min value="1"/>
-			<max value="1"/>
-			<base>
-				<path value="Narrative.status"/>
-				<min value="1"/>
-				<max value="1"/>
-			</base>
-			<type>
-				<code value="code"/>
-			</type>
-			<condition value="ele-1"/>
-			<constraint>
-				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-					<valueString value="children()"/>
-				</extension>
-				<key value="ele-1"/>
-				<severity value="error"/>
-				<human value="All FHIR elements must have a @value or children"/>
-				<xpath value="@value|f:*|h:div"/>
-			</constraint>
-			<binding>
-				<strength value="required"/>
-				<description value="The status of a resource narrative"/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/narrative-status"/>
-				</valueSetReference>
-			</binding>
-			<mapping>
-				<identity value="rim"/>
-				<map value="n/a"/>
-			</mapping>
-			<mapping>
-				<identity value="rim"/>
-				<map value="N/A"/>
-			</mapping>
-		</element>
-		<element>
-			<path value="MedicationStatement.text.div"/>
-			<short value="Limited xhtml content"/>
-			<definition value="The actual narrative content, a stripped down version of XHTML."/>
-			<comments value="The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained stylesheets. The XHTML content may not contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects."/>
-			<min value="1"/>
-			<max value="1"/>
-			<base>
-				<path value="Narrative.div"/>
-				<min value="1"/>
-				<max value="1"/>
-			</base>
-			<type>
-				<code value="xhtml"/>
-			</type>
-			<condition value="ele-1"/>
-			<constraint>
-				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-					<valueString value="children()"/>
-				</extension>
-				<key value="ele-1"/>
-				<severity value="error"/>
-				<human value="All FHIR elements must have a @value or children"/>
-				<xpath value="@value|f:*|h:div"/>
-			</constraint>
-			<constraint>
-				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-					<valueString value="true"/>
-				</extension>
-				<key value="txt-3"/>
-				<severity value="error"/>
-				<human value="The narrative SHALL contain only the basic html formatting attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes"/>
-				<xpath value="not(descendant-or-self::*/@*[not(name(.)=('abbr', 'accesskey', 'align', 'alt', 'axis', 'bgcolor', 'border', 'cellhalign', 'cellpadding', 'cellspacing', 'cellvalign', 'char', 'charoff', 'charset', 'cite', 'class', 'colspan', 'compact', 'coords', 'dir', 'frame', 'headers', 'height', 'href', 'hreflang', 'hspace', 'id', 'lang', 'longdesc', 'name', 'nowrap', 'rel', 'rev', 'rowspan', 'rules', 'scope', 'shape', 'span', 'src', 'start', 'style', 'summary', 'tabindex', 'title', 'type', 'valign', 'value', 'vspace', 'width'))])"/>
-			</constraint>
-			<constraint>
-				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-					<valueString value="true"/>
-				</extension>
-				<key value="txt-1"/>
-				<severity value="error"/>
-				<human value="The narrative SHALL contain only the basic html formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes"/>
-				<xpath value="not(descendant-or-self::*[not(local-name(.)=('a', 'abbr', 'acronym', 'b', 'big', 'blockquote', 'br', 'caption', 'cite', 'code', 'col', 'colgroup', 'dd', 'dfn', 'div', 'dl', 'dt', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr', 'i', 'img', 'li', 'ol', 'p', 'pre', 'q', 'samp', 'small', 'span', 'strong', 'table', 'tbody', 'td', 'tfoot', 'th', 'thead', 'tr', 'tt', 'ul', 'var'))])"/>
-			</constraint>
-			<constraint>
-				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-					<valueString value="true"/>
-				</extension>
-				<key value="txt-2"/>
-				<severity value="error"/>
-				<human value="The narrative SHALL have some non-whitespace content"/>
-				<xpath value="descendant::text()[normalize-space(.)!=''] or descendant::h:img[@src]"/>
-			</constraint>
-			<mapping>
-				<identity value="rim"/>
-				<map value="n/a"/>
-			</mapping>
-			<mapping>
-				<identity value="rim"/>
-				<map value="N/A"/>
-			</mapping>
-		</element>
-		<element>
-			<path value="MedicationStatement.meta"/>
-			<short value="Metadata about the resource"/>
-			<definition value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
-			<min value="0"/>
-			<max value="1"/>
-			<base>
-				<path value="Resource.meta"/>
-				<min value="0"/>
-				<max value="1"/>
-			</base>
-			<type>
-				<code value="Meta"/>
-			</type>
-			<condition value="ele-1"/>
-			<constraint>
-				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-					<valueString value="children()"/>
-				</extension>
-				<key value="ele-1"/>
-				<severity value="error"/>
-				<human value="All FHIR elements must have a @value or children"/>
-				<xpath value="@value|f:*|h:div"/>
-			</constraint>
-			<isSummary value="true"/>
-			<mapping>
-				<identity value="rim"/>
-				<map value="n/a"/>
 			</mapping>
 		</element>
 		<element>
@@ -7833,18 +7650,6 @@
 		<element>
 			<path value="MedicationStatement"/>
 			<definition value="A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now, or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from e.g. the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains   The primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.&#xD;&#xA;"/>
-			<constraint>
-				<key value="mst-1"/>
-				<severity value="error"/>
-				<human value="Reason not taken is only permitted if wasNotTaken is true"/>
-				<xpath value="not(exists(f:reasonNotTaken) and f:wasNotTaken/@value=false())"/>
-			</constraint>
-			<constraint>
-				<key value="mst-2"/>
-				<severity value="error"/>
-				<human value="Reason for use is only permitted if wasNotTaken is false"/>
-				<xpath value="not(exists(*[starts-with(local-name(.), 'reasonForUse')]) and f:wasNotTaken/@value=true())"/>
-			</constraint>
 		</element>
 		<element>
 			<path value="MedicationStatement.extension"/>

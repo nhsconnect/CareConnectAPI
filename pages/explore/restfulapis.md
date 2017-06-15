@@ -1,13 +1,13 @@
 ---
 title: Overview | Profiles
 keywords: getcarerecord, structured, rest, resource
-tags:
-- structured
-- getcarerecord
+tags: [rest,fhir]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis.html
 summary: Overview
 ---
+
+{% include custom/search.warnbanner.html %}
 
 ## 1. Profile Structure ##
 The FHIR Care Connect profiles described in the Explore section of this implementation guide have been structured consistantly in the following way:

@@ -132,9 +132,6 @@ entries:
         - title: Open Source
           url: /development_fhir_open_source_guidance.html
           output: web
-        - title: Security Guidance
-          url: /development_api_security_guidance.html
-          output: web
         - title: Reference
           url: /development_deliverables.html
           output: web
@@ -200,7 +197,7 @@ entries:
   - title: Deploy
     output: web
     folderitems:
-    - title: Overview 
+    - title: Overview
       url: /deploy.html
       output: web
     - title: Access

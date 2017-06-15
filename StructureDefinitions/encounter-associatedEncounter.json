@@ -1,13 +1,15 @@
 {
   "resourceType": "StructureDefinition",
   "meta": {
-    "lastUpdated": "2017-05-10T16:49:07.196+01:00"
+    "lastUpdated": "2017-06-06T09:48:11.428+01:00"
   },
   "url": "http://hl7.org/fhir/StructureDefinition/encounter-associatedEncounter",
+  "version": "1.0.0",
   "name": "encounter-associatedEncounter",
   "status": "active",
   "date": "2017-02-28T09:08:25.6170643Z",
   "description": "This encounter occurs within the scope of the referenced encounter.",
+  "copyright": "Copyright © Health Level Seven, Inc. - FHIR WG",
   "fhirVersion": "1.0.2",
   "kind": "datatype",
   "constrainedType": "Extension",

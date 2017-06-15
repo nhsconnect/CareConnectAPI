@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "meta": {
-    "lastUpdated": "2017-05-08T15:42:30.694+01:00"
+    "lastUpdated": "2017-06-08T11:55:06.769+01:00"
   },
   "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationRepeatInformation-1",
   "version": "1.0.0",
@@ -351,7 +351,7 @@
       {
         "path": "Extension.extension.valuePositiveInt",
         "short": "Number of issues authorised",
-        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "definition": "Number of issues authorised",
         "min": 1,
         "max": "1",
         "base": {
@@ -581,7 +581,7 @@
       {
         "path": "Extension.extension.valuePositiveInt",
         "short": "Number of issues issued",
-        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "definition": "Number of issues issued.",
         "min": 0,
         "max": "1",
         "base": {
@@ -810,8 +810,8 @@
       },
       {
         "path": "Extension.extension.valueQuantity",
-        "short": "Value of extension",
-        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "short": "Repeat expected supply duration",
+        "definition": "Repeat expected supply duration.",
         "min": 0,
         "max": "1",
         "base": {
@@ -1041,7 +1041,7 @@
       {
         "path": "Extension.extension.valueDateTime",
         "short": "Repeat review date",
-        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "definition": "Repeat review date.",
         "min": 0,
         "max": "1",
         "base": {
@@ -1301,6 +1301,7 @@
       {
         "path": "Extension.extension.valuePositiveInt",
         "short": "Number of issues authorised",
+        "definition": "Number of issues authorised",
         "min": 1,
         "type": [
           {
@@ -1322,6 +1323,7 @@
       {
         "path": "Extension.extension.valuePositiveInt",
         "short": "Number of issues issued",
+        "definition": "Number of issues issued.",
         "type": [
           {
             "code": "positiveInt"
@@ -1341,6 +1343,8 @@
       },
       {
         "path": "Extension.extension.valueQuantity",
+        "short": "Repeat expected supply duration",
+        "definition": "Repeat expected supply duration.",
         "type": [
           {
             "code": "Quantity"
@@ -1361,6 +1365,7 @@
       {
         "path": "Extension.extension.valueDateTime",
         "short": "Repeat review date",
+        "definition": "Repeat review date.",
         "type": [
           {
             "code": "dateTime"

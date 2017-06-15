@@ -1,15 +1,15 @@
 ---
 title: Care Connect | Reference
 keywords: development Reference
-tags: [development]
+tags: [development,fhir,profiles]
 sidebar: overview_sidebar
 permalink: development_deliverables.html
 summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of Care Connect API."
 ---
 
+{% include custom/search.warnbanner.html %}
 
-
-# Care Connect Profiles:
+## 1. Care Connect Profiles: ##
 
 | Profile | ValueSets |
 | :--------- |:-------- |
@@ -19,7 +19,7 @@ summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of Care C
 | [CareConnect-Immunization-1](StructureDefinitions/CareConnect-Immunization-1.xml) | |
 | [CareConnect-Location-1](StructureDefinitions/CareConnect-Location-1.xml) | |
 | [CareConnect-Medication-1](StructureDefinitions/CareConnect-Medication-1.xml) | |
-| [CareConnect-MedicationFlag-1](StructureDefinitions/CareConnect-MedicationFlag-1.xml) | [CareConnect-MedicationFlag-1](ValueSets/CareConnect-MedicationFlag-1) | 
+| [CareConnect-MedicationFlag-1](StructureDefinitions/CareConnect-MedicationFlag-1.xml) | [CareConnect-MedicationFlag-1](ValueSets/CareConnect-MedicationFlag-1) |
 | [CareConnect-MedicationOrder-1](StructureDefinitions/CareConnect-MedicationOrder-1.xml) | [CareConnect-ManufacturedMaterialSnCT-1](ValueSets/CareConnect-ManufacturedMaterialSnCT-1.xml) <br /> [CareConnect-MedicationDosageRoute-1](ValueSets/CareConnect-MedicationDosageRoute-1.xml) <br /> [CareConnect-MedicationDosageMethod-1](ValueSets/CareConnect-MedicationDosageMethod-1.xml) |
 | [CareConnect-MedicationStatement-1](StructureDefinitions/CareConnect-MedicationStatement-1.xml) | [CareConnect-ManufacturedMaterialSnCT-1](ValueSets/CareConnect-ManufacturedMaterialSnCT-1.xml) <br /> [CareConnect-MedicationDosageRoute-1](ValueSets/CareConnect-MedicationDosageRoute-1.xml) <br /> [CareConnect-MedicationDosageMethod-1](ValueSets/CareConnect-MedicationDosageMethod-1.xml)  |
 | [CareConnect-Observation-1](StructureDefinitions/CareConnect-Observation-1.xml) | [CareConnect-AllergyCertainty-1](ValueSets/CareConnect-AllergyCertainty-1.xml) <br /> [CareConnect-AllergySeverity-1](ValueSets/CareConnect-AllergySeverity-1.xml) |
@@ -28,7 +28,7 @@ summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of Care C
 | [CareConnect-Procedure-1](StructureDefinitions/CareConnect-Procedure-1.xml) | |
 
 
-# Identifiers #
+## 2. Identifiers ##
 
 | identifier | URI | Comment |
 |--------------------------------------------|----------|----|

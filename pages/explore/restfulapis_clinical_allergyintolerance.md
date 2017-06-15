@@ -1,7 +1,7 @@
 ---
 title: Clinical | Allergy Intolerance
 keywords: getcarerecord, structured, rest, allergy, intolerance
-tags: [fhir, clinical, rest, allergyintolerance]
+tags: [fhir, clinical, rest, allergyintolerance,development]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_allergyintolerance.html
 summary: Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.

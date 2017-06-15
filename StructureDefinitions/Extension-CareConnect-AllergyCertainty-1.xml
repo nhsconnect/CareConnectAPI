@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<meta>
-		<lastUpdated value="2017-05-08T16:14:13.603+01:00"/>
+		<lastUpdated value="2017-06-08T11:55:28.831+01:00"/>
 	</meta>
 	<url value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-AllergyCertainty-1"/>
 	<version value="1.0.0"/>
@@ -154,8 +154,8 @@
 		</element>
 		<element>
 			<path value="Extension.valueCodeableConcept"/>
-			<short value="Value of extension"/>
-			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+			<short value="Certainty that the stated causative agent caused the allergic or adverse reaction"/>
+			<definition value="Certainty that the stated causative agent caused the allergic or adverse reaction."/>
 			<min value="0"/>
 			<max value="1"/>
 			<base>
@@ -179,7 +179,9 @@
 			<binding>
 				<strength value="required"/>
 				<description value="A code from the SNOMED Clinical Terminology UK coding system that describes the certainty of an allergy."/>
-				<valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AllergyCertainty-1"/>
+				<valueSetReference>
+					<reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AllergyCertainty-1"/>
+				</valueSetReference>
 			</binding>
 			<mapping>
 				<identity value="rim"/>
@@ -203,13 +205,17 @@
 		</element>
 		<element>
 			<path value="Extension.valueCodeableConcept"/>
+			<short value="Certainty that the stated causative agent caused the allergic or adverse reaction"/>
+			<definition value="Certainty that the stated causative agent caused the allergic or adverse reaction."/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
 			<binding>
 				<strength value="required"/>
 				<description value="A code from the SNOMED Clinical Terminology UK coding system that describes the certainty of an allergy."/>
-				<valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AllergyCertainty-1"/>
+				<valueSetReference>
+					<reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AllergyCertainty-1"/>
+				</valueSetReference>
 			</binding>
 		</element>
 	</differential>

@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<meta>
-		<lastUpdated value="2017-05-08T16:14:21.354+01:00"/>
+		<lastUpdated value="2017-06-08T11:55:06.319+01:00"/>
 	</meta>
 	<url value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-ConditionRelationship-1"/>
 	<version value="1.0.0"/>
@@ -261,8 +261,8 @@
 		</element>
 		<element>
 			<path value="Extension.extension.valueCode"/>
-			<short value="Value of extension"/>
-			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+			<short value="Condition relationship type"/>
+			<definition value="Condition relationship type."/>
 			<min value="0"/>
 			<max value="1"/>
 			<base>
@@ -437,8 +437,8 @@
 		</element>
 		<element>
 			<path value="Extension.extension.valueReference"/>
-			<short value="Value of extension"/>
-			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+			<short value="Target condition"/>
+			<definition value="Target condition."/>
 			<min value="0"/>
 			<max value="1"/>
 			<base>
@@ -661,6 +661,8 @@
 		</element>
 		<element>
 			<path value="Extension.extension.valueCode"/>
+			<short value="Condition relationship type"/>
+			<definition value="Condition relationship type."/>
 			<type>
 				<code value="code"/>
 			</type>
@@ -684,6 +686,8 @@
 		</element>
 		<element>
 			<path value="Extension.extension.valueReference"/>
+			<short value="Target condition"/>
+			<definition value="Target condition."/>
 			<type>
 				<code value="Reference"/>
 				<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Condition-1"/>

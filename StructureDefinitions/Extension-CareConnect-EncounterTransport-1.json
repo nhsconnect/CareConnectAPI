@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "meta": {
-    "lastUpdated": "2017-05-08T16:14:23.164+01:00"
+    "lastUpdated": "2017-06-09T11:25:53.237+01:00"
   },
   "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-EncounterTransport-1",
   "version": "1.0.0",
   "name": "Extension-CareConnect-EncounterTransport-1",
-  "status": "draft",
+  "status": "active",
   "publisher": "HL7 UK",
   "date": "2017-02-23T09:19:26.7737118Z",
   "description": "An extension to the Encounter resource to include the Transport used by the subject for an encounter.",

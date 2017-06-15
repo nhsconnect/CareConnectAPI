@@ -27,7 +27,7 @@
 		.st17 {stroke:#000c9d;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
 		.st18 {fill:#feffff}
 		.st19 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
-		.*[class^='st'] {
+		.s_link:hover {
 			    fill: #4F81BD;
 			    fill-opacity: 0.2;
 		}
@@ -406,7 +406,7 @@
 				<path d="M0 737.44 L24.8 721.83 L0 706.23 L0 737.44 Z" class="st8"/>
 			</g>
 		</g>
-		<a target="_top" xlink:href="/engage.html#step1"
+		<a target="_top" class="s_link" xlink:href="/engage.html#step1"
 				xlink:title="Give a brief description of the client we are engaging with and what led them to the business need for interoperability.">
 			<g id="group210-61" transform="translate(602.992,-612.283)" v:mID="210" v:groupContext="group" v:layerMember="1">
 				<v:userDefs>

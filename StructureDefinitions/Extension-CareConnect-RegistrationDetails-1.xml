@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<meta>
-		<lastUpdated value="2017-05-08T15:43:02.388+01:00"/>
+		<lastUpdated value="2017-06-08T11:55:07.229+01:00"/>
 	</meta>
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
 		<valueInteger value="1"/>
@@ -263,8 +263,8 @@
 		</element>
 		<element>
 			<path value="Extension.extension.valuePeriod"/>
-			<short value="Value of extension"/>
-			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+			<short value="The period of time during which the Patient registration applies"/>
+			<definition value="The period of time during which the Patient registration applies."/>
 			<min value="1"/>
 			<max value="1"/>
 			<base>
@@ -843,6 +843,8 @@
 		</element>
 		<element>
 			<path value="Extension.extension.valuePeriod"/>
+			<short value="The period of time during which the Patient registration applies"/>
+			<definition value="The period of time during which the Patient registration applies."/>
 			<min value="1"/>
 			<type>
 				<code value="Period"/>
