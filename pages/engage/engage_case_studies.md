@@ -23,7 +23,7 @@ The development of the Care Connect standard relies on community engagement cura
 [Michael's Story](/engage_michaelsstory)
 <br><br>
 ## Bristol Connecting Care
-
+ 
 Connecting Care is a local electronic patient record that allows health and social care professionals directly involved in your care, to share a summary of your medical record. The pharmacists would like to retrieve medications history of the patient to prepare a list or reconciled medications. They want to know the patient's medications journey. While the initial scenario seemed to be around medication reconciliation, what becomes clear is that it's really around the creation of a consolidated view of medication.
 
 This case study demonstrates the application of the [Care Connect Enagement Process](/engage)
