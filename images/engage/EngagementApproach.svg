@@ -61,7 +61,7 @@
 		</marker>
 	</defs>
 	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
-		<title>Page-1</title>
+		
 		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="9"
 				v:shadowOffsetY="-9"/>
 		<v:layer v:name="Container" v:index="0"/>
@@ -89,7 +89,7 @@
 				<v:ud v:nameU="Embellishment" v:prompt="" v:val="VT4(3)"/>
 				<v:ud v:nameU="MultiFormat" v:prompt="" v:val="VT0(1):26"/>
 			</v:userDefs>
-			<title>Wire</title>
+			
 			<g id="shape349-2" v:mID="349" v:groupContext="groupContent" v:layerMember="0">
 				<g id="shadow349-3" v:groupContext="shadow" v:shadowOffsetX="2.12399" v:shadowOffsetY="-2.12399" v:shadowType="1"
 						transform="matrix(1,0,0,1,2.12399,2.12399)" class="st1">
@@ -101,9 +101,9 @@
 				<v:userDefs>
 					<v:ud v:nameU="msvSDHeadingStyle" v:prompt="" v:val="VT0(1):26"/>
 				</v:userDefs>
-				<title>Sheet.350</title>
+				
 				<g id="shape351-7" v:mID="351" v:groupContext="shape" v:layerMember="0">
-					<title>Sheet.351</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#96afcf)"/>
 						<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#1f477d)"/>
@@ -125,7 +125,7 @@
 							class="st4"/>
 				</g>
 				<g id="shape352-10" v:mID="352" v:groupContext="shape" v:layerMember="0" transform="translate(0,-215.433)">
-					<title>Sheet.352</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="msvSDHeadingStyle" v:prompt="" v:val="VT0(1):26"/>
 						<v:ud v:nameU="Embellishment" v:prompt="" v:val="VT4(2)"/>
@@ -139,7 +139,7 @@
 					<ellipse cx="8.50394" cy="1034.92" rx="8.50394" ry="8.50394" class="st5"/>
 				</g>
 				<g id="shape353-12" v:mID="353" v:groupContext="shape" v:layerMember="0" transform="translate(432.751,-245.939)">
-					<title>Sheet.353</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="msvSDHeadingStyle" v:prompt="" v:val="VT0(1):26"/>
 						<v:ud v:nameU="Embellishment" v:prompt="" v:val="VT4(2)"/>
@@ -159,7 +159,7 @@
 				</g>
 			</g>
 			<g id="shape354-16" v:mID="354" v:groupContext="shape" v:layerMember="0" transform="translate(0,-232.441)">
-				<title>Sheet.354</title>
+				
 				<desc>Agree Business Requirements</desc>
 				<v:userDefs>
 					<v:ud v:nameU="msvStructureType" v:prompt="" v:val="VT4(Heading)"/>
@@ -201,7 +201,7 @@
 				<v:ud v:nameU="Embellishment" v:prompt="" v:val="VT4(3)"/>
 				<v:ud v:nameU="MultiFormat" v:prompt="" v:val="VT0(1):26"/>
 			</v:userDefs>
-			<title>Wire.355</title>
+			
 			<g id="shape355-20" v:mID="355" v:groupContext="groupContent" v:layerMember="0">
 				<g id="shadow355-21" v:groupContext="shadow" v:shadowOffsetX="2.12399" v:shadowOffsetY="-2.12399" v:shadowType="1"
 						transform="matrix(1,0,0,1,2.12399,2.12399)" class="st1">
@@ -213,9 +213,9 @@
 				<v:userDefs>
 					<v:ud v:nameU="msvSDHeadingStyle" v:prompt="" v:val="VT0(1):26"/>
 				</v:userDefs>
-				<title>Sheet.356</title>
+				
 				<g id="shape357-25" v:mID="357" v:groupContext="shape" v:layerMember="0">
-					<title>Sheet.357</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#96afcf)"/>
 						<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#1f477d)"/>
@@ -237,7 +237,7 @@
 							class="st4"/>
 				</g>
 				<g id="shape358-28" v:mID="358" v:groupContext="shape" v:layerMember="0" transform="translate(0,-213.949)">
-					<title>Sheet.358</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="msvSDHeadingStyle" v:prompt="" v:val="VT0(1):26"/>
 						<v:ud v:nameU="Embellishment" v:prompt="" v:val="VT4(2)"/>
@@ -251,7 +251,7 @@
 					<ellipse cx="8.50394" cy="1034.92" rx="8.50394" ry="8.50394" class="st5"/>
 				</g>
 				<g id="shape359-30" v:mID="359" v:groupContext="shape" v:layerMember="0" transform="translate(290.075,-244.455)">
-					<title>Sheet.359</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="msvSDHeadingStyle" v:prompt="" v:val="VT0(1):26"/>
 						<v:ud v:nameU="Embellishment" v:prompt="" v:val="VT4(2)"/>
@@ -271,7 +271,7 @@
 				</g>
 			</g>
 			<g id="shape360-34" v:mID="360" v:groupContext="shape" v:layerMember="0" transform="translate(0,-230.957)">
-				<title>Sheet.360</title>
+				
 				<desc>Define the Solution</desc>
 				<v:userDefs>
 					<v:ud v:nameU="msvStructureType" v:prompt="" v:val="VT4(Heading)"/>
@@ -313,7 +313,7 @@
 				<v:ud v:nameU="Embellishment" v:prompt="" v:val="VT4(3)"/>
 				<v:ud v:nameU="MultiFormat" v:prompt="" v:val="VT0(1):26"/>
 			</v:userDefs>
-			<title>Wire.361</title>
+			
 			<g id="shape361-38" v:mID="361" v:groupContext="groupContent" v:layerMember="0">
 				<g id="shadow361-39" v:groupContext="shadow" v:shadowOffsetX="2.12399" v:shadowOffsetY="-2.12399" v:shadowType="1"
 						transform="matrix(1,0,0,1,2.12399,2.12399)" class="st1">
@@ -325,9 +325,9 @@
 				<v:userDefs>
 					<v:ud v:nameU="msvSDHeadingStyle" v:prompt="" v:val="VT0(1):26"/>
 				</v:userDefs>
-				<title>Sheet.362</title>
+				
 				<g id="shape363-43" v:mID="363" v:groupContext="shape" v:layerMember="0">
-					<title>Sheet.363</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#96afcf)"/>
 						<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#1f477d)"/>
@@ -349,7 +349,7 @@
 							class="st4"/>
 				</g>
 				<g id="shape364-46" v:mID="364" v:groupContext="shape" v:layerMember="0" transform="translate(0,-196.619)">
-					<title>Sheet.364</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="msvSDHeadingStyle" v:prompt="" v:val="VT0(1):26"/>
 						<v:ud v:nameU="Embellishment" v:prompt="" v:val="VT4(2)"/>
@@ -363,7 +363,7 @@
 					<ellipse cx="8.50394" cy="1034.92" rx="8.50394" ry="8.50394" class="st5"/>
 				</g>
 				<g id="shape365-48" v:mID="365" v:groupContext="shape" v:layerMember="0" transform="translate(297.15,-227.125)">
-					<title>Sheet.365</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="msvSDHeadingStyle" v:prompt="" v:val="VT0(1):26"/>
 						<v:ud v:nameU="Embellishment" v:prompt="" v:val="VT4(2)"/>
@@ -383,7 +383,7 @@
 				</g>
 			</g>
 			<g id="shape366-52" v:mID="366" v:groupContext="shape" v:layerMember="0" transform="translate(0,-213.627)">
-				<title>Sheet.366</title>
+				
 				<desc>Deliver the Solution</desc>
 				<v:userDefs>
 					<v:ud v:nameU="msvStructureType" v:prompt="" v:val="VT4(Heading)"/>
@@ -405,105 +405,105 @@
 				<text x="8.14" y="1030.42" class="st6" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Deliver the Solution</text>			</g>
 		</g>
 		<g id="shape390-55" v:mID="390" v:groupContext="shape" v:layerMember="1" transform="translate(508.386,-28.0244)">
-			<title>Circle.390</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape391-57" v:mID="391" v:groupContext="shape" v:layerMember="1" transform="translate(332.638,-28.0244)">
-			<title>Circle.391</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape392-59" v:mID="392" v:groupContext="shape" v:layerMember="1" transform="translate(156.89,-28.0244)">
-			<title>Circle.392</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape383-61" v:mID="383" v:groupContext="shape" v:layerMember="1" transform="translate(545.236,-427.128)">
-			<title>Circle.383</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape384-63" v:mID="384" v:groupContext="shape" v:layerMember="1" transform="translate(718.388,-427.128)">
-			<title>Circle.384</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape385-65" v:mID="385" v:groupContext="shape" v:layerMember="1" transform="translate(891.54,-427.128)">
-			<title>Circle.385</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape386-67" v:mID="386" v:groupContext="shape" v:layerMember="1" transform="translate(1064.69,-427.128)">
-			<title>Circle.386</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape387-69" v:mID="387" v:groupContext="shape" v:layerMember="1" transform="translate(1237.84,-427.128)">
-			<title>Circle.387</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape388-71" v:mID="388" v:groupContext="shape" v:layerMember="1" transform="translate(369.488,-427.128)">
-			<title>Circle.388</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape389-73" v:mID="389" v:groupContext="shape" v:layerMember="1" transform="translate(193.74,-427.128)">
-			<title>Circle.389</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape373-75" v:mID="373" v:groupContext="shape" v:layerMember="1" transform="translate(552.967,-809.13)">
-			<title>Circle</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape379-77" v:mID="379" v:groupContext="shape" v:layerMember="1" transform="translate(726.119,-809.13)">
-			<title>Circle.379</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape380-79" v:mID="380" v:groupContext="shape" v:layerMember="1" transform="translate(899.271,-809.13)">
-			<title>Circle.380</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape381-81" v:mID="381" v:groupContext="shape" v:layerMember="1" transform="translate(1072.42,-809.13)">
-			<title>Circle.381</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
 		<g id="shape382-83" v:mID="382" v:groupContext="shape" v:layerMember="1" transform="translate(1245.57,-809.13)">
-			<title>Circle.382</title>
+			
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
@@ -514,14 +514,14 @@
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 				<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 			</v:userDefs>
-			<title>Start.44</title>
+			
 			<g id="shape204-86" v:mID="204" v:groupContext="shape" v:layerMember="2">
-				<title>Sheet.204</title>
+				
 				<path d="M35.43 1043.42 C15.9 1043.42 0 1027.53 0 1007.99 C0 988.45 15.9 972.56 35.43 972.56 C54.97 972.56 70.87
 							 988.45 70.87 1007.99 C70.87 1027.53 54.97 1043.42 35.43 1043.42 Z" class="st8"/>
 			</g>
 			<g id="shape205-88" v:mID="205" v:groupContext="shape" v:layerMember="2" transform="translate(28.3465,-19.8269)">
-				<title>Sheet.205</title>
+				
 				<v:userDefs>
 					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT0(1):26"/>
 					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#005eb8)"/>
@@ -536,10 +536,10 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Give a brief description of the client we are engaging with and what led them to the business need for interoperability.</title>
+				
 				<desc>Client Context</desc>
 				<g id="shape211-92" v:mID="211" v:groupContext="shape" v:layerMember="2" transform="translate(18.0118,-12.4022)">
-					<title>Sheet.211</title>
+					
 					<path d="M13.67 1018 L3.25 1018 C2.5 1018 1.81 1018.26 1.26 1018.69 C0.88 1018.99 0.56 1019.38 0.34 1019.82 C0.12
 								 1020.27 0 1020.76 0 1021.29 L0 1033.78 L2.85 1033.78 L2.85 1043.42 L13.97 1043.42 L13.97 1033.78
 								 L16.93 1033.78 L16.93 1021.29 C16.93 1020.53 16.67 1019.83 16.24 1019.28 C15.94 1018.89 15.56 1018.57
@@ -570,12 +570,12 @@
 							class="st11"/>
 				</g>
 				<g id="shape212-104" v:mID="212" v:groupContext="shape" v:layerMember="2" transform="translate(0,-10.9224)">
-					<title>Sheet.212</title>
+					
 					<path d="M29.02 1043.42 L70.87 1026.9 L42.26 1020.94 L0 1031.64 L29.02 1043.42 Z" class="st5"/>
 				</g>
 				<g id="shape213-106" v:mID="213" v:groupContext="shape" v:layerMember="2"
 						transform="translate(6.42108,4.54747E-13)">
-					<title>Sheet.213</title>
+					
 					<path d="M13.67 1018 L3.25 1018 C2.5 1018 1.81 1018.26 1.26 1018.69 C0.88 1018.99 0.56 1019.38 0.34 1019.82 C0.12
 								 1020.27 0 1020.76 0 1021.29 L0 1033.78 L2.85 1033.78 L2.85 1043.42 L13.97 1043.42 L13.97 1033.78
 								 L16.93 1033.78 L16.93 1021.29 C16.93 1020.53 16.67 1019.83 16.24 1019.28 C15.94 1018.89 15.56 1018.57
@@ -611,7 +611,7 @@
 			</g>
 		</a>
 		<g id="shape214-120" v:mID="214" v:groupContext="shape" v:layerMember="3" transform="translate(474.379,-901.256)">
-			<title>Dynamic connector</title>
+			
 			<path d="M0 1036.34 L122.06 1036.34" class="st14"/>
 		</g>
 		<a target="_top" xlink:href="/engage.html#step2" class="s_link" xlink:title="Description of the client&#39;s business needs and expectations.">
@@ -620,10 +620,10 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Description of the client&#39;s business needs and expectations.</title>
+				
 				<desc>Case Overview</desc>
 				<g id="shape216-127" v:mID="216" v:groupContext="shape" v:layerMember="2" transform="translate(18.0118,-12.4022)">
-					<title>Sheet.216</title>
+					
 					<path d="M13.67 1018 L3.25 1018 C2.5 1018 1.81 1018.26 1.26 1018.69 C0.88 1018.99 0.56 1019.38 0.34 1019.82 C0.12
 								 1020.27 0 1020.76 0 1021.29 L0 1033.78 L2.85 1033.78 L2.85 1043.42 L13.97 1043.42 L13.97 1033.78
 								 L16.93 1033.78 L16.93 1021.29 C16.93 1020.53 16.67 1019.83 16.24 1019.28 C15.94 1018.89 15.56 1018.57
@@ -654,12 +654,12 @@
 							class="st11"/>
 				</g>
 				<g id="shape217-139" v:mID="217" v:groupContext="shape" v:layerMember="2" transform="translate(0,-10.9224)">
-					<title>Sheet.217</title>
+					
 					<path d="M29.02 1043.42 L70.87 1026.9 L42.26 1020.94 L0 1031.64 L29.02 1043.42 Z" class="st5"/>
 				</g>
 				<g id="shape218-141" v:mID="218" v:groupContext="shape" v:layerMember="2"
 						transform="translate(6.42108,4.54747E-13)">
-					<title>Sheet.218</title>
+					
 					<path d="M13.67 1018 L3.25 1018 C2.5 1018 1.81 1018.26 1.26 1018.69 C0.88 1018.99 0.56 1019.38 0.34 1019.82 C0.12
 								 1020.27 0 1020.76 0 1021.29 L0 1033.78 L2.85 1033.78 L2.85 1043.42 L13.97 1043.42 L13.97 1033.78
 								 L16.93 1033.78 L16.93 1021.29 C16.93 1020.53 16.67 1019.83 16.24 1019.28 C15.94 1018.89 15.56 1018.57
@@ -696,7 +696,7 @@
 		</a>
 		<a target="_top" xlink:href="..\EngagementApproach.html#agree-business-requirements">
 			<g id="shape219-155" v:mID="219" v:groupContext="shape" v:layerMember="3" transform="translate(673.868,-901.256)">
-				<title>Dynamic connector.219</title>
+				
 				<path d="M0 1036.34 L96.1 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -706,10 +706,10 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Describe the current ineroperability issues. </title>
+				
 				<desc>Problem Statement</desc>
 				<g id="shape221-161" v:mID="221" v:groupContext="shape" v:layerMember="2" transform="translate(18.0118,-12.4022)">
-					<title>Sheet.221</title>
+					
 					<path d="M13.67 1018 L3.25 1018 C2.5 1018 1.81 1018.26 1.26 1018.69 C0.88 1018.99 0.56 1019.38 0.34 1019.82 C0.12
 								 1020.27 0 1020.76 0 1021.29 L0 1033.78 L2.85 1033.78 L2.85 1043.42 L13.97 1043.42 L13.97 1033.78
 								 L16.93 1033.78 L16.93 1021.29 C16.93 1020.53 16.67 1019.83 16.24 1019.28 C15.94 1018.89 15.56 1018.57
@@ -740,12 +740,12 @@
 							class="st11"/>
 				</g>
 				<g id="shape222-173" v:mID="222" v:groupContext="shape" v:layerMember="2" transform="translate(0,-10.9224)">
-					<title>Sheet.222</title>
+					
 					<path d="M29.02 1043.42 L70.87 1026.9 L42.26 1020.94 L0 1031.64 L29.02 1043.42 Z" class="st5"/>
 				</g>
 				<g id="shape223-175" v:mID="223" v:groupContext="shape" v:layerMember="2"
 						transform="translate(6.42108,4.54747E-13)">
-					<title>Sheet.223</title>
+					
 					<path d="M13.67 1018 L3.25 1018 C2.5 1018 1.81 1018.26 1.26 1018.69 C0.88 1018.99 0.56 1019.38 0.34 1019.82 C0.12
 								 1020.27 0 1020.76 0 1021.29 L0 1033.78 L2.85 1033.78 L2.85 1043.42 L13.97 1043.42 L13.97 1033.78
 								 L16.93 1033.78 L16.93 1021.29 C16.93 1020.53 16.67 1019.83 16.24 1019.28 C15.94 1018.89 15.56 1018.57
@@ -783,7 +783,7 @@
 		</a>
 		<a xlink:href="..\EngagementApproach.html#agree-business-requirements">
 			<g id="shape224-190" v:mID="224" v:groupContext="shape" v:layerMember="3" transform="translate(847.393,-901.256)">
-				<title>Dynamic connector.224</title>
+				
 				<path d="M0 1036.34 L95.25 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -794,15 +794,15 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Visually represent the business case to confirm understanding of the problem with the client. </title>
+				
 				<desc>Requirements</desc>
 				<g id="shape226-196" v:mID="226" v:groupContext="shape" v:layerMember="2" transform="translate(0,-22.2882)">
-					<title>Sheet.226</title>
+					
 					<path d="M33.22 1003.66 L24.96 994.84 L0 994.84 L0 1041.11 L19.09 1041.11 L21.72 1043.42 L36.56 1043.42 L36.56
 								 1024.92 L33.24 1023.07 L33.22 1003.66 Z" class="st8"/>
 				</g>
 				<g id="shape227-198" v:mID="227" v:groupContext="shape" v:layerMember="2" transform="translate(6.17567,-31.8303)">
-					<title>Sheet.227</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT0(1):26"/>
 						<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#005eb8)"/>
@@ -816,7 +816,7 @@
 				</g>
 				<g id="shape228-201" v:mID="228" v:groupContext="shape" v:layerMember="2"
 						transform="translate(18.6889,2.27374E-13)">
-					<title>Sheet.228</title>
+					
 					<path d="M16.82 1028.68 L26.75 1018.31 C27 1017.23 27.14 1016.09 27.14 1014.92 C27.14 1007.09 21.06 1000.75 13.57
 								 1000.75 C6.07 1000.75 0 1007.09 0 1014.92 C0 1022.74 6.07 1029.09 13.57 1029.09 C14.69 1029.09 15.78
 								 1028.95 16.82 1028.68 ZM21 1022.68 C16.9 1026.96 10.23 1026.96 6.14 1022.68 C2.04 1018.4 2.04 1011.44
@@ -835,7 +835,7 @@
 		</a>
 		<a xlink:href="..\EngagementApproach.html#agree-business-requirements">
 			<g id="shape229-205" v:mID="229" v:groupContext="shape" v:layerMember="3" transform="translate(1020.06,-901.256)">
-				<title>Dynamic connector.229</title>
+				
 				<path d="M0 1036.34 L102.76 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -846,16 +846,16 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Given that the solution is likely to be implemented against existing systems it should be straightforward to identify which data items the client wants to send or receive between those systems. Get XML representation of the data structure if possible. </title>
+				
 				<desc>Dataset</desc>
 				<g id="shape235-211" v:mID="235" v:groupContext="shape" v:layerMember="2">
-					<title>Sheet.235</title>
+					
 					<path d="M28.42 1043.42 L28.34 1026.09 L3.64 1026.09 C1.63 1026.09 0 1024.56 0 1022.67 L0 975.98 C0 974.09 1.63
 								 972.56 3.64 972.56 L55.89 972.56 C57.9 972.56 59.53 974.09 59.53 975.98 L59.53 1022.67 C59.53 1024.56
 								 57.9 1026.09 55.89 1026.09 L39.89 1026.09 L28.42 1043.42 Z" class="st8"/>
 				</g>
 				<g id="shape236-213" v:mID="236" v:groupContext="shape" v:layerMember="2" transform="translate(23.4278,-26.9603)">
-					<title>Sheet.236</title>
+					
 					<path d="M10.11 1032.18 L10.12 1028.5 C10.13 1028.12 10.49 1027.09 10.91 1026.4 L14.37 1021.66 C14.98 1020.83
 								 15.29 1019.83 15.29 1018.7 L15.29 1012.39 C15.29 1010.13 14.06 1008.89 11.84 1008.89 L3.44 1008.89
 								 C1.22 1008.89 0 1010.13 0 1012.39 L0 1018.47 L5.77 1018.47 L5.77 1014.49 C5.81 1014.3 5.94 1014.14
@@ -872,7 +872,7 @@
 		</a>
 		<a xlink:href="..\EngagementApproach.html#agree-business-requirements">
 			<g id="shape237-217" v:mID="237" v:groupContext="shape" v:layerMember="3" transform="translate(1188.91,-901.256)">
-				<title>Dynamic connector.237</title>
+				
 				<path d="M0 1036.34 L104.05 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -883,10 +883,10 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Identify which Care Connect profiles and FHIR resources can be used to meet the requirement. An entity relationship diagram can help to describe the profiles. </title>
+				
 				<desc>Profiles and Resources</desc>
 				<g id="shape239-223" v:mID="239" v:groupContext="shape" v:layerMember="2">
-					<title>Sheet.239</title>
+					
 					<path d="M63.49 993.54 C63.81 992.51 63.97 991.45 63.97 990.38 C63.97 984.29 58.92 979.34 52.72 979.32 C50.97
 								 975.25 46.88 972.56 42.33 972.56 C39.83 972.56 37.41 973.38 35.43 974.88 C33.46 973.38 31.04 972.56
 								 28.53 972.56 C23.99 972.56 19.9 975.25 18.14 979.32 C11.94 979.34 6.9 984.29 6.9 990.38 C6.9 991.45
@@ -898,7 +898,7 @@
 								 C70.87 999.26 67.88 995.13 63.49 993.54 Z" class="st8"/>
 				</g>
 				<g id="shape240-225" v:mID="240" v:groupContext="shape" v:layerMember="2" transform="translate(23.6515,-17.9131)">
-					<title>Sheet.240</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT0(1):26"/>
 						<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#005eb8)"/>
@@ -914,7 +914,7 @@
 					<path d="M8.81 1039.74 L15.37 1039.74" class="st11"/>
 				</g>
 				<g id="shape241-229" v:mID="241" v:groupContext="shape" v:layerMember="2" transform="translate(7.24466,-36.8885)">
-					<title>Sheet.241</title>
+					
 					<path d="M46 1043.42 L57.7 1043.42" class="st18"/>
 					<path d="M49.94 1025.52 L41.68 1033.62" class="st18"/>
 					<path d="M28.65 1017.36 L28.65 1028.82" class="st18"/>
@@ -929,7 +929,7 @@
 			</g>
 		</a>
 		<g id="shape242-239" v:mID="242" v:groupContext="shape" v:layerMember="3" transform="translate(1352.54,-908.343)">
-			<title>Dynamic connector.242</title>
+			
 			<path d="M6.51 1043.42 L190.35 1043.42 L190.35 1428.24 L14.21 1428.24" class="st14"/>
 		</g>
 		<a target="_top" xlink:href="/engage.html#step7" class="s_link" xlink:title="Map the dataset to the profile.">
@@ -938,22 +938,22 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Map the dataset to the profile. </title>
+				
 				<desc>Map Dataset</desc>
 				<g id="shape244-245" v:mID="244" v:groupContext="shape" v:layerMember="2" transform="translate(0,-38.7549)">
-					<title>Sheet.244</title>
+					
 					<ellipse cx="16.0556" cy="1027.37" rx="16.0556" ry="16.0556" class="st8"/>
 				</g>
 				<g id="shape245-247" v:mID="245" v:groupContext="shape" v:layerMember="2"
 						transform="translate(7.76324,2.27374E-13)">
-					<title>Sheet.245</title>
+					
 					<path d="M63.1 1011.1 L31.07 1011.1 L31.07 1043.42 L63.1 1043.42 L63.1 1011.1 ZM10.05 1026.05 C10.01 1026.05
 								 9.97 1026.01 9.97 1025.97 L9.97 1005.98 L16.67 1012.74 L16.67 1007.27 L8.34 998.86 L0 1007.27 L0
 								 1012.74 L6.18 1006.51 L6.18 1025.97 C6.18 1028.12 7.92 1029.88 10.05 1029.88 L29.31 1029.88 L29.31
 								 1026.05 L10.05 1026.05 L10.05 1026.05 Z" class="st5"/>
 				</g>
 				<g id="shape246-249" v:mID="246" v:groupContext="shape" v:layerMember="2" transform="translate(34.1671,-25.6931)">
-					<title>Sheet.246</title>
+					
 					<path d="M23.13 1035.78 L23.13 1016.32 C23.13 1014.16 21.39 1012.4 19.25 1012.4 L0 1012.4 L0 1016.23 L19.25 1016.23
 								 C19.3 1016.23 19.34 1016.27 19.34 1016.32 L19.34 1036.31 L12.64 1029.54 L12.64 1035.01 L20.97 1043.42
 								 L29.31 1035.01 L29.31 1029.54 L23.13 1035.78 Z" class="st8"/>
@@ -966,7 +966,7 @@
 		</a>
 		<a xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape247-253" v:mID="247" v:groupContext="shape" v:layerMember="3" transform="translate(1289.32,-516.436)">
-				<title>Dynamic connector.247</title>
+				
 				<path d="M0 1036.34 L-99.74 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -976,10 +976,10 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Get Profile to Dataset Mapping reviewed and approved by the client. </title>
+				
 				<desc>Obtain Approval</desc>
 				<g id="shape249-259" v:mID="249" v:groupContext="shape" v:layerMember="2" transform="translate(0,-28.6299)">
-					<title>Sheet.249</title>
+					
 					<path d="M45.13 1031.83 L51.64 1031.83 L52.6 1038.09 L60.6 1031.83 L62.89 1031.83 C67.29 1031.83 70.87 1028.31
 								 70.87 1023.99 L70.87 1009.02 C70.87 1004.7 67.29 1001.19 62.89 1001.19 L33.3 1001.19 A8.37736 8.23058
 								 -180 0 0 25.67 1006.52 L7.98 1006.52 C3.58 1006.52 0 1010.03 0 1014.35 L0 1029.32 C0 1033.64 3.58
@@ -987,7 +987,7 @@
 								 44.06 1034.93 45.13 1031.83 Z" class="st10"/>
 				</g>
 				<g id="shape250-262" v:mID="250" v:groupContext="shape" v:layerMember="2" transform="translate(25.3183,-40.2229)">
-					<title>Sheet.250</title>
+					
 					<path d="M19.81 1043.42 C20.08 1042.63 20.23 1041.79 20.23 1040.92 L20.23 1025.95 C20.23 1021.62 16.65 1018.11
 								 12.25 1018.11 L0.4 1018.11 L0 1019.96 L12.25 1019.96 C14.93 1019.96 17.21 1021.68 18.02 1024.04
 								 L18.02 1024.04 C18.23 1024.64 18.34 1025.28 18.34 1025.95 L18.34 1040.92 C18.34 1041.81 18.14 1042.66
@@ -996,13 +996,13 @@
 								 1035.59 L1.89 1021.18 L0 1021.18 Z" class="st17"/>
 				</g>
 				<g id="shape251-265" v:mID="251" v:groupContext="shape" v:layerMember="2" transform="translate(29.5545,-46.1239)">
-					<title>Sheet.251</title>
+					
 					<path d="M23.76 1027.83 L20.87 1024.99 L8.94 1036.72 L7.91 1037.73 L6.88 1036.72 L2.89 1032.81 L0 1035.65 L7.91
 								 1043.42 L23.76 1027.83 Z" class="st8"/>
 				</g>
 				<g id="shape252-267" v:mID="252" v:groupContext="shape" v:layerMember="2"
 						transform="translate(4.09409,6.04871E-08)">
-					<title>Sheet.252</title>
+					
 					<path d="M34.84 1043.42 L39.14 1043.42 L39.14 1037.17 L40.58 1037.17 L40.58 1043.42 L57.78 1043.42 L57.78 1037.17
 								 L59.22 1037.17 L59.22 1043.42 L63.52 1043.42 L63.52 1035.17 C63.52 1031.98 60.88 1029.38 57.63 1029.38
 								 L40.75 1029.38 C37.5 1029.38 34.86 1031.98 34.84 1035.17 L34.84 1043.42 ZM0 1043.42 L4.3 1043.42
@@ -1021,7 +1021,7 @@
 		</a>
 		<a xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape253-273" v:mID="253" v:groupContext="shape" v:layerMember="3" transform="translate(1112.16,-516.436)">
-				<title>Dynamic connector.253</title>
+				
 				<path d="M0 1036.34 L-92.65 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -1031,10 +1031,10 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Define API Signatures and use of Search Parameters </title>
+				
 				<desc>Design API</desc>
 				<g id="shape260-279" v:mID="260" v:groupContext="shape" v:layerMember="2">
-					<title>Sheet.260</title>
+					
 					<path d="M63.49 993.54 C63.81 992.51 63.97 991.45 63.97 990.38 C63.97 984.29 58.92 979.34 52.72 979.32 C50.97
 								 975.25 46.88 972.56 42.33 972.56 C39.83 972.56 37.41 973.38 35.43 974.88 C33.46 973.38 31.04 972.56
 								 28.53 972.56 C23.99 972.56 19.9 975.25 18.14 979.32 C11.94 979.34 6.9 984.29 6.9 990.38 C6.9 991.45
@@ -1046,7 +1046,7 @@
 								 C70.87 999.26 67.88 995.13 63.49 993.54 Z" class="st8"/>
 				</g>
 				<g id="shape261-281" v:mID="261" v:groupContext="shape" v:layerMember="2" transform="translate(23.6515,-17.9131)">
-					<title>Sheet.261</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT0(1):26"/>
 						<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#005eb8)"/>
@@ -1062,7 +1062,7 @@
 					<path d="M8.81 1039.74 L15.37 1039.74" class="st11"/>
 				</g>
 				<g id="shape262-285" v:mID="262" v:groupContext="shape" v:layerMember="2" transform="translate(7.24466,-36.8885)">
-					<title>Sheet.262</title>
+					
 					<path d="M46 1043.42 L57.7 1043.42" class="st18"/>
 					<path d="M49.94 1025.52 L41.68 1033.62" class="st18"/>
 					<path d="M28.65 1017.36 L28.65 1028.82" class="st18"/>
@@ -1077,7 +1077,7 @@
 		</a>
 		<a xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape263-294" v:mID="263" v:groupContext="shape" v:layerMember="3" transform="translate(942.077,-516.436)">
-				<title>Dynamic connector.263</title>
+				
 				<path d="M0 1036.34 L-92.65 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -1088,24 +1088,24 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Define the sequence of interactions expected including the function, input parameters, output parameters etc. </title>
+				
 				<desc>Interaction Flow</desc>
 				<g id="shape265-300" v:mID="265" v:groupContext="shape" v:layerMember="2"
 						transform="translate(793.438,242.392) rotate(45)">
-					<title>Sheet.265</title>
+					
 					<rect x="0" y="1042.01" width="10.7368" height="1.41164" class="st8"/>
 				</g>
 				<g id="shape266-302" v:mID="266" v:groupContext="shape" v:layerMember="2"
 						transform="translate(-675.316,1726.54) rotate(-135.008)">
-					<title>Sheet.266</title>
+					
 					<rect x="0" y="1042.01" width="10.7354" height="1.4088" class="st8"/>
 				</g>
 				<g id="shape267-304" v:mID="267" v:groupContext="shape" v:layerMember="2" transform="translate(7.20633,-7.20638)">
-					<title>Sheet.267</title>
+					
 					<path d="M46.61 989.24 L0 1035.85 L7.58 1043.42 L54.18 996.82 L46.61 989.24 Z" class="st5"/>
 				</g>
 				<g id="shape268-306" v:mID="268" v:groupContext="shape" v:layerMember="2">
-					<title>Sheet.268</title>
+					
 					<path d="M70.1 980.91 C71.12 979.89 71.12 978.24 70.1 977.23 L66.19 973.32 C65.18 972.3 63.53 972.3 62.51 973.32
 								 L58.65 977.18 L66.25 984.77 L70.1 980.91 ZM56.62 979.2 L64.22 986.8 L65.02 986 L57.42 978.41 L56.62
 								 979.2 ZM62.39 988.62 L63.22 987.8 L55.63 980.2 L54.8 981.03 L62.39 988.62 ZM0 1041.64 L1.79 1043.42
@@ -1121,7 +1121,7 @@
 		</a>
 		<a xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape269-311" v:mID="269" v:groupContext="shape" v:layerMember="3" transform="translate(771.999,-516.436)">
-				<title>Dynamic connector.269</title>
+				
 				<path d="M0 1036.34 L-98.32 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -1131,24 +1131,24 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Identify any further techincal considerations to aid understanding. </title>
+				
 				<desc>Technical Context</desc>
 				<g id="shape271-317" v:mID="271" v:groupContext="shape" v:layerMember="2"
 						transform="translate(793.438,242.392) rotate(45)">
-					<title>Sheet.271</title>
+					
 					<rect x="0" y="1042.01" width="10.7368" height="1.41164" class="st8"/>
 				</g>
 				<g id="shape272-319" v:mID="272" v:groupContext="shape" v:layerMember="2"
 						transform="translate(-675.316,1726.54) rotate(-135.008)">
-					<title>Sheet.272</title>
+					
 					<rect x="0" y="1042.01" width="10.7354" height="1.4088" class="st8"/>
 				</g>
 				<g id="shape273-321" v:mID="273" v:groupContext="shape" v:layerMember="2" transform="translate(7.20633,-7.20638)">
-					<title>Sheet.273</title>
+					
 					<path d="M46.61 989.24 L0 1035.85 L7.58 1043.42 L54.18 996.82 L46.61 989.24 Z" class="st5"/>
 				</g>
 				<g id="shape274-323" v:mID="274" v:groupContext="shape" v:layerMember="2">
-					<title>Sheet.274</title>
+					
 					<path d="M70.1 980.91 C71.12 979.89 71.12 978.24 70.1 977.23 L66.19 973.32 C65.18 972.3 63.53 972.3 62.51 973.32
 								 L58.65 977.18 L66.25 984.77 L70.1 980.91 ZM56.62 979.2 L64.22 986.8 L65.02 986 L57.42 978.41 L56.62
 								 979.2 ZM62.39 988.62 L63.22 987.8 L55.63 980.2 L54.8 981.03 L62.39 988.62 ZM0 1041.64 L1.79 1043.42
@@ -1164,7 +1164,7 @@
 		</a>
 		<a xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape275-328" v:mID="275" v:groupContext="shape" v:layerMember="3" transform="translate(596.251,-516.436)">
-				<title>Dynamic connector.275</title>
+				
 				<path d="M0 1036.34 L-101.16 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -1174,10 +1174,10 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Feedback to INTEROpen any necessary changes to Profile definitions. </title>
+				
 				<desc>Curation</desc>
 				<g id="shape277-334" v:mID="277" v:groupContext="shape" v:layerMember="2" transform="translate(0,-28.6299)">
-					<title>Sheet.277</title>
+					
 					<path d="M45.13 1031.83 L51.64 1031.83 L52.6 1038.09 L60.6 1031.83 L62.89 1031.83 C67.29 1031.83 70.87 1028.31
 								 70.87 1023.99 L70.87 1009.02 C70.87 1004.7 67.29 1001.19 62.89 1001.19 L33.3 1001.19 A8.37736 8.23058
 								 -180 0 0 25.67 1006.52 L7.98 1006.52 C3.58 1006.52 0 1010.03 0 1014.35 L0 1029.32 C0 1033.64 3.58
@@ -1185,7 +1185,7 @@
 								 44.06 1034.93 45.13 1031.83 Z" class="st10"/>
 				</g>
 				<g id="shape278-337" v:mID="278" v:groupContext="shape" v:layerMember="2" transform="translate(25.3183,-40.2229)">
-					<title>Sheet.278</title>
+					
 					<path d="M19.81 1043.42 C20.08 1042.63 20.23 1041.79 20.23 1040.92 L20.23 1025.95 C20.23 1021.62 16.65 1018.11
 								 12.25 1018.11 L0.4 1018.11 L0 1019.96 L12.25 1019.96 C14.93 1019.96 17.21 1021.68 18.02 1024.04
 								 L18.02 1024.04 C18.23 1024.64 18.34 1025.28 18.34 1025.95 L18.34 1040.92 C18.34 1041.81 18.14 1042.66
@@ -1194,13 +1194,13 @@
 								 1035.59 L1.89 1021.18 L0 1021.18 Z" class="st17"/>
 				</g>
 				<g id="shape279-340" v:mID="279" v:groupContext="shape" v:layerMember="2" transform="translate(29.5545,-46.1239)">
-					<title>Sheet.279</title>
+					
 					<path d="M23.76 1027.83 L20.87 1024.99 L8.94 1036.72 L7.91 1037.73 L6.88 1036.72 L2.89 1032.81 L0 1035.65 L7.91
 								 1043.42 L23.76 1027.83 Z" class="st8"/>
 				</g>
 				<g id="shape280-342" v:mID="280" v:groupContext="shape" v:layerMember="2"
 						transform="translate(4.09409,6.04871E-08)">
-					<title>Sheet.280</title>
+					
 					<path d="M34.84 1043.42 L39.14 1043.42 L39.14 1037.17 L40.58 1037.17 L40.58 1043.42 L57.78 1043.42 L57.78 1037.17
 								 L59.22 1037.17 L59.22 1043.42 L63.52 1043.42 L63.52 1035.17 C63.52 1031.98 60.88 1029.38 57.63 1029.38
 								 L40.75 1029.38 C37.5 1029.38 34.86 1031.98 34.84 1035.17 L34.84 1043.42 ZM0 1043.42 L4.3 1043.42
@@ -1217,7 +1217,7 @@
 			</g>
 		</a>
 		<g id="shape281-347" v:mID="281" v:groupContext="shape" v:layerMember="3" transform="translate(241.92,-523.523)">
-			<title>Dynamic connector.281</title>
+			
 			<path d="M0 1043.42 L-206.92 1043.42 L-206.92 1446.47 L-43.39 1446.47" class="st14"/>
 		</g>
 		<a target="_top" xlink:href="/engage.html#step13" class="s_link"
@@ -1227,14 +1227,14 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Present final case study to stakeholders and include it into the implementation guide. </title>
+				
 				<desc>Case Study</desc>
 				<g id="shape283-353" v:mID="283" v:groupContext="shape" v:layerMember="2" transform="translate(0,-35.083)">
-					<title>Sheet.283</title>
+					
 					<rect x="0" y="1007.64" width="70.8661" height="35.7831" class="st5"/>
 				</g>
 				<g id="shape284-355" v:mID="284" v:groupContext="shape" v:layerMember="2" transform="translate(44.7739,-31.315)">
-					<title>Sheet.284</title>
+					
 					<path d="M18.46 1018.49 C18.46 1018.49 2.47 1018.49 0 1018.49 L0 1022.93 L0 1022.94 L6 1022.94 C7.55 1022.94
 								 8.19 1023.6 8.21 1024.76 L8.23 1043.42 L12.95 1043.42 L12.95 1036.14 C12.95 1035.89 13.16 1035.68
 								 13.41 1035.68 C13.66 1035.68 13.87 1035.89 13.87 1036.14 L13.87 1043.42 L18.33 1043.42 L18.33 1027.13
@@ -1244,7 +1244,7 @@
 				</g>
 				<g id="shape285-357" v:mID="285" v:groupContext="shape" v:layerMember="2"
 						transform="translate(1.06654,2.27374E-13)">
-					<title>Sheet.285</title>
+					
 					<path d="M64.64 1028.04 L52.3 1028.04 C49.9 1028.04 47.96 1029.98 47.96 1032.38 L47.96 1043.42 L51.34 1043.42
 								 L51.34 1037.27 L52.47 1037.27 L52.47 1043.42 L64.92 1043.42 L64.92 1037.27 L66.05 1037.27 L66.05
 								 1043.42 L68.98 1043.42 L68.98 1032.38 C68.98 1029.98 67.03 1028.04 64.64 1028.04 ZM40.66 1028.04
@@ -1266,7 +1266,7 @@
 		</a>
 		<a xlink:href="..\EngagementApproach.html#define-the-solution">
 			<g id="shape290-362" v:mID="290" v:groupContext="shape" v:layerMember="3" transform="translate(417.668,-516.436)">
-				<title>Dynamic connector.290</title>
+				
 				<path d="M0 1036.34 L-98.32 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -1276,22 +1276,22 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Client implements solution, tests and provides feedback. </title>
+				
 				<desc>Implement Solution</desc>
 				<g id="shape296-368" v:mID="296" v:groupContext="shape" v:layerMember="2" transform="translate(0,-38.7549)">
-					<title>Sheet.296</title>
+					
 					<ellipse cx="16.0556" cy="1027.37" rx="16.0556" ry="16.0556" class="st8"/>
 				</g>
 				<g id="shape297-370" v:mID="297" v:groupContext="shape" v:layerMember="2"
 						transform="translate(7.76324,2.27374E-13)">
-					<title>Sheet.297</title>
+					
 					<path d="M63.1 1011.1 L31.07 1011.1 L31.07 1043.42 L63.1 1043.42 L63.1 1011.1 ZM10.05 1026.05 C10.01 1026.05
 								 9.97 1026.01 9.97 1025.97 L9.97 1005.98 L16.67 1012.74 L16.67 1007.27 L8.34 998.86 L0 1007.27 L0
 								 1012.74 L6.18 1006.51 L6.18 1025.97 C6.18 1028.12 7.92 1029.88 10.05 1029.88 L29.31 1029.88 L29.31
 								 1026.05 L10.05 1026.05 L10.05 1026.05 Z" class="st5"/>
 				</g>
 				<g id="shape298-372" v:mID="298" v:groupContext="shape" v:layerMember="2" transform="translate(34.1671,-25.6931)">
-					<title>Sheet.298</title>
+					
 					<path d="M23.13 1035.78 L23.13 1016.32 C23.13 1014.16 21.39 1012.4 19.25 1012.4 L0 1012.4 L0 1016.23 L19.25 1016.23
 								 C19.3 1016.23 19.34 1016.27 19.34 1016.32 L19.34 1036.31 L12.64 1029.54 L12.64 1035.01 L20.97 1043.42
 								 L29.31 1035.01 L29.31 1029.54 L23.13 1035.78 Z" class="st8"/>
@@ -1305,7 +1305,7 @@
 		</a>
 		<a xlink:href="..\EngagementApproach.html#deliver-the-solution">
 			<g id="shape299-377" v:mID="299" v:groupContext="shape" v:layerMember="3" transform="translate(275.954,-113.386)">
-				<title>Dynamic connector.299</title>
+				
 				<path d="M0 1036.34 L99.74 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -1315,15 +1315,15 @@
 					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 					<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 				</v:userDefs>
-				<title>Identify failures and successes of the project. </title>
+				
 				<desc>Lessons Learnt</desc>
 				<g id="shape301-383" v:mID="301" v:groupContext="shape" v:layerMember="2"
 						transform="translate(28.7894,2.27374E-13)">
-					<title>Sheet.301</title>
+					
 					<path d="M42.08 998.01 L31.62 987.32 L0 987.32 L0 1043.42 L42.08 1043.42 L42.08 998.01 Z" class="st8"/>
 				</g>
 				<g id="shape302-385" v:mID="302" v:groupContext="shape" v:layerMember="2" transform="translate(36.4596,-11.2862)">
-					<title>Sheet.302</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT0(1):26"/>
 						<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#005eb8)"/>
@@ -1335,7 +1335,7 @@
 								 1009.32 L33.77 1009.32 L23.64 998.98 Z" class="st17"/>
 				</g>
 				<g id="shape303-388" v:mID="303" v:groupContext="shape" v:layerMember="2" transform="translate(0,-38.8578)">
-					<title>Sheet.303</title>
+					
 					<path d="M42.3 1028.1 L36.92 1016.52 C35.63 1013.32 33.27 1011.41 30.63 1011.41 L30.5 1011.42 C26.37 1011.51
 								 22.98 1014.47 22.44 1018.46 L22.25 1019.79 L25.82 1019.79 L25.98 1018.81 C26.35 1016.58 28.26 1014.96
 								 30.53 1014.96 C31.21 1014.96 32.61 1015.83 33.43 1017.43 L33.6 1017.8 C33.78 1018.22 34.21 1019.11
@@ -1350,7 +1350,7 @@
 								 1029.54 42.3 1028.1 Z" class="st10"/>
 				</g>
 				<g id="shape304-391" v:mID="304" v:groupContext="shape" v:layerMember="2" transform="translate(3.55143,-42.3973)">
-					<title>Sheet.304</title>
+					
 					<v:userDefs>
 						<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT0(0):26"/>
 						<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#000bae)"/>
@@ -1369,7 +1369,7 @@
 		</a>
 		<a xlink:href="..\EngagementApproach.html#deliver-the-solution">
 			<g id="shape305-396" v:mID="305" v:groupContext="shape" v:layerMember="3" transform="translate(453.12,-113.386)">
-				<title>Dynamic connector.305</title>
+				
 				<path d="M0 1036.34 L99.74 1036.34" class="st14"/>
 			</g>
 		</a>
@@ -1378,14 +1378,14 @@
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 				<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
 			</v:userDefs>
-			<title>End.43</title>
+			
 			<g id="shape307-402" v:mID="307" v:groupContext="shape" v:layerMember="2">
-				<title>Sheet.307</title>
+				
 				<path d="M35.43 1043.42 C15.9 1043.42 0 1027.53 0 1007.99 C0 988.45 15.9 972.56 35.43 972.56 C54.97 972.56 70.87
 							 988.45 70.87 1007.99 C70.87 1027.53 54.97 1043.42 35.43 1043.42 Z" class="st8"/>
 			</g>
 			<g id="shape308-404" v:mID="308" v:groupContext="shape" v:layerMember="2" transform="translate(19.8425,-19.8425)">
-				<title>Sheet.308</title>
+				
 				<v:userDefs>
 					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT0(1):26"/>
 					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#005eb8)"/>
@@ -1394,7 +1394,7 @@
 			</g>
 		</g>
 		<g id="shape309-407" v:mID="309" v:groupContext="shape" v:layerMember="3" transform="translate(630.285,-127.559)">
-			<title>Dynamic connector.309</title>
+			
 			<path d="M0 1050.51 L149.35 1050.51" class="st14"/>
 		</g>
 	</g>
