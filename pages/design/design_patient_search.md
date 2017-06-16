@@ -31,7 +31,8 @@ Most NHS trusts will typically have one central system  called the Patient Admin
 max-width="200px" file="IHE/Iti_pam_ip.jpg" alt="Patient Identity Feeds"
 caption="Patient Identity Feeds" %}
 
-Care Connect API uses a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) {% include custom/patterns.inline.html content="[resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI)" %} to provide access to the central Patient repository which is particularly suited to:
+HL7v2 is a mature and widely used standard but it is not suitable for querying patient demographic details (see HL7v2 Patient Demographics Query below). Mostly because it is a messaging standard and not an API. Care Connect API gives an API using [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) interface following a {% include custom/patterns.inline.html content="[resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI)" %} to provide access to the central Patient repository.
+This is particularly suited to:
 * A health portal securely exposing demographics data to browser based plugins
 * Medical devices which need to access patient demographic information
 * Mobile devices used by physicians (example bedside eCharts) which need to establish
@@ -42,7 +43,7 @@ etc.
 * Any low resource application which exposes patient demographic search functionality
 * A facade providing a simple API to a complex interface
 
-## 2. Basic Patient Search ##
+## 2. Client Patient Search ##
 
 ### 2.1 Foundation ###
 
@@ -246,18 +247,18 @@ GET [baseUrl]/Patient?identifier=[system]|[code]
 The system is `https://fhir.nhs.uk/Id/nhs-number` and the code is `9876543210`, e.g.
 
 ```
-http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
+GET [baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 ```
 
-This will return all Patient resources with a NHS number of 9876543210 (this may be more than one). NHS Number is not normally the main patient identifier within a trust, this is for a number of reasons:
-* Patient doesn't have a NHS Number (foreign visitor or from another home nation in the UK)
-* Patient's NHS number hasn't been validated (and so can not be reliably used for communication)
-* Patient has not been identified yet
+This will return all Patient resources with a NHS number of 9876543210 (this may be more than one). NHS Number may not be the main patient identifier within a NHS Organisation or Health Enterprise, this is for a number of reasons:
+* Patient doesn't currently have a NHS Number (foreign visitor or from another home nation in the UK)
+* Patient's NHS number hasn't been validated (and so can not be used for interoperability/communication)
+* Patient has not been identified accurately.
 
 For these reasons the trust/health organisation will use it's own primary identifier, often referred to as Hospital or District number. Organisation's will need to create their own system for the identifier, in the example Example NHS Trust have used 'https://fhir.example.nhs.uk/PAS/Patient' to indicate PAS Hospital Number. They use this with the API as shown below:
 
 ```
-GET http://[baseUrl]/Patient?identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
+GET [baseUrl]/Patient?identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
 ```
 
 {% include note.html content="Trust or Organisation can choose to use their main identifier as the logical Id. [TODO add notes about national NHS systems using NHS Number this way.]" %}
@@ -375,7 +376,7 @@ Currently, the only national resources this would apply to are:
 {% include image.html
 max-width="200px" file="design/National Basic Process Flow PDQm.jpg" alt="National NHS Process Flow PDQ FHIR" caption="National NHS Process Flow Patient Search FHIR" %}
 -->
-## 3. Patient Search Gateway ##
+## 3. Server()/Gateway) Patient Search  ##
 
 <!-- This section is introducing the facade pattern. This may not sound useful but is probably the most common patterns with FHIR in the UK -->
 Patient searches using FHIR can be used with other patient search systems such NHS Spine Mini Services Provider (SMSP), HL7v2 Patient queries, etc. In this way the Patient Demographics
