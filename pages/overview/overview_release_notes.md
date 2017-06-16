@@ -18,6 +18,10 @@ Added
 Updated
 - Communication Channels (Help & Support) revised to reference the Care Connect Inbox and the INTEROpen website
 - Corrected some styling issues
+- Design & Build section template added as a process
+- Test section example added of end to end process
+- Assure section added to provide overview of end to end process
+- Deploy section added to provide overview of end to end process
 
 ## 0.4.0-alpha.0 ##
 
