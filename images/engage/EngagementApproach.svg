@@ -29,7 +29,7 @@
 		.st19 {fill:#feffff;pointer-events:none;}
 		.st20 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 
-			.st7:hover {
+			.st7:hover ~ .st20{
 				fill-opacity: 0.2;
 				filter: alpha(opacity=20);
 			}
