@@ -193,8 +193,6 @@ table tr td {
     hyphens: auto;
 }
 
-tr:nth-child(even){background-color:#b6d3ee}
-
 p.external a {
     text-align:right;
     font-size:12px;
