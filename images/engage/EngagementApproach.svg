@@ -31,6 +31,7 @@
 
   		@keyframes linkhover {
 			from {transform:scale(1);}
+			to {transform:scale(1.2);}
 		}
 
 		@keyframes linkpress {
