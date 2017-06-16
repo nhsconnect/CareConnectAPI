@@ -84,24 +84,25 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 
 ## API Signatures ##
 
-As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.
+As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verified' NHS Number.
 ~~~
-GET/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
+GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 ~~~
 
-As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.
+As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an Trust/Hospital Number or Master Patient Id (MPI)) so that I can find medications for a patient when I don't know the traced and verified NHS Number.
+
 ~~~
-GET/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
+GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
 ~~~
 
 As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific system so I can build an accurate list of reconciled medications.
 ~~~
-GET/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
+GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
 ~~~
 
 ## Search Query Parameters ##
 
-<table style="width:100%;max-width:100%"> 
+<table style="width:100%;max-width:100%">
 <tr><th>Name</th><th>Type</th><th>Description</th><th>Conformance</th><th>Path</th></tr>
 <tr><td>effective-date</td><td>date</td><td>Date when patient was taking (or not taking) the medication</td><td>SHOULD</td><td>MedicationStatement.effective[x]</td></tr>
 <tr><td>patient</td><td>reference</td><td>The identity of a patient to list statements for</td><td>SHALL</td><td>MedicationStatement.patient (Patient)</td></tr>
@@ -133,7 +134,7 @@ While the acceptance criteria is not fully developed, below is an example of som
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve all prescriptions from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
 <tr><td colspan="2">
 <ul>
-<li>I am able to call an API with the URL: GET /MedicationOrder?patient.identifier=http://fhir/nhs.net/Id/nhs-number|9876543210.</li>
+<li>I am able to call an API with the URL: GET /MedicationOrder?patient.identifier=https://fhir/nhs.net/Id/nhs-number|9876543210.</li>
 <li>I am able to pass NHS number as an input parameter</li>
 <li>The API returns profile "MedicationOrder" with medications information about patient as a populated JSON object in the following format: &lt;&lt;Json Object&gt;&gt;</li>
 </ul>
