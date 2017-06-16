@@ -29,26 +29,17 @@
 		.st19 {fill:#feffff;pointer-events:none;}
 		.st20 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 
-			.st7:hover {
-				fill-opacity: 0.2;
-				filter: alpha(opacity=20);
-			}
-
-
-		@media all and (-ms-high-contrast:none),(-ms-high-contrast: active) {
-			.st7:hover {
-				opacity: 0.2;
-				filter: alpha(opacity=20);
-			}
+		.st7:hover {
+			transition: fill-opacity 0.2s ease-in;
+			fill-opacity: 0.2;
+			filter: alpha(opacity=20);
 		}
 
-		@supports (-ms-accelerator:true) {
-			.st7:hover {
-				opacity: 0.2;
-				filter: alpha(opacity=20);
-			}
+		.st7:active {
+			transition-duration: 0s;
+			fill-opacity: 0.4;
+			filter: alpha(opacity=40);
 		}
-
   		@keyframes linkhover {
 			from {transform:scale(1);}
 			to {transform:scale(1.2);}
@@ -60,7 +51,7 @@
 		}
 
 		.s_link:hover {
-		    	transform-origin: 50% 50%;
+		    	transform-origin: 50% 50%; 
 			animation: linkhover 0.1s 0s 1 normal ease-in forwards;
 		}
 		@-moz-document url-prefix() {.s_link:hover {transform: none}}
@@ -467,20 +458,24 @@
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
-		<g id="shape386-67" v:mID="386" v:groupContext="shape" v:layerMember="1" transform="translate(1064.69,-427.128)">
-			
-			<v:userDefs>
-				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
-			</v:userDefs>
-			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
-		</g>
-		<g id="shape387-69" v:mID="387" v:groupContext="shape" v:layerMember="1" transform="translate(1237.84,-427.128)">
-			
-			<v:userDefs>
-				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
-			</v:userDefs>
-			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
-		</g>
+		<a target="_top" class="s_link" xlink:href="/engage.html#step7" xlink:title="Map the dataset to the profile.">
+			<g id="shape386-67" v:mID="386" v:groupContext="shape" v:layerMember="1" transform="translate(1064.69,-427.128)">
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
+			</g>
+		</a>
+		<a target="_top" class="s_link" xlink:href="/engage.html#step6"
+				xlink:title="Identify which Care Connect profiles and FHIR resources can be used to meet the requirement. An entity relationship diagram can help to describe the profiles.">
+			<g id="shape387-69" v:mID="387" v:groupContext="shape" v:layerMember="1" transform="translate(1237.84,-427.128)">
+
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
+			</g>
+		</a>
 		<g id="shape388-71" v:mID="388" v:groupContext="shape" v:layerMember="1" transform="translate(369.488,-427.128)">
 			
 			<v:userDefs>
@@ -495,41 +490,54 @@
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
-		<g id="shape373-75" v:mID="373" v:groupContext="shape" v:layerMember="1" transform="translate(552.967,-809.13)">
-			
-			<v:userDefs>
-				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
-			</v:userDefs>
-			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
-		</g>
-		<g id="shape379-77" v:mID="379" v:groupContext="shape" v:layerMember="1" transform="translate(726.119,-809.13)">
-			
-			<v:userDefs>
-				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
-			</v:userDefs>
-			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
-		</g>
-		<g id="shape380-79" v:mID="380" v:groupContext="shape" v:layerMember="1" transform="translate(899.271,-809.13)">
-			
-			<v:userDefs>
-				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
-			</v:userDefs>
-			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
-		</g>
-		<g id="shape381-81" v:mID="381" v:groupContext="shape" v:layerMember="1" transform="translate(1072.42,-809.13)">
-			
-			<v:userDefs>
-				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
-			</v:userDefs>
-			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
-		</g>
-		<g id="shape382-83" v:mID="382" v:groupContext="shape" v:layerMember="1" transform="translate(1245.57,-809.13)">
-			
-			<v:userDefs>
-				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
-			</v:userDefs>
-			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
-		</g>
+		<a target="_top" class="s_link" xlink:href="/engage.html#step1"
+				xlink:title="Give a brief description of the client we are engaging with and what led them to the business need for interoperability.">
+			<g id="shape373-75" v:mID="373" v:groupContext="shape" v:layerMember="1" transform="translate(552.967,-809.13)">
+
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
+			</g>
+		</a>
+		<a target="_top" class="s_link" xlink:href="/engage.html#step2" xlink:title="Description of the client&#39;s business needs and expectations.">
+			<g id="shape379-77" v:mID="379" v:groupContext="shape" v:layerMember="1" transform="translate(726.119,-809.13)">
+
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
+			</g>
+		</a>
+		<a target="_top" class="s_link" xlink:href="/engage.html#step3" xlink:title="Describe the current ineroperability issues.">
+			<g id="shape380-79" v:mID="380" v:groupContext="shape" v:layerMember="1" transform="translate(899.271,-809.13)">
+
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
+			</g>
+		</a>
+		<a target="_top" class="s_link" xlink:href="/engage.html#step4"
+				xlink:title="Visually represent the business case to confirm understanding of the problem with the client.">
+			<g id="shape381-81" v:mID="381" v:groupContext="shape" v:layerMember="1" transform="translate(1072.42,-809.13)">
+
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
+			</g>
+		</a>
+		<a target="_top" class="s_link" xlink:href="/engage.html#step5"
+				xlink:title="Given that the solution is likely to be implemented against existing systems it should be straightforward to identify which data items the client wants to send or receive between those systems. Get XML representation of the data structure if possible.">
+			<g id="shape382-83" v:mID="382" v:groupContext="shape" v:layerMember="1" transform="translate(1245.57,-809.13)">
+
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
+			</g>
+		</a>
 		<g id="group203-85" transform="translate(403.504,-872.91)" v:mID="203" v:groupContext="group" v:layerMember="2">
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
