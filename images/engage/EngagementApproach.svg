@@ -425,13 +425,6 @@
 				<rect x="0" y="999.419" width="297.15" height="44.0037" class="st3"/>
 				<text x="8.14" y="1030.42" class="st6" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Deliver the Solution</text>			</g>
 		</g>
-		<g id="shape390-55" v:mID="390" v:groupContext="shape" v:layerMember="1" transform="translate(548.398,-28.0244)">
-			
-			<v:userDefs>
-				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
-			</v:userDefs>
-			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
-		</g>
 		<g id="shape391-57" v:mID="391" v:groupContext="shape" v:layerMember="1" transform="translate(372.65,-28.0244)">
 			
 			<v:userDefs>
@@ -589,6 +582,13 @@
 							class="st11"/>
 					<path d="M40.16 1009.66 A4.81307 4.86244 -180 1 0 30.53 1009.66 A4.81307 4.86244 -180 1 0 40.16 1009.66"
 							class="st11"/>
+					<g id="shape390-55" v:mID="390" v:groupContext="shape" v:layerMember="1" transform="translate(548.398,-28.0244)">
+
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
+					</g>
 				</g>
 				<g id="shape212-104" v:mID="212" v:groupContext="shape" v:layerMember="2" transform="translate(0,-10.9224)">
 					
