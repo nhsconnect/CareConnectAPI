@@ -30,7 +30,7 @@ The process is broken down into 15 descrete steps that are boradly organised ont
 ### Agree Business Requirements ###
 
 <table style="min-width:100%;width:100%">
-<tr id="step1"><th style="width:3em;"></th><th style="width:11em;">Step</th><th>Description</th><th style="width:11em;">Formal Output</th></tr>
+<thead><tr id="step1"><th style="width:3em;"></th><th style="width:11em;">Step</th><th>Description</th><th style="width:11em;">Formal Output</th></tr></thead>
 <tr id="step2"><td>1</td><td>Document Client's Context</td><td>Give a brief description of the client we are engaging with and what led them to the business need for interoperability.</td><td><ul style="padding-left:1em;padding-top:0"><li style="margin:0;">Short Textual Statement</li></ul></td></tr>
 <tr id="step3"><td>2</td><td>Document Case Overview</td><td>Description of the client's business needs and expectations.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Short Textual Statement</li></ul></td></tr>
 <tr id="step4"><td>3</td><td>Document Problem Statement</td><td>Describe the current ineroperability issues.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Problem Statement Diagram</li></ul></td></tr>
@@ -41,7 +41,7 @@ The process is broken down into 15 descrete steps that are boradly organised ont
 ### Define the Solution ###
 
 <table style="min-width:100%;width:100%">
-<tr id="step6"><th style="width:3em;"></th><th style="width:11em;">Step</th><th>Description</th><th style="width:11em;">Formal Output</th></tr>
+<thead><tr id="step6"><th style="width:3em;"></th><th style="width:11em;">Step</th><th>Description</th><th style="width:11em;">Formal Output</th></tr></thead>
 <tr id="step7"><td>6</td><td>Identify Care Connect Profiles and FHIR Resources</td><td>Identify which Care Connect profiles and FHIR resources can be used to meet the requirement. An entity relationship diagram can help to describe the profiles.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Entity Relationship Diagram</li></ul></td></tr>
 <tr id="step8"><td>7</td><td>Map Dataset</td><td>Map the dataset to the profile.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Dataset Mapping</li></ul></td></tr>
 <tr id="step9"><td>8</td><td>Obtain Approval</td><td>Get Profile to Dataset Mapping reviewed and approved by the client.</td><td></td></tr>
@@ -54,7 +54,7 @@ The process is broken down into 15 descrete steps that are boradly organised ont
 ### Deliver the Solution ###
 
 <table style="min-width:100%;width:100%">
-<tr id="step13"><th style="width:3em;"></th><th style="width:11em;">Step</th><th>Description</th><th style="width:11em;">Formal Output</th></tr>
+<thead><tr id="step13"><th style="width:3em;"></th><th style="width:11em;">Step</th><th>Description</th><th style="width:11em;">Formal Output</th></tr></thead>
 <tr id="step14"><td>13</td><td>Present <a href="/engage_case_studies.html">Case Study</a></td><td>Present final case study to stakeholders and include it into the implementation guide.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Presentation</li><li>Updated Implementation Guide</li></ul></td></tr>
 <tr id="step15"><td>14</td><td>Implement Solution</td><td>Client implements solution, tests and provides feedback.</td><td></td></tr>
 <tr><td>15</td><td>Learning</td><td>Identify failures and successes of the project.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Plan to improve processes, preventing a repeat of failure and improving success rate.</li></ul></td></tr>
