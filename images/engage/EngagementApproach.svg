@@ -51,7 +51,7 @@
 		}
 
 		.s_link:hover {
-		    	transform-origin: 50% 50%;
+		    	transform-origin: 50% 50%; 
 			animation: linkhover 0.1s 0s 1 normal ease-in forwards;
 		}
 		@-moz-document url-prefix() {.s_link:hover {transform: none}}
