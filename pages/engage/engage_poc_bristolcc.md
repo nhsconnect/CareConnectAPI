@@ -36,7 +36,7 @@ The Pharmacist does not have a consolidated view of a patient's medications beca
 
 While the scope is initially demonstrated in the use case diagram, it is possible to refine the scope further within user stories that originate from conversations with the user. For example, from the perspective of the current Care Connect specification, security is outside of the scope of profile definition and further discussions would be required within the trust to clarify where responsibility lies.
 
-<table style="width:100%;max-width:100%"><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr>
+<table style="width:100%;max-width:100%"><thead><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr></thead>
 <tr><td colspan="2">In Scope</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
@@ -103,7 +103,7 @@ GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-
 ## Search Query Parameters ##
 
 <table style="width:100%;max-width:100%">
-<tr><th>Name</th><th>Type</th><th>Description</th><th>Conformance</th><th>Path</th></tr>
+<thead><tr><th>Name</th><th>Type</th><th>Description</th><th>Conformance</th><th>Path</th></tr></thead>
 <tr><td>effective-date</td><td>date</td><td>Date when patient was taking (or not taking) the medication</td><td>SHOULD</td><td>MedicationStatement.effective[x]</td></tr>
 <tr><td>patient</td><td>reference</td><td>The identity of a patient to list statements for</td><td>SHALL</td><td>MedicationStatement.patient (Patient)</td></tr>
 <tr><td>status</td><td>token</td><td>Return statements that match the given status</td><td>SHOULD</td><td>MedicationStatement.status</td></tr>
@@ -130,7 +130,7 @@ GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-
 
 While the acceptance criteria is not fully developed, below is an example of some possible criteria that could be defined.
 
-<table style="width:100%;max-width:100%"><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr>
+<table style="width:100%;max-width:100%"><thead><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr></thead>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve all prescriptions from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
 <tr><td colspan="2">
 <ul>
