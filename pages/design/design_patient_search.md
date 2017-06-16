@@ -428,3 +428,15 @@ angular.module('App').controller('PatientDetailsController', function ($scope, $
 
 {% include image.html
 max-width="200px" file="design/Gateway Process Flow PDQm.jpg" alt="Gateway Process Flow Patient Search FHIR" caption="Sample Patient Search FHIR gateway process flow" %}
+
+#### Java Example 2 - Patient Resource from CSV line ####
+
+The example code can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/blob/master/ImplementationGuideExplore/src/main/java/uk/nhs/careconnect/examples/fhir/ExamplePatientCSV.java). SystemUri's are stored in a separate [CareConnectSystem](https://github.com/nhsconnect/careconnect-java-examples/blob/master/ImplementationGuideExplore/src/main/java/uk/nhs/careconnect/examples/fhir/CareConnectSystem.java) class.
+
+<script src="https://gist.github.com/KevinMayfield/f11ff38e41583ed4c656aedaa706af5c.js"></script>
+
+This class can be called by using the code below, which will out the resource to the console in XML format.
+
+<script src="https://gist.github.com/KevinMayfield/4ad30f2bc4cb6010288e9411b691e789.js"></script>
+
+<script src="https://gist.github.com/KevinMayfield/f7443fced7c8cc746473a13253abb2e7.js"></script>
