@@ -12,6 +12,7 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 ## 0.5.0-alpha.0 ##
 
 Added
+- Community and FHIR Tools sections to Help & Support sections
 - Diagram to support the engagement process
 - Foundation API definitions
 
@@ -20,7 +21,20 @@ Updated
 - Clinical API definitions
 - Individuals and Entities API definitions
 - Workflow API definitions
-- All Explore pages to similar layout
+- All Explore section pages to similar layout
+- Communication Channels (Help & Support) revised to reference the Care Connect Inbox and the INTEROpen website
+- Corrected some styling issues
+- Design & Build section template added as a process
+- Test section example added of end to end process
+- Assure section added to provide overview of end to end process
+- Deploy section added to provide overview of end to end process
+- Major changes to underlying folder structure to support use and updating of information
+- Conformance profile updates to current alpha state
+- Glossary
+- Provide APIs with a clickable diagram used throughout later stages
+- Linking to developer.nhs.uk
+- Engagement approach with look and feel and linking
+
 
 ## 0.4.0-alpha.0 ##
 
