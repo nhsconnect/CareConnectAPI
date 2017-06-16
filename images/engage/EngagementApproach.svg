@@ -28,6 +28,41 @@
 		.st18 {stroke:#000c9d;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
 		.st19 {fill:#feffff}
 		.st20 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+
+		@media all and (-ms-high-contrast:none),(-ms-high-contrast: active) {
+			.st7:hover {
+				opacity: 0.2;
+				filter: alpha(opacity=20);
+			}
+		}
+
+		@supports (-ms-accelerator:true) {
+			.st7:hover {
+				opacity: 0.2;
+				filter: alpha(opacity=20);
+			}
+		}
+
+  		@keyframes linkhover {
+			from {transform:scale(1);}
+			to {transform:scale(1.2);}
+		}
+
+		@keyframes linkpress {
+			from {transform:scale(1.2);}
+			to {transform:scale(0.9);}
+		}
+
+		.s_link:hover {
+		    	transform-origin: 50% 50%;
+			animation: linkhover 0.1s 0s 1 normal ease-in forwards;
+		}
+		@-moz-document url-prefix() {.s_link:hover {transform: none}}
+		.s_link:active {
+		    	transform-origin: 50% 50%;
+		    	animation: linkpress 0s 0s 1 normal ease-in forwards;
+		}
+		@-moz-document url-prefix() {.s_link:hover {transform: none}}
 	]]>
 	</style>
 
