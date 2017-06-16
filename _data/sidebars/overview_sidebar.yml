@@ -90,7 +90,7 @@ entries:
           - title: Procedure
             url: /restfulapis_clinical_procedure.html
             output: web
-      - title: Identification
+      - title: Individuals &amp; Entities
         output: web
         subfolderitems:
           - title: Location
@@ -111,7 +111,7 @@ entries:
           - title: Encounter
             url: /restfulapis_workflow_encounter.html
             output: web
-      - title: Conformance
+      - title: Foundation
         output: web
         subfolderitems:
         - title: Conformance
