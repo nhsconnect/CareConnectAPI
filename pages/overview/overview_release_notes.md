@@ -13,13 +13,18 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 Added
 - Diagram to support the engagement process
+- Foundation API definitions
 
 Updated
 - Communication Channels (Help & Support) revised to reference the Care Connect Inbox and the INTEROpen website.
+- Clinical API definitions
+- Individuals and Entities API definitions
+- Workflow API definitions
+- All Explore pages to similar layout
 
 ## 0.4.0-alpha.0 ##
 
-Added 
+Added
 - Description of providing an API process
 - Standard definition of a API definition
 - Started Test explanation section
@@ -28,7 +33,7 @@ Added
 
 Defined Patient definition adding :
 - References section - starting to link to user stories
-- HTTP headers 
+- HTTP headers
 - Response codes - Also added a non exhaustive API Codes page to describe all of the codes
 - Search parameters - added section to include guidance on how a search can happen in practice localised on the NHS
 
@@ -62,4 +67,3 @@ Engage
 - Added Overview explanation
 - Added Michael's Stories showing the example user stories
 - Linked Michael's Stories to APIs currently available and defined above
-
