@@ -32,32 +32,31 @@ The FHIR Care Connect profiles described in the Explore section of this implemen
 ## 2. Profiles ##
 This section looks at the Care Connect profiles covered within this implementation guide.
 
-### 2.1 Clinical ###
 
-| General             |  Medication &amp; Immunisation |
-|---------------------|--------------------------------|
-| [AllergyIntolerance](restfulapis_clinical_allergyintolerance.html)  |[ Medication](restfulapis_clinical_medication.html)                     |
-| [Condition](restfulapis_clinical_condition.html) (Problem) | [MedicationOrder ](restfulapis_clinical_medicationorder.html)               |
-| [Procedure](restfulapis_clinical_procedure.html)           | [MedicationStatement ](restfulapis_clinical_medicationstatement.html)           |
-| [Observation](restfulapis_clinical_observation.html) | [Immunization](restfulapis_clinical_immunization.html)                   |
+<table style="min-width:100%;width:100%">
+<tr id="clinical"><th style="width:50%;">Clinical</th><th style="width:50%;"></th></tr>
+<tr id="clinicald"><th>Summary</th><th>Medication</th></tr>
+<tr><td><a href="restfulapis_clinical_allergyintolerance.html">AllergyIntolerance</a></td><td><a href="restfulapis_clinical_medication.html">Medication</a></td></tr>
+<tr><td><a href="restfulapis_clinical_condition.html">Condition</a> (Problem)</td><td><a href="restfulapis_clinical_medicationorder.html">MedicationOrder</a></td></tr>
+<tr><td><a href="restfulapis_clinical_procedure.html">Procedure</a></td><td><a href="restfulapis_clinical_medicationstatement.html">MedicationStatement</a></td></tr>
+<tr><td><a href="restfulapis_clinical_observation.html">Observation</a></td><td><a href="restfulapis_clinical_immunization.html">Immunization</a></td></tr>
+</table>
 
-<!--- |   |  [Flag ](restfulapis_clinical_medicationflag.html)(Medication)  | --->
+<table style="min-width:100%;width:100%">
+<tr id="identification"><th style="width:50%;">Identification</th><th style="width:50%;"></th></tr>
+<tr id="identificationd"><th>Individuals </th><th>Groups &amp; Entities</th></tr>
+<tr><td><a href="restfulapis_identification_patient.html">Patient</a></td><td><a href="restfulapis_identification_organisation.html">Organization</a></td></tr>
+<tr><td><a href="restfulapis_identification_practitioner.html">Practitioner</a> (Problem)</td><td><a href="restfulapis_identification_location.html">Location</a></td></tr>
+</table>
 
-### 2.2. Identification ###
+<table style="min-width:100%;width:100%">
+<tr id="workflow"><th style="width:50%;">Workflow</th><th style="width:50%;"></th></tr>
+<tr id="workflowdd"><th>Patient Management</th><th></th></tr>
+<tr><td><a href="restfulapis_workflow_encounter.html">Encounter</a></td><td></td></tr>
+</table>
 
-| Individuals  | Groups &amp; Entities       |
-|--------------|--------------|
-| [Patient ](restfulapis_identification_patient.html)     | [Organization](restfulapis_identification_organisation.html) |   
-| [Practitioner](restfulapis_identification_practitioner.html) | [Location](restfulapis_identification_location.html)     |  
-
-### 2.3. Workflow ###
-
-| Patient Management |
-|--------------------|
-| [Encounter](restfulapis_workflow_encounter.html)          |
-
-### 3.4 Conformance ###
-
-| Terminology | Operations Control |
-|-------------|--------------------|
-| [ValueSet](restfulapis_conformance_valueset.html)    | [Conformance](restfulapis_conformance_conformance.html)          |
+<table style="min-width:100%;width:100%">
+<tr id="conformance"><th style="width:50%;">Conformance</th><th style="width:50%;"></th></tr>
+<tr id="conformanced"><th>Terminology</th><th>Operations Control</th></tr>
+<tr><td><a href="restfulapis_conformance_valueset.html">ValueSet</a></td><td><a href="restfulapis_conformance_conformance.html">Conformance</a></td></tr>
+</table>
