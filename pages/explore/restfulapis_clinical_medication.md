@@ -21,7 +21,7 @@ GET [baseUrl]/Medication/[id]</div>
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET [baseUrl]/Medication?[searchparameters]</div>
-Search for all Medication resources for a patient. Fetches a bundle of all `Medication` resources for the specified patient.
+Search Medication resources. Returns a bundle of all `Medication` resources for the specified search criteria.
 
 {% include custom/search.header.html resource="Medication" %}
 
