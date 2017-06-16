@@ -501,13 +501,16 @@
 			</v:userDefs>
 			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
 		</g>
-		<g id="shape373-75" v:mID="373" v:groupContext="shape" v:layerMember="1" transform="translate(552.967,-809.13)">
-			
-			<v:userDefs>
-				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
-			</v:userDefs>
-			<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
-		</g>
+		<a target="_top" class="s_link" xlink:href="/engage.html#step1"
+				xlink:title="Give a brief description of the client we are engaging with and what led them to the business need for interoperability.">
+			<g id="shape373-75" v:mID="373" v:groupContext="shape" v:layerMember="1" transform="translate(552.967,-809.13)">
+
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M0 958.38 A85.0394 85.0394 0 0 1 170.08 958.38 A85.0394 85.0394 0 1 1 0 958.38 Z" class="st7"/>
+			</g>
+		</a>
 		<g id="shape379-77" v:mID="379" v:groupContext="shape" v:layerMember="1" transform="translate(726.119,-809.13)">
 			
 			<v:userDefs>
