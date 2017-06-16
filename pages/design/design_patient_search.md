@@ -376,12 +376,10 @@ Currently, the only national resources this would apply to are:
 {% include image.html
 max-width="200px" file="design/National Basic Process Flow PDQm.jpg" alt="National NHS Process Flow PDQ FHIR" caption="National NHS Process Flow Patient Search FHIR" %}
 -->
-## 3. Server()/Gateway) Patient Search  ##
+## 3. Server(/Gateway) Patient Search  ##
 
 <!-- This section is introducing the facade pattern. This may not sound useful but is probably the most common patterns with FHIR in the UK -->
-Patient searches using FHIR can be used with other patient search systems such NHS Spine Mini Services Provider (SMSP), HL7v2 Patient queries, etc. In this way the Patient Demographics
-Consumer can choose the technology stack that best fits.
-The Patient Demographics Supplier may act as a proxy to an existing HL7v2 PDQ, FHIR PDQ or ITK SMSP environment as shown in the diagrams below.
+In practice many FHIR Servers will be facades or gateways. [Facades](https://en.wikipedia.org/wiki/Facade_pattern) will provide a standardised CareConnect interface to the underlying a SQL database or provide a CareConnectAPI gateway to other patient search systems such NHS Spine Mini Services Provider (SMSP) or HL7v2 Patient queries. In both cases the CareConnect client is insulated away from the interfacing technology or technology stack.
 
 {% include image.html
 max-width="200px" file="design/Gateway PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
@@ -395,7 +393,7 @@ The {% include custom/patterns.inline.html content="[Service Connector(/Gateway)
 
 Consider the HL7v2 Example below:
 
-#### HL7 version 2 Example - Patient Demographics Query ####
+#### HL7 version 2 Example 1 - Patient Demographics Query ####
 
 ```
 MSH|^~\&|TEST_HARNESS|TEST|CR1|MOH_CAAT|20090226131520-0600||QBP^Q22^QBP_Q21|TEST-CR-15-20|P|2.5
@@ -404,7 +402,7 @@ RCP|I|10^RD
 ```
 
 This is searching for female patients with a surname of Jones. It is not clear from the message this is a search query and also the parameters `@PID.8^F~@PID.5.1^JONES` means a female called Jones. Also it's difficult to call from a web browser based application.
-Using a FHIR API Gateway hides this complexity from the web developer allowing them to use the $http service as shown in the example below:
+Using a FHIR API Gateway hides this complexity from the client web developer allowing them to use the $http service as shown in the example below:
 
 #### AngularJS Example 1 - Web App Client Search ####
 
