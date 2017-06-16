@@ -16,7 +16,8 @@ Added
 - Diagram to support the engagement process
 
 Updated
-- Communication Channels (Help & Support) revised to reference the Care Connect Inbox and the INTEROpen website.
+- Communication Channels (Help & Support) revised to reference the Care Connect Inbox and the INTEROpen website
+- Corrected some styling issues
 
 ## 0.4.0-alpha.0 ##
 
