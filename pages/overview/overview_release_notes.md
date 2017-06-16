@@ -12,6 +12,7 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 ## 0.5.0-alpha.0 ##
 
 Added
+- Community and FHIR Tools sections to Help & Support sections
 - Diagram to support the engagement process
 
 Updated
