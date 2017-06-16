@@ -9,9 +9,8 @@ summary: "Guidance using FHIR Observation with Vital Signs"
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/apilink.html content="[Observation](restfulapis_clinical_observation.html)" %}
 
-{% include custom/ihelink.html content="[IHE Patient Care Coordination (PCC) - A Data Access Framework using IHE Profiles](http://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_White_Paper_DAF_Rev1.0_2014-03-28.pdf)" %}
+{% include custom/ihe.reference.html apicontent="[Observation](restfulapis_clinical_observation.html)" ihecontent="[IHE Patient Care Coordination (PCC) - A Data Access Framework using IHE Profiles](http://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_White_Paper_DAF_Rev1.0_2014-03-28.pdf)" %}
 
 ## 1. Overview ##
 

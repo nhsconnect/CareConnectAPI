@@ -9,11 +9,7 @@ summary: "How to use FHIR Patient resources to perform Patient Searches"
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/apilink.html content="[Patient](restfulapis_identification_patient.html) [Practitioner](restfulapis_identification_practitioner.html) [Organization](restfulapis_identification_organisation.html) "  %}
-
-{% include custom/ihelink.html content="[IHE Patient Demographic Query Mobile (IHE PDQM)](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)" %}
-
-{% include custom/patterns.html content="[Shared Repository](https://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/)" %}
+{% include custom/ihe.reference.html apicontent="[Patient](restfulapis_identification_patient.html) <br>  [Practitioner](restfulapis_identification_practitioner.html) <br> [Organization](restfulapis_identification_organisation.html) "  ihecontent="[IHE Patient Demographic Query Mobile (IHE PDQM)](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)"  patterncontent="[Shared Repository](https://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/)" %}
 
 ## 1. Overview ##
 

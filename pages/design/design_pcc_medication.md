@@ -9,7 +9,7 @@ summary: "Guidance on FHIR Medication resources and DM+D"
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/apilink.html content="[Medication](restfulapis_clinical_medication.html) [MedicationOrder](restfulapis_clinical_medicationorder.html)   [MedicationStatement](restfulapis_clinical_medicationstatement.html)" %}
+{% include custom/ihe.reference.html apicontent="[Medication](restfulapis_clinical_medication.html) <br> [MedicationOrder](restfulapis_clinical_medicationorder.html) <br>  [MedicationStatement](restfulapis_clinical_medicationstatement.html)" %}
 
 ## 1. Overview ##
 
