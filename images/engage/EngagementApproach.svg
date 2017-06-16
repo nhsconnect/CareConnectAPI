@@ -30,7 +30,7 @@
 		.st20 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 
 			.st7:hover {
-				opacity: 0.2;
+				fill-opacity: 0.2;
 				filter: alpha(opacity=20);
 			}
 
