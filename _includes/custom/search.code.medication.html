@@ -1,7 +1,7 @@
 <h4 id="medication">{{include.para}} code</h4>
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /{{include.content}}?code=[system]|[code] <br> GET /{{include.content}}?code=[code]</div>
+GET [baseUrl]/{{include.content}}?code=[system]|[code] <br> GET [baseUrl]/{{include.content}}?code=[code]</div>
 
 <p>See <a href="https://www.hl7.org/fhir/DSTU2/search.html#token">token</a> for details on this parameter. ‘code’ can be used multiple times as a search parameter</p>
 
@@ -10,13 +10,13 @@ GET /{{include.content}}?code=[system]|[code] <br> GET /{{include.content}}?code
 <p>To search for {{include.content}}s with <code class="highlighter-rouge">Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices</code> using SNOMED CT</p>
 
 <div class="language-http highlighter-rouge">
-<pre class="highlight"><code><span class="err">GET /{{include.content}}?code=http://snomed.info/sct|10097211000001102
+<pre class="highlight"><code><span class="err">GET [baseUrl]/{{include.content}}?code=http://snomed.info/sct|10097211000001102
 </span></code>
 Return all {{include.content}} resources with SNOMED CT code of 10097211000001102.
 </pre>
 </div>
 <div class="language-http highlighter-rouge">
-<pre class="highlight"><code><span class="err">GET /{{include.content}}?code=10097211000001102
+<pre class="highlight"><code><span class="err">GET [baseUrl]/{{include.content}}?code=10097211000001102
 </span></code>
 Return all {{include.content}} resources with code of from any CodeSystem.</pre>
 </div>

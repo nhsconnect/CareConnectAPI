@@ -1,7 +1,7 @@
 ---
 title: Coming soon
 keywords: support, communications, community
-tags: [support]
+tags:
 toc: false
 sidebar: overview_sidebar
 permalink: support_coming_soon.html

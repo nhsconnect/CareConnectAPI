@@ -13,7 +13,7 @@ summary: "Overview of the Explore section"
 
 
 ## 1. Profile Structure ##
-The FHIR Care Connect profiles described in the Explore section of this implementation guide have been structured consistantly in the following way:
+The FHIR Care Connect profiles described in the Explore section of this implementation guide have been structured consistently in the following way:
 0. References
 1. Read
 2. Search Parameters
@@ -22,7 +22,7 @@ The FHIR Care Connect profiles described in the Explore section of this implemen
 ### 1.1 Profile Structure Details ###
 
 | General              |  Medication &amp; Immunisation    |
-|+---------------------+|+--------------------------------+|
+|+---------------------|+--------------------------------+|
 | 0. References  | Links to other parts of the implementation guide which might help with context and understanding the profiles described |
 | 1. Read | A description of how to get the API |
 | 2. Search Parameters          | List of search parameters for the profile being described, including any tips for searching. This section shows examples of how to search using the provided search parameters       |
@@ -60,4 +60,4 @@ This section looks at the Care Connect profiles covered within this implementati
 
 | Terminology | Operations Control |
 |-------------|--------------------|
-| ValueSet    | [Conformance](restfulapis_conformance_conformance.html)          |
+| [ValueSet](restfulapis_conformance_valueset.html)    | [Conformance](restfulapis_conformance_conformance.html)          |

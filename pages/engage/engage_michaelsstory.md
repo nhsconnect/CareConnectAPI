@@ -104,7 +104,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 **FEATURE: Medication Administration**
 
 <table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="max-width:18em;min-width:10em;width:25%">Profile</th></tr>
-<tr><td>As a patient I want to record the actual medication I have taken so that I have a complete record of how well I have adhered to my medicatication regimen and my care team can review this, contacting me if there are any concerns.</td><td style="vertical-align:middle;">POST MedicationAdministration</td></tr>
+<tr><td>As a patient I want to record the actual medication I have taken so that I have a complete record of how well I have adhered to my medication regimen and my care team can review this, contacting me if there are any concerns.</td><td style="vertical-align:middle;">POST MedicationAdministration</td></tr>
 <tr><td>As a patient I want to make notes against my medications to discuss with my Care Team so if I have any concerns over my medication this can be reviewed and discussed further.</td><td style="vertical-align:middle;">POST MedicationAdministration</td></tr>
 </table>
 
@@ -134,7 +134,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 **FEATURE: Patient Record (Search)**
 
 <table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="max-width:18em;min-width:10em;width:25%">Profile</th></tr>
-<tr><td>As a health advisor (Primary Care, NHS 111) I want to retreive a patient's record based on the information they provide over phone to review the current patient information in order to offer the best possible advice.</td><td style="vertical-align:middle;"><a href="restfulapis_identification_patient.html#2-search-parameters">GET Patient</a></td></tr>
+<tr><td>As a health advisor (Primary Care, NHS 111) I want to retrieve a patient's record based on the information they provide over phone to review the current patient information in order to offer the best possible advice.</td><td style="vertical-align:middle;"><a href="restfulapis_identification_patient.html#2-search-parameters">GET Patient</a></td></tr>
 </table>
 
 **FEATURE: Medication List (View)**
@@ -158,7 +158,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 **FEATURE: Resource (Search)**
 
 <table style="width:100%;max-width:100%;"><tr><th>User Story</th><th style="max-width:18em;min-width:10em;width:25%">Profile</th></tr>
-<tr><td>As a health advisor (Primary Care, NHS 111) I want to find a community pharmacy near to a patient's current location to provide the patient with the most covenient chemist to collect their prescription.</td><td style="vertical-align:middle;"><a href="restfulapis_identification_location.html#2-search-parameters">GET Location</a></td></tr>
+<tr><td>As a health advisor (Primary Care, NHS 111) I want to find a community pharmacy near to a patient's current location to provide the patient with the most convenient chemist to collect their prescription.</td><td style="vertical-align:middle;"><a href="restfulapis_identification_location.html#2-search-parameters">GET Location</a></td></tr>
 </table>
 
 **FEATURE: Medication Order (Create)**
@@ -175,7 +175,7 @@ This example refers to the reconciliation being performed by the doctor. The sto
 
 ## Primary Care - General Practice ##
 
-{% include callout.html content="Michael visits his GP the next day. Michael's GP can see the updated medication list, including other medications he is taking (e.g. private services from abroad during illness, OTC/pharmacist supervised/online purchases, unconnected NHS services). They both discuss the medication allergy and Michael's allergy record is updated. The GP reviews the treatment, changes doses and prescribes a new medication and then gerenates prescriptions for Michael's ongoing/repeat medications." %}
+{% include callout.html content="Michael visits his GP the next day. Michael's GP can see the updated medication list, including other medications he is taking (e.g. private services from abroad during illness, OTC/pharmacist supervised/online purchases, unconnected NHS services). They both discuss the medication allergy and Michael's allergy record is updated. The GP reviews the treatment, changes doses and prescribes a new medication and then generates prescriptions for Michael's ongoing/repeat medications." %}
 
 <p style="text-align:center;"><img src="images/engage/MichaelsStory9.png" style="width:50%;max-width: 50%;"></p>
 

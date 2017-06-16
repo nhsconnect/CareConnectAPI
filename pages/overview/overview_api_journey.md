@@ -1,7 +1,7 @@
 ---
 title: API Journey
-keywords: development,
-tags: [engage,development,fhir]
+keywords: development,overview
+tags: [explanation]
 sidebar: overview_sidebar
 permalink: overview_api_journey.html
 summary: Care Connect API journey outlines the approach of developing RESTful APIs and the journey taken to define and mature the Care Connect APIs

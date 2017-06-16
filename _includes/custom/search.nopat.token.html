@@ -1,12 +1,12 @@
 <h4 id="token{{include.content}}">{{include.para}} {{include.content}}</h4>
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /{{include.resource}}?{{include.content}}=[system]|[code] <br> GET /{{include.resource}}?{{include.content}}=[code]</div>
+GET [baseUrl]/{{include.resource}}?{{include.content}}=[system]|[code] <br> GET [baseUrl]/{{include.resource}}?{{include.content}}=[code]</div>
 
 <p>See <a href="https://www.hl7.org/fhir/DSTU2/search.html#token" >token</a> for details on this parameter.</p>
 
 <div class="language-http highlighter-rouge">
-<pre class="highlight"><code><span class="err">GET /{{include.resource}}?{{include.content}}={{include.example}}
+<pre class="highlight"><code><span class="err">GET [baseUrl]/{{include.resource}}?{{include.content}}={{include.example}}
 </span></code>
-Return all {{include.resource}} resources that have a {{include.content}} with a {{include.text1}} of {{include.text2}} and Patient with a logical id of 1. </pre>
+Return all {{include.resource}} resources with {{include.text1}} of {{include.text2}}. </pre>
 </div>

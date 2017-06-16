@@ -37,7 +37,7 @@ CIB
 CIMI
 : {{site.data.glossary.cimi}}
 
-DM+D
+dm+d
 : {{site.data.glossary.dmd}}
 
 DMS

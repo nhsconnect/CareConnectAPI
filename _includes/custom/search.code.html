@@ -1,7 +1,7 @@
 <h4 id="code">{{include.para}} code</h4>
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET /{{include.content}}?patient=[id]&code=[system]|[code] <br> GET /{{include.content}}?patient=[id]&code=[code]</div>
+GET [baseUrl]/{{include.content}}?patient=[id]&code=[system]|[code] <br> GET [baseUrl]/{{include.content}}?patient=[id]&code=[code]</div>
 
 <p>See <a href="https://www.hl7.org/fhir/DSTU2/search.html#token">token</a> for details on this parameter. ‘code’ can be used multiple times as a search parameter</p>
 
@@ -10,13 +10,13 @@ GET /{{include.content}}?patient=[id]&code=[system]|[code] <br> GET /{{include.c
 <p>To search for {{include.content}}s with <code class="highlighter-rouge">Baseline body mass index</code> using SNOMED CT</p>
 
 <div class="language-http highlighter-rouge">
-<pre class="highlight"><code><span class="err">GET /{{include.content}}?patient=[id]&code=http://snomed.info/sct|846931000000101
+<pre class="highlight"><code><span class="err">GET [baseUrl]/{{include.content}}?patient=[id]&code=http://snomed.info/sct|846931000000101
 </span></code>
 Return all {{include.content}} resources with SNOMED CT code of 846931000000101 and Patient with a logical id of 1.
 </pre>
 </div>
 <div class="language-http highlighter-rouge">
-<pre class="highlight"><code><span class="err">GET /{{include.content}}?patient=1&code=846931000000101
+<pre class="highlight"><code><span class="err">GET [baseUrl]/{{include.content}}?patient=1&code=846931000000101
 </span></code>
 Return all {{include.content}} resources with code of 846931000000101 from any CodeSystem and Patient with a logical id of 1.</pre>
 </div>

@@ -1,7 +1,7 @@
 entries:
 - title: Care Connect
   product: Care Connect
-  version: 0.4.0-alpha.0
+  version: 0.5.0-alpha.0
   levels: one
   folders:
 
@@ -31,17 +31,17 @@ entries:
   - title: Engage
     output: web
     folderitems:
-    
+
     - title: Engagement Approach
       url: /engage.html
       output: web, pdf
       type: homepage
-      
-      subfolders:  
+
+      subfolders:
       - title: Case Studies
         output: web
         subfolderitems:
-        
+
         - title: "Case Study Overview"
           url: /engage_case_studies.html
           output: web
@@ -51,7 +51,7 @@ entries:
         - title: Bristol Connecting Care POC
           url: /engage_poc_bristolcc.html
           output: web
-        
+
   - title: Explore
     output: web
     folderitems:
@@ -59,7 +59,7 @@ entries:
       url: /explore.html
       output: web
     - title: Care Connect Versioning
-      url: /overview_cc_versioning.html
+      url: /explore_cc_versioning.html
       output: web
       subfolders:
       - title: Clinical
@@ -117,6 +117,9 @@ entries:
         - title: Conformance
           url: /restfulapis_conformance_conformance.html
           output: web
+        - title: ValueSet
+          url: /restfulapis_conformance_valueset.html
+          output: web
       - title: API Guidance | FHIR&reg;
         output: web
         subfolderitems:
@@ -138,33 +141,44 @@ entries:
   - title: Design & Build
     output: web
     folderitems:
-    - title: Overview | Coming soon
+    - title: Overview
       url: /design.html
       output: web
-    - title: Patient Search
-      url: /design_patient_search.html
+    - title: Patterns / Topology
+      url: /design_patterns.html
       output: web
+    - title: Access
+      url: /design_access.html
+      output: web
+    - title: Security
+      url: /design_security.html
+      output: web
+
       subfolders:
-      - title: Patient Care Coordination
+      - title: Build
         output: web
         subfolderitems:
-        - title: Clinical
-          url: /design_pcc_clinical.html
-          output: web
-        - title: Medication
-          url: /design_pcc_medication.html
-          output: web
+          - title: Patient Search
+            url: /design_patient_search.html
+            output: web
+          - title: Clinical | Care Coord
+            url: /design_pcc_clinical.html
+            output: web
+          - title: Medication | Care Coord
+            url: /design_pcc_medication.html
+            output: web
+
   - title: Test
     output: web
     folderitems:
     - title: Overview | Coming soon
       url: /test.html
       output: web
-  - title: Accredit
+  - title: Assure
     output: web
     folderitems:
     - title: Overview | Coming soon
-      url: /accredit.html
+      url: /assure.html
       output: web
   - title: Deploy
     output: web
@@ -182,6 +196,22 @@ entries:
     - title: Communication Channels
       url: /support_communications.html
       output: web
+      subfolders:
+      - title: Where Else Can I Look?
+        output: web
+        subfolderitems:
+        - title: Organisations
+          url: /support_whereelse.html
+          output: web
+        - title: Community
+          url: /support_community.html
+          output: web
+        - title: FHIR Tools
+          url: /support_fhirtools.html
+          output: web
+        - title: Reference API Servers
+          url: /support_referenceapiservers.html
+          output: web
 
   - title: Tags
     output: web
@@ -203,4 +233,7 @@ entries:
       output: web
     - title: Development
       url: /tag_development.html
+      output: web
+    - title: Support
+      url: /tag_support.html
       output: web
