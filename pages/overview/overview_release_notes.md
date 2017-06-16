@@ -15,6 +15,7 @@ Added
 - Community and FHIR Tools sections to Help & Support sections
 - Diagram to support the engagement process
 - Foundation API definitions
+- Profile links to HL7 UK FHIR Reference Server (test version)
 
 Updated
 - Communication Channels (Help & Support) revised to reference the Care Connect Inbox and the INTEROpen website.
