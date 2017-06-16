@@ -22,6 +22,12 @@ Updated
 - Test section example added of end to end process
 - Assure section added to provide overview of end to end process
 - Deploy section added to provide overview of end to end process
+- Major changes to underlying folder structure to support use and updating of information
+- Conformance profile updates to current alpha state
+- Glossary
+- Provide APIs with a clickable diagram used throughout later stages
+- Linking to developer.nhs.uk
+- Engagement approach with look and feel and linking
 
 ## 0.4.0-alpha.0 ##
 
