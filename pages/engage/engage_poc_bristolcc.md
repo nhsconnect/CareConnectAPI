@@ -13,25 +13,25 @@ INTEROPen is working with health care providers and system vendors to prove the 
 ## Client's Context ##
 
 Connecting Care is a local electronic patient record that allows health and social care professionals directly involved in your care, to share a summary of your medical record.
-
+<br><br>
 ## Case Overview ##
 
 The pharmacists would like to retrieve medications history of the patient to prepare a list or reconciled medications. They want to know the patient's medications journey. While the initial scenario seemed to be around medication reconciliation, what becomes clear is that it's really around the creation of a consolidated view of medication.
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC_POC_Case_Overview.svg" alt="The patient's medication journey demonstrating questions than are asked during medication reconciliation." title="The patient's medication journey demonstrating questions than are asked during medication reconciliation." style="width:90%"></p>
-
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC_POC_Case_Overview.svg" alt="The patient's medication journey demonstrating questions than are asked during medication reconciliation." title="The patient's medication journey demonstrating questions than are asked during medication reconciliation." style="width:75%"></p>
+<br><br>
 ## Problem Statement ##
 
 The Pharmacist does not have a consolidated view of a patient's medications because the information is distributed across a number of systems.
-
+<br><br>
 ## Business Process ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolPharmacistsHighLevel.png" alt="High level business process diagram showing the requirement to display medication from either a specific system or all systems." title="High level business process diagram showing the requirement to display medication from either a specific system or all systems." style="width:90%"></p>
-
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolPharmacistsHighLevel.png" alt="High level business process diagram showing the requirement to display medication from either a specific system or all systems." title="High level business process diagram showing the requirement to display medication from either a specific system or all systems." style="width:75%"></p>
+<br><br>
 ## Use Case Diagram ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolUseCaseDiagram.png" alt="Use Case Diagram showing the Pharamacists use cases being explored." title="Use Case Diagram showing the Pharamacists use cases being explored." style="width:90%"></p>
-
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolUseCaseDiagram.png" alt="Use Case Diagram showing the Pharamacists use cases being explored." title="Use Case Diagram showing the Pharamacists use cases being explored." style="width:75%"></p>
+<br><br>
 ## User Stories ##
 
 While the scope is initially demonstrated in the use case diagram, it is possible to refine the scope further within user stories that originate from conversations with the user. For example, from the perspective of the current Care Connect specification, security is outside of the scope of profile definition and further discussions would be required within the trust to clarify where responsibility lies.
@@ -49,7 +49,7 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if medications were not available from a specific source so I can know that there may be gaps in the data I have.</td></tr>
 <tr><td style="vertical-align: middle;">Role Based Access Control (RBAC)</td><td>As a Information Governance Officer (Hospital Services) I want the interface to only return data to an authenticated user so I can be sure that only known users are accessing the data.</td></tr>
 </table>
-
+<br><br>
 ## Dataset ##
 
 <table style="width:100%;max-width:100%">
@@ -67,21 +67,21 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td>Role of person</td><td>Issue status (either a date of issue or 'Not yet issued')</td></tr>
 <tr><td>Date authorised until</td><td></td></tr>
 </table>
-
+<br><br>
 ## FHIR Resources ##
 
 <div style="display:flex;flex-wrap:wrap;">
-<div style="flex:3;min-width:30em;"><p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesUpdated.png" alt="Diagram showing that the resources MedicationOrder, MedicationStatement, Patient and Practitioner have been identified as necessary profiles to support a solution for Bristol Connecting Care." title="Diagram showing that the resources MedicationOrder, MedicationStatement, Patient and Practitioner have been identified as necessary profiles to support a solution for Bristol Connecting Care." style="width:90%"></p></div>
+<div style="flex:3;min-width:30em;"><p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesUpdated.png" alt="Diagram showing that the resources MedicationOrder, MedicationStatement, Patient and Practitioner have been identified as necessary profiles to support a solution for Bristol Connecting Care." title="Diagram showing that the resources MedicationOrder, MedicationStatement, Patient and Practitioner have been identified as necessary profiles to support a solution for Bristol Connecting Care." style="width:75%"></p></div>
 <div style="flex:1;min-width:20em;max-width:25em;border-style:solid;border-width:thin;border-color:#005eb8;border-radius:5px;padding:1em;margin-left:auto;margin-right:0px">
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesOriginal.png" alt="Diagram showing the first proposal which didn't include the use of MedicationOrder" style="width:90%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesOriginal.png" alt="Diagram showing the first proposal which didn't include the use of MedicationOrder" style="width:75%"></p>
 <p><small><i>The first approach considered didn't include the MedicalStatement resource but simply proposed the use of MedicalOrder. Following clinical review it was highlighted that this would assume that all medications are prescribed which is not the case. Therefore, this was extended to include both MedicationStatement and MedicationOrder.</i></small></p>
 </div>
 </div>
-
+<br><br>
 ## Profiles ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/ERD.png" alt="Entity Relationship Diagram showing the applied profiles." title="Entity Relationship Diagram showing the applied profiles." style="width:90%"></p>
-
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/ERD.png" alt="Entity Relationship Diagram showing the applied profiles." title="Entity Relationship Diagram showing the applied profiles." style="width:75%"></p>
+<br><br>
 ## API Signatures ##
 
 As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verified' NHS Number.
@@ -99,7 +99,7 @@ As a Pharmacist (Hospital Services) I want retrieve all of a patient's medicatio
 ~~~
 GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
 ~~~
-
+<br><br>
 ## Search Query Parameters ##
 
 <table style="width:100%;max-width:100%">
@@ -113,19 +113,19 @@ GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-
 <tr><td>source</td><td>reference</td><td>Who the information in the statement came from</td><td>MAY</td><td>MedicationStatement.informationSource (Patient, Practitioner, RelatedPerson))</td></tr>
 <tr><td>status</td><td>token</td><td>Return statements that match the given status</td><td>MAY</td><td>MedicationStatement.status</td></tr>
 </table>
-
+<br><br>
 ## Search Results ##
 
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRBundle.png" alt="Diagram showing the bundle that is returned following a search" title="Diagram showing the bundle that is returned following a search"></p>
-
+<br><br>
 ## API Sequence Diagrams ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCCSequenceDiagram.png" alt="Sequence diagram showing the flow of information between actors" title="Sequence diagram showing the flow of information between actors" style="width:90%"></p>
-
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCCSequenceDiagram.png" alt="Sequence diagram showing the flow of information between actors" title="Sequence diagram showing the flow of information between actors" style="width:75%"></p>
+<br><br>
 ## Technical Architecture ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/TechnicalArchitecture.jpg" alt="Diagram showing an overview of the solution's architecture." title="Diagram showing an overview of the solution's architecture." style="width:90%"></p>
-
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/TechnicalArchitecture.jpg" alt="Diagram showing an overview of the solution's architecture." title="Diagram showing an overview of the solution's architecture." style="width:75%"></p>
+<br><br>
 ## Acceptance Criteria ##
 
 While the acceptance criteria is not fully developed, below is an example of some possible criteria that could be defined.
