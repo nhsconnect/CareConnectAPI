@@ -1,16 +1,15 @@
 ---
 title: Clinical | Medication Order
 keywords: usecase, medication, order
-tags: [fhir, rest, clinical, medication]
+tags: [fhir, rest, clinical, medication,development]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medicationorder.html
 summary: An order for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationOrder" rather than "MedicationPrescription" to generalize the use across inpatient and outpatient settings as well as for care plans, etc.
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Medication Order" page="CareConnect-MedicationOrder-1" %}
+{% include custom/fhir.reference.html resource="Medication Order" page="CareConnect-MedicationOrder-1" fhirlink="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
-{% include custom/fhir.resource.html content="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html)" %}
 
 ## 1. Read ##
 
@@ -61,7 +60,7 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search MedicationOrder" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search MedicationOrder" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="MedicationOrder" %}
 
@@ -77,15 +76,14 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/MedicationOrder?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/MedicationOrder?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/MedicationOrder/24961"/>
+        <fullUrl value="[baseUrl]/MedicationOrder/24961"/>
         <resource>
             <MedicationOrder xmlns="http://hl7.org/fhir">
                 <id value="24961"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:14:56.728+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationOrder-1"/>
                 </meta>
@@ -105,7 +103,7 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
                     <display value="Bernie Kanfeld"/>
                 </patient>
                 <prescriber>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <reference value="Practitioner/24967"/>
                     <display value="Dr AA Bhatia"/>
                 </prescriber>
                 <note value="Please explain to Bernie how to use injector."/>

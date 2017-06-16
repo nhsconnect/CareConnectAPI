@@ -1,16 +1,14 @@
 ---
 title: Clinical | Allergy Intolerance
 keywords: getcarerecord, structured, rest, allergy, intolerance
-tags: [fhir, clinical, rest, allergyintolerance]
+tags: [fhir, clinical, rest, allergyintolerance,development]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_allergyintolerance.html
 summary: Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Allergy Intolerance" page="CareConnect-AllergyIntolerance-1" %}
-
-{% include custom/fhir.resource.html content="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html)" %}
+{% include custom/fhir.reference.html resource="Allergy Intolerance" page="CareConnect-AllergyIntolerance-1" fhirlink="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -53,7 +51,7 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search AllergyIntolerance" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr'  '[baseUrl]/AllergyIntolerance?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'"  %}
+{% include custom/embedcurl.html title="Search AllergyIntolerance" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]'  '[baseUrl]/AllergyIntolerance?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'"  %}
 
 {% include custom/search.response.headers.html resource="AllergyIntolerance" %}
 
@@ -69,21 +67,20 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/AllergyIntolerance?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/AllergyIntolerance?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/AllergyIntolerance/24953"/>
+        <fullUrl value="[baseUrl]/AllergyIntolerance/24953"/>
         <resource>
             <AllergyIntolerance xmlns="http://hl7.org/fhir">
                 <id value="24953"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T08:25:01.686+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-AllergyIntolerance-1"/>
                 </meta>
                 <recordedDate value="2014-10-09T14:58:00+11:00"/>
                 <recorder>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <reference value="Practitioner/24967"/>
                 </recorder>
                 <patient>
                     <reference value="Patient/24966"/>

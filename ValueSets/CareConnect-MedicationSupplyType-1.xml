@@ -6,8 +6,9 @@
 		<valueInteger value="1"/>
 	</extension>
 	<url value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationSupplyType-1"/>
-	<name value="CareConnect-MedicationSupplyType-1"/>
-	<status value="draft"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Medication Supply Type"/>
+	<status value="active"/>
 	<publisher value="HL7 UK"/>
 	<description value="Indicates the legal/contractual nature of a prescription. This valueset references the vocabulary for EhrSupplyType in the NPfIT Message Implementation Manual 7.2.02."/>
 	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>

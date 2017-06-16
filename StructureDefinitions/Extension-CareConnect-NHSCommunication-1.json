@@ -1298,8 +1298,8 @@
       },
       {
         "path": "Extension.extension.valueBoolean",
-        "short": "Indicates whether an interperter is required for communication purposes",
-        "definition": "Indicates whether an interperter is required for communication purposes- True / False?",
+        "short": "Indicates whether an interpreter is required for communication purposes",
+        "definition": "Indicates whether an interpreter is required for communication purposes- True / False?",
         "min": 1,
         "max": "1",
         "base": {
@@ -1666,8 +1666,8 @@
       },
       {
         "path": "Extension.extension.valueBoolean",
-        "short": "Indicates whether an interperter is required for communication purposes",
-        "definition": "Indicates whether an interperter is required for communication purposes- True / False?",
+        "short": "Indicates whether an interpreter is required for communication purposes",
+        "definition": "Indicates whether an interpreter is required for communication purposes- True / False?",
         "min": 1,
         "type": [
           {

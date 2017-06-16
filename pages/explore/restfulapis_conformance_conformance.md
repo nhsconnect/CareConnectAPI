@@ -1,7 +1,7 @@
 ---
 title: Conformance | Conformance
 keywords: foundations, fhir
-tags: [foundations,use_case,fhir]
+tags: [foundations,rest,fhir,use_case,development]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_conformance_conformance.html
 summary: A conformance statement is a set of capabilities of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
@@ -9,9 +9,8 @@ summary: A conformance statement is a set of capabilities of a FHIR Server that 
 
 {% include custom/search.warnbanner.html %}
 
-## 0. References ##
+{% include custom/fhir.referencemin.html resource="" page="" fhirlink="[Conformance](http://www.hl7.org/fhir/dstu2/conformance.html)" content="User Stories" userlink="" %}
 
-{% include custom/fhir.resource.html content="[Conformance](http://www.hl7.org/fhir/dstu2/conformance.html)" %}
 
 ## 1. Read ##
 
@@ -37,7 +36,7 @@ Retrieve the Conformance statement from the FHIR Server, the format of the respo
 
 #### 2.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Read Server Conformance Statement" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET '[baseUrl]/metadata'" %}
+{% include custom/embedcurl.html title="Read Server Conformance Statement" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET '[baseUrl]/metadata'" %}
 
 {% include custom/search.response.headers.html resource="Conformance"  %}
 

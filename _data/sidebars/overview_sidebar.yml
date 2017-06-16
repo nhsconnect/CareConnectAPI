@@ -90,7 +90,7 @@ entries:
           - title: Procedure
             url: /restfulapis_clinical_procedure.html
             output: web
-      - title: Identification
+      - title: Individuals &amp; Entities
         output: web
         subfolderitems:
           - title: Location
@@ -111,7 +111,7 @@ entries:
           - title: Encounter
             url: /restfulapis_workflow_encounter.html
             output: web
-      - title: Conformance
+      - title: Foundation
         output: web
         subfolderitems:
         - title: Conformance
@@ -131,9 +131,6 @@ entries:
           output: web
         - title: Open Source
           url: /development_fhir_open_source_guidance.html
-          output: web
-        - title: Security Guidance
-          url: /development_api_security_guidance.html
           output: web
         - title: Reference
           url: /development_deliverables.html
@@ -171,20 +168,43 @@ entries:
   - title: Test
     output: web
     folderitems:
-    - title: Overview | Coming soon
+    - title: Overview
       url: /test.html
       output: web
+    - title: Patterns / Topology
+      url: /test_patterns.html
+      output: web
+    - title: Access
+      url: /test_access.html
+      output: web
+    - title: Security
+      url: /test_security.html
+      output: web
+
   - title: Assure
     output: web
     folderitems:
-    - title: Overview | Coming soon
+    - title: Overview
       url: /assure.html
       output: web
+    - title: Access
+      url: /assure_access.html
+      output: web
+    - title: Security
+      url: /assure_security.html
+      output: web
+
   - title: Deploy
     output: web
     folderitems:
-    - title: Overview | Coming soon
+    - title: Overview
       url: /deploy.html
+      output: web
+    - title: Access
+      url: /deploy_access.html
+      output: web
+    - title: Security
+      url: /deploy_security.html
       output: web
 
   - title: Help & Support
@@ -200,16 +220,13 @@ entries:
       - title: Where Else Can I Look?
         output: web
         subfolderitems:
-        - title: Organisations
-          url: /support_whereelse.html
-          output: web
         - title: Community
           url: /support_community.html
           output: web
         - title: FHIR Tools
           url: /support_fhirtools.html
           output: web
-        - title: Reference API Servers
+        - title: Resource Definitions
           url: /support_referenceapiservers.html
           output: web
 

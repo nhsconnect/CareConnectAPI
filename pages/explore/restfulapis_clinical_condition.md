@@ -1,16 +1,14 @@
 ---
 title: Clinical | Condition
 keywords: getcarerecord, structured, rest, condition
-tags: [rest,fhir,condition,clinical]
+tags: [rest,fhir,condition,clinical,development]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_condition.html
 summary: Use to record detailed information about conditions, problems or diagnoses recognized by a clinician. There are many uses e.g. recording a diagnosis during an encounter; populating a problem list or a summary statement, such as a discharge summary.
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Condition" page="CareConnect-Condition-1" %}
-
-{% include custom/fhir.resource.html content="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html)" %}
+{% include custom/fhir.reference.html resource="Condition" page="CareConnect-Condition-1" fhirlink="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 
 ## 1. Read Operation ##
@@ -64,7 +62,7 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Condition" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Condition?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Condition" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Condition?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Condition" %}
 
@@ -80,15 +78,14 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Condition?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/Condition?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Condition/24954"/>
+        <fullUrl value="[baseUrl]/Condition/24954"/>
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
                 <id value="24954"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T08:28:08.713+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Condition-1"/>
                 </meta>
@@ -96,7 +93,7 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
                     <reference value="Patient/24966"/>
                 </patient>
                 <asserter>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/C5206458"/>
+                    <reference value="Practitioner/C5206458"/>
                 </asserter>
                 <dateRecorded value="2017-01-04"/>
                 <code>

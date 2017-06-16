@@ -1,16 +1,14 @@
 ---
 title: Clinical | Immunization
 keywords: getcarerecord, structured, rest, immunization
-tags: [fhir, rest, clinical, familymemberhistory]
+tags: [fhir, rest, clinical, familymemberhistory,development]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_clinical_immunization.html
 summary: Describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party and may include vaccine reaction information and what vaccination protocol was followed.
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Immunization" page="CareConnect-Immunization-1" %}
-
-{% include custom/fhir.resource.html content="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html)" %}
+{% include custom/fhir.reference.html resource="Immunization" page="CareConnect-Immunization-1" fhirlink="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -60,7 +58,7 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Immunization" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Immunization" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Immunization" %}
 
@@ -76,15 +74,14 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Immunization?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/Immunization?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Immunization/24956"/>
+        <fullUrl value="[baseUrl]/Immunization/24956"/>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
                 <id value="24956"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T08:48:28.340+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Immunization-1"/>
                 </meta>
@@ -107,7 +104,7 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
                 <wasNotGiven value="false"/>
                 <reported value="false"/>
                 <performer>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <reference value="Practitioner/24967"/>
                     <display value="Dr Bhatia"/>
                 </performer>
                 <lotNumber value="63259874"/>

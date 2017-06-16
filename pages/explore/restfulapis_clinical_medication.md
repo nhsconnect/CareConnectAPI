@@ -1,16 +1,14 @@
 ---
 title: Clinical | Medication
 keywords: usecase, medication
-tags: [fhir, rest, clinical, medication]
+tags: [fhir, rest, clinical, medication,development]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_medication.html
 summary: This resource is primarily used for the identification and definition of a medication. It covers the ingredients and the packaging for a medication.
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Medication" page="CareConnect-Medication-1" %}
-
-{% include custom/fhir.resource.html content="[Medication](https://www.hl7.org/fhir/DSTU2/medication.html)" %}
+{% include custom/fhir.reference.html resource="Medication" page="CareConnect-Medication-1" fhirlink="[Medication](https://www.hl7.org/fhir/DSTU2/medication.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -23,7 +21,7 @@ GET [baseUrl]/Medication/[id]</div>
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET [baseUrl]/Medication?[searchparameters]</div>
-Search for all Medication resources for a patient. Fetches a bundle of all `Medication` resources for the specified patient.
+Search Medication resources. Returns a bundle of all `Medication` resources for the specified search criteria.
 
 {% include custom/search.header.html resource="Medication" %}
 
@@ -47,7 +45,7 @@ Return Medication resource with a logical id of 48496. Replace 'baseUrl' with th
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Get Medication" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Medication/48496'" %}
+{% include custom/embedcurl.html title="Get Medication" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Medication/48496'" %}
 
 {% include custom/search.response.headers.html resource="Immunization" %}
 

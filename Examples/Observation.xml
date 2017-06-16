@@ -1,6 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
     <meta>
-        <versionId value="1"/>
         <lastUpdated value="2017-05-23T10:36:52.408-04:00"/>
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Observation-1"/>
     </meta>

@@ -1,16 +1,14 @@
 ---
 title: Identification | Location
 keywords: usecase, location, order
-tags: [rest, fhir, identification]
+tags: [rest, fhir, identification,development]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_location.html
 summary: Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained or accommodated.
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Location" page="CareConnect-Location-1" %}
-
-{% include custom/fhir.resource.html content=" [Location](https://www.hl7.org/fhir/DSTU2/location.html)" %}
+{% include custom/fhir.reference.html resource="Location" page="CareConnect-Location-1" fhirlink="[Location](https://www.hl7.org/fhir/DSTU2/location.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -50,7 +48,7 @@ Return all Location resources with a Trust Site code of RTG08, the format of the
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Location" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08'" %}
+{% include custom/embedcurl.html title="Search Location" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08'" %}
 
 {% include custom/search.response.headers.html resource="Location" %}
 
@@ -66,15 +64,14 @@ Return all Location resources with a Trust Site code of RTG08, the format of the
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Location?identifier=RTG08"/>
+        <url value="[baseUrl]/Location?identifier=RTG08"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Location/24959"/>
+        <fullUrl value="[baseUrl]/Location/24959"/>
         <resource>
             <Location xmlns="http://hl7.org/fhir">
                 <id value="24959"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:09:10.339+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Location-1"/>
                 </meta>

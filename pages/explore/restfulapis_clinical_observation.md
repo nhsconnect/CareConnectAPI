@@ -1,7 +1,7 @@
 ---
 title: Clinical | Observation
 keywords: usecase, observation
-tags: [observation,fhir,rest,clinical]
+tags: [observation,fhir,rest,clinical,development]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_observation.html
 summary: Measurements and simple assertions made about a patient, device or other subject.
@@ -9,9 +9,7 @@ summary: Measurements and simple assertions made about a patient, device or othe
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Observation" page="CareConnect-Observation-1" %}
-
-{% include custom/fhir.resource.html content="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html)" %}
+{% include custom/fhir.reference.html resource="Observation" page="CareConnect-Observation-1" fhirlink="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -71,7 +69,7 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Observation" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Observation" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Observation" %}
 
@@ -87,22 +85,17 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Observation?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/Observation?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Observation/24964"/>
+        <fullUrl value="[baseUrl]/Observation/24964"/>
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="24964"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:20:13.289+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Observation-1"/>
                 </meta>
-                <identifier>
-                    <system value="http://fhir.jorvik.nhs.uk/EPR/Observation"/>
-                    <value value="878281"/>
-                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>
@@ -116,7 +109,7 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
                 </subject>
                 <effectiveDateTime value="2012-09-17"/>
                 <performer>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
+                    <reference value="Practitioner/24967"/>
                 </performer>
             </Observation>
         </resource>

@@ -1,16 +1,14 @@
 ---
 title: Clinical | Procedure
 keywords: usecase, procedure
-tags: [fhir, rest, clinical]
+tags: [fhir, rest, clinical,development]
 sidebar: foundations_sidebar
 permalink: restfulapis_clinical_procedure.html
 summary: An action that is or was performed on a patient. This can be a physical intervention like an operation, or less invasive like counseling or hypnotherapy.
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Procedure" page="CareConnect-Procedure-1" %}
-
-{% include custom/fhir.resource.html content="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html)" %}
+{% include custom/fhir.reference.html resource="Procedure" page="CareConnect-Procedure-1" fhirlink="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 
 ## 1. Read ##
@@ -62,7 +60,7 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Procedure" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Procedure" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Procedure?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Procedure" %}
 
@@ -78,15 +76,14 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Procedure?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/Procedure?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Procedure/24968"/>
+        <fullUrl value="[baseUrl]/Procedure/24968"/>
         <resource>
             <Procedure xmlns="http://hl7.org/fhir">
                 <id value="24968"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:36:55.159+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Procedure-1"/>
                 </meta>
@@ -104,7 +101,7 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
                 </code>
                 <performer>
                     <actor>
-                        <reference value="https://sds.proxy.nhs.uk/Organization/Organization/RY8"/>
+                        <reference value="Organization/RY8"/>
                         <display value="Derbyshire Community Health Services NHS Foundation Trust"/>
                     </actor>
                 </performer>

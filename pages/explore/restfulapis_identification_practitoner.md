@@ -1,7 +1,7 @@
 ---
 title: Identification | Practitioner
 keywords: usecase, Practitioner
-tags: [rest, fhir, identification]
+tags: [rest, fhir, identification,development]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_practitoner.html
 summary: A person who is directly or indirectly involved in the provisioning of healthcare.
@@ -9,9 +9,8 @@ summary: A person who is directly or indirectly involved in the provisioning of 
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Practitioner" page="CareConnect-Practitioner-1" %}
+{% include custom/fhir.reference.html resource="Practitioner" page="CareConnect-Practitioner-1" fhirlink="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
-{% include custom/fhir.resource.html content="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html)" %}
 
 
 ## 1. Read ##
@@ -62,7 +61,7 @@ Return all Practitioner resources with a GP Code of G8133438, the format of the 
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Practitioner" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Practitioner?identifier=https://fhir.nhs.uk/Id/sds-user-id|G8133438'" %}
+{% include custom/embedcurl.html title="Search Practitioner" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Practitioner?identifier=https://fhir.nhs.uk/Id/sds-user-id|G8133438'" %}
 
 {% include custom/search.response.headers.html resource="Practitioner" %}
 
@@ -78,15 +77,14 @@ Return all Practitioner resources with a GP Code of G8133438, the format of the 
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Practitioner?identifier=G8133438"/>
+        <url value="[baseUrl]/Practitioner?identifier=G8133438"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Practitioner/24967"/>
+        <fullUrl value="[baseUrl]/Practitioner/24967"/>
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="24967"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:33:47.072+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Practitioner-1"/>
                 </meta>
@@ -115,7 +113,7 @@ Return all Practitioner resources with a GP Code of G8133438, the format of the 
                 <gender value="male"/>
                 <practitionerRole>
                     <managingOrganization>
-                        <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
+                        <reference value="Organization/24965"/>
                         <display value="The Moir Medcial Centre"/>
                     </managingOrganization>
                     <role>

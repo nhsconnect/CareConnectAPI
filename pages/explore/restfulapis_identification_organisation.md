@@ -1,16 +1,14 @@
 ---
 title: Identification | Organisation
 keywords: usecase, Organization
-tags: [rest, fhir, identification]
+tags: [rest, fhir, identification,development]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_organisation.html
 summary: A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, etc.
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Organization" page="CareConnect-Organization-1" %}
-
-{% include custom/fhir.resource.html content="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html)" %}
+{% include custom/fhir.reference.html resource="Organization" page="CareConnect-Organization-1" fhirlink="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -55,7 +53,7 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Organization" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010'" %}
+{% include custom/embedcurl.html title="Search Organization" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010'" %}
 
 {% include custom/search.response.headers.html resource="Organization" %}
 
@@ -71,15 +69,14 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Organization?identifier=C81010"/>
+        <url value="[baseUrl]/Organization?identifier=C81010"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Organization/24965"/>
+        <fullUrl value="[baseUrl]/Organization/24965"/>
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="24965"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:27:43.366+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Organization-1"/>
                 </meta>

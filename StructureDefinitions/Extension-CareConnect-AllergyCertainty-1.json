@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "meta": {
-    "lastUpdated": "2017-05-08T16:14:13.603+01:00"
+    "lastUpdated": "2017-06-08T11:55:28.831+01:00"
   },
   "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-AllergyCertainty-1",
   "version": "1.0.0",
@@ -204,8 +204,8 @@
       },
       {
         "path": "Extension.valueCodeableConcept",
-        "short": "Value of extension",
-        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "short": "Certainty that the stated causative agent caused the allergic or adverse reaction",
+        "definition": "Certainty that the stated causative agent caused the allergic or adverse reaction.",
         "min": 0,
         "max": "1",
         "base": {
@@ -238,7 +238,9 @@
         "binding": {
           "strength": "required",
           "description": "A code from the SNOMED Clinical Terminology UK coding system that describes the certainty of an allergy.",
-          "valueSetUri": "https://fhir.hl7.org.uk/ValueSet/CareConnect-AllergyCertainty-1"
+          "valueSetReference": {
+            "reference": "https://fhir.hl7.org.uk/ValueSet/CareConnect-AllergyCertainty-1"
+          }
         },
         "mapping": [
           {
@@ -266,6 +268,8 @@
       },
       {
         "path": "Extension.valueCodeableConcept",
+        "short": "Certainty that the stated causative agent caused the allergic or adverse reaction",
+        "definition": "Certainty that the stated causative agent caused the allergic or adverse reaction.",
         "type": [
           {
             "code": "CodeableConcept"
@@ -274,7 +278,9 @@
         "binding": {
           "strength": "required",
           "description": "A code from the SNOMED Clinical Terminology UK coding system that describes the certainty of an allergy.",
-          "valueSetUri": "https://fhir.hl7.org.uk/ValueSet/CareConnect-AllergyCertainty-1"
+          "valueSetReference": {
+            "reference": "https://fhir.hl7.org.uk/ValueSet/CareConnect-AllergyCertainty-1"
+          }
         }
       }
     ]

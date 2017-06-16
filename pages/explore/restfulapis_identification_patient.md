@@ -1,7 +1,7 @@
 ---
 title: Identification | Patient
 keywords: getcarerecord, structured, rest, patient
-tags: [rest, fhir, identification]
+tags: [rest, fhir, identification,development]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_identification_patient.html
 summary: Demographics and other administrative information about an individual receiving care or other health-related services.
@@ -9,13 +9,7 @@ summary: Demographics and other administrative information about an individual r
 
 {% include custom/search.warnbanner.html %}
 
-## 0. References ##
-
-{% include custom/profile.html content="Patient" page="CareConnect-Patient-1" %}
-
-{% include custom/fhir.resource.html content="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html)" %}
-
-{% include custom/apicontext.userstories.html content="User Stories" page="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Patient" page="CareConnect-Patient-1" fhirlink="[Patient](https://www.hl7.org/fhir/DSTU2/patient.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -49,7 +43,7 @@ Fetches a bundle of all `Patient` resources for the specified patient or search 
 | `name` | `string` | A portion of either family or given name of the patient | SHALL | 	Patient.name |
 | `phone` | `token` | A value in a phone contact | MAY | Patient.telecom(system=phone) |
 
-Systems SHALL support the following search combinations:
+Client systems SHALL provide at least two parameters of differing types, unless searching on identifier where one parameter is permitted. Systems SHALL support the following search combinations:
 
 * name + gender
 * name + birthdate
@@ -92,7 +86,7 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' '[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' '[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Patient"  %}
 
@@ -108,15 +102,14 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Patient?identifier=9876543210"/>
+        <url value="[baseUrl]/Patient?identifier=9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Patient/24966"/>
+        <fullUrl value="[baseUrl]/Patient/24966"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
                 <id value="24966"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:30:21.875+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
                 </meta>

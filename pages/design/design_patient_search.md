@@ -9,11 +9,7 @@ summary: "How to use FHIR Patient resources to perform Patient Searches"
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/apilink.html content="[Patient](restfulapis_identification_patient.html) [Practitioner](restfulapis_identification_practitioner.html) [Organization](restfulapis_identification_organisation.html) "  %}
-
-{% include custom/ihelink.html content="[IHE Patient Demographic Query Mobile (IHE PDQM)](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)" %}
-
-{% include custom/patterns.html content="[Shared Repository](https://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/)" %}
+{% include custom/ihe.reference.html apicontent="[Patient](restfulapis_identification_patient.html) <br>  [Practitioner](restfulapis_identification_practitioner.html) <br> [Organization](restfulapis_identification_organisation.html) "  ihecontent="[IHE Patient Demographic Query Mobile (IHE PDQM)](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)"  patterncontent="[Shared Repository](https://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/)" %}
 
 ## 1. Overview ##
 
@@ -31,7 +27,8 @@ Most NHS trusts will typically have one central system  called the Patient Admin
 max-width="200px" file="IHE/Iti_pam_ip.jpg" alt="Patient Identity Feeds"
 caption="Patient Identity Feeds" %}
 
-Care Connect API uses a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) {% include custom/patterns.inline.html content="[resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI)" %} to provide access to the central Patient repository which is particularly suited to:
+HL7v2 is a mature and widely used standard but it is not suitable for querying patient demographic details (see HL7v2 Patient Demographics Query below). Mostly because it is a messaging standard and not an API. Care Connect API gives an API using [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) interface following a {% include custom/patterns.inline.html content="[resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI)" %} to provide access to the central Patient repository.
+This is particularly suited to:
 * A health portal securely exposing demographics data to browser based plugins
 * Medical devices which need to access patient demographic information
 * Mobile devices used by physicians (example bedside eCharts) which need to establish
@@ -42,7 +39,7 @@ etc.
 * Any low resource application which exposes patient demographic search functionality
 * A facade providing a simple API to a complex interface
 
-## 2. Basic Patient Search ##
+## 2. Client Patient Search ##
 
 ### 2.1 Foundation ###
 
@@ -53,13 +50,13 @@ caption="Patient Search FHIR Actor Diagram" %}
 The patient search can use any of the search parameters defined in the [Patient](restfulapis_identification_patient.html) API. For example if the patient informs the nurse of their date of birth, first name (19th Mar 1998 Bernie Kanfeld) and surname the query would be.
 
 ```
-GET http://[baseUrl]/Patient?birthdate=1998-03-19&given=bernie&family=kanfeld
+GET http://[baseUrl]/Patient?birthdate=1998-03-19&name=bernie%20kanfeld
 ```
 
 `[baseUrl]` needs to be replaced with an actual url, in the example below this is `http://127.0.0.1:8181/Dstu2/`. The url would work within a web browser but a better tool to work with RESTful is [Postman](https://www.getpostman.com/)
 
 ```
-http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&given=bernie&family=kanfeld
+http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&name=bernie%20kanfeld
 ```
 
 A sample response is shown below
@@ -76,15 +73,14 @@ A sample response is shown below
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&amp;family=kanfeld&amp;given=bernie"/>
+        <url value="[baseUrl]/Patient?birthdate=1998-03-19&amp;name=bernie%20kanfeld"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Patient/24966"/>
+        <fullUrl value="[baseUrl]/Patient/24966"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
                 <id value="24966"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T09:30:21.875+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
                 </meta>
@@ -159,18 +155,7 @@ What we have just described is shown in the diagram below. When entered the url 
 {% include image.html
 max-width="200px" file="design/Basic Process Flow PDQm.jpg" alt="Basic Process Flow Patient Search FHIR" caption="Basic Process Flow" %}
 
-[TODO - Example above is different]
-
-If your familiar with NHS SDS/ODS Codes you may have noticed the ODS Code as the managing organisation.
-
-```xml
-<managingOrganization>
-    <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
-    <display value="Moir Medical Centre"/>
-</managingOrganization>
-```
-
-If you wish to know more details about this organisation, you will need to follow the reference (the example reference is a logical reference and does not currently exist). References can be relative, the previous section be re-written as (this is the way of referring to local resources):
+ManagagingOrganisation, the patients GP Practice is given as a reference (Organization/24965)
 
 ```xml
 <managingOrganization>
@@ -179,13 +164,22 @@ If you wish to know more details about this organisation, you will need to follo
 </managingOrganization>
 ```
 
-Notice the SDS/ODS code has been replaced with a number, this is the logical id of the organisation and to get the ods we will need to request that resource, e.g.
+If you wish to know more details about this organisation, you will need to follow the reference. The Reference used in the the example is relative, they can also point to external servers, e.g.:
+
+```xml
+<managingOrganization>
+    <reference value="https://fhirserver.trust.nhs.uk/DSTU2/Organization/65"/>
+    <display value="Moir Medical Centre"/>
+</managingOrganization>
+```
+
+We retrieve the Organization resource in the similar manner to searching for the Patient but as we know the `Id` of the resource we can access it directly.
 
 ```
-http://127.0.0.1:8181/Dstu2/Organization/24965
+GET [baseUrl]/Organization/24965
 ```
 
-The response from this request is shown below, it is not returned in a FHIR [Bundle](http://www.hl7.org/fhir/dstu2/bundle.html) as we haven't performed a search and requested the resource by it's Id. The ODS code can be found in the identifier section.
+The response from this request is shown below, it is not returned in a FHIR [Bundle](http://www.hl7.org/fhir/dstu2/bundle.html) as we haven't performed a search and requested the resource by it's Id. The SDS/ODS code can be found in the identifier section.
 
 #### XML Example 2 - Organization ####
 
@@ -193,7 +187,6 @@ The response from this request is shown below, it is not returned in a FHIR [Bun
 <Organization xmlns="http://hl7.org/fhir">
     <id value="24965"/>
     <meta>
-        <versionId value="1"/>
         <lastUpdated value="2017-06-02T09:27:43.366+01:00"/>
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Organization-1"/>
     </meta>
@@ -225,7 +218,7 @@ The response from this request is shown below, it is not returned in a FHIR [Bun
 </Organization>
 ```
 
-The method for returning Practitioner is the same and an example is shown below in section 2.2
+The method for returning Practitioner is the similar and an example is shown below in section 2.2
 
 ### 2.1 identifier ###
 
@@ -244,25 +237,27 @@ To find a patient by NHS number, Hospital number, etc we use the identifier. The
 To search for Patients by NHS number, use the following query:
 
 ```
-GET /Patient?identifier=[system]|[code]
+GET [baseUrl]/Patient?identifier=[system]|[code]
 ```
 
 The system is `https://fhir.nhs.uk/Id/nhs-number` and the code is `9876543210`, e.g.
 
 ```
-http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
+GET [baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 ```
 
-This will return all Patient resources with a NHS number of 9876543210, this may be more than one. NHS Number is not normally the main patient identifier within a trust, this is for a number of reasons:
-* Patient doesn't have a NHS Number (foreign visitor or from another home nation in the UK)
-* Patient's NHS number hasn't been validated
-* Patient has not been identified yet
+This will return all Patient resources with a NHS number of 9876543210 (this may be more than one). NHS Number may not be the main patient identifier within a NHS Organisation or Health Enterprise, this is for a number of reasons:
+* Patient doesn't currently have a NHS Number (foreign visitor or from another home nation in the UK)
+* Patient's NHS number hasn't been validated (and so can not be used for interoperability/communication)
+* Patient has not been identified accurately.
 
-For these reasons the health organisation will use it's own primary identifier, often referred to as Hospital or District number. Organisation's will need to create their own system for the identifier, in the example Jorvik NHS Trust have used 'https://fhir.jorvik.nhs.uk/PAS/Patient' to indicate PAS Hospital Number. They use this with the API as shown below:
+For these reasons the trust/health organisation will use it's own primary identifier, often referred to as Hospital or District number. Organisation's will need to create their own system for the identifier, in the example Example NHS Trust have used 'https://fhir.example.nhs.uk/PAS/Patient' to indicate PAS Hospital Number. They use this with the API as shown below:
 
 ```
-GET http://[baseUrl]/Patient?identifier=https://fhir.jorvik.nhs.uk/PAS/Patient|123345
+GET [baseUrl]/Patient?identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
 ```
+
+{% include note.html content="Trust or Organisation can choose to use their main identifier as the logical Id. [TODO add notes about national NHS systems using NHS Number this way.]" %}
 
 ### 2.2. Java Example ###
 
@@ -377,12 +372,10 @@ Currently, the only national resources this would apply to are:
 {% include image.html
 max-width="200px" file="design/National Basic Process Flow PDQm.jpg" alt="National NHS Process Flow PDQ FHIR" caption="National NHS Process Flow Patient Search FHIR" %}
 -->
-## 3. Patient Search Gateway ##
+## 3. Server(/Gateway) Patient Search  ##
 
 <!-- This section is introducing the facade pattern. This may not sound useful but is probably the most common patterns with FHIR in the UK -->
-Patient searches using FHIR can be used with other patient search systems such NHS Spine Mini Services Provider (SMSP), HL7v2 Patient queries, etc. In this way the Patient Demographics
-Consumer can choose the technology stack that best fits.
-The Patient Demographics Supplier may act as a proxy to an existing HL7v2 PDQ, FHIR PDQ or ITK SMSP environment as shown in the diagrams below.
+In practice many FHIR Servers will be facades or gateways. [Facades](https://en.wikipedia.org/wiki/Facade_pattern) will provide a standardised CareConnect interface to the underlying a SQL database or provide a CareConnectAPI gateway to other patient search systems such NHS Spine Mini Services Provider (SMSP) or HL7v2 Patient queries. In both cases the CareConnect client is insulated away from the interfacing technology or technology stack.
 
 {% include image.html
 max-width="200px" file="design/Gateway PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
@@ -396,7 +389,7 @@ The {% include custom/patterns.inline.html content="[Service Connector(/Gateway)
 
 Consider the HL7v2 Example below:
 
-#### HL7 version 2 Example - Patient Demographics Query ####
+#### HL7 version 2 Example 1 - Patient Demographics Query ####
 
 ```
 MSH|^~\&|TEST_HARNESS|TEST|CR1|MOH_CAAT|20090226131520-0600||QBP^Q22^QBP_Q21|TEST-CR-15-20|P|2.5
@@ -405,7 +398,7 @@ RCP|I|10^RD
 ```
 
 This is searching for female patients with a surname of Jones. It is not clear from the message this is a search query and also the parameters `@PID.8^F~@PID.5.1^JONES` means a female called Jones. Also it's difficult to call from a web browser based application.
-Using a FHIR API Gateway hides this complexity from the web developer allowing them to use the $http service as shown in the example below:
+Using a FHIR API Gateway hides this complexity from the client web developer allowing them to use the $http service as shown in the example below:
 
 #### AngularJS Example 1 - Web App Client Search ####
 

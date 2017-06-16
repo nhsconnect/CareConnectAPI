@@ -54,7 +54,7 @@ Encryption and Signatures are used together i.e.:
 
 # Security and Care Connect APIs #
 
-Security is a key consideration when establishing API projects and should be considered within in the design from the start of any project. The four key principles to consider are:
+Security is a key consideration when establishing API projects and should be considered within the design from the start of any project. The four key principles to consider are:
 
 - Authentication
 - Authorisation

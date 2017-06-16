@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "meta": {
-    "lastUpdated": "2017-05-08T16:14:21.354+01:00"
+    "lastUpdated": "2017-06-08T11:55:06.319+01:00"
   },
   "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-ConditionRelationship-1",
   "version": "1.0.0",
@@ -350,8 +350,8 @@
       },
       {
         "path": "Extension.extension.valueCode",
-        "short": "Value of extension",
-        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "short": "Condition relationship type",
+        "definition": "Condition relationship type.",
         "min": 0,
         "max": "1",
         "base": {
@@ -585,8 +585,8 @@
       },
       {
         "path": "Extension.extension.valueReference",
-        "short": "Value of extension",
-        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "short": "Target condition",
+        "definition": "Target condition.",
         "min": 0,
         "max": "1",
         "base": {
@@ -848,6 +848,8 @@
       },
       {
         "path": "Extension.extension.valueCode",
+        "short": "Condition relationship type",
+        "definition": "Condition relationship type.",
         "type": [
           {
             "code": "code"
@@ -873,6 +875,8 @@
       },
       {
         "path": "Extension.extension.valueReference",
+        "short": "Target condition",
+        "definition": "Target condition.",
         "type": [
           {
             "code": "Reference",

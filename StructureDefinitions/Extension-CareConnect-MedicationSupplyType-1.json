@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "meta": {
-    "lastUpdated": "2017-05-08T15:42:46.606+01:00"
+    "lastUpdated": "2017-06-06T09:30:20.895+01:00"
   },
   "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationSupplyType-1",
   "version": "1.0.0",
@@ -203,7 +203,7 @@
         ]
       },
       {
-        "path": "Extension.valueCode",
+        "path": "Extension.valueCodeableConcept",
         "short": "Medication supply type",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
         "min": 0,
@@ -215,7 +215,7 @@
         },
         "type": [
           {
-            "code": "code"
+            "code": "CodeableConcept"
           }
         ],
         "condition": [
@@ -265,11 +265,11 @@
         "fixedUri": "https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationSupplyType-1"
       },
       {
-        "path": "Extension.valueCode",
+        "path": "Extension.valueCodeableConcept",
         "short": "Medication supply type",
         "type": [
           {
-            "code": "code"
+            "code": "CodeableConcept"
           }
         ],
         "binding": {

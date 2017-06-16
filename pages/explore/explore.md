@@ -1,13 +1,13 @@
 ---
 title: Explore Overview
 keywords: getcarerecord, structured, rest, resource
-tags:
-- structured
-- getcarerecord
+tags: [rest,fhir]
 sidebar: foundations_sidebar
 permalink: explore.html
 summary: "Overview of the Explore section"
 ---
+
+{% include custom/search.warnbanner.html %}
 
 {% include custom/api_overview.svg %}
 
@@ -21,43 +21,104 @@ The FHIR Care Connect profiles described in the Explore section of this implemen
 
 ### 1.1 Profile Structure Details ###
 
-| General              |  Medication &amp; Immunisation    |
-|+---------------------|+--------------------------------+|
-| 0. References  | Links to other parts of the implementation guide which might help with context and understanding the profiles described |
-| 1. Read | A description of how to get the API |
-| 2. Search Parameters          | List of search parameters for the profile being described, including any tips for searching. This section shows examples of how to search using the provided search parameters       |
-| 3. Example | Description of of the Request & Response headers, example of how to search on a server and the expected response body as an example   |
-
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+<th style="width:20%;">General</th>
+<th style="width:80%;">Description </th>
+</tr>
+<tr>
+<td>0. References</td>
+<td>Links to other parts of the implementation guide which might help with context and understanding the profiles described</td>
+</tr>
+<tr>
+<td>1. Read</td>
+<td>A description of how to get the API</td>
+</tr>
+<tr>
+<td>2. Search Parameters</td>
+<td>List of search parameters for the profile being described, including any tips for searching. This section shows examples of how to search using the provided search parameters</td>
+</tr>
+<tr>
+<td>3. Example</td>
+<td>Description of of the Request & Response headers, example of how to search on a server and the expected response body as an example</td>
+</tr>
+</table>
 
 ## 2. Profiles ##
 This section looks at the Care Connect profiles covered within this implementation guide.
 
-### 2.1 Clinical ###
 
-| General             |  Medication &amp; Immunisation |
-|---------------------|--------------------------------|
-| [AllergyIntolerance](restfulapis_clinical_allergyintolerance.html)  |[ Medication](restfulapis_clinical_medication.html)                     |
-| [Condition](restfulapis_clinical_condition.html) (Problem) | [MedicationOrder ](restfulapis_clinical_medicationorder.html)               |
-| [Procedure](restfulapis_clinical_procedure.html)           | [MedicationStatement ](restfulapis_clinical_medicationstatement.html)           |
-| [Observation](restfulapis_clinical_observation.html) | [Immunization](restfulapis_clinical_immunization.html)                   |
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+<th style="width:33%;">Clinical</th>
+<th style="width:33%;">&nbsp;</th>
+<th style="width:33%;">&nbsp;</th>
+</tr>
+<tr id="clinicald">
+<th>Summary</th>
+<th>Diagnostics</th>
+<th>Medications</th>
+</tr>
+<tr>
+<td><a href="restfulapis_clinical_allergyintolerance.html">AllergyIntolerance</a></td>
+<td><a href="restfulapis_clinical_observation.html">Observation</a></td>
+<td><a href="restfulapis_clinical_medication.html">Medication</a></td>
+</tr>
+<tr>
+<td><a href="restfulapis_clinical_condition.html">Condition</a> (Problem)</td>
+<td>&nbsp;</td>
+<td><a href="restfulapis_clinical_medicationorder.html">MedicationOrder</a></td>
+</tr>
+<tr>
+<td><a href="restfulapis_clinical_procedure.html">Procedure</a></td>
+<td>&nbsp;</td>
+<td><a href="restfulapis_clinical_medicationstatement.html">MedicationStatement</a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="restfulapis_clinical_immunization.html">Immunization</a></td>
+</tr>
+</table>
 
-<!--- |   |  [Flag ](restfulapis_clinical_medicationflag.html)(Medication)  | --->
+<table style="min-width:100%;width:100%">
+<tr id="base">
+<th style="width:33%;">Base</th>
+<th style="width:33%;">&nbsp;</th>
+<th style="width:33%;">&nbsp;</th>
+</tr>
+<tr id="based">
+<th>Individuals</th>
+<th>Entities</th>
+<th>Workflow</th>
+</tr>
+<tr>
+<td><a href="restfulapis_identification_patient.html">Patient</a></td>
+<td><a href="restfulapis_identification_organisation.html">Organization</a></td>
+<td><a href="restfulapis_workflow_encounter.html">Encounter</a></td><td></td>
+</tr>
+<tr>
+<td><a href="restfulapis_identification_practitioner.html">Practitioner</a> (Problem)</td>
+<td><a href="restfulapis_identification_location.html">Location</a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
 
-### 2.2. Identification ###
 
-| Individuals  | Groups &amp; Entities       |
-|--------------|--------------|
-| [Patient ](restfulapis_identification_patient.html)     | [Organization](restfulapis_identification_organisation.html) |   
-| [Practitioner](restfulapis_identification_practitioner.html) | [Location](restfulapis_identification_location.html)     |  
-
-### 2.3. Workflow ###
-
-| Patient Management |
-|--------------------|
-| [Encounter](restfulapis_workflow_encounter.html)          |
-
-### 3.4 Conformance ###
-
-| Terminology | Operations Control |
-|-------------|--------------------|
-| [ValueSet](restfulapis_conformance_valueset.html)    | [Conformance](restfulapis_conformance_conformance.html)          |
+<table style="min-width:100%;width:100%">
+<tr id="conformance">
+<th style="width:33%;">Foundation</th>
+<th style="width:33%;"></th>
+<th style="width:33%;"></th>
+</tr>
+<tr id="conformanced">
+<th>Conformance</th>
+<th>Terminology</th>
+<th>&nbsp;</th>
+</tr>
+<tr>
+<td><a href="restfulapis_conformance_conformance.html">Conformance</a></td>
+<td><a href="restfulapis_conformance_valueset.html">ValueSet</a></td>
+<td>&nbsp;</td>
+</tr>
+</table>

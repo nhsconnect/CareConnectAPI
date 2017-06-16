@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<meta>
-		<lastUpdated value="2017-05-08T15:42:30.694+01:00"/>
+		<lastUpdated value="2017-06-08T11:55:06.769+01:00"/>
 	</meta>
 	<url value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationRepeatInformation-1"/>
 	<version value="1.0.0"/>
@@ -262,7 +262,7 @@
 		<element>
 			<path value="Extension.extension.valuePositiveInt"/>
 			<short value="Number of issues authorised"/>
-			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+			<definition value="Number of issues authorised"/>
 			<min value="1"/>
 			<max value="1"/>
 			<base>
@@ -433,7 +433,7 @@
 		<element>
 			<path value="Extension.extension.valuePositiveInt"/>
 			<short value="Number of issues issued"/>
-			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+			<definition value="Number of issues issued."/>
 			<min value="0"/>
 			<max value="1"/>
 			<base>
@@ -603,8 +603,8 @@
 		</element>
 		<element>
 			<path value="Extension.extension.valueQuantity"/>
-			<short value="Value of extension"/>
-			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+			<short value="Repeat expected supply duration"/>
+			<definition value="Repeat expected supply duration."/>
 			<min value="0"/>
 			<max value="1"/>
 			<base>
@@ -775,7 +775,7 @@
 		<element>
 			<path value="Extension.extension.valueDateTime"/>
 			<short value="Repeat review date"/>
-			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+			<definition value="Repeat review date."/>
 			<min value="0"/>
 			<max value="1"/>
 			<base>
@@ -998,6 +998,7 @@
 		<element>
 			<path value="Extension.extension.valuePositiveInt"/>
 			<short value="Number of issues authorised"/>
+			<definition value="Number of issues authorised"/>
 			<min value="1"/>
 			<type>
 				<code value="positiveInt"/>
@@ -1017,6 +1018,7 @@
 		<element>
 			<path value="Extension.extension.valuePositiveInt"/>
 			<short value="Number of issues issued"/>
+			<definition value="Number of issues issued."/>
 			<type>
 				<code value="positiveInt"/>
 			</type>
@@ -1034,6 +1036,8 @@
 		</element>
 		<element>
 			<path value="Extension.extension.valueQuantity"/>
+			<short value="Repeat expected supply duration"/>
+			<definition value="Repeat expected supply duration."/>
 			<type>
 				<code value="Quantity"/>
 			</type>
@@ -1052,6 +1056,7 @@
 		<element>
 			<path value="Extension.extension.valueDateTime"/>
 			<short value="Repeat review date"/>
+			<definition value="Repeat review date."/>
 			<type>
 				<code value="dateTime"/>
 			</type>

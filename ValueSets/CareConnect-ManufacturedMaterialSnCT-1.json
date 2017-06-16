@@ -14,8 +14,9 @@
     }
   ],
   "url": "https://fhir.hl7.org.uk/ValueSet/CareConnect-ManufacturedMaterialSnCT-1",
-  "name": "CareConnect-ManufacturedMaterialSnCT-1",
-  "status": "draft",
+  "version": "1.0.0",
+  "name": "Care Connect Manufactured Material SnCT",
+  "status": "active",
   "publisher": "HL7 UK",
   "description": "A code from the SNOMED Clinical Terminology UK coding system that describes a manufactured material (e.g. a pharmaceutical product or personal medical device). These will form part of the NHS dm+d. Any code from the SNOMED CT UK 'Manufactured Material' subset with subset original id 1391000000139; the corresponding SNOMED CT UK Refset fully specified name is 'Manufactured material simple reference set (foundation metadata concept)' with Refset Id 999000031000001105.",
   "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",

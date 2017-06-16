@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "meta": {
-    "lastUpdated": "2017-03-27T08:57:15.433+01:00"
+    "lastUpdated": "2017-05-22T11:07:07.654+01:00"
   },
   "extension": [
     {
@@ -95,12 +95,6 @@
                 "valueString": "identifier or name"
               }
             ],
-            "key": "org-1",
-            "severity": "error",
-            "human": "The organization SHALL at least have a name or an id, and possibly more than one",
-            "xpath": "count(f:identifier | f:name) > 0"
-          },
-          {
             "key": "org-1",
             "severity": "error",
             "human": "The organization SHALL at least have a name or an id, and possibly more than one",
@@ -502,7 +496,7 @@
       {
         "path": "Organization.extension",
         "name": "organization-period",
-        "short": "The date range that this organization should be considered available.",
+        "short": "The date range that this organization should be considered available",
         "definition": "The date range that this organization should be considered available.",
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
@@ -12514,22 +12508,6 @@
         "type": [
           {
             "code": "Organization"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "org-1",
-            "severity": "error",
-            "human": "The organization SHALL at least have a name or an id, and possibly more than one",
-            "xpath": "count(f:identifier | f:name) > 0"
-          }
-        ]
-      },
-      {
-        "path": "Organization.contained",
-        "type": [
-          {
-            "code": "Resource"
           }
         ]
       },

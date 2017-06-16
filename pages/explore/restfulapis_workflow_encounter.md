@@ -1,16 +1,14 @@
 ---
 title: Workflow | Encounter
 keywords: usecase, encounter
-tags: [rest, fhir, workflow]
+tags: [rest, fhir, workflow,development]
 sidebar: foundations_sidebar
 permalink: restfulapis_workflow_encounter.html
 summary: An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/profile.html content="Encounter" page="CareConnect-Encounter-1" %}
-
-{% include custom/fhir.resource.html content="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html)" %}
+{% include custom/fhir.reference.html resource="Encounter" page="CareConnect-Encounter-1" fhirlink="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -50,7 +48,7 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
 
 #### cURL ####
 
-{% include custom/embedcurl.html title="Search Encounter" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/Encounter?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Encounter" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Encounter?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Encounter" %}
 
@@ -66,15 +64,14 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://127.0.0.1:8181/Dstu2/Encounter?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="[baseUrl]/Encounter?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://127.0.0.1:8181/Dstu2/Encounter/24957"/>
+        <fullUrl value="[baseUrl]/Encounter/24957"/>
         <resource>
             <Encounter xmlns="http://hl7.org/fhir">
                 <id value="24957"/>
                 <meta>
-                    <versionId value="1"/>
                     <lastUpdated value="2017-06-02T08:53:47.393+01:00"/>
                     <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Encounter-1"/>
                 </meta>
@@ -92,7 +89,7 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
                 </patient>
                 <participant>
                     <individual>
-                        <reference value="https://sds.proxy.nhs.uk/Practitioner/C5206458"/>
+                        <reference value="Practitioner/5206458"/>
                         <display value="FF Nathani"/>
                     </individual>
                 </participant>
@@ -109,12 +106,12 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
                 </reason>
                 <location>
                     <location>
-                        <reference value="https://sds.proxy.nhs.uk/Organization/Location/RY8RK"/>
+                        <reference value="Location/RY8RK"/>
                         <display value="Long Eaton Health Clinic"/>
                     </location>
                 </location>
                 <serviceProvider>
-                    <reference value="https://sds.proxy.nhs.uk/Organization/Organization/RY8"/>
+                    <reference value="Organization/RY8"/>
                     <display value="Derbyshire Community Health Services NHS Foundation Trust"/>
                 </serviceProvider>
             </Encounter>

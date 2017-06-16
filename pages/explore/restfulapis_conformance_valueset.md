@@ -1,7 +1,7 @@
 ---
 title: Conformance | ValueSet
 keywords: foundations, fhir
-tags: [foundations,use_case,fhir]
+tags: [foundations,use_case,fhir,rest,development]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_conformance_valueset.html
 summary: A value set specifies a set of codes drawn from one or more code systems.
@@ -9,9 +9,8 @@ summary: A value set specifies a set of codes drawn from one or more code system
 
 {% include custom/search.warnbanner.html %}
 
-## 0. References ##
+{% include custom/fhir.referencemin.html resource="" page="" fhirlink="[ValueSet](http://www.hl7.org/fhir/dstu2/valueset.html)" content="User Stories" userlink="" %}
 
-{% include custom/fhir.resource.html content="[ValueSet](http://www.hl7.org/fhir/dstu2/valueset.html)" %}
 
 ## 1. Read ##
 
@@ -28,7 +27,7 @@ Return the ValueSet for Care Connect Administrative Gender. Replace 'baseUrl' wi
 
 #### 2.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Read Care Connect Administrative Gender ValueSet" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER cn389ncoiwuencr' -X GET  '[baseUrl]/ValueSet/CareConnect-AdministrativeGender-1'" %}
+{% include custom/embedcurl.html title="Read Care Connect Administrative Gender ValueSet" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/ValueSet/CareConnect-AdministrativeGender-1'" %}
 
 {% include custom/search.response.headers.html resource="ValueSet"  %}
 

@@ -1,6 +1,5 @@
 <Encounter xmlns="http://hl7.org/fhir">
     <meta>
-        <versionId value="1"/>
         <lastUpdated value="2017-05-24T06:36:23.453-04:00"/>
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Encounter-1"/>
     </meta>
