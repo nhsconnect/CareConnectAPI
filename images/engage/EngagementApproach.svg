@@ -9,25 +9,31 @@
 	<style type="text/css">
 	<![CDATA[
 		.st1 {visibility:visible}
-		.st2 {fill:#ff9300;fill-opacity:0.098;stroke:#ff9300;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.098;visibility:hidden}
-		.st3 {fill:#ff9300;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5;visibility:hidden}
-		.st4 {stroke:#ff9300;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
-		.st5 {fill:#000bae;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st6 {fill:#ff9300;font-family:Segoe UI;font-size:2.50001em;font-weight:bold}
-		.st7 {fill:#4481bd;fill-opacity:0;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st8 {fill:#005eb8;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st9 {fill:#00a2c9}
-		.st10 {fill:#000bae}
-		.st11 {stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st12 {fill:#005eb8}
-		.st13 {fill:#000bae;font-family:Segoe UI;font-size:1.5em}
-		.st14 {marker-end:url(#mrkr4-125);stroke:#005db7;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.6;stroke-width:0.75}
-		.st15 {fill:#005db7;fill-opacity:0.6;stroke:#005db7;stroke-opacity:0.6;stroke-width:0.22935779816514}
-		.st16 {font-size:1em}
-		.st17 {fill:#ffffff}
-		.st18 {stroke:#000c9d;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st19 {fill:#feffff}
+		.st2 {fill:#ff9300;fill-opacity:0.098;stroke:#ff9300;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.098;visibility:hidden;pointer-events:none;}
+		.st3 {fill:#ff9300;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5;visibility:hidden;pointer-events:none;}
+		.st4 {stroke:#ff9300;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8;pointer-events:none;}
+		.st5 {fill:#000bae;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5;pointer-events:none;}
+		.st6 {fill:#ff9300;font-family:Segoe UI;font-size:2.50001em;font-weight:bold;pointer-events:none;}
+		.st7 {fill:#4481bd;fill-opacity:0;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5;}
+		.st8 {fill:#005eb8;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5;pointer-events:none;}
+		.st9 {fill:#00a2c9;pointer-events:none;}
+		.st10 {fill:#000bae;pointer-events:none;}
+		.st11 {stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5;pointer-events:none;}
+		.st12 {fill:#005eb8;pointer-events:none;}
+		.st13 {fill:#000bae;font-family:Segoe UI;font-size:1.5em;pointer-events:none;}
+		.st14 {marker-end:url(#mrkr4-125);stroke:#005db7;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.6;stroke-width:0.75;pointer-events:none;}
+		.st15 {fill:#005db7;fill-opacity:0.6;stroke:#005db7;stroke-opacity:0.6;stroke-width:0.22935779816514;pointer-events:none;}
+		.st16 {font-size:1em;pointer-events:none;}
+		.st17 {fill:#ffffff;pointer-events:none;}
+		.st18 {stroke:#000c9d;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5;pointer-events:none;}
+		.st19 {fill:#feffff;pointer-events:none;}
 		.st20 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+
+			.st7:hover {
+				fill-opacity: 0.2;
+				filter: alpha(opacity=20);
+			}
+
 
 		@media all and (-ms-high-contrast:none),(-ms-high-contrast: active) {
 			.st7:hover {
@@ -420,7 +426,7 @@
 				<text x="8.14" y="1030.42" class="st6" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Deliver the Solution</text>			</g>
 		</g>
 		<g id="shape390-55" v:mID="390" v:groupContext="shape" v:layerMember="1" transform="translate(548.398,-28.0244)">
-			
+
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
