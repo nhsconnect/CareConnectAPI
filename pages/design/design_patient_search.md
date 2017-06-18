@@ -63,92 +63,7 @@ A sample response is shown below
 
 #### XML Example 1 - Bundle Patient ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="e25d430b-e238-44a3-95cb-2c048496a448"/>
-    <meta>
-        <lastUpdated value="2017-06-02T15:18:24.874+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/Patient?birthdate=1998-03-19&amp;name=bernie%20kanfeld"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/Patient/24966"/>
-        <resource>
-            <Patient xmlns="http://hl7.org/fhir">
-                <id value="24966"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T09:30:21.875+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
-                </meta>
-                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-EthnicCategory-1">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
-                            <code value="01"/>
-                            <display value="British, Mixed British"/>
-                        </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <identifier>
-                    <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="https://fhir.hl7.org.uk/CareConnect-NHSNumberVerificationStatus-1"/>
-                                <code value="01"/>
-                                <display value="Number present and verified"/>
-                            </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                    <system value="https://fhir.nhs.uk/Id/nhs-number"/>
-                    <value value="9876543210"/>
-                </identifier>
-                <identifier>
-                    <system value="https://fhir.jorvik.nhs.uk/PAS/Patient"/>
-                    <value value="123345"/>
-                </identifier>
-                <active value="true"/>
-                <name>
-                    <use value="usual"/>
-                    <family value="Kanfeld"/>
-                    <given value="Bernie"/>
-                    <prefix value="Miss"/>
-                </name>
-                <gender value="female"/>
-                <birthDate value="1998-03-19"/>
-                <address>
-                    <use value="home"/>
-                    <line value="10, Field Jardin"/>
-                    <line value="Long Eaton"/>
-                    <city value="Nottingham"/>
-                    <postalCode value="NG10 1ZZ"/>
-                </address>
-                <maritalStatus>
-                    <coding>
-                        <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
-                        <code value="S"/>
-                        <display value="Never Married"/>
-                    </coding>
-                </maritalStatus>
-                <careProvider>
-                    <reference value="Practitioner/24967"/>
-                    <display value="Dr AA Bhatia"/>
-                </careProvider>
-                <managingOrganization>
-                    <reference value="Organization/24965"/>
-                    <display value="Moir Medical Centre"/>
-                </managingOrganization>
-            </Patient>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/df1eafd6f4b730ba027566219c7fdc83.js"></script>
 
 What we have just described is shown in the diagram below. When entered the url we did a Patient Search FHIR Query and the response is called Patient Search FHIR Query Response.
 
@@ -183,40 +98,7 @@ The response from this request is shown below, it is not returned in a FHIR [Bun
 
 #### XML Example 2 - Organization ####
 
-```xml
-<Organization xmlns="http://hl7.org/fhir">
-    <id value="24965"/>
-    <meta>
-        <lastUpdated value="2017-06-02T09:27:43.366+01:00"/>
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Organization-1"/>
-    </meta>
-    <identifier>
-        <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
-        <value value="C81010"/>
-    </identifier>
-    <type>
-        <coding>
-            <system value="https://fhir.hl7.org.uk/ValueSet/organisation-type-1"/>
-            <code value="prov"/>
-            <display value="Healthcare Provider"/>
-        </coding>
-    </type>
-    <name value="The Moir Medical Centre"/>
-    <telecom>
-        <system value="phone"/>
-        <value value="0115 9737320"/>
-        <use value="work"/>
-    </telecom>
-    <address>
-        <use value="work"/>
-        <type value="both"/>
-        <line value="Regent Street"/>
-        <line value="Long Eaton"/>
-        <city value="Nottingham"/>
-        <postalCode value="NG10 1QQ"/>
-    </address>
-</Organization>
-```
+<script src="https://gist.github.com/KevinMayfield/6748097c5003220759292726be05c259.js"></script>
 
 The method for returning Practitioner is the similar and an example is shown below in section 2.2
 
@@ -268,39 +150,14 @@ The first example uses the same search parameters we used earlier, we are search
 #### Java Example 1 - Patient Search ####
 
 ```java
-       // Create a FHIR Context
-       FhirContext ctx = FhirContext.forDstu2();
-       IParser parser = ctx.newXmlParser();
 
-       // Create a client and post the transaction to the server
-       IGenericClient client = ctx.newRestfulGenericClient("http://127.0.0.1:8181/Dstu2/");
-
-       System.out.println("GET http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&given=bernie&family=kanfeld");
-       Bundle results = client
-               .search()
-               .forResource(Patient.class)
-               .where(Patient.FAMILY.matches().value("kanfeld"))
-               .and(Patient.GIVEN.matches().value("bernie"))
-               .and(Patient.BIRTHDATE.exactly().day("1998-03-19"))
-               .returnBundle(ca.uhn.fhir.model.dstu2.resource.Bundle.class)
-               .execute();
-       System.out.println(parser.setPrettyPrint(true).encodeResourceToString(results));
 ```
 
 In this example we have omitted the context and client setup. This shows how a search on NHS Number would be executed, the resulting XML out would be the same as the previous listing.
 
 #### Java Example 2 - Patient Search NHS Number ####
 
-```java
-       System.out.println("GET http://127.0.0.1:8181/Dstu2/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210");
-       results = client
-               .search()
-               .forResource(Patient.class)
-               .where(Patient.IDENTIFIER.exactly().systemAndCode("https://fhir.nhs.uk/Id/nhs-number", "9876543210"))
-               .returnBundle(ca.uhn.fhir.model.dstu2.resource.Bundle.class)
-               .execute();
-       System.out.println(parser.setPrettyPrint(true).encodeResourceToString(results));
-```
+<script src="https://gist.github.com/KevinMayfield/b71d1318d5fddf5012b334c74d25f561.js"></script>
 
 The examples have used a logical reference to SDS codes, this means we can't simply call Organization or Practitioner by using their Id's we must do a search on identifier
 
@@ -314,32 +171,7 @@ GET http://[baseUrl]/Practitoner?identifier=https://fhir.nhs.uk/Id/sds-user-id|G
 
 #### Java Example 3 - Organization and Practitioner Search ####
 
-```java
-    if (results.getEntry().size() > 0) {
-          // Process first patient only.
-          Patient patient = (Patient) results.getEntry().get(0).getResource();
-          System.out.println();
-
-          // Assume Organisation Id is SDS/ODS Code
-          Bundle organisationResults = client
-                  .search()
-                  .forResource(Organization.class)
-                  .where(Organization.IDENTIFIER.exactly().systemAndCode("https://fhir.nhs.uk/Id/ods-organization-code",patient.getManagingOrganization().getReference().getIdPart()))
-                  .returnBundle(ca.uhn.fhir.model.dstu2.resource.Bundle.class)
-                  .execute();
-          System.out.println(parser.setPrettyPrint(true).encodeResourceToString(organisationResults));
-
-          if (patient.getCareProvider().size() > 0) {
-              Bundle gpResults = client
-                      .search()
-                      .forResource(Practitioner.class)
-                      .where(Practitioner.IDENTIFIER.exactly().systemAndCode("https://fhir.nhs.uk/Id/sds-user-id", patient.getCareProvider().get(0).getReference().getIdPart()))
-                      .returnBundle(ca.uhn.fhir.model.dstu2.resource.Bundle.class)
-                      .execute();
-              System.out.println(parser.setPrettyPrint(true).encodeResourceToString(gpResults));
-          }
-      }
-```
+<script src="https://gist.github.com/KevinMayfield/8a333a1acd31a7460ca4fd508b987156.js"></script>
 
 If we did have the logical Id's returned in the Patient resources we could have retrieved the Organization (or Practitioner) resources directly. In the example below the Patients organisation Id is `24965` (this is the Id of the Organization in XML Example 2 )
 
@@ -402,21 +234,7 @@ Using a FHIR API Gateway hides this complexity from the client web developer all
 
 #### AngularJS Example 1 - Web App Client Search ####
 
-```js
-angular.module('App').controller('PatientDetailsController', function ($scope, $http) {
-  $scope.search = function()
-  {
-    $http({
-        method : 'GET',
-            url : 'http://127.0.0.1:8181/Dstu2/Patient?family=jones&gender=female'
-      })
-          .success(function (bundleddata) {
-      $scope.bundle = bundleddata;
-    }).error(function (err) {     
-    })
-  }
-});
-```
+<script src="https://gist.github.com/KevinMayfield/88e98c89775ba707dd7a0cf4795b395a.js"></script>
 
 <!--
 | SMSP Request | FHIR Patient Search |
