@@ -34,16 +34,16 @@ Fetches a bundle of all `Observation` resources for the specified patient.
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
     <th style="width:15%;">Name</th>
-    <th style="width:10%;">Type</th>
+    <th style="width:15%;">Type</th>
     <th style="width:40%;">Description</th>
     <th style="width:5%;">Conformance</th>
-    <th style="width:30%;">Path</th>
+    <th style="width:25%;">Path</th>
 </tr>
 <tr>
     <td><code class="highlighter-rouge">category</code></td>
     <td><code class="highlighter-rouge">token</code></td>
     <td>The classification of the type of observation</td>
-    <td><SHOULD/td>
+    <td>SHOULD</td>
     <td>Observation.category</td>
 </tr>
 <tr>
@@ -51,7 +51,7 @@ Fetches a bundle of all `Observation` resources for the specified patient.
     <td><code class="highlighter-rouge">token</code></td>
     <td>The code of the observation type</td>
     <td>SHOULD</td>
-    <td><bservation.code</td>
+    <td>Observation.code</td>
 </tr>
 <tr>
     <td><code class="highlighter-rouge">date</code></td>
@@ -101,8 +101,8 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
 
 {% include custom/embedcurl.html title="Search Observation" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
-{% include custom/search.response.headers.html resource="Observation" %}
+ {% include custom/search.response.headers.html resource="Observation" %}
 
-#### 3.2.2 Http Body ####
+#### 3.2.2. Http Body ###
 
 <script src="https://gist.github.com/KevinMayfield/699d645252f12fb1e48ad5b61d9f6daa.js"></script>
