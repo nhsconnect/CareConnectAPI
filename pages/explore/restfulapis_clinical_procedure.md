@@ -31,18 +31,41 @@ Fetches a bundle of all `Procedure` resources for the specified patient.
 
 {% include custom/search.parameters.html resource="Procedure"     link="https://www.hl7.org/fhir/DSTU2/procedure.html#search" %}
 
-| Name | Type | Description | Conformance  | Path |
-|------|------|-------------|-------|------|
-| `date` | `date` | Obtained date/time. If the obtained element is a period, a date that falls in the period | SHALL | Procedure.performed[x] |
-| `patient` | `reference` | Search by subject - a patient | SHALL | Procedure.subject <br>(Patient) |
-| `subject` | `reference` | Search by subject | MAY | Procedure.subject <br>(Patient) |
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:15%;">Name</th>
+    <th style="width:10%;">Type</th>
+    <th style="width:40%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>Obtained date/time. If the obtained element is a period, a date that falls in the period</td>
+    <td>SHALL</td>
+    <td>Procedure.performed[x]</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">patient</code></td>
+    <td><code class="highlighter-rouge">reference</code></td>
+    <td>Search by subject - a patient</td>
+    <td>SHALL</td>
+    <td>Procedure.subject <br>(Patient)</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">subject</code></td>
+    <td><code class="highlighter-rouge">reference</code></td>
+    <td>Search by subject</td>
+    <td>MAY</td>
+    <td>Procedure.subject<br>(Patient)</td>
+</tr>
+</table>
 
 Systems SHALL support the following search combinations:
 
-* patient + category
-* patient + category + date
-* patient + category + code
-* patient + category + code + date
+* patient + date
+
 
 {% include custom/search.date.html para="2.1.1." content="Procedure" %}
 
@@ -64,59 +87,6 @@ Return all Procedure resources for Patient with NHS Number of 9876543210, the fo
 
 {% include custom/search.response.headers.html resource="Procedure" %}
 
-### 3.3 Response Body ###
+#### 3.2.2. Http Body ###
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="194901ab-76e2-419f-a33f-ac0ce205410c"/>
-    <meta>
-        <lastUpdated value="2017-06-02T09:38:26.183+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/Procedure?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/Procedure/24968"/>
-        <resource>
-            <Procedure xmlns="http://hl7.org/fhir">
-                <id value="24968"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T09:36:55.159+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Procedure-1"/>
-                </meta>
-                <subject>
-                    <reference value="Patient/24966"/>
-                    <display value="Bernie Kanfeld"/>
-                </subject>
-                <status value="completed"/>
-                <code>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="923461000000103"/>
-                        <display value="Lifestyle education for diabetes"/>
-                    </coding>
-                </code>
-                <performer>
-                    <actor>
-                        <reference value="Organization/RY8"/>
-                        <display value="Derbyshire Community Health Services NHS Foundation Trust"/>
-                    </actor>
-                </performer>
-                <performedPeriod>
-                    <start value="2017-03-22T09:30:10+01:00"/>
-                    <end value="2017-03-22T10:30:10+01:00"/>
-                </performedPeriod>
-                <followUp>
-                    <text value="described in care plan"/>
-                </followUp>
-            </Procedure>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/767fb7ad59e68d5c94aaf6163993fc11.js"></script>

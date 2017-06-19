@@ -31,12 +31,43 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 {% include custom/search.parameters.html resource="Condition"     link="https://www.hl7.org/fhir/DSTU2/condition.html#search" %}
 
-| Name | Type | Description | Conformance  | Path |
-|------|------|-------------|-------|------|
-| `category` | `token` | The category of the condition | SHOULD| Condition.category |
-| `clinicalstatus` | `token` | The clinical status of the condition | SHOULD | 	Condition.clinicalStatus |
-| `date-recorded` | `date` | A date, when the Condition statement was documented | MAY  | Condition.dateRecorded |
-| `patient` | `reference` | Who has the condition? | SHALL | Condition.patient<br>(Patient) |
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:15%;">Name</th>
+    <th style="width:15%;">Type</th>
+    <th style="width:35%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">category</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>The category of the condition</td>
+    <td>SHOULD</td>
+    <td>Condition.category</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">clinicalstatus</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>The clinical status of the condition</td>
+    <td>SHOULD</td>
+    <td>Condition.clinicalStatus</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">date-recorded</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>A date, when the Condition statement was documented</td>
+    <td>MAY</td>
+    <td>Condition.dateRecorded</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">patient</code></td>
+    <td><code class="highlighter-rouge">reference</code></td>
+    <td>Who has the condition?</td>
+    <td>SHALL</td>
+    <td>Condition.patient<br>(Patient)</td>
+</tr>
+</table>
 
 Systems SHALL support the following search combinations:
 
@@ -66,58 +97,6 @@ Return all Condition resources for Patient with a NHS Number of 9876543210, the 
 
 {% include custom/search.response.headers.html resource="Condition" %}
 
-### 3.3 Response Body ###
+#### 3.2.2 Http Body ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="e5b8f35c-943a-4773-9f77-c867affb602d"/>
-    <meta>
-        <lastUpdated value="2017-06-02T08:30:07.168+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/Condition?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/Condition/24954"/>
-        <resource>
-            <Condition xmlns="http://hl7.org/fhir">
-                <id value="24954"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T08:28:08.713+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Condition-1"/>
-                </meta>
-                <patient>
-                    <reference value="Patient/24966"/>
-                </patient>
-                <asserter>
-                    <reference value="Practitioner/C5206458"/>
-                </asserter>
-                <dateRecorded value="2017-01-04"/>
-                <code>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="44054006"/>
-                        <display value="Type 2 diabetes mellitus"/>
-                    </coding>
-                </code>
-                <category>
-                    <coding>
-                        <system value="https://hl7.org.uk/fhir/CareConnect-ConditionCategory-1"/>
-                        <code value="complaint"/>
-                        <display value="Complaint"/>
-                    </coding>
-                </category>
-                <clinicalStatus value="active"/>
-                <verificationStatus value="confirmed"/>
-                <onsetDateTime value="2003-01-06T17:11:19-05:00"/>
-            </Condition>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/4ecacc1d28bc22efbf630119207c70c0.js"></script>

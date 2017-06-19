@@ -31,13 +31,43 @@ Fetches a bundle of all `Observation` resources for the specified patient.
 
 {% include custom/search.parameters.html resource="Observation"     link="https://www.hl7.org/fhir/DSTU2/observation.html#search" %}
 
-
-| Name | Type | Description | Conformance | Path |
-|------|------|-------------|-------|------|
-| `category` | `token` | The classification of the type of observation | SHOULD | Observation.category |
-| `code` | `token` | The code of the observation type | SHOULD| Observation.code |
-| `date` | `date` | Obtained date/time.<br>If the obtained element is a period, a date that falls in the period | SHALL | Observation.effective[x] |
-| `patient` | `reference` | The subject that the observation is about (if patient) | SHALL | Observation.subject (Patient) |
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:15%;">Name</th>
+    <th style="width:10%;">Type</th>
+    <th style="width:40%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">category</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>The classification of the type of observation</td>
+    <td><SHOULD/td>
+    <td>Observation.category</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">code</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>The code of the observation type</td>
+    <td>SHOULD</td>
+    <td><bservation.code</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>Obtained date/time.<br>If the obtained element is a period, a date that falls in the period</td>
+    <td>SHALL</td>
+    <td>Observation.effective[x]</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">patient</code></td>
+    <td><code class="highlighter-rouge">reference</code></td>
+    <td>The subject that the observation is about (if patient) </td>
+    <td>SHALL</td>
+    <td>Observation.subject (Patient)</td>
+</tr>
+</table>
 
 Systems SHALL support the following search combinations:
 
@@ -73,49 +103,6 @@ Return all Observation resources for Patient with NHS Number of 9876543210, the 
 
 {% include custom/search.response.headers.html resource="Observation" %}
 
-### 3.3. Response Body ###
+#### 3.2.2 Http Body ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="2ec19aad-e619-42c7-a32e-3f0d39c5e7ac"/>
-    <meta>
-        <lastUpdated value="2017-06-02T09:22:07.888+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/Observation?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/Observation/24964"/>
-        <resource>
-            <Observation xmlns="http://hl7.org/fhir">
-                <id value="24964"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T09:20:13.289+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Observation-1"/>
-                </meta>
-                <status value="final"/>
-                <code>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="162864005"/>
-                        <display value="Body mass index 30+ - obesity"/>
-                    </coding>
-                </code>
-                <subject>
-                    <reference value="Patient/24966"/>
-                </subject>
-                <effectiveDateTime value="2012-09-17"/>
-                <performer>
-                    <reference value="Practitioner/24967"/>
-                </performer>
-            </Observation>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/699d645252f12fb1e48ad5b61d9f6daa.js"></script>

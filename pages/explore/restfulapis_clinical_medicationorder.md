@@ -31,11 +31,36 @@ Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 
 {% include custom/search.parameters.html resource="MedicationOrder"     link="https://www.hl7.org/fhir/DSTU2/medicationorder.html#search" %}
 
-| Name    | Type   | Description    | Conformance        | Path |
-|---------|--------|----------------|--------------------|------|
-| `dateWritten` | `date` | Return prescriptions written on this date | MAY | MedicationOrder.dateWritten |
-| `patient` | `reference` | The identity of a patient to list orders for | SHALL | MedicationOrder.patient<br>(Patient) |
-| `status` | `token` | Status of the prescription | SHOULD | MedicationOrder.status |
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:15%;">Name</th>
+    <th style="width:10%;">Type</th>
+    <th style="width:40%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">dateWritten</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>Return prescriptions written on this date</td>
+    <td>MAY</td>
+    <td>MedicationOrder.dateWritten</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">patient</code></td>
+    <td><code class="highlighter-rouge">reference</code></td>
+    <td>The identity of a patient to list orders for</td>
+    <td>SHALL</td>
+    <td>MedicationOrder.patient<br>(Patient)</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">status</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>Status of the prescription</td>
+    <td>SHOULD</td>
+    <td>MedicationOrder.status</td>
+</tr>
+</table>
 
 <!--
 | `datewritten` | `date` | Return prescriptions written on this date |  | MedicationOrder.dateWritten |
@@ -64,82 +89,6 @@ Return all MedciationOrder resources for Patient with a NHS Number of 9876543210
 
 {% include custom/search.response.headers.html resource="MedicationOrder" %}
 
-### 3.3 Response Body ###
+#### 3.2.2 Http Body ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="58ef1cb1-bbc4-482c-a469-8a0d338bb02b"/>
-    <meta>
-        <lastUpdated value="2017-06-02T09:15:15.163+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/MedicationOrder?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/MedicationOrder/24961"/>
-        <resource>
-            <MedicationOrder xmlns="http://hl7.org/fhir">
-                <id value="24961"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T09:14:56.728+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationOrder-1"/>
-                </meta>
-                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationSupplyType-1">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <code value="394823007"/>
-                            <display value="NHS Prescription"/>
-                        </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <dateWritten value="2017-05-25T00:00:00+01:00"/>
-                <status value="active"/>
-                <patient>
-                    <reference value="Patient/24966"/>
-                    <display value="Bernie Kanfeld"/>
-                </patient>
-                <prescriber>
-                    <reference value="Practitioner/24967"/>
-                    <display value="Dr AA Bhatia"/>
-                </prescriber>
-                <note value="Please explain to Bernie how to use injector."/>
-                <medicationCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="10097211000001102"/>
-                        <display value="Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices"/>
-                    </coding>
-                </medicationCodeableConcept>
-                <dosageInstruction>
-                    <text value="Three times a day"/>
-                    <additionalInstructions>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <code value="1521000175104"/>
-                            <display value="After dinner"/>
-                        </coding>
-                    </additionalInstructions>
-                    <timing>
-                        <code>
-                            <coding>
-                                <system value="http://hl7.org/fhir/v3/GTSAbbreviation"/>
-                                <code value="TID"/>
-                            </coding>
-                        </code>
-                    </timing>
-                </dosageInstruction>
-                <dispenseRequest>
-                    <numberOfRepeatsAllowed value="5"/>
-                </dispenseRequest>
-            </MedicationOrder>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/794cc83ac2497bc65d26004cb250fb51.js"></script>

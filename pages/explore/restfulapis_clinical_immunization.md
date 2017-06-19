@@ -30,11 +30,38 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 
 {% include custom/search.parameters.html resource="Immunization"     link="https://www.hl7.org/fhir/DSTU2/immunization.html#search" %}
 
-| Name | Type | Description | Conformance  | Post |
-|------|------|-------------|-------|------|
-| `date` | `date` | Vaccination (non)-Administration Date | SHOULD | Immunization.date |
-| `patient` | `reference` | The patient for the vaccination record | SHALL | 	Immunization.patient<br>(Patient) |
-| `status` | `token` | Immunization event status | MAY | Immunization.status |
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:10%;">Name</th>
+    <th style="width:15%;">Type</th>
+    <th style="width:40%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>Vaccination (non)-Administration Date</td>
+    <td>SHOULD</td>
+    <td>Immunization.date</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">patient</code></td>
+    <td><code class="highlighter-rouge">eference</code></td>
+    <td>The patient for the vaccination record</td>
+    <td>SHALL</td>
+    <td>Immunization.patient<br>(Patient)</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">status</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>Immunization event status</td>
+    <td>MAY</td>
+    <td>Immunization.status</td>
+</tr>
+</table>
+
+
 
 <!--
 | `dose-sequence` | `number` | Dose number within series |  | 	Immunization.vaccinationProtocol.doseSequence |
@@ -62,82 +89,6 @@ Return all Immunization resources for Patient with a NHS Number of 9876543210, t
 
 {% include custom/search.response.headers.html resource="Immunization" %}
 
-### 3.3 Response Body ###
+#### 3.2.2 Http Body ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="6aed30c2-dcbe-460a-8738-a5f60a4248ff"/>
-    <meta>
-        <lastUpdated value="2017-06-02T08:51:27.827+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/Immunization?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/Immunization/24956"/>
-        <resource>
-            <Immunization xmlns="http://hl7.org/fhir">
-                <id value="24956"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T08:48:28.340+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Immunization-1"/>
-                </meta>
-                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-DateRecorded-1">
-                    <valueDateTime value="2016-03-01T09:30:00+00:00"/>
-                </extension>
-                <status value="in-progress"/>
-                <date value="2016-03-01T09:30:00+00:00"/>
-                <vaccineCode>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="396429000"/>
-                        <display value="Measles, mumps and rubella vaccine (substance)"/>
-                    </coding>
-                </vaccineCode>
-                <patient>
-                    <reference value="Patient/24966"/>
-                    <display value="Bernie Kanfeld"/>
-                </patient>
-                <wasNotGiven value="false"/>
-                <reported value="false"/>
-                <performer>
-                    <reference value="Practitioner/24967"/>
-                    <display value="Dr Bhatia"/>
-                </performer>
-                <lotNumber value="63259874"/>
-                <expirationDate value="2020-01-01"/>
-                <vaccinationProtocol>
-                    <doseSequence value="1"/>
-                    <targetDisease>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <code value="14189004"/>
-                        </coding>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <code value="36653000"/>
-                        </coding>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <code value="36989005"/>
-                        </coding>
-                    </targetDisease>
-                    <doseStatus>
-                        <coding>
-                            <system value="http://hl7.org/fhir/vaccination-protocol-dose-status"/>
-                            <code value="count"/>
-                            <display value="Counts"/>
-                        </coding>
-                    </doseStatus>
-                </vaccinationProtocol>
-            </Immunization>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/06b11df3b6e5dac08d0c00155ed01c79.js"></script>

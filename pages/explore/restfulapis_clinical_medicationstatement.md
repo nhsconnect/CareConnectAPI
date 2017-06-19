@@ -30,11 +30,36 @@ Fetches a bundle of all `MedicationStatement` resources for the specified patien
 
 {% include custom/search.parameters.html resource="MedicationStatement"     link="https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search" %}
 
-| Name | Type | Description | Conformance  | Path |
-|------|------|-------------|-------|------|
-| `effectivedate` | `date` | Date when patient was taking (or not taking) the medication | SHOULD | MedicationStatement.effective[x] |
-| `patient` | `reference` | The identity of a patient to list statements for | SHALL | MedicationStatement.patient<br>(Patient) |
-| `status` | `token` | Return statements that match the given status | SHOULD | MedicationStatement.status |
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:15%;">Name</th>
+    <th style="width:10%;">Type</th>
+    <th style="width:40%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">effectivedate</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>Date when patient was taking (or not taking) the medication</td>
+    <td>SHOULD</td>
+    <td>MedicationStatement.effective[x]</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">patient</code></td>
+    <td><code class="highlighter-rouge">reference</code></td>
+    <td>The identity of a patient to list statements for</td>
+    <td>SHALL</td>
+    <td>MedicationStatement.patient<br>(Patient)</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">status</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>Return statements that match the given status</td>
+    <td>SHOULD</td>
+    <td>MedicationStatement.status</td>
+</tr>
+</table>
 
 {% include custom/search.date.plus.html para="2.1.1." content="MedicationStatement" name="effectivedate" %}
 
@@ -56,79 +81,6 @@ Return all MedciationStatement resources for Patient with a NHS Number of 987654
 
 {% include custom/search.response.headers.html resource="MedicationStatement" %}
 
-### 3.3 Response Body ###
+#### 3.2.2 Http Body ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="6097e823-f4dd-4713-9e48-88a06c68e258"/>
-    <meta>
-        <lastUpdated value="2017-06-02T09:18:44.898+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/MedicationStatement?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/MedicationStatement/24963"/>
-        <resource>
-            <MedicationStatement xmlns="http://hl7.org/fhir">
-                <id value="24963"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T09:18:21.553+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationStatement-1"/>
-                </meta>
-                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationStatementLastIssueDate-1">
-                    <valueDateTime value="2017-03-27T00:00:00+01:00"/>
-                </extension>
-                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationRepeatInformation-1">
-                    <extension url="reviewDate">
-                        <valueDateTime value="2017-05-27T00:00:00+01:00"/>
-                    </extension>
-                    <extension url="numberOfRepeatsIssued">
-                        <valueInteger value="1"/>
-                    </extension>
-                </extension>
-                <patient>
-                    <reference value="Patient/24966"/>
-                    <display value="Bernie Kanfeld"/>
-                </patient>
-                <informationSource>
-                    <reference value="Practitioner/8040738"/>
-                    <display value="Dr AD Jordan"/>
-                </informationSource>
-                <dateAsserted value="2017-05-29T00:00:00+01:00"/>
-                <status value="active"/>
-                <supportingInformation>
-                    <reference value="MedicationOrder/1710523"/>
-                </supportingInformation>
-                <supportingInformation>
-                    <reference value="MedicationOrder/1232131123"/>
-                </supportingInformation>
-                <medicationCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="10097211000001102"/>
-                        <display value="Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices"/>
-                    </coding>
-                </medicationCodeableConcept>
-                <dosage>
-                    <text value="Three times a day"/>
-                    <timing>
-                        <code>
-                            <coding>
-                                <system value="http://hl7.org/fhir/v3/GTSAbbreviation"/>
-                                <code value="TID"/>
-                            </coding>
-                        </code>
-                    </timing>
-                </dosage>
-            </MedicationStatement>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/9ab94408ef84f46606dbdf236cb9e272.js"></script>
