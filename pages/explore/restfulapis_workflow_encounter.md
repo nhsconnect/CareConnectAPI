@@ -30,10 +30,30 @@ Fetches a bundle of all `Encounter` resources for the specified patient.
 
 {% include custom/search.parameters.html resource="Encounter"     link="https://www.hl7.org/fhir/DSTU2/encounter.html#search" %}
 
-| Name | Type | Description | Conformance | Path |
-|------|------|-------------|-------|------|
-| `date` | `date` | A date within the period the Encounter lasted | MAY | Encounter.period |
-| `patient` | `reference` | The identity of a patient to list encounters for | MAY | Encounter.patient <br>(Patient) |
+
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:10%;">Name</th>
+    <th style="width:15%;">Type</th>
+    <th style="width:40%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>A date within the period the Encounter lasted</td>
+    <td>MAY</td>
+    <td>Encounter.period</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">patient</code></td>
+    <td><code class="highlighter-rouge">reference</code></td>
+    <td>The identity of a patient to list encounters for</td>
+    <td>MAY</td>
+    <td>Encounter.patient <br>(Patient)</td>
+</tr>
+</table>
 
 {% include custom/search.date.html para="2.1.1." content="Encounter" %}
 
@@ -52,73 +72,6 @@ Return all Encounter resources for Patient with a NHS Number of 9876543210, the 
 
 {% include custom/search.response.headers.html resource="Encounter" %}
 
-### 3.3 Response Body ###
+#### 3.2.2 Http Body ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="b2866816-e8f1-480b-a10c-1655ee68497f"/>
-    <meta>
-        <lastUpdated value="2017-06-02T08:55:05.472+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/Encounter?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/Encounter/24957"/>
-        <resource>
-            <Encounter xmlns="http://hl7.org/fhir">
-                <id value="24957"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T08:53:47.393+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Encounter-1"/>
-                </meta>
-                <status value="finished"/>
-                <class value="outpatient"/>
-                <type>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="766841000000106"/>
-                        <display value="Consultation with patient encounter type (record artifact)"/>
-                    </coding>
-                </type>
-                <patient>
-                    <reference value="Patient/24966"/>
-                </patient>
-                <participant>
-                    <individual>
-                        <reference value="Practitioner/5206458"/>
-                        <display value="FF Nathani"/>
-                    </individual>
-                </participant>
-                <period>
-                    <start value="2017-05-24T11:34:00.453-00:00"/>
-                    <end value="2017-05-24T11:49:00.453-00:00"/>
-                </period>
-                <reason>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="702706001"/>
-                        <display value="Diabetes clinic"/>
-                    </coding>
-                </reason>
-                <location>
-                    <location>
-                        <reference value="Location/RY8RK"/>
-                        <display value="Long Eaton Health Clinic"/>
-                    </location>
-                </location>
-                <serviceProvider>
-                    <reference value="Organization/RY8"/>
-                    <display value="Derbyshire Community Health Services NHS Foundation Trust"/>
-                </serviceProvider>
-            </Encounter>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/cee6d67c0cd3289b22d3e299c77b85f1.js"></script>

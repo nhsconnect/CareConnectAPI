@@ -29,10 +29,29 @@ Fetches a bundle of all `Location` resources for the specified search criteria.
 
 {% include custom/search.parameters.html resource="Location"     link="https://www.hl7.org/fhir/DSTU2/location.html#search" %}
 
-| Name | Type | Description | Conformance  | Path |
-|------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Location.address.postalCode |
-| `identifier` | `token` | 	Any identifier for the location (e.g. SDS/ODS code) |  MAY | Location.identifier |
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:15%;">Name</th>
+    <th style="width:10%;">Type</th>
+    <th style="width:40%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">adddress-postcode</code></td>
+    <td><code class="highlighter-rouge">string</code></td>
+    <td>A postalCode specified in an address</td>
+    <td>MAY</td>
+    <td>Location.address.postalCode</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">identifier</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>Any identifier for the location (e.g. SDS/ODS code)</td>
+    <td>MAY</td>
+    <td>Location.identifier</td>
+</tr>
+</table>
 
 {% include custom/search.nopat.string.html para="2.1.1." resource="Location" content="address-postcode"  example="NG10%201RY" text1="Post Code" text2="NG10 1RY" %}
 
@@ -52,76 +71,6 @@ Return all Location resources with a Trust Site code of RTG08, the format of the
 
 {% include custom/search.response.headers.html resource="Location" %}
 
-### 3.3 Response Body ###
+#### 3.2.2. Http Body ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="1b7d5b72-727f-4211-bc84-ecaf1ccdb459"/>
-    <meta>
-        <lastUpdated value="2017-06-02T09:09:12.219+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/Location?identifier=RTG08"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/Location/24959"/>
-        <resource>
-            <Location xmlns="http://hl7.org/fhir">
-                <id value="24959"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T09:09:10.339+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Location-1"/>
-                </meta>
-                <identifier>
-                    <use value="official"/>
-                    <system value="https://fhir.nhs.uk/Id/ods-site-code"/>
-                    <value value="RTG08"/>
-                </identifier>
-                <name value="Long Eaton Clinic"/>
-                <type>
-                    <coding>
-                        <system value="http://hl7.org/fhir/ValueSet/v3-ServiceDeliveryLocationRoleType"/>
-                        <code value="CSC"/>
-                        <display value="Community Service Centre"/>
-                    </coding>
-                </type>
-                <telecom>
-                    <system value="phone"/>
-                    <value value="0115 855 4034"/>
-                    <use value="work"/>
-                </telecom>
-                <telecom>
-                    <system value="fax"/>
-                    <value value="0532 123 4567"/>
-                    <use value="work"/>
-                </telecom>
-                <address>
-                    <use value="work"/>
-                    <line value="Midland Street"/>
-                    <line value="Long Eaton"/>
-                    <city value="Nottingham"/>
-                    <postalCode value="NG10 1RY"/>
-                    <country value="GBR"/>
-                </address>
-                <physicalType>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="310390009"/>
-                        <display value="Hospital clinic"/>
-                    </coding>
-                </physicalType>
-                <managingOrganization>
-                    <reference value="https://sds.proxy.nhs.uk/Organization/Organization/RTG"/>
-                    <display value="Derby Teaching Hospitals NHS Foundation Trust"/>
-                </managingOrganization>
-            </Location>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/715d6af0bef6c5b0365ded1f06b68b57.js"></script>
