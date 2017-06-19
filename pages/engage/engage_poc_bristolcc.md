@@ -87,7 +87,7 @@ As a Pharmacist (Hospital Services) I want to retrieve a patient's medications u
 GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 ~~~
 <br><br>
-As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an Trust/Hospital Number or Master Patient Id (MPI)) so that I can find medications for a patient when I don't know the traced and verified NHS Number.
+As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an Trust/Hospital Number or Master Patient ID (MPI)) so that I can find medications for a patient when I don't know the traced and verified NHS Number.
 
 ~~~
 GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
@@ -104,29 +104,29 @@ As a Pharmacist (Hospital Services) I want to know the first issue of a prescrip
 GET [baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
 ~~~
 <i>The first issue of a prescription can be deduced from the results.</i>
-<br><br>
+<br><br><br>
 As a Pharmacist (Hospital Services) know the current issue of a prescription of medication for the patient so that I can include this in my reconciliation and I can identify how this have changed since the initial issue.
 ~~~
 GET [baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
 ~~~
 <i>The current issue of a prescription can be deduced from the list if issues by identifying the most recent in the returned list.</i>
-<br><br>
+<br><br><br>
 As a Pharmacist (Hospital Services) I want to know know the last issue of a prescription of medication for the patient so that I know how long the patient was expected to be issued with that medication.
 ~~~
 GET [baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
 ~~~
 <i>The last issue of a prescription can be deduced by ordering the returned medications</i>
-<br><br>
+<br><br><br>
 As a Pharmacist (Hospital Services) I want to display patient medications from different sources in a single consolidated view so I can more easily reconcile them into a single list.
 <i>CC profiles - MedicationStatement and it’s containing profiles are structured and can be returned in Json, Xml or any other format.</i>
-<br><br>
+<br><br><br>
 As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.
 
 <i>
 404- Resource not found
 410- Resource deleted
 </i>
-<br><br>
+<br><br><br>
 ## Search Query Parameters ##
 
 <table style="width:100%;max-width:100%">
