@@ -11,6 +11,8 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 ## 0.6.0-alpha.0 ##
 
+Updated
+- Corrections to the glossary
 
 ## 0.5.0-alpha.0 ##
 
