@@ -45,11 +45,14 @@ entries:
         - title: "Case Study Overview"
           url: /engage_case_studies.html
           output: web
-        - title: "Michael's Story"
-          url: /engage_michaelsstory.html
-          output: web
         - title: Bristol Connecting Care POC
           url: /engage_poc_bristolcc.html
+          output: web
+        - title: "University Hospital Southampton"
+          url: /engage_poc_uhscc.html
+          output: web
+        - title: "Michael's Story"
+          url: /engage_michaelsstory.html
           output: web
 
   - title: Explore
