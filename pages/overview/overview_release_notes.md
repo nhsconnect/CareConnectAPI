@@ -11,6 +11,9 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 ## 0.6.0-alpha.0 ##
 
+Added
+  - Initial sections of University Hospital Southampton POC included
+  
 Updated
 - Corrections to the glossary
 
