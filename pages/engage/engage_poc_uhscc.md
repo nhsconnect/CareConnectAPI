@@ -1,6 +1,6 @@
 ---
-title: Bristol Connecting Care
-keywords: case studies, usecase, user stories, epics, scenarios, business analaysis, technical architecture, context, Bristol, Connecting Care
+title: Universtity Hospital Southampton
+keywords: case studies, usecase, user stories, epics, scenarios, business analaysis, technical architecture, context, southampton, Connecting Care
 tags: [userstories,casestudy]
 sidebar: engage_sidebar
 permalink: engage_poc_uhscc.html
