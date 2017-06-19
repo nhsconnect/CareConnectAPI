@@ -1,0 +1,32 @@
+<h4 id="medication">{{include.para}} code</h4>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET [baseUrl]/{{include.content}}?patient=[id]&code=[system]|[code] <br> GET [baseUrl]/{{include.content}}?patient=[id]&code=[code]</div>
+
+<p>See <a href="https://www.hl7.org/fhir/DSTU2/search.html#token">token</a> for details on this parameter. ‘code’ can be used multiple times as a search parameter</p>
+
+<p><code class="highlighter-rouge">system</code> is a uniform resource identifier which defines which CodeSystem the code belongs to. This is optional and if not present all matching codes will be returned regardles of CodeSystems.</p>
+
+<p>To search for {{include.content}}s with <code class="highlighter-rouge">Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices</code> using SNOMED CT</p>
+
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET [baseUrl]/{{include.content}}?patient=1&code=http://snomed.info/sct|10097211000001102
+</span></code>
+Return all {{include.content}} resources with SNOMED CT code of 10097211000001102 for Patient with a logical Id of 1.
+</pre>
+</div>
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET [baseUrl]/{{include.content}}?patient=1&code=10097211000001102
+</span></code>
+Return all {{include.content}} resources with code of from any CodeSystem for Patient with a logical Id of 1.</pre>
+</div>
+<!--
+<p>To search for all resources with ‘Body composition measure’ codes using SNOMED CT</p>
+
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET /{{include.content}}?code:below=http://snomed.info/sct|363810004
+</span></code></pre>
+</div>
+
+<p>The modifier <code class="highlighter-rouge">:below</code> is a modifier which returns all resources with codes that are subsumed by the specified search code and includes the specified code.</p>
+-->

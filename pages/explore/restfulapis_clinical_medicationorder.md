@@ -40,6 +40,13 @@ Fetches a bundle of all `MedicationOrder` resources for the specified patient.
     <th style="width:30%;">Path</th>
 </tr>
 <tr>
+    <td><code class="highlighter-rouge">code</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>Return administrations of this medication code</td>
+    <td>MAY</td>
+    <td>MedicationOrder.medicationCodeableConcept</td>
+</tr>
+<tr>
     <td><code class="highlighter-rouge">dateWritten</code></td>
     <td><code class="highlighter-rouge">date</code></td>
     <td>Return prescriptions written on this date</td>
@@ -62,18 +69,14 @@ Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 </tr>
 </table>
 
-<!--
-| `datewritten` | `date` | Return prescriptions written on this date |  | MedicationOrder.dateWritten |
-| `identifier` | `token` | The source system of the prescriptions for  |  | MedicationOrder.identifier |
-{% include custom/search.date.plus.html content="MedicationOrder" name="datewritten"  %}
 
-{% include custom/search.identifier.html resource="MedicationOrder" content="identifier" subtext="System Filter" example="https://theccg.systemsupplier.co.uk/MedicationOrder|" text1="The CCG System Supplier" text2="not specified" %}
--->
-{% include custom/search.date.plus.html para="2.1.1." content="MedicationOrder" name="dateWritten"  %}
+{% include custom/search.code.medicationOrder.html para="2.1.1." content="MedicationOrder" name="code"  %}
 
-{% include custom/search.patient.html para="2.1.2." content="MedicationOrder" %}
+{% include custom/search.date.plus.html para="2.1.2." content="MedicationOrder" name="dateWritten"  %}
 
-{% include custom/search.status.html para="2.1.3." content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
+{% include custom/search.patient.html para="2.1.3." content="MedicationOrder" %}
+
+{% include custom/search.status.html para="2.1.4." content="MedicationOrder" options="active | on-hold | completed | entered-in-error | stopped | draft" selected="active"  %}
 
 {% include custom/search.response.html resource="MedicationOrder" %}
 
