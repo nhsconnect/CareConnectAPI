@@ -8,7 +8,7 @@ summary: An order for both supply of the medication and the instructions for adm
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Medication Order" page="CareConnect-MedicationOrder-1" fhirlink="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Medication Order" page="CareConnect-MedicationOrder-1" fhirlink="[MedicationOrder](https://www.hl7.org/fhir/DSTU2/medicationorder.html)" content="Bristol Connecting Care" userlink="engage_poc_bristolcc.html" %}
 
 
 ## 1. Read ##

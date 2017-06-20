@@ -159,13 +159,13 @@ entries:
         output: web
         subfolderitems:
           - title: Patient Search
-            url: /design_patient_search.html
+            url: /build_patient_search.html
             output: web
           - title: Clinical | Care Coord
-            url: /design_pcc_clinical.html
+            url: /build_pcc_clinical.html
             output: web
           - title: Medication | Care Coord
-            url: /design_pcc_medication.html
+            url: /build_pcc_medication.html
             output: web
 
   - title: Test

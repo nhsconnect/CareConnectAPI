@@ -3,7 +3,7 @@ title: Care Coordination | Clinical
 keywords: development
 tags: [design,development]
 sidebar: overview_sidebar
-permalink: design_pcc_clinical.html
+permalink: build_pcc_clinical.html
 summary: "Guidance using FHIR Observation with Vital Signs"
 ---
 
