@@ -18,7 +18,7 @@ The following four key principles should be considered during the deploying:
 - Encryption
 - Signatures
 
-[Coming soon]
+{% include note.html content="Provided as an overview" %}
 
 
 # API Considerations #

@@ -17,6 +17,8 @@ The Deploy section contains descriptions of approaches and suggestions for build
 
 Please see or contribute to INTEROPen to support the wider community efforts of providing a completely defined API service.
 
+{% include note.html content="Provided as an overview" %}
+
 
 # Providing an API #
 

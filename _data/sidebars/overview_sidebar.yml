@@ -132,6 +132,9 @@ entries:
         - title: API Codes
           url: /development_api_codes.html
           output: web
+        - title: Search Parameters
+          url: /search_parameters.html
+          output: web
         - title: Open Source
           url: /development_fhir_open_source_guidance.html
           output: web
@@ -183,6 +186,9 @@ entries:
     - title: Security
       url: /test_security.html
       output: web
+    - title: Test Data
+      url: /test_data.html
+      output: web
 
   - title: Assure
     output: web
@@ -195,6 +201,9 @@ entries:
       output: web
     - title: Security
       url: /assure_security.html
+      output: web
+    - title: End To End
+      url: /assure_end_to_end.html
       output: web
 
   - title: Deploy

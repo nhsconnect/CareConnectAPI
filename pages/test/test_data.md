@@ -1,22 +1,17 @@
 ---
-title: Security
-keywords: assure, pattern, security
-tags: [assure, security]
+title: Test Data
+keywords: test, pattern, security
+tags: [test, security]
 sidebar: foundations_sidebar
-permalink: assure_security.html
-summary: "The security page shows how to establish initial security credentials (where necessary) with the API provided"
+permalink: test_data.html
+summary: "The test data expected to be delivered by "
 ---
 
 {% include important.html content="The API security described in this section is not meant to be complete but a starting point to understand some design considerations to consider when implementing APIs." %}
 
-# Security within Assure #
+# Test Data within Test #
 
-The following four key principles should be considered during the assurance process:
-
-- Authentication
-- Authorisation
-- Encryption
-- Signatures
+The test data allows the testing of the Care Connect APIs at the individual response level.
 
 {% include note.html content="Provided as an overview" %}
 

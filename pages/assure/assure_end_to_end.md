@@ -1,9 +1,9 @@
 ---
-title: Access | Assure
+title: End to End | Assure
 keywords: assure, access, security
 tags: [assure, access]
 sidebar: foundations_sidebar
-permalink: assure_access.html
+permalink: assure_end_to_end.html
 summary: "The Access page shows developers and users of the API how to access and call the API in the test environment"
 ---
 
@@ -18,7 +18,6 @@ Access at the Assure stage of API development needs finalisation of the followin
 - Versioning
 
 {% include note.html content="Provided as an overview" %}
-
 
 # API Considerations #
 

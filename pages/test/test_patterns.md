@@ -25,6 +25,9 @@ Defining the design pattern (listed below) and your method of testing the patter
 
 The same choice of testing your design pattern will need to meet your Assurance and Deploying criteria.
 
+{% include note.html content="Provided as an overview" %}
+
+
 # API Considerations #
 
 Other API consideration are shown below. Please click on the parts of the API process to continue your API creation journey.

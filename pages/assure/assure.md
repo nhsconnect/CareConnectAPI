@@ -13,6 +13,7 @@ The Assure section contains descriptions of approaches and suggestions for build
 |+---------------------|+--------------------------------+|
 | Access | The access mechanism and of requesting system is influenced by many factors. This section demonstrates the design decisions to consider | 
 | Security | The security of the FHIR payload, access and data at rest are all important design decisions while building an API.  | 
+| End to end | The end to end assurance necessary to deliver an assured API.  | 
 
 Please see or contribute to INTEROPen to support the wider community efforts of providing a completely defined API service.
 
