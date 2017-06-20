@@ -1,5 +1,5 @@
 ---
-title: Universtity Hospital Southampton
+title: University Hospital Southampton
 keywords: case studies, usecase, user stories, epics, scenarios, business analaysis, technical architecture, context, southampton, Connecting Care, acknowledge, results
 tags: [userstories,casestudy]
 sidebar: engage_sidebar
