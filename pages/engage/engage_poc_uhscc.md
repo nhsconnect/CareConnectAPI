@@ -25,5 +25,5 @@ The order results are available to all those involved in a patient’s care, cle
 <br><br>
 ## Use Case Diagram ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/SouthamptonUHSUseCase.png" alt="Use Case Diagram showing the acknowlegement use cases being explored." title="Use Case Diagram showing the acknowlegement use cases being explored." style="width:75%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/southamptoncc/SouthamptonUHSUseCase.png" alt="Use Case Diagram showing the acknowlegement use cases being explored." title="Use Case Diagram showing the acknowlegement use cases being explored." style="width:75%"></p>
 <br><br>
