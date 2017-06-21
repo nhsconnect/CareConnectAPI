@@ -12,14 +12,14 @@ summary: "Overview of the Explore section"
 {% include custom/api_overview.svg %}
 
 
-## 1. Profile Structure ##
-The FHIR Care Connect profiles described in the Explore section of this implementation guide have been structured consistently in the following way:
+## 1. Profile API Structure ##
+The FHIR Care Connect profile API's described in the Explore section of this implementation guide have been structured consistently in the following way:
 0. References
 1. Read
 2. Search Parameters
 3. Example
 
-### 1.1 Profile Structure Details ###
+### 1.1 Profile API Structure Details ###
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
@@ -28,7 +28,7 @@ The FHIR Care Connect profiles described in the Explore section of this implemen
 </tr>
 <tr>
 <td>0. References</td>
-<td>Links to other parts of the implementation guide which might help with context and understanding the profiles described</td>
+<td>Links to other parts of the implementation guide which might help with context and understanding the API's described</td>
 </tr>
 <tr>
 <td>1. Read</td>
@@ -44,8 +44,8 @@ The FHIR Care Connect profiles described in the Explore section of this implemen
 </tr>
 </table>
 
-## 2. Profiles ##
-This section looks at the Care Connect profiles covered within this implementation guide.
+## 2. Profile API's ##
+This section looks at the Care Connect profile API's covered within this implementation guide.
 
 
 <table style="min-width:100%;width:100%">
