@@ -36,7 +36,7 @@
                 <text id="API" font-family="HelveticaNeue, Helvetica Neue" font-size="36" font-weight="normal" letter-spacing="-0.0091" fill="#000000">
                     <tspan x="117" y="156">API</tspan>
                 </text>
-                <a xlink:href="/design_security.html" target="_top">
+                <a xlink:href="CareConnectAPI/design_security.html" target="_top">
                     <path d="M122,26 C122,11.6406 133.4167,0 147.5,0 C161.5833,0 173,11.6406 173,26 C173,40.3594 161.5833,52 147.5,52 C133.4167,52 122,40.3594 122,26 L122,26 Z" id="Fill-27" stroke="#9B9B9B" fill="#FFFFFF" class="s_link"></path>
                     <path d="M122,26.0000008 C122,11.6405909 133.416733,0 147.500001,0 C161.583253,0 173.000002,11.6405909 173.000002,26.0000008 C173.000002,40.3594029 161.583253,52.0000017 147.500001,52.0000017 C133.416733,52.0000017 122,40.3594029 122,26.0000008 L122,26.0000008 Z" id="Stroke-28" stroke="#4774AB" stroke-width="25400" stroke-linejoin="round"></path>
                     <text id="Security" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="-0.023" fill="#000000">
@@ -56,14 +56,14 @@
                 <text id="Manage" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="0.004" fill="#000000">
                     <tspan x="235.1707" y="111.912754">Management</tspan>
                 </text>
-                <a xlink:href="/explore_cc_versioning.html" target="_top">
+                <a xlink:href="CareConnectAPI/explore_cc_versioning.html" target="_top">
                     <path d="M233,179.5 C233,165.4167 244.4167,154 258.5,154 C272.5833,154 284,165.4167 284,179.5 C284,193.58326 272.5833,205 258.5,205 C244.4167,205 233,193.58326 233,179.5 L233,179.5 Z" id="Fill-33" stroke="#9B9B9B" fill="#DFF0D8 " class="s_link"></path>
                     <path d="M233,179.500001 C233,165.416741 244.416748,154 258.500001,154 C272.583253,154 284.000002,165.416741 284.000002,179.500001 C284.000002,193.583261 272.583253,205.000002 258.500001,205.000002 C244.416748,205.000002 233,193.583261 233,179.500001 L233,179.500001 Z" id="Stroke-34" stroke="#4774AB" stroke-width="25400" stroke-linejoin="round"></path>
                     <text id="Version" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="0.112" fill="#000000">
                         <tspan x="240.1707" y="182.267254">Versioning</tspan>
                     </text>
                 </a>
-                <a xlink:href="/engage.html" target="_top">
+                <a xlink:href="CareConnectAPI/engage.html" target="_top">
                     <path d="M190,237.5 C190,223.41674 201.6406,212 216,212 C230.3594,212 242,223.41674 242,237.5 C242,251.58326 230.3594,263 216,263 C201.6406,263 190,251.58326 190,237.5 L190,237.5 Z" id="Fill-35" stroke="#9B9B9B" fill="#DFF0D8 " class="s_link"></path>
                     <path d="M32,315.5 C32,311.357865 35.3578654,308 39.5,308 C43.6421346,308 47,311.357865 47,315.5 C47,319.642135 43.6421346,323 39.5,323 C35.3578654,323 32,319.642135 32,315.5 L32,315.5 Z" id="Fill-35" stroke="#9B9B9B" stroke-width="0.5" fill="#DFF0D8 "></path>
                     <path d="M190,237.500001 C190,223.416741 201.640591,212 216.000001,212 C230.359403,212 242.000002,223.416741 242.000002,237.500001 C242.000002,251.583261 230.359403,263.000002 216.000001,263.000002 C201.640591,263.000002 190,251.583261 190,237.500001 L190,237.500001 Z" id="Stroke-36" stroke="#4774AB" stroke-width="25400" stroke-linejoin="round"></path>
@@ -71,7 +71,7 @@
                         <tspan x="202.6393" y="239.098434">Engage</tspan>
                     </text>
                 </a>
-                <a xlink:href="/explore.html" target="_top">
+                <a xlink:href="CareConnectAPI/explore.html" target="_top">
                     <path d="M122,260 C122,245.64059 133.4167,234 147.5,234 C161.5833,234 173,245.64059 173,260 C173,274.3594 161.5833,286 147.5,286 C133.4167,286 122,274.3594 122,260 L122,260 Z" id="Fill-37" stroke="#9B9B9B" fill="#DFF0D8 " class="s_link"></path>
                     <path d="M122,260.000001 C122,245.640591 133.416733,234 147.500001,234 C161.583253,234 173.000002,245.640591 173.000002,260.000001 C173.000002,274.359403 161.583253,286.000002 147.500001,286.000002 C133.416733,286.000002 122,274.359403 122,260.000001 L122,260.000001 Z" id="Stroke-38" stroke="#4774AB" stroke-width="25400" stroke-linejoin="round"></path>
                     <text id="API-Docs" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="-0.023" fill="#000000">
@@ -87,7 +87,7 @@
                 <text id="Monitor" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="0.004" fill="#000000">
                     <tspan x="64.0127" y="245.803434">Monitor</tspan>
                 </text>
-                <a xlink:href="/design_patterns.html" target="_top">
+                <a xlink:href="CareConnectAPI/design_patterns.html" target="_top">
                     <path d="M10,179.5 C10,165.4167 21.4167,154 35.5,154 C49.5833,154 61,165.4167 61,179.5 C61,193.58326 49.5833,205 35.5,205 C21.4167,205 10,193.58326 10,179.5 L10,179.5 Z" id="Fill-41" stroke="#9B9B9B" fill="#FFFFFF" class="s_link"></path>
                     <path d="M108,315.5 C108,311.357853 111.357853,308 115.5,308 C119.642147,308 123,311.357853 123,315.5 C123,319.642135 119.642147,323 115.5,323 C111.357853,323 108,319.642135 108,315.5 L108,315.5 Z" id="Fill-41" fill="#FFFFFF"></path>
                     <path d="M10,179.500001 C10,165.416741 21.4167405,154 35.5000008,154 C49.5832532,154 61.0000016,165.416741 61.0000016,179.500001 C61.0000016,193.583261 49.5832532,205.000002 35.5000008,205.000002 C21.4167405,205.000002 10,193.583261 10,179.500001 L10,179.500001 Z" id="Stroke-42" stroke="#4774AB" stroke-width="25400" stroke-linejoin="round"></path>
@@ -98,7 +98,7 @@
                         <tspan x="18.4837" y="185.972304">/ Topology</tspan>
                     </text>
                 </a>
-                <a xlink:href="/design_access.html" target="_top">
+                <a xlink:href="CareConnectAPI/design_access.html" target="_top">
                     <path d="M10,106.5 C10,92.4167 21.4167,81 35.5,81 C49.5833,81 61,92.4167 61,106.5 C61,120.5833 49.5833,132 35.5,132 C21.4167,132 10,120.5833 10,106.5 L10,106.5 Z" id="Fill-43" stroke="#9B9B9B" fill="#FFFFFF" class="s_link"></path>
                     <path d="M10,106.500001 C10,92.4167326 21.4167405,81 35.5000008,81 C49.5832532,81 61.0000016,92.4167326 61.0000016,106.500001 C61.0000016,120.583253 49.5832532,132.000002 35.5000008,132.000002 C21.4167405,132.000002 10,120.583253 10,106.500001 L10,106.500001 Z" id="Stroke-44" stroke="#4774AB" stroke-width="25400" stroke-linejoin="round"></path>
                     <text id="Access" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" letter-spacing="-0.184" fill="#000000">
