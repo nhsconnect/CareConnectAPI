@@ -151,7 +151,7 @@ As a Pharmacist (Hospital Services) I want to know if results have not been retu
 <br><br>
 ## Technical Architecture ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/TechnicalArchitecture.jpg" alt="Diagram showing an overview of the solution's architecture." title="Diagram showing an overview of the solution's architecture." style="width:75%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/Bristol Technical Architecture.jpg" alt="Diagram showing an overview of the solution's architecture." title="Diagram showing an overview of the solution's architecture." style="width:100%"></p>
 <br><br>
 ## Acceptance Criteria ##
 
