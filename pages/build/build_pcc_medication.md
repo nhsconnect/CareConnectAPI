@@ -95,30 +95,10 @@ The code below shows how the same three queries can be done in java.
 
 <script src="https://gist.github.com/KevinMayfield/0b68a287b764a18eebcde9431aec7f7b.js"></script>
 
-
 ## 3. Creating FHIR CareConnect MedicationOrder ##
-[CONSIDER - Moving this section to git and/or demonstrator ]
 
 The Code below shows how to build MedicationOrder using Java, the comments show where each field from the the MedicationIssues table has been used.
 
-<script src="https://gist.github.com/KevinMayfield/e841cf9ae2504d22e372ca51379f1160.js"></script>
-
-Executing the code results in the following XML
+Java examples based on entries in the MedicationIssues table can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/blob/master/ImplementationGuideExplore/src/main/java/uk/nhs/careconnect/examples/fhir/ExampleMedicationOrderDb.java). This code generates the following XML. Note how Patient (line 18) and Practitioner (line 22) are referencing Patient and Practitioner tables, the details are not included but can be retrieved via the CareConnect API if required.
 
 <script src="https://gist.github.com/KevinMayfield/a84b28075b571f7537a256b7bcdf9979.js"></script>
-
-We don't have a table representing [MedicationStatement](restfulapis_clinical_medicationstatement.html) but we can work out details from the MedicationIssues (e.g. )
-[TODO - Explain with code examples how a MedicationStatement would be returned]
-
-[TODO - Explain with code examples how a MedicationOrder would be returned. Do we query on code?]
-
-
-
-<!--
-A search on MedicationOrder without the '_Revinclude=*' would return a FHIR [Bundle](https://www.hl7.org/fhir/DSTU2/bundle.html) would return only MedicationOrder resources. This is useful if you already have Patient, Medication and Practitioner data but in most case the calling system or web application won't be. In this case it is useful for all the referenced resources to be returned with the search results.
-This is done using the '_Revinclude=*' parameter and the returned search results now include the referenced parameters. The convention is to list the referenced resources before they are referenced (so they can be processed first).
-
-{% include image.html
-max-width="200px" file="Bristol/Bristol.searchResults.includeReferenced.bmp" alt="Bristol ERD"
-caption="MedicationOrder Search Results" %}
--->
