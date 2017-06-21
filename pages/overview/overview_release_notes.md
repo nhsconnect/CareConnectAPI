@@ -15,8 +15,9 @@ Added
   - Initial sections of University Hospital Southampton POC included
   
 Updated
-- Updates to Bristol Connecting Care POC (user stories)
-- Corrections to the glossary
+  - Updates to Bristol Connecting Care POC (user stories)
+  - Corrections to the glossary
+  - Corrected broken links in the engagement approach
 
 ## 0.5.0-alpha.0 ##
 
