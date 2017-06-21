@@ -14,7 +14,7 @@ summary: "Describes the process of creating the search parameters"
 The search parameters have been created by amalgamating the thinking and search parameter definitions from public facing projects who have spent time looking, investigating and implementing API search parameters:
 
 
-- [Argonaut](http://www.fhir.org/guides/argonaut/r2/Conformance-server.html)
+- [US Argonaut Data Query Implementation Guide](http://www.fhir.org/guides/argonaut/r2/Conformance-server.html)
 - [GP Connect](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
 - [Cerner](http://fhir.cerner.com/millennium/dstu2/)
 - [AllScripts](https://developer.allscripts.com/)
