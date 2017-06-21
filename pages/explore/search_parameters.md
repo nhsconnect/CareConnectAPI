@@ -24,9 +24,15 @@ The search parameters have been created by amalgamating the thinking and search 
 
 The search parameters were created as a starting point for discussion as such a process to improve the search parameters and make them applicable and complete.
 
-## 2. Sources ##
+## 2. MAY Parameters ##
 
+The parameters have been selected using a scoring system based usage frequency. Parameters with a high score have been given SHALL conformance status and the others a SHOULD. A number of low scoring parameters have been included with a MAY status, this is to cover differences between UK and international usage.
 
+E.g. [Practitioner](restfulapis_identification_practitoner.html) has a MAY conformance status for `identifier`, in the UK have a national codeSystems for Consultants and GP's it is anticipated we would want to query Practitioner using these codes. If feedback from suppliers and consumers indicates this is the case then the conformance for `identifier` would be increased to SHALL or SHOULD. <br>
+
+The same logic will be applied to other parameters such as `adddress-postcode`, however if feedback indicates this shouldn't be a SHALL or a SHOULD then this parameter will be classed in the same way as other standard FHIR parameters and the explicit references will be removed from this implementation guide.
+
+No MAY parameters will be listed in the final version of this Implementation Guide. 
 
 ## 3. Improvement process ##
 
