@@ -61,6 +61,10 @@ Fetches a bundle of all `MedicationStatement` resources for the specified patien
 </tr>
 </table>
 
+Systems SHOULD support the following search combinations:
+
+* patient
+
 {% include custom/search.date.plus.html para="2.1.1." content="MedicationStatement" name="effectivedate" %}
 
 {% include custom/search.patient.html para="2.1.2" content="MedicationStatement" %}

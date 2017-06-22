@@ -69,6 +69,10 @@ Fetches a bundle of all `MedicationOrder` resources for the specified patient.
 </tr>
 </table>
 
+Systems SHOULD support the following search combinations:
+
+ * patient + code
+
 
 {% include custom/search.code.medicationOrder.html para="2.1.1." content="MedicationOrder" name="code"  %}
 

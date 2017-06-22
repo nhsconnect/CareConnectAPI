@@ -55,6 +55,10 @@ Fetches a bundle of all `Encounter` resources for the specified patient.
 </tr>
 </table>
 
+Systems SHOULD support the following search combinations:
+
+ * patient
+ 
 {% include custom/search.date.html para="2.1.1." content="Encounter" %}
 
 {% include custom/search.patient.html para="2.1.2." content="Encounter" %}

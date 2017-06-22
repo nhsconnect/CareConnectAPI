@@ -69,7 +69,7 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 </tr>
 </table>
 
-Systems SHALL support the following search combinations:
+Systems SHOULD support the following search combinations:
 
 * patient + clinicalstatus
 * patient + category

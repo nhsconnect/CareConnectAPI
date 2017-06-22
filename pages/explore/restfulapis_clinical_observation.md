@@ -69,10 +69,12 @@ Fetches a bundle of all `Observation` resources for the specified patient.
 </tr>
 </table>
 
-Systems SHALL support the following search combinations:
+Systems SHOULD support the following search combinations:
 
-* patient + clinicalstatus
-* patient + category
+ * patient + category
+ * patient + category + date
+ * patient + category + code
+ * patient + category + code + date
 
 
 <!-- | `subject` | `reference` | The subject that the observation is about| | Observation.subject (Patient) |
