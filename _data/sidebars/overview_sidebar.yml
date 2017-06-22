@@ -67,7 +67,6 @@ entries:
       subfolders:
       - title: Clinical
         output: web
-        subfolders:
         subfolderitems:
           - title: Allergy Intolerance
             url: /restfulapis_clinical_allergyintolerance.html
@@ -75,9 +74,18 @@ entries:
           - title: Condition
             url: /restfulapis_clinical_condition.html
             output: web
-          - title: Immunization
-            url: /restfulapis_clinical_immunization.html
+          - title: Procedure
+            url: /restfulapis_clinical_procedure.html
             output: web
+      - title: Diagnostics
+        output: web
+        subfolderitems:
+          - title: Observation
+            url: /restfulapis_clinical_observation.html
+            output: web
+      - title: Medication
+        output: web
+        subfolderitems:
           - title: Medication
             url: /restfulapis_clinical_medication.html
             output: web
@@ -87,12 +95,10 @@ entries:
           - title: Medication Statement
             url: /restfulapis_clinical_medicationstatement.html
             output: web
-          - title: Observation
-            url: /restfulapis_clinical_observation.html
+          - title: Immunization
+            url: /restfulapis_clinical_immunization.html
             output: web
-          - title: Procedure
-            url: /restfulapis_clinical_procedure.html
-            output: web
+
       - title: Individuals &amp; Entities
         output: web
         subfolderitems:
@@ -170,7 +176,9 @@ entries:
           - title: Medication | Care Coord
             url: /build_pcc_medication.html
             output: web
-
+          - title: Diagnostics | Care Coord
+            url: /build_pcc_diagnostics.html
+            output: web
   - title: Test
     output: web
     folderitems:
