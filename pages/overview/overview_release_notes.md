@@ -24,6 +24,7 @@ Updated
   - Altered Accept http header notes
   - Moved xml and code examples to gitHub gist
   - Converted markdown to html tables for better display of parameters
+  - Updated API search combinations (conformance requirements)
 
 ## 0.5.0-alpha.0 ##
 
