@@ -30,13 +30,18 @@ The diagram below shows the technical architecture of the Bristol scenario overl
 
 Once all the data has been collated the TIE will send one response back to the Client system by aggregating all the responses. We have simplified the process of aggregation by converting all the responses to the same format.
 
-<p style="text-align:center;"><img src="images/design/Bristol Technical Architecture with EIP.jpg" alt="Diagram showing an overview of the solution's architecture." title="Diagram showing an overview of the solution's architecture." style="width:100%"></p>
+<p style="text-align:center;"><img src="images/build/Bristol Technical Architecture with EIP.jpg" alt="Diagram showing an overview of the solution's architecture." title="Diagram showing an overview of the solution's architecture." style="width:100%"></p>
 <br><br>
 
 
 ## 2. Working with FHIR CareConnect Medication ##
 
-Most of the data servers involved within the Bristol Medication scenario will be storing data on a SQL database server. To illustrate working with FHIR Medication resources we have listed extracts from four tables which simulate how these servers would store the data:
+Most of the data servers involved within the Bristol Medication scenario will be storing data on a SQL database server. This process would be done by many of the systems discussed in the previous section (GP/EPR systems and the TIE with the datawarehouse). This is shown below, the integration middleware will retrieve data from the SQL server and transform it into a FHIR resource.
+
+<p style="text-align:center;"><img src="images/build/Bristol Simplified Technical Architecture with EIP.jpg" alt="Diagram showing the breakdown of the TA." title="Diagram showing the breakdown of the TA." style="width:50%"></p>
+<br><br>
+
+To illustrate working with FHIR Medication resources we have listed extracts from four tables which simulate how these servers would store the data:
 -MedicationPatient stores the master Patient Medication record and corresponds to the CareConnect Medication Statement resource.
 -MedicationIssues stores the issues and is related to CareConnect MedicationOrder
 -Patient stores Patient demographics
@@ -59,9 +64,9 @@ Most of the data servers involved within the Bristol Medication scenario will be
 
 **Patient**
 
-| PatientId | NHSNumber | Forename | Surname |
-|-----------|-----------|----------|---------|
-| 6a7d31db-0bb8-4afa-bf4c-c32d5d4b8487 | 9439676165 | Karen | Samson |
+| PatientId | NHSNumber | Forename | Surname | GP | PractitionerId | Gender |
+|-----------|-----------|----------|---------|----|----------------|--------|
+| 6a7d31db-0bb8-4afa-bf4c-c32d5d4b8487 | 9439676165 | Karen | Samson | G8650149 | 651dfe43-26d6-49b3-b493-8955415912c7 | 1 |
 
 **Practitioner**
 
@@ -75,17 +80,26 @@ A client system wanting to access data in the MedicationPatient table will first
 GET [baseUrl]\Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9439676165
 ```
 
+<p style="text-align:center;"><img src="images/build/FHIR Bundle Patient.jpg" alt="Patient in a FHIR Bundle" title="Patient in a FHIR Bundle" style="width:30%"></p>
+<br><br>
+
 This would return a FHIR Bundle with one Patient resource, from the Patient resource we will extract the logicalId of `6a7d31db-0bb8-4afa-bf4c-c32d5d4b8487`. We can now query the MedicationPatient table using this logical Id.
 
 ```
 GET [baseUrl]\MedicationStatement?patient=6a7d31db-0bb8-4afa-bf4c-c32d5d4b8487
 ```
 
-This returns a FHIR Bundle containing two `MedicationStatement`. This may be enough for a summary screen but if we need to look in detail at a particular drug we can then query the issues using the drug code, for Temazepam  Tablets  20 mg the code (SNOMED Concept Id) is 321153009. We already have the logical Id of the Patient and including the code the query is:
+<p style="text-align:center;"><img src="images/build/FHIR Bundle MedStatement.jpg" alt="MedicationStatement's in a FHIR Bundle" title="MedicationStatement's in a FHIR Bundle" style="width:40%"></p>
+<br><br>
+
+This returns a FHIR Bundle containing two `MedicationStatement`. This may be enough for a summary screen but if we need to look in detail at a particular drug we can then query the issues using the drug code (medication), for Temazepam  Tablets  20 mg the code (SNOMED Concept Id) is 321153009. We already have the logical Id of the Patient and including the code the query is:
 
 ```
 GET [baseUrl]\MedicationOrder?patient=6a7d31db-0bb8-4afa-bf4c-c32d5d4b8487&code=http://snomed.info/sct|321153009
 ```  
+
+<p style="text-align:center;"><img src="images/build/FHIR Bundle MedOrder.jpg" alt="MedicationOrder's in a FHIR Bundle" title="MedicationOrder's in a FHIR Bundle" style="width:40%"></p>
+<br><br>
 
 This results in a FHIR Bundle which contains two `MedicationOrder`. Note: consider including a date parameter to limit the amount of results returned.
 
