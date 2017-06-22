@@ -30,9 +30,9 @@ The parameters have been selected using a scoring system based usage frequency. 
 
 E.g. [Practitioner](restfulapis_identification_practitoner.html) has a MAY conformance status for `identifier`, in the UK have a national codeSystems for Consultants and GP's it is anticipated we would want to query Practitioner using these codes. If feedback from suppliers and consumers indicates this is the case then the conformance for `identifier` would be increased to SHALL or SHOULD. <br>
 
-The same logic will be applied to other parameters such as `adddress-postcode`, however if feedback indicates this shouldn't be a SHALL or a SHOULD then this parameter will be classed in the same way as other standard FHIR parameters and the explicit references will be removed from this implementation guide.
+The same logic will be applied to other parameters such as `adddress-postcode`, however if feedback indicates the conformance shouldn't be a SHALL or a SHOULD then this parameter will be classed in the same way as the other optional (MAY) FHIR parameters and the explicit entry will be removed from this implementation guide.
 
-No MAY parameters will be listed in the final version of this Implementation Guide. 
+No MAY parameters will be listed in the final version of this Implementation Guide.
 
 ## 3. Improvement process ##
 

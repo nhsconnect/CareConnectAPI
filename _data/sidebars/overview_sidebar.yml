@@ -132,9 +132,6 @@ entries:
       - title: API Guidance | FHIR&reg;
         output: web
         subfolderitems:
-        - title: Foundations
-          url: /foundations.html
-          output: web
         - title: API Codes
           url: /development_api_codes.html
           output: web

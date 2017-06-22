@@ -13,7 +13,8 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 Added
   - Initial sections of University Hospital Southampton POC included
-  - Added section on how [search parameters](search_parameters.html) were selected 
+  - Added section on how [search parameters](search_parameters.html) were selected
+  - Added core CareConnectAPI [prerequisites](explore.html)
 
 Updated
   - Updates to Bristol Connecting Care POC (user stories)
