@@ -28,3 +28,5 @@ application(s). Upon receiving the results, the GP confirms that the patient’s
 have been progressively increasing based on available results for each visit since 7/5/2012. The
 GP then schedules a set of diagnostic tests to aid her in developing an effective rehabilitation
 plan to proactively manage her patient’s health condition. " %}
+
+[TODO]

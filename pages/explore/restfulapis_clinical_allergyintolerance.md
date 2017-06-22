@@ -34,9 +34,16 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 <tr id="clinical">
     <th style="width:10%;">Name</th>
     <th style="width:15%;">Type</th>
-    <th style="width:40%;">Description</th>
+    <th style="width:30%;">Description</th>
     <th style="width:5%;">Conformance</th>
-    <th style="width:30%;">Path</th>
+    <th style="width:40%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>When recorded</td>
+    <td>MAY</td>
+    <td>AllergyIntolerance.recordedDate</td>
 </tr>
 <tr>
     <td><code class="highlighter-rouge">patient</code></td>
@@ -54,9 +61,11 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 </tr>
 </table>
 
-{% include custom/search.patient.html para="2.1.1." content="AllergyIntolerance" %}
+{% include custom/search.date.plus.html para="2.1.1." content="AllergyIntolerance" name="date" %}
 
-{% include custom/search.status.html para="2.1.2." content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
+{% include custom/search.patient.html para="2.1.2." content="AllergyIntolerance" %}
+
+{% include custom/search.status.html para="2.1.3." content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
 
 {% include custom/search.response.html resource="AllergyIntolerance" %}
 
