@@ -30,14 +30,30 @@ Fetches a bundle of all `Organization` resources for the specified search criter
 
 {% include custom/search.parameters.html resource="Organization"     link="https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
 
-| Name | Type | Description | Conformance  | Path |
-|------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Organization.address.postalCode |
-| `identifier` | `token` | 	Any identifier for the organization (e.g. SDS/ODS code) | MAY | Organization.identifier |
 
-<!--
-| `name` | `string` | A portion of the name of the organisation | | Organization.name |
--->
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:15%;">Name</th>
+    <th style="width:10%;">Type</th>
+    <th style="width:40%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">adddress-postcode</code></td>
+    <td><code class="highlighter-rouge">string</code></td>
+    <td>A postalCode specified in an address</td>
+    <td>MAY</td>
+    <td>Organization.address.postalCode</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">identifier</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>Any identifier for the organization (e.g. SDS/ODS code)</td>
+    <td>MAY</td>
+    <td>Organization.identifier</td>
+</tr>
+</table>
 
 {% include custom/search.nopat.string.html para="2.1.1." resource="Organization" content="address-postcode"  example="DE22%203NE" text1="Post Code" text2="DE22 3NE" %}
 
@@ -57,59 +73,6 @@ Return all Organization resources with a ODS Code of C81010, the format of the r
 
 {% include custom/search.response.headers.html resource="Organization" %}
 
-### 3.3 Response Body ###
+#### 3.2.2 Http Body ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="19d78778-5e6e-4866-9bd3-6376f863f307"/>
-    <meta>
-        <lastUpdated value="2017-06-02T09:29:08.195+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/Organization?identifier=C81010"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/Organization/24965"/>
-        <resource>
-            <Organization xmlns="http://hl7.org/fhir">
-                <id value="24965"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T09:27:43.366+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Organization-1"/>
-                </meta>
-                <identifier>
-                    <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
-                    <value value="C81010"/>
-                </identifier>
-                <type>
-                    <coding>
-                        <system value="https://fhir.hl7.org.uk/ValueSet/organisation-type-1"/>
-                        <code value="prov"/>
-                        <display value="Healthcare Provider"/>
-                    </coding>
-                </type>
-                <name value="The Moir Medical Centre"/>
-                <telecom>
-                    <system value="phone"/>
-                    <value value="0115 9737320"/>
-                    <use value="work"/>
-                </telecom>
-                <address>
-                    <use value="work"/>
-                    <type value="both"/>
-                    <line value="Regent Street"/>
-                    <line value="Long Eaton"/>
-                    <city value="Nottingham"/>
-                    <postalCode value="NG10 1QQ"/>
-                </address>
-            </Organization>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/db3d55a9087f924fc712a89c872d33f1.js"></script>

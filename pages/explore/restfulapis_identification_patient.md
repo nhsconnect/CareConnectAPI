@@ -31,17 +31,104 @@ Fetches a bundle of all `Patient` resources for the specified patient or search 
 
 {% include custom/search.parameters.html resource="Patient"     link="https://www.hl7.org/fhir/DSTU2/patient.html#search" %}
 
-| Name | Type | Description | Conformance | Path |
-|------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Patient.address.postalCode |
-| `birthdate` | `date` | The patient's date of birth | SHALL | Patient.birthDate |
-| `email` | `token` | A value in an email contact | MAY | Patient.telecom <br>(system=email) |
-| `family` | `string` | A portion of the family name of the patient | SHALL | Patient.name.family |
-| `gender` | `token` | Gender of the patient | SHALL | Patient.gender |
-| `given` | `string` | A portion of the given name of the patient | SHALL | Patient.name.given |
-| `identifier` | `token` | A patient identifier (NHS Number, Hospital Number, etc) | SHALL | Patient.identifier |
-| `name` | `string` | A portion of either family or given name of the patient | SHALL | 	Patient.name |
-| `phone` | `token` | A value in a phone contact | MAY | Patient.telecom(system=phone) |
+<!--
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:15%;">Name</th>
+    <th style="width:10%;">Type</th>
+    <th style="width:40%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge"></code></td>
+    <td><code class="highlighter-rouge"></code></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge"></code></td>
+    <td><code class="highlighter-rouge"></code></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+</table>
+-->
+
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+<th style="width:15%;">Name</th>
+<th style="width:10%;">Type</th>
+<th style="width:40%;">Description</th>
+<th style="width:5%;">Conformance</th>
+<th style="width:30%;">Path</th>
+</tr>
+<tr>
+<td><code class="highlighter-rouge">adddress-postcode</code></td>
+<td><code class="highlighter-rouge">string</code></td>
+<td>A postalCode specified in an address</td>
+<td>MAY</td>
+<td>Patient.address.postalCode </td>
+</tr>
+<tr>
+<td><code class="highlighter-rouge">birthdate</code></td>
+<td><code class="highlighter-rouge">date</code></td>
+<td>The patient's date of birth</td>
+<td>SHALL</td>
+<td>Patient.birthDate</td>
+</tr>
+<tr>
+<td><code class="highlighter-rouge">email</code></td>
+<td><code class="highlighter-rouge">token</code></td>
+<td>A value in an email contact</td>
+<td>MAY</td>
+<td>Patient.telecom <br>(system=email)</td>
+</tr>
+<tr>
+<td><code class="highlighter-rouge">family</code></td>
+<td><code class="highlighter-rouge">string</code></td>
+<td>A portion of the family name of the patient</td>
+<td>SHALL</td>
+<td>Patient.name.family</td>
+</tr>
+<tr>
+<td><code class="highlighter-rouge">gender</code></td>
+<td><code class="highlighter-rouge">token </code></td>
+<td>Gender of the patient</td>
+<td>SHALL</td>
+<td>Patient.gender</td>
+</tr>
+<tr>
+<td><code class="highlighter-rouge">given</code></td>
+<td><code class="highlighter-rouge">string</code></td>
+<td>A portion of the given name of the patient</td>
+<td>SHALL</td>
+<td>Patient.name.given</td>
+</tr>
+<tr>
+<td><code class="highlighter-rouge">identifier</code></td>
+<td><code class="highlighter-rouge">token</code></td>
+<td>A patient identifier (NHS Number, Hospital Number, etc)</td>
+<td>SHALL</td>
+<td>Patient.identifier</td>
+</tr>
+<tr>
+<td><code class="highlighter-rouge">name </code></td>
+<td><code class="highlighter-rouge">string </code></td>
+<td>A portion of either family or given name of the patient</td>
+<td>SHALL</td>
+<td>Patient.name</td>
+</tr>
+<tr>
+<td><code class="highlighter-rouge">phone </code></td>
+<td><code class="highlighter-rouge">token </code></td>
+<td>A value in a phone contact</td>
+<td>MAY</td>
+<td>Patient.telecom(system=phone)</td>
+</tr>
+</table>
 
 Client systems SHALL provide at least two parameters of differing types, unless searching on identifier where one parameter is permitted. Systems SHALL support the following search combinations:
 
@@ -86,91 +173,10 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' '[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -v '[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
 
 {% include custom/search.response.headers.html resource="Patient"  %}
 
-### 3.3 Response Body ###
+#### 3.2.2 Http Body ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="78682a2e-2541-4b1b-b06c-f0ab310a1ca4"/>
-    <meta>
-        <lastUpdated value="2017-06-02T09:32:09.352+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/Patient?identifier=9876543210"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/Patient/24966"/>
-        <resource>
-            <Patient xmlns="http://hl7.org/fhir">
-                <id value="24966"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T09:30:21.875+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1"/>
-                </meta>
-                <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-EthnicCategory-1">
-                    <valueCodeableConcept>
-                        <coding>
-                            <system value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
-                            <code value="01"/>
-                            <display value="British, Mixed British"/>
-                        </coding>
-                    </valueCodeableConcept>
-                </extension>
-                <identifier>
-                    <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="https://fhir.hl7.org.uk/CareConnect-NHSNumberVerificationStatus-1"/>
-                                <code value="01"/>
-                                <display value="Number present and verified"/>
-                            </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                    <system value="https://fhir.nhs.uk/Id/nhs-number"/>
-                    <value value="9876543210"/>
-                </identifier>
-                <active value="true"/>
-                <name>
-                    <use value="usual"/>
-                    <family value="Kanfeld"/>
-                    <given value="Bernie"/>
-                    <prefix value="Miss"/>
-                </name>
-                <gender value="female"/>
-                <birthDate value="1998-03-19"/>
-                <address>
-                    <use value="home"/>
-                    <line value="10, Field Jardin"/>
-                    <line value="Long Eaton"/>
-                    <city value="Nottingham"/>
-                    <postalCode value="NG10 1ZZ"/>
-                </address>
-                <maritalStatus>
-                    <coding>
-                        <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
-                        <code value="S"/>
-                        <display value="Never Married"/>
-                    </coding>
-                </maritalStatus>
-                <careProvider>
-                    <reference value="Practitioner/24967"/>
-                    <display value="Dr AA Bhatia"/>
-                </careProvider>
-                <managingOrganization>
-                    <reference value="Organization/24965"/>
-                    <display value="Moir Medical Centre"/>
-                </managingOrganization>
-            </Patient>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/93fcc2d0568c92477bafa1fd7ba753f1.js"></script>

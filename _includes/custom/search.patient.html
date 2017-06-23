@@ -8,11 +8,7 @@ GET [baseUrl]/{{include.content}}?patient=[id]</div>
 
 <p>This SHALL be supported for all endpoint provider systems.</p>
 
-<p> <code class="highlighter-rouge">id</code> is the logical id of the patient on the server which is obtained by a <a href="restfulapis_identification_patient.html">Patient </a> resource query.</p>
-<p>
-<code class="highlighter-rouge">id</code> SHALL be the national identifier (NHS Number) for national systems.
-</p>
-
+<p> <code class="highlighter-rouge">id</code> is the logical id of the patient on the server which can be obtained by a <a href="restfulapis_identification_patient.html">Patient </a> resource query.</p>
 
 <div class="language-http highlighter-rouge">
 <pre class="highlight"><code><span class="err">GET [baseUrl]/{{include.content}}?patient=42
@@ -23,8 +19,7 @@ Return all {{include.content}} resources for Patients with a logical id of 42</p
 <div markdown="span" class="alert alert-success" role="alert">
 GET [baseUrl]/{{include.content}}?patient.identifier=[system]|[code]</div>
 
-<p>This SHOULD be supported for all non national provider systems for queries by national identifiers (NHS Number).</p>
-<p>This SHALL be supported for all intermediary (e.g. Trust Integration Engines or other middleware) systems.</p>
+<p>This SHALL be supported for all endpoint provider systems.</p>
 
 <p><code class="highlighter-rouge">system</code> is a uniform resource identifier which defines which CodeSystem the identifer belongs to. For NHS Number this would be <code class="highlighter-rouge">https://fhir.nhs.uk/Id/nhs-number</code> and <code class="highlighter-rouge">code</code> would be the NHS Number.</p>
 <div class="language-http highlighter-rouge">

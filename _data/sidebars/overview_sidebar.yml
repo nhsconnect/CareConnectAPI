@@ -1,7 +1,7 @@
 entries:
 - title: Care Connect
   product: Care Connect
-  version: 0.5.0-alpha.0
+  version: 0.6.0-alpha.0
   levels: one
   folders:
 
@@ -45,11 +45,14 @@ entries:
         - title: "Case Study Overview"
           url: /engage_case_studies.html
           output: web
-        - title: "Michael's Story"
-          url: /engage_michaelsstory.html
-          output: web
         - title: Bristol Connecting Care POC
           url: /engage_poc_bristolcc.html
+          output: web
+        - title: "University Hospital Southampton"
+          url: /engage_poc_uhscc.html
+          output: web
+        - title: "Michael's Story"
+          url: /engage_michaelsstory.html
           output: web
 
   - title: Explore
@@ -64,7 +67,6 @@ entries:
       subfolders:
       - title: Clinical
         output: web
-        subfolders:
         subfolderitems:
           - title: Allergy Intolerance
             url: /restfulapis_clinical_allergyintolerance.html
@@ -72,9 +74,18 @@ entries:
           - title: Condition
             url: /restfulapis_clinical_condition.html
             output: web
-          - title: Immunization
-            url: /restfulapis_clinical_immunization.html
+          - title: Procedure
+            url: /restfulapis_clinical_procedure.html
             output: web
+      - title: Diagnostics
+        output: web
+        subfolderitems:
+          - title: Observation
+            url: /restfulapis_clinical_observation.html
+            output: web
+      - title: Medication
+        output: web
+        subfolderitems:
           - title: Medication
             url: /restfulapis_clinical_medication.html
             output: web
@@ -84,12 +95,10 @@ entries:
           - title: Medication Statement
             url: /restfulapis_clinical_medicationstatement.html
             output: web
-          - title: Observation
-            url: /restfulapis_clinical_observation.html
+          - title: Immunization
+            url: /restfulapis_clinical_immunization.html
             output: web
-          - title: Procedure
-            url: /restfulapis_clinical_procedure.html
-            output: web
+
       - title: Individuals &amp; Entities
         output: web
         subfolderitems:
@@ -123,11 +132,11 @@ entries:
       - title: API Guidance | FHIR&reg;
         output: web
         subfolderitems:
-        - title: Foundations
-          url: /foundations.html
-          output: web
         - title: API Codes
           url: /development_api_codes.html
+          output: web
+        - title: Search Parameters
+          url: /search_parameters.html
           output: web
         - title: Open Source
           url: /development_fhir_open_source_guidance.html
@@ -156,15 +165,17 @@ entries:
         output: web
         subfolderitems:
           - title: Patient Search
-            url: /design_patient_search.html
+            url: /build_patient_search.html
             output: web
           - title: Clinical | Care Coord
-            url: /design_pcc_clinical.html
+            url: /build_pcc_clinical.html
             output: web
           - title: Medication | Care Coord
-            url: /design_pcc_medication.html
+            url: /build_pcc_medication.html
             output: web
-
+          - title: Diagnostics | Care Coord
+            url: /build_pcc_diagnostics.html
+            output: web
   - title: Test
     output: web
     folderitems:
@@ -180,6 +191,9 @@ entries:
     - title: Security
       url: /test_security.html
       output: web
+    - title: Test Data
+      url: /test_data.html
+      output: web
 
   - title: Assure
     output: web
@@ -192,6 +206,9 @@ entries:
       output: web
     - title: Security
       url: /assure_security.html
+      output: web
+    - title: End To End
+      url: /assure_end_to_end.html
       output: web
 
   - title: Deploy

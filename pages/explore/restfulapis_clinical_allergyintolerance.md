@@ -30,16 +30,46 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 
 {% include custom/search.parameters.html resource="AllergyIntolerance"     link="https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search" %}
 
-| Name | Type | Description | Conformance | Path |
-|------|------|-------------|-------------|------|
-| `patient` | `reference` | Who the sensitivity is for | SHALL | AllergyIntolerance.patient<br>(Patient) |
-| `status` | `token` | Status of AllergyIntolerance	| MAY | AllergyIntolerance.status |
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:10%;">Name</th>
+    <th style="width:15%;">Type</th>
+    <th style="width:30%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:40%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>When recorded</td>
+    <td>MAY</td>
+    <td>AllergyIntolerance.recordedDate</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">patient</code></td>
+    <td><code class="highlighter-rouge">reference</code></td>
+    <td>Who the sensitivity is for</td>
+    <td>SHALL</td>
+    <td>AllergyIntolerance.patient<br>(Patient)</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">status</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>Status of AllergyIntolerance</td>
+    <td>MAY</td>
+    <td>AllergyIntolerance.status</td>
+</tr>
+</table>
 
+Systems SHALL support the following search combinations:
 
+* patient
 
-{% include custom/search.patient.html para="2.1.1." content="AllergyIntolerance" %}
+{% include custom/search.date.plus.html para="2.1.1." content="AllergyIntolerance" name="date" %}
 
-{% include custom/search.status.html para="2.1.2." content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
+{% include custom/search.patient.html para="2.1.2." content="AllergyIntolerance" %}
+
+{% include custom/search.status.html para="2.1.3." content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
 
 {% include custom/search.response.html resource="AllergyIntolerance" %}
 
@@ -55,63 +85,6 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
 
 {% include custom/search.response.headers.html resource="AllergyIntolerance" %}
 
-### 3.3 Response Body ###
+#### 3.2.2 Http Body ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="77a4ee23-696f-4d7e-b8d9-9cdd8dc69a4d"/>
-    <meta>
-        <lastUpdated value="2017-06-02T08:25:54.191+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/AllergyIntolerance?patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/AllergyIntolerance/24953"/>
-        <resource>
-            <AllergyIntolerance xmlns="http://hl7.org/fhir">
-                <id value="24953"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T08:25:01.686+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-AllergyIntolerance-1"/>
-                </meta>
-                <recordedDate value="2014-10-09T14:58:00+11:00"/>
-                <recorder>
-                    <reference value="Practitioner/24967"/>
-                </recorder>
-                <patient>
-                    <reference value="Patient/24966"/>
-                </patient>
-                <substance>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="226017009"/>
-                        <display value="Bombay mix"/>
-                    </coding>
-                </substance>
-                <status value="confirmed"/>
-                <criticality value="CRITH"/>
-                <type value="allergy"/>
-                <category value="food"/>
-                <lastOccurence value="2012-06"/>
-                <reaction>
-                    <manifestation>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <code value="39579001"/>
-                            <display value="Anaphylactic reaction"/>
-                        </coding>
-                    </manifestation>
-                    <onset value="2012-06-12"/>
-                </reaction>
-            </AllergyIntolerance>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/03827faae7031ca963dcc2b15fce450b.js"></script>

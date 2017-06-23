@@ -1,24 +1,24 @@
 ---
-title: Access | Assure
+title: End to End | Assure
 keywords: assure, access, security
 tags: [assure, access]
 sidebar: foundations_sidebar
-permalink: assure_access.html
-summary: "The Access page shows developers and users of the API how to access and call the API in the test environment"
+permalink: assure_end_to_end.html
+summary: "The end to end page shows how APIs can be assured in the scenarios and system integration tests required to assure a system before deploying"
 ---
 
 {% include important.html content="All phases outlined below are indicative and subject to on-going review." %}
 
-# Access within Assure #
+# End to End Assurance #
 
-Access at the Assure stage of API development needs finalisation of the following concepts:
+Assurance of systems in an end to end system level manner is an important stage of assurance. Various different tools and approaches can be used at this stage including:
 
-- Endpoints
-- Transformation
-- Versioning
+- integration assurance 
+- scenario assurance
+- user acceptance assurance 
+- linked to user stories/scenarios/features
 
 {% include note.html content="Provided as an overview" %}
-
 
 # API Considerations #
 

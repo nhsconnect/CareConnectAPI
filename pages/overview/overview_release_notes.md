@@ -9,6 +9,26 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 {% include important.html content="This site is under active development by NHS Digital on behalf of INTEROPen and is intended to provide all the technical resources you need to successfully develop the Care Connect APIs. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis." %}
 
+## 0.6.0-alpha.0 ##
+
+Added
+  - Initial sections of University Hospital Southampton POC included
+  - Added section on how [search parameters](search_parameters.html) were selected
+  - Added core Care Connect API [prerequisites](explore.html)
+
+Updated
+  - Updates to Bristol Connecting Care POC (user stories)
+  - Corrections to the glossary
+  - Corrected broken links in the engagement approach
+  - Removed national NHS Number guidance
+  - Corrected menu linking
+  - Provide APIs diagrams throughout
+  - Colour scheme of diagrams from feedback
+  - Altered Accept http header notes
+  - Moved xml and code examples to gitHub gist
+  - Converted markdown to html tables for better display of parameters
+  - Updated API search combinations (conformance requirements)
+
 ## 0.5.0-alpha.0 ##
 
 Added

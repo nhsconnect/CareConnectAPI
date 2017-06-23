@@ -29,9 +29,22 @@ Search Medication resources. Returns a bundle of all `Medication` resources for 
 
 {% include custom/search.parameters.html resource="Medication"     link="https://www.hl7.org/fhir/DSTU2/medication.html#search" %}
 
-| Name | Type | Description | Conformance | Path |
-|------|------|-------------|-------|------|
-| `code` | `token` | 	Codes that identify this medication | MAY | Medication.code |
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:15%;">Name</th>
+    <th style="width:10%;">Type</th>
+    <th style="width:40%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">code</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>Codes that identify this medication</td>
+    <td>MAY</td>
+    <td>Medication.code</td>
+</tr>
+</table>
 
 {% include custom/search.code.medication.html para="2.1.1." content="Medication" %}
 
@@ -49,29 +62,6 @@ Return Medication resource with a logical id of 48496. Replace 'baseUrl' with th
 
 {% include custom/search.response.headers.html resource="Immunization" %}
 
-### 3.3 Response Body ###
+#### 3.2.2 Http Body ####
 
-```xml
-<Medication xmlns="http://hl7.org/fhir">
-   <id value="4849" />
-   <meta>
-      <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Medication-1"/>
-   </meta>
-   <code>
-      <coding>
-         <system value="http://snomed.info/sct"/>
-         <code value="10097211000001102"/>
-         <display value="Insulin glulisine 100units/ml solution for injection 3ml pre-filled disposable devices"/>
-      </coding>
-   </code>
-   <product>
-      <form>
-         <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="385219001"/>
-            <display value="Solution for injection"/>
-         </coding>
-      </form>
-   </product>
-</Medication>
-```
+<script src="https://gist.github.com/KevinMayfield/b2dce41df4ffb395eef568f7769fd086.js"></script>

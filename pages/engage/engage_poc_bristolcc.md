@@ -41,13 +41,11 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific system so I can build an accurate list of reconciled medications.</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to view a combined list of the patient's medications recorded across all care settings so that I can see all of a patient's medications in one place to facilitate a quick overview of the patient's medication history or to facilitate meds reconciliation.</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve all medications from all available systems for a specific patient so I can build a complete list of reconciled medications for the patient.</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know on which system a medication was prescribed so that I can make informed judgements about the reason the medication was originally prescribed.</td></tr>
-<tr><td colspan="2">Out of Scope <i>(Behaviour that is not addressed within the API directly.)</i></td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want the patient's record displayed to indicate the trace status of an NHS Number used to lookup data so I can be confident that the system has retrieved data for the correct patient.</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if medications were not available from a specific source so I can know that there may be gaps in the data I have.</td></tr>
-<tr><td style="vertical-align: middle;">Role Based Access Control (RBAC)</td><td>As a Information Governance Officer (Hospital Services) I want the interface to only return data to an authenticated user so I can be sure that only known users are accessing the data.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know the first issue of a prescription of medication for the patient so that I know how long the patient has been on a particular medication and I can see if this has changed over time.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) know the current issue of a prescription of medication for the patient so that I can include this in my reconciliation and I can identify how this have changed since the initial issue.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know know the last issue of a prescription of medication for the patient so that I know how long the patient was expected to be issued with that medication.</td></tr>
+<tr><td style="vertical-align:middle;">Medicationn List (View)</td><td>As a Pharmacist (Hospital Services) I want to display patient medications from different sources in a single consolidated view so I can more easily reconcile them into a single list.</td></tr>
+<tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.</td></tr>
 </table>
 <br><br>
 ## Dataset ##
@@ -88,18 +86,47 @@ As a Pharmacist (Hospital Services) I want to retrieve a patient's medications u
 ~~~
 GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 ~~~
-
-As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an Trust/Hospital Number or Master Patient Id (MPI)) so that I can find medications for a patient when I don't know the traced and verified NHS Number.
+<br><br>
+As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an Trust/Hospital Number or Master Patient ID (MPI)) so that I can find medications for a patient when I don't know the traced and verified NHS Number.
 
 ~~~
 GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
 ~~~
-
+<br><br>
 As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific system so I can build an accurate list of reconciled medications.
 ~~~
-GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
+GET [baseUrl]
+/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
 ~~~
 <br><br>
+As a Pharmacist (Hospital Services) I want to know the first issue of a prescription of medication for the patient so that I know how long the patient has been on a particular medication and I can see if this has changed over time.
+~~~
+GET [baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
+~~~
+<i>The first issue of a prescription can be deduced from the results.</i>
+<br><br><br><br>
+As a Pharmacist (Hospital Services) know the current issue of a prescription of medication for the patient so that I can include this in my reconciliation and I can identify how this have changed since the initial issue.
+~~~
+GET [baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
+~~~
+<i>The current issue of a prescription can be deduced from the list if issues by identifying the most recent in the returned list.</i>
+<br><br><br><br>
+As a Pharmacist (Hospital Services) I want to know know the last issue of a prescription of medication for the patient so that I know how long the patient was expected to be issued with that medication.
+~~~
+GET [baseUrl]/MedicationOrder?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
+~~~
+<i>The last issue of a prescription can be deduced by ordering the returned medications</i>
+<br><br><br><br>
+As a Pharmacist (Hospital Services) I want to display patient medications from different sources in a single consolidated view so I can more easily reconcile them into a single list.
+<i>CC profiles - MedicationStatement and it’s containing profiles are structured and can be returned in Json, Xml or any other format.</i>
+<br><br><br><br>
+As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.
+
+<i>
+404- Resource not found<br>
+410- Resource deleted
+</i>
+<br><br><br>
 ## Search Query Parameters ##
 
 <table style="width:100%;max-width:100%">
@@ -124,7 +151,7 @@ GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-
 <br><br>
 ## Technical Architecture ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/TechnicalArchitecture.jpg" alt="Diagram showing an overview of the solution's architecture." title="Diagram showing an overview of the solution's architecture." style="width:75%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/Bristol Technical Architecture.jpg" alt="Diagram showing an overview of the solution's architecture." title="Diagram showing an overview of the solution's architecture." style="width:100%"></p>
 <br><br>
 ## Acceptance Criteria ##
 

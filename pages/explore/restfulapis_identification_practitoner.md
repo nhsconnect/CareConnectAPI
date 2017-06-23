@@ -12,7 +12,6 @@ summary: A person who is directly or indirectly involved in the provisioning of 
 {% include custom/fhir.reference.html resource="Practitioner" page="CareConnect-Practitioner-1" fhirlink="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 
-
 ## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
@@ -32,10 +31,29 @@ Fetches a bundle of all `Practitioner` resources for the specified search criter
 
 {% include custom/search.parameters.html resource="Practitioner"     link="https://www.hl7.org/fhir/DSTU2/practitioner.html#search" %}
 
-| Name | Type | Description | Conformance  | Path |
-|------|------|-------------|-------|------|
-| `adddress-postcode` | `string` | A postalCode specified in an address | MAY | Practitioner.address.postalCode |
-| `identifier` | `token` | 	Any identifier for the practitioner (e.g. GMP/GMC code) | MAY | 	Practitioner.identifier |
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+    <th style="width:15%;">Name</th>
+    <th style="width:10%;">Type</th>
+    <th style="width:40%;">Description</th>
+    <th style="width:5%;">Conformance</th>
+    <th style="width:30%;">Path</th>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">adddress-postcode</code></td>
+    <td><code class="highlighter-rouge">string</code></td>
+    <td>A postalCode specified in an address</td>
+    <td>MAY</td>
+    <td>Practitioner.address.postalCode</td>
+</tr>
+<tr>
+    <td><code class="highlighter-rouge">identifier</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>Any identifier for the practitioner (e.g. GMP/GMC code)</td>
+    <td>MAY</td>
+    <td>Practitioner.identifier</td>
+</tr>
+</table>
 
 <!--
 | `name` | `string` | A portion of the name of the practitioner | | Practitioner.name |
@@ -65,70 +83,6 @@ Return all Practitioner resources with a GP Code of G8133438, the format of the 
 
 {% include custom/search.response.headers.html resource="Practitioner" %}
 
-### 3.3 Response Body ###
+#### 3.2.2 Http Body ####
 
-```xml
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="4b552491-8e39-43da-8967-a2210536cd81"/>
-    <meta>
-        <lastUpdated value="2017-06-02T09:35:18.459+01:00"/>
-    </meta>
-    <type value="searchset"/>
-    <total value="1"/>
-    <link>
-        <relation value="self"/>
-        <url value="[baseUrl]/Practitioner?identifier=G8133438"/>
-    </link>
-    <entry>
-        <fullUrl value="[baseUrl]/Practitioner/24967"/>
-        <resource>
-            <Practitioner xmlns="http://hl7.org/fhir">
-                <id value="24967"/>
-                <meta>
-                    <lastUpdated value="2017-06-02T09:33:47.072+01:00"/>
-                    <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Practitioner-1"/>
-                </meta>
-                <identifier>
-                    <system value="https://fhir.nhs.uk/Id/sds-user-id"/>
-                    <value value="G8133438"/>
-                </identifier>
-                <name>
-                    <family value="Bhatia"/>
-                    <given value="AA"/>
-                    <prefix value="Dr."/>
-                </name>
-                <telecom>
-                    <system value="phone"/>
-                    <value value="0115 9737320"/>
-                    <use value="work"/>
-                </telecom>
-                <address>
-                    <use value="work"/>
-                    <line value="Regent Street"/>
-                    <line value="Long Eaton"/>
-                    <city value="Nottingham"/>
-                    <postalCode value="NG10 1QQ"/>
-                    <country value="GBR"/>
-                </address>
-                <gender value="male"/>
-                <practitionerRole>
-                    <managingOrganization>
-                        <reference value="Organization/24965"/>
-                        <display value="The Moir Medcial Centre"/>
-                    </managingOrganization>
-                    <role>
-                        <coding>
-                            <system value="https://fhir.hl7.org.uk/ValueSet/sds-job-role-name-1"/>
-                            <code value="R0260"/>
-                            <display value="General Medical Practitioner"/>
-                        </coding>
-                    </role>
-                </practitionerRole>
-            </Practitioner>
-        </resource>
-        <search>
-            <mode value="match"/>
-        </search>
-    </entry>
-</Bundle>
-```
+<script src="https://gist.github.com/KevinMayfield/742a6c3536c240a3a75c4dd57517d2c9.js"></script>

@@ -11,15 +11,35 @@ summary: "Overview of the Explore section"
 
 {% include custom/api_overview.svg %}
 
+## 1. Prerequisites ##
 
-## 1. Profile Structure ##
-The FHIR Care Connect profiles described in the Explore section of this implementation guide have been structured consistently in the following way:
-0. References
-1. Read
-2. Search Parameters
-3. Example
+### 1.1 CareConnectAPI Requirements ###
 
-### 1.1 Profile Structure Details ###
+- SHALL support the CareConnect Patient resource profile.
+- SHALL support at least one additional resource profile from the list of CareConnect Profiles
+- SHALL Implement REST behavior according to the FHIR specification
+- Resources SHALL identify the CareConnect profile supported as part of the [FHIR Base Resource](https://hl7.org/fhir/DSTU2/resource-definitions.html#Resource.meta)
+- SHALL support XML **or** JSON formats for all CareConnectAPI interactions and SHOULD support both formats.
+
+
+### 1.2 FHIR Conformance ###
+
+SHALL declare a Conformance identifying the list of profiles, operations, search parameter supported.
+
+In order to be a compliant FHIR server, client systems need to expose a valid FHIR [Conformance](https://www.hl7.org/fhir/DSTU2/conformance.html) profile. See also [Care Connect API FHIR conformance profile](restfulapis_conformance_conformance.html).
+
+### 1.3 NHS Number ###
+
+Only verified NHS Number SHALL be used with CareConnect profiles. This can be achieved using a spine accredited system, a [Demographics Batch Service (DBS)](https://developer.nhs.uk/library/systems/demographic-batch-service-dbs/) batch-traced record (CSV), or using a [Spine Mini Services Provider (HL7v3)](https://nhsconnect.github.io/spine-smsp/) to verify the NHS Number.
+
+## 2. Profile API Structure ##
+The FHIR Care Connect profile API's described in the Explore section of this implementation guide have been structured consistently in the following way:
+- `0.` References
+- `1.` Read
+- `2.` Search Parameters
+- `3.` Example
+
+### 2.1 Profile API Structure Details ###
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
@@ -28,7 +48,7 @@ The FHIR Care Connect profiles described in the Explore section of this implemen
 </tr>
 <tr>
 <td>0. References</td>
-<td>Links to other parts of the implementation guide which might help with context and understanding the profiles described</td>
+<td>Links to other parts of the implementation guide which might help with context and understanding the API's described</td>
 </tr>
 <tr>
 <td>1. Read</td>
@@ -44,8 +64,8 @@ The FHIR Care Connect profiles described in the Explore section of this implemen
 </tr>
 </table>
 
-## 2. Profiles ##
-This section looks at the Care Connect profiles covered within this implementation guide.
+## 3. Profile API's ##
+This section looks at the Care Connect profile API's covered within this implementation guide.
 
 
 <table style="min-width:100%;width:100%">

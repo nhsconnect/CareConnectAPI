@@ -17,6 +17,8 @@ Access at the Test stage of API development needs careful consideration of the f
 - Transformation
 - Versioning
 
+{% include note.html content="Provided as an overview" %}
+
 
 # API Considerations #
 

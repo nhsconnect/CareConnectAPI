@@ -23,7 +23,7 @@ In previous phases the following concepts need to have been encountered and reso
 - Transformation
 - Versioning
 
-[Coming - soon]
+{% include note.html content="Provided as an overview" %}
 
 
 # API Considerations #
