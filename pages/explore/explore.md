@@ -15,7 +15,7 @@ summary: "Overview of the Explore section"
 
 ### 1.1 CareConnectAPI Requirements ###
 
-- SHALL support HL7 FHIR DSTU2 version 1.02.
+- SHALL support HL7 FHIR DSTU2 version 1.0.2.
 - SHALL support the CareConnect Patient resource profile.
 - SHALL support at least one additional resource profile from the list of CareConnect Profiles
 - SHALL Implement REST behavior according to the FHIR specification
