@@ -1,7 +1,7 @@
 ---
 title: Documents | DocumentReference
 keywords: getcarerecord, structured, rest, documentreference
-tags: [rest,fhir,condition,clinical,development]
+tags: [rest,fhir,documents,development]
 sidebar: accessrecord_rest_sidebar
 permalink: restfulapis_documents_documentreference.html
 summary: A DocumentReference resource is used to describe a document that is made available to a healthcare system. A document is some sequence of bytes that is identifiable, establishes its own context (e.g., what subject, author, etc. can be displayed to the user), and has defined update management. The DocumentReference resource can be used with any document format that has a recognized mime type and that conforms to this definition.
@@ -34,9 +34,9 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
-    <th style="width:10%;">Name</th>
+    <th style="width:15%;">Name</th>
     <th style="width:15%;">Type</th>
-    <th style="width:35%;">Description</th>
+    <th style="width:30%;">Description</th>
     <th style="width:5%;">Conformance</th>
     <th style="width:35%;">Path</th>
 </tr>
@@ -67,12 +67,12 @@ Systems SHOULD support the following search combinations:
 
 * patient + type + period
 
-
 {% include custom/search.patient.html para="2.1.1." content="DocumentReference" %}
 
 {% include custom/search.date.plus.html para="2.1.2." content="DocumentReference" name="period" %}
 
 {% include custom/search.token.html para="2.1.3." content="type" resource="DocumentReference" text1="type" text2="'End of Life Care Coordination Summary'" example="http://snomed.info/sct|861421000000109" %}
+
 
 {% include custom/search.response.html resource="DocumentReference" %}
 
