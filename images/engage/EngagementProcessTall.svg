@@ -20,8 +20,8 @@
 		.st6 {fill:#574db8;font-family:Century Gothic;font-size:4.99999em;font-weight:bold}
 		.st7 {fill:#bcd0e9;fill-opacity:0.5;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
 		.st8 {fill:#4f81bd;font-family:Century Gothic;font-size:4.99999em;font-weight:bold}
-		.st9 {marker-end:url(#mrkr4-18);stroke:#4475b3;stroke-linecap:round;stroke-linejoin:round;stroke-width:20.75}
-		.st10 {fill:#4475b3;fill-opacity:1;stroke:#4475b3;stroke-opacity:1;stroke-width:0.89170605930382}
+		.st9 {marker-end:url(#mrkr4-18);stroke:#000bae;stroke-linecap:round;stroke-linejoin:round;stroke-width:20.75}
+		.st10 {fill:#000bae;fill-opacity:1;stroke:#000bae;stroke-opacity:1;stroke-width:0.89170605930382}
 		.st11 {fill:#f1c2d3;fill-opacity:0.5;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
 		.st12 {fill:#d65985;font-family:Century Gothic;font-size:4.99999em;font-weight:bold}
 		.st13 {fill:#f7d1c7;fill-opacity:0.5;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
@@ -29,7 +29,7 @@
 		.st15 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
 		.st16 {fill:#000000;font-family:Century Gothic;font-size:4.99999em;font-weight:bold}
 		.st17 {fill:#ffffff;fill-opacity:0.8;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
-		.st18 {fill:#4475b3;font-family:Century Gothic;font-size:4.00001em;font-weight:bold}
+		.st18 {fill:#000bae;font-family:Century Gothic;font-size:4.00001em;font-weight:bold}
 		.st19 {font-size:1em}
 		.st20 {fill:#4f81bd;font-family:Century Gothic;font-size:4.00001em;font-weight:bold}
 		.st21 {fill:#f7dfc7;fill-opacity:0.5;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
