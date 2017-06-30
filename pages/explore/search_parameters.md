@@ -15,12 +15,11 @@ The search parameters have been created by amalgamating the thinking and search 
 
 
 - [US Argonaut Data Query Implementation Guide](http://www.fhir.org/guides/argonaut/r2/Conformance-server.html)
-- [GP Connect](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
+- [NHS Digital - GP Connect](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
 - [Cerner](http://fhir.cerner.com/millennium/dstu2/)
 - [AllScripts](https://developer.allscripts.com/)
 - [EPIC](https://open.epic.com/Interface/FHIR)
-- NHS Scotland
-- [NHS Digital - GP Connect](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
+- NHS Scotland Clinical Portal (API) and [SCI Store](http://www.sci.scot.nhs.uk/products/store/store_main.htm)
 
 The search parameters were created as a starting point for discussion as such a process to improve the search parameters and make them applicable and complete.
 
