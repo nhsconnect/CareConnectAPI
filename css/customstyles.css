@@ -270,7 +270,7 @@ div#toc ul {
     background-color: #fcfdff;
     padding: 5px;
     border-radius: 5px;
-    max-width: 80%;
+    max-width: 100%;
     color: #00054c;
 }
 
@@ -405,7 +405,7 @@ ul#mysidebar {
 }
 
 .nav ul li ul li a {
-    padding-left:40px;
+    padding-left: 20px;
 }
 
 .nav li.thirdlevel > a {
@@ -430,7 +430,7 @@ ul#mysidebar {
 
 .nav ul li a {
     border-top:1px solid #dfefff;
-    padding-left:10px;
+    padding-left: 15px;
 }
 /* end sidebar */
 
