@@ -61,9 +61,11 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 </tr>
 </table>
 
+<!--
 Systems SHALL support the following search combinations:
 
 * patient
+-->
 
 {% include custom/search.date.plus.html para="2.1.1." content="AllergyIntolerance" name="date" %}
 

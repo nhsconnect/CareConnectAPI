@@ -11,7 +11,7 @@ summary: Use to record detailed information about conditions, problems or diagno
 {% include custom/fhir.reference.html resource="Condition" page="CareConnect-Condition-1" fhirlink="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 
-## 1. Read Operation ##
+## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET [baseUrl]/Condition/[id]</div>
