@@ -38,4 +38,4 @@ No MAY parameters will be listed in the final version of this Implementation Gui
 
 An improvement process needs to be developed to improve the search parameters and validate the ones already suggested. Please contact the careconnect team if you have any suggestions.
 
-{% include note.html content="Provided as a suggestion" %}
+{% include custom/contribute.html content="Get in touch with careconnect@interopen.org to improve the Search Parameters" %}
