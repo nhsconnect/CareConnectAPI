@@ -1,6 +1,11 @@
 body {
     font-size:15px;
 }
+
+a {
+    color: #1c6f97;
+}
+
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
@@ -148,8 +153,8 @@ table > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd;
     text-transform: none;
-    background-color: #777;
-    color: white;
+    background-color: #c3c6ca;
+    color: #000;
     text-align: left;
 }
 table > caption + thead > tr:first-child > th,
@@ -254,17 +259,19 @@ ul#results-container a: hover {
     margin: 3px;
 }
 
+
+
 div#toc ul li {
     margin: 8px 0px 8px 22px;
     font-size: 90%;
     list-style: square;
 }
 div#toc ul {
-    background-color: whitesmoke;
+    background-color: #fcfdff;
     padding: 5px;
     border-radius: 5px;
-    max-width: 300px;
-    color: gray;
+    max-width: 100%;
+    color: #00054c;
 }
 
 div#toc ul li ul {
@@ -305,7 +312,7 @@ li.dropdownActive a {
 }
 
 .post-content .rssfeedLink {
-    color: #248EC2;
+    color: #0010fc;
 }
 
 footer {
@@ -372,18 +379,18 @@ a.accordion-toggle, a.accordion-collapsed {
 }
 
 .nav a:hover, .nav li.active > a {
-    background-color: #8D8D8D;
-    color: #f5f5f5;
+    background-color: #0068cc;
+    color: #fff;
 }
 
 .nav > li.active > a  {
-background-color: #347DBE;
+    background-color: #347DBE;
 }
 
 .nav li a {
     font-size: 12px;
-    line-height: 18px;
-    padding: 2px 10px;
+    line-height: 20px;
+    padding: 4px 10px;
     background-color: #f1f1f1;
 }
 
@@ -398,19 +405,19 @@ ul#mysidebar {
 }
 
 .nav ul li ul li a {
-    padding-left:40px;
+    padding-left: 20px;
 }
 
 .nav li.thirdlevel > a {
-    color: #248EC2;
+    color: #0010fc;
     font-weight:bold;
     padding-left:20px;
-    background-color: whitesmoke !important;
+    background-color: #dfefff !important;
 }
 
 
 .nav ul li a {
-    background-color: #FAFAFA;
+    background-color: #f3f9ff;
 }
 
 .nav li a {
@@ -418,12 +425,12 @@ ul#mysidebar {
 }
 
 .nav li a:hover {
-    background-color: #8D8D8D;
+    background-color: #004a91;
 }
 
 .nav ul li a {
-    border-top:1px solid whitesmoke;
-    padding-left:10px;
+    border-top:1px solid #dfefff;
+    padding-left: 15px;
 }
 /* end sidebar */
 
@@ -445,7 +452,7 @@ span.projectTitle {
 }
 
 .footerMeta {
-    background-color: whitesmoke;
+    background-color: #fff;
     padding: 10px;
     max-width: 250px;
     border-radius: 5px;
@@ -520,7 +527,7 @@ section table tr.danger, table tr.preference, table tr.preference > td.sorting_1
 }
 
 table.profile thead tr th {
-    background-color: #248ec2;
+    background-color: #0010fc;
 }
 
 table.request thead tr th {
@@ -579,11 +586,11 @@ hr.shaded {
 
 i.border {
     padding: 10px 20px;
-    background-color: whitesmoke;
+    background-color: #fff;
 }
 
 a[data-toggle] {
-    color: #248EC2;
+    color: #0010fc;
 }
 
 .summary {
@@ -613,7 +620,7 @@ h4 {color: #707070; font-weight:normal; font-size:120%; font-style:italic;}
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    background-color: #248ec2;
+    background-color: #0010fc;
     color: white;
 }
 
@@ -644,16 +651,21 @@ li.activeSeries {
     font-size:18px;
 }
 
+
+
+.alert-danger {
+    color: #2c1111;
+}
 .alert-warning {
     color: #444;
 }
 
 .contribute{
-    background-color: #0F718A;
+    background-color: #c7ecff;
 }
 
 .contribute-warning {
-    color: #fff;
+    color: #000;
 }
 
 div.alert code, h2 code {
@@ -735,7 +747,7 @@ ol.series li {
 
 /* not sure if using this ...*/
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #248ec2 !important;
+    border-color: #0010fc !important;
 }
 
 #mysidebar .nav ul {
@@ -868,7 +880,7 @@ span.soft {
     border: 1px solid gray;
     padding: 15px;
     margin: 15px 0px;
-    background-color: whitesmoke;
+    background-color: #fff;
 }
 
 @media (max-width: 767px) {
@@ -1010,13 +1022,13 @@ span.label.label-primary {
 
 
 .nav li.active > a.subfoldersTitle {
-    background-color: whitesmoke;
+    background-color: #fff;
     font-weight: bold;
     color: black;
     }
 
 a code {
-    color: #248EC2;
+    color: #0010fc;
 }
 
 code + a > code {

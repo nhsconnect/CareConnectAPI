@@ -15,6 +15,7 @@ summary: "Overview of the Explore section"
 
 ### 1.1 CareConnectAPI Requirements ###
 
+- SHALL support HL7 FHIR DSTU2 version 1.0.2.
 - SHALL support the CareConnect Patient resource profile.
 - SHALL support at least one additional resource profile from the list of CareConnect Profiles
 - SHALL Implement REST behavior according to the FHIR specification
@@ -31,6 +32,8 @@ In order to be a compliant FHIR server, client systems need to expose a valid FH
 ### 1.3 NHS Number ###
 
 Only verified NHS Number SHALL be used with CareConnect profiles. This can be achieved using a spine accredited system, a [Demographics Batch Service (DBS)](https://developer.nhs.uk/library/systems/demographic-batch-service-dbs/) batch-traced record (CSV), or using a [Spine Mini Services Provider (HL7v3)](https://nhsconnect.github.io/spine-smsp/) to verify the NHS Number.
+
+{% include custom/contribute.html content="Get in touch with careconnect@interopen.org to improve the Prerequisites." %}
 
 ## 2. Profile API Structure ##
 The FHIR Care Connect profile API's described in the Explore section of this implementation guide have been structured consistently in the following way:
