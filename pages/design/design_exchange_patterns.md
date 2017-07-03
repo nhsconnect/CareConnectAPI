@@ -15,22 +15,136 @@ This section has been included to show the use of FHIR exchange patterns when de
 
 ## 2. RESTful API
 
-[TODO] [SDP - ResourceAPI](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI)
+<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="https://www.hl7.org/fhir/DSTU2/http.html"><b>RESTful API</b></div>
+
+[TODO]
+
+FHIR is described as a 'RESTful' specification based on common industry level use of the term REST. In practice, FHIR only supports Level 2 of the REST Maturity model  as part of the core specification, though full Level 3 conformance is possible through the use of extensions. Because FHIR is a standard, it relies on the standardization of resource structures and interfaces. This may be considered a violation of REST principles but is key to ensuring consistent interoperability across diverse systems.
+
+Each "resource type" has the same set of interactions defined that can be used to manage the resources in a highly granular fashion.
+
+Note that in this RESTful framework, transactions are performed directly on the server resource using an HTTP request/response.
+
+Patterns:
+
+<table>
+<tr>
+<td>
+  <a href="http://developer.nhs.uk/library/architecture/integration-patterns/portal/"><img class="alignnone size-full wp-image-9872" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Portal-e1422958326475.jpg" alt="tn_Portal" width="251" height="72" /></a>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<a href="http://developer.nhs.uk/library/architecture/integration-patterns/registry-repository/"><img class="alignnone size-full wp-image-9922" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-RegistryRepository-e1422959886826.jpg" alt="tn_RegistryRepository" width="250" height="72" /></a>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<a href="http://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/"><img class="alignnone size-full wp-image-9912" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Repository-e1422959862898.jpg" alt="tn_Repository" width="250" height="72" /></a>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+ <a href="http://developer.nhs.uk/library/architecture/integration-patterns/store-and-notify/"><img class="alignnone size-full wp-image-9832" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-StoreAndNotify-e1422958493685.jpg" alt="tn_StoreAndNotify" width="251" height="72" /></a>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://developer.nhs.uk/library/architecture/integration-patterns/publish-subscribe/"><img class="alignnone size-full wp-image-16992" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn_PubSub_250.jpg" alt="tn_PubSub_250" width="250" height="72" /></a></td>
+<td></td>
+</tr>
+</table>
+
+Examples:
+
+- [CareConnectAPI](explore.html)
+  - [GP Connect Access Record REST](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
+- [Vistors and Migrants](https://nhsconnect.github.io/visitor-and-migrants/index.html)
+- [NHS e-Referral Service](https://data.developer.nhs.uk/fhir/eRS/Chapter.1.About/index.html)
 
 ## 3. Messaging ##
 
+<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="https://www.hl7.org/fhir/DSTU2/messaging.html"><b>Messaging</b></div>
+
 [TODO]
-[SDP - MessagingAPI](http://www.servicedesignpatterns.com/WebServiceAPIStyles/MessageAPI)
-[EIP - CommmandMessage](http://www.enterpriseintegrationpatterns.com/patterns/messaging/CommandMessage.html)
+
+FHIR Resources can be used in a traditional messaging context, much like HL7 v2 (see [detailed comparison](https://www.hl7.org/fhir/comparison-v2.html)).
+
+Patterns:
+
+<table>
+<tr>
+<td>
+<a href="http://developer.nhs.uk/library/architecture/integration-patterns/message-broker/"><img class="alignnone size-full wp-image-9902" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Broker-e1422958425684.jpg" alt="tn_Broker" width="250" height="72" /></a>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<a href="http://developer.nhs.uk/library/architecture/integration-patterns/registry-repository/"><img class="alignnone size-full wp-image-9922" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-RegistryRepository-e1422959886826.jpg" alt="tn_RegistryRepository" width="250" height="72" /></a>
+</td>
+<td>
+To store resources in the Repository
+<br>Use API to retrieve the resources
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/"><img class="alignnone size-full wp-image-9912" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Repository-e1422959862898.jpg" alt="tn_Repository" width="250" height="72" /></a>
+</td>
+<td>To store resources in the Repository
+<br>Use API to retrieve the resources
+</td>
+</tr>
+<tr>
+<td>
+ <a href="http://developer.nhs.uk/library/architecture/integration-patterns/store-and-notify/"><img class="alignnone size-full wp-image-9832" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-StoreAndNotify-e1422958493685.jpg" alt="tn_StoreAndNotify" width="251" height="72" /></a>
+</td>
+<td>To store resources in the repository
+<br>and provide Notification
+<br>Use API to retrieve the resources</td>
+</tr>
+<tr>
+<td><a href="http://developer.nhs.uk/library/architecture/integration-patterns/publish-subscribe/"><img class="alignnone size-full wp-image-16992" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn_PubSub_250.jpg" alt="tn_PubSub_250" width="250" height="72" /></a></td>
+<td></td>
+</tr>
+</table>
+
+
+Examples:
+
+- [NHS FGM Service](https://nhsconnect.github.io/fgm-risk-indication-service/)
 
 ## 4. Documents ##
 
-[TODO]
+<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="https://www.hl7.org/fhir/DSTU2/documents.html"><b>Documents</b></div>
 
-[HL7v3 and CDA](https://developer.nhs.uk/library/interoperability/itk-payloads-hl7v3-and-cda/)
-[EIP - DocumentMessage](http://www.enterpriseintegrationpatterns.com/patterns/messaging/DocumentMessage.html)
+[TODO - Add notes about ITK/CDA]
 
-See [GP Connect Composition](https://data.developer.nhs.uk/fhir/candidaterelease-170816-getrecord/Profile.GetRecordQueryResponse-HTMLView/gpconnect-carerecord-composition-1.html)
+A set of coherent information that is a statement of healthcare information, including clinical observations and services. A document is an immutable set of resources with a fixed presentation that is authored and/or attested by humans, organizations and devices.
 
-CDA
-nhs
+Patterns:
+
+<table>
+<tr>
+<td>
+<a href="http://developer.nhs.uk/library/architecture/integration-patterns/broadcast-point-to-point-sharing/"><img  src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-PointToPoint-e1422958448799.jpg" alt="tn_PointToPoint" width="249" height="72" /></a>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="http://developer.nhs.uk/library/architecture/integration-patterns/store-and-notify/"><img class="alignnone size-full wp-image-9832" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-StoreAndNotify-e1422958493685.jpg" alt="tn_StoreAndNotify" width="251" height="72" /></a>
+</td>
+<td>To populate the repository. <br>Use Message or API for the notification<br>Use API to retrieve the document
+</td>
+</tr>
+</table>
+
+Examples:
+
+- [GP Connect Composition](https://data.developer.nhs.uk/fhir/candidaterelease-170816-getrecord/Profile.GetRecordQueryResponse-HTMLView/gpconnect-carerecord-composition-1.html)
