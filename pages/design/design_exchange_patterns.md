@@ -63,7 +63,7 @@ Examples:
 - [CareConnectAPI](explore.html)
   - [GP Connect Access Record REST](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
 - [Vistors and Migrants](https://nhsconnect.github.io/visitor-and-migrants/index.html)
-- [NHS e-Referral Service](https://data.developer.nhs.uk/fhir/eRS/Chapter.1.About/index.html)
+- [NHS e-Referral Service](https://nhsconnect.github.io/NHS-FHIR-eRS-Integration/Generated/)
 
 ## 3. Messaging ##
 
@@ -117,6 +117,7 @@ To store resources in the Repository
 Examples:
 
 - [NHS FGM Service](https://nhsconnect.github.io/fgm-risk-indication-service/)
+- [Social Care Assessment, Discharge and Withdrawal](https://nhsconnect.github.io/FHIR-ADW-Messaging/Generated)
 
 ## 4. Documents ##
 
@@ -148,3 +149,4 @@ Patterns:
 Examples:
 
 - [GP Connect Composition](https://data.developer.nhs.uk/fhir/candidaterelease-170816-getrecord/Profile.GetRecordQueryResponse-HTMLView/gpconnect-carerecord-composition-1.html)
+- [Transfer of Care eDischarge](https://nhsconnect.github.io/NHS-FHIR-Doc-eDischarge/Generated/)
