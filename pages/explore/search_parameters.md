@@ -11,7 +11,7 @@ summary: "Describes the process of creating the search parameters"
 
 ## 1. How they were created? ##
 
-The search parameters have been created by amalgamating the thinking and search parameter definitions from public facing projects who have spent time looking, investigating and implementing API search parameters:
+The search parameters have been created by amalgamating the thinking behind search parameter definitions from public facing projects who have spent time looking, investigating and implementing API search parameters:
 
 
 - [NHS Digital - GP Connect](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
@@ -25,13 +25,14 @@ The search parameters were created as a starting point for discussion as such a 
 
 ## 2. MAY Parameters ##
 
-The parameters have been selected using a scoring system based usage frequency. Parameters with a high score have been given SHALL conformance status and the others a SHOULD. A number of low scoring parameters have been included with a MAY status, this is to cover differences between UK and international usage.
+The parameters have been selected on usage frequency. Frequently used parameters have been given SHALL conformance requirement and slightly less common parameters a SHOULD requirement. A number of search parameters fell outside of this criteria were identified as being useful in   in the U.K., these are listed in the `2.2 Search` section with a MAY conformance requirement.
 
-E.g. [Practitioner](restfulapis_identification_practitoner.html) has a MAY conformance status for `identifier`, in the UK have a national codeSystems for Consultants and GP's it is anticipated we would want to query Practitioner using these codes. If feedback from suppliers and consumers indicates this is the case then the conformance for `identifier` would be increased to SHALL or SHOULD. <br>
+<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b><a href="https://digital.nhs.uk/organisation-data-service">Organization Data Service</a></b> is responsible for <a href="restfulapis_identification_organisation.html">Organisation</a>, <a href="restfulapis_identification_location.html">Location</a> (Organisation Site) and <a href="restfulapis_identification_practitoner.html">Practitioner</a> codes used within the NHS. The requirement to search for these using  `identifier` is anticipated, `identifier` is listed in the search parameters section of these resources with a MAY conformance requirement. </div>
 
-The same logic will be applied to other parameters such as `adddress-postcode`, however if feedback indicates the conformance shouldn't be a SHALL or a SHOULD then this parameter will be classed in the same way as the other optional (MAY) FHIR parameters and the explicit entry will be removed from this implementation guide.
+It is believed this MAY conformance is not enough in a U.K. setting and this should be increased to SHALL or SHOULD. MAY parameters are no different to other optional standard FHIR search parameters. If feedback indicates they should remain optional (MAY), they will be treated as such and the references removed from the `2.2 Search` section of the resources.
 
-No MAY parameters will be listed in the final version of this Implementation Guide.
+Feedback is requested from suppliers and consumers to confirm the conformance level for all parameters in the section `2.2 Search` for all resources.
+
 
 ## 3. Improvement process ##
 
