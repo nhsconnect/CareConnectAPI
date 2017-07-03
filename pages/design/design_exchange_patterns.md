@@ -30,6 +30,12 @@ Note that in this RESTful framework, transactions are performed directly on the 
 <table>
 <tr>
 <td>
+ <br>Mobile / <br>Web Browser
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
   <a href="http://developer.nhs.uk/library/architecture/integration-patterns/portal/"><img class="alignnone size-full wp-image-9872" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Portal-e1422958326475.jpg" alt="tn_Portal" width="251" height="72" /></a>
 </td>
 <td></td>
