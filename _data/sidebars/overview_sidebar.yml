@@ -153,13 +153,15 @@ entries:
     - title: Patterns / Topology
       url: /design_patterns.html
       output: web
+    - title: Exchange Patterns
+      url: /design_exchange_patterns.html
+      output: web
     - title: Access
       url: /design_access.html
       output: web
     - title: Security
       url: /design_security.html
       output: web
-
       subfolders:
       - title: Build
         output: web
