@@ -11,7 +11,7 @@ summary: "The Exchange Patterns introduce the three ways of exchanging FHIR Reso
 
 ## 1. Exchange Paradigms ##
 
-This section has been included to show the use of FHIR exchange patterns when deciding how to use Care Connect profiles within solutions.
+This section has been included to show how CareConnectAPI fits in traditional messaging and document exchanges. Also how these ways of exchanging FHIR resoources relates to Information Sharing Patterns.
 
 ## 2. RESTful API
 
@@ -25,7 +25,7 @@ Each "resource type" has the same set of interactions defined that can be used t
 
 Note that in this RESTful framework, transactions are performed directly on the server resource using an HTTP request/response.
 
-Patterns:
+### 2.1. Information Sharing Patterns ###
 
 <table>
 <tr>
@@ -58,7 +58,7 @@ Patterns:
 </tr>
 </table>
 
-Examples:
+### 2.2. Examples ###
 
 - [CareConnectAPI](explore.html)
   - [GP Connect Access Record REST](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
@@ -73,7 +73,7 @@ Examples:
 
 FHIR Resources can be used in a traditional messaging context, much like HL7 v2 (see [detailed comparison](https://www.hl7.org/fhir/comparison-v2.html)).
 
-Patterns:
+### 3.1. Information Sharing Patterns ###
 
 <table>
 <tr>
@@ -114,10 +114,11 @@ To store resources in the Repository
 </table>
 
 
-Examples:
+### 3.2. Examples ###
 
 - [NHS FGM Service](https://nhsconnect.github.io/fgm-risk-indication-service/)
 - [Social Care Assessment, Discharge and Withdrawal](https://nhsconnect.github.io/FHIR-ADW-Messaging/Generated)
+- [Child Health](https://nhsconnect.github.io/Digital-Child-Health/Generated)
 
 ## 4. Documents ##
 
@@ -127,9 +128,15 @@ Examples:
 
 A set of coherent information that is a statement of healthcare information, including clinical observations and services. A document is an immutable set of resources with a fixed presentation that is authored and/or attested by humans, organizations and devices.
 
-Patterns:
+### 4.1. Information Sharing Patterns ###
 
 <table>
+<tr>
+<td>
+<a href="http://developer.nhs.uk/library/architecture/integration-patterns/message-broker/"><img class="alignnone size-full wp-image-9902" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Broker-e1422958425684.jpg" alt="tn_Broker" width="250" height="72" /></a>
+</td>
+<td></td>
+</tr>
 <tr>
 <td>
 <a href="http://developer.nhs.uk/library/architecture/integration-patterns/broadcast-point-to-point-sharing/"><img  src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-PointToPoint-e1422958448799.jpg" alt="tn_PointToPoint" width="249" height="72" /></a>
@@ -146,7 +153,7 @@ Patterns:
 </tr>
 </table>
 
-Examples:
+### 4.2. Examples ###
 
 - [GP Connect Composition](https://data.developer.nhs.uk/fhir/candidaterelease-170816-getrecord/Profile.GetRecordQueryResponse-HTMLView/gpconnect-carerecord-composition-1.html)
 - [Transfer of Care eDischarge](https://nhsconnect.github.io/NHS-FHIR-Doc-eDischarge/Generated/)
