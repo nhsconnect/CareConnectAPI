@@ -117,4 +117,4 @@ The code below shows how the same three queries can be done in java.
 
 <script src="https://gist.github.com/KevinMayfield/0b68a287b764a18eebcde9431aec7f7b.js"></script>
 
-Java examples for creating FHIR MedicationOrder and MedicationStatement resources based on the MedicationIssues and MedicationPatient tables can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/blob/master/ImplementationGuideExplore/src/main/java/uk/nhs/careconnect/examples/fhir/ExampleMedicationOrderDb.java).
+Java examples for creating FHIR MedicationOrder and MedicationStatement resources based on the MedicationIssues and MedicationPatient tables can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/ImplementationGuideExplore).

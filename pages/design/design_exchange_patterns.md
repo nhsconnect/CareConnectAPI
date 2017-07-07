@@ -238,6 +238,7 @@ To store resources in the Repository
 - [NHS FGM Service](https://nhsconnect.github.io/fgm-risk-indication-service/)
 - [Social Care Assessment, Discharge and Withdrawal](https://nhsconnect.github.io/FHIR-ADW-Messaging/Generated)
 - [Child Health](https://nhsconnect.github.io/Digital-Child-Health/Generated)
+- [Digital Diagnostics Services (Pathology)](https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/)
 
 ## 4. Documents ##
 
