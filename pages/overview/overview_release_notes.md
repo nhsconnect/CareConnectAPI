@@ -14,6 +14,8 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 Updated
   - Altered search parameters page
   - Corrected section for observations
+  - Updated Bristol POC with most recent content
+  - Corrected typos
 
 ## 0.7.0-alpha.0 ##
 
