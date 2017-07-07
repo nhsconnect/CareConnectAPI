@@ -9,6 +9,14 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 {% include important.html content="This site is under active development by NHS Digital on behalf of INTEROPen and is intended to provide all the technical resources you need to successfully develop the Care Connect APIs. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis." %}
 
+## 0.8.0-alpha.0 ##
+
+Updated
+  - Altered search parameters page
+  - Corrected section for observations
+  - Updated Bristol POC with most recent content
+  - Corrected typos
+
 ## 0.7.0-alpha.0 ##
 
 Updated
@@ -17,7 +25,7 @@ Updated
   - Consistency of styles
   - Menu structure to be easier to see and clearer
   - Styles to fix accessibility and viewability issues found in the the guide
-  
+
 
 ## 0.6.0-alpha.0 ##
 

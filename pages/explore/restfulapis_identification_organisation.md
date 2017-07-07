@@ -40,24 +40,25 @@ Fetches a bundle of all `Organization` resources for the specified search criter
     <th style="width:30%;">Path</th>
 </tr>
 <tr>
-    <td><code class="highlighter-rouge">adddress-postcode</code></td>
-    <td><code class="highlighter-rouge">string</code></td>
-    <td>A postalCode specified in an address</td>
-    <td>MAY</td>
-    <td>Organization.address.postalCode</td>
-</tr>
-<tr>
     <td><code class="highlighter-rouge">identifier</code></td>
     <td><code class="highlighter-rouge">token</code></td>
     <td>Any identifier for the organization (e.g. SDS/ODS code)</td>
     <td>MAY</td>
     <td>Organization.identifier</td>
 </tr>
+<tr>
+    <td><code class="highlighter-rouge">name</code></td>
+    <td><code class="highlighter-rouge">string</code></td>
+    <td>A portion of the organization's name</td>
+    <td>MAY</td>
+    <td>Organization.name</td>
+</tr>
 </table>
 
-{% include custom/search.nopat.string.html para="2.1.1." resource="Organization" content="address-postcode"  example="DE22%203NE" text1="Post Code" text2="DE22 3NE" %}
+{% include custom/search.nopat.identifier.html para="2.1.1." resource="Organization" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-organization-code|RTG" text1="NHS Organisation" text2="RTG (Derby Teaching Hospitals NHS Trust)" %}
 
-{% include custom/search.nopat.identifier.html para="2.1.2." resource="Organization" content="identifier" subtext="SDS/ODS Code" example="https://fhir.nhs.uk/Id/ods-organization-code|RTG" text1="NHS Organisation" text2="RTG (Derby Teaching Hospitals NHS Trust)" %}
+{% include custom/search.nopat.string.html para="2.1.2." resource="Organization" content="name"  example="Derby%20Teaching%20Hospitals%20NHS%20Trust" text1="Name" text2="Derby Teaching Hospitals NHS Trust" %}
+
 
 {% include custom/search.response.html resource="Organization" %}
 

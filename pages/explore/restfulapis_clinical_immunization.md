@@ -47,7 +47,7 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 </tr>
 <tr>
     <td><code class="highlighter-rouge">patient</code></td>
-    <td><code class="highlighter-rouge">eference</code></td>
+    <td><code class="highlighter-rouge">reference</code></td>
     <td>The patient for the vaccination record</td>
     <td>SHALL</td>
     <td>Immunization.patient<br>(Patient)</td>
@@ -61,9 +61,12 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 </tr>
 </table>
 
+<!--
 Systems SHOULD support the following search combinations:
 
- * patient 
+ * patient
+-->
+
 
 <!--
 | `dose-sequence` | `number` | Dose number within series |  | 	Immunization.vaccinationProtocol.doseSequence |
