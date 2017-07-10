@@ -3,7 +3,7 @@ title: Open Source Guidance
 keywords: fhir, development, open source
 tags: [fhir,development]
 sidebar: overview_sidebar
-permalink: development_fhir_open_source_guidance.html
+permalink: profiles_fhir_open_source_guidance.html
 summary: "Details of open source FHIR libraries."
 ---
 

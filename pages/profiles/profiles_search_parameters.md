@@ -3,7 +3,7 @@ title: Search Parameters
 keywords: foundations
 tags: [fhir,rest]
 sidebar: foundations_sidebar
-permalink: search_parameters.html
+permalink: profiles_search_parameters.html
 summary: "Describes the process of creating the search parameters"
 ---
 

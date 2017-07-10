@@ -1,9 +1,9 @@
 ---
 title: API Codes
 keywords: development
-tags: [rest,fhir,development]
+tags: [rest,fhir,api]
 sidebar: overview_sidebar
-permalink: development_api_codes.html
+permalink: profiles_api_codes.html
 summary: "Details of the API Codes used in the responses."
 ---
 {% include custom/search.warnbanner.html %}

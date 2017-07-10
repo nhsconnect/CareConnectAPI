@@ -59,7 +59,7 @@ entries:
     output: web
     folderitems:
     - title: Overview
-      url: /explore.html
+      url: /profiles_overview.html
       output: web
     - title: Care Connect Versioning
       url: /explore_cc_versioning.html
@@ -133,16 +133,16 @@ entries:
         output: web
         subfolderitems:
         - title: API Codes
-          url: /development_api_codes.html
+          url: /profiles_api_codes.html
           output: web
         - title: Search Parameters
-          url: /search_parameters.html
+          url: /profiles_search_parameters.html
           output: web
         - title: Open Source
-          url: /development_fhir_open_source_guidance.html
+          url: /profiles_fhir_open_source_guidance.html
           output: web
         - title: Reference
-          url: /development_deliverables.html
+          url: /profiles_reference.html
           output: web
   - title: Design & Build
     output: web

@@ -1,10 +1,10 @@
 ---
-title: Explore Overview
+title: Profiles Overview
 keywords: getcarerecord, structured, rest, resource
-tags: [rest,fhir]
+tags: [rest,fhir,api]
 sidebar: foundations_sidebar
-permalink: explore.html
-summary: "Overview of the Explore section"
+permalink: profiles_overview.html
+summary: "Overview of the Profiles section"
 ---
 
 {% include custom/search.warnbanner.html %}
