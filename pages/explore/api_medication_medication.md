@@ -1,9 +1,9 @@
 ---
-title: Clinical | Medication
+title: Medication | Medication
 keywords: usecase, medication
 tags: [fhir, rest, clinical, medication,development]
 sidebar: foundations_sidebar
-permalink: restfulapis_clinical_medication.html
+permalink: api_medication_medication.html
 summary: This resource is primarily used for the identification and definition of a medication. It covers the ingredients and the packaging for a medication.
 ---
 {% include custom/search.warnbanner.html %}

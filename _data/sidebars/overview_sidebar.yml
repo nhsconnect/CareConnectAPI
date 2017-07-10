@@ -69,65 +69,65 @@ entries:
         output: web
         subfolderitems:
           - title: Allergy Intolerance
-            url: /restfulapis_clinical_allergyintolerance.html
+            url: /api_clinical_allergyintolerance.html
             output: web
           - title: Condition
-            url: /restfulapis_clinical_condition.html
+            url: /api_clinical_condition.html
             output: web
           - title: Procedure
-            url: /restfulapis_clinical_procedure.html
+            url: /api_clinical_procedure.html
             output: web
       - title: Diagnostics
         output: web
         subfolderitems:
           - title: Observation
-            url: /restfulapis_clinical_observation.html
+            url: /api_diagnostics_observation.html
             output: web
       - title: Medication
         output: web
         subfolderitems:
           - title: Medication
-            url: /restfulapis_clinical_medication.html
+            url: /api_medication_medication.html
             output: web
           - title: Medication Order
-            url: /restfulapis_clinical_medicationorder.html
+            url: /api_medication_medicationorder.html
             output: web
           - title: Medication Statement
-            url: /restfulapis_clinical_medicationstatement.html
+            url: /api_medication_medicationstatement.html
             output: web
           - title: Immunization
-            url: /restfulapis_clinical_immunization.html
+            url: /api_medication_immunization.html
             output: web
 
       - title: Individuals &amp; Entities
         output: web
         subfolderitems:
           - title: Location
-            url: /restfulapis_identification_location.html
+            url: /api_entity_location.html
             output: web
           - title: Organisation
-            url: /restfulapis_identification_organisation.html
+            url: /api_entity_organisation.html
             output: web
           - title: Patient
-            url: /restfulapis_identification_patient.html
+            url: /api_entity_patient.html
             output: web
           - title: Practitoner
-            url: /restfulapis_identification_practitoner.html
+            url: /api_entity_practitoner.html
             output: web
       - title: Workflow
         output: web
         subfolderitems:
           - title: Encounter
-            url: /restfulapis_workflow_encounter.html
+            url: /api_workflow_encounter.html
             output: web
       - title: Foundation
         output: web
         subfolderitems:
         - title: Conformance
-          url: /restfulapis_conformance_conformance.html
+          url: /api_foundation_conformance.html
           output: web
         - title: ValueSet
-          url: /restfulapis_conformance_valueset.html
+          url: /api_foundation_valueset.html
           output: web
       - title: API Guidance | FHIR&reg;
         output: web

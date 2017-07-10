@@ -3,7 +3,7 @@ title: Identification | Location
 keywords: usecase, location, order
 tags: [rest, fhir, identification,development]
 sidebar: accessrecord_rest_sidebar
-permalink: restfulapis_identification_location.html
+permalink: api_entity_location.html
 summary: Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained or accommodated.
 ---
 {% include custom/search.warnbanner.html %}

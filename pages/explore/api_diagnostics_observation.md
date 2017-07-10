@@ -3,7 +3,7 @@ title: Diagnostics | Observation
 keywords: usecase, observation
 tags: [observation,fhir,rest,diagnostics,development]
 sidebar: foundations_sidebar
-permalink: restfulapis_clinical_observation.html
+permalink: api_diagnostics_observation.html
 summary: Measurements and simple assertions made about a patient, device or other subject.
 ---
 

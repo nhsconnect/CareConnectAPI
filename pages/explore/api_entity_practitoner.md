@@ -3,7 +3,7 @@ title: Identification | Practitioner
 keywords: usecase, Practitioner
 tags: [rest, fhir, identification,development]
 sidebar: accessrecord_rest_sidebar
-permalink: restfulapis_identification_practitoner.html
+permalink: api_entity_practitoner.html
 summary: A person who is directly or indirectly involved in the provisioning of healthcare.
 ---
 

@@ -33,28 +33,28 @@ This section looks at the Care Connect profiles covered within this implementati
 
 | General             |  Medication &amp; Immunisation |
 |---------------------|--------------------------------|
-| [AllergyIntolerance](restfulapis_clinical_allergyintolerance.html)  |[ Medication](restfulapis_clinical_medication.html)                     |
-| [Condition](restfulapis_clinical_condition.html) (Problem) | [MedicationOrder ](restfulapis_clinical_medicationorder.html)               |
-| [Procedure](restfulapis_clinical_procedure.html)           | [MedicationStatement ](restfulapis_clinical_medicationstatement.html)           |
-| [Observation](restfulapis_clinical_observation.html) | [Immunization](restfulapis_clinical_immunization.html)                   |
+| [AllergyIntolerance](api_clinical_allergyintolerance.html)  |[ Medication](api_medication_medication.html)                     |
+| [Condition](api_clinical_condition.html) (Problem) | [MedicationOrder ](api_medication_medicationorder.html)               |
+| [Procedure](api_clinical_procedure.html)           | [MedicationStatement ](api_medication_medicationstatement.html)           |
+| [Observation](api_diagnostics_observation.html) | [Immunization](api_medication_immunization.html)                   |
 
-<!--- |   |  [Flag ](restfulapis_clinical_medicationflag.html)(Medication)  | --->
+<!--- |   |  [Flag ](api_medication_medicationflag.html)(Medication)  | --->
 
 ### 2.2. Identification ###
 
 | Individuals  | Groups &amp; Entities       |
 |--------------|--------------|
-| [Patient ](restfulapis_identification_patient.html)     | [Organization](restfulapis_identification_organisation.html) |   
-| [Practitioner](restfulapis_identification_practitioner.html) | [Location](restfulapis_identification_location.html)     |  
+| [Patient ](api_entity_patient.html)     | [Organization](api_entity_organisation.html) |   
+| [Practitioner](api_entity_practitioner.html) | [Location](api_entity_location.html)     |  
 
 ### 2.3. Workflow ###
 
 | Patient Management |
 |--------------------|
-| [Encounter](restfulapis_workflow_encounter.html)          |
+| [Encounter](api_workflow_encounter.html)          |
 
 ### 3.4 Conformance ###
 
 | Terminology | Operations Control |
 |-------------|--------------------|
-| [ValueSet](restfulapis_conformance_valueset.html)    | [Conformance](restfulapis_conformance_conformance.html)          |
+| [ValueSet](api_foundation_valueset.html)    | [Conformance](api_foundation_conformance.html)          |

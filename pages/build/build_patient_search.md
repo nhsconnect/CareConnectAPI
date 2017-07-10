@@ -9,7 +9,7 @@ summary: "How to use FHIR Patient resources to perform Patient Searches"
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/ihe.reference.html apicontent="[Patient](restfulapis_identification_patient.html) <br>  [Practitioner](restfulapis_identification_practitioner.html) <br> [Organization](restfulapis_identification_organisation.html) "  ihecontent="[IHE Patient Demographic Query Mobile (IHE PDQM)](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)"  patterncontent="[Shared Repository](https://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/)" %}
+{% include custom/ihe.reference.html apicontent="[Patient](api_entity_patient.html) <br>  [Practitioner](api_entity_practitioner.html) <br> [Organization](api_entity_organisation.html) "  ihecontent="[IHE Patient Demographic Query Mobile (IHE PDQM)](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)"  patterncontent="[Shared Repository](https://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/)" %}
 
 ## 1. Overview ##
 
@@ -47,7 +47,7 @@ etc.
 max-width="200px" file="design/PDQ Actor Diagram.jpg" alt="Patient Search FHIR Actor Diagram"
 caption="Patient Search FHIR Actor Diagram" %}
 
-The patient search can use any of the search parameters defined in the [Patient](restfulapis_identification_patient.html) API. For example if the patient informs the nurse of their date of birth, first name (19th Mar 1998 Bernie Kanfeld) and surname the query would be.
+The patient search can use any of the search parameters defined in the [Patient](api_entity_patient.html) API. For example if the patient informs the nurse of their date of birth, first name (19th Mar 1998 Bernie Kanfeld) and surname the query would be.
 
 ```
 GET [baseUrl]/Patient?birthdate=1998-03-19&name=bernie%20kanfeld

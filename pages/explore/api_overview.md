@@ -27,7 +27,7 @@ summary: "Overview of the Explore section"
 
 SHALL declare a Conformance identifying the list of profiles, operations, search parameter supported.
 
-In order to be a compliant FHIR server, client systems need to expose a valid FHIR [Conformance](https://www.hl7.org/fhir/DSTU2/conformance.html) profile. See also [Care Connect API FHIR conformance profile](restfulapis_conformance_conformance.html).
+In order to be a compliant FHIR server, client systems need to expose a valid FHIR [Conformance](https://www.hl7.org/fhir/DSTU2/conformance.html) profile. See also [Care Connect API FHIR conformance profile](api_foundation_conformance.html).
 
 ### 1.3 NHS Number ###
 
@@ -83,24 +83,24 @@ This section looks at the Care Connect profile API's covered within this impleme
 <th>Medications</th>
 </tr>
 <tr>
-<td><a href="restfulapis_clinical_allergyintolerance.html">AllergyIntolerance</a></td>
-<td><a href="restfulapis_clinical_observation.html">Observation</a></td>
-<td><a href="restfulapis_clinical_medication.html">Medication</a></td>
+<td><a href="api_clinical_allergyintolerance.html">AllergyIntolerance</a></td>
+<td><a href="api_diagnostics_observation.html">Observation</a></td>
+<td><a href="api_medication_medication.html">Medication</a></td>
 </tr>
 <tr>
-<td><a href="restfulapis_clinical_condition.html">Condition</a> (Problem)</td>
+<td><a href="api_clinical_condition.html">Condition</a> (Problem)</td>
 <td>&nbsp;</td>
-<td><a href="restfulapis_clinical_medicationorder.html">MedicationOrder</a></td>
+<td><a href="api_medication_medicationorder.html">MedicationOrder</a></td>
 </tr>
 <tr>
-<td><a href="restfulapis_clinical_procedure.html">Procedure</a></td>
+<td><a href="api_clinical_procedure.html">Procedure</a></td>
 <td>&nbsp;</td>
-<td><a href="restfulapis_clinical_medicationstatement.html">MedicationStatement</a></td>
+<td><a href="api_medication_medicationstatement.html">MedicationStatement</a></td>
 </tr>
 <tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><a href="restfulapis_clinical_immunization.html">Immunization</a></td>
+<td><a href="api_medication_immunization.html">Immunization</a></td>
 </tr>
 </table>
 
@@ -116,13 +116,13 @@ This section looks at the Care Connect profile API's covered within this impleme
 <th>Workflow</th>
 </tr>
 <tr>
-<td><a href="restfulapis_identification_patient.html">Patient</a></td>
-<td><a href="restfulapis_identification_organisation.html">Organization</a></td>
-<td><a href="restfulapis_workflow_encounter.html">Encounter</a></td><td></td>
+<td><a href="api_entity_patient.html">Patient</a></td>
+<td><a href="api_entity_organisation.html">Organization</a></td>
+<td><a href="api_workflow_encounter.html">Encounter</a></td><td></td>
 </tr>
 <tr>
-<td><a href="restfulapis_identification_practitioner.html">Practitioner</a> (Problem)</td>
-<td><a href="restfulapis_identification_location.html">Location</a></td>
+<td><a href="api_entity_practitioner.html">Practitioner</a> (Problem)</td>
+<td><a href="api_entity_location.html">Location</a></td>
 <td>&nbsp;</td>
 </tr>
 </table>
@@ -140,8 +140,8 @@ This section looks at the Care Connect profile API's covered within this impleme
 <th>&nbsp;</th>
 </tr>
 <tr>
-<td><a href="restfulapis_conformance_conformance.html">Conformance</a></td>
-<td><a href="restfulapis_conformance_valueset.html">ValueSet</a></td>
+<td><a href="api_foundation_conformance.html">Conformance</a></td>
+<td><a href="api_foundation_valueset.html">ValueSet</a></td>
 <td>&nbsp;</td>
 </tr>
 </table>

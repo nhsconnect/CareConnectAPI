@@ -3,7 +3,7 @@ title: Diagnostic | DiagnosticReport
 keywords: getcarerecord, structured, rest, DiagnosticReport
 tags: [rest,fhir,diagnostics,development]
 sidebar: accessrecord_rest_sidebar
-permalink: restfulapis_diagnostics_diagnosticreport.html
+permalink: api_diagnostics_diagnosticreport.html
 summary: The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
 ---
 {% include custom/search.warnbanner.html %}
