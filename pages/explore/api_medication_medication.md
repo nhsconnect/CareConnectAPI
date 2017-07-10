@@ -1,7 +1,7 @@
 ---
 title: Medication | Medication
 keywords: usecase, medication
-tags: [fhir, rest, clinical, medication,development]
+tags: [fhir, rest, medication, api]
 sidebar: foundations_sidebar
 permalink: api_medication_medication.html
 summary: This resource is primarily used for the identification and definition of a medication. It covers the ingredients and the packaging for a medication.
