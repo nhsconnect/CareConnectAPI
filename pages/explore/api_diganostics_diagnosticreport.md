@@ -8,7 +8,7 @@ summary: The findings and interpretation of diagnostic tests performed on patien
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.referencemin.html resource="" page="" fhirlink="[DiagnosticReport](https://www.hl7.org/fhir/DSTU2/diagnosticreport.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.nonecc.html resource="" page="" fhirlink="[DiagnosticReport](https://www.hl7.org/fhir/DSTU2/diagnosticreport.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 [SKETCH profile. Not official]
 
