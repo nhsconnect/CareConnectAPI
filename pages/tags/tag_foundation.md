@@ -1,8 +1,8 @@
 ---
-title: "Diagnostics"
-tagName: diagnostics
+title: "Foundation"
+tagName: foundation
 search: exclude
-permalink: tag_diagnostics.html
+permalink: tag_foundation.html
 sidebar: overview_sidebar
 folder: tags
 ---

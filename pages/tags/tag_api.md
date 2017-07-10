@@ -1,8 +1,8 @@
 ---
-title: "Diagnostics"
-tagName: diagnostics
+title: "API"
+tagName: api
 search: exclude
-permalink: tag_diagnostics.html
+permalink: tag_api.html
 sidebar: overview_sidebar
 folder: tags
 ---

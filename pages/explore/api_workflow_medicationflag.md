@@ -1,7 +1,7 @@
 ---
-title: Clinical | Medication Flag
+title: Workflow | Medication Flag
 keywords: usecase, medication, flag
-tags: [fhir, rest, clinical, medication, workflow,development]
+tags: [fhir, rest, medication, workflow, api]
 sidebar: foundations_sidebar
 permalink: api_medication_medicationflag.html
 summary: Prospective warnings of potential medication issues when providing care to the patient.

@@ -1,14 +1,14 @@
 ---
-title: Diagnostic | DiagnosticReport
+title: Diagnostics | DiagnosticReport
 keywords: getcarerecord, structured, rest, DiagnosticReport
-tags: [rest,fhir,diagnostics,development]
+tags: [rest,fhir,diagnostics,api,noccprofile]
 sidebar: accessrecord_rest_sidebar
 permalink: api_diagnostics_diagnosticreport.html
 summary: The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.nonecc.html resource="" page="" fhirlink="[DiagnosticReport](https://www.hl7.org/fhir/DSTU2/diagnosticreport.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.nonecc.html resource="DiagnosticReport" resourceurl="https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/Profile.DDS-Report/dds-report-1.html" page="" fhirlink="[DiagnosticReport](https://www.hl7.org/fhir/DSTU2/diagnosticreport.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 [SKETCH profile. Not official]
 

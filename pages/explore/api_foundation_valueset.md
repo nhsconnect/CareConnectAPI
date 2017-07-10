@@ -1,7 +1,7 @@
 ---
 title: Foundation | ValueSet
 keywords: foundations, fhir
-tags: [foundations,use_case,fhir,rest,development]
+tags: [foundation,use_case,fhir,rest,api,noccprofile]
 sidebar: accessrecord_rest_sidebar
 permalink: api_foundation_valueset.html
 summary: A value set specifies a set of codes drawn from one or more code systems.

@@ -1,7 +1,7 @@
 ---
 title: Clinical | Procedure
 keywords: usecase, procedure
-tags: [fhir, rest, clinical,development]
+tags: [fhir, rest, clinical,api]
 sidebar: foundations_sidebar
 permalink: api_clinical_procedure.html
 summary: An action that is or was performed on a patient. This can be a physical intervention like an operation, or less invasive like counseling or hypnotherapy.

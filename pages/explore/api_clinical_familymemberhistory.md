@@ -1,7 +1,7 @@
 ---
 title: Clinical | Family Member History
 keywords: usecase, familymemberhistory
-tags: [familymemberhistory,fhir,rest,clinical,development]
+tags: [familymemberhistory,fhir,rest,clinical,api]
 sidebar: foundations_sidebar
 permalink: api_clinical_familymemberhistory.html
 summary: Significant health events and conditions for a person related to the patient relevant in the context of care for the patient.

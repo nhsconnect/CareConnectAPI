@@ -1,7 +1,7 @@
 ---
 title: Foundation | Conformance
 keywords: foundations, fhir
-tags: [foundations,rest,fhir,use_case,development]
+tags: [rest,fhir,use_case,api,foundation,noccprofile]
 sidebar: accessrecord_rest_sidebar
 permalink: api_foundation_conformance.html
 summary: A conformance statement is a set of capabilities of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.

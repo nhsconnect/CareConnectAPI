@@ -1,7 +1,7 @@
 ---
 title: Medication | Medication Order
 keywords: usecase, medication, order
-tags: [fhir, rest, clinical, medication,development]
+tags: [fhir, rest,medication,api]
 sidebar: foundations_sidebar
 permalink: api_medication_medicationorder.html
 summary: An order for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationOrder" rather than "MedicationPrescription" to generalize the use across inpatient and outpatient settings as well as for care plans, etc.

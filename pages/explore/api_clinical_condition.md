@@ -1,7 +1,7 @@
 ---
 title: Clinical | Condition
 keywords: getcarerecord, structured, rest, condition
-tags: [rest,fhir,condition,clinical,development]
+tags: [rest,fhir,condition,clinical,api]
 sidebar: accessrecord_rest_sidebar
 permalink: api_clinical_condition.html
 summary: Use to record detailed information about conditions, problems or diagnoses recognized by a clinician. There are many uses e.g. recording a diagnosis during an encounter; populating a problem list or a summary statement, such as a discharge summary.

@@ -1,7 +1,7 @@
 ---
 title: Workflow | Flag
 keywords: usecase, flag
-tags: [rest, fhir, workflow,development]
+tags: [rest, fhir, workflow,api]
 sidebar: foundations_sidebar
 permalink: restfulapis_workflow_flag.html
 summary: Workflow Flag

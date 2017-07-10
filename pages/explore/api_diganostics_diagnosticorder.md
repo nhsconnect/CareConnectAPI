@@ -1,7 +1,7 @@
 ---
-title: Diagnostic | DiagnosticOrder
+title: Diagnostics | DiagnosticOrder
 keywords: getcarerecord, structured, rest, DiagnosticOrder
-tags: [rest,fhir,diagnostics,development]
+tags: [rest,fhir,diagnostics,api, diagnosticorder, noccprofile]
 sidebar: accessrecord_rest_sidebar
 permalink: api_diagnostics_diagnosticorder.html
 summary: A record of a request for a diagnostic investigation service to be performed.
