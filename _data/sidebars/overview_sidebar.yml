@@ -28,7 +28,7 @@ entries:
       url: /overview_glossary.html
       output: web
 
-  - title: Engage
+  - title: Case Studies
     output: web
     folderitems:
 
@@ -55,7 +55,7 @@ entries:
           url: /engage_michaelsstory.html
           output: web
 
-  - title: Explore
+  - title: Profiles
     output: web
     folderitems:
     - title: Overview
