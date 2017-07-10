@@ -40,50 +40,18 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
     <th style="width:5%;">Conformance</th>
     <th style="width:25%;">Path</th>
 </tr>
-<tr>
-    <td><code class="highlighter-rouge">category</code></td>
-    <td><code class="highlighter-rouge">token</code></td>
-    <td>Which diagnostic discipline/department created the report</td>
-    <td>SHALL</td>
-    <td>DiagnosticOrder.category</td>
-</tr>
-<tr>
-    <td><code class="highlighter-rouge">code</code></td>
-    <td><code class="highlighter-rouge">token</code></td>
-    <td>The code for the report as a whole, as opposed to codes for the atomic <br> results, which are the names on the observation resource referred to from <br> the result</td>
-    <td>SHALL</td>
-    <td>DiagnosticOrder.code</td>
-</tr>
-<tr>
-    <td><code class="highlighter-rouge">date</code></td>
-    <td><code class="highlighter-rouge">date</code></td>
-    <td>The clinically relevant time of the report</td>
-    <td>SHALL</td>
-    <td>DiagnosticOrder.effective[x]</td>
-</tr>
+
 <tr>
     <td><code class="highlighter-rouge">patient</code></td>
     <td><code class="highlighter-rouge">reference</code></td>
-    <td>The subject of the report</td>
+    <td>Who and/or what test is about</td>
     <td>SHALL</td>
     <td>DiagnosticOrder.subject <br> (Patient)</td>
 </tr>
 </table>
 
-Systems SHOULD support the following search combinations:
 
-* patient + category
-* patient + category + date
-* patient + category + code
-* patient + category + code + date
-
-{% include custom/search.status.plus.html para="2.1.1." content="DiagnosticOrder" options="see profile/valueset for codes" selected="final" name="category" %}
-
-{% include custom/search.code.html para="2.1.2." content="DiagnosticOrder" %}
-
-{% include custom/search.date.html para="2.1.3." content="DiagnosticOrder" %}
-
-{% include custom/search.patient.html para="2.1.4." content="DiagnosticOrder" %}
+{% include custom/search.patient.html para="2.1.1." content="DiagnosticOrder" %}
 
 
 {% include custom/search.response.html resource="DiagnosticOrder" %}
