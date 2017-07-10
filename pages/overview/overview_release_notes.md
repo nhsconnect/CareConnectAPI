@@ -13,6 +13,9 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 Updated
   - Change of page titles under explore section and page names. Now reflect purpose rather than design stage.
+  - Removed lower level headings from the table of contents on the profiles page
+  - Explore section renamed Profiles
+  - Engage section renamed Case Studies
 
 ## 0.8.0-alpha.0 ##
 
