@@ -138,6 +138,7 @@ This type of interface may also be called as **ResourceAPI** and is useful for r
   - [GP Connect Access Record REST](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
 - [Vistors and Migrants](https://nhsconnect.github.io/visitor-and-migrants/index.html)
 - [NHS e-Referral Service](https://nhsconnect.github.io/NHS-FHIR-eRS-Integration/Generated/)
+- [NHS National Record Locator Service](https://data.developer.nhs.uk/fhir/nrls-v1-draft-a/Chapter.1.About/index.html)
 
 ## 3. Messaging ##
 
