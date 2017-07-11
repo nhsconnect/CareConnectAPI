@@ -18,7 +18,7 @@ summary: "Overview of the Profiles section"
 - SHALL support HL7 FHIR DSTU2 version 1.0.2.
 - SHALL support the CareConnect Patient resource profile.
 - SHALL support at least one additional resource profile from the list of CareConnect Profiles
-- SHALL Implement REST behavior according to the FHIR specification
+- SHALL Implement REST behavior according to the [FHIR specification](http://www.hl7.org/fhir/dstu2/http.html)
 - Resources SHALL identify the CareConnect profile supported as part of the [FHIR Base Resource](https://hl7.org/fhir/DSTU2/resource-definitions.html#Resource.meta)
 - SHALL support XML **or** JSON formats for all CareConnectAPI interactions and SHOULD support both formats.
 
