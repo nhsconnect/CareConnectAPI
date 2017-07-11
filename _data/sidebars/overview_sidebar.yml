@@ -55,7 +55,7 @@ entries:
           url: /engage_michaelsstory.html
           output: web
 
-  - title: Profiles
+  - title: Resources
     output: web
     folderitems:
     - title: Overview
