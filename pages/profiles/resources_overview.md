@@ -11,7 +11,7 @@ summary: "Overview of the Resources section"
 
 {% include custom/api_overview.svg %}
 
-## 1. Prerequisites ##
+## 1. Pre-Requisites for FHIR Servers ##
 
 ### 1.1 CareConnectAPI Requirements ###
 
