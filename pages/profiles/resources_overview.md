@@ -1,10 +1,10 @@
 ---
-title: Profiles Overview
+title: Resources Overview
 keywords: getcarerecord, structured, rest, resource
 tags: [rest,fhir,api]
 sidebar: foundations_sidebar
 permalink: profiles_overview.html
-summary: "Overview of the Profiles section"
+summary: "Overview of the Resources section"
 ---
 
 {% include custom/search.warnbanner.html %}
