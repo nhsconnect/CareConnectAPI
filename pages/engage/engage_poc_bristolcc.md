@@ -76,8 +76,8 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 </div>
 </div>
 <br><br>
-## Profiles ##
-
+## Resources ##
+The resources used can be found by clicking on the links below:
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
 <th style="width:50%;">Medication</th>
