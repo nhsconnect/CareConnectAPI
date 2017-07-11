@@ -161,10 +161,12 @@ This can be found on the API page depending on which resource you are searching:
 </tr>
 </table>
 
+<!--  KGM Removed. This is showing an old response which has been updated. 
 ## Search Results ##
 
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRBundle.png" alt="Diagram showing the bundle that is returned following a search" title="Diagram showing the bundle that is returned following a search"></p>
 <br><br>
+-->
 ## API Sequence Diagrams ##
 
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCCSequenceDiagram.png" alt="Sequence diagram showing the flow of information between actors" title="Sequence diagram showing the flow of information between actors" style="width:75%"></p>
