@@ -23,7 +23,7 @@ Please see or contribute to INTEROPen to support the wider community efforts of 
 
 # Providing an API #
 
-The following diagram explains the elements of APIs allowing a the development of APIs:
+The following diagram explains the elements of APIs allowing the development of APIs:
 
 {% include custom/provide_api.svg %}
 
