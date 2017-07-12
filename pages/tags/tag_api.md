@@ -1,8 +1,8 @@
 ---
-title: "Medication"
-tagName: medication
+title: "API"
+tagName: api
 search: exclude
-permalink: tag_medication.html
+permalink: tag_api.html
 sidebar: overview_sidebar
 folder: tags
 ---

@@ -1,8 +1,8 @@
 ---
-title: "Medication"
-tagName: medication
+title: "Diagnostics"
+tagName: diagnostics
 search: exclude
-permalink: tag_medication.html
+permalink: tag_diagnostics.html
 sidebar: overview_sidebar
 folder: tags
 ---

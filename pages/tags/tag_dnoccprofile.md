@@ -1,8 +1,8 @@
 ---
-title: "Medication"
-tagName: medication
+title: "No CareConnect Profile"
+tagName: noccprofile
 search: exclude
-permalink: tag_medication.html
+permalink: tag_noccprofile.html
 sidebar: overview_sidebar
 folder: tags
 ---

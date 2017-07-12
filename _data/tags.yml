@@ -10,3 +10,12 @@ allowed-tags:
   - rest
   - userstories
   - support
+  - documents
+  - diagnostics
+  - clinical
+  - medication
+  - individuals
+  - entities
+  - foundation
+  - api
+  - noccprofile

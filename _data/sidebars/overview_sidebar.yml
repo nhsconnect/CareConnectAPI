@@ -1,7 +1,7 @@
 entries:
 - title: Care Connect
   product: Care Connect
-  version: 0.7.0-alpha.0
+  version: 1.0.0-alpha.0
   levels: one
   folders:
 
@@ -28,7 +28,7 @@ entries:
       url: /overview_glossary.html
       output: web
 
-  - title: Engage
+  - title: Case Studies
     output: web
     folderitems:
 
@@ -55,11 +55,11 @@ entries:
           url: /engage_michaelsstory.html
           output: web
 
-  - title: Explore
+  - title: Resources
     output: web
     folderitems:
     - title: Overview
-      url: /explore.html
+      url: /profiles_overview.html
       output: web
     - title: Care Connect Versioning
       url: /explore_cc_versioning.html
@@ -69,80 +69,80 @@ entries:
         output: web
         subfolderitems:
           - title: Allergy Intolerance
-            url: /restfulapis_clinical_allergyintolerance.html
+            url: /api_clinical_allergyintolerance.html
             output: web
           - title: Condition
-            url: /restfulapis_clinical_condition.html
+            url: /api_clinical_condition.html
             output: web
           - title: Procedure
-            url: /restfulapis_clinical_procedure.html
+            url: /api_clinical_procedure.html
             output: web
       - title: Diagnostics
         output: web
         subfolderitems:
           - title: Observation
-            url: /restfulapis_clinical_observation.html
+            url: /api_diagnostics_observation.html
             output: web
       - title: Medication
         output: web
         subfolderitems:
           - title: Medication
-            url: /restfulapis_clinical_medication.html
+            url: /api_medication_medication.html
             output: web
           - title: Medication Order
-            url: /restfulapis_clinical_medicationorder.html
+            url: /api_medication_medicationorder.html
             output: web
           - title: Medication Statement
-            url: /restfulapis_clinical_medicationstatement.html
+            url: /api_medication_medicationstatement.html
             output: web
           - title: Immunization
-            url: /restfulapis_clinical_immunization.html
+            url: /api_medication_immunization.html
             output: web
 
       - title: Individuals &amp; Entities
         output: web
         subfolderitems:
           - title: Location
-            url: /restfulapis_identification_location.html
+            url: /api_entity_location.html
             output: web
           - title: Organisation
-            url: /restfulapis_identification_organisation.html
+            url: /api_entity_organisation.html
             output: web
           - title: Patient
-            url: /restfulapis_identification_patient.html
+            url: /api_entity_patient.html
             output: web
           - title: Practitoner
-            url: /restfulapis_identification_practitoner.html
+            url: /api_entity_practitoner.html
             output: web
       - title: Workflow
         output: web
         subfolderitems:
           - title: Encounter
-            url: /restfulapis_workflow_encounter.html
+            url: /api_workflow_encounter.html
             output: web
       - title: Foundation
         output: web
         subfolderitems:
         - title: Conformance
-          url: /restfulapis_conformance_conformance.html
+          url: /api_foundation_conformance.html
           output: web
         - title: ValueSet
-          url: /restfulapis_conformance_valueset.html
+          url: /api_foundation_valueset.html
           output: web
       - title: API Guidance | FHIR&reg;
         output: web
         subfolderitems:
         - title: API Codes
-          url: /development_api_codes.html
+          url: /profiles_api_codes.html
           output: web
         - title: Search Parameters
-          url: /search_parameters.html
+          url: /profiles_search_parameters.html
           output: web
         - title: Open Source
-          url: /development_fhir_open_source_guidance.html
+          url: /profiles_fhir_open_source_guidance.html
           output: web
         - title: Reference
-          url: /development_deliverables.html
+          url: /profiles_reference.html
           output: web
   - title: Design & Build
     output: web
@@ -153,13 +153,15 @@ entries:
     - title: Patterns / Topology
       url: /design_patterns.html
       output: web
+    - title: Exchange Patterns
+      url: /design_exchange_patterns.html
+      output: web
     - title: Access
       url: /design_access.html
       output: web
     - title: Security
       url: /design_security.html
       output: web
-
       subfolders:
       - title: Build
         output: web

@@ -76,7 +76,22 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 </div>
 </div>
 <br><br>
-## Profiles ##
+## Resources ##
+The resources used can be found by clicking on the links below:
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+<th style="width:50%;">Medication</th>
+<th style="width:50%;">Individuals</th>
+</tr>
+<tr>
+<td><a href="api_medication_medicationorder.html">MedicationOrder</a></td>
+<td><a href="api_entity_patient.html">Patient</a></td>
+</tr>
+<tr>
+<td><a href="api_medication_medicationstatement.html">MedicationStatement</a></td>
+<td><a href="api_entity_practitioner.html">Practitioner</a> (Problem)</td>
+</tr>
+</table>
 
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/ERD.png" alt="Entity Relationship Diagram showing the applied profiles." title="Entity Relationship Diagram showing the applied profiles." style="width:75%"></p>
 <br><br>
@@ -129,22 +144,29 @@ As a Pharmacist (Hospital Services) I want to know if results have not been retu
 <br><br><br>
 ## Search Query Parameters ##
 
-<table style="width:100%;max-width:100%">
-<thead><tr><th>Name</th><th>Type</th><th>Description</th><th>Conformance</th><th>Path</th></tr></thead>
-<tr><td>effective-date</td><td>date</td><td>Date when patient was taking (or not taking) the medication</td><td>SHOULD</td><td>MedicationStatement.effective[x]</td></tr>
-<tr><td>patient</td><td>reference</td><td>The identity of a patient to list statements for</td><td>SHALL</td><td>MedicationStatement.patient (Patient)</td></tr>
-<tr><td>status</td><td>token</td><td>Return statements that match the given status</td><td>SHOULD</td><td>MedicationStatement.status</td></tr>
-<tr><td>code</td><td>token</td><td>Return administrations of this medication code</td><td>MAY</td><td>MedicationStatement.medicationCodeableConcept</td></tr>
-<tr><td>identifier</td><td>token</td><td>Return statements with this external identifier</td><td>MAY</td><td>MedicationStatement.identifier</td></tr>
-<tr><td>medication</td><td>reference</td><td>Return administrations of this medication reference</td><td>MAY</td><td>MedicationStatement.medicationReference (Medication)</td></tr>
-<tr><td>source</td><td>reference</td><td>Who the information in the statement came from</td><td>MAY</td><td>MedicationStatement.informationSource (Patient, Practitioner, RelatedPerson))</td></tr>
-<tr><td>status</td><td>token</td><td>Return statements that match the given status</td><td>MAY</td><td>MedicationStatement.status</td></tr>
+This can be found on the API page depending on which resource you are searching:
+
+<table style="min-width:100%;width:100%">
+<tr id="clinical">
+<th style="width:50%;">Medication</th>
+<th style="width:50%;">Individuals</th>
+</tr>
+<tr>
+<td><a href="api_medication_medicationorder.html">MedicationOrder</a></td>
+<td><a href="api_entity_patient.html">Patient</a></td>
+</tr>
+<tr>
+<td><a href="api_medication_medicationstatement.html">MedicationStatement</a></td>
+<td><a href="api_entity_practitioner.html">Practitioner</a> (Problem)</td>
+</tr>
 </table>
-<br><br>
+
+<!--  KGM Removed. This is showing an old response which has been updated. 
 ## Search Results ##
 
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRBundle.png" alt="Diagram showing the bundle that is returned following a search" title="Diagram showing the bundle that is returned following a search"></p>
 <br><br>
+-->
 ## API Sequence Diagrams ##
 
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCCSequenceDiagram.png" alt="Sequence diagram showing the flow of information between actors" title="Sequence diagram showing the flow of information between actors" style="width:75%"></p>

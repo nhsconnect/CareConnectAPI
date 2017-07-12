@@ -9,7 +9,7 @@ summary: "How to use FHIR Patient resources to perform Patient Searches"
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/ihe.reference.html apicontent="[Patient](restfulapis_identification_patient.html) <br>  [Practitioner](restfulapis_identification_practitioner.html) <br> [Organization](restfulapis_identification_organisation.html) "  ihecontent="[IHE Patient Demographic Query Mobile (IHE PDQM)](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)"  patterncontent="[Shared Repository](https://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/)" %}
+{% include custom/ihe.reference.html apicontent="[Patient](api_entity_patient.html) <br>  [Practitioner](api_entity_practitioner.html) <br> [Organization](api_entity_organisation.html) "  ihecontent="[IHE Patient Demographic Query Mobile (IHE PDQM)](http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)"  patterncontent="[Shared Repository](https://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/)" %}
 
 ## 1. Overview ##
 
@@ -47,7 +47,7 @@ etc.
 max-width="200px" file="design/PDQ Actor Diagram.jpg" alt="Patient Search FHIR Actor Diagram"
 caption="Patient Search FHIR Actor Diagram" %}
 
-The patient search can use any of the search parameters defined in the [Patient](restfulapis_identification_patient.html) API. For example if the patient informs the nurse of their date of birth, first name (19th Mar 1998 Bernie Kanfeld) and surname the query would be.
+The patient search can use any of the search parameters defined in the [Patient](api_entity_patient.html) API. For example if the patient informs the nurse of their date of birth, first name (19th Mar 1998 Bernie Kanfeld) and surname the query would be.
 
 ```
 GET [baseUrl]/Patient?birthdate=1998-03-19&name=bernie%20kanfeld
@@ -143,7 +143,7 @@ GET [baseUrl]/Patient?identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
 
 ### 2.2. Java Example ###
 
-The examples are built using [HAPI FHIR](http://hapifhir.io/) which is an open source implementation of the HL7 FHIR specification by the University Health Network, Canada. Source code can be found on [NHSConnect GitHub](https://github.com/nhsconnect/careconnect-java-examples/blob/master/ImplementationGuideExplore/src/main/java/uk/nhs/careconnect/examples/fhir/ExamplePatient.java)
+The examples are built using [HAPI FHIR](http://hapifhir.io/) which is an open source implementation of the HL7 FHIR specification by the University Health Network, Canada. Source code can be found on [NHSConnect GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/ImplementationGuideExplore)
 
 The first example uses the same search parameters we used earlier, we are searching for patients with a surname of Kanfeld, forename of Bernie and date of birth 19/Mar/1998. The first couple of lines setup a Dstu2 FHIR context and set the baseUrl to be `http://127.0.0.1:8181/Dstu2/`. The output from running this code is shown earlier in this guide.
 
@@ -241,4 +241,4 @@ max-width="200px" file="design/Gateway Process Flow PDQm.jpg" alt="Gateway Proce
 
 #### Java Example 4 - Patient Resource from CSV line ####
 
-Example code for building a FHIR Patient resource from a CSV file can be found on  [GitHub](https://github.com/nhsconnect/careconnect-java-examples/blob/master/ImplementationGuideExplore/src/main/java/uk/nhs/careconnect/examples/fhir/ExamplePatientCSV.java). 
+Example code for building a FHIR Patient resource from a CSV file can be found on  [GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/ImplementationGuideExplore).

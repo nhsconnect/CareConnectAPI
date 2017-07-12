@@ -9,7 +9,7 @@ summary: "Guidance on FHIR Medication resources and DM+D"
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/ihe.reference.html apicontent="[Medication](restfulapis_clinical_medication.html) <br> [MedicationOrder](restfulapis_clinical_medicationorder.html) <br>  [MedicationStatement](restfulapis_clinical_medicationstatement.html)" ihecontent="[IHE Community Medication Prescription and Dispense (CMPD)](http://www.ihe.net/uploadedFiles/Documents/Pharmacy/IHE_Pharmacy_Suppl_CMPD.pdf)<br>[IHE Patient Care Coordination (PCC) - A Data Access Framework using IHE Profiles](http://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_White_Paper_DAF_Rev1.0_2014-03-28.pdf)" patterncontent="[Portal](https://developer.nhs.uk/library/architecture/integration-patterns/portal/)" %}
+{% include custom/ihe.reference.html apicontent="[Medication](api_medication_medication.html) <br> [MedicationOrder](api_medication_medicationorder.html) <br>  [MedicationStatement](api_medication_medicationstatement.html)" ihecontent="[IHE Community Medication Prescription and Dispense (CMPD)](http://www.ihe.net/uploadedFiles/Documents/Pharmacy/IHE_Pharmacy_Suppl_CMPD.pdf)<br>[IHE Patient Care Coordination (PCC) - A Data Access Framework using IHE Profiles](http://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_White_Paper_DAF_Rev1.0_2014-03-28.pdf)" patterncontent="[Portal](https://developer.nhs.uk/library/architecture/integration-patterns/portal/)" %}
 
 ## 1. Overview ##
 
@@ -20,7 +20,7 @@ The Care Connect Medication profiles and relationships with other profiles are s
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/ERD.png" alt="Entity Relationship Diagram showing the applied profiles." title="Entity Relationship Diagram showing the applied profiles." style="width:75%"></p>
 <br><br>
 
-[MedicationStatement](restfulapis_clinical_medicationstatement.html) is a record of Medication that is being consumed by a patient. It is related to `MedicationAdministration` (record of the event where a Patient consumes or otherwise a medication) but is less detailed. [MedicationOrder](restfulapis_clinical_medicationorder.html) is a record of prescription issues, which provides detailed information and could be used with the [MedicationStatement](restfulapis_clinical_medicationstatement.html) which provides summary information.
+[MedicationStatement](api_medication_medicationstatement.html) is a record of Medication that is being consumed by a patient. It is related to `MedicationAdministration` (record of the event where a Patient consumes or otherwise a medication) but is less detailed. [MedicationOrder](api_medication_medicationorder.html) is a record of prescription issues, which provides detailed information and could be used with the [MedicationStatement](api_medication_medicationstatement.html) which provides summary information.
 
 The diagram below shows the technical architecture of the Bristol scenario overlaid with Enterprise Integration Patterns [EIP](http://www.enterpriseintegrationpatterns.com/). The Trust Integration Engine (TIE) is collecting the patients prescriptions from a number of sources.
 - The GP source is provided by GP Connect which selects a reply from the Patients GP Practice system supplier, the response conforms to a FHIR CareConnect-GPC profile.
@@ -117,4 +117,4 @@ The code below shows how the same three queries can be done in java.
 
 <script src="https://gist.github.com/KevinMayfield/0b68a287b764a18eebcde9431aec7f7b.js"></script>
 
-Java examples for creating FHIR MedicationOrder and MedicationStatement resources based on the MedicationIssues and MedicationPatient tables can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/blob/master/ImplementationGuideExplore/src/main/java/uk/nhs/careconnect/examples/fhir/ExampleMedicationOrderDb.java).
+Java examples for creating FHIR MedicationOrder and MedicationStatement resources based on the MedicationIssues and MedicationPatient tables can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/ImplementationGuideExplore).
