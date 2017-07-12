@@ -12,12 +12,17 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 ## 1.0.0-alpha.0 ##
 
 Updated
+  - Profile section to engage
   - Change of page titles under explore section and page names. Now reflect purpose rather than design stage.
   - Removed lower level headings from the table of contents on the profiles page
-  - Explore section renamed Resources
-  - Changed Profile references to Resources 
-  - Engage section renamed Case Studies
 
+## 0.9.0-alpha.0 ##
+
+Updated
+  - Explore section renamed Resources
+  - Profile references to Resources 
+  - Engage section renamed Case Studies
+  
 ## 0.8.0-alpha.0 ##
 
 Updated
