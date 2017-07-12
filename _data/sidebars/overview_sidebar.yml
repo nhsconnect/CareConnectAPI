@@ -61,9 +61,6 @@ entries:
     - title: Overview
       url: /profiles_overview.html
       output: web
-    - title: Care Connect Versioning
-      url: /explore_cc_versioning.html
-      output: web
       subfolders:
       - title: Clinical
         output: web
@@ -143,6 +140,9 @@ entries:
           output: web
         - title: Reference
           url: /profiles_reference.html
+          output: web
+        - title: Care Connect Versioning
+          url: /profiles_cc_versioning.html
           output: web
   - title: Design & Build
     output: web
