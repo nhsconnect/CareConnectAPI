@@ -1,5 +1,5 @@
 ---
-title: Identification | Organisation
+title: Entities | Organisation
 keywords: usecase, Organization
 tags: [rest, fhir, identification,api]
 sidebar: accessrecord_rest_sidebar

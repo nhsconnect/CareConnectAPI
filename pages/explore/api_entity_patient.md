@@ -1,5 +1,5 @@
 ---
-title: Invdividuals | Patient
+title: Individuals | Patient
 keywords: getcarerecord, structured, rest, patient
 tags: [rest, fhir, identification,api]
 sidebar: accessrecord_rest_sidebar
