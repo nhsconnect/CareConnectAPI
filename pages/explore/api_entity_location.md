@@ -1,5 +1,5 @@
 ---
-title: Identification | Location
+title: Entities | Location
 keywords: usecase, location, order
 tags: [rest, fhir, identification,api]
 sidebar: accessrecord_rest_sidebar
