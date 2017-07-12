@@ -34,7 +34,7 @@ The above steps outline a complete API journey from imagination and exploring to
 
 The current site focuses on a typical API Developer's Journey as highlighted by the green boxes below in the developer journey:
 
-<img src="images/roadmap/guide-focus.jpg" style="width:100%;max-width: 100%;">
+<img src="images/roadmap/guide-focus.png" style="width:100%;max-width: 100%;">
 
 NHS Digital is contributing to progressing the profile developmenet, the testing process and invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem.
 
@@ -44,11 +44,11 @@ Please see the explanation of the complete development roadmap.
 
 
 
-# Profile Roadmap #
+# Resource Roadmap #
 
 The [API journey](overview_api_journey.html) outlines the development roadmap for the RESTful APIs outlined within this site.
 
-<img src="images/roadmap/roadmap-online.jpg" style="width:100%;max-width: 100%;">
+<img src="images/roadmap/roadmap-online.png" style="width:100%;max-width: 100%;">
 
 The above roadmap illustrates the steps necessary to create, test and verify the profiles as well as some of the supporting tooling which might be necessary to build to provide viable APIs. The roadmap is not intended to be complete but to promote discussion, extension and engagement from the INTEROPen community.
 
