@@ -3,7 +3,7 @@ title: Resources Overview
 keywords: getcarerecord, structured, rest, resource
 tags: [rest,fhir,api]
 sidebar: foundations_sidebar
-permalink: profiles_overview.html
+permalink: explore.html
 summary: "Overview of the Resources section"
 ---
 

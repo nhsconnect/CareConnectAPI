@@ -3,7 +3,7 @@ title: Care Connect | Reference
 keywords: development Reference
 tags: [development,fhir,profiles]
 sidebar: overview_sidebar
-permalink: profiles_reference.html
+permalink: explore_reference.html
 summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of Care Connect API."
 ---
 
