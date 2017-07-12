@@ -3,7 +3,7 @@ title: Server Guidance
 keywords: fhir development
 tags: [fhir,development]
 sidebar: overview_sidebar
-permalink: profiles_fhir_server_guidance.html
+permalink: explore_fhir_server_guidance.html
 summary: "Details of how a FHIR server should be set-up to be a fully compliant."
 ---
 

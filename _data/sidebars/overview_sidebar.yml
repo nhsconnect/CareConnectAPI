@@ -59,7 +59,7 @@ entries:
     output: web
     folderitems:
     - title: Overview
-      url: /profiles_overview.html
+      url: /explore.html
       output: web
       subfolders:
       - title: Clinical
@@ -130,19 +130,19 @@ entries:
         output: web
         subfolderitems:
         - title: API Codes
-          url: /profiles_api_codes.html
+          url: /explore_api_codes.html
           output: web
         - title: Search Parameters
-          url: /profiles_search_parameters.html
+          url: /explore_search_parameters.html
           output: web
         - title: Open Source
-          url: /profiles_fhir_open_source_guidance.html
+          url: /explore_fhir_open_source_guidance.html
           output: web
         - title: Reference
-          url: /profiles_reference.html
+          url: /explore_reference.html
           output: web
         - title: Care Connect Versioning
-          url: /profiles_cc_versioning.html
+          url: /explore_cc_versioning.html
           output: web
   - title: Design & Build
     output: web
