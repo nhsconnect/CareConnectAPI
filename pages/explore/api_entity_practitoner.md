@@ -1,5 +1,5 @@
 ---
-title: Identification | Practitioner
+title: Individuals | Practitioner
 keywords: usecase, Practitioner
 tags: [rest, fhir, identification,api]
 sidebar: accessrecord_rest_sidebar
