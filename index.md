@@ -44,7 +44,7 @@ Please see the explanation of the complete development roadmap.
 
 
 
-# Profile Roadmap #
+# Resource Roadmap #
 
 The [API journey](overview_api_journey.html) outlines the development roadmap for the RESTful APIs outlined within this site.
 
