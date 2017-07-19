@@ -45,7 +45,7 @@ Which returns the following response
 
 <script src="https://gist.github.com/KevinMayfield/30b192d3dc590ade1e4b21a840ad7eb2.js"></script>
 
-## 2. Orders ##
+## 3. Orders ##
 
 The original order is referred to by the DiagnosticReports, they can also be search in a similar manner to the DiagnosticReports.
 
