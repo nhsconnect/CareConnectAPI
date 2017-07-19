@@ -35,6 +35,8 @@ Which returns the following response
 
 The first report is from a radiology system and contains a textual description of the report and the other is a pathology report.
 
+## 3. Observations ##
+
 The pathology report contains a list of Observations which can be retrieved using the guidance in [Observation](api_diagnostics_observation.html)
 
 ```
@@ -45,7 +47,20 @@ Which returns the following response
 
 <script src="https://gist.github.com/KevinMayfield/30b192d3dc590ade1e4b21a840ad7eb2.js"></script>
 
-## 3. Orders ##
+This may result in a large number of calls to the Observation API. Their is not a direct way of returning Observations related to the DiagnosticReport but it is possible to search on date ranges and category of Observation. So we could search for Observations with a laboratory category for that patient.
+
+```
+GET [baseUrl]/Observation?patient=32898&category=laboratory
+```
+
+This may return other laboratory Observation's not related to the DiagnosticReport we are interested in but can be filtered out by using the result list in the DiagnosticReport. Also consider applying a date range to the search.
+
+```
+GET [baseUrl]/Observation?patient=32898&category=laboratorydate=ge2017-04-24&date=le2017-04-26
+```
+
+
+## 4. Orders ##
 
 The original order is referred to by the DiagnosticReports, they can also be search in a similar manner to the DiagnosticReports.
 
