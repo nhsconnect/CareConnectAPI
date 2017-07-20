@@ -14,6 +14,9 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 Updated
   - Added developer notes on University Hospital Southampton use case.
   
+Changed
+  - FAQ as a inconsistency was spotted
+  
 ## 1.0.0-alpha.0 ##
 
 Updated
