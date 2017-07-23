@@ -31,14 +31,6 @@ It is a key principle of the FHIR RESTful APIs that all resources are versioned;
 
 You are welcome to use your own ODS index (i.e. to find an organisation by name/address etc.). However, you will need to perform an SDS lookup using the ODS code to resolve the FHIR endpoint that represents that ODS code for the purpose of using the Care Connect APIs.
 
-#### Why is oAuth2 not used? ####
-
-Authentication will be via mutual TLS/SSL authentication. The JWT web token has been proposed to allow the easy bundling of related authentication details and to eliminate the need for many separate customer headers, or a bespoke bundling formats to be defined, implemented and maintained.
-
-#### Why are JSON Web Tokens (JWT) required? ####
-
-Extra HTTP headers are needed for sending provenance/audit details. Sending this data in a JWT Bearer token (which is simply a fragment of JSON) is an easy way of achieving the communication of this data and various libraries exist to make authoring this content trivial.
-
 #### Why is there to be a centrally-held list of error codes in addition to the standard HTTP response codes? ####
 
 The list of error codes is really intended to allow consumer applications to make sense of errors that the human operator could potentially do something about. We recognise there is a cost-benefit trade-off in this space and will look to only introduce error codes (above that of the base FHIR specification) when they add sufficient value. For example a 400 - Bad Request error code in isolation doesn’t help you determine which input parameter(s) are malformed and similarly a 422 -  Unprocessable Entity doesn’t in isolation help you determine which business rule (or integrity constraint) has caused an operation to fail. 
