@@ -305,7 +305,12 @@ A **DocumentAPI** is an extension of the **MessagingAPI** which provides a set o
 
 ### 4.2. NHS FHIR Examples ###
 
-- [GP Connect Composition](https://data.developer.nhs.uk/fhir/candidaterelease-170816-getrecord/Profile.GetRecordQueryResponse-HTMLView/gpconnect-carerecord-composition-1.html)
+- [GP Connect](/gpconnect/)
+  - [Appointment](https://www.simplifier.net/GPConnect/gpconnect-appointment-1)
+  - [Composition](https://data.developer.nhs.uk/fhir/candidaterelease-170816-getrecord/Profile.GetRecordQueryResponse-HTMLView/gpconnect-carerecord-composition-1.html)
+  - [Order (Task)](https://data.developer.nhs.uk/fhir/candidaterelease-170816-tasks/Profile.TaskManagement/gpconnect-task-order-1.html)
+  - [Schedule (Appointment)](https://www.simplifier.net/GPConnect/gpconnect-schedule-1)
+  - [Slot (Appointment)](https://www.simplifier.net/GPConnect/gpconnect-slot-1)
 - [Transfer of Care eDischarge](https://nhsconnect.github.io/NHS-FHIR-Doc-eDischarge/Generated/)
 
 ## 5. Operations
