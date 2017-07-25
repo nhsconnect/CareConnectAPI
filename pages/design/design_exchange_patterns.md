@@ -135,7 +135,11 @@ This type of interface may also be called as **ResourceAPI** and is useful for r
 ### 2.2. NHS FHIR Examples ###
 
 - [CareConnectAPI](explore.html)
-  - [GP Connect Access Record REST](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
+- [GP Connect]("/gpconnect/")
+  - [Tranche 1-3](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
+  - [Appointment](https://www.simplifier.net/GPConnect/gpconnect-appointment-1)
+  - [Order (Task)](https://data.developer.nhs.uk/fhir/candidaterelease-170816-tasks/Profile.TaskManagement/gpconnect-task-order-1.html)
+  - [Slot (Appointment)](https://www.simplifier.net/GPConnect/gpconnect-slot-1)
 - [Vistors and Migrants](https://nhsconnect.github.io/visitor-and-migrants/index.html)
 - [NHS e-Referral Service](https://nhsconnect.github.io/NHS-FHIR-eRS-Integration/Generated/)
 - [NHS National Record Locator Service](https://data.developer.nhs.uk/fhir/nrls-v1-draft-a/Chapter.1.About/index.html)
@@ -306,11 +310,7 @@ A **DocumentAPI** is an extension of the **MessagingAPI** which provides a set o
 ### 4.2. NHS FHIR Examples ###
 
 - [GP Connect](/gpconnect/)
-  - [Appointment](https://www.simplifier.net/GPConnect/gpconnect-appointment-1)
   - [Composition](https://data.developer.nhs.uk/fhir/candidaterelease-170816-getrecord/Profile.GetRecordQueryResponse-HTMLView/gpconnect-carerecord-composition-1.html)
-  - [Order (Task)](https://data.developer.nhs.uk/fhir/candidaterelease-170816-tasks/Profile.TaskManagement/gpconnect-task-order-1.html)
-  - [Schedule (Appointment)](https://www.simplifier.net/GPConnect/gpconnect-schedule-1)
-  - [Slot (Appointment)](https://www.simplifier.net/GPConnect/gpconnect-slot-1)
 - [Transfer of Care eDischarge](https://nhsconnect.github.io/NHS-FHIR-Doc-eDischarge/Generated/)
 
 ## 5. Operations
