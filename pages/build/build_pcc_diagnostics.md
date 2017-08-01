@@ -17,13 +17,30 @@ summary: "Guidance on using FHIR with Laboratory and Radiology"
 
 [Work In Progress]
 
-Many [DiagnosticReports](http://hl7.org/fhir/DSTU2/diagnosticreport.html) will be generated from HL7v2 messages. Details on how they can be converted to [FHIR Messaging](design_exchange_patterns.html#3-messaging) can be found on this blog by [HL7 Message examples: version 2 and FHIR](http://ringholm.com/docs/04350_mapping_HL7v2_FHIR.htm). An java based example that converts HL7v2 ORU^R01 to [FHIR RESTful](design_exchange_patterns.html#2-restful-api) calls can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/UHSH7v2Diagnostics)
+Many [DiagnosticReports](http://hl7.org/fhir/DSTU2/diagnosticreport.html) will be generated from HL7v2 messages. Details on how they can be converted to [FHIR Messaging](design_exchange_patterns.html#3-messaging) can be found on this blog by [HL7 Message examples: version 2 and FHIR](http://ringholm.com/docs/04350_mapping_HL7v2_FHIR.htm). A java example which  converts a sample HL7v2 ORU^R01 message to FHIR resources calls can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/UHSH7v2Diagnostics)
 
-## 2. Results ##
+The diagram below is a simplified representation of the FHIR Diagnostic resources and how they link together. Note that although Observation is linked to DiagnosticReport, the link is held in the DiagnosticReport, not the Observation.
+
+<p style="text-align:center;"><img src="images/build/Diagnostics Relationship Diagram DSTU2.jpg" alt="Entity Relationship Diagram showing abstract profiles." title="Entity Relationship Diagram of Diagnostics." style="width:75%"></p>
+<br><br>
+
+## 2. Diagnostic Orders ##
 
 To find DiagnosticReports for a Patient we first need to find the patient, this is discussed in the [Patient Search](build_patient_search.html) section.
 
-After finding the Patient we can now search for [DiagnosticReports for the Patient](api_diagnostics_diagnosticreport.html#patient)
+After finding the Patient we can use the patient id to search for [DiagnosticOrders for the Patient](api_diagnostics_diagnosticorder.html#patient)
+
+```
+GET [baseUrl]/DiagnosticOrder?patient=32898
+```
+
+Which results in
+
+<script src="https://gist.github.com/KevinMayfield/0d227ba79b2edec0dd0de36042885071.js"></script>
+
+## 3. Diagnostic Reports ##
+
+We can also use patient id to search for [DiagnosticReports for the Patient](api_diagnostics_diagnosticreport.html#patient)
 
 ```
 GET [baseUrl]/DiagnosticReport?patient=32898
@@ -35,39 +52,56 @@ Which returns the following response
 
 The first report is from a radiology system and contains a textual description of the report and the other is a pathology report.
 
-## 3. Observations ##
+## 4. Observations ##
 
-The pathology report contains a list of Observations which can be retrieved using the guidance in [Observation](api_diagnostics_observation.html)
+The DiagnosticReport in the previous section contains a result list of Observations, these can be used to retrieve the individual entries (See also [Observation](api_diagnostics_observation.html)). E.g.
 
 ```
-GET [baseUrl]/DiagnosticReport?patient=32898
+GET [baseUrl]/Observation?39917
 ```
 
 Which returns the following response
 
 <script src="https://gist.github.com/KevinMayfield/30b192d3dc590ade1e4b21a840ad7eb2.js"></script>
 
-This may result in a large number of calls to the Observation API. Their is not a direct way of returning Observations related to the DiagnosticReport but it is possible to search on date ranges and category of Observation. So we could search for Observations with a laboratory category for that patient.
+This call would need to be repeated for each entry in the DiagnosticReport which may not be ideal. Observation doesn't have a link to the DiagnosticReport and so it doesn't have a search parameter to do this. Alternative approaches could use combination's of other CareConnectAPI search parameters e.g.
+- category
+  - Observations linked to DiagnosticReports will have a category code of 'laboratory'
+- date range
+  - Observations will have a similar effectiveDateTime/effectivePeriod to the effectiveDateTime/effectivePeriod values in the DiagnosticReport.
+
+E.g.
 
 ```
 GET [baseUrl]/Observation?patient=32898&category=laboratory
 ```
 
-This may return other laboratory Observation's not related to the DiagnosticReport we are interested in but can be filtered out by using the result list in the DiagnosticReport. Also consider applying a date range to the search.
-
 ```
 GET [baseUrl]/Observation?patient=32898&category=laboratorydate=ge2017-04-24&date=le2017-04-26
 ```
 
+These are not ideal and may return other laboratory Observation's not related to the DiagnosticReport we are interested in but the result list in the DiagnosticReport can be used to filter out extraneous observations.
 
-## 4. Orders ##
+## 5. STU3 ##
 
-The original order is referred to by the DiagnosticReports, they can also be search in a similar manner to the DiagnosticReports.
+On the STU3 version of FHIR the DiagnosticOrder has become ProcedureRequest and Observation now has a 'basedOn' property which allows the Observations to be linked to the ProcedureRequest.
+
+<p style="text-align:center;"><img src="images/build/Diagnostics Relationship Diagram STU3.jpg" alt="Entity Relationship Diagram showing abstract profiles." title="Entity Relationship Diagram of Diagnostics." style="width:75%"></p>
+<br><br>
+
+This link allows us to search Observations based on the order that generated them.
 
 ```
-GET [baseUrl]/DiagnosticOrder?patient=32898
+GET [baseUrl]/STU3/Observation?patient=32898&basedOn=ProcedureRequest/39928
 ```
 
-Which results in
+This may still return more Observations than we need as we may have several DiagnosticReports. (DiagnosticReports may be generated at various stages e.g. preliminary, partial, final, etc). [TODO Get feedback, this may be ok]
 
-<script src="https://gist.github.com/KevinMayfield/0d227ba79b2edec0dd0de36042885071.js"></script>
+{% include note.html content="This `basedOn` functionality could be added to DSTU2 CareConnect Observation by using an extension." %}
+
+## 6. Observation Results (OBR Segments) ##
+
+HL7v2 DiagnosticReport messages have the ability to split the reports into sections.
+
+<p style="text-align:center;"><img src="images/build/DiagnosticReportUI.png" alt="Entity Relationship Diagram showing abstract profiles." title="Entity Relationship Diagram of Diagnostics." style="width:75%"></p>
+<br><br>  
