@@ -20,8 +20,11 @@ The exchange patterns are complimentary, each having it's strengths and weakness
 <div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="https://www.hl7.org/fhir/DSTU2/http.html"><b>FHIR RESTful API</b></div>
 
 ```
-Manipulate data held in a remote system while avoiding direct coupling to remote procedures.
+Retrieve data held in a remote system while avoiding direct coupling to remote procedures.
 ```
+
+<p style="text-align:center;"><img src="images/build/FHIR RESTfulAPI.jpg" alt="View Results Screen" title="View Results Screen" style="width:75%"></p>
+<br><br>  
 
 Many web services use messages to form their own domain-specific APIs. These messages incorporate common logical commands like Create, Read (i.e. Get), Update, or Delete (CRUD). Also across the health and social care domain, we have many common entities such as Patient, Practitioner, Organisation, etc. For example, many systems will implement an API that allows you to search for Patients by their NHS Number, maybe called GetPatient, QueryPatient, CreatePatient, etc.
 
@@ -149,8 +152,10 @@ This type of interface may also be called as **ResourceAPI** and is useful for r
 <div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="https://www.hl7.org/fhir/DSTU2/messaging.html"><b>FHIR Messaging</b></div>
 
 ```
-Send commands, notifications and other information to remote systems while avoiding direct coupling to remote procedures.
+Send notifications and other information to remote systems while avoiding direct coupling to remote procedures.
 ```
+<p style="text-align:center;"><img src="images/build/FHIR Messaging.jpg" alt="View Results Screen" title="View Results Screen" style="width:75%"></p>
+<br><br>  
 
 There are many scenarios where messaging can't be driven entirely by the service owner. This is especially true in large organisations or in scenarios where health and social care organisations need to exchange data. In these situations we need an API that recognises a set of related resources but does not tie them into specific procedures, this may also be called a **MessagingAPI**.
 
@@ -252,6 +257,9 @@ To store resources in the Repository
 ```
 Send documents to remote systems while avoiding direct coupling to remote procedures.
 ```
+
+<p style="text-align:center;"><img src="images/build/FHIR Documents.jpg" alt="View Results Screen" title="View Results Screen" style="width:75%"></p>
+<br><br>  
 
 A **DocumentAPI** is an extension of the **MessagingAPI** which provides a set of coherent information that is a statement of healthcare information, including clinical observations and services. A document is an immutable set of resources with a fixed presentation that is authored and/or attested by humans, organizations and devices.
 

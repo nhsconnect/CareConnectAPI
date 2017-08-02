@@ -17,7 +17,9 @@ summary: "Guidance on using FHIR with Laboratory and Radiology"
 
 [Work In Progress]
 
-Many [DiagnosticReports](http://hl7.org/fhir/DSTU2/diagnosticreport.html) will be generated from HL7v2 messages. Details on how they can be converted to [FHIR Messaging](design_exchange_patterns.html#3-messaging) can be found on this blog by [HL7 Message examples: version 2 and FHIR](http://ringholm.com/docs/04350_mapping_HL7v2_FHIR.htm). A java example which  converts a sample HL7v2 ORU^R01 message to FHIR resources calls can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/UHSH7v2Diagnostics)
+Many [DiagnosticReport](http://hl7.org/fhir/DSTU2/diagnosticreport.html) will be generated from HL7v2 ORU messages and similarly [DiagnosticOrder](http://hl7.org/fhir/DSTU2/diagnosticorder.html) will be HLv2 ORM messages. Details on how they can be converted to [FHIR Messaging](design_exchange_patterns.html#3-messaging) can be found on this blog by [HL7 Message examples: version 2 and FHIR](http://ringholm.com/docs/04350_mapping_HL7v2_FHIR.htm). A java example which  converts a sample HL7v2 ORU^R01 message to FHIR resources calls can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/UHSH7v2Diagnostics)
+
+This guide does not cover how reports and orders are sent from system to system. In FHIR this is [FHIR Messaging](design_exchange_patterns.html#3-messaging) and part of NHS Digital [Digital Diagnostics Services (Pathology)](https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/). This guide covers how a mobile(/other) system would access the orders and reports via [RESTful API](design_exchange_patterns.html#2-restful-api).
 
 The diagram below is a simplified representation of the FHIR Diagnostic resources and how they link together. Note that although Observation is linked to DiagnosticReport, the link is held in the DiagnosticReport, not the Observation.
 
@@ -101,7 +103,7 @@ This may still return more Observations than we need as we may have several Diag
 
 ## 6. Observation Results (OBR Segments) ##
 
-HL7v2 DiagnosticReport messages have the ability to split the reports into sections.
+HL7v2 DiagnosticReport messages have the ability to split the reports into sections. In the screen shot below, the Observations from the DiagnosticReport has been split into tests from the original DiagnosticOrder.  
 
-<p style="text-align:center;"><img src="images/build/DiagnosticReportUI.png" alt="Entity Relationship Diagram showing abstract profiles." title="Entity Relationship Diagram of Diagnostics." style="width:75%"></p>
+<p style="text-align:center;"><img src="images/build/DiagnosticReportUI.png" alt="View Results Screen" title="View Results Screen" style="width:75%"></p>
 <br><br>  
