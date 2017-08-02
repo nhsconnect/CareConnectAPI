@@ -84,7 +84,7 @@ GET [baseUrl]/Observation?patient=32898&category=laboratorydate=ge2017-04-24&dat
 
 These are not ideal and may return other laboratory Observation's not related to the DiagnosticReport we are interested in but the result list in the DiagnosticReport can be used to filter out extraneous observations.
 
-## 5. STU3 ##
+## 5. HL7 FHIR STU3 ##
 
 On the STU3 version of FHIR the DiagnosticOrder has become ProcedureRequest and Observation now has a 'basedOn' property which allows the Observations to be linked to the ProcedureRequest.
 
