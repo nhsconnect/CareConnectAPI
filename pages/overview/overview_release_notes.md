@@ -9,11 +9,17 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 {% include important.html content="This site is under active development by NHS Digital on behalf of INTEROPen and is intended to provide all the technical resources you need to successfully develop the Care Connect APIs. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis." %}
 
+## 1.3.0-alpha.0 ##
+
+Updated
+  - Updated UHS Proof of Concept - Diagnostics
+  - Updated Exchange Patterns
+
 ## 1.2.0-alpha.0 ##
 
 Updated
   - Improved links to GP Connect sites from Exchange Patterns page.
-  
+
 ## 1.1.0-alpha.0 ##
 
 Updated
