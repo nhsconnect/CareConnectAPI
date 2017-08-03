@@ -19,18 +19,26 @@ summary: "Guidance on using FHIR with Laboratory and Radiology"
 
 Many [DiagnosticReport](http://hl7.org/fhir/DSTU2/diagnosticreport.html) will be generated from HL7v2 ORU messages and similarly [DiagnosticOrder](http://hl7.org/fhir/DSTU2/diagnosticorder.html) will be HLv2 ORM messages. Details on how they can be converted to [FHIR Messaging](design_exchange_patterns.html#3-messaging) can be found on this blog by [HL7 Message examples: version 2 and FHIR](http://ringholm.com/docs/04350_mapping_HL7v2_FHIR.htm). A java example which  converts a sample HL7v2 ORU^R01 message to FHIR resources calls can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/UHSH7v2Diagnostics)
 
-This guide does not cover how reports and orders are sent from system to system. In FHIR this is [FHIR Messaging](design_exchange_patterns.html#3-messaging) and part of NHS Digital [Digital Diagnostics Services (Pathology)](https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/). This guide covers how a mobile(/other) system would access the orders and reports via [RESTful API](design_exchange_patterns.html#2-restful-api).
-
 The diagram below is a simplified representation of the FHIR Diagnostic resources and how they link together. Note that although Observation is linked to DiagnosticReport, the link is held in the DiagnosticReport, not the Observation.
 
 <p style="text-align:center;"><img src="images/build/Diagnostics Relationship Diagram DSTU2.jpg" alt="Entity Relationship Diagram showing abstract profiles." title="Entity Relationship Diagram of Diagnostics." style="width:75%"></p>
 <br><br>
 
-## 2. Diagnostic Orders ##
+## 2. Sending Diagnostic Orders and Diagnostic Reports ##
+
+This guide does not cover how reports and orders are sent from system to system. In FHIR this is [FHIR Messaging](design_exchange_patterns.html#3-messaging) and part of NHS Digital [Digital Diagnostics Services (Pathology)](https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/). This guide covers how a mobile(/other) system would access the orders and reports via [RESTful API](design_exchange_patterns.html#2-restful-api).
+
+Messaging may use an RESTful API call by sending the `Bundle` to a server. E.g.
+
+```
+POST [baseUrl]/Bundle
+```
+
+## 3. Retrieving Diagnostic Orders ##
 
 To find DiagnosticReports for a Patient we first need to find the patient, this is discussed in the [Patient Search](build_patient_search.html) section.
 
-After finding the Patient we can use the patient id to search for [DiagnosticOrders for the Patient](api_diagnostics_diagnosticorder.html#patient)
+After finding the Patient we can use the patient id to search for [DiagnosticOrders](api_diagnostics_diagnosticorder.html#patient) for the Patient.
 
 ```
 GET [baseUrl]/DiagnosticOrder?patient=32898
@@ -40,7 +48,7 @@ Which results in
 
 <script src="https://gist.github.com/KevinMayfield/0d227ba79b2edec0dd0de36042885071.js"></script>
 
-## 3. Diagnostic Reports ##
+## 4. Retrieving Diagnostic Reports ##
 
 We can also use patient id to search for [DiagnosticReports for the Patient](api_diagnostics_diagnosticreport.html#patient)
 
@@ -54,7 +62,7 @@ Which returns the following response
 
 The first report is from a radiology system and contains a textual description of the report and the other is a pathology report.
 
-## 4. Observations ##
+## 5. Retrieving Observations ##
 
 The DiagnosticReport in the previous section contains a result list of Observations, these can be used to retrieve the individual entries (See also [Observation](api_diagnostics_observation.html)). E.g.
 
@@ -84,7 +92,7 @@ GET [baseUrl]/Observation?patient=32898&category=laboratorydate=ge2017-04-24&dat
 
 These are not ideal and may return other laboratory Observation's not related to the DiagnosticReport we are interested in but the result list in the DiagnosticReport can be used to filter out extraneous observations.
 
-## 5. HL7 FHIR STU3 ##
+## 6. HL7 FHIR STU3 ##
 
 On the STU3 version of FHIR the DiagnosticOrder has become ProcedureRequest and Observation now has a 'basedOn' property which allows the Observations to be linked to the ProcedureRequest.
 
@@ -101,9 +109,11 @@ This may still return more Observations than we need as we may have several Diag
 
 {% include note.html content="This `basedOn` functionality could be added to DSTU2 CareConnect Observation by using an extension." %}
 
-## 6. Observation Results (OBR Segments) ##
+## 7. Observation Results (OBR Segments) ##
 
 HL7v2 DiagnosticReport messages have the ability to split the reports into sections. In the screen shot below, the Observations from the DiagnosticReport has been split into tests from the original DiagnosticOrder.  
+
+[TODO OBR relates to DiagnosticOrder.items, items do not exist in STU3 and they become separate ProcedureRequests]
 
 <p style="text-align:center;"><img src="images/build/DiagnosticReportUI.png" alt="View Results Screen" title="View Results Screen" style="width:75%"></p>
 <br><br>  
