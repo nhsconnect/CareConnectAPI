@@ -65,7 +65,7 @@ POST [baseUrl]/OrderResponse
 
 
 Change this into a message bundle.
-
+<!--
 <script src="https://gist.github.com/KevinMayfield/5ce742eb62ab167657320d0579cfd127.js"></script>
-
+-->
 ## 5. FHIR STU3 Task ##
