@@ -11,6 +11,8 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 ## 1.3.0-alpha.0 ##
 
+Added
+  - UHS Proof of Concept - Workflow (Orders)
 Updated
   - Updated UHS Proof of Concept - Diagnostics
   - Updated Exchange Patterns
@@ -18,6 +20,7 @@ Updated
 ## 1.2.0-alpha.0 ##
 
 Updated
+  - Improved links to GP Connect sites from Exchange Patterns page.
   - Improved links to GP Connect sites from Exchange Patterns page.
 
 ## 1.1.0-alpha.0 ##
