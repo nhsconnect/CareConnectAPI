@@ -55,7 +55,7 @@ and payload of:
 
 ## 4. Task Completed ##
 
-TODO
+Once the
 
 ```
 POST [baseUrl]/OrderResponse
@@ -68,4 +68,50 @@ Change this into a message bundle.
 <!--
 <script src="https://gist.github.com/KevinMayfield/5ce742eb62ab167657320d0579cfd127.js"></script>
 -->
-## 5. FHIR STU3 Task ##
+## 5. Task Create using FHIR Messaging ##
+
+As noted in the Task create section, the `Order` contains many references. For example the Patient is referred to as 'http://[baseUrl]/Patient/32898' which is fine if the baseUrl is the receiving system but if it isn't this system will need to look this up by following the reference.
+
+This is not ideal in a number of scenarios but with FHIR Messaging we can resolve this by using a [FHIR Bundle](http://hl7.org/fhir/dstu2/bundle.html). The Bundle will be a list of resources, the first resource being a [MessageHeader](http://hl7.org/fhir/dstu2/messageheader.html), the second resource the [Order](http://hl7.org/fhir/dstu2/order.html) and then the resources the Order referenced. So for our example (from Task Amendment) this will be:
+
+| Bundle |
+|--------|
+| MessageHeader |
+| Order |
+| Patient |
+| Practitioner |
+| Organization |
+| DiagnosticReport |
+
+These orders may have references themselves but in the example below these have been removed if they are not immediately relevant. Put another way we aim to supply enough information to the receiver to handle the `Order` such as the Patients NHS number, Consultant/Organisation names, DiagnosticOrder id's.
+
+The Bundle is sent to the recipient via:
+
+```
+POST [baseUrl]/Bundle
+```
+
+<script src="https://gist.github.com/KevinMayfield/2bd323a9b25e7a2fe97cfb27a46ebf58.js"></script>
+
+## 6. Task Completed using FHIR Messaging ##
+
+Send the `OrderResponse` via FHIR Messaging is similar.
+
+| Bundle |
+|--------|
+| MessageHeader |
+| OrderResponse |
+| Order |
+| Patient |
+| Practitioner (who requested the task) |
+| Practitioner (who completed the task) |
+| Organization |
+| DiagnosticReport |
+
+This message is also sent to:
+
+```
+POST [baseUrl]/Bundle
+```
+
+<script src="https://gist.github.com/KevinMayfield/469b22b8b8440150158157f3dbc0db17.js"></script>
