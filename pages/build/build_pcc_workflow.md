@@ -94,6 +94,9 @@ POST [baseUrl]/Bundle
 You will have noticed the FHIR Message contained more data than was asked for in the UHS proof of concept. You may have also questioned why seeing as FHIR supports a RESTful Resource API (as specified in the Care Connect API) why didn't we go down that route.
 The answer is these interactions are likely to cross organisatonal or system boundaries, so a messaging approach is deemed easier to implement.
 
+{% include note.html content="[TODO - Need to add comment about contained resources. Recommended is Message] <br> [Guidance on contained resources](http://hl7.org/fhir/DSTU2/references.html#contained)" %}
+
+
 ## 4. Task Create ##
 
 To create a task we use the same `Order` resource we used in the previous and swap the references from being self referential within the bundle to refer to references on an actual (Care Connect FHIR Server.
