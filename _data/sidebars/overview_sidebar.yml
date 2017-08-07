@@ -178,7 +178,7 @@ entries:
           - title: Diagnostics | Care Coord
             url: /build_pcc_diagnostics.html
             output: web
-          - title: Workflow
+          - title: Diagnostics | Workflow
             url: /build_pcc_workflow.html
             output: web
   - title: Test
