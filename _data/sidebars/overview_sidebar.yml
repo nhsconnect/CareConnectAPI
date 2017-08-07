@@ -175,12 +175,6 @@ entries:
           - title: Medication | Care Coord
             url: /build_pcc_medication.html
             output: web
-          - title: Diagnostics | Care Coord
-            url: /build_pcc_diagnostics.html
-            output: web
-          - title: Workflow
-            url: /build_pcc_workflow.html
-            output: web
   - title: Test
     output: web
     folderitems:
