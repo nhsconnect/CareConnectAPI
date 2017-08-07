@@ -1,7 +1,7 @@
 ---
 title: Diagnostics | Workflow
 keywords: development
-tags: [design,development,workflow]
+tags: [design,development,workflow,diagnostics]
 sidebar: overview_sidebar
 permalink: build_pcc_workflow.html
 summary: "Guidance on using FHIR with Workflow"
@@ -65,7 +65,8 @@ This message is sent to the receiving system via a RESTful call:
 ```
 POST [baseUrl]/Bundle
 ```
-with the payload being the FHIR Bundle, e.g.
+
+Example Bundle (/http payload):
 
 <script src="https://gist.github.com/KevinMayfield/469b22b8b8440150158157f3dbc0db17.js"></script>
 
@@ -99,6 +100,8 @@ The Message Bundle is sent using the same API but to a different system:
 POST [baseUrl]/Bundle
 ```
 
+Example Bundle (/http payload):
+
 <script src="https://gist.github.com/KevinMayfield/2bd323a9b25e7a2fe97cfb27a46ebf58.js"></script>
 
 
@@ -107,8 +110,6 @@ POST [baseUrl]/Bundle
 You will have noticed the FHIR Message is rather large compared to the initial UHS scenario data set. We could follow [Resource  API](https://en.wikipedia.org/wiki/Resource-oriented_architecture) for which FHIR RESTful API is well suited.
 
 The answer is you can use either but which one depends on the scenario, if your building a web application working with a FHIR Server then FHIR RESTful API would be ideal but sending an `OrderResponse` across boundaries maybe better suited to FHIR Messaging.
-
-{% include note.html content="[TODO - Need to add comment about contained resources. Recommended is Message] <br> [Guidance on contained resources](http://hl7.org/fhir/DSTU2/references.html#contained)" %}
 
 
 ## 4. Task Create ##
@@ -137,48 +138,84 @@ The `Order` resource would be sent to using this API:
 POST [baseUrl]/Order
 ```
 
-with this payload:
+Example Resource (/http payload):
 
 <script src="https://gist.github.com/KevinMayfield/f9e19566b9e4ad6e577f973d75b35c3c.js"></script>
-
-The FHIR resource in the payload is very short, it's not very clear who the patient or practitioners are without following the links and retrieving the referenced resources. This is not desirable when sending Orders across system boundaries.
-
-
-
-```xml
-<subject>
-      <reference value="http://fhir.uhs.nhs.uk/Server/NHSNumber/Dstu2/Patient/9876543210"/>   
-</subject>
-```
-
-The reference MUST be resolvable, so if the reference link was followed a single `Patient` would be returned with an id of 9876543210 (and also have a NHS number identifier with the same number).
 
 
 ## 5. Task Amendment ##
 
-We created an Order in the last step but now we wish the Patients practice to be assigned the task rather than the patients GP. To do this we must first the order we created, e.g.
+We created an Order in the last step but now we wish the Patients practice to be assigned the task rather than the patients GP. Who is responsible in the Order is held in the `target` reference.
+
+```xml
+<target>
+   <reference value="http://fhirtest.uhn.ca/baseDstu2/Practitioner/32368"/>
+</target>
+```
+
+We change the from a Practitioner reference to the Organisation resource representing the patient's Practice.
+
+```xml
+<target>
+    <reference value="http://fhirtest.uhn.ca/baseDstu2/Organization/39563"/>
+</target>
+```
+
+The API we need to send this amended order is:
+
+```
+PUT [baseUrl]/Order/{Id}
+```
+
+Which uses the http PUT (Update) instead of POST used in the Create. This API has a parameter of Id (the logical Id of the resource we had previously send). If we didn't know what this was we would need to search for it, e.g. using the identifier of the original `Order`:
 
 ```
 GET [baseUrl]/Order?identifier=https://fhir.uhs.nhs.uk/OrderComms/Order|ABCDE
 ```
 
-This should return the id of the resource we wish to amend. This will be done via a HTTP PUT e.g.
+This should return the id of the resource we wish to amend which we can use to update the `Order` e.g.
 
 ```
 PUT [baseUrl]/Order/56443
 ```
 
-and payload of:
+Example Resource (/http payload):
 
 <script src="https://gist.github.com/KevinMayfield/7cda2922f9aa182c4df6564cdc8ab575.js"></script>
 
 
 ## 6. Task Completed (/Rejected) ##
 
+To complete a task we use `OrderResponse`, we indicate we have completed the task by giving the orderStatus a `completed` code.
 
+```xml
+<orderStatus value="completed"/>
+```  
+
+If we wished to reject the order we use the `rejected` code.
+
+```xml
+<orderStatus value="rejected"/>
+```
+
+The resource is sent to:
 
 ```
 POST [baseUrl]/OrderResponse
 ```
 
+Example Resource (/http payload):
+
 <script src="https://gist.github.com/KevinMayfield/4e8d70f2638fe79f6de4602e3e0b400b.js"></script>
+
+## 7. Task Completed (/Rejected) - UHS Scenario ##
+
+This solution wouldn't have worked with the UHS scenario because the referenced `Order` was implied and so isn't a resource that can be referred to. This is a problem as we have been using the `Order` to link the `OrderResponse` to other resources, with messaging this wasn't a problem as the generated resource was included within the Bundle.
+
+We can use a similar approach by using contained resources within the `OrderResponse`  
+
+<script src="https://gist.github.com/KevinMayfield/ceb8afccd694b11889416ad30409f44a.js"></script>
+
+We're again using `#order` to indicate a self reference in the OrderResponse like we would do in FHIR Messaging and the Order is added to the OrderResponse as a contained resource. We could add more contained resources but those resources can stand by themselves, i.e. they are complete resource.
+
+{% include note.html content="[Guidance on contained resources](http://hl7.org/fhir/DSTU2/references.html#contained)" %}
