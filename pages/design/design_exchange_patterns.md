@@ -138,7 +138,7 @@ This type of interface may also be called as **ResourceAPI** and is useful for r
 ### 2.2. NHS FHIR Examples ###
 
 - [CareConnectAPI](explore.html)
-- [GP Connect]("/gpconnect/")
+- [GP Connect]({{ site.nhsd.gpconnectmain }})
   - [Tranche 1-3](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
   - [Appointment](https://www.simplifier.net/GPConnect/gpconnect-appointment-1)
   - [Order (Task)](https://data.developer.nhs.uk/fhir/candidaterelease-170816-tasks/Profile.TaskManagement/gpconnect-task-order-1.html)
