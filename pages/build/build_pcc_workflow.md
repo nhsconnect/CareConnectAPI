@@ -219,3 +219,22 @@ We can use a similar approach by using contained resources within the `OrderResp
 We're again using `#order` to indicate a self reference in the OrderResponse like we would do in FHIR Messaging and the Order is added to the OrderResponse as a contained resource. We could add more contained resources but those resources can stand by themselves, i.e. they are complete resource.
 
 {% include note.html content="[Guidance on contained resources](http://hl7.org/fhir/DSTU2/references.html#contained)" %}
+
+## 8. FHIR STU3 Task Completed (/Rejected) - UHS Scenario ##
+
+We could have added more contained resources in the previous section, for example to include the Patient resource but Patient is referenced by Order which is in turn referenced by OrderResponse. This would involve nesting contained resources and which is not recommended. (Another reason for using FHIR Messaging)
+
+With HL7 STU3, the Order and OrderResponse we're combined into one resource - [Task](https://www.hl7.org/fhir/task.html)
+Task is part of the workflow stream on FHIR STU3 and is better suited to supporting workflow processes like the UHS scenario.
+
+On STU3 the API to send a Task:
+
+```
+POST [baseUrl]/Task
+```
+
+Example Resource (/http payload):   
+
+<script src="https://gist.github.com/KevinMayfield/516ca6eb42345e879f93a6eb158b5c34.js"></script>
+
+The contained resources aren't profiled and are small. 
