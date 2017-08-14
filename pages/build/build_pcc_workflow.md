@@ -33,86 +33,62 @@ The relationship between the resources is shown in the diagram below:
 
 Notice the resource that indicates a task has been completed (`OrderResponse`) has no direct relationship to the Patient resource.
 
-FHIR has a number of [exchange patterns](design_exchange_patterns.html), first we will look at Messaging approach to the solution (which resembles HL7v2 messaging) and lastly we will look at RESTful API.
-
-{% include note.html content="The resources used will be based on CareConnect and Digital Diagnostics Services (Pathology) profiles. Order and OrderResponse are used un-profiled." %}
-
-## FHIR Messaging ##
-
-## 2. Task Completed (acknowledge test results) ##
-
-As shown below the `OrderResponse` follows an `Order` but this is not present in the UHS scenario as a physical FHIR resource. It is part of the business process and found within applications. We need to have an `Order` to respond to and so we create one.
-
 <p style="text-align:center;"><img src="images/build/UHS BPMN Basic.jpg" alt="Tasks" title="View Results Screen" style="width:75%"></p>
 <br><br>
 
-The `Order` details what action is to be done, from the UHS scenario this is `Acknowledge test results`. This is a bit ambiguous to match to a term to a code in a CodeSystem, so instead we used the action that is being performed 'Review of patient laboratory test report' which has a SNOMED CT of `324861000000109` (other more  codes can be used if required).
+FHIR has a number of [exchange patterns](design_exchange_patterns.html), first we will look at RESTful API approach to the solution and lastly we will look at FHIR Messaging.
 
-A FHIR Message centres around a [FHIR Bundle](https://hl7.org/fhir/DSTU2/bundle.html), the  Bundle contains a list of resources. The first resource being a MessageHeader, this has a code - the message event - that identifies the nature of the request. The other resources depend on the nature of the request with the main resource normally being the second resource in the `Bundle`, for Task Completed this is an `OrderResponse`, i.e.
-
-| Bundle ||
-|--------|-|
-| MessageHeader | code = task-completed|
-| OrderResponse | |
-| Order | |
-| Patient | |
-| Practitioner [0..n] | |
-| Organization [0..n]| |
-| DiagnosticReport | |
-
-This message is sent to the receiving system via a RESTful call:
-
-```
-POST [baseUrl]/Bundle
-```
-
-Example Bundle (/http payload):
-
-<script src="https://gist.github.com/KevinMayfield/469b22b8b8440150158157f3dbc0db17.js"></script>
-
-The `Bundle` is self contained so the receiving has enough information to process the `OrderReponse`. The resources are linked by references, e.g. the OrderResponse resource has a link to the Order request
-
-```xml
-<request>
-   <reference value="#order"/>
-</request>
-```
-
-The # is used to indicate this is an internal reference and within the Bundle we will find a resource with an id of `order` - which is the Order resource. Every reference in the `OrderResponse` is to an internal reference within the bundle. Other resources within the bundle may also contain references, such as the `DiagonosticReport` to results (Observations). If they we're present we would have left them as external references and not included them in the Bundle as our aim is to support handling the `OrderResponse` (and `Order`) not the `DiagnosticReport`.
-
-
-## 3. Task Create (create acknowledge results) ##
-
-The message for creating the task is similar to the task completed message with `Order` as the main resource and a different MessageHeader code.
-
-| Bundle ||
-|--------|-|
-| MessageHeader | code = task-create |
-| Order ||
-| Patient ||
-| Practitioner [0..n] ||
-| Organization [0..n]||
-| DiagnosticReport ||
-
-The Message Bundle is sent using the same API but to a different system:
-
-```
-POST [baseUrl]/Bundle
-```
-
-Example Bundle (/http payload):
-
-<script src="https://gist.github.com/KevinMayfield/2bd323a9b25e7a2fe97cfb27a46ebf58.js"></script>
-
+{% include note.html content="The resources used will be based on CareConnect and Digital Diagnostics Services (Pathology) profiles. Order and OrderResponse are used un-profiled." %}
 
 ## FHIR RESTful API ##
 
-You will have noticed the FHIR Message is rather large compared to the initial UHS scenario data set. We could follow [Resource  API](https://en.wikipedia.org/wiki/Resource-oriented_architecture) for which FHIR RESTful API is well suited.
+The FHIR RESTful API assumes a foundation layer of CareConnect API's have been implemented. The foundation layer is:
 
-The answer is you can use either but which one depends on the scenario, if your building a web application working with a FHIR Server then FHIR RESTful API would be ideal but sending an `OrderResponse` across boundaries maybe better suited to FHIR Messaging.
+| Resource |
+|----------|
+| Patient  |
+| Practitioner |
+| Organization |
+
+If the foundation layer has not been implemented or it is difficult to share API's between systems consider using the FHIR Messaging approach.
+
+## 2. Task Completed (/Rejected) ##
+
+To complete a task we use `OrderResponse`, we indicate we have completed the task by giving the orderStatus a `completed` code.
+
+```xml
+<orderStatus value="completed"/>
+```  
+
+If we wished to reject the order we use the `rejected` code.
+
+```xml
+<orderStatus value="rejected"/>
+```
+
+The resource is sent to:
+
+```
+POST [baseUrl]/OrderResponse
+```
+
+Example Resource (/http payload):
+
+<script src="https://gist.github.com/KevinMayfield/4e8d70f2638fe79f6de4602e3e0b400b.js"></script>
+
+This solution wouldn't have worked with the UHS scenario because the referenced `Order` was implied and so isn't a resource that can be referred to. To resolve this problem contained the  `Order` resource within the  `OrderResponse`.
+
+We can use a similar approach by using contained resources within the `OrderResponse`  
+
+<script src="https://gist.github.com/KevinMayfield/ceb8afccd694b11889416ad30409f44a.js"></script>
+
+We are using `#order` to indicate a self reference in the OrderResponse, this is the Id of the contained order and the reference to the `Order` in the `OrderResponse`.
 
 
-## 4. Task Create ##
+{% include note.html content="[Guidance on contained resources](http://hl7.org/fhir/DSTU2/references.html#contained)" %}
+
+
+## 3. Task Create ##
 
 To create a task we use the same `Order` resource we used in the previous section and swap the internal references, to references on a FHIR Server. E.g. Within the `Order` resource our reference to the Patient was:
 
@@ -143,7 +119,7 @@ Example Resource (/http payload):
 <script src="https://gist.github.com/KevinMayfield/f9e19566b9e4ad6e577f973d75b35c3c.js"></script>
 
 
-## 5. Task Amendment ##
+## 4. Task Amendment ##
 
 We created an Order in the last step but now we wish the Patients practice to be assigned the task rather than the patients GP. Who is responsible in the Order is held in the `target` reference.
 
@@ -184,45 +160,73 @@ Example Resource (/http payload):
 <script src="https://gist.github.com/KevinMayfield/7cda2922f9aa182c4df6564cdc8ab575.js"></script>
 
 
-## 6. Task Completed (/Rejected) ##
 
-To complete a task we use `OrderResponse`, we indicate we have completed the task by giving the orderStatus a `completed` code.
+## FHIR Messaging ##
+
+## 5. Task Completed (FHIR Messaging) ##
+
+As shown earlier the `OrderResponse` follows an `Order` but this is not present in the UHS scenario as a physical FHIR resource. It is part of the business process and found within applications. We need to have an `Order` to respond to and so we create one.
+
+The `Order` details what action is to be done, from the UHS scenario this is `Acknowledge test results`. This is a bit ambiguous to match to a term to a code in a CodeSystem, so instead we used the action that is being performed 'Review of patient laboratory test report' which has a SNOMED CT of `324861000000109` (other more  codes can be used if required).
+
+A FHIR Message centres around a [FHIR Bundle](https://hl7.org/fhir/DSTU2/bundle.html), the  Bundle contains a list of resources. The first resource being a MessageHeader, this has a code - the message event - that identifies the nature of the request. The other resources depend on the nature of the request with the main resource normally being the second resource in the `Bundle`, for Task Completed this is an `OrderResponse`, i.e.
+
+| Bundle ||
+|--------|-|
+| MessageHeader | code = task-completed|
+| OrderResponse | |
+| Order | |
+| Patient | |
+| Practitioner [0..n] | |
+| Organization [0..n]| |
+| DiagnosticReport | |
+
+This message is sent to the receiving system via a RESTful call:
+
+```
+POST [baseUrl]/Bundle
+```
+
+Example Bundle (/http payload):
+
+<script src="https://gist.github.com/KevinMayfield/469b22b8b8440150158157f3dbc0db17.js"></script>
+
+The `Bundle` is self contained so the receiving has enough information to process the `OrderReponse`. The resources are linked by references, e.g. the OrderResponse resource has a link to the Order request
 
 ```xml
-<orderStatus value="completed"/>
-```  
-
-If we wished to reject the order we use the `rejected` code.
-
-```xml
-<orderStatus value="rejected"/>
+<request>
+   <reference value="#order"/>
+</request>
 ```
 
-The resource is sent to:
+The # is used to indicate this is an internal reference and within the Bundle we will find a resource with an id of `order` - which is the Order resource. Every reference in the `OrderResponse` is to an internal reference within the bundle. Other resources within the bundle may also contain references, such as the `DiagonosticReport` to results (Observations). If they we're present we would have left them as external references and not included them in the Bundle as our aim is to support handling the `OrderResponse` (and `Order`) not the `DiagnosticReport`.
+
+
+## 6. Task Create (FHIR Messaging) ##
+
+The message for creating the task is similar to the task completed message with `Order` as the main resource and a different MessageHeader code.
+
+| Bundle ||
+|--------|-|
+| MessageHeader | code = task-create |
+| Order ||
+| Patient ||
+| Practitioner [0..n] ||
+| Organization [0..n]||
+| DiagnosticReport ||
+
+The Message Bundle is sent using the same API but to a different system:
 
 ```
-POST [baseUrl]/OrderResponse
+POST [baseUrl]/Bundle
 ```
 
-Example Resource (/http payload):
+Example Bundle (/http payload):
 
-<script src="https://gist.github.com/KevinMayfield/4e8d70f2638fe79f6de4602e3e0b400b.js"></script>
+<script src="https://gist.github.com/KevinMayfield/2bd323a9b25e7a2fe97cfb27a46ebf58.js"></script>
 
-## 7. Task Completed (/Rejected) - UHS Scenario ##
 
-This solution wouldn't have worked with the UHS scenario because the referenced `Order` was implied and so isn't a resource that can be referred to. This is a problem as we have been using the `Order` to link the `OrderResponse` to other resources, with messaging this wasn't a problem as the generated resource was included within the Bundle.
-
-We can use a similar approach by using contained resources within the `OrderResponse`  
-
-<script src="https://gist.github.com/KevinMayfield/ceb8afccd694b11889416ad30409f44a.js"></script>
-
-We're again using `#order` to indicate a self reference in the OrderResponse like we would do in FHIR Messaging and the Order is added to the OrderResponse as a contained resource. We could add more contained resources but those resources can stand by themselves, i.e. they are complete resource.
-
-{% include note.html content="[Guidance on contained resources](http://hl7.org/fhir/DSTU2/references.html#contained)" %}
-
-## 8. FHIR STU3 Task Completed (/Rejected) - UHS Scenario ##
-
-We could have added more contained resources in the previous section, for example to include the Patient resource but Patient is referenced by Order which is in turn referenced by OrderResponse. This would involve nesting contained resources and which is not recommended. (Another reason for using FHIR Messaging)
+## 7. FHIR STU3 Task ##
 
 With HL7 STU3, the Order and OrderResponse we're combined into one resource - [Task](https://www.hl7.org/fhir/task.html)
 Task is part of the workflow stream on FHIR STU3 and is better suited to supporting workflow processes like the UHS scenario.
@@ -237,4 +241,4 @@ Example Resource (/http payload):
 
 <script src="https://gist.github.com/KevinMayfield/516ca6eb42345e879f93a6eb158b5c34.js"></script>
 
-The contained resources aren't profiled and are small. 
+The contained resources aren't profiled and are small.
