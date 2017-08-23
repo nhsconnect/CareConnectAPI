@@ -38,13 +38,13 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 
 <table style="width:100%;max-width:100%"><thead><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr></thead>
 <tr><td colspan="2">In Scope</td></tr>
-<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verfied' NHS Number.</td></tr>
+<tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verified' NHS Number.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an MRN) so that I can find medications for a patient when I don't know the traced and verified NHS Number.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific system so I can build an accurate list of reconciled medications.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know the first issue of a prescription of medication for the patient so that I know how long the patient has been on a particular medication and I can see if this has changed over time.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) know the current issue of a prescription of medication for the patient so that I can include this in my reconciliation and I can identify how this have changed since the initial issue.</td></tr>
 <tr><td style="vertical-align: middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know know the last issue of a prescription of medication for the patient so that I know how long the patient was expected to be issued with that medication.</td></tr>
-<tr><td style="vertical-align:middle;">Medicationn List (View)</td><td>As a Pharmacist (Hospital Services) I want to display patient medications from different sources in a single consolidated view so I can more easily reconcile them into a single list.</td></tr>
+<tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to display patient medications from different sources in a single consolidated view so I can more easily reconcile them into a single list.</td></tr>
 <tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.</td></tr>
 </table>
 <br><br>
