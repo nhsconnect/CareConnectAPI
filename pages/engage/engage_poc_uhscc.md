@@ -4,7 +4,7 @@ keywords: case studies, usecase, user stories, epics, scenarios, business analay
 tags: [userstories,casestudy]
 sidebar: engage_sidebar
 permalink: engage_poc_uhscc.html
-summary: "A case study showing the proposed adoption of FHIR to address needs of University Hospital Southampthon NHS Foundation Trust. (Currently not implemented)"
+summary: "A case study showing the proposed adoption of FHIR to address needs of University Hospital Southampton NHS Foundation Trust. (Currently not implemented)"
 ---
 ## Client's Context ##
 
