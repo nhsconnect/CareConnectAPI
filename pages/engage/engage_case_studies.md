@@ -19,7 +19,7 @@ The development of the Care Connect standard relies on community engagement cura
 
 ## Michael's Story
 
-[Michael's story](http://www.interopen.org/content/IO4%20-%20Proposed%20project%20(Michael's%20story).pdf) has been widely developed, clinical assured and demonstrated at the [INTEROPen summit](https://docs.google.com/document/d/1j1ZKQjXAAxz-Arn9lKQXuwpmlv7kMoo_0jEmqgKQKOg/edit#). This scenario offers a theoretical platform on which to explore how Care Connect profiles may be mapped and a solution defined. While each scenario can support a number of user stories, these are expressed in a far simpler form to a real world counterpart. Also, these examples refer to a solution that is underpinned with some form of interoperability requirement. The translation into user stories doesn't attempt to describe the systems that would be required to support each definition. Currently, this page provides a simple association to a relevant profile that has been documenteted within this implementation guide.
+[Michael's story](http://www.interopen.org/content/IO4%20-%20Proposed%20project%20(Michael's%20story).pdf) has been widely developed, clinical assured and demonstrated at the [INTEROPen summit](https://docs.google.com/document/d/1j1ZKQjXAAxz-Arn9lKQXuwpmlv7kMoo_0jEmqgKQKOg/edit#). This scenario offers a theoretical platform on which to explore how Care Connect profiles may be mapped and a solution defined. While each scenario can support a number of user stories, these are expressed in a far simpler form to a real world counterpart. Also, these examples refer to a solution that is underpinned with some form of interoperability requirement. The translation into user stories doesn't attempt to describe the systems that would be required to support each definition. Currently, this page provides a simple association to a relevant profile that has been documented within this implementation guide.
 
 [Michael's Story](/engage_michaelsstory)
 <br><br>
@@ -27,7 +27,7 @@ The development of the Care Connect standard relies on community engagement cura
  
 Connecting Care is a local electronic patient record that allows health and social care professionals directly involved in your care, to share a summary of your medical record. The pharmacists would like to retrieve medications history of the patient to prepare a list or reconciled medications. They want to know the patient's medications journey. While the initial scenario seemed to be around medication reconciliation, what becomes clear is that it's really around the creation of a consolidated view of medication.
 
-This case study demonstrates the application of the [Care Connect Enagement Process](/engage)
+This case study demonstrates the application of the [Care Connect Engagement Process](/engage)
 
 [Bristol Connecting Care](/engage_poc_bristolcc)
 <br><br>
