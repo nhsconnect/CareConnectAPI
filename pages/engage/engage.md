@@ -46,7 +46,7 @@ The process is broken down into 15 discrete steps that are broadly organised ont
 <tr id="step9"><td>8</td><td>Obtain Approval</td><td>Get Profile to Dataset Mapping reviewed and approved by the client.</td><td></td></tr>
 <tr id="step10"><td>9</td><td>Design API</td><td>Define API Signatures and use of Search Parameters</td><td><ul style="padding-left:1em;"><li style="margin:0;">API Signature</li><li>Search Parameters</li><li>Search Results</li></ul></td></tr>
 <tr id="step11"><td>10</td><td>Document Interaction Flow</td><td>Define the sequence of interactions expected including the function, input parameters, output parameters etc.</td><td><ul style="padding-left:1em;"><li style="margin:0;">API Sequence Diagram</li></ul></td></tr>
-<tr id="step12"><td>11</td><td>Document Additional Technical Context</td><td>Identify any further techincal considerations to aid understanding.</td><td><ul style="padding-left:1em;"><li style="margin:0;">System Diagrams</li><li>Acceptance Criteria</li></ul></td></tr>
+<tr id="step12"><td>11</td><td>Document Additional Technical Context</td><td>Identify any further technical considerations to aid understanding.</td><td><ul style="padding-left:1em;"><li style="margin:0;">System Diagrams</li><li>Acceptance Criteria</li></ul></td></tr>
 <tr><td>12</td><td>Resolve Curation Requirements</td><td>Feedback to INTEROpen any necessary changes to Profile definitions.</td><td><ul style="padding-left:1em;"><li style="margin:0;">Updated Care Connect Standards</li></ul></td></tr>
 </table>
 <br><br>
