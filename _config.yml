@@ -28,6 +28,15 @@ github_editme_path: /edit/develop/
 #twitter_site_hashtags: twitter_site_hashtags
 
 fhir_profile_baseurl: https://fhir-test.hl7.org.uk/StructureDefinition/
+
+nhsd:
+  dds_link: https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/
+  child_health: https://nhsconnect.github.io/Digital-Child-Health/Generated
+  scadw: https://nhsconnect.github.io/FHIR-ADW-Messaging/Generated
+  fgm: https://nhsconnect.github.io/fgm-risk-indication-service/
+  toc: https://nhsconnect.github.io/NHS-FHIR-Doc-eDischarge/Generated/
+  gpconnectmain: https://nhsconnect.github.io/gpconnect/
+
 fhir_profile_ext:
 
 host: 127.0.0.1
@@ -112,6 +121,7 @@ gist:
 site:
   fhirprofiles:
     patient: "[Care Connect Patient](http://www.interopen.org/candidate-profiles/care-connect/CareConnect-Patient-1.html)"
+
 
 gems:
    - jekyll-github-metadata

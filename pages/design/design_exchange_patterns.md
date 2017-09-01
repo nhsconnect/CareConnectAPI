@@ -138,7 +138,7 @@ This type of interface may also be called as **ResourceAPI** and is useful for r
 ### 2.2. NHS FHIR Examples ###
 
 - [CareConnectAPI](explore.html)
-- [GP Connect]("/gpconnect/")
+- [GP Connect]({{ site.nhsd.gpconnectmain }})
   - [Tranche 1-3](https://nhsconnect.github.io/gpconnect/accessrecord_rest.html)
   - [Appointment](https://www.simplifier.net/GPConnect/gpconnect-appointment-1)
   - [Order (Task)](https://data.developer.nhs.uk/fhir/candidaterelease-170816-tasks/Profile.TaskManagement/gpconnect-task-order-1.html)
@@ -245,10 +245,10 @@ To store resources in the Repository
 
 ### 3.2. NHS FHIR Examples ###
 
-- [NHS FGM Service](https://nhsconnect.github.io/fgm-risk-indication-service/)
-- [Social Care Assessment, Discharge and Withdrawal](https://nhsconnect.github.io/FHIR-ADW-Messaging/Generated)
-- [Child Health](https://nhsconnect.github.io/Digital-Child-Health/Generated)
-- [Digital Diagnostics Services (Pathology)](https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/)
+- [NHS FGM Service]({{ site.nhsd.fgm }})
+- [Social Care Assessment, Discharge and Withdrawal]({{ site.nhsd.scadw }})
+- [Child Health]({{ site.nhsd.child_health }})
+- [Digital Diagnostics Services (Pathology)]({{ site.nhsd.dds_link }})
 
 ## 4. Documents ##
 
@@ -319,7 +319,7 @@ A **DocumentAPI** is an extension of the **MessagingAPI** which provides a set o
 
 - [GP Connect](/gpconnect/)
   - [Composition](https://data.developer.nhs.uk/fhir/candidaterelease-170816-getrecord/Profile.GetRecordQueryResponse-HTMLView/gpconnect-carerecord-composition-1.html)
-- [Transfer of Care eDischarge](https://nhsconnect.github.io/NHS-FHIR-Doc-eDischarge/Generated/)
+- [Transfer of Care eDischarge]({{ site.nhsd.toc }})
 
 ## 5. Operations
 <div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="http://www.hl7.org/fhir/dstu2/operations.html"><b>Operations</b></div>

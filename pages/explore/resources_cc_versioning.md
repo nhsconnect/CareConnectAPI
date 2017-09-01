@@ -49,7 +49,7 @@ Taking a similar approach to the [FHIR Maturity Model](http://wiki.hl7.org/index
 
 | Level | Version | Description |
 |-------|---------|-------------|
-| 1 | `X.Y.Z-alpha.n` | Alpha; rapid interations, fail fast, exploration, proof of concepts, approach flexible. | Draft may not have been implemented at all but has been published. |
+| 1 | `X.Y.Z-alpha.n` | Alpha; rapid iterations, fail fast, exploration, proof of concepts, approach flexible. | Draft may not have been implemented at all but has been published. |
 | 2 | `X.Y.Z-beta.n` | Early Beta; rapid iterations, community engaged, scope flexible, high-level approach agreed in principle. | Draft partially implemented in one or more prototype systems. |
 | 3 | `X.Y.Z-beta.n` | Late Beta; slower iterations, community engaged, scope largely agreed, high-level approach fixed. | Draft partially implemented two or more commercial systems. |
 | 4 | `X.Y.Z-rc.n` | Release Candidate; slower iterations, community engaged, scope fixed, detailed approach fixed, no new features, bug fixes and amendments for clinical safety & IG only. | Draft implemented in at least two commercial systems. |
