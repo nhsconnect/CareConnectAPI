@@ -8,7 +8,7 @@ summary: "Glossary of terms used by Care Connect"
 toc: false
 ---
 
-Glossary of common terms !! and abbreviations used though-out the Care Connect documentation site.
+Glossary of common terms and abbreviations used though-out the Care Connect documentation site.
 
 ADT
 : {{site.data.glossary.adt}}
