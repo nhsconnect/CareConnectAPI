@@ -41,6 +41,8 @@ docker run --detach --name=ccri -p 80:80 -e datasource.username=fhirjpa -e datas
 <p style="text-align:center;"><img src="images/deploy/CCRIConfig.png" alt="Docker Config" title="Docker Config" style="width:75%"></p>
 <br><br>
 
+Care Connect Reference Implementation should be availabe at http://127.0.0.1/careconnect-ri/
+
 
 
 
