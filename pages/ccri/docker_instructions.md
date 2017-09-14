@@ -8,7 +8,13 @@ summary: "How to run a local copy of Care Connect Reference Implementation"
 ---
 
 
-## 1. Install Docker ##
+## 1. Install Docker + Kitematic ##
+Docker install of Community edition
+https://docs.docker.com/engine/installation/
+Create a Docker account and login to the account to use Kitematic
+
+Kitematic install 
+https://kitematic.com/
 
 ## 2. Run Docker ##
 
@@ -35,7 +41,7 @@ Within Kitematic the image should be visible. Screen shot of settings below:
 Now start the Care Connect Reference Implemenation
 
 ```
-docker run --detach --name=ccri -p 80:80 -e datasource.username=fhirjpa -e datasource.password=fhirjpa -e datasource.host=//ccrisql -e datasource.driver=com.mysql.jdbc.Driver -e datasource.path=3306/careconnect -e datasource.vendor=mysql -e datasource.showSql=true -e datasource.showDdl=true -e datasource.cleardown.cron="0 19 21 * * *" -e datasource.dialect=org.hibernate.dialect.MySQL57Dialect --link ccrisql ccri
+docker run --detach --name=ccri -p 80:80 -e datasource.username=fhirjpa -e datasource.password=fhirjpa -e datasource.host=//ccrisql -e datasource.driver=com.mysql.jdbc.Driver -e datasource.path=3306/careconnect -e datasource.vendor=mysql -e datasource.showSql=true -e datasource.showDdl=true -e datasource.cleardown.cron="0 19 21 * * *" -e datasource.dialect=org.hibernate.dialect.MySQL57Dialect --link ccrisql thorlogic/ccri
 ```
 
 <p style="text-align:center;"><img src="images/deploy/CCRIConfig.png" alt="Docker Config" title="Docker Config" style="width:75%"></p>
