@@ -1,7 +1,7 @@
 ---
 title: Docker Image
-keywords: development
-tags: [development]
+keywords: deployment
+tags: [deployment]
 sidebar: overview_sidebar
 permalink: ccri_docker.html
 summary: "How to run a local copy of Care Connect Reference Implementation"
