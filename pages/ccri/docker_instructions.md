@@ -13,7 +13,7 @@ Docker install of Community edition
 https://docs.docker.com/engine/installation/
 Create a Docker account and login to the account to use Kitematic
 
-Kitematic install 
+Kitematic install
 https://kitematic.com/
 
 ## 2. Run Docker ##
@@ -30,7 +30,7 @@ docker pull mysql
 Then start mysql image [Note: this exposes 43306 on the local, so mysql workbench can connect on this port]
 
 ```
-docker run -detach --name=ccrisql --env="MYSQL_ROOT_PASSWORD=mypassword" --env="MYSQL_DATABASE=careconnect" --env="MYSQL_USER=fhirjpa" --env="MYSQL_PASSWORD=fhirjpa" -p 43306:3306 mysql
+docker run -detach --name=ccrisql --env="MYSQL_ROOT_PASSWORD=mypassword" --env="MYSQL_DATABASE=careconnect" --env="MYSQL_USER=fhirjpa" --env="MYSQL_PASSWORD=fhirjpa" -p 43306:3306 mysql --character-set-server=utf8 --collation-server=utf8_bin
 ```
 
 Within Kitematic the image should be visible. Screen shot of settings below:
