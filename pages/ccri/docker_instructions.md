@@ -75,3 +75,16 @@ docker tag ccri thorlogic/ccri
 ```
 docker push thorlogic/ccri
 ```
+
+To view tomcat logs, open a shell to ccri container
+
+```
+docker exec -it ccri /bin/bash
+```
+
+Navigate into logs folder and run tail command on the log file. This is usually catalina.out, if not use the file for the current day.
+
+```
+cd logs
+tail -f catalina.out
+```
