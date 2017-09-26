@@ -46,11 +46,20 @@ input {
   }
 }
 
-# The filter part of this file is commented out to indicate that it is
-# optional.
-# filter {
-#
-# }
+filter {
+  if [source] =~ /^\/Library\/Tomcat\/logs\/catalina.*/ {
+    mutate { replace =>  { type => "catalina"}}
+    grok {
+    match => { "message" => "%{TOMCATLOG}" }
+  }
+  }
+  if [source] =~ /^\/Library\/Tomcat\/logs\/localhost_access.*/ {
+    mutate { replace =>  { type => "access"}}
+    grok {
+  match => [ "message", "%{IP:client_ip} %{USER:ident} %{USER:auth} \[%{HTTPDATE:apache_timestamp}\] \"%{WORD:method} /%{NOTSPACE:request_page} HTTP/%{NUMBER:http_version}\" %{NUMBER:server_response} " ]
+}
+  }
+}
 
 output {
   elasticsearch {
@@ -90,5 +99,8 @@ In filebeat.yml
 
 ```
 paths:
-    - /Library/Tomcat/logs/catlina*.*
+    - /Library/Tomcat/logs/catalina.*.log
+    - /Library/Tomcat/logs/localhost_access_log.*.txt
 ```
+
+Also change the configuration to point to logstash rather than elastic.
