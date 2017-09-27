@@ -51,7 +51,7 @@ filter {
   if [source] =~ /^\/Library\/Tomcat\/logs\/catalina.*/ {
     mutate { replace =>  { type => "catalina"}}
     grok {
-    match => { "message" => "%{MONTHDAY}-%{MONTH}-%{YEAR} %{TIME} %{LOGLEVEL:loglevel} %{SYSLOG5424SD:syslog} %{BASE16FLOAT}%{JAVACLASS:javaclass}" }
+    match => { "message" => "%{MONTHDAY}-%{MONTH}-%{YEAR} %{TIME} %{LOGLEVEL:loglevel} %{SYSLOG5424SD:syslog} %{JAVACLASS:javaclass}" }
   }
   }
   if [source] =~ /^\/Library\/Tomcat\/logs\/localhost_access.*/ {
