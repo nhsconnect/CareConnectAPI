@@ -37,7 +37,8 @@ Start command
 ./bin/logstash -f logstash.conf
 ```
 
-The logstash.conf needs to be created (this is copied from the beats install instructions)
+The logstash.conf needs to be created (this is copied from the beats install instructions). When constructing the grok matches this site was useful http://grokconstructor.appspot.com/
+
 
 ```
 input {
@@ -50,7 +51,7 @@ filter {
   if [source] =~ /^\/Library\/Tomcat\/logs\/catalina.*/ {
     mutate { replace =>  { type => "catalina"}}
     grok {
-    match => { "message" => "%{TOMCATLOG}" }
+    match => { "message" => "%{MONTHDAY}-%{MONTH}-%{YEAR} %{TIME} %{LOGLEVEL:loglevel} %{SYSLOG5424SD:syslog} %{BASE16FLOAT}%{JAVACLASS:javaclass}" }
   }
   }
   if [source] =~ /^\/Library\/Tomcat\/logs\/localhost_access.*/ {
