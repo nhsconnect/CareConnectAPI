@@ -66,7 +66,7 @@ Fetches a bundle of all `Patient` resources for the specified patient or search 
 <th style="width:30%;">Path</th>
 </tr>
 <tr>
-<td><code class="highlighter-rouge">adddress-postcode</code></td>
+<td><code class="highlighter-rouge">adddress-postalcode</code></td>
 <td><code class="highlighter-rouge">string</code></td>
 <td>A postalCode specified in an address</td>
 <td>MAY</td>
@@ -145,7 +145,7 @@ Client systems SHALL provide at least two parameters of differing types, unless 
 | `telecom` | `token` | The value in any kind of telecom details of the patient |  | Patient.telecom |
 -->
 
-{% include custom/search.nopat.string.html para="2.1.1." resource="Patient" content="address-postcode"  example="NG10%201ZZ" text1="Post Code" text2="NG10 1ZZ" %}
+{% include custom/search.nopat.string.html para="2.1.1." resource="Patient" content="address-postalcode"  example="NG10%201ZZ" text1="Post Code" text2="NG10 1ZZ" %}
 
 {% include custom/search.nopat.date.plus.html para="2.1.2." content="Patient" name="birthdate" %}
 
