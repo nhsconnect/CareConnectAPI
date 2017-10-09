@@ -38,16 +38,27 @@ Within Kitematic the image should be visible. Screen shot of settings below:
 <p style="text-align:center;"><img src="images/deploy/MYSQLConfig.png" alt="Docker Config" title="Docker Config" style="width:75%"></p>
 <br><br>
 
-Now start the Care Connect Reference Implemenation
+Now start the Care Connect Reference Implementation
 
 ```
-docker run --detach --name=ccri -p 80:80 -e datasource.username=fhirjpa -e datasource.password=fhirjpa -e datasource.host=//ccrisql -e datasource.driver=com.mysql.jdbc.Driver -e datasource.path=3306/careconnect -e datasource.vendor=mysql -e datasource.showSql=true -e datasource.showDdl=true -e datasource.cleardown.cron="0 19 21 * * *" -e datasource.dialect=org.hibernate.dialect.MySQL57Dialect --link ccrisql thorlogic/ccri
+docker run --detach --name=ccri -p 8080:8080 -e datasource.username=fhirjpa -e datasource.password=fhirjpa -e datasource.host=//ccrisql -e datasource.driver=com.mysql.jdbc.Driver -e datasource.path=3306/careconnect?autoReconnect=true -e datasource.vendor=mysql -e datasource.showSql=true -e datasource.showDdl=true -e datasource.cleardown.cron="0 19 21 * * *" -e datasource.dialect=org.hibernate.dialect.MySQL57Dialect -e datasource.ui.serverBase=http://localhost/careconnect-ri/STU3 --link ccrisql thorlogic/ccri
+```
+
+Test install with curl command
+```
+curl -X GET -v -H 'Accept: application/xml+fhir' 'http://localhost:8080/careconnect-ri/STU3/Patient/1'
 ```
 
 <p style="text-align:center;"><img src="images/deploy/CCRIConfig.png" alt="Docker Config" title="Docker Config" style="width:75%"></p>
 <br><br>
 
-Care Connect Reference Implementation should be availabe at http://127.0.0.1/careconnect-ri/
+Now start the Care Connect Reference Gateway
+
+```
+docker run --detach --name=ccrigateway -p 80:80 -e datasource.ui.serverBase=http://localhost/careconnect/STU3 --link ccri thorlogic/ccrigateway 
+```
+
+Care Connect Reference Implementation should be availabe at http://127.0.0.1/careconnect/
 
 
 
