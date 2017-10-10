@@ -1,5 +1,5 @@
 ---
-title: Individuals | Patient
+title: Individuals | Patient STU3
 keywords: getcarerecord, structured, rest, patient
 tags: [rest, fhir, identification,api]
 sidebar: accessrecord_rest_sidebar
@@ -173,10 +173,10 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -v '[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -v 'http://194.189.27.193/careconnect/STU3/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number%7C9876543210'" %}
 
-{% include custom/search.response.headers.html resource="Patient"  %}
+<h3 id="32-response-headers">3.2 Query Response</h3>
+#### 3.2 Explore the Response ####
 
-#### 3.2.2 Http Body ####
+Explore the Reference Implementation Responce by clicking [Patient NHS number search]{http://194.189.27.193/careconnect/search?serverId=home&pretty=true&resource=Patient&param.0.qualifier=&param.0.0=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number&param.0.1=9876543210&param.0.name=identifier&param.0.type=token&sort_by=&sort_direction=&resource-search-limit=}
 
-<script src="https://gist.github.com/KevinMayfield/93fcc2d0568c92477bafa1fd7ba753f1.js"></script>
