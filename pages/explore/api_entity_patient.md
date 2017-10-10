@@ -178,12 +178,13 @@ Return all Patient resources with a NHS Number 9876543210, the format of the res
 <h3 id="32-response-headers">3.2 Query Response</h3>
 #### 3.2 Explore the Response ####
 
-Explore the Reference Implementation Responce by clicking below
+Explore the response in XML & JSON on the Reference Implementation below
 <div class="language-http highlighter-rouge">
 <pre class="highlight"><code><span class="err">
 <b>Reference Implementation</b>
 </span></code>
-<a target="_blank" href="http://194.189.27.193/careconnect/search?serverId=home&pretty=true&resource=Patient&param.0.qualifier=&param.0.0=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number&param.0.1=9876543210&param.0.name=identifier&param.0.type=token&sort_by=&sort_direction=&resource-search-limit=">Patient NHS number search</a>
+<a target="_blank" href="http://194.189.27.193/careconnect/search?serverId=home&pretty=true&resource=Patient&param.0.qualifier=&param.0.0=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number&param.0.1=9876543210&param.0.name=identifier&param.0.type=token&sort_by=&sort_direction=&resource-search-limit=&encoding=xml">Patient NHS number search with XML response</a>
+<a target="_blank" href="http://194.189.27.193/careconnect/search?serverId=home&pretty=true&resource=Patient&param.0.qualifier=&param.0.0=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number&param.0.1=9876543210&param.0.name=identifier&param.0.type=token&sort_by=&sort_direction=&resource-search-limit=&encoding=json">Patient NHS number search with JSON response</a>
 </pre>
 </div>
 
