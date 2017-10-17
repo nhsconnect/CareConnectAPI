@@ -9,7 +9,7 @@ summary: Measurements and simple assertions made about a patient, device or othe
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Observation" page="CareConnect-Observation-1" fhirlink="[Observation](https://www.hl7.org/fhir/DSTU2/observation.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Observation" page="CareConnect-Observation-1" fhirname="Observation" fhirlink="observation.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -29,7 +29,7 @@ Fetches a bundle of all `Observation` resources for the specified patient.
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="Observation"     link="https://www.hl7.org/fhir/DSTU2/observation.html#search" %}
+{% include custom/search.parameters.html resource="Observation" link="observation.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
@@ -94,6 +94,9 @@ Systems SHOULD support the following search combinations:
 {% include custom/search.response.html resource="Observation" %}
 
 ## 3. Example ##
+
+{% include custom/search.warn_ri_banner.html %}
+
 
 ### 3.1. Request Query ###
 

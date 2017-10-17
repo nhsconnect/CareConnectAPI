@@ -15,23 +15,23 @@ summary: "Overview of the Resources section"
 
 ### 1.1 CareConnectAPI Requirements ###
 
-- SHALL support HL7 FHIR DSTU2 version 1.0.2.
+- SHALL support HL7 FHIR STU3 version 1.0.0.
 - SHALL support the CareConnect Patient resource profile.
 - SHALL support at least one additional resource profile from the list of CareConnect Profiles
-- SHALL Implement REST behavior according to the [FHIR specification](http://www.hl7.org/fhir/dstu2/http.html)
-- Resources SHALL identify the CareConnect profile supported as part of the [FHIR Base Resource](https://hl7.org/fhir/DSTU2/resource-definitions.html#Resource.meta)
-- SHALL support XML **or** JSON formats for all CareConnectAPI interactions and SHOULD support both formats.
+- SHALL Implement REST behavior according to the [FHIR specification]({{ site.hl7_baseurl.stu3 }}http.html){:target="_blank"}
+- Resources SHALL identify the CareConnect profile supported as part of the [FHIR Base Resource](https://hl7.org/fhir/STU3/resource-definitions.html#Resource.meta){:target="_blank"}
+- SHALL support XML **or** JSON formats for all CareConnect API interactions and SHOULD support both formats.
 
 
 ### 1.2 FHIR Conformance ###
 
 SHALL declare a Conformance identifying the list of profiles, operations, search parameter supported.
 
-In order to be a compliant FHIR server, client systems need to expose a valid FHIR [Conformance](https://www.hl7.org/fhir/DSTU2/conformance.html) profile. See also [Care Connect API FHIR conformance profile](api_foundation_conformance.html).
+In order to be a compliant FHIR server, client systems need to expose a valid FHIR [Capability]({{ site.hl7_baseurl.stu3 }}capabilitystatement.html){:target="_blank"} profile. See also [Care Connect API FHIR Capability profile](api_foundation_capability.html).
 
 ### 1.3 NHS Number ###
 
-Only verified NHS Number SHALL be used with CareConnect profiles. This can be achieved using a spine accredited system, a [Demographics Batch Service (DBS)](https://developer.nhs.uk/library/systems/demographic-batch-service-dbs/) batch-traced record (CSV), or using a [Spine Mini Services Provider (HL7v3)](https://nhsconnect.github.io/spine-smsp/) to verify the NHS Number.
+Only verified NHS Number SHALL be used with CareConnect profiles. This can be achieved using a spine accredited system, a [Demographics Batch Service (DBS)](https://developer.nhs.uk/library/systems/demographic-batch-service-dbs/){:target="_blank"} batch-traced record (CSV), or using a [Spine Mini Services Provider (HL7v3)](https://nhsconnect.github.io/spine-smsp/){:target="_blank"} to verify the NHS Number.
 
 {% include custom/contribute.html content="Get in touch with careconnect@interopen.org to improve the Prerequisites." %}
 
@@ -122,6 +122,7 @@ This section looks at the Care Connect profile API's covered within this impleme
 </tr>
 <tr>
 <td><a href="api_entity_practitioner.html">Practitioner</a> (Problem)</td>
+<td><a href="api_entity_practitioner.html">PractitionerRole</a> (Problem)</td>
 <td><a href="api_entity_location.html">Location</a></td>
 <td>&nbsp;</td>
 </tr>
@@ -135,12 +136,12 @@ This section looks at the Care Connect profile API's covered within this impleme
 <th style="width:33%;"></th>
 </tr>
 <tr id="conformanced">
-<th>Conformance</th>
+<th>Capability</th>
 <th>Terminology</th>
 <th>&nbsp;</th>
 </tr>
 <tr>
-<td><a href="api_foundation_conformance.html">Conformance</a></td>
+<td><a href="api_foundation_capability.html">Capability Statement</a></td>
 <td><a href="api_foundation_valueset.html">ValueSet</a></td>
 <td>&nbsp;</td>
 </tr>

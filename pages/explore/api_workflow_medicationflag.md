@@ -8,7 +8,7 @@ summary: Prospective warnings of potential medication issues when providing care
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Medication Flag" page="CareConnect-Medication-Flag-1" fhirlink="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Medication Flag" page="CareConnect-Medication-Flag-1" fhirname="Flag" fhirlink="flag.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 
 
@@ -31,7 +31,7 @@ Search for all flag resources for a patient. Fetches a bundle of all `Flag` reso
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="Flag"     link="https://www.hl7.org/fhir/DSTU2/flag.html#search" %}
+{% include custom/search.parameters.html resource="Flag" link="flag.html#search" %}
 
 
 | Name | Type | Description | Conformance | Path |

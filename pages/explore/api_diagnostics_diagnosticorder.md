@@ -8,7 +8,7 @@ summary: A record of a request for a diagnostic investigation service to be perf
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.nonecc.html resource="DiagnosticOrder" resourceurl="https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/Profile.DDS-Request/dds-request-1.html" page="" fhirlink="[DiagnosticOrder](https://www.hl7.org/fhir/DSTU2/DiagnosticOrder.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.nonecc.html resource="DiagnosticOrder" resourceurl="https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/Profile.DDS-Request/dds-request-1.html" page="" fhirname="DiagnosticOrder" fhirlink="DiagnosticOrder.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 [SKETCH profile. Not official]
 
@@ -30,7 +30,7 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="DiagnosticOrder"     link="https://www.hl7.org/fhir/DSTU2/DiagnosticOrder.html#search" %}
+{% include custom/search.parameters.html resource="DiagnosticOrder" link="DiagnosticOrder.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">

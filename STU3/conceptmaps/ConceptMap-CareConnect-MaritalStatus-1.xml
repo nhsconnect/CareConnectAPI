@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+	<url value="https://fhir.hl7.org.uk/STU3/ConceptMap/CareConnect-MaritalStatus-1"/>
+	<version value="1.0.0"/>
+	<name value="Concept Map - Care Connect Marital Status"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A Concept Map from ValueSet Marital Status to NHS Data Dictionary Person Marital Status to aid interpretation."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<sourceReference>
+		<reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MaritalStatus-1"/>
+	</sourceReference>
+	<targetReference>
+		<reference value="https://fhir.nhs.uk/STU3/ValueSet/NHSDataDictionary-PersonMaritalStatus-1"/>
+	</targetReference>
+	<group>
+		<source value="http://hl7.org/fhir/v3/MaritalStatus"/>
+		<target value="https://fhir.hl7.org.uk/STU3/NHSDataDictionary-PersonMaritalStatus-1"/>
+		<element>
+			<code value="U"/>
+			<display value="unmarried"/>
+			<target>
+				<code value="S"/>
+				<display value="Single"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="D"/>
+			<display value="Divorced"/>
+			<target>
+				<code value="D"/>
+				<display value="Divorced/Person whose Civil Partnership has been dissolved"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="L"/>
+			<display value="Legally Separated"/>
+			<target>
+				<code value="P"/>
+				<display value="Separated"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="M"/>
+			<display value="Married"/>
+			<target>
+				<code value="M"/>
+				<display value="Married/Civil Partner"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="S"/>
+			<display value="Never Married"/>
+			<target>
+				<code value="S"/>
+				<display value="Single"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="W"/>
+			<display value="Widowed"/>
+			<target>
+				<code value="W"/>
+				<display value="Widowed/Surviving Civil Partner"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+	</group>
+	<group>
+		<source value="http://hl7.org/fhir/v3/NullFlavor"/>
+		<target value="https://fhir.hl7.org.uk/STU3/NHSDataDictionary-PersonMaritalStatus-1"/>
+		<element>
+			<code value="UNK"/>
+			<display value="unknown"/>
+			<target>
+				<code value="N"/>
+				<display value="Not disclosed"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+	</group>
+</ConceptMap>

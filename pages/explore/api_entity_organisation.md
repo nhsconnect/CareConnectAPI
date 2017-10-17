@@ -8,7 +8,7 @@ summary: A formally or informally recognized grouping of people or organizations
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Organization" page="CareConnect-Organization-1" fhirlink="[Organization](https://www.hl7.org/fhir/DSTU2/organization.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Organization" page="CareConnect-Organization-1" fhirname="Organization" fhirlink="organization.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -28,7 +28,7 @@ Fetches a bundle of all `Organization` resources for the specified search criter
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="Organization"     link="https://www.hl7.org/fhir/DSTU2/organization.html#search)" %}
+{% include custom/search.parameters.html resource="Organization" link="organization.html#search)" %}
 
 
 <table style="min-width:100%;width:100%">
@@ -63,6 +63,9 @@ Fetches a bundle of all `Organization` resources for the specified search criter
 {% include custom/search.response.html resource="Organization" %}
 
 ## 3. Example ##
+
+{% include custom/search.warn_ri_banner.html %}
+
 
 ### 3.1 Request Query ###
 

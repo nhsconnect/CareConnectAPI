@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-ConditionCategory-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CareConnect-ConditionCategory-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Condition Category"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem to identify the category of a condition."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="complaint"/>
+		<display value="Complaint"/>
+	</concept>
+	<concept>
+		<code value="symptom"/>
+		<display value="Symptom"/>
+	</concept>
+	<concept>
+		<code value="finding"/>
+		<display value="Finding"/>
+	</concept>
+	<concept>
+		<code value="diagnosis"/>
+		<display value="Diagnosis"/>
+	</concept>
+	<concept>
+		<code value="problem"/>
+		<display value="Problem"/>
+	</concept>
+	<concept>
+		<code value="need"/>
+		<display value="Need"/>
+	</concept>
+</CodeSystem>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-NHSNumberVerificationStatus-1"/>
+	<extension url="http://hl7.org/fhir/StructureDefinition/valueset-sourceReference">
+		<valueUri value="http://www.datadictionary.nhs.uk/data_dictionary/data_field_notes/n/nhs/nhs_number_status_indicator_code_de.asp?shownav=1"/>
+	</extension>
+	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NHSNumberVerificationStatus-1"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113883.2.1.3.2.4.17.70"/>
+	</identifier>
+	<version value="1.0.0"/>
+	<name value="Care Connect NHS Number Verification Status"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A ValueSet that identifies the trace status of the NHS number.  The CodeSystem is comprised of codes from the NHS Data Model and Dictionary: NHS Number Status Indicator Code."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<compose>
+		<include>
+			<system value="https://fhir.hl7.org.uk/STU3/CareConnect-NHSNumberVerificationStatus-1"/>
+		</include>
+	</compose>
+</ValueSet>

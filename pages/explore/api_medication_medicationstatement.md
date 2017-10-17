@@ -8,7 +8,7 @@ summary: A record of a medication that is being consumed by a patient. A Medicat
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Medication Statement" page="CareConnect-MedicationStatement-1" fhirlink="[MedicationStatement](https://www.hl7.org/fhir/DSTU2/medicationstatement.html)" content="Bristol Connecting Care POC" userlink="engage_poc_bristolcc.html" %}
+{% include custom/fhir.reference.html resource="Medication Statement" page="CareConnect-MedicationStatement-1" fhirname="MedicationStatement" fhirlink="medicationstatement.html" content="Bristol Connecting Care POC" userlink="engage_poc_bristolcc.html" %}
 
 ## 1. Read ##
 
@@ -28,7 +28,7 @@ Fetches a bundle of all `MedicationStatement` resources for the specified patien
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="MedicationStatement"     link="https://www.hl7.org/fhir/DSTU2/medicationstatement.html#search" %}
+{% include custom/search.parameters.html resource="MedicationStatement" link="medicationstatement.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
@@ -77,6 +77,9 @@ Systems SHOULD support the following search combinations:
 {% include custom/search.response.html resource="MedicationStatement" %}
 
 ## 3. Example ##
+
+{% include custom/search.warn_ri_banner.html %}
+
 
 ### 3.1 Request Query ###
 

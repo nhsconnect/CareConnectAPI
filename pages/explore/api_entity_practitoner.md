@@ -9,7 +9,7 @@ summary: A person who is directly or indirectly involved in the provisioning of 
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Practitioner" page="CareConnect-Practitioner-1" fhirlink="[Practitioner](https://www.hl7.org/fhir/DSTU2/practitioner.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Practitioner" page="CareConnect-Practitioner-1" fhirname="Practitioner" fhirlink="practitioner.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 
 ## 1. Read ##
@@ -29,7 +29,7 @@ Fetches a bundle of all `Practitioner` resources for the specified search criter
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="Practitioner"     link="https://www.hl7.org/fhir/DSTU2/practitioner.html#search" %}
+{% include custom/search.parameters.html resource="Practitioner"     link="practitioner.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
@@ -73,6 +73,8 @@ Return all Practitioner resources that have a ODS Practitioner/Consultant of G81
 {% include custom/search.response.html resource="Practitioner" %}
 
 ## 3. Example ##
+
+<b>Reference Implementation examples coming soon</b>
 
 ### 3.1 Request Query ###
 Return all Practitioner resources with a GP Code of G8133438, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.

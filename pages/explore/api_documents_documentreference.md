@@ -8,7 +8,7 @@ summary: A DocumentReference resource is used to describe a document that is mad
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.nonecc.html resource="DocumentReference" resourceurl= "https://data.developer.nhs.uk/fhir/nrls-v1-draft-a/Profile.RecordLocator/nrls-documentreference-1-0.html" page="" fhirlink="[DocumentReference](https://www.hl7.org/fhir/DSTU2/documentreference.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.nonecc.html resource="DocumentReference" resourceurl= "https://data.developer.nhs.uk/fhir/nrls-v1-draft-a/Profile.RecordLocator/nrls-documentreference-1-0.html" page="" fhirname="DocumentReference" fhirlink="documentreference.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 [SKETCH profile. Not official]
 
@@ -30,7 +30,7 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="DocumentReference"     link="https://www.hl7.org/fhir/DSTU2/documentreference.html#search" %}
+{% include custom/search.parameters.html resource="DocumentReference" link="documentreference.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">

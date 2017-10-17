@@ -9,7 +9,8 @@ summary: A value set specifies a set of codes drawn from one or more code system
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.referencemin.html resource="" page="" fhirlink="[ValueSet](http://www.hl7.org/fhir/dstu2/valueset.html)" content="User Stories" userlink="" %}
+
+{% include custom/fhir.reference.html resource="" page="" fhirname="ValueSet" fhirlink="valueset.html" content="-" userlink="-" %}
 
 
 ## 1. Read ##
@@ -21,6 +22,8 @@ GET [baseUrl]/ValueSet/[id]</div>
 
 ## 2. Example ##
 
+{% include custom/search.warn_ri_banner.html %}
+
 ### 2.1 Request Query ###
 
 Return the ValueSet for Care Connect Administrative Gender. Replace 'baseUrl' with the actual base Url of the FHIR Server.
@@ -29,9 +32,7 @@ Return the ValueSet for Care Connect Administrative Gender. Replace 'baseUrl' wi
 
 {% include custom/embedcurl.html title="Read Care Connect Administrative Gender ValueSet" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/ValueSet/CareConnect-AdministrativeGender-1'" %}
 
-{% include custom/search.response.headers.html resource="ValueSet"  %}
-
-### 2.3 Response Body ###
+### 2.2 Response Body ###
 
 ```xml
 <ValueSet xmlns="http://hl7.org/fhir">

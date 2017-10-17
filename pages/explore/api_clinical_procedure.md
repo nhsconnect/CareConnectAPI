@@ -8,7 +8,7 @@ summary: An action that is or was performed on a patient. This can be a physical
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Procedure" page="CareConnect-Procedure-1" fhirlink="[Procedure](https://www.hl7.org/fhir/DSTU2/procedure.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Procedure" page="CareConnect-Procedure-1" fhirname="Procedure" fhirlink="procedure.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 
 ## 1. Read ##
@@ -29,7 +29,7 @@ Fetches a bundle of all `Procedure` resources for the specified patient.
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="Procedure"     link="https://www.hl7.org/fhir/DSTU2/procedure.html#search" %}
+{% include custom/search.parameters.html resource="Procedure" link="procedure.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
@@ -76,6 +76,8 @@ Systems SHALL support the following search combinations:
 {% include custom/search.response.html resource="Procedure" %}
 
 ## 3. Example ##
+
+{% include custom/search.warn_ri_banner.html %}
 
 ### 3.1 Request Query ###
 
