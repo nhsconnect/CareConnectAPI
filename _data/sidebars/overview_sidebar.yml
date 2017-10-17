@@ -109,10 +109,10 @@ entries:
             url: /api_entity_patient.html
             output: web
           - title: Practitoner
-            url: /api_entity_practitoner.html
+            url: /api_entity_practitioner.html
             output: web
           - title: Practitoner Role
-            url: /api_entity_practitoner_role.html
+            url: /api_entity_practitioner_role.html
             output: web
       - title: Workflow
         output: web

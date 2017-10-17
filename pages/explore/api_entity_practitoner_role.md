@@ -3,13 +3,13 @@ title: Individuals | Practitioner Role
 keywords: usecase, Practitioner, Practioner Role, Role
 tags: [rest, fhir, identification,api]
 sidebar: accessrecord_rest_sidebar
-permalink: api_entity_practitoner_role.html
+permalink: api_entity_practitioner_role.html
 summary: The location and types of services that Practitioners are able to provide for an organisation.
 ---
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Practitioner" page="CareConnect-Practitioner-1" fhirname="Practitioner Role" fhirlink="practitionerrole.html" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="" page="" fhirname="Practitioner Role" fhirlink="practitionerrole.html" content="" userlink="" %}
 
 
 ## 1. Read ##
@@ -29,7 +29,7 @@ Fetches a bundle of all `Practitioner` resources for the specified search criter
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="Practitioner"     link="practitionerrole.html#search" %}
+{% include custom/search.parameters.html resource="Practitioner Role"  link="practitionerrole.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">

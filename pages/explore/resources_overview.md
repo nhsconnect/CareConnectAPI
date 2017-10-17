@@ -122,8 +122,12 @@ This section looks at the Care Connect profile API's covered within this impleme
 </tr>
 <tr>
 <td><a href="api_entity_practitioner.html">Practitioner</a> (Problem)</td>
-<td><a href="api_entity_practitioner.html">PractitionerRole</a> (Problem)</td>
 <td><a href="api_entity_location.html">Location</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="api_entity_practitioner_role.html">PractitionerRole</a> (Problem)</td>
+<td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 </table>
