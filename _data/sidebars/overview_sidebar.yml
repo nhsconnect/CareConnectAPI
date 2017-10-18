@@ -1,6 +1,6 @@
 entries:
-- title: STU3 | Care Connect | 
-  product: STU3 | Care Connect | 
+- title: STU3 | Care Connect |
+  product: STU3 | Care Connect |
   version: 1.6.0-alpha.0
   levels: one
   folders:
@@ -108,10 +108,10 @@ entries:
           - title: Patient
             url: /api_entity_patient.html
             output: web
-          - title: Practitoner
+          - title: Practitioner
             url: /api_entity_practitioner.html
             output: web
-          - title: Practitoner Role
+          - title: Practitioner Role
             url: /api_entity_practitioner_role.html
             output: web
       - title: Workflow
@@ -128,6 +128,9 @@ entries:
           output: web
         - title: ValueSet
           url: /api_foundation_valueset.html
+          output: web
+        - title: CodeSystem
+          url: /api_foundation_codesystem.html
           output: web
       - title: API Guidance | FHIR&reg;
         output: web
@@ -153,7 +156,7 @@ entries:
     - title: Overview
       url: /design.html
       output: web
-      
+
       subfolders:
       - title: Design
         url: /design_overview.html
@@ -174,7 +177,7 @@ entries:
         - title: Security
           url: /design_security.html
           output: web
-    
+
       - title: Reference Implementation
         url: /build_ri_overview.html
         output: web
@@ -191,7 +194,7 @@ entries:
           - title: Feedback
             url: /build_ri_feedback.html
             output: web
-      
+
       - title: Build
         output: web
         subfolderitems:
