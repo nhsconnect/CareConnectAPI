@@ -108,7 +108,7 @@ entries:
           - title: Patient
             url: /api_entity_patient.html
             output: web
-          - title: Practitoner
+          - title: Practitioner
             url: /api_entity_practitioner.html
             output: web
           - title: Practitoner Role
