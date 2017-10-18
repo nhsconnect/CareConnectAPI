@@ -11,12 +11,12 @@ summary: "Provides an overview and background to the Reference Implementation an
 
 # Reference Implementation #
 
-The Reference Implementation allows developers to interact with Care Connect API profiles through server calls and an interactive website overlay. The profiles exposed through the Reference Implementation match the Care Connect profiles released and provide synthetic test data to aid the process of designing and building Care Connect APIs. Therefore, the aim of such a Reference Implementation is to:
-- provide a code base as a Reference Implementation for a Care Connect FHIR API;
-- expose the Care Connect API – in order that calls can be made; 
-- provide clinically sensible search results (test data), based on predefined search parameters;
-- provide a Care Connect API interface, that in its response includes Care Connect defined value sets; and
-- provide valid responses and report codes where appropriate.
+The Reference Implementation allows developers to interact with Care Connect API profiles through server calls and an interactive website overlay. The Reference Implementation profiles exposed match the [Care Connect profiles](https://github.com/nhsconnect/CareConnect-profiles/tree/feature/stu3){:target="_blank"}. The Reference Implementation shows how these profiles can be completed with synthetic Reference Implementation data. The use of the Reference Implementation is to aid the process of designing and building Care Connect APIs by:
+- providing a code base as a Reference Implementation for a Care Connect FHIR API;
+- exposing the Care Connect API – in order that calls can be made; 
+- providing clinically sensible search results (test data), based on predefined search parameters;
+- providing a Care Connect API interface, that in its response includes Care Connect defined value sets; and
+- providing valid responses and report codes where appropriate.
 
 # Created for DEVELOPERS #
 
