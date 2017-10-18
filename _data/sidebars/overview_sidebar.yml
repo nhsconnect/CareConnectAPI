@@ -111,7 +111,7 @@ entries:
           - title: Practitioner
             url: /api_entity_practitioner.html
             output: web
-          - title: Practitoner Role
+          - title: Practitioner Role
             url: /api_entity_practitioner_role.html
             output: web
       - title: Workflow
