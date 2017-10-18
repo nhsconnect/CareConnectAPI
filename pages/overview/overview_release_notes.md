@@ -13,6 +13,7 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 Added
   - Practioner Role
+  - Reference Implementation section describing the RI
 Changed
   - Updated explore or resources section to STU3.
   - Took snapshot of STU3 profiles and added them to the build and referenced them
