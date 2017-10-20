@@ -27,7 +27,7 @@ The following is a list of what is in scope for this released version of the Ref
 - Implemented using HTTP1.1 API standards
 - FHIR standard STU3
 - Care Connect Patient profile published on the Implementation Guide alpha v1.6
-- HAPI server v2.5
+- HAPI RESTful server v3.0
 - Synthetic RI data generated to complete the profile information
 
 
