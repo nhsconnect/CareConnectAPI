@@ -20,7 +20,7 @@ The following is a list of what is in scope for the Reference Implementation:
 - Implemented using HTTP1.1 API standards
 - Use FHIR standard STU3
 - Use Care Connect profiles published on the Implementation Guide alpha v1.6
-- Use a HAPI server v2.5
+- Use a HAPI RESTful server v3.0
 
 The diagram below provides a high level view of the functional roles the Reference Implementation covers.
 <img src="images/reference_implementation/Ref_Impl_Context.png" style="width:100%;max-width: 100%;">
@@ -29,7 +29,7 @@ The diagram below provides a high level view of the functional roles the Referen
 
 The following is a short list of out of scope:
 - To provide clinically verified data.
-- To provide clinically viewable Care Connect FHIR resources 
+- To provide clinically viewable Care Connect FHIR resources
 - To demonstrate functionality to clinicians and other business stakeholders. The scope is restricted to being a tool for developers, to simplify the creation of reference implementaiton data.
 - To start API message testing and the conformance process.
 - To engage formal assurance and conformance testing based on the specification.
