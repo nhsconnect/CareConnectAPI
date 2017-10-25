@@ -20,36 +20,27 @@ show variables like 'innodb_lock_wait_timeout';
 SET GLOBAL innodb_lock_wait_timeout = 300;
 ```
 
-## 2. Export data files ##
 
-Export using (note use of the folder specified by secure-file priv setting)
+## 2. SSH / Remote Connection ##
 
-```
-select * into outfile '/mysql_exp/tempDescription.txt' from careconnect.tempDescription
-```
-
-Copy files from local machine to development box:
+Establish a SSH connection
 
 ```
-scp tempDescription.txt dev01@purple.testlab.nhs.uk:~/
+ssh -L 3307:purple.testlab.nhs.uk:43306 dev01@purple.testlab.nhs.uk
 ```
 
-Move from server to docker container. The folder is defined in the @@secure-privs variable in mysql.
+3307 is the port locally and 43306 is the port on the vm
+
+Leave this connection running.
+
+MySQL needs a user with correct permissions. To add user do (note the IP address % and localhost didn't work)
 
 ```
-docker cp tempDescription.txt ccrisql:/var/lib/mysql-files/tempDescription.txt
+CREATE USER 'jeffrey'@'194.189.27.194' IDENTIFIED BY 'password';
 ```
 
-Import using this to log into mysql
-
 ```
-mysql -uroot -pmypassword -h127.0.0.1 --port=43306 careconnect
+GRANT ALL PRIVILEGES ON *.* TO 'jeffrey'@'194.189.27.194';
 ```
 
-then
-
-```
-LOAD DATA local INFILE 'tempDescription.txt' into table tempDescription;
-```
-
-GRANT FILE ON *.* to 'fhirjpa'@'%';
+Use MySQL client as per normal but use the user just created and port is 3307 and host is 127.0.0.1 (not localhost or other)
