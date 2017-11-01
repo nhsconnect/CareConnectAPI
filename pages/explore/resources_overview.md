@@ -121,7 +121,7 @@ This section looks at the Care Connect profile API's covered within this impleme
 <td><a href="api_workflow_encounter.html">Encounter</a></td><td></td>
 </tr>
 <tr>
-<td><a href="api_entity_practitioner.html">Practitioner</a> (Problem)</td>
+<td><a href="api_entity_practitioner.html">Practitioner</a></td>
 <td><a href="api_entity_location.html">Location</a></td>
 <td>&nbsp;</td>
 </tr>
