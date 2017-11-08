@@ -10,7 +10,7 @@ summary: "Populating data in the reference implementation"
 
 ## 1. Load in ODS Data  ##
 
-With cc_app.jar run the following command:
+With cc_cli.jar run the following command:
 
 ```
 java -jar cc-cli.jar "upload-ods" -t http://localhost:8080/careconnect-ri/STU3
@@ -62,3 +62,12 @@ LOAD DATA local INFILE 'tempRelationship.txt' into table tempRelationship;
 Now run the scripts in the SNOMEDCTJob.kjb (in order and ignore the import stages)
 
 GRANT FILE ON *.* to 'fhirjpa'@'%';
+
+
+## 3. Load in Observation Data  ##
+
+With cc_cli.jar run the following command:
+
+```
+java -jar cc-cli.jar "upload-examples" -t http://localhost:8080/careconnect-ri/STU3 -a
+```
