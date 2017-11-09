@@ -37,7 +37,7 @@ The following is a short list of out of scope:
 
 # Current Version #
 
-{% include version.html version="1" function="Provided a single read-only working Care Connect profile with demo data on a live server accessible by the public. This is also referred to as the MVP." deliver="14th October 2017" %}
+{% include version.html version="2" function="Six Care Connect profiles with example data for one specific care setting with audit functionality" deliver="10th November 2017" %}
 
 Check out [Versions](build_ri_version.html) for more information about the current released version, downloading options, use and future verions.
 

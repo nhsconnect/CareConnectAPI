@@ -9,14 +9,23 @@ summary: "Describes the steps required to design & build an API using the Care C
 
 {% include important.html content="All information provided below is indicative and subject to on-going review." %}
 
-The Design & Build section contains descriptions of approaches and suggestions for building APIs.
+The Design & Build section contains descriptions of approaches and suggestions for building APIs including an example Reference Implementation.
 
-| Page              |  Description    |
-|+---------------------|+--------------------------------+|
-| Design Patterns / Topology | Describes access patterns necessary which influence the access, security and use of APIs. Depending on the pattern or topology of the requesting and responding system. The relationship between the requestor and responder influences the choice of access mechanism, security of payload and access finally build of the system |
-| Access | The access mechanism and of requesting system is influenced by many factors. This section demonstrates the design decisions to consider | 
-| Security | The security of the FHIR payload, access and data at rest are all important design decisions while building an API. | 
-| Build | A look at some tools and techniques to help build APIs using the Resources defined in Explore | 
+<table style="min-width:100%;width:100%">
+<thead><tr id="step1">
+	<th style="width:11em;">Page</th>
+	<th>Description</th>
+	</tr></thead>
+<tr id="step2">
+	<td>Design</td><td>The Reference Implementation allows developers to interact with Care Connect API profiles through server calls and an interactive website overlay. The Reference Implementation profiles exposed match the Care Connect profiles. The Reference Implementation shows how these profiles can be completed with synthetic Reference Implementation data. </td>
+</tr>
+<tr id="step2">
+	<td>Reference Implementation</td><td>The design section covers the Patterns / Topology, Access, Security, Build. A look at some tools and techniques to help build APIs using the Resources defined in Explore. </td>
+</tr>
+<tr id="step2">
+	<td>Build</td><td>This section is a placeholder for future work. The Build section contains work in progress of potential builds. </td>
+</tr>
+</table>
 
 Please see or contribute to INTEROPen to support the wider community efforts of providing a completely defined API service.
 

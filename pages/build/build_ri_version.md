@@ -13,33 +13,44 @@ summary: "Describes the current version of the Reference Implementation"
 # Current Version #
 
 
-{% include version.html version="1" function="Provided a single read-only working Care Connect profile with demo data on a live server accessible by the public. This is also referred to as the MVP." deliver="14th October 2017" %}
+{% include version.html version="2" function="Six Care Connect profiles with example data for one specific care setting with audit functionality" deliver="10th November 2017" %}
 
-To download and run the code please follow the following links.
-<br/>
-Code: [Download the source for Version 1](https://github.com/nhsconnect/careconnect-reference-implementation/tree/v3.1){:target="_blank"}
-<br/>
-Install instructions: [Deploy instructions](ccri_docker.html)
 
 ## In Scope ##
 
 The following is a list of what is in scope for this released version of the Reference Implementation:
 - Implemented using HTTP1.1 API standards
-- FHIR standard STU3
+- STU3 FHIR standard
 - Care Connect Patient profile published on the Implementation Guide alpha v1.6
-- HAPI RESTful server v3.0
+- HAPI server v3
 - Synthetic RI data generated to complete the profile information
 
 
 ## Out of Scope ##
 
 The following is a short list of out of scope:
-- No clinical oversight of the information contained in the responses
+- Clinical oversight of the information contained in the responses
 
 # Issues #
 
 Are recorded in the Care Connect Reference Implementation which can be found:
 [Issues](https://github.com/nhsconnect/careconnect-reference-implementation/issues){:target="_blank"}
+
+
+## Download ##
+To download and run the code please follow the following links.
+<br/>
+Code: [Version 2 Git repository of code](https://github.com/nhsconnect/careconnect-reference-implementation/tree/v3.2){:target="_blank"}
+
+Clone: Version 2 clone of repository by 
+<div class="language-http highlighter-rouge">
+	<pre class="highlight">
+	<code>
+		git clone git@github.com:nhsconnect/careconnect-reference-implementation.git
+		git checkout tags/v3.2
+	</code>
+	</pre>
+</div>
 
 # Version Plan #
 
