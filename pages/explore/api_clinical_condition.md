@@ -40,6 +40,13 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
     <th style="width:30%;">Path</th>
 </tr>
 <tr>
+    <td><code class="highlighter-rouge">asserted-date</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>Date record was believed accurate</td>
+    <td>MAY</td>
+    <td>Condition.assertedDate</td>
+</tr>
+<tr>
     <td><code class="highlighter-rouge">category</code></td>
     <td><code class="highlighter-rouge">token</code></td>
     <td>The category of the condition</td>
@@ -47,18 +54,11 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
     <td>Condition.category</td>
 </tr>
 <tr>
-    <td><code class="highlighter-rouge">clinicalstatus</code></td>
+    <td><code class="highlighter-rouge">clinical-status</code></td>
     <td><code class="highlighter-rouge">token</code></td>
     <td>The clinical status of the condition</td>
     <td>SHOULD</td>
     <td>Condition.clinicalStatus</td>
-</tr>
-<tr>
-    <td><code class="highlighter-rouge">date-recorded</code></td>
-    <td><code class="highlighter-rouge">date</code></td>
-    <td>A date, when the Condition statement was documented</td>
-    <td>MAY</td>
-    <td>Condition.dateRecorded</td>
 </tr>
 <tr>
     <td><code class="highlighter-rouge">patient</code></td>
@@ -71,15 +71,16 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 Systems SHOULD support the following search combinations:
 
-* patient + clinicalstatus
+* patient + clinical-status
 * patient + category
 
-{% include custom/search.status.plus.html para="2.1.1." content="Condition" options="
+{% include custom/search.date.plus.html para="2.1.1." content="Condition" name="asserted-date" %}
+
+{% include custom/search.status.plus.html para="2.1.2." content="Condition" options="
 complaint | symptom | finding | diagnosis | problem | need" selected="symptom" name="category" %}
 
-{% include custom/search.status.plus.html para="2.1.2." content="Condition" options="active | inactive | relapse | remission | resolved" selected="relapse" name="clinicalstatus" %}
+{% include custom/search.status.plus.html para="2.1.3." content="Condition" options="active | inactive | relapse | remission | resolved" selected="relapse" name="clinical-status" %}
 
-{% include custom/search.date.plus.html para="2.1.3." content="Condition" name="date-recorded" %}
 
 {% include custom/search.patient.html para="2.1.4." content="Condition" %}
 

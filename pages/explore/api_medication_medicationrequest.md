@@ -40,18 +40,18 @@ Fetches a bundle of all `MedicationRequest` resources for the specified patient.
     <th style="width:30%;">Path</th>
 </tr>
 <tr>
+    <td><code class="highlighter-rouge">authoredon</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>Return prescriptions written on this date</td>
+    <td>MAY</td>
+    <td>MedicationRequest.authoredOn</td>
+</tr>
+<tr>
     <td><code class="highlighter-rouge">code</code></td>
     <td><code class="highlighter-rouge">token</code></td>
     <td>Return administrations of this medication code</td>
     <td>MAY</td>
     <td>MedicationRequest.medicationCodeableConcept</td>
-</tr>
-<tr>
-    <td><code class="highlighter-rouge">dateWritten</code></td>
-    <td><code class="highlighter-rouge">date</code></td>
-    <td>Return prescriptions written on this date</td>
-    <td>MAY</td>
-    <td>MedicationRequest.dateWritten</td>
 </tr>
 <tr>
     <td><code class="highlighter-rouge">patient</code></td>
@@ -74,9 +74,9 @@ Systems SHOULD support the following search combinations:
  * patient + code
 
 
-{% include custom/search.code.medicationRequest.html para="2.1.1." content="MedicationRequest" name="code"  %}
+{% include custom/search.date.plus.html para="2.1.1." content="MedicationRequest" name="authoredon"  %}
 
-{% include custom/search.date.plus.html para="2.1.2." content="MedicationRequest" name="dateWritten"  %}
+{% include custom/search.code.medicationRequest.html para="2.1.2." content="MedicationRequest" name="code"  %}
 
 {% include custom/search.patient.html para="2.1.3." content="MedicationRequest" %}
 

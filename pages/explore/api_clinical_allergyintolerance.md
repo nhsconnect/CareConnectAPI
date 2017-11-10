@@ -39,6 +39,13 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
     <th style="width:40%;">Path</th>
 </tr>
 <tr>
+    <td><code class="highlighter-rouge">clinical-status</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>active | inactive | resolved</td>
+    <td>MAY</td>
+    <td>AllergyIntolerance.clinicalStatus</td>
+</tr>
+<tr>
     <td><code class="highlighter-rouge">date</code></td>
     <td><code class="highlighter-rouge">date</code></td>
     <td>When recorded</td>
@@ -51,13 +58,6 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
     <td>Who the sensitivity is for</td>
     <td>SHALL</td>
     <td>AllergyIntolerance.patient<br>(Patient)</td>
-</tr>
-<tr>
-    <td><code class="highlighter-rouge">clinical-status</code></td>
-    <td><code class="highlighter-rouge">token</code></td>
-    <td>active | inactive | resolved</td>
-    <td>MAY</td>
-    <td>AllergyIntolerance.clinicalStatus</td>
 </tr>
 </table>
 

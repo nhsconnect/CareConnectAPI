@@ -39,11 +39,11 @@ Fetches a bundle of all `MedicationStatement` resources for the specified patien
     <th style="width:30%;">Path</th>
 </tr>
 <tr>
-    <td><code class="highlighter-rouge">effectivedate</code></td>
+    <td><code class="highlighter-rouge">effective</code></td>
     <td><code class="highlighter-rouge">date</code></td>
     <td>Date when patient was taking (or not taking) the medication</td>
     <td>SHOULD</td>
-    <td>MedicationStatement.effective[x]</td>
+    <td>MedicationStatement.effective</td>
 </tr>
 <tr>
     <td><code class="highlighter-rouge">patient</code></td>
@@ -68,7 +68,7 @@ Systems SHOULD support the following search combinations:
 
 -->
 
-{% include custom/search.date.plus.html para="2.1.1." content="MedicationStatement" name="effectivedate" %}
+{% include custom/search.date.plus.html para="2.1.1." content="MedicationStatement" name="effective" %}
 
 {% include custom/search.patient.html para="2.1.2" content="MedicationStatement" %}
 
