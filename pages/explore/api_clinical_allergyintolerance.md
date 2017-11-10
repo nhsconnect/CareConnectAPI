@@ -53,11 +53,11 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
     <td>AllergyIntolerance.patient<br>(Patient)</td>
 </tr>
 <tr>
-    <td><code class="highlighter-rouge">status</code></td>
+    <td><code class="highlighter-rouge">clinical-status</code></td>
     <td><code class="highlighter-rouge">token</code></td>
-    <td>Status of AllergyIntolerance</td>
+    <td>active | inactive | resolved</td>
     <td>MAY</td>
-    <td>AllergyIntolerance.status</td>
+    <td>AllergyIntolerance.clinicalStatus</td>
 </tr>
 </table>
 

@@ -8,15 +8,7 @@ summary: "Populating data in the reference implementation"
 ---
 
 
-## 1. Load in ODS Data  ##
-
-With cc_cli.jar run the following command:
-
-```
-java -jar cc-cli.jar "upload-ods" -t http://localhost:8080/careconnect-ri/STU3
-```
-
-## 2. Code Import ##
+## 1. Code Import ##
 
 Export using (note use of the folder specified by secure-file priv setting)
 
@@ -42,10 +34,11 @@ sudo docker cp tempRelationship.txt ccrisql:/var/lib/mysql-files/tempRelationshi
 sudo docker cp tempSimple.txt ccrisql:/var/lib/mysql-files/tempSimple.txt
 ```
 
+Log into the ccrisql (docker exec -it ccrisql /bin/bash).
 Import using this to log into mysql
 
 ```
-mysql -uroot -pmypassword -h127.0.0.1 --port=43306 careconnect
+mysql -uroot -pmypassword -h127.0.0.1 --port=3306 careconnect
 ```
 
 Create tables (see SNOMEDCTJob.kjb in the CCRI git)
@@ -63,6 +56,13 @@ Now run the scripts in the SNOMEDCTJob.kjb (in order and ignore the import stage
 
 GRANT FILE ON *.* to 'fhirjpa'@'%';
 
+## . Load in ODS Data  ##
+
+With cc_cli.jar run the following command:
+
+```
+java -jar cc-cli.jar "upload-ods" -t http://localhost:8080/careconnect-ri/STU3
+```
 
 ## 3. Load in Observation Data  ##
 
