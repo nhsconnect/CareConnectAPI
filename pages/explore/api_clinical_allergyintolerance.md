@@ -67,11 +67,11 @@ Systems SHALL support the following search combinations:
 * patient
 -->
 
-{% include custom/search.date.plus.html para="2.1.1." content="AllergyIntolerance" name="date" %}
+{% include custom/search.status.plus.html para="2.1.1." name="clinical-status" content="AllergyIntolerance" options="active | inactive | resolved" selected="refuted" %}
 
-{% include custom/search.patient.html para="2.1.2." content="AllergyIntolerance" %}
+{% include custom/search.date.plus.html para="2.1.2." content="AllergyIntolerance" name="date" %}
 
-{% include custom/search.status.html para="2.1.3." content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
+{% include custom/search.patient.html para="2.1.3." content="AllergyIntolerance" %}
 
 {% include custom/search.response.html resource="AllergyIntolerance" %}
 
