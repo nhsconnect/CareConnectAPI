@@ -17,7 +17,7 @@ The exchange patterns are complimentary, each having it's strengths and weakness
 
 ## 2. RESTful API
 
-<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="https://www.hl7.org/fhir/DSTU2/http.html"><b>FHIR RESTful API</b></div>
+<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="{{ site.hl7_baseurl.stu3 }}http.html"><b>FHIR RESTful API</b></div>
 
 ```
 Retrieve data held in a remote system while avoiding direct coupling to remote procedures.
@@ -149,7 +149,7 @@ This type of interface may also be called as **ResourceAPI** and is useful for r
 
 ## 3. Messaging ##
 
-<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="https://www.hl7.org/fhir/DSTU2/messaging.html"><b>FHIR Messaging</b></div>
+<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="{{ site.hl7_baseurl.stu3 }}messaging.html"><b>FHIR Messaging</b></div>
 
 ```
 Send notifications and other information to remote systems while avoiding direct coupling to remote procedures.
@@ -252,7 +252,7 @@ To store resources in the Repository
 
 ## 4. Documents ##
 
-<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="https://www.hl7.org/fhir/DSTU2/documents.html"><b>FHIR Documents</b></div>
+<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="{{ site.hl7_baseurl.stu3 }}documents.html"><b>FHIR Documents</b></div>
 
 ```
 Send documents to remote systems while avoiding direct coupling to remote procedures.
@@ -322,7 +322,7 @@ A **DocumentAPI** is an extension of the **MessagingAPI** which provides a set o
 - [Transfer of Care eDischarge]({{ site.nhsd.toc }})
 
 ## 5. Operations
-<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="http://www.hl7.org/fhir/dstu2/operations.html"><b>Operations</b></div>
+<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="{{ site.hl7_baseurl.stu3 }}operations.html"><b>Operations</b></div>
 
 ```
 Execute a procedure on a remote system while avoiding direct coupling.

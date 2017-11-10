@@ -9,7 +9,8 @@ summary: A value set specifies a set of codes drawn from one or more code system
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.referencemin.html resource="" page="" fhirlink="[ValueSet](http://www.hl7.org/fhir/dstu2/valueset.html)" content="User Stories" userlink="" %}
+
+{% include custom/fhir.reference.html resource="" page="" fhirname="ValueSet" fhirlink="valueset.html" content="-" userlink="-" %}
 
 
 ## 1. Read ##
@@ -21,6 +22,8 @@ GET [baseUrl]/ValueSet/[id]</div>
 
 ## 2. Example ##
 
+{% include custom/search.warn_ri_banner.html %}
+
 ### 2.1 Request Query ###
 
 Return the ValueSet for Care Connect Administrative Gender. Replace 'baseUrl' with the actual base Url of the FHIR Server.
@@ -29,113 +32,70 @@ Return the ValueSet for Care Connect Administrative Gender. Replace 'baseUrl' wi
 
 {% include custom/embedcurl.html title="Read Care Connect Administrative Gender ValueSet" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/ValueSet/CareConnect-AdministrativeGender-1'" %}
 
-{% include custom/search.response.headers.html resource="ValueSet"  %}
-
-### 2.3 Response Body ###
+### 2.2 Response Body ###
 
 ```xml
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="CareConnect-AdministrativeGender-1"/>
-   <meta>
-      <lastUpdated value="2016-08-03T00:00:00+01:00"/>
-   </meta>
-   <text>
-      <status value="generated"/>
-   </text>
-   <contained>
-      <ConceptMap xmlns="http://hl7.org/fhir">
-         <id value="map"/>
-         <name value="NHS Data Model and Dictionary Mapping"/>
-         <status value="active"/>
-         <sourceReference>
-            <reference value="https://fhir-test.hl7.org.uk/ValueSet/CareConnect-AdministrativeGender-1"/>
-         </sourceReference>
-         <targetReference>
-            <reference value="https://fhir-test.hl7.org.uk/ValueSet/CareConnect-PersonStatedGender-DDMAP-1"/>
-         </targetReference>
-         <element>
-            <code value="male"/>
-            <target>
-               <code value="1"/>
-               <equivalence value="equivalent"/>
-            </target>
-         </element>
-         <element>
-            <code value="female"/>
-            <target>
-               <code value="2"/>
-               <equivalence value="equivalent"/>
-            </target>
-         </element>
-         <element>
-            <code value="other"/>
-            <target>
-               <code value="9"/>
-               <equivalence value="equivalent"/>
-            </target>
-         </element>
-         <element>
-            <code value="unknown"/>
-            <target>
-               <code value="X"/>
-               <equivalence value="equivalent"/>
-            </target>
-         </element>
-      </ConceptMap>
-   </contained>
-   <extension url="http://hl7.org/fhir/StructureDefinition/valueset-map">
-      <valueReference>
-         <reference value="#map"/>
-      </valueReference>
-   </extension>
-   <extension url="http://hl7.org/fhir/StructureDefinition/valueset-oid">
-      <valueUri value="urn:oid:2.16.840.1.113883.4.642.2.1"/>
-   </extension>
-   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-      <valueInteger value="1"/>
-   </extension>
-   <url value="https://fhir-test.hl7.org.uk/ValueSet/CareConnect-AdministrativeGender-1"/>
-   <version value="1.0.0"/>
-   <name value="Care Connect Administrative Gender"/>
-   <status value="active"/>
-   <publisher value="HL7 UK"/>
-   <description value="The gender of a person used for administrative purposes."/>
-   <requirements value="The codes listed in this FHIR ValueSet have a 'Required' binding; for conformance the Administrative Gender element SHALL include a code listed below."/>
-   <copyright value="Copyright � 2016 HL7 UK
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-HL7� FHIR� standard Copyright � 2011+ HL7
-
-The HL7� FHIR� standard is used under the FHIR license. You may obtain a copy of the FHIR license at
-
-https://www.hl7.org/fhir/license.html"/>
-   <codeSystem>
-      <system value="http://hl7.org/fhir/administrative-gender"/>
-      <concept>
-         <code value="male"/>
-         <display value="Male"/>
-         <definition value="Male"/>
-      </concept>
-      <concept>
-         <code value="female"/>
-         <display value="Female"/>
-         <definition value="Female"/>
-      </concept>
-      <concept>
-         <code value="other"/>
-         <display value="Other"/>
-         <definition value="Other"/>
-      </concept>
-      <concept>
-         <code value="unknown"/>
-         <display value="Unknown"/>
-         <definition value="Unknown"/>
-      </concept>
-   </codeSystem>
+	<id value="CareConnect-AdministrativeGender-1"/>
+	<extension url="http://hl7.org/fhir/StructureDefinition/valueset-map">
+		<valueReference>
+			<reference value="https://fhir.hl7.org.uk/STU3/ConceptMap/AdministrativeGender-1"/>
+		</valueReference>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/valueset-sourceReference">
+		<valueUri value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+		<valueCode value="pc"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="5"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-ballot-status">
+		<valueString value="Informative"/>
+	</extension>
+	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AdministrativeGender-1"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113883.4.642.3.1"/>
+	</identifier>
+	<version value="3.0.1"/>
+	<name value="Administrative Gender"/>
+	<status value="active"/>
+	<date value="2017-04-19T07:46:00+10:00"/>
+	<publisher value="HL7 (FHIR Project)"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+		<telecom>
+			<system value="email"/>
+			<value value="fhir@lists.hl7.org"/>
+		</telecom>
+	</contact>
+	<description value="The gender of a person used for administrative purposes."/>
+	<copyright value="Copyright © HL7.org 2011+"/>
+	<compose>
+		<include>
+			<system value="http://hl7.org/fhir/administrative-gender"/>
+			<concept>
+				<code value="male"/>
+				<display value="Male"/>
+			</concept>
+			<concept>
+				<code value="female"/>
+				<display value="Female"/>
+			</concept>
+			<concept>
+				<code value="other"/>
+				<display value="Other"/>
+			</concept>
+			<concept>
+				<code value="unknown"/>
+				<display value="Unknown"/>
+			</concept>
+		</include>
+	</compose>
 </ValueSet>
 ```

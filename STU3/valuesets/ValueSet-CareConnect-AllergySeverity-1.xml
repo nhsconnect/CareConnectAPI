@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-AllergySeverity-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergySeverity-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Allergy Severity"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A code from the SNOMED Clinical Terminology UK coding system that describes the severity of an allergy."/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
+	<compose>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<concept>
+				<code value="255604002"/>
+				<display value="Mild"/>
+			</concept>
+			<concept>
+				<code value="6736007"/>
+				<display value="Moderate"/>
+			</concept>
+			<concept>
+				<code value="24484000"/>
+				<display value="Severe"/>
+			</concept>
+			<concept>
+				<code value="442452003"/>
+				<display value="Life threatening severity"/>
+			</concept>
+			<concept>
+				<code value="399166001"/>
+				<display value="Fatal"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

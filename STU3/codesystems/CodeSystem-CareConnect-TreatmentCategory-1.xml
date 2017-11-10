@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-TreatmentCategory-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CareConnect-TreatmentCategory-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Treatment Category"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem that identifies the treatment category for this patient."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="1"/>
+		<display value="Exempt from payment - subject to reciprocal health agreement"/>
+	</concept>
+	<concept>
+		<code value="2"/>
+		<display value="Exempt from payment - other"/>
+	</concept>
+	<concept>
+		<code value="3"/>
+		<display value="To pay hotel fees only"/>
+	</concept>
+	<concept>
+		<code value="4"/>
+		<display value="To pay all fees"/>
+	</concept>
+	<concept>
+		<code value="9"/>
+		<display value="Charging rate not known"/>
+	</concept>
+	<concept>
+		<code value="8"/>
+		<display value="Not applicable"/>
+		<definition value="Not an Overseas Visitor"/>
+	</concept>
+</CodeSystem>

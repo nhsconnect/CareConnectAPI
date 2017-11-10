@@ -9,6 +9,28 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 {% include important.html content="This site is under active development by NHS Digital on behalf of INTEROPen and is intended to provide all the technical resources you need to successfully develop the Care Connect APIs. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis." %}
 
+## 1.6.0-alpha.0 ##
+
+Added
+  - Practioner Role
+  - Reference Implementation section describing the RI
+Changed
+  - Updated explore or resources section to STU3.
+  - Took snapshot of STU3 profiles and added them to the build and referenced them
+  - Updated UI where found inconsistencies
+  - Added placeholder for RI
+  - Updated way that STU3 links are updated to be consistent amongst profiles and easier to extend
+
+## 1.5.0-alpha.0 ##
+
+Changed
+  - Minor changes
+
+## 1.4.0-alpha.0 ##
+
+Changed
+  - Minor changes
+
 ## 1.3.0-alpha.0 ##
 
 Added

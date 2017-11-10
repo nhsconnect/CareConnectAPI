@@ -1,0 +1,1582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-SDSJobRoleName-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CareConnect-SDSJobRoleName-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect SDS Job Role Name"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem that identifies the job role associated with the person on the smart card. This consists of a set of Role Based Access Control (RBAC) codes. This code list is externally maintained."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="R0010"/>
+		<display value="Medical Director"/>
+	</concept>
+	<concept>
+		<code value="R0020"/>
+		<display value="Clinical Director - Medical"/>
+	</concept>
+	<concept>
+		<code value="R0210"/>
+		<display value="Director of Public Health"/>
+	</concept>
+	<concept>
+		<code value="R0030"/>
+		<display value="Professor"/>
+	</concept>
+	<concept>
+		<code value="R0040"/>
+		<display value="Senior Lecturer"/>
+	</concept>
+	<concept>
+		<code value="R0050"/>
+		<display value="Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0060"/>
+		<display value="Special Salary Scale in Public Health Medicine"/>
+	</concept>
+	<concept>
+		<code value="R0070"/>
+		<display value="Associate Specialist"/>
+	</concept>
+	<concept>
+		<code value="R0080"/>
+		<display value="Staff Grade"/>
+	</concept>
+	<concept>
+		<code value="R0090"/>
+		<display value="Hospital Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0100"/>
+		<display value="Clinical Assistant"/>
+	</concept>
+	<concept>
+		<code value="R0110"/>
+		<display value="Specialist Registrar"/>
+	</concept>
+	<concept>
+		<code value="R0120"/>
+		<display value="Senior Registrar (Closed)"/>
+	</concept>
+	<concept>
+		<code value="R0130"/>
+		<display value="Registrar (Closed)"/>
+	</concept>
+	<concept>
+		<code value="R0140"/>
+		<display value="Senior House Officer"/>
+	</concept>
+	<concept>
+		<code value="R0150"/>
+		<display value="House Officer - Pre Registration"/>
+	</concept>
+	<concept>
+		<code value="R0160"/>
+		<display value="House Officer - Post Registration"/>
+	</concept>
+	<concept>
+		<code value="R0170"/>
+		<display value="Trust Grade Doctor - House Officer level"/>
+	</concept>
+	<concept>
+		<code value="R0180"/>
+		<display value="Trust Grade Doctor - SHO level"/>
+	</concept>
+	<concept>
+		<code value="R0190"/>
+		<display value="Trust Grade Doctor - Specialist Registrar level"/>
+	</concept>
+	<concept>
+		<code value="R0200"/>
+		<display value="Trust Grade Doctor - Career Grade level"/>
+	</concept>
+	<concept>
+		<code value="R0260"/>
+		<display value="General Medical Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0270"/>
+		<display value="Salaried General Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R1981"/>
+		<display value="Psychiatrist"/>
+	</concept>
+	<concept>
+		<code value="R1984"/>
+		<display value="Health Records Administrator"/>
+	</concept>
+	<concept>
+		<code value="R6200"/>
+		<display value="GP Registrar"/>
+	</concept>
+	<concept>
+		<code value="R6300"/>
+		<display value="Sessional GP"/>
+	</concept>
+	<concept>
+		<code value="R7140"/>
+		<display value="ODP"/>
+	</concept>
+	<concept>
+		<code value="R7150"/>
+		<display value="SODP"/>
+	</concept>
+	<concept>
+		<code value="R9100"/>
+		<display value="A&amp;E Staff Nurse (Temporary)  London Cluster Only"/>
+	</concept>
+	<concept>
+		<code value="R9101"/>
+		<display value="A&amp;E Manager (Temporary) London Cluster Only"/>
+	</concept>
+	<concept>
+		<code value="R9102"/>
+		<display value="A&amp;E Doctor  (Temporary) London Cluster only"/>
+	</concept>
+	<concept>
+		<code value="R9103"/>
+		<display value="A&amp;E Student (Temporary) London Cluster Only"/>
+	</concept>
+	<concept>
+		<code value="R9104"/>
+		<display value="A&amp;E Clerk (Temporary) London Cluster Only"/>
+	</concept>
+	<concept>
+		<code value="R0215"/>
+		<display value="Assistant Clinical Medical Officer"/>
+	</concept>
+	<concept>
+		<code value="R0220"/>
+		<display value="Clinical Medical Officer"/>
+	</concept>
+	<concept>
+		<code value="R0230"/>
+		<display value="Senior Clinical Medical Officer"/>
+	</concept>
+	<concept>
+		<code value="R0240"/>
+		<display value="Other Community Health Service"/>
+	</concept>
+	<concept>
+		<code value="R0243"/>
+		<display value="Other Community Health Service - Social Care Worker"/>
+	</concept>
+	<concept>
+		<code value="R0247"/>
+		<display value="Other Community Health Service - Admin Clerk"/>
+	</concept>
+	<concept>
+		<code value="R0055"/>
+		<display value="Dental Surgeon acting as Hospital Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0250"/>
+		<display value="General Dental Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0280"/>
+		<display value="Regional Dental Officer"/>
+	</concept>
+	<concept>
+		<code value="R0290"/>
+		<display value="Dental Clinical Director - Dental"/>
+	</concept>
+	<concept>
+		<code value="R0295"/>
+		<display value="Dental Assistant Clinical Director"/>
+	</concept>
+	<concept>
+		<code value="R0300"/>
+		<display value="Dental Officer"/>
+	</concept>
+	<concept>
+		<code value="R0310"/>
+		<display value="Senior Dental Officer"/>
+	</concept>
+	<concept>
+		<code value="R0320"/>
+		<display value="Salaried Dental Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0006"/>
+		<display value="Student Community Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0330"/>
+		<display value="Student Nurse - Adult Branch"/>
+	</concept>
+	<concept>
+		<code value="R0340"/>
+		<display value="Student Nurse - Child Branch"/>
+	</concept>
+	<concept>
+		<code value="R0350"/>
+		<display value="Student Nurse - Mental Health Branch"/>
+	</concept>
+	<concept>
+		<code value="R0360"/>
+		<display value="Student Nurse - Learning Disabilities Branch"/>
+	</concept>
+	<concept>
+		<code value="R0370"/>
+		<display value="Student Midwife"/>
+	</concept>
+	<concept>
+		<code value="R0380"/>
+		<display value="Student Health Visitor"/>
+	</concept>
+	<concept>
+		<code value="R0390"/>
+		<display value="Student District Nurse"/>
+	</concept>
+	<concept>
+		<code value="R0400"/>
+		<display value="Student School Nurse"/>
+	</concept>
+	<concept>
+		<code value="R0410"/>
+		<display value="Student Practice Nurse"/>
+	</concept>
+	<concept>
+		<code value="R0420"/>
+		<display value="Student Occupational Health Nurse"/>
+	</concept>
+	<concept>
+		<code value="R0430"/>
+		<display value="Student Community Paediatric Nurse"/>
+	</concept>
+	<concept>
+		<code value="R0440"/>
+		<display value="Student Community Mental Health Nurse"/>
+	</concept>
+	<concept>
+		<code value="R0450"/>
+		<display value="Student Community Learning Disabilities Nurse"/>
+	</concept>
+	<concept>
+		<code value="R0460"/>
+		<display value="Student Chiropodist"/>
+	</concept>
+	<concept>
+		<code value="R0470"/>
+		<display value="Student Dietitian"/>
+	</concept>
+	<concept>
+		<code value="R0480"/>
+		<display value="Student Occupational Therapist"/>
+	</concept>
+	<concept>
+		<code value="R0490"/>
+		<display value="Student Orthoptist"/>
+	</concept>
+	<concept>
+		<code value="R0500"/>
+		<display value="Student Physiotherapist"/>
+	</concept>
+	<concept>
+		<code value="R0510"/>
+		<display value="Student Radiographer - Diagnostic"/>
+	</concept>
+	<concept>
+		<code value="R0520"/>
+		<display value="Student Radiographer - Therapeutic"/>
+	</concept>
+	<concept>
+		<code value="R0530"/>
+		<display value="Student Speech &amp; Language Therapist"/>
+	</concept>
+	<concept>
+		<code value="R0540"/>
+		<display value="Art, Music &amp; Drama Student"/>
+	</concept>
+	<concept>
+		<code value="R0550"/>
+		<display value="Student Psychotherapist"/>
+	</concept>
+	<concept>
+		<code value="R6400"/>
+		<display value="Medical Student"/>
+	</concept>
+	<concept>
+		<code value="R0560"/>
+		<display value="Director of Nursing"/>
+	</concept>
+	<concept>
+		<code value="R0580"/>
+		<display value="Nurse Manager"/>
+	</concept>
+	<concept>
+		<code value="R0610"/>
+		<display value="Sister/Charge Nurse"/>
+	</concept>
+	<concept>
+		<code value="R1976"/>
+		<display value="Community Team Manager"/>
+	</concept>
+	<concept>
+		<code value="R0570"/>
+		<display value="Nurse Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0600"/>
+		<display value="Specialist Nurse Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0620"/>
+		<display value="Staff Nurse"/>
+	</concept>
+	<concept>
+		<code value="R0630"/>
+		<display value="Enrolled Nurse"/>
+	</concept>
+	<concept>
+		<code value="R0690"/>
+		<display value="Community Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0700"/>
+		<display value="Community Nurse"/>
+	</concept>
+	<concept>
+		<code value="R1974"/>
+		<display value="Community Learning Disabilities Nurse"/>
+	</concept>
+	<concept>
+		<code value="R1975"/>
+		<display value="Community Mental Health Nurse"/>
+	</concept>
+	<concept>
+		<code value="R0590"/>
+		<display value="Modern Matron"/>
+	</concept>
+	<concept>
+		<code value="R1972"/>
+		<display value="Clinical Team Manager"/>
+	</concept>
+	<concept>
+		<code value="R0640"/>
+		<display value="Midwife - Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0650"/>
+		<display value="Midwife - Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0660"/>
+		<display value="Midwife - Manager"/>
+	</concept>
+	<concept>
+		<code value="R0670"/>
+		<display value="Midwife - Sister/Charge Nurse"/>
+	</concept>
+	<concept>
+		<code value="R0680"/>
+		<display value="Midwife"/>
+	</concept>
+	<concept>
+		<code value="R0018"/>
+		<display value="Audiologist"/>
+	</concept>
+	<concept>
+		<code value="R0750"/>
+		<display value="Chiropodist/Podiatrist"/>
+	</concept>
+	<concept>
+		<code value="R0760"/>
+		<display value="Chiropodist/Podiatrist Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0770"/>
+		<display value="Chiropodist/Podiatrist Manager"/>
+	</concept>
+	<concept>
+		<code value="R0780"/>
+		<display value="Chiropodist/Podiatrist Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0790"/>
+		<display value="Dietitian"/>
+	</concept>
+	<concept>
+		<code value="R0800"/>
+		<display value="Dietitian Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0810"/>
+		<display value="Dietitian Manager"/>
+	</concept>
+	<concept>
+		<code value="R0820"/>
+		<display value="Dietitian Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0950"/>
+		<display value="Occupational Therapist"/>
+	</concept>
+	<concept>
+		<code value="R0960"/>
+		<display value="Occupational Therapist Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0970"/>
+		<display value="Occupational Therapist Manager"/>
+	</concept>
+	<concept>
+		<code value="R0980"/>
+		<display value="Occupational Therapy Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0990"/>
+		<display value="Orthoptist"/>
+	</concept>
+	<concept>
+		<code value="R1000"/>
+		<display value="Orthoptist Consultant"/>
+	</concept>
+	<concept>
+		<code value="R1010"/>
+		<display value="Orthoptist Manager"/>
+	</concept>
+	<concept>
+		<code value="R1020"/>
+		<display value="Orthoptist Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R1110"/>
+		<display value="Physiotherapist"/>
+	</concept>
+	<concept>
+		<code value="R1120"/>
+		<display value="Physiotherapist Consultant"/>
+	</concept>
+	<concept>
+		<code value="R1130"/>
+		<display value="Physiotherapist Manager"/>
+	</concept>
+	<concept>
+		<code value="R1140"/>
+		<display value="Physiotherapist Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R1070"/>
+		<display value="Paramedic"/>
+	</concept>
+	<concept>
+		<code value="R1080"/>
+		<display value="Paramedic Consultant"/>
+	</concept>
+	<concept>
+		<code value="R1090"/>
+		<display value="Paramedic Manager"/>
+	</concept>
+	<concept>
+		<code value="R1100"/>
+		<display value="Paramedic Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0003"/>
+		<display value="Clinical Application Administrator"/>
+	</concept>
+	<concept>
+		<code value="R0012"/>
+		<display value="Radiographer"/>
+	</concept>
+	<concept>
+		<code value="R0013"/>
+		<display value="Student Radiographer"/>
+	</concept>
+	<concept>
+		<code value="R0014"/>
+		<display value="Radiologist"/>
+	</concept>
+	<concept>
+		<code value="R0015"/>
+		<display value="PACS Administrator"/>
+	</concept>
+	<concept>
+		<code value="R0016"/>
+		<display value="Reporting Radiographer"/>
+	</concept>
+	<concept>
+		<code value="R0017"/>
+		<display value="Assistant Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R1190"/>
+		<display value="Radiographer - Diagnostic"/>
+	</concept>
+	<concept>
+		<code value="R1200"/>
+		<display value="Radiographer - Diagnostic, Consultant"/>
+	</concept>
+	<concept>
+		<code value="R1210"/>
+		<display value="Radiographer - Diagnostic, Manager"/>
+	</concept>
+	<concept>
+		<code value="R1220"/>
+		<display value="Radiographer - Diagnostic, Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R1230"/>
+		<display value="Radiographer - Therapeutic"/>
+	</concept>
+	<concept>
+		<code value="R1240"/>
+		<display value="Radiographer - Therapeutic, Consultant"/>
+	</concept>
+	<concept>
+		<code value="R1250"/>
+		<display value="Radiographer - Therapeutic, Manager"/>
+	</concept>
+	<concept>
+		<code value="R1260"/>
+		<display value="Radiographer - Therapeutic, Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R1030"/>
+		<display value="Orthotist"/>
+	</concept>
+	<concept>
+		<code value="R1040"/>
+		<display value="Orthotist Consultant"/>
+	</concept>
+	<concept>
+		<code value="R1050"/>
+		<display value="Orthotist Manager"/>
+	</concept>
+	<concept>
+		<code value="R1060"/>
+		<display value="Orthotist Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R1150"/>
+		<display value="Prosthetist"/>
+	</concept>
+	<concept>
+		<code value="R1160"/>
+		<display value="Prosthetist Consultant"/>
+	</concept>
+	<concept>
+		<code value="R1170"/>
+		<display value="Prosthetist Manager"/>
+	</concept>
+	<concept>
+		<code value="R1180"/>
+		<display value="Prosthetist Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0710"/>
+		<display value="Art Therapist"/>
+	</concept>
+	<concept>
+		<code value="R0720"/>
+		<display value="Art Therapist Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0730"/>
+		<display value="Art Therapist Manager"/>
+	</concept>
+	<concept>
+		<code value="R0740"/>
+		<display value="Art Therapist Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0830"/>
+		<display value="Drama Therapist"/>
+	</concept>
+	<concept>
+		<code value="R0840"/>
+		<display value="Drama Therapist Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0850"/>
+		<display value="Drama Therapist Manager"/>
+	</concept>
+	<concept>
+		<code value="R0860"/>
+		<display value="Drama Therapist Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0870"/>
+		<display value="Multi Therapist"/>
+	</concept>
+	<concept>
+		<code value="R0880"/>
+		<display value="Multi Therapist Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0890"/>
+		<display value="Multi Therapist Manager"/>
+	</concept>
+	<concept>
+		<code value="R0900"/>
+		<display value="Multi Therapist Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0910"/>
+		<display value="Music Therapist"/>
+	</concept>
+	<concept>
+		<code value="R0920"/>
+		<display value="Music Therapist Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0930"/>
+		<display value="Music Therapist Manager"/>
+	</concept>
+	<concept>
+		<code value="R0940"/>
+		<display value="Music Therapist Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0955"/>
+		<display value="Speech &amp; Language Therapist"/>
+	</concept>
+	<concept>
+		<code value="R0965"/>
+		<display value="Speech &amp; Language Therapist Consultant"/>
+	</concept>
+	<concept>
+		<code value="R0975"/>
+		<display value="Speech &amp; Language Therapist Manager"/>
+	</concept>
+	<concept>
+		<code value="R0985"/>
+		<display value="Speech &amp; Language Therapist Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R9500"/>
+		<display value="Social Services Senior Management"/>
+	</concept>
+	<concept>
+		<code value="R9505"/>
+		<display value="Social Services Policy and Planning"/>
+	</concept>
+	<concept>
+		<code value="R9510"/>
+		<display value="Social Services Information Manager"/>
+	</concept>
+	<concept>
+		<code value="R9515"/>
+		<display value="Social Work Team Manager (Children)"/>
+	</concept>
+	<concept>
+		<code value="R9520"/>
+		<display value="Senior Social Worker (Children)"/>
+	</concept>
+	<concept>
+		<code value="R9525"/>
+		<display value="Social Services Care Manager (Children)"/>
+	</concept>
+	<concept>
+		<code value="R9530"/>
+		<display value="Social Work Assistant (Children)"/>
+	</concept>
+	<concept>
+		<code value="R9535"/>
+		<display value="Child Protection Worker"/>
+	</concept>
+	<concept>
+		<code value="R9540"/>
+		<display value="Family Placement Worker"/>
+	</concept>
+	<concept>
+		<code value="R9545"/>
+		<display value="Community Worker (Children)"/>
+	</concept>
+	<concept>
+		<code value="R9550"/>
+		<display value="Occupational Therapist"/>
+	</concept>
+	<concept>
+		<code value="R9555"/>
+		<display value="Occupational Therapist Assistant"/>
+	</concept>
+	<concept>
+		<code value="R9560"/>
+		<display value="Occupational Therapy Team Manager"/>
+	</concept>
+	<concept>
+		<code value="R9565"/>
+		<display value="Social Work Team Manager (Adults)"/>
+	</concept>
+	<concept>
+		<code value="R9570"/>
+		<display value="Senior Social Worker (Adults)"/>
+	</concept>
+	<concept>
+		<code value="R9575"/>
+		<display value="Social Services Care Manager (Adults)"/>
+	</concept>
+	<concept>
+		<code value="R9580"/>
+		<display value="Social Work Assistant (Adults)"/>
+	</concept>
+	<concept>
+		<code value="R9585"/>
+		<display value="Social Work Team Manager (Mental Health)"/>
+	</concept>
+	<concept>
+		<code value="R9590"/>
+		<display value="Senior Social Worker (Mental Health)"/>
+	</concept>
+	<concept>
+		<code value="R9595"/>
+		<display value="Social Services Care Manager (Mental Health)"/>
+	</concept>
+	<concept>
+		<code value="R9600"/>
+		<display value="Social Work Assistant (Mental Health)"/>
+	</concept>
+	<concept>
+		<code value="R9605"/>
+		<display value="Emergency Duty Social Worker"/>
+	</concept>
+	<concept>
+		<code value="R9615"/>
+		<display value="Social Services Driver"/>
+	</concept>
+	<concept>
+		<code value="R9620"/>
+		<display value="Home Care Organiser"/>
+	</concept>
+	<concept>
+		<code value="R9625"/>
+		<display value="Home Care Administrator"/>
+	</concept>
+	<concept>
+		<code value="R9630"/>
+		<display value="Home Help"/>
+	</concept>
+	<concept>
+		<code value="R9635"/>
+		<display value="Warden"/>
+	</concept>
+	<concept>
+		<code value="R9640"/>
+		<display value="Meals on Wheels Organiser"/>
+	</concept>
+	<concept>
+		<code value="R9645"/>
+		<display value="Meals Delivery"/>
+	</concept>
+	<concept>
+		<code value="R9650"/>
+		<display value="Day Centre Manager"/>
+	</concept>
+	<concept>
+		<code value="R9655"/>
+		<display value="Day Centre Deputy"/>
+	</concept>
+	<concept>
+		<code value="R9660"/>
+		<display value="Day Centre Officer"/>
+	</concept>
+	<concept>
+		<code value="R9665"/>
+		<display value="Day Centre Care Staff"/>
+	</concept>
+	<concept>
+		<code value="R9670"/>
+		<display value="Family Centre Manager"/>
+	</concept>
+	<concept>
+		<code value="R9675"/>
+		<display value="Family Centre Deputy"/>
+	</concept>
+	<concept>
+		<code value="R9680"/>
+		<display value="Family Centre Worker"/>
+	</concept>
+	<concept>
+		<code value="R9685"/>
+		<display value="Nursery Manager"/>
+	</concept>
+	<concept>
+		<code value="R9690"/>
+		<display value="Nursery Deputy"/>
+	</concept>
+	<concept>
+		<code value="R9695"/>
+		<display value="Nursery Worker"/>
+	</concept>
+	<concept>
+		<code value="R9700"/>
+		<display value="Playgroup Leader"/>
+	</concept>
+	<concept>
+		<code value="R9705"/>
+		<display value="Playgroup Assistant"/>
+	</concept>
+	<concept>
+		<code value="R9710"/>
+		<display value="Residential Manager"/>
+	</concept>
+	<concept>
+		<code value="R9715"/>
+		<display value="Residential Deputy"/>
+	</concept>
+	<concept>
+		<code value="R9720"/>
+		<display value="Residential Worker"/>
+	</concept>
+	<concept>
+		<code value="R9725"/>
+		<display value="Residential Care Staff"/>
+	</concept>
+	<concept>
+		<code value="R9730"/>
+		<display value="Intermediate Care Manager"/>
+	</concept>
+	<concept>
+		<code value="R9735"/>
+		<display value="Intermediate Care Deputy"/>
+	</concept>
+	<concept>
+		<code value="R9740"/>
+		<display value="Intermediate Care Worker"/>
+	</concept>
+	<concept>
+		<code value="R9745"/>
+		<display value="Intermediate Care Staff"/>
+	</concept>
+	<concept>
+		<code value="R9750"/>
+		<display value="Social Care SAP User"/>
+	</concept>
+	<concept>
+		<code value="R9755"/>
+		<display value="Social Care SAP Manager"/>
+	</concept>
+	<concept>
+		<code value="R1270"/>
+		<display value="Clinical Director"/>
+	</concept>
+	<concept>
+		<code value="R1280"/>
+		<display value="Optometrist"/>
+	</concept>
+	<concept>
+		<code value="R1290"/>
+		<display value="Pharmacist"/>
+	</concept>
+	<concept>
+		<code value="R1979"/>
+		<display value="Medical Technical Officer - Pharmacy"/>
+	</concept>
+	<concept>
+		<code value="R1300"/>
+		<display value="Psychotherapist"/>
+	</concept>
+	<concept>
+		<code value="R1310"/>
+		<display value="Clinical Psychologist"/>
+	</concept>
+	<concept>
+		<code value="R1320"/>
+		<display value="Chaplain"/>
+	</concept>
+	<concept>
+		<code value="R1330"/>
+		<display value="Social Worker"/>
+	</concept>
+	<concept>
+		<code value="R1340"/>
+		<display value="Approved Social Worker"/>
+	</concept>
+	<concept>
+		<code value="R1350"/>
+		<display value="Youth Worker"/>
+	</concept>
+	<concept>
+		<code value="R1360"/>
+		<display value="Specialist Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R1370"/>
+		<display value="Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R0011"/>
+		<display value="Dispenser"/>
+	</concept>
+	<concept>
+		<code value="R1380"/>
+		<display value="Technician - PS&amp;T"/>
+	</concept>
+	<concept>
+		<code value="R1390"/>
+		<display value="Osteopath"/>
+	</concept>
+	<concept>
+		<code value="R1400"/>
+		<display value="Healthcare Scientist"/>
+	</concept>
+	<concept>
+		<code value="R1410"/>
+		<display value="Consultant Healthcare Scientist"/>
+	</concept>
+	<concept>
+		<code value="R1420"/>
+		<display value="Biomedical Scientist"/>
+	</concept>
+	<concept>
+		<code value="R0019"/>
+		<display value="Medical Technical Officer"/>
+	</concept>
+	<concept>
+		<code value="R1430"/>
+		<display value="Technician - Healthcare Scientists"/>
+	</concept>
+	<concept>
+		<code value="R1440"/>
+		<display value="Therapist"/>
+	</concept>
+	<concept>
+		<code value="R1540"/>
+		<display value="Associate Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R1543"/>
+		<display value="Associate Practitioner - Nurse"/>
+	</concept>
+	<concept>
+		<code value="R1547"/>
+		<display value="Associate Practitioner - General Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R1560"/>
+		<display value="Helper/Assistant"/>
+	</concept>
+	<concept>
+		<code value="R1600"/>
+		<display value="Cytoscreener"/>
+	</concept>
+	<concept>
+		<code value="R1570"/>
+		<display value="Dental Surgery Assistant"/>
+	</concept>
+	<concept>
+		<code value="R1450"/>
+		<display value="Health Care Support Worker"/>
+	</concept>
+	<concept>
+		<code value="R1580"/>
+		<display value="Medical Laboratory Assistant"/>
+	</concept>
+	<concept>
+		<code value="R1550"/>
+		<display value="Counsellor"/>
+	</concept>
+	<concept>
+		<code value="R0002"/>
+		<display value="Porter"/>
+	</concept>
+	<concept>
+		<code value="R1690"/>
+		<display value="Call Operator"/>
+	</concept>
+	<concept>
+		<code value="R1700"/>
+		<display value="Gateway Worker"/>
+	</concept>
+	<concept>
+		<code value="R1710"/>
+		<display value="Support, Time, Recovery Worker"/>
+	</concept>
+	<concept>
+		<code value="R1480"/>
+		<display value="Healthcare Assistant"/>
+	</concept>
+	<concept>
+		<code value="R1490"/>
+		<display value="Nursery Nurse"/>
+	</concept>
+	<concept>
+		<code value="R1590"/>
+		<display value="Phlebotomist"/>
+	</concept>
+	<concept>
+		<code value="R1460"/>
+		<display value="Social Care Support Worker"/>
+	</concept>
+	<concept>
+		<code value="R1470"/>
+		<display value="Home Help"/>
+	</concept>
+	<concept>
+		<code value="R1520"/>
+		<display value="Technician - Additional Clinical Services"/>
+	</concept>
+	<concept>
+		<code value="R1530"/>
+		<display value="Technical Instructor"/>
+	</concept>
+	<concept>
+		<code value="R1980"/>
+		<display value="Patient Welfare Officer"/>
+	</concept>
+	<concept>
+		<code value="R1500"/>
+		<display value="Play Therapist"/>
+	</concept>
+	<concept>
+		<code value="R1510"/>
+		<display value="Play Specialist"/>
+	</concept>
+	<concept>
+		<code value="R1610"/>
+		<display value="Student Technician"/>
+	</concept>
+	<concept>
+		<code value="R1620"/>
+		<display value="Trainee Scientist"/>
+	</concept>
+	<concept>
+		<code value="R1630"/>
+		<display value="Trainee Practitioner"/>
+	</concept>
+	<concept>
+		<code value="R1640"/>
+		<display value="Nursing Cadet"/>
+	</concept>
+	<concept>
+		<code value="R1650"/>
+		<display value="Healthcare Cadet"/>
+	</concept>
+	<concept>
+		<code value="R1660"/>
+		<display value="Pre-reg Pharmacist"/>
+	</concept>
+	<concept>
+		<code value="R1670"/>
+		<display value="Assistant Psychologist"/>
+	</concept>
+	<concept>
+		<code value="R1680"/>
+		<display value="Assistant Psychotherapist"/>
+	</concept>
+	<concept>
+		<code value="R0007"/>
+		<display value="ERS SDS Organisation Reporting Analyst"/>
+	</concept>
+	<concept>
+		<code value="R0008"/>
+		<display value="Demographic Supervisor"/>
+	</concept>
+	<concept>
+		<code value="R0021"/>
+		<display value="DSA NHS Number Manager (Temporary)"/>
+	</concept>
+	<concept>
+		<code value="R0022"/>
+		<display value="DSA National Clinical Supervisor (Temporary)"/>
+	</concept>
+	<concept>
+		<code value="R0023"/>
+		<display value="DSA National Clinical Administrator (Temporary)"/>
+	</concept>
+	<concept>
+		<code value="R1720"/>
+		<display value="Clerical Worker"/>
+	</concept>
+	<concept>
+		<code value="R1730"/>
+		<display value="Receptionist"/>
+	</concept>
+	<concept>
+		<code value="R1740"/>
+		<display value="Secretary"/>
+	</concept>
+	<concept>
+		<code value="R1750"/>
+		<display value="Personal Assistant"/>
+	</concept>
+	<concept>
+		<code value="R1751"/>
+		<display value="Demographic Administrator (Sensitive Records) Temporary"/>
+	</concept>
+	<concept>
+		<code value="R1760"/>
+		<display value="Medical Secretary"/>
+	</concept>
+	<concept>
+		<code value="R1770"/>
+		<display value="Officer"/>
+	</concept>
+	<concept>
+		<code value="R1971"/>
+		<display value="Map of Medicine Administrator"/>
+	</concept>
+	<concept>
+		<code value="R1973"/>
+		<display value="Community Administrator"/>
+	</concept>
+	<concept>
+		<code value="R1977"/>
+		<display value="ECC/CPA Administrator"/>
+	</concept>
+	<concept>
+		<code value="R1978"/>
+		<display value="Information Officer"/>
+	</concept>
+	<concept>
+		<code value="R1985"/>
+		<display value="Health Records Clerk"/>
+	</concept>
+	<concept>
+		<code value="R1995"/>
+		<display value="End Point Approver"/>
+	</concept>
+	<concept>
+		<code value="R5010"/>
+		<display value="Network Technician"/>
+	</concept>
+	<concept>
+		<code value="R5040"/>
+		<display value="Desktop Support Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5090"/>
+		<display value="Registration Authority Agent"/>
+	</concept>
+	<concept>
+		<code value="R5110"/>
+		<display value="Demographic Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5120"/>
+		<display value="ISP Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5130"/>
+		<display value="Technical Codes Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5140"/>
+		<display value="OSS Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5170"/>
+		<display value="End Point Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5175"/>
+		<display value="End Point Viewer"/>
+	</concept>
+	<concept>
+		<code value="R5181"/>
+		<display value="RTS Dashboard User"/>
+	</concept>
+	<concept>
+		<code value="R5183"/>
+		<display value="RTS BT Dashboard User"/>
+	</concept>
+	<concept>
+		<code value="R5186"/>
+		<display value="ERS BT Customer SLA User"/>
+	</concept>
+	<concept>
+		<code value="R5188"/>
+		<display value="ERS BT Supplier SLA User"/>
+	</concept>
+	<concept>
+		<code value="R5189"/>
+		<display value="ERS LogicaCMG SLA User"/>
+	</concept>
+	<concept>
+		<code value="R5190"/>
+		<display value="Content Creator"/>
+	</concept>
+	<concept>
+		<code value="R5195"/>
+		<display value="Content Publisher"/>
+	</concept>
+	<concept>
+		<code value="R5210"/>
+		<display value="User Details Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5250"/>
+		<display value="EBS Administrator"/>
+	</concept>
+	<concept>
+		<code value="R6010"/>
+		<display value="Appointments Clerk"/>
+	</concept>
+	<concept>
+		<code value="R6030"/>
+		<display value="Ward Clerk"/>
+	</concept>
+	<concept>
+		<code value="R6050"/>
+		<display value="Clinical Coder"/>
+	</concept>
+	<concept>
+		<code value="R6060"/>
+		<display value="Medical Records Clerk"/>
+	</concept>
+	<concept>
+		<code value="R6080"/>
+		<display value="Waiting List Clerk"/>
+	</concept>
+	<concept>
+		<code value="R7100"/>
+		<display value="Trainer"/>
+	</concept>
+	<concept>
+		<code value="R7110"/>
+		<display value="Training Manager"/>
+	</concept>
+	<concept>
+		<code value="R7120"/>
+		<display value="Directory of Services Coordinator"/>
+	</concept>
+	<concept>
+		<code value="R9756"/>
+		<display value="ETP System Administrator"/>
+	</concept>
+	<concept>
+		<code value="R1780"/>
+		<display value="Manager"/>
+	</concept>
+	<concept>
+		<code value="R1790"/>
+		<display value="Senior Manager"/>
+	</concept>
+	<concept>
+		<code value="R1910"/>
+		<display value="Chair"/>
+	</concept>
+	<concept>
+		<code value="R1920"/>
+		<display value="Chief Executive"/>
+	</concept>
+	<concept>
+		<code value="R1930"/>
+		<display value="Finance Director"/>
+	</concept>
+	<concept>
+		<code value="R1940"/>
+		<display value="Other Executive Director"/>
+	</concept>
+	<concept>
+		<code value="R1950"/>
+		<display value="Board Level Director"/>
+	</concept>
+	<concept>
+		<code value="R1960"/>
+		<display value="Non Executive Director"/>
+	</concept>
+	<concept>
+		<code value="R1970"/>
+		<display value="Childcare Co-ordinator"/>
+	</concept>
+	<concept>
+		<code value="R1982"/>
+		<display value="Senior Administrator"/>
+	</concept>
+	<concept>
+		<code value="R1983"/>
+		<display value="Ward Manager"/>
+	</concept>
+	<concept>
+		<code value="R1986"/>
+		<display value="Workgroup Administrator"/>
+	</concept>
+	<concept>
+		<code value="R1987"/>
+		<display value="National RBAC Attribute Administrator"/>
+	</concept>
+	<concept>
+		<code value="R1988"/>
+		<display value="National RBAC Baseline Policy Administrator"/>
+	</concept>
+	<concept>
+		<code value="R1989"/>
+		<display value="Complaints Coordinator"/>
+	</concept>
+	<concept>
+		<code value="R1990"/>
+		<display value="Complaints Investigator"/>
+	</concept>
+	<concept>
+		<code value="R1996"/>
+		<display value="End Point DNS Administrator"/>
+	</concept>
+	<concept>
+		<code value="R1997"/>
+		<display value="End Point Spine Administrator"/>
+	</concept>
+	<concept>
+		<code value="R1998"/>
+		<display value="End Point Super User"/>
+	</concept>
+	<concept>
+		<code value="R1999"/>
+		<display value="End Point Service Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5000"/>
+		<display value="Network Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5003"/>
+		<display value="Cluster System Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5007"/>
+		<display value="System Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5020"/>
+		<display value="Helpdesk Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5060"/>
+		<display value="Security Policy Controller"/>
+	</concept>
+	<concept>
+		<code value="R5070"/>
+		<display value="Senior Security Manager"/>
+	</concept>
+	<concept>
+		<code value="R5072"/>
+		<display value="Root Registration Authority Manager"/>
+	</concept>
+	<concept>
+		<code value="R5080"/>
+		<display value="Registration Authority Manager"/>
+	</concept>
+	<concept>
+		<code value="R5100"/>
+		<display value="Audit Manager"/>
+	</concept>
+	<concept>
+		<code value="R5105"/>
+		<display value="Caldicott Guardian"/>
+	</concept>
+	<concept>
+		<code value="R5180"/>
+		<display value="NASP Service Manager"/>
+	</concept>
+	<concept>
+		<code value="R5182"/>
+		<display value="ERS ETP System Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5184"/>
+		<display value="ERS Spine SLA Manager"/>
+	</concept>
+	<concept>
+		<code value="R5185"/>
+		<display value="ERS BT Customer SLA Manager"/>
+	</concept>
+	<concept>
+		<code value="R5187"/>
+		<display value="ERS BT Supplier SLA Manager"/>
+	</concept>
+	<concept>
+		<code value="R5191"/>
+		<display value="ERS Support Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5192"/>
+		<display value="ECS Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5300"/>
+		<display value="Portal Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5310"/>
+		<display value="LiquidLogic Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5320"/>
+		<display value="i.EPR Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5330"/>
+		<display value="Synergy Administrator"/>
+	</concept>
+	<concept>
+		<code value="R5340"/>
+		<display value="SystmOne Administrator"/>
+	</concept>
+	<concept>
+		<code value="R6020"/>
+		<display value="Outpatient Manager"/>
+	</concept>
+	<concept>
+		<code value="R6040"/>
+		<display value="Bed Manager"/>
+	</concept>
+	<concept>
+		<code value="R6070"/>
+		<display value="Medical Records Manager"/>
+	</concept>
+	<concept>
+		<code value="R6090"/>
+		<display value="Waiting List Manager"/>
+	</concept>
+	<concept>
+		<code value="R6100"/>
+		<display value="Mental Health Act Administrator"/>
+	</concept>
+	<concept>
+		<code value="R6160"/>
+		<display value="Ad-hoc Report Manager"/>
+	</concept>
+	<concept>
+		<code value="R7130"/>
+		<display value="PAS Manager"/>
+	</concept>
+	<concept>
+		<code value="R1800"/>
+		<display value="Technician - Admin &amp; Clerical"/>
+	</concept>
+	<concept>
+		<code value="R1810"/>
+		<display value="Accountant"/>
+	</concept>
+	<concept>
+		<code value="R1820"/>
+		<display value="Librarian"/>
+	</concept>
+	<concept>
+		<code value="R1830"/>
+		<display value="Interpreter"/>
+	</concept>
+	<concept>
+		<code value="R1840"/>
+		<display value="Analyst"/>
+	</concept>
+	<concept>
+		<code value="R1850"/>
+		<display value="Adviser"/>
+	</concept>
+	<concept>
+		<code value="R1860"/>
+		<display value="Researcher"/>
+	</concept>
+	<concept>
+		<code value="R1870"/>
+		<display value="Control Assistant"/>
+	</concept>
+	<concept>
+		<code value="R1880"/>
+		<display value="Architect"/>
+	</concept>
+	<concept>
+		<code value="R1890"/>
+		<display value="Lawyer"/>
+	</concept>
+	<concept>
+		<code value="R1900"/>
+		<display value="Surveyor"/>
+	</concept>
+	<concept>
+		<code value="R5030"/>
+		<display value="Helpdesk Technician"/>
+	</concept>
+	<concept>
+		<code value="R5050"/>
+		<display value="Desktop Support Technician"/>
+	</concept>
+	<concept>
+		<code value="R5150"/>
+		<display value="System Worker"/>
+	</concept>
+	<concept>
+		<code value="R5400"/>
+		<display value="Availability  Monitor"/>
+	</concept>
+	<concept>
+		<code value="R8000"/>
+		<display value="Clinical Practitioner Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8001"/>
+		<display value="Nurse Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8002"/>
+		<display value="Nurse Manager Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8003"/>
+		<display value="Health Professional Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8004"/>
+		<display value="Healthcare Student Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8016"/>
+		<display value="Midwife Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8017"/>
+		<display value="Midwife Manager Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8024"/>
+		<display value="Bank Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8005"/>
+		<display value="Biomedical Scientist Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8006"/>
+		<display value="Medical Secretary Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8007"/>
+		<display value="Clinical Coder Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8008"/>
+		<display value="Admin/Clinical Support Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8015"/>
+		<display value="Systems Support Access Role"/>
+	</concept>
+	<concept>
+		<code value="R0001"/>
+		<display value="Privacy Officer"/>
+	</concept>
+	<concept>
+		<code value="R8009"/>
+		<display value="Receptionist Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8010"/>
+		<display value="Clerical Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8011"/>
+		<display value="Clerical Manager Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8012"/>
+		<display value="Information Officer Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8013"/>
+		<display value="Health Records Manager Access Role"/>
+	</concept>
+	<concept>
+		<code value="R8014"/>
+		<display value="Social Worker Access Role"/>
+	</concept>
+</CodeSystem>

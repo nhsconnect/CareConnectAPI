@@ -8,7 +8,7 @@ summary: An interaction between a patient and healthcare provider(s) for the pur
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Encounter" page="CareConnect-Encounter-1" fhirlink="[Encounter](https://www.hl7.org/fhir/DSTU2/encounter.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Encounter" page="CareConnect-Encounter-1" fhirname="Encounter" fhirlink="encounter.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -28,7 +28,7 @@ Fetches a bundle of all `Encounter` resources for the specified patient.
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="Encounter"     link="https://www.hl7.org/fhir/DSTU2/encounter.html#search" %}
+{% include custom/search.parameters.html resource="Encounter" link="encounter.html#search" %}
 
 
 <table style="min-width:100%;width:100%">
@@ -68,6 +68,9 @@ Systems SHOULD support the following search combinations:
 {% include custom/search.response.html resource="Encounter" %}
 
 ## 3. Example ##
+
+{% include custom/search.warn_ri_banner.html %}
+
 
 ### 3.1 Query ###
 Return all Encounter resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.

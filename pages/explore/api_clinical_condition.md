@@ -8,7 +8,7 @@ summary: Use to record detailed information about conditions, problems or diagno
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Condition" page="CareConnect-Condition-1" fhirlink="[Condition](https://www.hl7.org/fhir/DSTU2/condition.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Condition" page="CareConnect-Condition-1" fhirname="Condition" fhirlink="condition.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 
 ## 1. Read ##
@@ -29,7 +29,7 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="Condition"     link="https://www.hl7.org/fhir/DSTU2/condition.html#search" %}
+{% include custom/search.parameters.html resource="Condition" link="condition.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
@@ -86,6 +86,8 @@ complaint | symptom | finding | diagnosis | problem | need" selected="symptom" n
 {% include custom/search.response.html resource="Condition" %}
 
 ## 3. Example ##
+
+{% include custom/search.warn_ri_banner.html %}
 
 ### 3.1 Request Query ###
 

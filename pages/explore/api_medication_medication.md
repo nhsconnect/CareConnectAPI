@@ -8,7 +8,7 @@ summary: This resource is primarily used for the identification and definition o
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Medication" page="CareConnect-Medication-1" fhirlink="[Medication](https://www.hl7.org/fhir/DSTU2/medication.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Medication" page="CareConnect-Medication-1" fhirname="Medication" fhirlink="medication.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -27,7 +27,7 @@ Search Medication resources. Returns a bundle of all `Medication` resources for 
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="Medication"     link="https://www.hl7.org/fhir/DSTU2/medication.html#search" %}
+{% include custom/search.parameters.html resource="Medication" link="medication.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
@@ -51,6 +51,9 @@ Search Medication resources. Returns a bundle of all `Medication` resources for 
 {% include custom/search.response.html resource="Medication" %}
 
 ## 3. Example ##
+
+{% include custom/search.warn_ri_banner.html %}
+
 
 ### 3.1 Request Operation ###
 

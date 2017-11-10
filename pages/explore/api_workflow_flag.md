@@ -10,7 +10,7 @@ summary: Workflow Flag
 {% include custom/search.warnbanner.html %}
 
 
-{% include custom/fhir.referencemin.html resource="Flag" page="CareConnect-Flag-1" fhirlink="[Flag](https://www.hl7.org/fhir/DSTU2/flag.html#search)" content="User Stories" userlink="" %}
+{% include custom/fhir.referencemin.html resource="Flag" page="CareConnect-Flag-1" fhirname="Flag" fhirlink="flag.html#search" content="User Stories" userlink="" %}
 
 ## 1. Read ##
 
@@ -27,7 +27,7 @@ GET /Flag?[searchParameters]</div>
 
 Search for all flag (alert) resources for a patient. Fetches a bundle of all `Flag` resources for the specified patient.
 
-{% include custom/search.parameters.html resource="Flag"     link="https://www.hl7.org/fhir/DSTU2/flag.html#search" %}
+{% include custom/search.parameters.html resource="Flag"     link="flag.html#search" %}
 
 
 | Name | Type | Description | SHALL | Path |

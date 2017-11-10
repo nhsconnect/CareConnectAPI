@@ -1,7 +1,7 @@
 entries:
-- title: Care Connect
-  product: Care Connect
-  version: 1.5.0-alpha.0
+- title: STU3 | Care Connect |
+  product: STU3 | Care Connect |
+  version: 1.6.0-alpha.0
   levels: one
   folders:
 
@@ -86,8 +86,8 @@ entries:
           - title: Medication
             url: /api_medication_medication.html
             output: web
-          - title: Medication Order
-            url: /api_medication_medicationorder.html
+          - title: Medication Request
+            url: /api_medication_medicationrequest.html
             output: web
           - title: Medication Statement
             url: /api_medication_medicationstatement.html
@@ -108,8 +108,11 @@ entries:
           - title: Patient
             url: /api_entity_patient.html
             output: web
-          - title: Practitoner
-            url: /api_entity_practitoner.html
+          - title: Practitioner
+            url: /api_entity_practitioner.html
+            output: web
+          - title: Practitioner Role
+            url: /api_entity_practitioner_role.html
             output: web
       - title: Workflow
         output: web
@@ -120,11 +123,14 @@ entries:
       - title: Foundation
         output: web
         subfolderitems:
-        - title: Conformance
-          url: /api_foundation_conformance.html
+        - title: Capability
+          url: /api_foundation_capability.html
           output: web
         - title: ValueSet
           url: /api_foundation_valueset.html
+          output: web
+        - title: CodeSystem
+          url: /api_foundation_codesystem.html
           output: web
       - title: API Guidance | FHIR&reg;
         output: web
@@ -150,19 +156,45 @@ entries:
     - title: Overview
       url: /design.html
       output: web
-    - title: Patterns / Topology
-      url: /design_patterns.html
-      output: web
-    - title: Exchange Patterns
-      url: /design_exchange_patterns.html
-      output: web
-    - title: Access
-      url: /design_access.html
-      output: web
-    - title: Security
-      url: /design_security.html
-      output: web
+
       subfolders:
+      - title: Design
+        url: /design_overview.html
+        output: web
+        subfolderitems:
+        - title: Overview
+          url: /design_overview.html
+          output: web
+        - title: Patterns / Topology
+          url: /design_patterns.html
+          output: web
+        - title: Exchange Patterns
+          url: /design_exchange_patterns.html
+          output: web
+        - title: Access
+          url: /design_access.html
+          output: web
+        - title: Security
+          url: /design_security.html
+          output: web
+
+      - title: Reference Implementation
+        url: /build_ri_overview.html
+        output: web
+        subfolderitems:
+          - title: Overview
+            url: /build_ri_overview.html
+            output: web
+          - title: Use of RI
+            url: /build_ri_use.html
+            output: web
+          - title: Current Version
+            url: /build_ri_version.html
+            output: web
+          - title: Feedback
+            url: /build_ri_feedback.html
+            output: web
+
       - title: Build
         output: web
         subfolderitems:

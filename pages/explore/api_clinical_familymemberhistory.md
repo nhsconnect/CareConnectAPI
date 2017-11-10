@@ -8,7 +8,7 @@ summary: Significant health events and conditions for a person related to the pa
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="FamilyMemberHistory" page="CareConnect-FamilyMemberHistory-1" fhirlink="[FamilyMemberHistory](https://www.hl7.org/fhir/DSTU2/familymemberhistory.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="FamilyMemberHistory" page="CareConnect-FamilyMemberHistory-1" fhirname="FamilyMemberHistory" fhirlink="familymemberhistory.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## Read ##
 
@@ -24,7 +24,7 @@ GET [baseUrl]/FamilyMemberHistory?[searchParameters]</div>
 
 Fetches a bundle of all `FamilyMemberHistory` resources for the specified patient.
 
-{% include custom/search.parameters.html resource="FamilyMemberHistory"     link="https://www.hl7.org/fhir/DSTU2/familymemberhistory.html#search" %}
+{% include custom/search.parameters.html resource="FamilyMemberHistory" link="familymemberhistory.html#search" %}
 
 | Name | Type | Description | Conformance | Path |
 |------|------|-------------|-------|------|

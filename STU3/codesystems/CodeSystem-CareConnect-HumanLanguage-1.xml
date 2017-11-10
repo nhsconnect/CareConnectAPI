@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-HumanLanguage-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CareConnect-HumanLanguage-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Human Language"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem that identifies the language used by a person."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="q1"/>
+		<display value="Braille"/>
+	</concept>
+	<concept>
+		<code value="q2"/>
+		<display value="American Sign Language"/>
+	</concept>
+	<concept>
+		<code value="q3"/>
+		<display value="Australian Sign Language"/>
+	</concept>
+	<concept>
+		<code value="q4"/>
+		<display value="British Sign Language"/>
+	</concept>
+	<concept>
+		<code value="q5"/>
+		<display value="Makaton"/>
+	</concept>
+	<concept>
+		<code value="aa"/>
+		<display value="Afar"/>
+	</concept>
+	<concept>
+		<code value="ab"/>
+		<display value="Abkhazian"/>
+	</concept>
+	<concept>
+		<code value="af"/>
+		<display value="Afrikaans"/>
+	</concept>
+	<concept>
+		<code value="ak"/>
+		<display value="Akan"/>
+	</concept>
+	<concept>
+		<code value="sq"/>
+		<display value="Albanian"/>
+	</concept>
+	<concept>
+		<code value="am"/>
+		<display value="Amharic"/>
+	</concept>
+	<concept>
+		<code value="ar"/>
+		<display value="Arabic"/>
+	</concept>
+	<concept>
+		<code value="an"/>
+		<display value="Aragonese"/>
+	</concept>
+	<concept>
+		<code value="hy"/>
+		<display value="Armenian"/>
+	</concept>
+	<concept>
+		<code value="as"/>
+		<display value="Assamese"/>
+	</concept>
+	<concept>
+		<code value="av"/>
+		<display value="Avaric"/>
+	</concept>
+	<concept>
+		<code value="ae"/>
+		<display value="Avestan"/>
+	</concept>
+	<concept>
+		<code value="ay"/>
+		<display value="Aymara"/>
+	</concept>
+	<concept>
+		<code value="az"/>
+		<display value="Azerbaijani"/>
+	</concept>
+	<concept>
+		<code value="ba"/>
+		<display value="Bashkir"/>
+	</concept>
+	<concept>
+		<code value="bm"/>
+		<display value="Bambara"/>
+	</concept>
+	<concept>
+		<code value="eu"/>
+		<display value="Basque"/>
+	</concept>
+	<concept>
+		<code value="be"/>
+		<display value="Belarusian"/>
+	</concept>
+	<concept>
+		<code value="bn"/>
+		<display value="Bengali"/>
+	</concept>
+	<concept>
+		<code value="bh"/>
+		<display value="Bihari"/>
+	</concept>
+	<concept>
+		<code value="bi"/>
+		<display value="Bislama"/>
+	</concept>
+	<concept>
+		<code value="bo"/>
+		<display value="Tibetan"/>
+	</concept>
+	<concept>
+		<code value="bs"/>
+		<display value="Bosnian"/>
+	</concept>
+	<concept>
+		<code value="br"/>
+		<display value="Breton"/>
+	</concept>
+	<concept>
+		<code value="bg"/>
+		<display value="Bulgarian"/>
+	</concept>
+	<concept>
+		<code value="my"/>
+		<display value="Burmese"/>
+	</concept>
+	<concept>
+		<code value="ca"/>
+		<display value="Catalan; Valencian"/>
+	</concept>
+	<concept>
+		<code value="cs"/>
+		<display value="Czech"/>
+	</concept>
+	<concept>
+		<code value="ch"/>
+		<display value="Chamorro"/>
+	</concept>
+	<concept>
+		<code value="ce"/>
+		<display value="Chechen"/>
+	</concept>
+	<concept>
+		<code value="zh"/>
+		<display value="Chinese"/>
+	</concept>
+	<concept>
+		<code value="cu"/>
+		<display value="Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic"/>
+	</concept>
+	<concept>
+		<code value="cv"/>
+		<display value="Chuvash"/>
+	</concept>
+	<concept>
+		<code value="kw"/>
+		<display value="Cornish"/>
+	</concept>
+	<concept>
+		<code value="co"/>
+		<display value="Corsican"/>
+	</concept>
+	<concept>
+		<code value="cr"/>
+		<display value="Cree"/>
+	</concept>
+	<concept>
+		<code value="cy"/>
+		<display value="Welsh"/>
+	</concept>
+	<concept>
+		<code value="da"/>
+		<display value="Danish"/>
+	</concept>
+	<concept>
+		<code value="de"/>
+		<display value="German"/>
+	</concept>
+	<concept>
+		<code value="dv"/>
+		<display value="Divehi; Dhivehi; Maldivian"/>
+	</concept>
+	<concept>
+		<code value="nl"/>
+		<display value="Dutch; Flemish"/>
+	</concept>
+	<concept>
+		<code value="dz"/>
+		<display value="Dzongkha"/>
+	</concept>
+	<concept>
+		<code value="el"/>
+		<display value="Greek, Modern (1453-)"/>
+	</concept>
+	<concept>
+		<code value="en"/>
+		<display value="English"/>
+	</concept>
+	<concept>
+		<code value="eo"/>
+		<display value="Esperanto"/>
+	</concept>
+	<concept>
+		<code value="et"/>
+		<display value="Estonian"/>
+	</concept>
+	<concept>
+		<code value="ee"/>
+		<display value="Ewe"/>
+	</concept>
+	<concept>
+		<code value="fo"/>
+		<display value="Faroese"/>
+	</concept>
+	<concept>
+		<code value="fa"/>
+		<display value="Persian"/>
+	</concept>
+	<concept>
+		<code value="fj"/>
+		<display value="Fijian"/>
+	</concept>
+	<concept>
+		<code value="fi"/>
+		<display value="Finnish"/>
+	</concept>
+	<concept>
+		<code value="fr"/>
+		<display value="French"/>
+	</concept>
+	<concept>
+		<code value="fy"/>
+		<display value="Western Frisian"/>
+	</concept>
+	<concept>
+		<code value="ff"/>
+		<display value="Fulah"/>
+	</concept>
+	<concept>
+		<code value="ka"/>
+		<display value="Georgian"/>
+	</concept>
+	<concept>
+		<code value="gd"/>
+		<display value="Gaelic; Scottish Gaelic"/>
+	</concept>
+	<concept>
+		<code value="ga"/>
+		<display value="Irish"/>
+	</concept>
+	<concept>
+		<code value="gl"/>
+		<display value="Galician"/>
+	</concept>
+	<concept>
+		<code value="gv"/>
+		<display value="Manx"/>
+	</concept>
+	<concept>
+		<code value="gn"/>
+		<display value="Guarani"/>
+	</concept>
+	<concept>
+		<code value="gu"/>
+		<display value="Gujarati"/>
+	</concept>
+	<concept>
+		<code value="ht"/>
+		<display value="Haitian; Haitian Creole"/>
+	</concept>
+	<concept>
+		<code value="ha"/>
+		<display value="Hausa"/>
+	</concept>
+	<concept>
+		<code value="he"/>
+		<display value="Hebrew"/>
+	</concept>
+	<concept>
+		<code value="hz"/>
+		<display value="Herero"/>
+	</concept>
+	<concept>
+		<code value="hi"/>
+		<display value="Hindi"/>
+	</concept>
+	<concept>
+		<code value="ho"/>
+		<display value="Hiri Motu"/>
+	</concept>
+	<concept>
+		<code value="hr"/>
+		<display value="Croatian"/>
+	</concept>
+	<concept>
+		<code value="hu"/>
+		<display value="Hungarian"/>
+	</concept>
+	<concept>
+		<code value="ig"/>
+		<display value="Igbo"/>
+	</concept>
+	<concept>
+		<code value="is"/>
+		<display value="Icelandic"/>
+	</concept>
+	<concept>
+		<code value="io"/>
+		<display value="Ido"/>
+	</concept>
+	<concept>
+		<code value="ii"/>
+		<display value="Sichuan Yi"/>
+	</concept>
+	<concept>
+		<code value="iu"/>
+		<display value="Inuktitut"/>
+	</concept>
+	<concept>
+		<code value="ie"/>
+		<display value="Interlingue"/>
+	</concept>
+	<concept>
+		<code value="ia"/>
+		<display value="Interlingua (International Auxiliary Language Association)"/>
+	</concept>
+	<concept>
+		<code value="id"/>
+		<display value="Indonesian"/>
+	</concept>
+	<concept>
+		<code value="ik"/>
+		<display value="Inupiaq"/>
+	</concept>
+	<concept>
+		<code value="it"/>
+		<display value="Italian"/>
+	</concept>
+	<concept>
+		<code value="jv"/>
+		<display value="Javanese"/>
+	</concept>
+	<concept>
+		<code value="ja"/>
+		<display value="Japanese"/>
+	</concept>
+	<concept>
+		<code value="kl"/>
+		<display value="Kalaallisut; Greenlandic"/>
+	</concept>
+	<concept>
+		<code value="kn"/>
+		<display value="Kannada"/>
+	</concept>
+	<concept>
+		<code value="ks"/>
+		<display value="Kashmiri"/>
+	</concept>
+	<concept>
+		<code value="kr"/>
+		<display value="Kanuri"/>
+	</concept>
+	<concept>
+		<code value="kk"/>
+		<display value="Kazakh"/>
+	</concept>
+	<concept>
+		<code value="km"/>
+		<display value="Central Khmer"/>
+	</concept>
+	<concept>
+		<code value="ki"/>
+		<display value="Kikuyu; Gikuyu"/>
+	</concept>
+	<concept>
+		<code value="rw"/>
+		<display value="Kinyarwanda"/>
+	</concept>
+	<concept>
+		<code value="ky"/>
+		<display value="Kirghiz; Kyrgyz"/>
+	</concept>
+	<concept>
+		<code value="kv"/>
+		<display value="Komi"/>
+	</concept>
+	<concept>
+		<code value="kg"/>
+		<display value="Kongo"/>
+	</concept>
+	<concept>
+		<code value="ko"/>
+		<display value="Korean"/>
+	</concept>
+	<concept>
+		<code value="kj"/>
+		<display value="Kuanyama; Kwanyama"/>
+	</concept>
+	<concept>
+		<code value="ku"/>
+		<display value="Kurdish"/>
+	</concept>
+	<concept>
+		<code value="lo"/>
+		<display value="Lao"/>
+	</concept>
+	<concept>
+		<code value="la"/>
+		<display value="Latin"/>
+	</concept>
+	<concept>
+		<code value="lv"/>
+		<display value="Latvian"/>
+	</concept>
+	<concept>
+		<code value="li"/>
+		<display value="Limburgan; Limburger; Limburgish"/>
+	</concept>
+	<concept>
+		<code value="ln"/>
+		<display value="Lingala"/>
+	</concept>
+	<concept>
+		<code value="lt"/>
+		<display value="Lithuanian"/>
+	</concept>
+	<concept>
+		<code value="lb"/>
+		<display value="Luxembourgish; Letzeburgesch"/>
+	</concept>
+	<concept>
+		<code value="lu"/>
+		<display value="Luba-Katanga"/>
+	</concept>
+	<concept>
+		<code value="lg"/>
+		<display value="Ganda"/>
+	</concept>
+	<concept>
+		<code value="mk"/>
+		<display value="Macedonian"/>
+	</concept>
+	<concept>
+		<code value="mh"/>
+		<display value="Marshallese"/>
+	</concept>
+	<concept>
+		<code value="ml"/>
+		<display value="Malayalam"/>
+	</concept>
+	<concept>
+		<code value="mi"/>
+		<display value="Maori"/>
+	</concept>
+	<concept>
+		<code value="mr"/>
+		<display value="Marathi"/>
+	</concept>
+	<concept>
+		<code value="ms"/>
+		<display value="Malay"/>
+	</concept>
+	<concept>
+		<code value="mg"/>
+		<display value="Malagasy"/>
+	</concept>
+	<concept>
+		<code value="mt"/>
+		<display value="Maltese"/>
+	</concept>
+	<concept>
+		<code value="mo"/>
+		<display value="Moldavian"/>
+	</concept>
+	<concept>
+		<code value="mn"/>
+		<display value="Mongolian"/>
+	</concept>
+	<concept>
+		<code value="na"/>
+		<display value="Nauru"/>
+	</concept>
+	<concept>
+		<code value="nv"/>
+		<display value="Navajo; Navaho"/>
+	</concept>
+	<concept>
+		<code value="nr"/>
+		<display value="Ndebele, South; South Ndebele"/>
+	</concept>
+	<concept>
+		<code value="nd"/>
+		<display value="Ndebele, North; North Ndebele"/>
+	</concept>
+	<concept>
+		<code value="ng"/>
+		<display value="Ndonga"/>
+	</concept>
+	<concept>
+		<code value="ne"/>
+		<display value="Nepali"/>
+	</concept>
+	<concept>
+		<code value="nn"/>
+		<display value="Norwegian Nynorsk; Nynorsk, Norwegian"/>
+	</concept>
+	<concept>
+		<code value="nb"/>
+		<display value="Bokmal, Norwegian; Norwegian Bokmal"/>
+	</concept>
+	<concept>
+		<code value="no"/>
+		<display value="Norwegian"/>
+	</concept>
+	<concept>
+		<code value="ny"/>
+		<display value="Chichewa; Chewa; Nyanja"/>
+	</concept>
+	<concept>
+		<code value="oc"/>
+		<display value="Occitan (post1500); Provencal"/>
+	</concept>
+	<concept>
+		<code value="oj"/>
+		<display value="Ojibwa"/>
+	</concept>
+	<concept>
+		<code value="or"/>
+		<display value="Oriya"/>
+	</concept>
+	<concept>
+		<code value="om"/>
+		<display value="Oromo"/>
+	</concept>
+	<concept>
+		<code value="os"/>
+		<display value="Ossetian; Ossetic"/>
+	</concept>
+	<concept>
+		<code value="pa"/>
+		<display value="Panjabi; Punjabi"/>
+	</concept>
+	<concept>
+		<code value="pi"/>
+		<display value="Pali"/>
+	</concept>
+	<concept>
+		<code value="pl"/>
+		<display value="Polish"/>
+	</concept>
+	<concept>
+		<code value="pt"/>
+		<display value="Portuguese"/>
+	</concept>
+	<concept>
+		<code value="ps"/>
+		<display value="Pushto"/>
+	</concept>
+	<concept>
+		<code value="qu"/>
+		<display value="Quechua"/>
+	</concept>
+	<concept>
+		<code value="rm"/>
+		<display value="Romansh"/>
+	</concept>
+	<concept>
+		<code value="ro"/>
+		<display value="Romanian"/>
+	</concept>
+	<concept>
+		<code value="rn"/>
+		<display value="Rundi"/>
+	</concept>
+	<concept>
+		<code value="ru"/>
+		<display value="Russian"/>
+	</concept>
+	<concept>
+		<code value="sg"/>
+		<display value="Sango"/>
+	</concept>
+	<concept>
+		<code value="sa"/>
+		<display value="Sanskrit"/>
+	</concept>
+	<concept>
+		<code value="sr"/>
+		<display value="Serbian"/>
+	</concept>
+	<concept>
+		<code value="si"/>
+		<display value="Sinhala; Sinhalese"/>
+	</concept>
+	<concept>
+		<code value="sk"/>
+		<display value="Slovak"/>
+	</concept>
+	<concept>
+		<code value="sl"/>
+		<display value="Slovenian"/>
+	</concept>
+	<concept>
+		<code value="se"/>
+		<display value="Northern Sami"/>
+	</concept>
+	<concept>
+		<code value="sm"/>
+		<display value="Samoan"/>
+	</concept>
+	<concept>
+		<code value="sn"/>
+		<display value="Shona"/>
+	</concept>
+	<concept>
+		<code value="sd"/>
+		<display value="Sindhi"/>
+	</concept>
+	<concept>
+		<code value="so"/>
+		<display value="Somali"/>
+	</concept>
+	<concept>
+		<code value="st"/>
+		<display value="Sotho, Southern"/>
+	</concept>
+	<concept>
+		<code value="es"/>
+		<display value="Spanish; Castilian"/>
+	</concept>
+	<concept>
+		<code value="sc"/>
+		<display value="Sardinian"/>
+	</concept>
+	<concept>
+		<code value="ss"/>
+		<display value="Swati"/>
+	</concept>
+	<concept>
+		<code value="su"/>
+		<display value="Sundanese"/>
+	</concept>
+	<concept>
+		<code value="sw"/>
+		<display value="Swahili"/>
+	</concept>
+	<concept>
+		<code value="sv"/>
+		<display value="Swedish"/>
+	</concept>
+	<concept>
+		<code value="ty"/>
+		<display value="Tahitian"/>
+	</concept>
+	<concept>
+		<code value="ta"/>
+		<display value="Tamil"/>
+	</concept>
+	<concept>
+		<code value="tt"/>
+		<display value="Tatar"/>
+	</concept>
+	<concept>
+		<code value="te"/>
+		<display value="Telugu"/>
+	</concept>
+	<concept>
+		<code value="tg"/>
+		<display value="Tajik"/>
+	</concept>
+	<concept>
+		<code value="tl"/>
+		<display value="Tagalog"/>
+	</concept>
+	<concept>
+		<code value="th"/>
+		<display value="Thai"/>
+	</concept>
+	<concept>
+		<code value="ti"/>
+		<display value="Tigrinya"/>
+	</concept>
+	<concept>
+		<code value="to"/>
+		<display value="Tonga (Tonga Islands)"/>
+	</concept>
+	<concept>
+		<code value="tn"/>
+		<display value="Tswana"/>
+	</concept>
+	<concept>
+		<code value="ts"/>
+		<display value="Tsonga"/>
+	</concept>
+	<concept>
+		<code value="tk"/>
+		<display value="Turkmen"/>
+	</concept>
+	<concept>
+		<code value="tr"/>
+		<display value="Turkish"/>
+	</concept>
+	<concept>
+		<code value="tw"/>
+		<display value="Twi"/>
+	</concept>
+	<concept>
+		<code value="ug"/>
+		<display value="Uighur; Uyghur"/>
+	</concept>
+	<concept>
+		<code value="uk"/>
+		<display value="Ukrainian"/>
+	</concept>
+	<concept>
+		<code value="ur"/>
+		<display value="Urdu"/>
+	</concept>
+	<concept>
+		<code value="uz"/>
+		<display value="Uzbek"/>
+	</concept>
+	<concept>
+		<code value="ve"/>
+		<display value="Venda"/>
+	</concept>
+	<concept>
+		<code value="vi"/>
+		<display value="Vietnamese"/>
+	</concept>
+	<concept>
+		<code value="vo"/>
+		<display value="Volapuk"/>
+	</concept>
+	<concept>
+		<code value="wa"/>
+		<display value="Walloon"/>
+	</concept>
+	<concept>
+		<code value="wo"/>
+		<display value="Wolof"/>
+	</concept>
+	<concept>
+		<code value="xh"/>
+		<display value="Xhosa"/>
+	</concept>
+	<concept>
+		<code value="yi"/>
+		<display value="Yiddish"/>
+	</concept>
+	<concept>
+		<code value="yo"/>
+		<display value="Yoruba"/>
+	</concept>
+	<concept>
+		<code value="za"/>
+		<display value="Zhuang; Chuang"/>
+	</concept>
+	<concept>
+		<code value="zu"/>
+		<display value="Zulu"/>
+	</concept>
+</CodeSystem>

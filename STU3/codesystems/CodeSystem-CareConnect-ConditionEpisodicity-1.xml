@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-ConditionEpisodicity-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CareConnect-ConditionEpisodicity-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Condition Episodicity"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem to identify the episodicity of a condition."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="first"/>
+		<display value="First"/>
+		<definition value="The first episode of a condition."/>
+	</concept>
+	<concept>
+		<code value="new"/>
+		<display value="New"/>
+		<definition value="A new episode of a previously recorded condition."/>
+	</concept>
+	<concept>
+		<code value="review"/>
+		<display value="Review"/>
+		<definition value="A review of an existing condition episode."/>
+	</concept>
+	<concept>
+		<code value="flare"/>
+		<display value="Flare"/>
+		<definition value="A flare-up of an existing condition episode."/>
+	</concept>
+	<concept>
+		<code value="end"/>
+		<display value="End"/>
+		<definition value="Marks the end of an existing condition episode."/>
+	</concept>
+</CodeSystem>

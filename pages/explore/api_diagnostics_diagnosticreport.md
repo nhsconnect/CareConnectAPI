@@ -8,7 +8,7 @@ summary: The findings and interpretation of diagnostic tests performed on patien
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.nonecc.html resource="DiagnosticReport" resourceurl="https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/Profile.DDS-Report/dds-report-1.html" page="" fhirlink="[DiagnosticReport](https://www.hl7.org/fhir/DSTU2/diagnosticreport.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.nonecc.html resource="DiagnosticReport" resourceurl="https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/Profile.DDS-Report/dds-report-1.html" page="" fhirname="DiagnosticReport" fhirlink="diagnosticreport.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 [SKETCH profile. Not official]
 
@@ -30,7 +30,7 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="DiagnosticReport"     link="https://www.hl7.org/fhir/DSTU2/DiagnosticReport.html#search" %}
+{% include custom/search.parameters.html resource="DiagnosticReport" link="DiagnosticReport.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">

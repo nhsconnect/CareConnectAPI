@@ -18,7 +18,11 @@ Successful Operation
 #### 201 Created ####
 The resource was created.
 
-### 1.2. 4xx Http Client Errors ###
+### 1.2. 3xx Http Client Errors ###
+
+Coming soon...
+
+### 1.3. 4xx Http Client Errors ###
 
 #### 400 Bad Request ####
 Failing to send a required query parameter will result in a 400 Bad Request response.
@@ -41,4 +45,6 @@ Performing an update with an out-of-date version id will result in a 409 Conflic
 #### 422 Unprocessable Entity ####
 Performing an add or update with syntactically correct JSON body which is invalid according to business rules will result in a 422 Unprocessable Entity response.
 
-### 1.3. 5xx Http Server Errors ###
+### 1.4. 5xx Http Server Errors ###
+
+Coming soon...

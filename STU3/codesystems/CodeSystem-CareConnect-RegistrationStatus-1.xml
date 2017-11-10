@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-RegistrationStatus-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CareConnect-RegistrationStatus-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Registration Status"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem that identifies the status of registration for a patient at the healthcare organisation."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="A"/>
+		<display value="Active"/>
+	</concept>
+	<concept>
+		<code value="D"/>
+		<display value="Deduction Pending"/>
+	</concept>
+	<concept>
+		<code value="I"/>
+		<display value="Inactive"/>
+	</concept>
+	<concept>
+		<code value="R"/>
+		<display value="Registration Pending"/>
+	</concept>
+</CodeSystem>

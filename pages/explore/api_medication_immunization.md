@@ -8,7 +8,7 @@ summary: Describes the event of a patient being administered a vaccination or a 
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Immunization" page="CareConnect-Immunization-1" fhirlink="[Immunization](https://www.hl7.org/fhir/DSTU2/immunization.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Immunization" page="CareConnect-Immunization-1" fhirname="Immunization" fhirlink="immunization.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -28,7 +28,7 @@ Search for all immunization resources for a patient. Fetches a bundle of all `Im
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="Immunization"     link="https://www.hl7.org/fhir/DSTU2/immunization.html#search" %}
+{% include custom/search.parameters.html resource="Immunization" link="immunization.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">

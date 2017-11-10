@@ -8,7 +8,7 @@ summary: Details and position information for a physical place where services ar
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Location" page="CareConnect-Location-1" fhirlink="[Location](https://www.hl7.org/fhir/DSTU2/location.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Location" page="CareConnect-Location-1" fhirname="Location" fhirlink="location.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -27,7 +27,7 @@ Fetches a bundle of all `Location` resources for the specified search criteria.
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="Location"     link="https://www.hl7.org/fhir/DSTU2/location.html#search" %}
+{% include custom/search.parameters.html resource="Location" link="location.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
@@ -60,6 +60,8 @@ Fetches a bundle of all `Location` resources for the specified search criteria.
 {% include custom/search.response.html resource="Location" %}
 
 ## 3. Example ##
+
+{% include custom/search.warn_ri_banner.html %}
 
 ### 3.1 Request Query ###
 

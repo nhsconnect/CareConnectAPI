@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-RegistrationType-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CareConnect-RegistrationType-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Registration Type"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem that identifies the type of registration for a patient at a healthcare organisation."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="R"/>
+		<display value="Regular"/>
+	</concept>
+	<concept>
+		<code value="E"/>
+		<display value="Emergency"/>
+	</concept>
+	<concept>
+		<code value="IN"/>
+		<display value="Immediately necessary"/>
+	</concept>
+	<concept>
+		<code value="T"/>
+		<display value="Temporary"/>
+	</concept>
+	<concept>
+		<code value="P"/>
+		<display value="Private"/>
+	</concept>
+	<concept>
+		<code value="O"/>
+		<display value="Other"/>
+	</concept>
+	<concept>
+		<code value="S"/>
+		<display value="Synthetic Record"/>
+	</concept>
+</CodeSystem>

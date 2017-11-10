@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+	<url value="https://fhir.hl7.org.uk/STU3/ConceptMap/CareConnect-AdministrativeGender-1"/>
+	<version value="1.0.0"/>
+	<name value="Concept Map - Care Connect Administrative Gender"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A Concept Map from ValueSet Administrative Gender to NHS Data Dictionary Person Stated Gender to aid interpretation."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<sourceReference>
+		<reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AdministrativeGender-1"/>
+	</sourceReference>
+	<targetReference>
+		<reference value="https://fhir.nhs.uk/STU3/ValueSet/NHSDataDictionary-PersonStatedGender-1"/>
+	</targetReference>
+	<group>
+		<source value="http://hl7.org/fhir/administrative-gender"/>
+		<target value="https://fhir.nhs.uk/STU3/NHSDataDictionary-PersonStatedGender-1"/>
+		<element>
+			<code value="male"/>
+			<display value="Male"/>
+			<target>
+				<code value="1"/>
+				<display value="Male"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="female"/>
+			<display value="Female"/>
+			<target>
+				<code value="2"/>
+				<display value="Female"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="other"/>
+			<display value="Other"/>
+			<target>
+				<code value="9"/>
+				<display value="Indeterminate (unable to be classified as either male or female)"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="unknown"/>
+			<display value="Unknown"/>
+			<target>
+				<code value="X"/>
+				<display value="Not Known (not recorded)"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+	</group>
+</ConceptMap>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-ConditionRelationship-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CareConnect-ConditionRelationship-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Condition Relationship"/>
+	<status value="active"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem that identifies the kind of relationship that exists with a target condition."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="combined"/>
+		<display value="Combined"/>
+		<definition value="This condition is combined/merged with the target condition to form a single logical condition."/>
+	</concept>
+	<concept>
+		<code value="grouped"/>
+		<display value="Grouped"/>
+		<definition value="This condition is part of a group that includes the target condition as a member of the group."/>
+	</concept>
+	<concept>
+		<code value="replaces"/>
+		<display value="Replaces"/>
+		<definition value="This condition replaces a previous condition (i.e. a revised diagnosis). The target condition is now obsolete."/>
+	</concept>
+	<concept>
+		<code value="evolved-from"/>
+		<display value="Evolved From"/>
+		<definition value="This condition has evolved from the target condition."/>
+	</concept>
+	<concept>
+		<code value="onset"/>
+		<display value="Onset"/>
+		<definition value="This condition follows-on from the target onset condition. Used when specifing a relationship to a previous onset condition when this condition episodicity is Review, Flare or End."/>
+	</concept>
+</CodeSystem>

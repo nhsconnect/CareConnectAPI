@@ -8,7 +8,7 @@ summary: Risk of harmful or undesirable, physiological response which is unique 
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Allergy Intolerance" page="CareConnect-AllergyIntolerance-1" fhirlink="[AllergyIntolerance](https://www.hl7.org/fhir/DSTU2/allergyintolerance.html)" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.reference.html resource="Allergy Intolerance" page="CareConnect-AllergyIntolerance-1" fhirname="AllergyIntolerance" fhirlink = "allergyintolerance.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 
@@ -28,7 +28,7 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
 
 ### 2.1. Search Parameters ###
 
-{% include custom/search.parameters.html resource="AllergyIntolerance"     link="https://www.hl7.org/fhir/DSTU2/allergyintolerance.html#search" %}
+{% include custom/search.parameters.html resource="AllergyIntolerance"  link="allergyintolerance.html#search" %}
 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
@@ -76,6 +76,8 @@ Systems SHALL support the following search combinations:
 {% include custom/search.response.html resource="AllergyIntolerance" %}
 
 ## 3. Example ##
+
+{% include custom/search.warn_ri_banner.html %}
 
 ### 3.1 Request Query ###
 

@@ -28,6 +28,10 @@ github_editme_path: /edit/develop/
 #twitter_site_hashtags: twitter_site_hashtags
 
 fhir_profile_baseurl: https://fhir-test.hl7.org.uk/StructureDefinition/
+hl7_baseurl:
+  stu2: https://www.hl7.org/fhir/DSTU2/
+  stu3: https://www.hl7.org/fhir/STU3/
+
 
 nhsd:
   dds_link: https://nhsconnect.github.io/NHS-FHIR-DDS/Generated/
