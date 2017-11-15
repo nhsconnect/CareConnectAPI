@@ -50,7 +50,7 @@ Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolera
     <td><code class="highlighter-rouge">date</code></td>
     <td>When recorded</td>
     <td>MAY</td>
-    <td>AllergyIntolerance.recordedDate</td>
+    <td>AllergyIntolerance.assertedDate</td>
 </tr>
 <tr>
     <td><code class="highlighter-rouge">patient</code></td>
