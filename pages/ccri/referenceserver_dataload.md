@@ -58,6 +58,20 @@ GRANT FILE ON *.* to 'fhirjpa'@'%';
 
 ## . Load in ODS Data  ##
 
+First upload the cli tool
+
+Windows (install putty first)
+
+```
+pscp -scp cc-cli.jar dev01@purple.testlab.nhs.uk:~/
+```
+
+Linux/Mac
+
+```
+scp cc-cli.jar dev01@purple.testlab.nhs.uk:~/
+```
+
 With cc_cli.jar run the following command:
 
 ```
