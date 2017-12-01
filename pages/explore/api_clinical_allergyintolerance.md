@@ -91,6 +91,6 @@ Explore the response in XML & JSON on the Reference Implementation below
 <pre class="highlight">
 <p style="font-size: 110%;">Reference Implementation</p>
 XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=AllergyIntolerance&param.0.0=&param.0.1=1&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=xml">Patient id search RI viewer</a>
-JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=AllergyIntolerance&param.0.0=&param.0.1=1&param.0.name=patient&param.0.type=reference&resource-search-limit==&encoding=json">Patient id search RI viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=AllergyIntolerance&param.0.0=&param.0.1=1&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=json">Patient id search RI viewer</a>
 </pre>
 </div>
