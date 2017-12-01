@@ -50,21 +50,26 @@ Search Medication resources. Returns a bundle of all `Medication` resources for 
 
 {% include custom/search.response.html resource="Medication" %}
 
+
 ## 3. Example ##
 
-{% include custom/search.warn_ri_banner.html %}
+### 3.1 Request Query ###
+
+<h3 id="32-response-headers">3.1 cURL</h3>
+
+Return all Medication resources with a NHS Number 9876543210, the format of the response body will be xml. The Reference Implementation is hosted at '{{ site.fhir_ref_impl }}'.
+
+{% include custom/embedcurl.html title="Search Medication" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Medication?identifier=https://fhir.nhs.uk/Id/nhs-number%7C9876543210'" %}
+
+<h3 id="32-response-headers">3.2 Explore the Response</h3>
+
+Explore the response in XML & JSON on the Reference Implementation below
+<div class="language-http highlighter-rouge">
+<pre class="highlight">
+<p style="font-size: 110%;">Reference Implementation</p>
+XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Medication&param.0.qualifier=&param.0.0=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number&param.0.1=9876543210&param.0.name=identifier&param.0.type=token&sort_by=&sort_direction=&resource-search-limit=&encoding=xml">Patient NHS number search RI viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Medication&param.0.qualifier=&param.0.0=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number&param.0.1=9876543210&param.0.name=identifier&param.0.type=token&sort_by=&sort_direction=&resource-search-limit=&encoding=json">Patient NHS number search RI viewer</a>
+</pre>
+</div>
 
 
-### 3.1 Request Operation ###
-
-Return Medication resource with a logical id of 48496. Replace 'baseUrl' with the actual base Url of the FHIR Server.
-
-#### 3.1.1. cURL ####
-
-{% include custom/embedcurl.html title="Get Medication" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Medication/48496'" %}
-
-{% include custom/search.response.headers.html resource="Immunization" %}
-
-#### 3.2.2 Http Body ####
-
-<script src="https://gist.github.com/KevinMayfield/b2dce41df4ffb395eef568f7769fd086.js"></script>

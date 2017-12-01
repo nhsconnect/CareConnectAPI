@@ -59,20 +59,24 @@ Fetches a bundle of all `Location` resources for the specified search criteria.
 
 {% include custom/search.response.html resource="Location" %}
 
+
 ## 3. Example ##
 
-{% include custom/search.warn_ri_banner.html %}
+<h3 id="32-response-headers">3.1 cURL</h3>
 
-### 3.1 Request Query ###
+Return all Location resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-Return all Location resources with a Trust Site code of RTG08, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+{% include custom/embedcurl.html title="Search Location" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Location?patient.identifier=https://fhir.nhs.uk/Id/nhs-number%7C9876543210'" %}
 
-#### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Location" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Location?identifier=https://fhir.nhs.uk/Id/ods-site-code|RTG08'" %}
+<h3 id="32-response-headers">3.2 Explore the Response</h3>
 
-{% include custom/search.response.headers.html resource="Location" %}
+Explore the response in XML & JSON on the Reference Implementation below
+<div class="language-http highlighter-rouge">
+<pre class="highlight">
+<p style="font-size: 110%;">Reference Implementation</p>
+XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Location&param.0.qualifier=&param.0.0=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number&param.0.1=9876543210&param.0.name=identifier&param.0.type=token&sort_by=&sort_direction=&resource-search-limit=&encoding=xml">Patient NHS number search RI viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Location&param.0.qualifier=&param.0.0=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number&param.0.1=9876543210&param.0.name=identifier&param.0.type=token&sort_by=&sort_direction=&resource-search-limit=&encoding=json">Patient NHS number search RI viewer</a>
+</pre>
+</div>
 
-#### 3.2.2. Http Body ####
-
-<script src="https://gist.github.com/KevinMayfield/715d6af0bef6c5b0365ded1f06b68b57.js"></script>
