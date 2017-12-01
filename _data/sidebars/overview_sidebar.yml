@@ -191,6 +191,9 @@ entries:
           - title: Current Version
             url: /build_ri_version.html
             output: web
+          - title: Navigate the RI
+            url: /build_ri_navigate.html
+            output: web
           - title: Feedback
             url: /build_ri_feedback.html
             output: web

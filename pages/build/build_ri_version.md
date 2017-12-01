@@ -16,6 +16,11 @@ summary: "Describes the current version of the Reference Implementation"
 {% include version.html version="2" function="Six Care Connect profiles with example data for one specific care setting with audit functionality" deliver="10th November 2017" %}
 
 
+# Navigate the RI #
+
+The Care Connect Reference Implementation exposes example care setting data. The approach taken and possible ways to navigate the data is contained within [Navigate the RI](build_ri_navigate.html)
+
+
 ## In Scope ##
 
 The following is a list of what is in scope for this released version of the Reference Implementation:
