@@ -73,9 +73,9 @@ Systems SHOULD support the following search combinations:
 
 <h3 id="32-response-headers">3.1 cURL</h3>
 
-Return all Encounter resources with an id of 1, the format of the response body will be xml. The Reference Implementation is hosted at '{{ site.fhir_ref_impl }}'.
+Return all Encounter resources with an id of 4, the format of the response body will be xml. The Reference Implementation is hosted at '{{ site.fhir_ref_impl }}'.
 
-{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Encounter?patient=1'" %}
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Encounter?patient=4'" %}
 
 <h3 id="32-response-headers">3.2 Explore the Response</h3>
 
@@ -83,7 +83,7 @@ Explore the response in XML & JSON on the Reference Implementation below
 <div class="language-http highlighter-rouge">
 <pre class="highlight">
 <p style="font-size: 110%;">Reference Implementation</p>
-XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Encounter&param.0.0=&param.0.1=1&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=xml">Patient NHS number search RI viewer</a>
-JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Encounter&param.0.0=&param.0.1=1&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=json">Patient NHS number search RI viewer</a>
+XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Encounter&param.0.0=&param.0.1=4&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=xml">Patient id search RI viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Encounter&param.0.0=&param.0.1=4&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=json">Patient id search RI viewer</a>
 </pre>
 </div>
