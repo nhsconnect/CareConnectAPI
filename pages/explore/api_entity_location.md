@@ -75,7 +75,7 @@ Explore the response in XML & JSON on the Reference Implementation below
 <div class="language-http highlighter-rouge">
 <pre class="highlight">
 <p style="font-size: 110%;">Reference Implementation</p>
-XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Location&param.0.qualifier=&param.0.0=&param.0.1=RTG08&param.0.name=identifier&param.0.type=token&resource-search-limit=&encoding=xml">Patient NHS number search RI viewer</a>
-JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Location&param.0.qualifier=&param.0.0=&param.0.1=RTG08&param.0.name=identifier&param.0.type=token&resource-search-limit=&encoding=json">Patient NHS number search RI viewer</a>
+XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Location&param.0.qualifier=&param.0.0=&param.0.1=RTG08&param.0.name=identifier&param.0.type=token&resource-search-limit=&encoding=xml">ODS Code search RI viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Location&param.0.qualifier=&param.0.0=&param.0.1=RTG08&param.0.name=identifier&param.0.type=token&resource-search-limit=&encoding=json">ODS Code search RI viewer</a>
 </pre>
 </div>
