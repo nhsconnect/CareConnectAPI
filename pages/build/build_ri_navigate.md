@@ -12,13 +12,22 @@ summary: "Navigate the data contained within Reference Implementation"
 
 # How to use the Reference Implementation #
 
-The Reference Implementation has been created based on clinically meaningful data. As such the mandatory links between the resources has been considered while constructing the data that supports the Ref Impl. This is shown in the diagram below.
+The Reference Implementation has been created based on clinically meaningful data. 
 
-[Insert Mand link picture]
+## Mandatory links between resources
+As such the mandatory links between the resources has been considered while constructing the data that supports the Ref Impl. This is shown in the diagram below.
 
+<object style="width:100%;max-width: 100%;" type="image/svg+xml" data="images/build/Resource Dependencies (Waterfall).svg">
+  <p style="text-align:center;"><img src="images/build/Resource Dependencies (Waterfall).svg" alt="The mandatory data links within the Care Connect resources." title="Mandatory data linkages within the Reference Implementation" style="width:100%;max-width: 100%;"></p>
+</object>
+
+
+## Data links between resources in the RI
 To extend the mandatory use to provide testable (by developers) and clinically sensible information the following diagram shows the linkage of the data contained within the Reference Implementation.
 
-[Insert diagram of actual data linkage with in the CCRI]
+<object style="width:100%;max-width: 100%;" type="image/svg+xml" data="images/build/Data Mapping.svg">
+  <p style="text-align:center;"><img src="images/build/Data Mapping.svg" alt="How the data links the Care Connect resources together." title="Data linkages within the Reference Implementation" style="width:100%;max-width: 100%;"></p>
+</object>
 
 These links do not define scenarios by themselves. As such the Reference Implementation design has tried to consider a acute care setting. The data contained and linkages have **not** been clinically verified. To aid in using the logic contained within the data the following short description shows how to use the Reference Implementation to:
 1. find data, 
