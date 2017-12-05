@@ -40,6 +40,13 @@ Fetches a bundle of all `PractitionerRole` resources for the specified search cr
     <th style="width:30%;">Path</th>
 </tr>
 <tr>
+    <td><code class="highlighter-rouge">identifier</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <tdA practitioner's Identifier</td>
+    <td>SHOULD</td>
+    <td>PractitionerRole.identifier</td>
+</tr>
+<tr>
     <td><code class="highlighter-rouge">organization</code></td>
     <td><code class="highlighter-rouge">reference</code></td>
     <td>The identity of the organisation the practitioner represents / acts on behalf of</td>
@@ -55,10 +62,11 @@ Fetches a bundle of all `PractitionerRole` resources for the specified search cr
 </tr>
 </table>
 
+{% include custom/search.nopat.identifier.html para="2.1.1." resource="PractitionerRole" content="identifier" subtext="SDS Id or ODS Code" example="https://fhir.nhs.uk/Id/sds-user-id|123456" text1="SDS User ID" text2="123456" %}
 
-{% include custom/search.reference.html para="2.1.1." resource="PractitionerRole" content="organization"  example="1" text1="Organization Id" text2="1" %}
+{% include custom/search.reference.html para="2.1.2." resource="PractitionerRole" content="organization"  example="1" text1="Organization Id" text2="1" %}
 
-{% include custom/search.reference.html para="2.1.2." resource="PractitionerRole" content="practitioner"  example="1" text1="Practitioner Id" text2="1" %}
+{% include custom/search.reference.html para="2.1.3." resource="PractitionerRole" content="practitioner"  example="1" text1="Practitioner Id" text2="1" %}
 
 {% include custom/search.response.html resource="Practitioner" %}
 

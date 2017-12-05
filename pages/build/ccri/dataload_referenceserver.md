@@ -35,7 +35,7 @@ sudo docker cp tempSimple.txt ccrisql:/var/lib/mysql-files/tempSimple.txt
 ```
 
 Log into the ccrisql (docker exec -it ccrisql /bin/bash).
-Import using this to log into mysql
+Import using this to log into mysql (run this from \var\lib\mysql-files folder)
 
 ```
 mysql -uroot -pmypassword -h127.0.0.1 --port=3306 careconnect
