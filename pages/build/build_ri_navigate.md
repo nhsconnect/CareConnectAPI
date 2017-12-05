@@ -12,7 +12,7 @@ summary: "Navigate the data contained within Reference Implementation"
 
 # How to use the Reference Implementation #
 
-The Reference Implementation has been created based on clinically meaningful data. 
+The Reference Implementation has been created based on clinically meaningful data.
 
 ## Mandatory links between resources
 As such the mandatory links between the resources has been considered while constructing the data that supports the Ref Impl. This is shown in the diagram below.
@@ -30,22 +30,45 @@ To extend the mandatory use to provide testable (by developers) and clinically s
 </object>
 
 These links do not define scenarios by themselves. As such the Reference Implementation design has tried to consider a acute care setting. The data contained and linkages have **not** been clinically verified. To aid in using the logic contained within the data the following short description shows how to use the Reference Implementation to:
-1. find data, 
-2. find connections between resources contained within the data, and 
+1. find data,
+2. find connections between resources contained within the data, and
 3. to explore national datasets within FHIR.
 
 
 ## Foundation provides the starting point
 ### Patient centred
 
+Many systems support searching for Patients.
+
+<p style="text-align:center;"><img src="images/build/Patient Search.PNG" alt="Tasks" title="View Results Screen" style="width:75%"></p>
+<br><br>
+
+To explore the CareConnect Patient search options use this link [Care Connect Reference Implementation](http://purple.testlab.nhs.uk/careconnect-ri/resource?serverId=home&pretty=false&resource=Patient)
+In the example below, the screen shows two ways of calling a FHIR Server:
+* Client - Code Java using HAPI libraries
+* Request - A GET http request
+
+<p style="text-align:center;"><img src="images/build/Patient Search Example.PNG" alt="Tasks" title="View Results Screen" style="width:75%"></p>
+<br><br>
+
+It is easier to stick with the web front end when initially exploring FHIR but tools such as [POSTMAN](https://www.getpostman.com/) allow much more control.
+
+<p style="text-align:center;"><img src="images/build/PatientSearchPostman.PNG" alt="Tasks" title="View Results Screen" style="width:75%"></p>
+<br><br>
+
+
+
 [insert links to CCRI for patient ] - take example from profiles
 
 ### Practitioner provided
 A national data set of practitioners available and uploaded as a demonstration.
-### Treated at an identifiable organisation 
+### Treated at an identifiable organisation
 Use of national datasets to provide an up to date view of a treated org.
 
 ## Care provided through
+
+Nouns of health
+
 ### Observations
 
 ### Medications
