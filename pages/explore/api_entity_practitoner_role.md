@@ -42,7 +42,7 @@ Fetches a bundle of all `PractitionerRole` resources for the specified search cr
 <tr>
     <td><code class="highlighter-rouge">identifier</code></td>
     <td><code class="highlighter-rouge">token</code></td>
-    <tdA practitioner's Identifier</td>
+    <td>A practitioner's Identifier</td>
     <td>SHOULD</td>
     <td>PractitionerRole.identifier</td>
 </tr>
