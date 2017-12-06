@@ -35,48 +35,45 @@ These links do not define scenarios by themselves. As such the Reference Impleme
 3. to explore national datasets within FHIR.
 
 
-## Foundation provides the starting point
-### Patient centred
+## Demonstration of using the Reference Implementation ##
 
-Many systems support searching for Patients.
+The diagram below provides a suggested approach to explore the Reference Implementation Care Connect FHIR profiles and data contained provided with the Reference Implementation.
 
-<p style="text-align:center;"><img src="images/build/Patient Search.PNG" alt="Tasks" title="View Results Screen" style="width:75%"></p>
+<p style="text-align:center;"><img src="images/build/Ref_impl_webex_demo.png" alt="Suggested demonstration of the Reference Implementation" title="A suggested approach to explore the Care Connect FHIR profiles and the data contained within the Reference Implementation. " style="width:100%"></p>
 <br><br>
 
-To explore the CareConnect Patient search options use this link [Care Connect Reference Implementation](http://purple.testlab.nhs.uk/careconnect-ri/resource?serverId=home&pretty=false&resource=Patient)
+1. To begin with there is a web front end to initially explore the profiles and the data contained.
+2. Using tools such as [POSTMAN](https://www.getpostman.com/) allow more control of accessing APIs
+
+The following example shows:
+1. Patient Search on a name (Name="Smith")
+2. Encounter Id Request (Id=4)
+3. Condition Id Request (Id=4)
+
+### 1. Patient Search ###
+
+To explore the CareConnect Patient search options use this link [Care Connect Reference Implementation]({{ site.fhir_ref_impl }}resource?serverId=home&pretty=false&resource=Patient)
+
 In the example below, the screen shows two ways of calling a FHIR Server:
-* Client - Code Java using HAPI libraries
+* [Client - Code Java using HAPI libraries]({{ site.fhir_ref_impl }}resource?serverId=home&pretty=false&resource=Patient))
 * Request - A GET http request
 
-<p style="text-align:center;"><img src="images/build/Patient Search Example.PNG" alt="Tasks" title="View Results Screen" style="width:75%"></p>
+<p style="text-align:center;"><img src="images/build/Patient Search Example.PNG" alt="Tasks" title="View Results Screen" style="width:80%"></p>
 <br><br>
 
-It is easier to stick with the web front end when initially exploring FHIR but tools such as [POSTMAN](https://www.getpostman.com/) allow much more control.
+Using tools such as [POSTMAN](https://www.getpostman.com/) allow finer control and inspection of the responses from the API. As such the diagram below shows the same patient search within Postman.
 
-<p style="text-align:center;"><img src="images/build/PatientSearchPostman.PNG" alt="Tasks" title="View Results Screen" style="width:75%"></p>
+<p style="text-align:center;"><img src="images/build/PatientSearchPostman.PNG" alt="Tasks" title="View Results Screen" style="width:80%"></p>
 <br><br>
 
+### 2. Encounter Id Request ###
+
+Add encounter screen here and link to the search, maybe Postman website UI
 
 
-[insert links to CCRI for patient ] - take example from profiles
+### 3. Condition Id Request ###
 
-### Practitioner provided
-A national data set of practitioners available and uploaded as a demonstration.
-### Treated at an identifiable organisation
-Use of national datasets to provide an up to date view of a treated org.
-
-## Care provided through
-
-Nouns of health
-
-### Observations
-
-### Medications
-
-### Prevention
-
-## Monitored and managed
-Care management within an organisation, by a practitioner on a patient are important artefacts of care. These touch points create
+Add encounter screen here and link to the search, maybe Postman website UI
 
 
 # Current Version #
@@ -92,4 +89,4 @@ This site is structured around Care Connect stakeholders including API users, de
 
 {% include custom/api_overview.svg %}
 
-{% include custom/contribute.html content="If you want to get involved in any part of this then please get in touch with careconnect@interopen.org "%}
+{% include custom/contribute.html content=""%}

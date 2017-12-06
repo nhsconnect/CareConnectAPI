@@ -52,4 +52,4 @@ The [API journey](overview_api_journey.html) outlines the development roadmap fo
 
 The above roadmap illustrates the steps necessary to create, test and verify the profiles as well as some of the supporting tooling which might be necessary to build to provide viable APIs. The roadmap is not intended to be complete but to promote discussion, extension and engagement from the INTEROPen community.
 
-{% include custom/contribute.html content="To get involved in any parts of the roadmap or to discuss the other elements please get in touch with careconnect@interopen.org "%}
+{% include custom/contribute.html content="To get involved in any parts of the roadmap or to discuss the other elements please get in touch. "%}

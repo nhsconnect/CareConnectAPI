@@ -56,7 +56,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_email: careconnect@interopen.org
+feedback_email: apilabs@nhs.uk
 # used as a contact email for the Feedback link in the top navigation bar
 
 feedback_disable: true

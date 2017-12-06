@@ -53,4 +53,4 @@ This site is structured around Care Connect stakeholders including API users, de
 
 {% include custom/api_overview.svg %}
 
-{% include custom/contribute.html content="If you want to get involved in any part of this then please get in touch with careconnect@interopen.org "%}
+{% include custom/contribute.html content=""%}
