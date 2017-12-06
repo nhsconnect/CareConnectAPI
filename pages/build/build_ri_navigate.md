@@ -58,22 +58,25 @@ In the example below, the screen shows two ways of calling a FHIR Server:
 * [Client - Code Java using HAPI libraries]({{ site.fhir_ref_impl }}resource?serverId=home&pretty=false&resource=Patient))
 * Request - A GET http request
 
-<p style="text-align:center;"><img src="images/build/Patient Search Example.PNG" alt="Tasks" title="View Results Screen" style="width:80%"></p>
+<p style="text-align:center;"><img src="images/build/Patient Search Example.PNG" alt="Patient Search" title="Patient Search using user interface" style="width:80%"></p>
 <br><br>
+
+
+### 2. Encounter Id Request ###
 
 Using tools such as [POSTMAN](https://www.getpostman.com/) allow finer control and inspection of the responses from the API. As such the diagram below shows the same patient search within Postman.
 
 <p style="text-align:center;"><img src="images/build/PatientSearchPostman.PNG" alt="Tasks" title="View Results Screen" style="width:80%"></p>
 <br><br>
 
-### 2. Encounter Id Request ###
-
-Add encounter screen here and link to the search, maybe Postman website UI
 
 
 ### 3. Condition Id Request ###
 
-Add encounter screen here and link to the search, maybe Postman website UI
+Using POSTMAN we can easily alter the search to another resource such as Condition.
+
+<p style="text-align:center;"><img src="images/build/PatientSearchPostmanCondition.PNG" alt="Tasks" title="View Results Screen" style="width:80%"></p>
+<br><br>
 
 
 # Current Version #
