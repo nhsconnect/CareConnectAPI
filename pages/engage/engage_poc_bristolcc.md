@@ -191,4 +191,4 @@ While the acceptance criteria is not fully developed, below is an example of som
 </table>
 
 
-{% include custom/contribute.html content="Get in touch with careconnect@interopen.org to help with Case Studies of Care Connect Profiles"%}
+{% include custom/contribute.html content="Get in touch with to help with Case Studies of Care Connect Profiles"%}

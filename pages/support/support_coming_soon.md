@@ -19,4 +19,4 @@ This site is structured around Care Connect stakeholders including API users, de
 
 <img src="images/roadmap/guide.jpg" style="width:100%;max-width: 100%;">
 
-{% include custom/contribute.html content="If you want to get involved in any part of this then please get in touch with careconnect@interopen.org "%}
+{% include custom/contribute.html content=""%}

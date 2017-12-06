@@ -191,8 +191,17 @@ entries:
           - title: Current Version
             url: /build_ri_version.html
             output: web
-          - title: Navigate the RI
+          - title: Navigate
             url: /build_ri_navigate.html
+            output: web
+          - title: Develop
+            url: /build_ri_develop.html
+            output: web
+          - title: Install
+            url: /build_ri_install.html
+            output: web
+          - title: Install Glossary
+            url: /build_ri_glossary.html
             output: web
           - title: Feedback
             url: /build_ri_feedback.html
