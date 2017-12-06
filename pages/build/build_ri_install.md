@@ -14,10 +14,9 @@ This document is intended to provide a technical introduction to the architectur
 
 ### Prerequisites
 
-1. [TBD - Do we need to specify a minimum amount of memory/disk space to run CCRI?]
-1. Installation of Docker & Docker Compose -  [TBD Need to specify versions]
+1. Installation of Docker & Docker Compose.
 1. Creation of a docker-compose file.  
-Sample `docker-compose` files are shown in [Administration Scripts] and the latest versions of these files can be downloaded from ... [TBD - Can we put these into Docker Hub or as Gists?].  
+Sample `docker-compose` files are shown in [Administration Scripts].  
 1. Definition of environment variables
 1. Upload Sample Data
 
@@ -58,9 +57,7 @@ cd ccri-server
 
 In this folder we will need to create the following files:
 * `docker-compose.yaml` - the definition of the services which form the core of the CCRI Server application.
-This file can be downloaded from ... [TBD]
 * `docker-compose-elk.yaml` (optional) - This file defines the services which provide the log searching and monitoring using the ELK Stack.  This is only required if you are intending to view the activity on the server using Kibana.
-This file can be downloaded from ... [TBD]
 * `.env` - A configuration file which contains the environment settings specific to the installation.  These environment settings can be used to override the defaults defined in the `docker-compose` files.
 
 
@@ -92,8 +89,6 @@ The name of the FHIR_SERVER_BASE_HOST will be be the host & domain which will be
 127.0.0.1       test.myserver.nhs.uk
 ```
 
-[TBD - If we are also installing the ELK services then we will also need to have a copy of the configuration folders etc for elk, logstash & filebeat.  It would be easiest to download a zip file which contains these elements so that it can just be unpacked into the `ccri-server` folder]
-
 
 ### Starting the CCRI Application
 
@@ -115,12 +110,7 @@ docker-compose restart ccri
 (See Administration Scripts for more information)
 
 ### Load Sample data
-[TBD - We need a way to download and install the sample data onto a local environment.]
-
-
-### Standalone
-[TBD - Can we spin up CCRI without docker? Should we offer this an a viable option]
-
+The sample data which has been used to populate the database can be requested from <apilabs@nhs.uk>
 
 ## Installation of Sample Log Monitoring (Optional)
 The ELK Monitoring stack is defined in the `docker-compose-elk.yaml` file, this is an optional part of the installation and alternative log monitoring can be utilised.
@@ -141,8 +131,6 @@ The Docker Compose file for CCRI defines the following services:-
 * ccrisql - The MySQL database which provides the data persistence for the FHIR Profiles.  This is only sample data to provide
 
 This is an example of the `docker-compose.yaml` file which defines the 3 services in the core CCRI application.
-
-The latest version of this file can be downloaded from: [TBD docker-compose.yaml]
 
 
 `docker-compose.yaml`
