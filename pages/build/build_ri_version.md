@@ -27,7 +27,7 @@ The Care Connect Reference Implementation exposes example care setting data. The
 The following is a list of what is in scope for this released version of the Reference Implementation:
 - Implemented using HTTP1.1 API standards
 - STU3 FHIR standard
-- Care Connect Patient profile published on the Implementation Guide alpha v1.6
+- Care Connect Patient profile published on the Implementation Guide alpha v1.7
 - HAPI server v3
 - Synthetic RI data generated to complete the profile information
 
@@ -51,8 +51,8 @@ Code: [Version 3 Git repository of code](https://github.com/nhsconnect/careconne
 Clone: Version 3 Release 3 clone of repository by 
 
 ```Bash
-		git clone git@github.com:nhsconnect/careconnect-reference-implementation.git
-		git checkout tags/v3.3.1
+git clone git@github.com:nhsconnect/careconnect-reference-implementation.git
+git checkout tags/v3.3.1
 ```
 
 # Version Plan #
