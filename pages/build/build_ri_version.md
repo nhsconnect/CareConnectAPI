@@ -13,7 +13,8 @@ summary: "Describes the current version of the Reference Implementation"
 # Current Version #
 
 
-{% include version.html version="2" function="Six Care Connect profiles with example data for one specific care setting with audit functionality" deliver="10th November 2017" %}
+{% include version.html version="3" function="Provide 14 STU3 (PractionerRole added in STU3) Care Connect profiles with example data for one care setting with audit of use and accessible by unsecure API interaction
+" deliver="8th December 2017" %}
 
 
 # Navigate the RI #
@@ -45,17 +46,14 @@ Are recorded in the Care Connect Reference Implementation which can be found:
 ## Download ##
 To download and run the code please follow the following links.
 <br/>
-Code: [Version 2 Git repository of code](https://github.com/nhsconnect/careconnect-reference-implementation/tree/v3.2){:target="_blank"}
+Code: [Version 3 Git repository of code](https://github.com/nhsconnect/careconnect-reference-implementation/tree/v3.3.1){:target="_blank"}
 
-Clone: Version 2 clone of repository by 
-<div class="language-http highlighter-rouge">
-	<pre class="highlight">
-	<code>
+Clone: Version 3 Release 3 clone of repository by 
+
+```Bash
 		git clone git@github.com:nhsconnect/careconnect-reference-implementation.git
-		git checkout tags/v3.2
-	</code>
-	</pre>
-</div>
+		git checkout tags/v3.3.1
+```
 
 # Version Plan #
 

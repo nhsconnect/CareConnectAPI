@@ -43,10 +43,9 @@ The installation instructions provide a technical introduction to the architectu
 
 ### Prerequisites
 
-1. [TBD - Do we need to specify a minimum amount of memory/disk space to run CCRI?]
-1. Installation of Docker & Docker Compose -  [TBD Need to specify versions]
+1. Installation of Docker & Docker Compose 
 1. Creation of a docker-compose file.  
-Sample `docker-compose` files are shown in (Administration Scripts) and the latest versions of these files can be downloaded from ... [TBD - Can we put these into Docker Hub or as Gists?].  
+Sample `docker-compose` files are shown in (Administration Scripts) and the latest versions of these files can be downloaded from ... [Administration Scripts].  
 1. Definition of environment variables
 1. Upload Sample Data
 
@@ -61,7 +60,8 @@ Docker Compose will be automatically installed as part of Docker for Mac, and Do
 
 # Current Version #
 
-{% include version.html version="2" function="Six Care Connect profiles with example data for one specific care setting with audit functionality" deliver="10th November 2017" %}
+{% include version.html version="3" function="Provide 14 STU3 (PractionerRole added in STU3) Care Connect profiles with example data for one care setting with audit of use and accessible by unsecure API interaction
+" deliver="8th December 2017" %}
 
 Check out [Versions](build_ri_version.html) for more information about the current released version, downloading options, use and future verions.
 
