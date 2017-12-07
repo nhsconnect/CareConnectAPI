@@ -40,18 +40,18 @@ Fetches a bundle of all `MedicationRequest` resources for the specified patient.
     <th style="width:30%;">Path</th>
 </tr>
 <tr>
+    <td><code class="highlighter-rouge">authoredon</code></td>
+    <td><code class="highlighter-rouge">date</code></td>
+    <td>Return prescriptions written on this date</td>
+    <td>MAY</td>
+    <td>MedicationRequest.authoredOn</td>
+</tr>
+<tr>
     <td><code class="highlighter-rouge">code</code></td>
     <td><code class="highlighter-rouge">token</code></td>
     <td>Return administrations of this medication code</td>
     <td>MAY</td>
     <td>MedicationRequest.medicationCodeableConcept</td>
-</tr>
-<tr>
-    <td><code class="highlighter-rouge">dateWritten</code></td>
-    <td><code class="highlighter-rouge">date</code></td>
-    <td>Return prescriptions written on this date</td>
-    <td>MAY</td>
-    <td>MedicationRequest.dateWritten</td>
 </tr>
 <tr>
     <td><code class="highlighter-rouge">patient</code></td>
@@ -74,9 +74,9 @@ Systems SHOULD support the following search combinations:
  * patient + code
 
 
-{% include custom/search.code.medicationRequest.html para="2.1.1." content="MedicationRequest" name="code"  %}
+{% include custom/search.date.plus.html para="2.1.1." content="MedicationRequest" name="authoredon"  %}
 
-{% include custom/search.date.plus.html para="2.1.2." content="MedicationRequest" name="dateWritten"  %}
+{% include custom/search.code.medicationRequest.html para="2.1.2." content="MedicationRequest" name="code"  %}
 
 {% include custom/search.patient.html para="2.1.3." content="MedicationRequest" %}
 
@@ -84,21 +84,24 @@ Systems SHOULD support the following search combinations:
 
 {% include custom/search.response.html resource="MedicationRequest" %}
 
+
 ## 3. Example ##
-
-{% include custom/search.warn_ri_banner.html %}
-
 
 ### 3.1 Request Query ###
 
-Return all MedciationOrder resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+<h3 id="32-response-headers">3.1 cURL</h3>
 
-#### 3.1.1. cURL ####
+Return all MedicationRequest resources with an id of 1, the format of the response body will be xml. The Reference Implementation is hosted at '{{ site.fhir_ref_impl }}'.
 
-{% include custom/embedcurl.html title="Search MedicationRequest" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search MedicationRequest" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/MedicationRequest?patient=1'" %}
 
-{% include custom/search.response.headers.html resource="MedicationRequest" %}
+<h3 id="32-response-headers">3.2 Explore the Response</h3>
 
-#### 3.2.2 Http Body ####
-
-<script src="https://gist.github.com/KevinMayfield/794cc83ac2497bc65d26004cb250fb51.js"></script>
+Explore the response in XML & JSON on the Reference Implementation below
+<div class="language-http highlighter-rouge">
+<pre class="highlight">
+<p style="font-size: 110%;">Reference Implementation</p>
+XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=MedicationRequest&param.0.0=&param.0.1=1&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=xml">Patient id search RI viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=MedicationRequest&param.0.0=&param.0.1=1&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=json">Patient id search RI viewer</a>
+</pre>
+</div>

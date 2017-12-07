@@ -1,7 +1,7 @@
 entries:
 - title: STU3 | Care Connect |
   product: STU3 | Care Connect |
-  version: 1.6.0-alpha.0
+  version: 1.7.0-alpha.0
   levels: one
   folders:
 
@@ -190,6 +190,18 @@ entries:
             output: web
           - title: Current Version
             url: /build_ri_version.html
+            output: web
+          - title: Navigate
+            url: /build_ri_navigate.html
+            output: web
+          - title: Develop
+            url: /build_ri_develop.html
+            output: web
+          - title: Install
+            url: /build_ri_install.html
+            output: web
+          - title: Install Glossary
+            url: /build_ri_glossary.html
             output: web
           - title: Feedback
             url: /build_ri_feedback.html

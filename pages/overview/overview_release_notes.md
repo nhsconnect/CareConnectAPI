@@ -9,6 +9,20 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 {% include important.html content="This site is under active development by NHS Digital on behalf of INTEROPen and is intended to provide all the technical resources you need to successfully develop the Care Connect APIs. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis." %}
 
+## 1.7.0-alpha.0 ##
+
+Added
+  - Reference Implementation / develop
+  - Reference Implementation / install
+  - Reference Implementation / install glossary
+  - Images to explain Reference Implementation
+Changed
+  - Links to apilabs@nhs.uk for contact information
+  - Version to Release for consistency of message
+  - Release 3 for Reference Implementation
+  - External links for Reference Implementation
+
+
 ## 1.6.0-alpha.0 ##
 
 Added

@@ -69,18 +69,21 @@ Systems SHOULD support the following search combinations:
 
 ## 3. Example ##
 
-{% include custom/search.warn_ri_banner.html %}
+### 3.1 Request Query ###
 
+<h3 id="32-response-headers">3.1 cURL</h3>
 
-### 3.1 Query ###
-Return all Encounter resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+Return all Encounter resources with an id of 4, the format of the response body will be xml. The Reference Implementation is hosted at '{{ site.fhir_ref_impl }}'.
 
-#### cURL ####
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Encounter?patient=4'" %}
 
-{% include custom/embedcurl.html title="Search Encounter" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Encounter?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+<h3 id="32-response-headers">3.2 Explore the Response</h3>
 
-{% include custom/search.response.headers.html resource="Encounter" %}
-
-#### 3.2.2 Http Body ####
-
-<script src="https://gist.github.com/KevinMayfield/cee6d67c0cd3289b22d3e299c77b85f1.js"></script>
+Explore the response in XML & JSON on the Reference Implementation below
+<div class="language-http highlighter-rouge">
+<pre class="highlight">
+<p style="font-size: 110%;">Reference Implementation</p>
+XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Encounter&param.0.0=&param.0.1=4&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=xml">Patient id search RI viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Encounter&param.0.0=&param.0.1=4&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=json">Patient id search RI viewer</a>
+</pre>
+</div>

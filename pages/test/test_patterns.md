@@ -34,5 +34,5 @@ Other API consideration are shown below. Please click on the parts of the API pr
 
 {% include custom/provide_api.svg %}
 
-{% include custom/contribute.html content="Get involved and contribute to the above API considerations careconnect@interopen.org"%}
+{% include custom/contribute.html content="Get involved and contribute to the above API considerations."%}
 

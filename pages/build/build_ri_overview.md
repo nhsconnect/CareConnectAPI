@@ -18,7 +18,7 @@ The Reference Implementation allows developers to interact with Care Connect API
 - providing a Care Connect API interface, that in its response includes Care Connect defined value sets; and
 - providing valid responses and report codes where appropriate.
 
-# Created for DEVELOPERS #
+## Created for DEVELOPERS ##
 
 The reference implementation has been designed for <b>DEVELOPERS</b> to interact, use and help in building Care Connect APIs.
 
@@ -33,7 +33,7 @@ Therefore the Reference Implementation is seen as a key way of enabling the succ
 
 # Feedback #
 
-For feedback and comments on the Reference Implementation please message the team on [INTEROPen Ryver CareConnect API](https://interopen.ryver.com/index.html#forums/1093815/chat){:target="_blank"}.
+For feedback and comments on the Reference Implementation please message the team on [INTEROPen Ryver CareConnect API](https://interopen.ryver.com/index.html#forums/1093815/chat){:target="_blank"}, or get in touch with <b><apilabs@nhs.uk></b>
 
 For an issues with the Reference Implementation please see [Use of RI](build_ri_use.html). 
 
@@ -52,4 +52,4 @@ This site is structured around Care Connect stakeholders including API users, de
 
 {% include custom/api_overview.svg %}
 
-{% include custom/contribute.html content="If you want to get involved in any part of this then please get in touch with careconnect@interopen.org "%}
+{% include custom/contribute.html content=""%}

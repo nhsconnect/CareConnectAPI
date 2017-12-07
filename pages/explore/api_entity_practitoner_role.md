@@ -40,6 +40,13 @@ Fetches a bundle of all `PractitionerRole` resources for the specified search cr
     <th style="width:30%;">Path</th>
 </tr>
 <tr>
+    <td><code class="highlighter-rouge">identifier</code></td>
+    <td><code class="highlighter-rouge">token</code></td>
+    <td>A practitioner's Identifier</td>
+    <td>SHOULD</td>
+    <td>PractitionerRole.identifier</td>
+</tr>
+<tr>
     <td><code class="highlighter-rouge">organization</code></td>
     <td><code class="highlighter-rouge">reference</code></td>
     <td>The identity of the organisation the practitioner represents / acts on behalf of</td>
@@ -55,26 +62,30 @@ Fetches a bundle of all `PractitionerRole` resources for the specified search cr
 </tr>
 </table>
 
+{% include custom/search.nopat.identifier.html para="2.1.1." resource="PractitionerRole" content="identifier" subtext="SDS Id or ODS Code" example="https://fhir.nhs.uk/Id/sds-user-id|123456" text1="SDS User ID" text2="123456" %}
 
-{% include custom/search.reference.html para="2.1.1." resource="PractitionerRole" content="organization"  example="1" text1="Organization Id" text2="1" %}
+{% include custom/search.reference.html para="2.1.2." resource="PractitionerRole" content="organization"  example="1" text1="Organization Id" text2="1" %}
 
-{% include custom/search.reference.html para="2.1.2." resource="PractitionerRole" content="practitioner"  example="1" text1="Practitioner Id" text2="1" %}
+{% include custom/search.reference.html para="2.1.3." resource="PractitionerRole" content="practitioner"  example="1" text1="Practitioner Id" text2="1" %}
 
 {% include custom/search.response.html resource="Practitioner" %}
 
 ## 3. Example ##
 
-{% include custom/search.warn_ri_banner.html %}
+<h3 id="32-response-headers">3.1 cURL</h3>
 
-### 3.1 Request Query ###
-Return all PractitionerRole resources with a Practioner Id of 1, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+Return all PractitionerRole resources for Practitioner with an id of 1, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-#### 3.1.1. cURL ####
+{% include custom/embedcurl.html title="Search PractitionerRole" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/PractitionerRole?practitioner=1'" %}
 
-{% include custom/embedcurl.html title="Search Practitioner" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/PractitionerRole?practitioner=1'" %}
 
-{% include custom/search.response.headers.html resource="Practitioner" %}
+<h3 id="32-response-headers">3.2 Explore the Response</h3>
 
-#### 3.2.2 Http Body ####
-
-<script src="https://gist.github.com/KevinMayfield/a5325e43f99cd323c3b16f3c87a67de8.js"></script>
+Explore the response in XML & JSON on the Reference Implementation below
+<div class="language-http highlighter-rouge">
+<pre class="highlight">
+<p style="font-size: 110%;">Reference Implementation</p>
+XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=PractitionerRole&param.0.0=&param.0.1=1&param.0.name=practitioner&param.0.type=reference&resource-search-limit=&encoding=xml">Practitioner id search RI viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=PractitionerRole&param.0.0=&param.0.1=1&param.0.name=practitioner&param.0.type=reference&resource-search-limit=&encoding=json">Practitioner id search RI viewer</a>
+</pre>
+</div>

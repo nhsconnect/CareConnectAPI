@@ -74,17 +74,20 @@ Return all Practitioner resources that have a ODS Practitioner/Consultant of G81
 
 ## 3. Example ##
 
-<b>Reference Implementation examples coming soon</b>
+<h3 id="32-response-headers">3.1 cURL</h3>
 
-### 3.1 Request Query ###
-Return all Practitioner resources with a GP Code of G8133438, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+Return all Practitioner resources for GP Code of G8133438, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-#### 3.1.1. cURL ####
+{% include custom/embedcurl.html title="Search Practitioner" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Practitioner?identifier=G8133438'" %}
 
-{% include custom/embedcurl.html title="Search Practitioner" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Practitioner?identifier=https://fhir.nhs.uk/Id/sds-user-id|G8133438'" %}
 
-{% include custom/search.response.headers.html resource="Practitioner" %}
+<h3 id="32-response-headers">3.2 Explore the Response</h3>
 
-#### 3.2.2 Http Body ####
-
-<script src="https://gist.github.com/KevinMayfield/742a6c3536c240a3a75c4dd57517d2c9.js"></script>
+Explore the response in XML & JSON on the Reference Implementation below
+<div class="language-http highlighter-rouge">
+<pre class="highlight">
+<p style="font-size: 110%;">Reference Implementation</p>
+XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Practitioner&param.0.qualifier=&param.0.0=&param.0.1=G8133438&param.0.name=identifier&param.0.type=token&resource-search-limit=&encoding=xml">GP Code search RI viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Practitioner&param.0.qualifier=&param.0.0=&param.0.1=G8133438&param.0.name=identifier&param.0.type=token&resource-search-limit=&encoding=json">GP Code search RI viewer</a>
+</pre>
+</div>

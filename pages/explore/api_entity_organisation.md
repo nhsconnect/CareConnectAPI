@@ -62,21 +62,23 @@ Fetches a bundle of all `Organization` resources for the specified search criter
 
 {% include custom/search.response.html resource="Organization" %}
 
+
 ## 3. Example ##
 
-{% include custom/search.warn_ri_banner.html %}
-
-
-### 3.1 Request Query ###
+<h3 id="32-response-headers">3.1 cURL</h3>
 
 Return all Organization resources with a ODS Code of C81010, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-#### 3.1.1. cURL ####
+{% include custom/embedcurl.html title="Search Organization" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Organization?identifier=C81010'" %}
 
-{% include custom/embedcurl.html title="Search Organization" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Organization?identifier=https://fhir.nhs.uk/Id/ods-organization-code|C81010'" %}
 
-{% include custom/search.response.headers.html resource="Organization" %}
+<h3 id="32-response-headers">3.2 Explore the Response</h3>
 
-#### 3.2.2 Http Body ####
-
-<script src="https://gist.github.com/KevinMayfield/db3d55a9087f924fc712a89c872d33f1.js"></script>
+Explore the response in XML & JSON on the Reference Implementation below
+<div class="language-http highlighter-rouge">
+<pre class="highlight">
+<p style="font-size: 110%;">Reference Implementation</p>
+XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Organization&param.0.qualifier=&param.0.0=&param.0.1=C81010&param.0.name=identifier&param.0.type=token&resource-search-limit=&encoding=xml">ODS Code search RI viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Organization&param.0.qualifier=&param.0.0=&param.0.1=C81010&param.0.name=identifier&param.0.type=token&resource-search-limit=&encoding=json">ODS Code search RI viewer</a>
+</pre>
+</div>

@@ -82,18 +82,24 @@ Systems SHOULD support the following search combinations:
 
 {% include custom/search.response.html resource="Immunization" %}
 
+
 ## 3. Example ##
 
 ### 3.1 Request Query ###
 
-Return all Immunization resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+<h3 id="32-response-headers">3.1 cURL</h3>
 
-#### 3.1.1. cURL ####
+Return all Immunization resources with an id of 1, the format of the response body will be xml. The Reference Implementation is hosted at '{{ site.fhir_ref_impl }}'.
 
-{% include custom/embedcurl.html title="Search Immunization" command="curl -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -X GET  '[baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210'" %}
+{% include custom/embedcurl.html title="Search Immunization" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Immunization?patient=1'" %}
 
-{% include custom/search.response.headers.html resource="Immunization" %}
+<h3 id="32-response-headers">3.2 Explore the Response</h3>
 
-#### 3.2.2 Http Body ####
-
-<script src="https://gist.github.com/KevinMayfield/06b11df3b6e5dac08d0c00155ed01c79.js"></script>
+Explore the response in XML & JSON on the Reference Implementation below
+<div class="language-http highlighter-rouge">
+<pre class="highlight">
+<p style="font-size: 110%;">Reference Implementation</p>
+XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Immunization&param.0.0=&param.0.1=1&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=xml">Patient id search RI viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Immunization&param.0.0=&param.0.1=1&param.0.name=patient&param.0.type=reference&resource-search-limit=&encoding=json">Patient id search RI viewer</a>
+</pre>
+</div>
