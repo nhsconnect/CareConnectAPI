@@ -78,10 +78,9 @@ Create Access Token example for Patient only access, please see [Security Scopes
 
 | Credentials | Details (Please copy all details) |
 | ------------- |----------------|
-| Token name | OAuth2-PatientAccess |
-| Auth URL | {{ site.fhir_ref_impl_sec }}authorize |
-| Token | {{ site.fhir_ref_impl_sec }}token |
 | Grant Type | Client Credentials | 
+| Token name (example) | OAuth2-PatientAccess |
+| Token | {{ site.fhir_ref_impl_sec }}token |
 | Client ID | a24a4d9f-c264-4af7-a8e5-248c24a6b707 |
 | Client Secret | MMpAOGBljYcEzBfn7q9-xgJqBlmR0BSiEyCrCjNNOUpR78kZtzqgKKU_4FgGRFNWbtc6jPIErLwoYwRgnlvijA |
 | Client Configuration URL | {{ site.fhir_ref_impl_sec }}register/a24a4d9f-c264-4af7-a8e5-248c24a6b707 |

@@ -58,10 +58,9 @@ The following users can access Profiles within the Care Connect Reference Implem
 
 | Credentials | Details (Please copy all details) |
 | ------------- |----------------|
-| Token name (example) | OAuth2-PatientAccess |
-| Auth URL | {{ site.fhir_ref_impl_sec }}authorize |
-| Token | {{ site.fhir_ref_impl_sec }}token |
 | Grant Type | Client Credentials | 
+| Token name (example) | OAuth2-PatientAccess |
+| Token | {{ site.fhir_ref_impl_sec }}token |
 
 
 ## Patient Access
