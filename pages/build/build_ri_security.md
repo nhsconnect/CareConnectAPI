@@ -68,7 +68,7 @@ Create Access Token
 
 ### Use Access Token
 
-Please click the [Security Credentials](build_ri_security_credentials.html){:target="_blank"} for a list of example credentials.
+Please click the [Security Scopes](build_ri_security_scopes.html){:target="_blank"} for a list of example scopes and access tokens.
 
 Get New Access Token (expiry of 90 mins)
 <p style="text-align:center;"><img src="images/build/security_3.png" alt="Get New Access Token" title="Get New Access Token" style="width:80%"></p>

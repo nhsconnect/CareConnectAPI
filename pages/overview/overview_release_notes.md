@@ -13,7 +13,7 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 Added
   - Reference Implementation / Security
-  - Reference Implementation / Security Credentials
+  - Reference Implementation / Security Scopes
 
 
 ## 1.7.0-alpha.0 ##
