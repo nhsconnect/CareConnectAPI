@@ -49,7 +49,7 @@ The diagram below provides a suggested approach to explore the Reference Impleme
 <br>
 
 1. To begin with there is a web front end to initially explore the profiles and the data contained.
-2. Using tools such as [POSTMAN](https://www.getpostman.com/) allow more control of accessing APIs
+2. Using tools such as [POSTMAN](https://www.getpostman.com/){:target="_blank"} allow more control of accessing APIs
 
 The following example shows:
 1. Patient Search on a name (Name="Smith")

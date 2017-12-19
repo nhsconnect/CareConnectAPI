@@ -56,11 +56,19 @@ Headers:
 
 The following users can access Profiles within the Care Connect Reference Implementation. As such these OAuth2 users allows for the Mapping of Scopes to Profiles
 
+| Credentials | Details (Please copy all details) |
+| ------------- |----------------|
+| Token name (example) | OAuth2-PatientAccess |
+| Auth URL | {{ site.fhir_ref_impl_sec }}authorize |
+| Token | {{ site.fhir_ref_impl_sec }}token |
+| Grant Type | Client Credentials | 
+
+
 ## Patient Access
 
 Can only access the patient profiles.
 
-| Credentials | Details |
+| Credentials | Details (Please copy all details) |
 | ------------- |----------------|
 | Client ID | a24a4d9f-c264-4af7-a8e5-248c24a6b707 |
 | Client Secret | MMpAOGBljYcEzBfn7q9-xgJqBlmR0BSiEyCrCjNNOUpR78kZtzqgKKU_4FgGRFNWbtc6jPIErLwoYwRgnlvijA |
