@@ -1,7 +1,7 @@
 entries:
 - title: STU3 | Care Connect |
   product: STU3 | Care Connect |
-  version: 1.7.0-alpha.0
+  version: 1.8.0-alpha.0
   levels: one
   folders:
 
@@ -202,6 +202,12 @@ entries:
             output: web
           - title: Install Glossary
             url: /build_ri_glossary.html
+            output: web
+          - title: Security
+            url: /build_ri_security.html
+            output: web
+          - title: Security Scopes
+            url: /build_ri_security_credentials.html
             output: web
           - title: Feedback
             url: /build_ri_feedback.html
