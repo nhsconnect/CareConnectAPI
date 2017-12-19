@@ -52,7 +52,7 @@ The following screenshots show how to use the Care Connect Reference Implementat
 1. Access Secure Endpoint
 1. Select OAuth2
 1. Create Access Token
-1. Get New Access Token - please use list of [Security Credentials](build_ri_security_credentials.html){:target="_blank"}
+1. Get New Access Token - please use list of [Security Scopes](build_ri_security_scopes.html){:target="_blank"}
 1. Use Access Token
 1. Send Secure Request
 

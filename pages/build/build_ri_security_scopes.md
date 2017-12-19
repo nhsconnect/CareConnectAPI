@@ -3,7 +3,7 @@ title: Reference Implementation | Security Scopes
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar
-permalink: build_ri_security_credentials.html
+permalink: build_ri_security_scopes.html
 summary: "Reference Implementation installation instructions"
 ---
 

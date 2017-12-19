@@ -207,7 +207,7 @@ entries:
             url: /build_ri_security.html
             output: web
           - title: Security Scopes
-            url: /build_ri_security_credentials.html
+            url: /build_ri_security_scopes.html
             output: web
           - title: Feedback
             url: /build_ri_feedback.html
