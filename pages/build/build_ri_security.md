@@ -51,12 +51,12 @@ Resource scope required to access (at least 1 of)
 The following screenshots show how to use the Care Connect Reference Implementation via Postman. The 6 steps shown below are:
 1. Access Secure Endpoint
 1. Select OAuth2
-1. Create Access Token
-1. Get New Access Token - please use list of [Security Scopes](build_ri_security_scopes.html){:target="_blank"}
+1. Get New Access Token
+1. Request Token - please use list of [Security Scopes](build_ri_security_scopes.html){:target="_blank"}
 1. Use Access Token
 1. Send Secure Request
 
-### Setup
+### Get new access token
 
 Access Secure Endpoint & Select OAuth2
 
@@ -80,19 +80,19 @@ Create Access Token example for Patient only access, please see [Security Scopes
 | ------------- |----------------|
 | Grant Type | Client Credentials | 
 | Token name (example) | OAuth2-PatientAccess |
-| Token | {{ site.fhir_ref_impl_sec }}token |
+| Access Token URL | {{ site.fhir_ref_impl_sec }}token |
 | Client ID | a24a4d9f-c264-4af7-a8e5-248c24a6b707 |
 | Client Secret | MMpAOGBljYcEzBfn7q9-xgJqBlmR0BSiEyCrCjNNOUpR78kZtzqgKKU_4FgGRFNWbtc6jPIErLwoYwRgnlvijA |
-| Client Configuration URL | {{ site.fhir_ref_impl_sec }}register/a24a4d9f-c264-4af7-a8e5-248c24a6b707 |
+| Client Authentication | 'Send as Basic Auth header' |
 
 
 {% include warning.html content="all connections have an expiry time of 90 mins. Please referesh your OAuth2 tokens at the start of every interaction period to ensure you can connect with the Care Connect Reference Implementation." %}
 
 There are three steps the first time you use the token with the Reference Implementation:
-1. Select created token
-1. Add the Token to the header and 
-1. use the access token
-The URL should be the same but https:// instead of http://
+1. Get new access token
+1. Ensure you only have one active token (expiry every 90 mins)
+1. Use the access token in a Request (The URL is the same as before but with the https:// prefix)
+
 <p style="text-align:center;"><img src="images/build/security_4.png" alt="Use Access Token" title="Use Access Token" style="width:100%"></p>
 <br>
 

@@ -60,7 +60,8 @@ The following users can access Profiles within the Care Connect Reference Implem
 | ------------- |----------------|
 | Grant Type | Client Credentials | 
 | Token name (example) | OAuth2-PatientAccess |
-| Token | {{ site.fhir_ref_impl_sec }}token |
+| Access Token URL | {{ site.fhir_ref_impl_sec }}token |
+| Client Authentication | 'Send as Basic Auth header' |
 
 
 ## Patient Access
@@ -71,8 +72,10 @@ Can only access the patient profiles.
 | ------------- |----------------|
 | Client ID | a24a4d9f-c264-4af7-a8e5-248c24a6b707 |
 | Client Secret | MMpAOGBljYcEzBfn7q9-xgJqBlmR0BSiEyCrCjNNOUpR78kZtzqgKKU_4FgGRFNWbtc6jPIErLwoYwRgnlvijA |
-| Client Configuration URL | {{ site.fhir_ref_impl_sec }}register/a24a4d9f-c264-4af7-a8e5-248c24a6b707 |
 
+A full list of scopes is described below:
+
+| Scopes | profile patient/Patient.read  user/Patient.read |
 
 ## Patient, Condition & Medication Access
 
@@ -82,8 +85,11 @@ Can only access a combination of patient, condition and medication profiles.
 | ------------- |----------------|
 | Client Id | ed73b2cb-abd0-4f75-b9a2-5f9c0535b82c |
 | Client Secret | QOm0VcqJqa9stA1R0MJzHjCN_uYdo0PkY8OT68UCk2XDFxFrAUjajuqOvIom5dISjKshx2YiU51mXtx7W5UOwQ |
-| Client Configuration URL | {{ site.fhir_ref_impl_sec }}register/ed73b2cb-abd0-4f75-b9a2-5f9c0535b82c |
 
+
+A full list of scopes is described below:
+
+| Scopes | user/MedicationStatement.read patient/Immunization.read user/Patient.read patient/Condition.read user/MedicationOrder.read user/Condition.read user/Encounter.read profile patient/MedicationOrder.read patient/Patient.read patient/Observation.read patient/Encounter.read |
 
 ## Limited Access
 
@@ -93,8 +99,11 @@ Can only access Publicly Available Information.
 | ------------- |----------------|
 | Client ID | 256fcc31-97bd-47d4-acbf-12409676ad5a |
 | Client Secret | AI8OGCYWjvnj-NY0zaP0H2e6_El_yO2pq43wK4YKk8UnBR_JZ5ivkmkXFtlkiL6LKWsL8H7ksab0V_Hk9c4OeMI |
-| Client Configuration URL | {{ site.fhir_ref_impl_sec }}register/256fcc31-97bd-47d4-acbf-12409676ad5a |
 
+
+A full list of scopes is described below:
+
+| Scopes | profile |
 
 
 
