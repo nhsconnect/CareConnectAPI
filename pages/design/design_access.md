@@ -23,19 +23,29 @@ API access control measures need to be defined alongside API creation and need t
 
 A possible mechanism for providing access to APIs is the provision of API keys for access to the APIs being provided. Please contribute for other common access methods and add to the [Case Studies](/engage_case_studies.html) to show various access mechanisms to APIs.
 
-# Access and Care Connect APIs #
+## Access and Care Connect APIs ##
 
-Access to APIs needs to considered at the design phase to include the process of managing and maintaing valid and consistant APIs. The following design considerations become increasingly important as an accessible API moves through Test to Assure to Deployed.
+Access to APIs needs to considered at the design phase to include the process of managing and maintaining valid and consistant APIs. The following design considerations become increasingly important as an accessible API moves through Test to Assure to Deployed.
 
-- Endpoints
-- Report & Monitoring
-- Traffic Management
+- Access [Access Management](/engage_case_studies.html)
+- Endpoints [Endpoints]()
+- Report & Monitoring [CCRI Monitoring](/engage_case_studies.html)
+- Traffic Management [CCRI Monitoring](/engage_case_studies.html)
 - Transformation
 - Versioning
 
 For more information on the wider design decisions involved in providing safe access to information please see: 
 
 - [Case Studies](/engage_case_studies.html) illustrates access decisions used to solve the challenges faced within the context and design patterns encountered.
+
+## Reference Implementation - Access Example ##
+
+The Care Connect Reference Implementation (CCRI) provides an example API access mechanism and also shows simple Endpoint configuration, Report & Monitoring and Traffic Management. The CCRI has been designed as an example to show Access and Security for a Care Connect API implementation. The CCRI is <b>not</b> intended to be an offical version to follow all of the methods and principles, however, it can be used as an example of the architectural pieces required to deploy a functional Care Connect API. Each element has been described at a high level within the [Care Connect Reference Implementation Guide](/build_ri_overview.html). Also to aid developers quickly test the main components have been placed in containers (Docker instances using Docker Compose) to allow for minimal configuration. 
+
+
+The design of the Care Connect Reference Implementation shows how to manage and maintain valid and consistant APIs through automated testing, example data and continuous integration and deployment. The design CCRI has taken the Access considerations above to provide accessible API and resilient example API.
+
+{% include note.html content="See how the [Care Connect Reference Implementation](/build_ri_overview.html) provides Access, Endpoint configuration, Report & Monitoring and Traffic Management examples "%}
 
 
 {% include custom/contribute.html content="Provide design patterns and API usage case studies by getting in touch with careconnect@interopen.org "%}

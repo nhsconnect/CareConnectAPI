@@ -84,8 +84,7 @@ Using [POSTMAN](https://www.getpostman.com/){:target="_blank"} we can easily alt
 
 # Current Version #
 
-{% include version.html version="3" function="Provide 14 STU3 (PractionerRole added in STU3) Care Connect profiles with example data for one care setting with audit of use and accessible by unsecure API interaction
-" deliver="8th December 2017" %}
+{% include version.html %}
 
 Check out [Versions](build_ri_version.html) for more information about the current released version, downloading options, use and future verions.
 

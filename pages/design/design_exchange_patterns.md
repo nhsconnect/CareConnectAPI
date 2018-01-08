@@ -102,6 +102,9 @@ This type of interface may also be called as **ResourceAPI** and is useful for r
 **Concerns**
 - Less suitable for large transfers of data between organisations and large systems.
 
+{% include note.html content="Please click on [Care Connect Reference Implementation](/build_ri_overview.html) which describes the RESTful API Care Connect Reference Implementaion and try using, deveoping and improving the CCRI."%}
+
+
 ### 2.1. Information Sharing Patterns ###
 
 <table width="80%">

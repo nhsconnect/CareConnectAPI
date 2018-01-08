@@ -69,6 +69,14 @@ For more information on the wider design decisions involved in providing safe ac
 - [Case Studies](/engage_case_studies.html) illustrates design and security decisions used to solve the challenges faced within the context and design pattern encountered.
 
 
+## Reference Implementation - Security Example ##
+
+The Care Connect Reference Implementation (CCRI) provides an example API security mechanism using OAuth2. The CCRI has been designed as an example to show Access and Security for a Care Connect API implementation. The CCRI is <b>not</b> intended to be an offical version to follow all of the methods and principles, however, it can be used as an example of the architectural pieces required to deploy a functional Care Connect API. Each element has been described at a high level within the [Care Connect Reference Implementation Guide](/build_ri_overview.html). Also to aid developers quickly test the main components have been placed in containers (Docker instances using Docker Compose) to allow for minimal configuration. 
+
+The design of the Care Connect Reference Implementation shows how to manage and maintain valid and consistant APIs through automated testing, example data and continuous integration and deployment. The design CCRI has taken the Access considerations above to provide accessible API and resilient example API.
+
+{% include note.html content="See how the [Care Connect Reference Implementation](/build_ri_security.html) provides Security OAuth2 based examples for Authentication, Authorisation, Encryption and Signatures"%}
+
 {% include custom/contribute.html content="Provide design patterns and API usage case studies by getting in touch with careconnect@interopen.org "%}
 
 # API Considerations #

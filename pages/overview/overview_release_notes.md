@@ -15,6 +15,14 @@ Added
   - Reference Implementation / Security
   - Reference Implementation / Security Scopes
 
+Changed
+  - Release to 4 from 3 throughout
+  - Design / Access with RI links and description of use
+  - Design / Security with RI links and description of use
+  - Design / Exchange patterns with RI links
+  - Design / Patterns / Topology with RI links and description of example of pattern
+  - R4 diagram from R3
+
 
 ## 1.7.0-alpha.0 ##
 

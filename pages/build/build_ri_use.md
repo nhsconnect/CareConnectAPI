@@ -19,8 +19,9 @@ The initial version of the Reference Implementation, while based on the [Resourc
 The following is a list of what is in scope for the Reference Implementation:
 - Implemented using HTTP1.1 API standards
 - Use FHIR standard STU3
-- Use Care Connect profiles published on the Implementation Guide alpha v1.6
+- Use Care Connect profiles published on the Implementation Guide alpha v1.8
 - Use a HAPI RESTful server v3.0
+- Use a OAuth2 security solution
 
 The diagram below provides a high level view of the functional roles the Reference Implementation covers.
 <img src="images/reference_implementation/Ref_Impl_Context.png" style="width:100%;max-width: 100%;">
@@ -37,8 +38,7 @@ The following is a short list of out of scope:
 
 # Current Version #
 
-{% include version.html version="3" function="Provide 14 STU3 (PractionerRole added in STU3) Care Connect profiles with example data for one care setting with audit of use and accessible by unsecure API interaction
-" deliver="8th December 2017" %}
+{% include version.html %}
 
 Check out [Versions](build_ri_version.html) for more information about the current released version, downloading options, use and future verions.
 

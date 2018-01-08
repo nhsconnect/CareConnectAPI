@@ -26,7 +26,7 @@ The instructions are intended to be read alongside access to the source code for
 
 The high level architectural view of the Reference Implementation.
 
-<div style="text-align:center;"><img src="images/build/Tech_arch_R3.png" alt="High level architectural view" title="Technical view and docker containers" style="width:100%"></div>
+<div style="text-align:center;"><img src="images/build/Tech_arch_R4.png" alt="High level architectural view" title="Technical view and docker containers" style="width:100%"></div>
 <br>
 
 |Term|Description|
@@ -47,8 +47,7 @@ The high level architectural view of the Reference Implementation.
 
 # Current Version #
 
-{% include version.html version="3" function="Provide 14 STU3 (PractionerRole added in STU3) Care Connect profiles with example data for one care setting with audit of use and accessible by unsecure API interaction
-" deliver="8th December 2017" %}
+{% include version.html %}
 
 Check out [Versions](build_ri_version.html) for more information about the current released version, downloading options, use and future verions.
 
