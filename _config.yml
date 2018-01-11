@@ -26,7 +26,8 @@ github_editme_path: /edit/develop/
 #twitter: true
 #twitter_username: twitter_username
 #twitter_site_hashtags: twitter_site_hashtags
-fhir_ref_impl: http://purple.testlab.nhs.uk/careconnect-ri/
+fhir_ref_impl: http://yellow.testlab.nhs.uk/careconnect-ri/
+fhir_ref_impl_sec: http://purple.testlab.nhs.uk:20080/
 
 fhir_profile_baseurl: https://fhir-test.hl7.org.uk/StructureDefinition/
 hl7_baseurl:
@@ -56,7 +57,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_email: apilabs@nhs.uk
+feedback_email: apilabs@nhs.net
 # used as a contact email for the Feedback link in the top navigation bar
 
 feedback_disable: true

@@ -10,10 +10,20 @@ summary: "These pages assist with requirements gathering and mapping stages of a
 
 The Deploy section contains descriptions of approaches and suggestions for building APIs at the Assure stage.
 
-| Page              |  Description    |
-|---------------------|+--------------------------------+|
-| Access | The access mechanism and of requesting system is influenced by many factors. This section demonstrates the design decisions to consider | 
-| Security | The security of the FHIR payload, access and data at rest are all important design decisions while building an API. | 
+<table style="min-width:100%;width:100%">
+<thead><tr id="step1">
+	<th style="width:11em;">Page</th>
+	<th>Description</th>
+	</tr></thead>
+<tr id="step2">
+	<td>Access</td>
+	<td>The access mechanism and of requesting system is influenced by many factors. This section demonstrates the design decisions to consider</td>
+</tr>
+<tr id="step3">
+	<td>Security</td>
+	<td>The security of the FHIR payload, access and data at rest are all important design decisions while building an API. </td>
+</tr>
+</table>
 
 Please see or contribute to INTEROPen to support the wider community efforts of providing a completely defined API service.
 

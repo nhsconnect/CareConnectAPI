@@ -9,12 +9,28 @@ summary: "These pages assist with requirements gathering and mapping stages of a
 
 The Test section contains descriptions of approaches and suggestions for building APIs.
 
-| Page              |  Description    |
-|+---------------------|+--------------------------------+|
-| Patterns / Topology | Describes access patterns necessary which influence the access, security and use of APIs. Depending on the pattern or topology of the requesting and responding system. The relationship between the requestor and responder influences the choice of access mechanism, security of payload and access finally build of the system |
-| Access | The access mechanism and of requesting system is influenced by many factors. This section demonstrates the design decisions to consider | 
-| Security | The security of the FHIR payload, access and data at rest are all important design decisions while building an API. | 
-| Test Data | The test data allows the testing of the Care Connect APIs at the individual response level. | 
+<table style="min-width:100%;width:100%">
+<thead><tr id="step1">
+	<th style="width:11em;">Page</th>
+	<th>Description</th>
+	</tr></thead>
+<tr id="step2">
+	<td>Patterns / Topology</td>
+	<td>Describes access patterns necessary which influence the access, security and use of APIs. Depending on the pattern or topology of the requesting and responding system. The relationship between the requestor and responder influences the choice of access mechanism, security of payload and access finally build of the system</td>
+</tr>
+<tr id="step2">
+	<td>Access</td>
+	<td>The access mechanism and of requesting system is influenced by many factors. This section demonstrates the design decisions to consider</td>
+</tr>
+<tr id="step3">
+	<td>Security</td>
+	<td>The security of the FHIR payload, access and data at rest are all important design decisions while building an API. </td>
+</tr>
+<tr id="step4">
+	<td>Test Data</td>
+	<td>The test data allows the testing of the Care Connect APIs at the individual response level. </td>
+</tr>
+</table>
 
 Please see or contribute to INTEROPen to support the wider community efforts of providing a completely defined API service.
 

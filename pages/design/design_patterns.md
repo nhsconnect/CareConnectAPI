@@ -40,6 +40,9 @@ Below is a list of patterns. If you require more detail please go to [developer.
 
 Considering the design pattern / topology influences how any exposed Care Connect APIs can be used and work within a system. APIs help to expose information to all design patterns allowing great user experiences to be created quickly, securely and consistantly. This implementation guide concentrates on [Case Studies](/engage_case_studies.html) to expose and demonstrate how design pattern can use Care Connect APIs to interoperate with other systems, patterns, and level of digital maturity within and between organisations.
 
+{% include note.html content="The [Care Connect Reference Implementation](/build_ri_overview.html) can be used for all of the exchange patterns listed above. Further configuration and extension would be necessary broadcast, message broker, registry repository and publish subscribe models. Please see the process and components described in the RESTful API Care Connect Reference Implementaion and try using it for yourself."%}
+
+
 {% include custom/contribute.html content="Provide design patterns and API usage case studies by getting in touch with careconnect@interopen.org "%}
 
 # API Considerations #

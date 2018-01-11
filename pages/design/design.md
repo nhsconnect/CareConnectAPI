@@ -17,13 +17,20 @@ The Design & Build section contains descriptions of approaches and suggestions f
 	<th>Description</th>
 	</tr></thead>
 <tr id="step2">
-	<td>Design</td><td>The Reference Implementation allows developers to interact with Care Connect API profiles through server calls and an interactive website overlay. The Reference Implementation profiles exposed match the Care Connect profiles. The Reference Implementation shows how these profiles can be completed with synthetic Reference Implementation data. </td>
+	<td>Design Patterns / Topology</td>
+	<td>Describes access patterns necessary which influence the access, security and use of APIs. Depending on the pattern or topology of the requesting and responding system. The relationship between the requestor and responder influences the choice of access mechanism, security of payload and access finally build of the system </td>
 </tr>
 <tr id="step2">
-	<td>Reference Implementation</td><td>The design section covers the Patterns / Topology, Access, Security, Build. A look at some tools and techniques to help build APIs using the Resources defined in Explore. </td>
+	<td>Access</td>
+	<td>The access mechanism and of requesting system is influenced by many factors. This section demonstrates the design decisions to consider</td>
 </tr>
-<tr id="step2">
-	<td>Build</td><td>This section is a placeholder for future work. The Build section contains work in progress of potential builds. </td>
+<tr id="step3">
+	<td>Security</td>
+	<td>The security of the FHIR payload, access and data at rest are all important design decisions while building an API. </td>
+</tr>
+<tr id="step4">
+	<td>Build</td>
+	<td>A look at some tools and techniques to help build APIs using the Resources defined in Explore.</td>
 </tr>
 </table>
 
