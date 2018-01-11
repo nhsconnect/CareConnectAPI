@@ -22,6 +22,8 @@ Changed
   - Design / Exchange patterns with RI links
   - Design / Patterns / Topology with RI links and description of example of pattern
   - R4 diagram from R3
+  - Fixed security challenges
+  - Updated tables for correct formatting throughout
 
 
 ## 1.7.0-alpha.0 ##
