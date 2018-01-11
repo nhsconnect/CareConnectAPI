@@ -44,3 +44,13 @@ GRANT ALL PRIVILEGES ON *.* TO 'jeffrey'@'194.189.27.194';
 ```
 
 Use MySQL client as per normal but use the user just created and port is 3307 and host is 127.0.0.1 (not localhost or other)
+
+## 3. MySQL Misc ##
+
+To retrieve collation
+```
+SELECT @@character_set_database, @@collation_database;
+```
+
+careconnect db settings characterset utf8 collation utf8_bin (alter database careconnect charset utf8 collate utf8_bin;)
+mitre db settings characterset latin1 collation latin1_swedish_ci (alter database oic charset latin1 collate latin1_swedish_ci ;)
