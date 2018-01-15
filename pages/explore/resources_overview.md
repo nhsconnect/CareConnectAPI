@@ -126,7 +126,7 @@ This section looks at the Care Connect profile API's covered within this impleme
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><a href="api_entity_practitioner_role.html">PractitionerRole</a> (Problem)</td>
+<td><a href="api_entity_practitioner_role.html">PractitionerRole</a></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
@@ -147,6 +147,11 @@ This section looks at the Care Connect profile API's covered within this impleme
 <tr>
 <td><a href="api_foundation_capability.html">Capability Statement</a></td>
 <td><a href="api_foundation_valueset.html">ValueSet</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="api_foundation_codesystem.html">CodeSystem</a> (example)</td>
 <td>&nbsp;</td>
 </tr>
 </table>

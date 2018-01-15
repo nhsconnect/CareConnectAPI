@@ -9,9 +9,7 @@ summary: A code system resource specifies a set of codes drawn from one or more 
 
 {% include custom/search.warnbanner.html %}
 
-
 {% include custom/fhir.reference.html resource="" page="" fhirname="CodeSystem" fhirlink="codesystem.html" content="-" userlink="-" %}
-
 
 ## 1. Read ##
 
