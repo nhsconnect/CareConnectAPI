@@ -86,7 +86,7 @@ Systems SHOULD support the following search combinations:
 <!--
 {% include custom/search.code.medicationRequest.html para="2.1.2." content="MedicationRequest" name="code"  %}
 -->
-{% include custom/search.reference.html para="2.1.2." content="medication" resource="MedicationRequest" %}
+{% include custom/search.reference.html para="2.1.2." content="medication" resource="MedicationRequest" example="1" text1="id" text2="1" %}
 
 {% include custom/search.patient.html para="2.1.3." content="MedicationRequest" %}
 
