@@ -29,7 +29,7 @@ github_editme_path: /edit/develop/
 fhir_ref_impl: http://yellow.testlab.nhs.uk/careconnect-ri/
 fhir_ref_impl_sec: http://purple.testlab.nhs.uk:20080/
 
-fhir_profile_baseurl: https://fhir-test.hl7.org.uk/StructureDefinition/
+fhir_profile_baseurl: https://fhir.hl7.org.uk/StructureDefinition/
 hl7_baseurl:
   stu2: https://www.hl7.org/fhir/DSTU2/
   stu3: https://www.hl7.org/fhir/STU3/
