@@ -9,7 +9,7 @@ summary: A person who is directly or indirectly involved in the provisioning of 
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Practitioner" page="CareConnect-Practitioner-1" fhirname="Practitioner" fhirlink="practitioner.html" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.STU3.reference.html resource="Practitioner" page="CareConnect-Practitioner-1" fhirname="Practitioner" fhirlink="practitioner.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 
 ## 1. Read ##

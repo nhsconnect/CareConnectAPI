@@ -8,7 +8,7 @@ summary: This resource is primarily used for the identification and definition o
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Medication" page="CareConnect-Medication-1" fhirname="Medication" fhirlink="medication.html" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.STU3.reference.html resource="Medication" page="CareConnect-Medication-1" fhirname="Medication" fhirlink="medication.html" content="User Stories" userlink="engage_michaelsstory.html" %}
 
 ## 1. Read ##
 

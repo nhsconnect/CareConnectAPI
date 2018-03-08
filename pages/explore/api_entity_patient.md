@@ -9,7 +9,7 @@ summary: Demographics and other administrative information about an individual r
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Patient" page="CareConnect-Patient-1" fhirname="Patient" fhirlink="patient.html" content="[DSTU2] Bristol Connecting Care POC" userlink="engage_poc_bristolcc.html" %}
+{% include custom/fhir.STU3.reference.html resource="Patient" page="CareConnect-Patient-1" fhirname="Patient" fhirlink="patient.html" content="[DSTU2] Bristol Connecting Care POC" userlink="engage_poc_bristolcc.html" %}
 
 ## 1. Read ##
 
@@ -159,5 +159,3 @@ XML <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty
 JSON <a target="_blank" href="{{ site.fhir_ref_impl }}search?serverId=home&pretty=true&resource=Patient&param.0.qualifier=&param.0.0=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number&param.0.1=9876543210&param.0.name=identifier&param.0.type=token&sort_by=&sort_direction=&resource-search-limit=&encoding=json">Patient NHS number search RI viewer</a>
 </pre>
 </div>
-
-

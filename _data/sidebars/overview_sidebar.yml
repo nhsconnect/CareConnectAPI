@@ -1,7 +1,7 @@
 entries:
 - title: STU3 | Care Connect |
   product: STU3 | Care Connect |
-  version: 1.10.0-alpha.0
+  version: 1.9.0-alpha.0
   levels: one
   folders:
 
@@ -221,9 +221,6 @@ entries:
             output: web
           - title: Clinical | Care Coord
             url: /build_pcc_clinical.html
-            output: web
-          - title: Medication | Care Coord
-            url: /build_pcc_medication.html
             output: web
   - title: Test
     output: web

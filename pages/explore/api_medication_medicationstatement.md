@@ -8,7 +8,7 @@ summary: A record of a medication that is being consumed by a patient. A Medicat
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Medication Statement" page="CareConnect-MedicationStatement-1" fhirname="MedicationStatement" fhirlink="medicationstatement.html" content="Bristol Connecting Care POC" userlink="engage_poc_bristolcc.html" %}
+{% include custom/fhir.STU3.reference.html resource="Medication Statement" page="CareConnect-MedicationStatement-1" fhirname="MedicationStatement" fhirlink="medicationstatement.html" content="Bristol Connecting Care POC" userlink="engage_poc_bristolcc.html" %}
 
 ## 1. Read ##
 

@@ -27,7 +27,7 @@ Most NHS trusts will typically have one central system  called the Patient Admin
 max-width="200px" file="IHE/Iti_pam_ip.jpg" alt="Patient Identity Feeds"
 caption="Patient Identity Feeds" %}
 
-[HL7v2](https://isd.digital.nhs.uk/trud3/user/guest/group/0/pack/1/subpack/200/releases) is a mature and widely used standard but it is not suitable for querying patient demographic details (see HL7v2 Patient Demographics Query below). Mostly because it is a messaging standard and not an API. Care Connect API gives an API using [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) interface following a {% include custom/patterns.inline.html content="[resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI)" %} to provide access to the central Patient repository.
+[HL7v2](https://isd.digital.nhs.uk/trud3/user/guest/group/0/pack/1/subpack/200/releases) is a mature and widely used standard but it is awkward to use forr querying patient demographic details (see HL7v2 Patient Demographics Query below). Mostly because it is a messaging standard and not an API. Care Connect API gives an API using [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) interface following a {% include custom/patterns.inline.html content="[resource API pattern](http://www.servicedesignpatterns.com/WebServiceAPIStyles/ResourceAPI)" %} to provide access to the central Patient repository.
 This is particularly suited to:
 * A health portal securely exposing demographics data to browser based plugins
 * Medical devices which need to access patient demographic information
@@ -47,16 +47,16 @@ etc.
 max-width="200px" file="design/PDQ Actor Diagram.jpg" alt="Patient Search FHIR Actor Diagram"
 caption="Patient Search FHIR Actor Diagram" %}
 
-The patient search can use any of the search parameters defined in the [Patient](api_entity_patient.html) API. For example if the patient informs the nurse of their date of birth, first name (19th Mar 1998 Bernie Kanfeld) and surname the query would be.
+The patient search can use any of the search parameters defined in the [Patient](api_entity_patient.html) API. For example if the patient informs the nurse of their date of birth and part of the name (i.e. 19th Mar 1998 and Bernie) and surname the query would be.
 
 ```
-GET [baseUrl]/Patient?birthdate=1998-03-19&name=bernie%20kanfeld
+GET [baseUrl]/Patient?birthdate=1998-03-13&name=bernie
 ```
 
-`[baseUrl]` needs to be replaced with an actual url, in the example below this is `http://127.0.0.1:8181/Dstu2/`. The url would work within a web browser but a better tool to work with RESTful is [Postman](https://www.getpostman.com/)
+`[baseUrl]` needs to be replaced with an actual url, in the example below this is `http://yellow.testlab.nhs.uk/careconnect-ri/STU3`. The url would work within a web browser but a better tool to work with RESTful is [Postman](https://www.getpostman.com/)
 
 ```
-http://127.0.0.1:8181/Dstu2/Patient?birthdate=1998-03-19&name=bernie%20kanfeld
+http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Patient?birthdate=1998-03-13&name=bernie
 ```
 
 A sample response is shown below
@@ -74,7 +74,7 @@ ManagagingOrganisation, the patients GP Practice is given as a reference (Organi
 
 ```xml
 <managingOrganization>
-    <reference value="Organization/24965"/>
+    <reference value="Organization/1"/>
     <display value="Moir Medical Centre"/>
 </managingOrganization>
 ```
@@ -83,7 +83,7 @@ If you wish to know more details about this organisation, you will need to follo
 
 ```xml
 <managingOrganization>
-    <reference value="https://fhirserver.trust.nhs.uk/DSTU2/Organization/65"/>
+    <reference value=" http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Organization/1"/>
     <display value="Moir Medical Centre"/>
 </managingOrganization>
 ```
@@ -91,10 +91,10 @@ If you wish to know more details about this organisation, you will need to follo
 We retrieve the Organization resource in the similar manner to searching for the Patient but as we know the `Id` of the resource we can access it directly.
 
 ```
-GET [baseUrl]/Organization/24965
+GET [baseUrl]/Organization/1
 ```
 
-The response from this request is shown below, it is not returned in a FHIR [Bundle](http://www.hl7.org/fhir/dstu2/bundle.html) as we haven't performed a search and requested the resource by it's Id. The SDS/ODS code can be found in the identifier section.
+The response from this request is shown below, it is not returned in a FHIR [Bundle](http://www.hl7.org/fhir/bundle.html) as we haven't performed a search and instead requested the resource by it's Id. The SDS/ODS code can be found in the identifier section.
 
 #### XML Example 2 - Organization ####
 
@@ -143,15 +143,30 @@ GET [baseUrl]/Patient?identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
 
 ### 2.2. Java Example ###
 
-The examples are built using [HAPI FHIR](http://hapifhir.io/) which is an open source implementation of the HL7 FHIR specification by the University Health Network, Canada. Source code can be found on [NHSConnect GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/ImplementationGuideExplore)
+The examples are built using [HAPI FHIR](http://hapifhir.io/) which is an open source implementation of the HL7 FHIR specification by the University Health Network, Canada. The source code can be found on [NHSConnect GitHub - hapi-patient-find-example-one](https://github.com/nhsconnect/careconnect-examples/tree/master/hapi-patient-find-example-one)
 
-The first example uses the same search parameters we used earlier, we are searching for patients with a surname of Kanfeld, forename of Bernie and date of birth 19/Mar/1998. The first couple of lines setup a Dstu2 FHIR context and set the baseUrl to be `http://127.0.0.1:8181/Dstu2/`. The output from running this code is shown earlier in this guide.
+Firstly we need to setup the HAPI client which includes setting a FHIR context and setting the endpoint server.
 
-#### Java Example 1 - Patient Search ####
+```java
+// Create a FHIR Context
+FhirContext ctx = FhirContext.forDstu3();
+IParser parser = ctx.newXmlParser();
 
-<script src="https://gist.github.com/KevinMayfield/b71d1318d5fddf5012b334c74d25f561.js"></script>
+// Create a client and post the transaction to the server
+IGenericClient client = ctx.newRestfulGenericClient("http://yellow.testlab.nhs.uk/careconnect-ri/STU3/");
+```
 
-The second example would return the same FHIR response but this time the search is using the patients NHS Number.
+Next we need to specify the search parameters, as we mentioned in the earlier section the results from a search will be returned as Bundle.
+
+```java
+Bundle results = client
+                .search()
+                .forResource(Patient.class)
+                .where(Patient.IDENTIFIER.exactly().systemAndCode("https://fhir.nhs.uk/Id/nhs-number", "9876543210"))
+                .returnBundle(Bundle.class)
+                .execute();
+```
+
 
 #### Java Example 2 - Patient Search NHS Number ####
 
@@ -160,7 +175,7 @@ The second example would return the same FHIR response but this time the search 
 As previously mentioned these queries have not returned details on the patient GP or Surgery but have provided references to them which allows us to retrieve them.
 
 ```
-GET [baseUrl]/Organization/24965
+GET [baseUrl]/Organization/1
 ```
 
 ```
@@ -174,28 +189,7 @@ The example belows shows how this could be done using java.
 <script src="https://gist.github.com/KevinMayfield/8a333a1acd31a7460ca4fd508b987156.js"></script>
 
 
-<!--
 
-This is referring to a draft NHS Digital policy
-
-## 3. National (NHS) Patient Search ##
-
-{% include image.html
-max-width="200px" file="design/National PDQ Actor Diagram.jpg" alt="National NHS Patient Search Actor Diagram"
-caption="National NHS Patient Search Actor Diagram" %}
-
-National systems in England may use the logical Id as the business identiferEnglish NHS will use the NHS Number as the logical Id.  
-
-Currently, the only national resources this would apply to are:
-•	Organisation (ODS Code)
-•	Patient (NHS Number)
-•	Prescription (Prescription ID)
-•	Practitioner (SDS ID)
-
-
-{% include image.html
-max-width="200px" file="design/National Basic Process Flow PDQm.jpg" alt="National NHS Process Flow PDQ FHIR" caption="National NHS Process Flow Patient Search FHIR" %}
--->
 ## 3. Server(/Gateway) Patient Search  ##
 
 <!-- This section is introducing the facade pattern. This may not sound useful but is probably the most common patterns with FHIR in the UK -->
@@ -228,13 +222,6 @@ Using a FHIR API Gateway hides this complexity from the client web developer all
 
 <script src="https://gist.github.com/KevinMayfield/88e98c89775ba707dd7a0cf4795b395a.js"></script>
 
-<!--
-| SMSP Request | FHIR Patient Search |
-|--------------|---------------------|
-| getPatientDetailsByNHSNumber| `GET http://[proxyUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|[NHSNumber]&birthdate=[DateOfBirth]` |
-| getPatientDetailsBySearch | `GET http://[proxyUrl]/Patient?birthdate=[DateOfBirth]&given=[Forename]&family=[Surname]&gender=[Gender]&adddress-postcode=[Postcode]` |
-| getPatientDetails| `GET http://[proxyUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|[NHSNumber]&birthdate=[DateOfBirth]&given=[Forename]&family=[Surname]&gender=[Gender]&adddress-postcode=[Postcode]` |
--->
 
 {% include image.html
 max-width="200px" file="design/Gateway Process Flow PDQm.jpg" alt="Gateway Process Flow Patient Search FHIR" caption="Sample Patient Search FHIR gateway process flow" %}
