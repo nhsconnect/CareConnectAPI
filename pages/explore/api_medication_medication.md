@@ -41,7 +41,7 @@ Search Medication resources. Returns a bundle of all `Medication` resources for 
     <td><code class="highlighter-rouge">code</code></td>
     <td><code class="highlighter-rouge">token</code></td>
     <td>Codes that identify this medication</td>
-    <td>MAY</td>
+    <td>SHALL</td>
     <td>Medication.code</td>
 </tr>
 </table>

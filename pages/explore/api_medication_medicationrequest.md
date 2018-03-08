@@ -53,13 +53,13 @@ Fetches a bundle of all `MedicationRequest` resources for the specified patient.
     <td>Return administrations of this medication code</td>
     <td>MAY</td>
     <td>MedicationRequest.medicationCodeableConcept</td>
-</tr>
--->
+</tr> -->
+
 <tr>
     <td><code class="highlighter-rouge">medication</code></td>
     <td><code class="highlighter-rouge">reference</code></td>
     <td>Return prescriptions of this medication reference</td>
-    <td>MAY</td>
+    <td>SHALL</td>
     <td>MedicationRequest.medicationReference</td>
 </tr>
 <tr>

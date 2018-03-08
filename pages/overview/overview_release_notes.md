@@ -14,7 +14,10 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 Changed
   - Removed code search option from MedicationRequest
   - Added medication search option to medicationRequest
-  
+  - code search option in Medication changed from MAY to SHALL
+  - medication search option in MedicationRequest changed from MAY to SHALL
+  - Medication links to Care Connect Reference Implementation changed to code search.
+
 ## 1.8.0-alpha.0 ##
 
 Added
