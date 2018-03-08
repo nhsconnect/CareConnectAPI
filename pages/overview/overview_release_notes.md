@@ -17,7 +17,7 @@ Changed
   - code search option in Medication changed from MAY to SHALL
   - medication search option in MedicationRequest changed from MAY to SHALL
   - Medication links to Care Connect Reference Implementation changed to code search.
-  - Links for Condition and AllergyIntolerance profiles moved to HL7 UK STU3.
+  - Links for updated for new STU3 profiled resources.
   - Links for other CareConnect profiles moved from test server to HL7 UK DSTU2.
 
 ## 1.8.0-alpha.0 ##
