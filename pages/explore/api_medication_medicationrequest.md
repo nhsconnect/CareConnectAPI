@@ -8,7 +8,7 @@ summary: An order for both supply of the medication and the instructions for adm
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Medication Request" page="CareConnect-MedicationRequest-1" fhirname="MedicationRequest" fhirlink="medicationrequest.html" content="Bristol Connecting Care" userlink="engage_poc_bristolcc.html" %}
+{% include custom/fhir.reference.html resource="Medication Request" page="CareConnect-MedicationOrder-1" fhirname="MedicationRequest" fhirlink="medicationrequest.html" content="Bristol Connecting Care" userlink="engage_poc_bristolcc.html" %}
 
 
 ## 1. Read ##
@@ -46,12 +46,21 @@ Fetches a bundle of all `MedicationRequest` resources for the specified patient.
     <td>MAY</td>
     <td>MedicationRequest.authoredOn</td>
 </tr>
+<!--
 <tr>
     <td><code class="highlighter-rouge">code</code></td>
     <td><code class="highlighter-rouge">token</code></td>
     <td>Return administrations of this medication code</td>
     <td>MAY</td>
     <td>MedicationRequest.medicationCodeableConcept</td>
+</tr> -->
+
+<tr>
+    <td><code class="highlighter-rouge">medication</code></td>
+    <td><code class="highlighter-rouge">reference</code></td>
+    <td>Return prescriptions of this medication reference</td>
+    <td>SHALL</td>
+    <td>MedicationRequest.medicationReference</td>
 </tr>
 <tr>
     <td><code class="highlighter-rouge">patient</code></td>
@@ -76,7 +85,9 @@ Systems SHOULD support the following search combinations:
 
 {% include custom/search.date.plus.html para="2.1.1." content="MedicationRequest" name="authoredon"  %}
 
-{% include custom/search.code.medicationRequest.html para="2.1.2." content="MedicationRequest" name="code"  %}
+<!-- {% include custom/search.code.medicationRequest.html para="2.1.2." content="MedicationRequest" name="code"  %} -->
+
+{% include custom/search.reference.html para="2.1.2." content="medication" resource="MedicationRequest" example="1" text1="id" text2="1" %}
 
 {% include custom/search.patient.html para="2.1.3." content="MedicationRequest" %}
 
