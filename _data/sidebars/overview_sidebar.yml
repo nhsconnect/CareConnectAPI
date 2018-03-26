@@ -177,6 +177,9 @@ entries:
         - title: Security
           url: /design_security.html
           output: web
+        - title: Get Record
+          url: /design_get_record.html
+          output: web
 
       - title: Reference Implementation
         url: /build_ri_overview.html
