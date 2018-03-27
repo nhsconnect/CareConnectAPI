@@ -291,6 +291,6 @@ In the fabricated example above, an operation to $getAll could be qualified with
 
 Other API consideration are shown below. Please click on the parts of the API process to continue your API creation journey.
 
-{% include custom/provide_api.svg %}
+<p style="display: block;margin-left: auto;margin-right: auto;">{% include custom/provide_api.svg %}</p>
 
 {% include custom/contribute.html content="Get in involved and contribute to the above API considerations "%}
