@@ -204,7 +204,7 @@ GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Encounter?_id=487&_revinclu
 
 Consumers and providers need to take care not to request or return too many resources when using “_include” and “_revinclude”. Using recursive inclusions might lead to the retrieval of the full patient's record, or even more: resources are organized into an interlinked network and broad “_include” paths may eventually traverse all possible paths on the server. For providers, these recursive and wildcard _includes are demanding and may slow the search response time significantly.
 
-It is at the provider’s discretion how deep to recursively evaluate the inclusions. providers are expected to limit the number of iterations done to an appropriate level and are not obliged to honor requests to include additional resources in the search results. However, restricting returned results may bring into question the safety of the response.
+It is at the provider’s discretion how deep to recursively evaluate the inclusions. Providers are expected to limit the number of iterations done to an appropriate level and are not obliged to honor requests to include additional resources in the search results. However, restricting returned results may bring into question the safety of the response.
 
 ## FHIR Messaging ##
 
