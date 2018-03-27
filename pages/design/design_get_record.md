@@ -285,8 +285,6 @@ GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Patient/$getAll?subject=101
 
 In the fabricated example above, an operation to $getAll could be qualified with parameters that restrict the returned history to a specific number of encounters. In this example, the $getAll operation may still return active allergies, conditions and current medications etc.
 
-{% include custom/contribute.html content=""%}
-
 # Care Connect Considerations #
 
 Other API consideration are shown below. Please click on the parts of the API process to continue your API creation journey.
