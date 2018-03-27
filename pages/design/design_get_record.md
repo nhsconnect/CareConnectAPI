@@ -240,7 +240,7 @@ FHIR Documents are appealing to many organisations because they can be built aro
 
 FHIR Documents are exchanged as FHIR Bundles of type “document”. It is expected that the first resource in the bundle will be a Composition resource followed by various other resources. Further to the supporting evidence in the Composition, resources will contain human-readable and machine-readable (structured) content. It is also possible for a FHIR Document to contain signatures, stylesheets and provenance statements.
 
-While any FHIR resource can contain human-readable text blocks, a FHIR document is the only way of applying any associated layout at source.
+While any FHIR resource can contain human-readable text blocks, a FHIR document is the only way a provider can apply any layout rules to the content. Technically the content will still be re-rendered by the consumer and the provider will still be dependant on how the consumer interprets any given layout expectations.
 
 A RESTful FHIR API will normally handle a bundle as a FHIR Document when it identifies the bundle as a type ‘document’. It can also process it as:
 - A Composition, which breaks up the document into its various component parts;
