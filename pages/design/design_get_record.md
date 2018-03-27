@@ -9,10 +9,10 @@ summary: "Getting records is dependant the providing systems access and the cons
 
 {% include important.html content="This section provides an overview of how records can be requested using FHIR including APIs, API operations, messages, documents and extended operations" %}
 
-FHIR is designed to support a wide variety of contexts and architectures, the most modern and granular being a RESTful API model. A RESTful API model is based on exposing operations such as create, read, update, delete (CRUD) and stateless access. This access is typically a granular way to access content and helps testing, security and monitoring of the exposed data. An important consideration of the RESTful model is that interactions are driven by the consumer of the data who will pull data by making requests to the provider when they need it. Small requests are expected from the Consumer, which the Provider answers immediately requiring the Consumer to maintain state. This makes it possible for the Consumer to provide richer experiences for end users.
+FHIR is designed to support a wide variety of contexts and architectures, the most modern and granular being a RESTful API model. A RESTful API model is based on exposing operations such as create, read, update, delete (CRUD) and stateless access. This access is typically a granular way to access content and helps testing, security and monitoring of the exposed data. An important consideration of the RESTful model is that interactions are driven by the consumer of the data who will pull data by making requests to the provider when they need it. Small requests are expected from the consumer, which the provider answers immediately requiring the consumer to maintain state. This makes it possible for the consumer to provide richer experiences for end users.
 
 ```
-A Consumer refers to either a client system or a person that has a need to retrieve data from a Provider.
+A 'consumer' refers to either a client system or a person that has a need to retrieve data from a provider.
 ```
 
 The default paradigm of FHIR often appears to be RESTful as the interactions are granular. However, FHIR can also be implemented with more traditional messaging and document exchanges. While this typically means bundling up a variety of resources into bundles for transfer, either as a message or attachment, there is often a practical desire to do the same in response to a single API query. Amongst other reasons, this could be for the convenience of the requester by simplifying the requesting code, or to improve the performance of the the supplying system due to constraints that may exist around the architecture and manner of accessing the stored information. This does start to move away from a solution that can be considered purely RESTful to a more coarse grained approach typical of Service Oriented Architectures (SOA) or Remote Procedure Calls (RPC).
@@ -20,7 +20,7 @@ The default paradigm of FHIR often appears to be RESTful as the interactions are
 
 # Architecture considerations #
 
-Using CareConnect FHIR profiles to access multiple resources from a patient’s history requires the implementer (both Consumer and Provider) to carefully consider the following factors described in this Implementation Guide:
+Using CareConnect FHIR profiles to access multiple resources from a patient’s history requires the implementer (both consumer and provider) to carefully consider the following factors described in this Implementation Guide:
 
 1. [Topologies / Patterns](design_patterns.html)  -  A “pattern” is a formal way of documenting a solution to a design problem in a particular field of expertise. For example, in the case of an API sharing clinical information between systems, an agreed pattern can guide the application of the standard. This may help to reduce the time to implementation and resolve ambiguity.
 1. [Exchange Paradigms](design_exchange_patterns.html) - The choice of exchange paradigm can influence the format of the data, the choice of resources to include and how those resources are constructed. For example, if the content is exchanged as an attachment in an email, the attachment will typically require the complete set of the resources that make up the bundle. So this approach to data exchange will drive the need for the complete response to be returned from a single request (if there is a request at all) and the consumer may not be able to resolve any referenced data in the body of the message. In fact it would most likely drive the requirement for a FHIR Document to be created.
@@ -95,7 +95,7 @@ The response would then be made up of a FHIR Bundle of one of the following type
 
 Many web services use messages to form their own domain-specific APIs. These messages incorporate common logical commands like Create, Read (i.e. Get), Update, or Delete (CRUD). Also across the health and social care domain, we have many common entities such as Patient, Practitioner, Organisation etc. For example, many systems will implement an API that allows you to search for Patients by their NHS Number, maybe called GetPatient or QueryPatient.
 
-Because FHIR standardises the common entities of a healthcare domain, the syntax of the API and associated patterns can also be agreed and standardised. With broad adoption, and granular access to resources, a patient’s history can be compiled by the Consumer to suit their own specific needs. Further to this, data does not have to be central to the provider’s system or aggregated by an intermediate solution. By using multiple requests to obtain the necessary history, each request can be targeted at a different end point (Provider).
+Because FHIR standardises the common entities of a healthcare domain, the syntax of the API and associated patterns can also be agreed and standardised. With broad adoption, and granular access to resources, a patient’s history can be compiled by the consumer to suit their own specific needs. Further to this, data does not have to be central to the provider’s system or aggregated by an intermediate solution. By using multiple requests to obtain the necessary history, each request can be targeted at a different end point (provider).
 
 Starting with an initial query to obtain a specific resource reference:
 
@@ -183,14 +183,14 @@ So, to get a typical summary, the consumer might send the following sequence of 
 
 Obtaining information in this way can be counter-intuitive to some consumers when they are used to a service based interface or a messaging solution which off up a specific way of retrieving this content in one request. Providers may also find implementing solutions this way to be very inefficient their systems depending on how they map their data and index their data.
 
-There is nothing preventing a Provider from offering extended operations to return resources bundled up in a more convenient way, while still exposing the granular, RESTful API. Further discussion around the use of extended operations is included below.
+There is nothing preventing a provider from offering extended operations to return resources bundled up in a more convenient way, while still exposing the granular, RESTful API. Further discussion around the use of extended operations is included below.
 
 
 ## RESTful APIs Standard Operation ##
 
-An alternative to providing an extended operation would be to include support for the search parameters “_include” and “_revinclude” which are defined as part of the FHIR standard. Whereas a typical search will return a list of resources which are all of the type being searched, adding “_include” or “_revinclude” will return a list of matching resources and any related resources that reference the query results (which may be a different type). This allows a consumer to request a more complete bundle with a reduced number of API calls, specifying exactly what they need. The disadvantage is that the Consumer could make requests to the provider which are expensive to fulfill, overloading the Provider if not suitably constrained.
+An alternative to providing an extended operation would be to include support for the search parameters “_include” and “_revinclude” which are defined as part of the FHIR standard. Whereas a typical search will return a list of resources which are all of the type being searched, adding “_include” or “_revinclude” will return a list of matching resources and any related resources that reference the query results (which may be a different type). This allows a consumer to request a more complete bundle with a reduced number of API calls, specifying exactly what they need. The disadvantage is that the consumer could make requests to the provider which are expensive to fulfill, overloading the provider if not suitably constrained.
 
-Appending the “_include” parameter to a request indicates to the Provider that the specified resources that are related to the retrieved resources are to be included in the response. The following example returns MedicationRequests for a patient but the returned results will also include any related Patient resources.
+Appending the “_include” parameter to a request indicates to the provider that the specified resources that are related to the retrieved resources are to be included in the response. The following example returns MedicationRequests for a patient but the returned results will also include any related Patient resources.
 
 ```
 GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/MedicationRequest?_include=MedicationRequest:patient&patient=1010
@@ -202,9 +202,9 @@ Appending the “_revinclude” parameter to a request indicates to the provider
 GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Encounter?_id=487&_revinclude=*
 ```
 
-Consumers and Providers need to take care not to request or return too many resources when using “_include” and “_revinclude”. Using recursive inclusions might lead to the retrieval of the full patient's record, or even more: resources are organized into an interlinked network and broad “_include” paths may eventually traverse all possible paths on the server. For providers, these recursive and wildcard _includes are demanding and may slow the search response time significantly.
+Consumers and providers need to take care not to request or return too many resources when using “_include” and “_revinclude”. Using recursive inclusions might lead to the retrieval of the full patient's record, or even more: resources are organized into an interlinked network and broad “_include” paths may eventually traverse all possible paths on the server. For providers, these recursive and wildcard _includes are demanding and may slow the search response time significantly.
 
-It is at the Provider’s discretion how deep to recursively evaluate the inclusions. Providers are expected to limit the number of iterations done to an appropriate level and are not obliged to honor requests to include additional resources in the search results. However, restricting returned results may bring into question the safety of the response.
+It is at the provider’s discretion how deep to recursively evaluate the inclusions. providers are expected to limit the number of iterations done to an appropriate level and are not obliged to honor requests to include additional resources in the search results. However, restricting returned results may bring into question the safety of the response.
 
 ## FHIR Messaging ##
 
@@ -267,7 +267,7 @@ HL7 suggest that an operation has the following properties:
 - Operations may make use of the existing repository of resources in their definitions
 - Operations may be performed on a specific resource, a resource type, or a whole system
 
-Using an extended operation to support the retrieval of a predefined set of resources as discussed above, there is an inherent risk of making a provider’s API more tightly coupled to specific consumers, requiring that they have a previously agreed contract and an understanding of these specific operations. Operations designed to meet one Consumer’s needs may not be appropriate for subsequent Consumers.
+Using an extended operation to support the retrieval of a predefined set of resources as discussed above, there is an inherent risk of making a provider’s API more tightly coupled to specific consumers, requiring that they have a previously agreed contract and an understanding of these specific operations. Operations designed to meet one consumer’s needs may not be appropriate for subsequent consumers.
 
 The example below (for demonstration and will not resolve) shows how a request could be created to execute an operation called getAll, which is intended to return a patient’s history.
 
@@ -277,7 +277,7 @@ GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Patient/1010/$getAll
 
 These extended operations can be applied to the base FHIR endpoint, a resource type, a resource instance or a specific version of a resource.
 
-In the example above, we are suggesting that the $getAll operation will return the entire patient history which is likely to be undesirable (especially from the point of view of a Provider or a Consumer using a mobile device). It may be more likely that some parameterisation is desired so that the consumer can specify what they consider to be useful. This is supported by the extended operation in the form of <key,value> pairs in the body of the request (or appended to the URL when performing a HTTP GET).
+In the example above, we are suggesting that the $getAll operation will return the entire patient history which is likely to be undesirable (especially from the point of view of a provider or a consumer using a mobile device). It may be more likely that some parameterisation is desired so that the consumer can specify what they consider to be useful. This is supported by the extended operation in the form of <key,value> pairs in the body of the request (or appended to the URL when performing a HTTP GET).
 
 ```
 GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Patient/$getAll?subject=1010&recentEncounters=5
@@ -291,6 +291,6 @@ In the fabricated example above, an operation to $getAll could be qualified with
 
 Other API consideration are shown below. Please click on the parts of the API process to continue your API creation journey.
 
-{% include custom/provide_api.svg %}
+<div style="text-align:center">{% include custom/provide_api.svg %}
 
-{% include custom/contribute.html content="Get in involved and contribute to the above API considerations "%}
+{% include custom/contribute.html content="Get in involved and contribute to the above API considerations "%}</div>
