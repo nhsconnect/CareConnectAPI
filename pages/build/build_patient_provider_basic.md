@@ -66,6 +66,11 @@ Looking at the return ConformanceStatement you will notice the server supports F
 
 <p style="text-align:center;"><img src="images/nosql/POSTMANpatient.PNG" style="width:50%;max-width: 50%;"></p>
 
+Let us add a Patient to our server. In POSTMAN the url is http://127.0.0.1:8183/STU3/Patient, the action is POST, under Headers add a 'Content-Type' key with a value of 'application/fhir+xml', copy a FHIR Patient into the Body section (We used Patient/1 from the CCRI server in the image below) and then click 'Send'.
+
+<p style="text-align:center;"><img src="images/nosql/POSTMANpatientCreate.PNG" style="width:80%;max-width: 80%;"></p>
+
+The response Status should be '201 Created' which shows the 
 
 5.  Add Patient (POST)
 
