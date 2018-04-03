@@ -11,23 +11,38 @@ summary: "How to create a basic FHIR Patient server using open source"
 
 ## 1. Overview ##
 
-Initially you’ll more than likely want to explore FHIR. You have several open source FHIR Servers options, all of these can be installed locally:
+If you are just after a FHIR Server you have several open source FHIR Servers options, all of these can be installed locally:
 
-HAPI FHIR JPA Server - http://hapifhir.io/doc_jpa.html
+[Care Connect Reference Implementation](https://nhsconnect.github.io/CareConnectAPI/build_ri_install.html)
 
-Firely - http://vonk.fire.ly/
+[HAPI FHIR JPA Server](http://hapifhir.io/doc_jpa.html)
 
-Care Connect Reference Implementation - https://nhsconnect.github.io/CareConnectAPI/build_ri_install.html
+[Firely Vonk](http://vonk.fire.ly/)
+
+If you want to populate these servers with your own data then it becomes more complex. For HAPI and Vonk you can create FHIR resources and then POST them into the server. The Care Connect Reference Implementation (CCRI) can be used this way but its internal database structure is similar to many PAS and EPR systems. This allows the use of tools like Microsoft SQL Server Integration Service (SSIS) to import the data.
+
+{% include note.html content="The CCRI uses Hibernate to connect to the MySQL database. Hibernate supports many database systems such as Microsoft SQL Server and Intersystems Cache, it has not been tested with these databases but in theory it should work." %}
+
+Having to perform extract, transform and load (ETL) is not ideal, the ETL stage can take time and the FHIR server will not be current. To get around this you can implement a FHIR Server to your existing datasource. This is what we did with the CCRI, we put a Care Connect FHIR API on top of our SQL database using a HAPI RESTful Server. This is detailed in the Design & Build->Reference Implementation section of this guide.
+
+This is quite involved and to illustrate some of the key features in the CCRI we will show how to build a simple FHIR Server providing a FHIR Patient API with a MongoDb backend database.
+
+## 2. Pre-Requisites ##
+
+Install the following software:
+
+*  	[Postman](https://www.getpostman.com/) - we will use this to add a FHIR Patient to the server and perform a few queries.
+*   [Mongo](https://docs.mongodb.com/manual/installation) - accept the default installation (port 27017 with no security). If you have docker installed you can alternatively use the [Mongo image](https://hub.docker.com/_/mongo/) from docker instead. In addition you may wish to install [Mongo Compass](https://www.mongodb.com/products/compass) to explore the data.
+*   Java IDE. Either:
+    *    [Intellij Community](https://www.jetbrains.com/idea/download) (The screen shots below use Intellij)
+    *    [Eclipse](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/oxygen2)
 
 
-The next stage is to configure your own server. You could reuse CCRI as it’s internal SQL  structure is similar to a number of PAS and EPR systems in common use today but this would mean keeping PAS/EPR and separate FHIR server in step.
+## 3. Store Patient resource ##
 
-What you would probably want to do instead is build a FHIR API on top of your EPR/PAS. This is what we did with the CCRI, we put a Care Connect FHIR API on top of our SQL database.
+Ensure the MongoDb has been started. In your browser navigate to the [FHIRStarter project](https://github.com/nhsconnect/careconnect-examples)
 
-Marko will be covering this next but in this section I will demonstrate the basics of how we built the FHIR server.
-
-
-## 2. Store Patient resource ##
+<p style="text-align:center;"><img src="images/nosql/GitHub.PNG" style="width:50%;max-width: 50%;"></p>
 
 For this I have already downloaded and installed a default instance of MongoDb. [Show mongo + compass]. Next on github I will download the fhirStarter package. [https://github.com/nhsconnect/careconnect-examples].
 
@@ -51,10 +66,10 @@ For demonstration purposes I’ve already created a Patient provider and will ad
 Going back to postman we can now see the changes to the conformance statement [show] and post in a Patient resource [use ccri and show also show mongo database]
 
 
-## 3. Retrieve Patient resource ##
+## 4. Retrieve Patient resource ##
 
 How do we retrieve? [Uncomment the read section and do get call within postman. Change Accept to xml/json. Mention this is all built in]
 
-## 4. Search Patient resource ##
+## 5. Search Patient resource ##
 
 How do we do a search? [explain PatientProvider search options. Uncomment section, build another option]
