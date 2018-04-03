@@ -222,6 +222,9 @@ entries:
           - title: Patient Search
             url: /build_patient_search.html
             output: web
+          - title: Patient Server
+            url: /build_patient_server.html
+            output: web
           - title: Clinical | Care Coord
             url: /build_pcc_clinical.html
             output: web
