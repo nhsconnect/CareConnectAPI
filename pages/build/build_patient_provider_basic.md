@@ -40,18 +40,31 @@ Install the following software:
 
 ## 3. Store Patient resource ##
 
-Ensure the MongoDb has been started. In your browser navigate to the [FHIRStarter project](https://github.com/nhsconnect/careconnect-examples)
+Ensure the MongoDb has been started. In your browser navigate to the [Care Connect Examples project](https://github.com/nhsconnect/careconnect-examples), which contains the FHIRStarter module and then 'Clone or download' the project.
 
 <p style="text-align:center;"><img src="images/nosql/GitHub.PNG" style="width:50%;max-width: 50%;"></p>
 
-For this I have already downloaded and installed a default instance of MongoDb. [Show mongo + compass]. Next on github I will download the fhirStarter package. [https://github.com/nhsconnect/careconnect-examples].
+Within your IDE (Intellij or Eclipse) import the project. On Intellij (windows) select File->New->Project from existing sources. On Eclipse see http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm
 
-Open up this repo in my IDE, I’m using Intellij Ultimate for this but the steps on the community version are similar. [Import project]
-Now I select [mvn spring-boot:run]
+ <p style="text-align:center;"><img src="images/nosql/ImportProject.PNG" style="width:30%;max-width: 30%;"></p>
 
-4.
+In the screenshot above we've chosen just to import the FHIRStarter project. On the next screen we imported the module as a Maven project and then accepted the defaults in the remaining screens.
 
-Now we have a FHIR Server up and running. We can see the conformance statement [POSTMan  http://127.0.0.1:8183/STU3/metadata]
+On Intellij select spring-boot:run from the Maven Projects menu.
+
+<p style="text-align:center;"><img src="images/nosql/SpringBootRun.PNG" style="width:80%;max-width: 80%;"></p>
+
+For Eclipse, in eclipse Project Explorer, right click the project name -> select "Run As" -> "Maven Build..."
+In the goals, enter 'spring-boot:run' then click Run button.
+
+A basic FHIR server will now be up and running. To confirm, start POSTMan and GET http://127.0.0.1:8183/STU3/metadata
+You will see a FHIR ConformanceStatement returned from the server.
+
+<p style="text-align:center;"><img src="images/nosql/POSTMANmeta.PNG" style="width:80%;max-width: 80%;"></p>
+
+Looking at the return ConformanceStatement you will notice the server supports FHIR Patient and the Create operation.
+
+<p style="text-align:center;"><img src="images/nosql/POSTMANpatient.PNG" style="width:50%;max-width: 50%;"></p>
 
 
 5.  Add Patient (POST)
