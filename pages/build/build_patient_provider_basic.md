@@ -42,7 +42,7 @@ Install the following software:
 
 Ensure the MongoDb has been started. In your browser navigate to the [Care Connect Examples project](https://github.com/nhsconnect/careconnect-examples), which contains the FHIRStarter module and then `Clone or download` the project.
 
-<p style="text-align:center;"><img src="images/nosql/GitHub.PNG" style="width:50%;max-width: 50%;"></p>
+<p style="text-align:center;"><img src="images/nosql/GitHub.PNG" style="width:90%;max-width: 90%;"></p>
 
 Within your IDE (Intellij or Eclipse) import the project. On Intellij (windows) select File->New->Project from existing sources. On Eclipse see http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm
 
@@ -60,7 +60,7 @@ In the goals, enter `spring-boot:run` then click Run button.
 A basic FHIR server will now be up and running. To confirm, start POSTMan and GET http://127.0.0.1:8183/STU3/metadata
 You will see a FHIR ConformanceStatement returned from the server.
 
-<p style="text-align:center;"><img src="images/nosql/POSTMANmeta.PNG" style="width:80%;max-width: 80%;"></p>
+<p style="text-align:center;"><img src="images/nosql/POSTMANmeta.PNG" style="width:100%;max-width: 100%;"></p>
 
 Looking at the return ConformanceStatement you will notice the server supports FHIR Patient and the Create operation.
 
@@ -85,13 +85,13 @@ POST http://127.0.0.1:8183/STU3/Patient</div>
 
 Then copy a FHIR Patient into the Body section (We used Patient/1 from the CCRI server in the image below) and then click 'Send'.
 
-<p style="text-align:center;"><img src="images/nosql/POSTMANpatientCreate.PNG" style="width:80%;max-width: 80%;"></p>
+<p style="text-align:center;"><img src="images/nosql/POSTMANpatientCreate.PNG" style="width:100%;max-width: 100%;"></p>
 
 The response Status should be `201 Created` which indicates the Patient has been added to the server.
 
 If you installed MongoDb Compass you will be able to view the Patient that was just added. You should notice the patient document is very similar to the FHIR Patient we posted into the database. It's not the same for two reasons, firstly MongoDb uses [BSON](https://en.wikipedia.org/wiki/BSON) although this is very similar to JSON it has a few differences. Secondly we've not just converted the XML/JSON FHIR Patient to BSON, we have used [Spring Data](https://projects.spring.io/spring-data-mongodb/) JPA Entities which will allow us to simplify the search operations will we add later.
 
-<p style="text-align:center;"><img src="images/nosql/POSTMANpatientCompass.PNG" style="width:80%;max-width: 80%;"></p>
+<p style="text-align:center;"><img src="images/nosql/POSTMANpatientCompass.PNG" style="width:100%;max-width: 100%;"></p>
 
 That is most of the installation and configuration completed. We have created a FHIR Server using a NoSQL Document database that supports FHIR Patient.
 
@@ -166,7 +166,7 @@ _id : ObjectId("5ac47fd723598f6af80ff1fe")
 
 or from the POST we did earlier in POSTMan in the Location header from POST response.
 
-<p style="text-align:center;"><img src="images/nosql/POSTMANheaders.PNG" style="width:80%;max-width: 80%;"></p>
+<p style="text-align:center;"><img src="images/nosql/POSTMANheaders.PNG" style="width:100%;max-width: 100%;"></p>
 
 This gives us the following request in POSTMan
 
@@ -270,4 +270,4 @@ Patient searches are now supported, for example to search for Patients on NHS Nu
 <div markdown="span" class="alert alert-success" role="alert">
 GET http://127.0.0.1:8183/STU3/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210</div>
 
-This has been an overview of the HAPI RESTful server and was kept basic in order to show key aspects. A more detailed version of this code can be found in [careconnect-document](https://github.com/nhsconnect/careconnect-document/tree/master/ccri-document-server) which is a basic repository for storing FHIR Documents, the Patient element provides a Patient index complemented with a document index, the documents are stored as raw FHIR Bundles.   
+This has been an overview of the HAPI RESTful server and was kept basic in order to show key aspects. A more detailed version of this project can be found in [careconnect-document](https://github.com/nhsconnect/careconnect-document/tree/master/ccri-document-server) which is a basic repository for storing FHIR Documents, the Patient element provides a Patient index complemented with a document index, the documents are stored as raw FHIR Bundles.   
