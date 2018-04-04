@@ -64,9 +64,22 @@ You will see a FHIR ConformanceStatement returned from the server.
 
 Looking at the return ConformanceStatement you will notice the server supports FHIR Patient and the Create operation.
 
-<p style="text-align:center;"><img src="images/nosql/POSTMANpatient.PNG" style="width:50%;max-width: 50%;"></p>
+```xml
+      <resource>
+           <type value="Patient"></type>
+           <profile>
+               <reference value="http://hl7.org/fhir/Profile/Patient"></reference>
+           </profile>
+           <interaction>
+               <code value="read"></code>
+           </interaction>
+       </resource>
+```
 
 We will now add a Patient to our server. In POSTMAN the url is http://127.0.0.1:8183/STU3/Patient, the action is POST, under Headers add a `Content-Type` key with a value of `application/fhir+xml`. (If your example is in JSON format set the value to be 'application/fhir+json')
+
+<div markdown="span" class="alert alert-success" role="alert">
+POST http://127.0.0.1:8183/STU3/Patient</div>
 
 <p style="text-align:center;"><img src="images/nosql/POSTMANpatientHeaders.PNG" style="width:50%;max-width: 50%;"></p>
 
@@ -90,21 +103,160 @@ We have mentioned the CCRI and this example project are using different database
 
 <p style="text-align:center;"><img src="images/nosql/ccri-nosql.jpg" style="width:60%;max-width: 60%;"></p>
 
-As can be seen the HAPI RESTful Server is common to both projects. The configuration of this server can be found in the `fhirStarterRestfulServer.java` shown in the diagram below, configuration is described on the [HAPI Server - REST Server](http://hapifhir.io/doc_rest_server.html) website. The highlighted section shows the PatientProvider which is used to tell the HAPI Server that we support Patient and also where the implementation is.
+As can be seen the HAPI RESTful Server is common to both projects. The configuration of this server can be found in the `fhirStarterRestfulServer.java` shown in the diagram below, configuration is described on the [HAPI Server - REST Server](http://hapifhir.io/doc_rest_server.html) website. The highlighted section shows the PatientProvider which is used to tell the HAPI Server that we support Patient and also where the implementation is. This is also where you can add in security, set default the server to use XML or JSON as default and many other options.
 
+{% include tip.html content="CCRI contains several FHIR Servers using a variety of different configurations including security ([SMART on FHIR](http://docs.smarthealthit.org/)) and interceptors." %}
 
 <p style="text-align:center;"><img src="images/nosql/fhirStarterConfig.PNG" style="width:100%;max-width: 100%;"></p>
 
+The Patient provider is where we configure the FHIR Patient behaviour. HAPI uses annotations to indicate what service the procedures provide. The procedure createPatient in the diagram is annotated with `@Create` which indicates it handles `POST` or create. This procedure then uses a PatientDAO class which uses Spring Data to store the Patient resource in the MongoDb. We will not be covering the DAO class as this is specific to the implementation but an example is provided for you to explore, this is the area where you would need to code your own implementation.
 
+<p style="text-align:center;"><img src="images/nosql/patientProvider.PNG" style="width:100%;max-width: 100%;"></p>
 
-Class. This is where you can add in security, set default the server to use XML or JSON as defaults. More details are on the hapi fhir site.
+We have now explained some of the workings of the demonstration and have a FHIR server which accepts FHIR Patient resources. Next we will add reading of the Patient resource. The DOA and code for `@Read` is provided, to enable this we need to stop the Server, uncomment the `@Read` procedure and restart the server (`mvn spring-boot:run`).
 
-For demonstration purposes I’ve already created a Patient provider and will add that to the server [uncomment line and restart server]
+```java
+/*
+@Read
+public Patient readPatient(HttpServletRequest request, @IdParam IdType internalId) {
 
-Going back to postman we can now see the changes to the conformance statement [show] and post in a Patient resource [use ccri and show also show mongo database]
+    Patient patient = patientDao.read(ctx,internalId);
 
-How do we retrieve? [Uncomment the read section and do get call within postman. Change Accept to xml/json. Mention this is all built in]
+    return patient;
+}
+*/
+```
+Remove the comments.
+```java
+@Read
+public Patient readPatient(HttpServletRequest request, @IdParam IdType internalId) {
+
+    Patient patient = patientDao.read(ctx,internalId);
+
+    return patient;
+}
+```
+
+Once the server has restarted we can check the metadata to see the changes to the ConformanceStatement (use POSTMan).
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET http://127.0.0.1:8183/STU3/metadata</div>
+
+```xml
+      <resource>
+           <type value="Patient"></type>
+           <profile>
+               <reference value="http://hl7.org/fhir/Profile/Patient"></reference>
+           </profile>
+           <interaction>
+               <code value="read"></code>
+           </interaction>
+           <interaction>
+               <code value="create"></code>
+           </interaction>
+       </resource>
+```
+{% include note.html content="We have an error here. The profile being returned is the base FHIR Patient profile, for Care Connect this should be https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 but we are using the default ConformanceStatement from the HAPI server. We do override this in the CCRI server." %}
+
+To retrieve the Patient we first need to get the id of the Patient used in the MongoDb. In MongoDb this is the `_id`, which can be found either using MongoDb (see the earlier screenshot)
+
+```json
+_id : ObjectId("5ac47fd723598f6af80ff1fe")
+```
+
+or from the POST we did earlier in POSTMan in the Location header from POST response.
+
+<p style="text-align:center;"><img src="images/nosql/POSTMANheaders.PNG" style="width:80%;max-width: 80%;"></p>
+
+This gives us the following request in POSTMan
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET http://127.0.0.1:8183/STU3/Patient/5ac47fd723598f6af80ff1fe</div>
+
+The response is in JSON format but if we wanted XML we can use the `_format=xml` parameter, e.g.
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET http://127.0.0.1:8183/STU3/Patient/5ac47fd723598f6af80ff1fe?_format=xml</div>
+
+This is supported out of the box by the HAPI RESTful Server.
+
 
 ## 5. Search Patient resource ##
 
-How do we do a search? [explain PatientProvider search options. Uncomment section, build another option]
+We have also provided a `@Search` method, locate plus uncomment this and restart the server.
+
+```java
+@Search
+public List<Resource> searchPatient(HttpServletRequest request,
+                                    @OptionalParam(name= Patient.SP_BIRTHDATE) DateRangeParam birthDate,
+                                    @OptionalParam(name = Patient.SP_FAMILY) StringParam familyName,
+                                    @OptionalParam(name= Patient.SP_GENDER) StringParam gender ,
+                                    @OptionalParam(name= Patient.SP_GIVEN) StringParam givenName ,
+                                    @OptionalParam(name = Patient.SP_IDENTIFIER) TokenParam identifier,
+                                    @OptionalParam(name= Patient.SP_NAME) StringParam name
+        , @OptionalParam(name = Patient.SP_RES_ID) TokenParam resid
+
+) {
+    List<Resource> results = patientDao.search(ctx,birthDate,familyName,gender,givenName,identifier,name);
+
+    return results;
+}
+```
+
+Accessing the ConformanceStatement statement now gives:
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET http://127.0.0.1:8183/STU3/metadata?_format=xml</div>
+
+```xml
+<resource>
+     <type value="Patient"></type>
+     <profile>
+         <reference value="http://hl7.org/fhir/Profile/Patient"></reference>
+     </profile>
+     <interaction>
+         <code value="read"></code>
+     </interaction>
+     <interaction>
+         <code value="create"></code>
+     </interaction>
+     <interaction>
+         <code value="search-type"></code>
+     </interaction>
+     <searchParam>
+         <name value="_id"></name>
+         <type value="token"></type>
+         <documentation value="The ID of the resource"></documentation>
+     </searchParam>
+     <searchParam>
+         <name value="birthdate"></name>
+         <type value="date"></type>
+         <documentation value="The patient's date of birth"></documentation>
+     </searchParam>
+     <searchParam>
+         <name value="family"></name>
+         <type value="string"></type>
+         <documentation value="A portion of the family name of the patient"></documentation>
+     </searchParam>
+     <searchParam>
+         <name value="gender"></name>
+         <type value="string"></type>
+         <documentation value="Gender of the patient"></documentation>
+     </searchParam>
+     <searchParam>
+         <name value="given"></name>
+         <type value="string"></type>
+         <documentation value="A portion of the given name of the patient"></documentation>
+     </searchParam>
+     <searchParam>
+         <name value="identifier"></name>
+         <type value="token"></type>
+         <documentation value="A patient identifier"></documentation>
+     </searchParam>
+     <searchParam>
+         <name value="name"></name>
+         <type value="string"></type>
+         <documentation value="A server defined search that may match any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text"></documentation>
+     </searchParam>
+ </resource>
+```
