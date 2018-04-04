@@ -260,3 +260,14 @@ GET http://127.0.0.1:8183/STU3/metadata?_format=xml</div>
      </searchParam>
  </resource>
 ```
+
+You will notice that all the `@OptionalParam` have become searchParam's in the ConformanceStatement. We have only included the mandatory search parameters from the [CareConnectAPI](api_entity_patient.html#21-search-parameters). HAPI has built in support for all standard parameters, see below:
+
+<p style="text-align:center;"><img src="images/nosql/OtherSearchOptions.png" style="width:80%;max-width: 80%;"></p>
+
+Patient searches are now supported, for example to search for Patients on NHS Number we could do:
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET http://127.0.0.1:8183/STU3/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210</div>
+
+This has been an overview of the HAPI RESTful server and was kept basic in order to show key aspects. A more detailed version of this code can be found in [careconnect-document](https://github.com/nhsconnect/careconnect-document/tree/master/ccri-document-server) which is a basic repository for storing FHIR Documents, the Patient element provides a Patient index complemented with a document index, the documents are stored as raw FHIR Bundles.   
