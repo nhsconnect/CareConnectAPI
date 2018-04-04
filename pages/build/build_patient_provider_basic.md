@@ -87,12 +87,13 @@ That is most of the installation and configuration completed. We have created a 
 
 We have mentioned the CCRI and this example project are using different database technologies, MongDb a NoSQL database rather than a MySQL a SQL database and also [Spring Data](https://projects.spring.io/spring-data-mongodb/) instead of [Hibernate ORM](http://hibernate.org/). The main reason is we wanted to simplify the description of the FHIR Server components used in the CCRI, both projects are composed in a similar way as shown in the diagram below:
 
-<p style="text-align:center;"><img src="images/nosql/fhirStartConfig.PNG" style="width:60%;max-width: 60%;"></p>
-
-As can be seen the HAPI RESTful Server is common to both projects. The configuration of this server can be found in the `fhirStarterRestfulServer.java` shown in the diagram below, configuration is described on the [HAPI Server - REST Server](http://hapifhir.io/doc_rest_server.html) website. The highlighted section shows the PatientProvider which is used to tell the HAPI Server that we support Patient and also where the implementation is.
 
 <p style="text-align:center;"><img src="images/nosql/ccri-nosql.jpg" style="width:60%;max-width: 60%;"></p>
 
+As can be seen the HAPI RESTful Server is common to both projects. The configuration of this server can be found in the `fhirStarterRestfulServer.java` shown in the diagram below, configuration is described on the [HAPI Server - REST Server](http://hapifhir.io/doc_rest_server.html) website. The highlighted section shows the PatientProvider which is used to tell the HAPI Server that we support Patient and also where the implementation is.
+
+
+<p style="text-align:center;"><img src="images/nosql/fhirStarterConfig.PNG" style="width:100%;max-width: 100%;"></p>
 
 
 
