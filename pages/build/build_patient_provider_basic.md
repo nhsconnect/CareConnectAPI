@@ -36,7 +36,7 @@ Install the following software:
     *    [Eclipse](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/oxygen2)
 
 
-## 3. Store Patient resource ##
+## 3. Store Patient ##
 
 Ensure the MongoDb has been started. In your browser navigate to the [Care Connect Examples project](https://github.com/nhsconnect/careconnect-examples), which contains the FHIRStarter module and then `Clone or download` the project.
 
@@ -97,7 +97,7 @@ If you installed MongoDb Compass you will be able to view the `Patient` that was
 That is most of the installation and configuration completed. We have created a FHIR Server using a NoSQL Document database that supports FHIR Patient.
 
 
-## 4. Retrieve Patient resource ##
+## 4. Retrieve Patient ##
 
 We have mentioned the CCRI and this example project are using different database technologies, MongDb a NoSQL database rather than a MySQL a SQL database and also different object mapping technologies: [Spring Data MongDb](https://projects.spring.io/spring-data-mongodb/) instead of [Hibernate ORM](http://hibernate.org/). We have done this to simplify the description of the FHIR Server components used in the CCRI and simplify storing resources in the databases, both projects are composed in a similar way as shown in the diagram below:
 
@@ -183,7 +183,7 @@ GET http://127.0.0.1:8183/STU3/Patient/5ac47fd723598f6af80ff1fe?_format=xml</div
 This is supported out of the box by the HAPI RESTful Server.
 
 
-## 5. Search Patient resource ##
+## 5. Search Patient ##
 
 We have also provided a `@Search` method, locate plus uncomment this and restart the server.
 

@@ -61,7 +61,9 @@ exclude:
 feedback_email: apilabs@nhs.net
 # used as a contact email for the Feedback link in the top navigation bar
 
-feedback_disable: true
+feedback_disable: false
+
+feedback_subject_line: Care Connect API
 # if you uncomment the previous line, the Feedback link gets removed
 
 # feedback_text: "Need help?"
