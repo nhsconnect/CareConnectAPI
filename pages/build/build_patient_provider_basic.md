@@ -23,32 +23,32 @@ If you want to populate these servers with your own data then it becomes more co
 
 {% include note.html content="CCRI uses [Hibernate ORM](http://hibernate.org/orm/) to store its data in MySQL. The use of Hibernate means CCRI should run on other SQL databases that Hibernate supports. A list of databases supported by Hibernate can be found [here](https://developer.jboss.org/wiki/SupportedDatabases2). CCRI has not been tested against these databases and may require minor changes to installation SQL scripts to work." %}
 
-Having to load data into a server perform is not ideal, it can take time and the FHIR server will only hold a recent copy of the patient's data. So instead you may want to implement a FHIR Server on top of your existing database. This is what we demonstrated with the CCRI, we put a Care Connect FHIR Server on top of our SQL database using a HAPI RESTful Server. This is detailed in the Design & Build->Reference Implementation section of this guide. This may look lenghy and involved but the core of the server is relatively straight forward. To illustrate some of the core key features in the CCRI we will show how to build a simple FHIR Server providing a FHIR Patient API with a MongoDb backend database.
+Having to load data into a server perform is not ideal, it can take time and the FHIR server will only hold a recent copy of the patient's data. So instead you may want to implement a FHIR Server on top of your existing database. This is what we demonstrated with the CCRI, we put a Care Connect FHIR Server on top of our SQL database using a HAPI RESTful Server. This is detailed in the Design & Build->Reference Implementation section of this guide. This may look lenghy and involved but the core of the server is relatively straight forward. To illustrate some of the core key features in the CCRI we will show how to build a simple FHIR Server providing a FHIR Patient API with a MongoDB backend database.
 
 ## 2. Pre-Requisites ##
 
 Install the following software:
 
 *  	[Postman](https://www.getpostman.com/) - we will use this to add a FHIR Patient to the server and perform a few queries.
-*   [Mongo](https://docs.mongodb.com/manual/installation) - accept the default installation (port 27017 with no security). If you have docker installed you can alternatively use the [Mongo image](https://hub.docker.com/_/mongo/) from docker instead. In addition you may wish to install [Mongo Compass](https://www.mongodb.com/products/compass) to explore the data.
+*   [Mongo](https://docs.MongoDB.com/manual/installation) - accept the default installation (port 27017 with no security). If you have docker installed you can alternatively use the [Mongo image](https://hub.docker.com/_/mongo/) from docker instead. In addition you may wish to install [Mongo Compass](https://www.MongoDB.com/products/compass) to explore the data.
 *   Java IDE. Either:
-    *    [Intellij Community](https://www.jetbrains.com/idea/download) (The screen shots below use Intellij)
+    *    [IntelliJ Community](https://www.jetbrains.com/idea/download) (The screen shots below use IntelliJ)
     *    [Eclipse](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/oxygen2)
 
 
 ## 3. Store Patient ##
 
-Ensure the MongoDb has been started. In your browser navigate to the [Care Connect Examples project](https://github.com/nhsconnect/careconnect-examples), which contains the FHIRStarter module and then `Clone or download` the project.
+Ensure the MongoDB has been started. In your browser navigate to the [Care Connect Examples project](https://github.com/nhsconnect/careconnect-examples), which contains the FHIRStarter module and then `Clone or download` the project.
 
 <p style="text-align:center;"><img src="images/nosql/GitHub.PNG" style="width:90%;max-width: 90%;"></p>
 
-Within your IDE (Intellij or Eclipse) import the project. On Intellij (windows) select File->New->Project from existing sources. On Eclipse see [import project](http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm)
+Within your IDE (IntelliJ or Eclipse) import the project. On IntelliJ (windows) select File->New->Project from existing sources. On Eclipse see [import project](http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm)
 
  <p style="text-align:center;"><img src="images/nosql/ImportProject.PNG" style="width:30%;max-width: 30%;"></p>
 
 In the screenshot above we've chosen just to import the FHIRStarter module, you can if wish, import the whole project. On the next screen we imported the module as a Maven project and then accepted the defaults in the remaining screens.
 
-On Intellij select spring-boot:run from the Maven Projects menu.
+On IntelliJ select spring-boot:run from the Maven Projects menu.
 
 <p style="text-align:center;"><img src="images/nosql/SpringBootRun.PNG" style="width:100%;max-width: 100%;"></p>
 
@@ -90,7 +90,7 @@ Then copy a FHIR Patient into the Body section (We used Patient/1 from the CCRI 
 
 The response Status should be `201 Created` which indicates the Patient has been added to the server.
 
-If you installed MongoDb Compass you will be able to view the `Patient` that was just added. You should notice the patient document is very similar to the FHIR Patient we posted into the database. It's not the same for two reasons, firstly MongoDb uses [BSON](https://en.wikipedia.org/wiki/BSON) although this is very similar to JSON it has a few differences. Secondly we've not just converted the XML/JSON FHIR `Patient` to BSON, we have used [Spring Data](https://projects.spring.io/spring-data-mongodb/) JPA Entities which allow us to simplify the search operations will we add later.
+If you installed MongoDB Compass you will be able to view the `Patient` that was just added. You should notice the patient document is very similar to the FHIR Patient we posted into the database. It's not the same for two reasons, firstly MongoDB uses [BSON](https://en.wikipedia.org/wiki/BSON) although this is very similar to JSON it has a few differences. Secondly we've not just converted the XML/JSON FHIR `Patient` to BSON, we have used [Spring Data](https://projects.spring.io/spring-data-MongoDB/) JPA Entities which allow us to simplify the search operations will we add later.
 
 <p style="text-align:center;"><img src="images/nosql/POSTMANpatientCompass.PNG" style="width:100%;max-width: 100%;"></p>
 
@@ -99,7 +99,7 @@ That is most of the installation and configuration completed. We have created a 
 
 ## 4. Retrieve Patient ##
 
-We have mentioned the CCRI and this example project are using different database technologies, MongDb a NoSQL database rather than a MySQL a SQL database and also different object mapping technologies: [Spring Data MongDb](https://projects.spring.io/spring-data-mongodb/) instead of [Hibernate ORM](http://hibernate.org/). We have done this to simplify the description of the FHIR Server components used in the CCRI and simplify storing resources in the databases, both projects are composed in a similar way as shown in the diagram below:
+We have mentioned the CCRI and this example project are using different database technologies, MongDb a NoSQL database rather than a MySQL a SQL database and also different object mapping technologies: [Spring Data MongDb](https://projects.spring.io/spring-data-MongoDB/) instead of [Hibernate ORM](http://hibernate.org/). We have done this to simplify the description of the FHIR Server components used in the CCRI and simplify storing resources in the databases, both projects are composed in a similar way as shown in the diagram below:
 
 <p style="text-align:center;"><img src="images/nosql/ccri-nosql.jpg" style="width:60%;max-width: 60%;"></p>
 
@@ -109,7 +109,7 @@ The HAPI RESTful Server is common to both projects. The configuration of this se
 
 <p style="text-align:center;"><img src="images/nosql/fhirStarterConfig.PNG" style="width:100%;max-width: 100%;"></p>
 
-The Patient provider is where we configure the FHIR Patient behaviour. HAPI uses annotations to indicate what service the procedures provide. The procedure createPatient in the diagram is annotated with `@Create` which indicates it handles `POST`/create. This procedure then uses a PatientDAO (DAO - data access object) class which uses Spring Data to persist the Patient resource in the MongoDb. We will not be covering the DAO class as this is specific to the implementation but an example is provided for you to explore.
+The Patient provider is where we configure the FHIR Patient behaviour. HAPI uses annotations to indicate what service the procedures provide. The procedure createPatient in the diagram is annotated with `@Create` which indicates it handles `POST`/create. This procedure then uses a PatientDAO (DAO - data access object) class which uses Spring Data to persist the Patient resource in the MongoDB. We will not be covering the DAO class as this is specific to the implementation but an example is provided for you to explore.
 
 {% include tip.html content="If you are creating a FHIR Server using your own database, you will need to create your own DAO." %}
 
@@ -160,7 +160,7 @@ GET http://127.0.0.1:8183/STU3/metadata</div>
 ```
 {% include note.html content="We have an issue here. The profile being returned is the base FHIR Patient profile, for Care Connect this should be https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 but we are using the default ConformanceStatement from the HAPI server. We do override this in the CCRI server and the resources returned by this server are using the Care Connect Patient profile." %}
 
-To retrieve the Patient we first need to get the id of the Patient used in the MongoDb. In MongoDb this is the `_id`, which can be found either using MongoDb (see the earlier screenshot)
+To retrieve the Patient we first need to get the id of the Patient used in the MongoDB. In MongoDB this is the `_id`, which can be found either using MongoDb (see the earlier screenshot)
 
 ```json
 _id : ObjectId("5ac47fd723598f6af80ff1fe")
