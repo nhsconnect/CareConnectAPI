@@ -1,7 +1,7 @@
 ---
-title: Design | Patient Search
-keywords: development
-tags: [design,development]
+title: Build | Patient Search
+keywords: development, patient, build, example
+tags: [design,development,build]
 sidebar: overview_sidebar
 permalink: build_patient_search.html
 summary: "How to use FHIR Patient resources to perform Patient Searches"

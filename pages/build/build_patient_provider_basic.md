@@ -1,69 +1,109 @@
 ---
-title: Design | FHIR Patient Server
-keywords: development
-tags: [design,development]
+title: Build | FHIR Patient Server
+keywords: development, patient, build, example, api, FHIR, server
+tags: [design,development,build]
 sidebar: overview_sidebar
 permalink: build_patient_server.html
-summary: "How to create a basic FHIR Patient server using open source"
+summary: "How to create a basic FHIR Patient server using open source tools"
 ---
 
 {% include custom/search.warnbanner.html %}
 
 ## 1. Overview ##
 
-If you are after running a local FHIR Server, you have several open source or evaluation FHIR Servers options:
+A common task for developers is to investigate how to create a API FHIR server with some basic FHIR Patient search with data that can be searched to demonstrate meaningful results. This demonstrates the use of several open source tools for the main elements:
+- API FHIR servers
+- Object Relational Mapping tools
+- Data loading tools
 
-[Care Connect Reference Implementation](https://nhsconnect.github.io/CareConnectAPI/build_ri_install.html)
+The challenges faced in this approach about creating and subsequently maintaining the data mapping between the FHIR server and the database tables. A common design pattern to build a connected FHIR server is shown by the [Care Connect Reference Implementation, CCRI](https://nhsconnect.github.io/CareConnectAPI/build_ri_overview.html). The CCRI showed a FHIR Server implementation on top of an existing database structure. Thus showing the three elements described above i.e. a Care Connect FHIR Server on top of a SQL database using a HAPI RESTful Server with data loading. If you want to build your own then see more by clicking [here](https://nhsconnect.github.io/CareConnectAPI/build_ri_develop.html). 
 
-[HAPI FHIR JPA Server](http://hapifhir.io/doc_jpa.html)
+Another approach is to use the FHIR profile structure to store the information directly as documents. This approach can quickly show the main elements of a FHIR server without the complexity of creating, mapping or maintaining a database structure. Using a *document data store* like MongoDB.
 
-[Firely Vonk](https://simplifier.net/vonk)
+This guide is a detailed breakdown of how to install and connect a FHIR server with a document store. By simplyifying the connection of the server to a backend and increasing how quickly a developer can get a meaningful server up and demonstrating the power of FHIR. This guide shows the core key features of the CCRI i.e. how to build a FHIR Server providing a FHIR Patient API but with a MongoDB backend database. the main parts to getting a demonstrable FHIR server are:
+- Install the pre-requisites
+- Store a patient
+- Retrieve a patient
+- Search a patient
 
-If you want to populate these servers with your own data then it becomes more complex. For HAPI and Vonk you can create FHIR resources and then POST them into the server. You can also POST FHIR Resources to local installs of Care Connect Reference Implementation (CCRI) but its SQL database structure is similar to many PAS/EPR systems and this allows the use of [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load) tools such as Microsoft SQL Server Integration Service (SSIS) to import the data.
+{% include custom/contribute.html content=""%}
+
+## 2. Pre-requisites ##
+
+There are three elements to creating your own server are:
+1. FHIR Server
+1. Data store
+1. Tools to support development
+1. Fast starter module
+
+Then connect the Pre-requisites together.
+
+### 2.1. FHIR server ###
+
+To create a local FHIR Server, there are several open source or evaluation FHIR Servers options:
+
+- [Care Connect Reference Implementation](https://nhsconnect.github.io/CareConnectAPI/build_ri_install.html)
+- [HAPI FHIR JPA Server](http://hapifhir.io/doc_jpa.html)
+- [Firely Vonk](https://simplifier.net/vonk)
+
+### 2.2. Data ###
+
+To return meaningful information from a FHIR server requires a data store of some variety and a way to populate or return the information stored. In this guide we will demonstrate the use of Mongo as a document data store
+- [Mongo](https://docs.mongodb.com/manual/installation/) - accept the default installation (port 27017 with no security). 
+- If you have docker installed you can alternatively use the [Mongo image](https://hub.docker.com/_/mongo/) from docker instead. 
+- *Optional*: In addition you may wish to install [Mongo Compass](https://www.mongodb.com/products/compass) to explore the data.
+
+This will allow a fast way to populate, store and retrieve data from a FHIR servers via *POST completed FHIR resources* and is the simplest method for HAPI and Vonk to load data see inforation from a FHIR server.
+
+To see combined information with more meanignful test data and please see the live Care Connect Reference Implementation (CCRI). This used [ETL: Extract Transform Load](https://en.wikipedia.org/wiki/Extract,_transform,_load) and test data linked, however, is a more complicated starting point to explore FHIR. The live Care Connect Reference Implementation (CCRI) does not support POST operations, however, for local installs POST FHIR Resources could be created and used. The CCRI's connected database structure is similar to a PAS/EPR SQL database and as such ETL tools such as Microsoft SQL Server Integration Service (SSIS) can be used to import the data.
 
 {% include note.html content="CCRI uses [Hibernate ORM](http://hibernate.org/orm/) to store its data in MySQL. The use of Hibernate means CCRI should run on other SQL databases that Hibernate supports. A list of databases supported by Hibernate can be found [here](https://developer.jboss.org/wiki/SupportedDatabases2). CCRI has not been tested against these databases and may require minor changes to installation SQL scripts to work." %}
 
-Having to load data into a server perform is not ideal, it can take time and the FHIR server will only hold a recent copy of the patient's data. So instead you may want to implement a FHIR Server on top of your existing database. This is what we demonstrated with the CCRI, we put a Care Connect FHIR Server on top of our SQL database using a HAPI RESTful Server. This is detailed in the Design & Build->Reference Implementation section of this guide. This may look lenghy and involved but the core of the server is relatively straight forward. To illustrate some of the core key features in the CCRI we will show how to build a simple FHIR Server providing a FHIR Patient API with a MongoDB backend database.
 
-## 2. Pre-Requisites ##
+### 2.3. Tools ###
 
-Install the following software:
-
-*  	[Postman](https://www.getpostman.com/) - we will use this to add a FHIR Patient to the server and perform a few queries.
-*   [Mongo](https://docs.MongoDB.com/manual/installation) - accept the default installation (port 27017 with no security). If you have docker installed you can alternatively use the [Mongo image](https://hub.docker.com/_/mongo/) from docker instead. In addition you may wish to install [Mongo Compass](https://www.MongoDB.com/products/compass) to explore the data.
-*   Java IDE. Either:
+Access the following free software will help your development:
+*  	[Postman](https://www.getpostman.com/) - allows us to add a FHIR Patient to the server and perform a queries without a front end or going into the command line
+*   IDE, for Java examples include:
     *    [IntelliJ Community](https://www.jetbrains.com/idea/download) (The screen shots below use IntelliJ)
     *    [Eclipse](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/oxygen2)
 
 
-## 3. Store Patient ##
+### 2.4. Fast starter module ###
 
-Ensure the MongoDB has been started. In your browser navigate to the [Care Connect Examples project](https://github.com/nhsconnect/careconnect-examples), which contains the FHIRStarter module and then `Clone or download` the project.
+In your browser navigate to the [Care Connect Examples project](https://github.com/nhsconnect/careconnect-examples), which contains the FHIRStarter module and then `Clone or download` the project.
 
 <p style="text-align:center;"><img src="images/nosql/GitHub.PNG" style="width:90%;max-width: 90%;"></p>
 
-Within your IDE (IntelliJ or Eclipse) import the project. On IntelliJ (windows) select File->New->Project from existing sources. On Eclipse see [import project](http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm)
+{% include note.html content="Ensure the datastore has started i.e. MongoDB." %}
 
- <p style="text-align:center;"><img src="images/nosql/ImportProject.PNG" style="width:30%;max-width: 30%;"></p>
+Within your IDE (IntelliJ or Eclipse) import the project. 
+* On IntelliJ (windows) select File->New->Project from existing sources. 
+* On Eclipse see [import project](http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm)
 
-In the screenshot above we've chosen just to import the FHIRStarter module, you can if wish, import the whole project. On the next screen we imported the module as a Maven project and then accepted the defaults in the remaining screens.
+<p style="text-align:center;"><img src="images/nosql/ImportProject.PNG" style="width:30%;max-width: 30%;"></p>
 
-On IntelliJ select spring-boot:run from the Maven Projects menu.
+The screenshot above shows how to import the FHIRStarter module, however, you can choose to import the whole project. Please then ensure to import the module as a Maven project and then accept the defaults in the remaining screens (unless you have a prefered setup approach of course).
+
+On *IntelliJ* select spring-boot:run from the Maven Projects menu.
 
 <p style="text-align:center;"><img src="images/nosql/SpringBootRun.PNG" style="width:100%;max-width: 100%;"></p>
 
-On Eclipse in the Project Explorer, right click the project name -> select "Run As" -> "Maven Build..."
+On *Eclipse* in the Project Explorer, right click the project name -> select "Run As" -> "Maven Build..."
 In the goals, enter `spring-boot:run` then click Run button.
 
-A basic FHIR server will now be up and running. To confirm, start POSTMan and
+## 3. Store Patient ##
+
+If you followed the pre-requisites and whether you have chosen IntelliJ or Eclipse, you should have a basic FHIR server. To test and confirm, start POSTMan and enter this URL
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET http://127.0.0.1:8183/STU3/metadata</div>
-You will see a FHIR **ConformanceStatement** returned from the server.
+
+You should see a FHIR **ConformanceStatement** returned from the server.
 
 <p style="text-align:center;"><img src="images/nosql/POSTMANmeta.PNG" style="width:100%;max-width: 100%;"></p>
 
-Looking at the **ConformanceStatement** you will notice the server supports FHIR **Patient** and the Create operation.
+The **ConformanceStatement** shows the server supports FHIR **Patient** and the Create operation.
 
 ```xml
       <resource>
@@ -77,31 +117,42 @@ Looking at the **ConformanceStatement** you will notice the server supports FHIR
        </resource>
 ```
 
-We will now add a **Patient** to our server. In POSTMAN the url is `http://127.0.0.1:8183/STU3/Patient`, the action is `POST`, under Headers add a `Content-Type` key with a value of `application/fhir+xml`. (If your example is in JSON format set the value to be 'application/fhir+json')
+Now add a **Patient** to our server. In POSTMAN the 
+- url is `http://127.0.0.1:8183/STU3/Patient`, 
+- the action is `POST`, 
+- under Headers add a `Content-Type` key with a value of `application/fhir+xml` or 'application/fhir+json'
+(if your example is in JSON format set)
 
 <div markdown="span" class="alert alert-success" role="alert">
 POST http://127.0.0.1:8183/STU3/Patient</div>
 
 <p style="text-align:center;"><img src="images/nosql/POSTMANpatientHeaders.PNG" style="width:50%;max-width: 50%;"></p>
 
-Then copy a FHIR Patient into the Body section (We used Patient/1 from the CCRI server in the image below) and then click `Send`.
+Then copy a FHIR Patient into the Body section. 
+- This example uses [Patient/1](http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Patient?_pretty=true) from the CCRI server in the image below 
+- Then click `Send`
 
 <p style="text-align:center;"><img src="images/nosql/POSTMANpatientCreate.PNG" style="width:100%;max-width: 100%;"></p>
 
 The response Status should be `201 Created` which indicates the Patient has been added to the server.
 
-If you installed MongoDB Compass you will be able to view the `Patient` that was just added. You should notice the patient document is very similar to the FHIR Patient we posted into the database. It's not the same for two reasons, firstly MongoDB uses [BSON](https://en.wikipedia.org/wiki/BSON) although this is very similar to JSON it has a few differences. Secondly we've not just converted the XML/JSON FHIR `Patient` to BSON, we have used [Spring Data](https://projects.spring.io/spring-data-MongoDB/) JPA Entities which allow us to simplify the search operations will we add later.
+If you installed MongoDB Compass you will be able to view the `Patient` that was just added. The patient document is very similar to the FHIR Patient we posted into the database. It's not the same for two reasons, firstly MongoDB uses [BSON](https://en.wikipedia.org/wiki/BSON) although this is very similar to JSON it has a few differences. Secondly we've not just converted the XML/JSON FHIR `Patient` to BSON, we have used [Spring Data](https://projects.spring.io/spring-data-MongoDB/) JPA Entities which allow us to simplify the search operations that are add later in this guide.
 
 <p style="text-align:center;"><img src="images/nosql/POSTMANpatientCompass.PNG" style="width:100%;max-width: 100%;"></p>
 
-That is most of the installation and configuration completed. We have created a FHIR Server using a NoSQL Document database that supports FHIR Patient.
+
+{% include note.html content="Congratulations the majority of the installation and configuration is now complete. You have created a FHIR Server using a NoSQL Document database that supports FHIR Patient." %}
 
 
 ## 4. Retrieve Patient ##
 
-We have mentioned the CCRI and this example project are using different database technologies, MongDb a NoSQL database rather than a MySQL a SQL database and also different object mapping technologies: [Spring Data MongDb](https://projects.spring.io/spring-data-MongoDB/) instead of [Hibernate ORM](http://hibernate.org/). We have done this to simplify the description of the FHIR Server components used in the CCRI and simplify storing resources in the databases, both projects are composed in a similar way as shown in the diagram below:
+To simplify this guide the description of the FHIR Server components used in the CCRI and this guide are described in the diagram below:
 
 <p style="text-align:center;"><img src="images/nosql/ccri-nosql.jpg" style="width:60%;max-width: 60%;"></p>
+
+The diagram shows a similar resource storage process and that both projects are composed in a similar architecture. However, the diagram shows the CCRI and this example project are using different database technologies, MongoDb a NoSQL database rather than a MySQL a SQL database and also different object mapping technologies: [Spring Data MongDb](https://projects.spring.io/spring-data-MongoDB/) instead of [Hibernate ORM](http://hibernate.org/). 
+
+{% include tip.html content="When you complete this guide you should try following the CCRI install guide and mapping to your existing database." %}
 
 The HAPI RESTful Server is common to both projects. The configuration of this server can be found in the `fhirStarterRestfulServer.java` shown in the diagram below, configuration is described in more detail on the [HAPI Server - REST Server](http://hapifhir.io/doc_rest_server.html) website. The highlighted section shows the PatientProvider which is used to tell the HAPI Server that we support Patient and also where the implementation is. This is also where you can add in security, set default the server to use XML or JSON as default and many other options.
 
@@ -109,13 +160,16 @@ The HAPI RESTful Server is common to both projects. The configuration of this se
 
 <p style="text-align:center;"><img src="images/nosql/fhirStarterConfig.PNG" style="width:100%;max-width: 100%;"></p>
 
-The Patient provider is where we configure the FHIR Patient behaviour. HAPI uses annotations to indicate what service the procedures provide. The procedure createPatient in the diagram is annotated with `@Create` which indicates it handles `POST`/create. This procedure then uses a PatientDAO (DAO - data access object) class which uses Spring Data to persist the Patient resource in the MongoDB. We will not be covering the DAO class as this is specific to the implementation but an example is provided for you to explore.
+The Patient provider is where the FHIR Patient behaviour configured. HAPI uses annotations to indicate what service the procedures provide. The procedure createPatient in the diagram is annotated with `@Create` which indicates it handles `POST`/create. This procedure then uses a PatientDAO (DAO - data access object) class which uses Spring Data to persist the Patient resource in the MongoDB. For the sake of simplicity this guide does not cover the DAO class as this is specific to the implementation but an example is provided for you to explore.
 
 {% include tip.html content="If you are creating a FHIR Server using your own database, you will need to create your own DAO." %}
 
 <p style="text-align:center;"><img src="images/nosql/patientProvider.PNG" style="width:100%;max-width: 100%;"></p>
 
-We have now explained some of the workings of the demonstration and have a FHIR server which accepts FHIR Patient resources. Next we will add reading of the Patient resource. The DOA and code for `@Read` is provided, uncomment the `@Read` procedure and restart the server (`mvn spring-boot:run`), i.e.
+
+{% include note.html content="Congratulations you now have a FHIR server which accepts FHIR Patient resources as well as a clearer understanding of inner FHIR server workings. " %}
+
+Next we will add reading of the Patient resource. The DOA and code for `@Read` is provided, uncomment the `@Read` procedure and restart the server (`mvn spring-boot:run`), i.e.
 
 ```java
 /*
@@ -128,7 +182,7 @@ public Patient readPatient(HttpServletRequest request, @IdParam IdType internalI
 }
 */
 ```
-Remove the comments.
+Find and then remove the comments.
 ```java
 @Read
 public Patient readPatient(HttpServletRequest request, @IdParam IdType internalId) {
@@ -139,10 +193,12 @@ public Patient readPatient(HttpServletRequest request, @IdParam IdType internalI
 }
 ```
 
-Once the server has restarted we can check the metadata to see the changes to the **ConformanceStatement** (use POSTMan).
+Once the server has restarted we can check the metadata to see the changes to the **ConformanceStatement** 
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET http://127.0.0.1:8183/STU3/metadata</div>
+
+Using POSTMAN we get:
 
 ```xml
       <resource>
@@ -166,11 +222,11 @@ To retrieve the Patient we first need to get the id of the Patient used in the M
 _id : ObjectId("5ac47fd723598f6af80ff1fe")
 ```
 
-or from the POST we did earlier in POSTMan in the Location header from POST response.
+Or from the POST we did earlier in POSTMAN in the Location header from POST response.
 
 <p style="text-align:center;"><img src="images/nosql/POSTMANheaders.PNG" style="width:100%;max-width: 100%;"></p>
 
-This gives us the following request in POSTMan
+This gives us the following request in POSTMAN
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET http://127.0.0.1:8183/STU3/Patient/5ac47fd723598f6af80ff1fe</div>
@@ -272,4 +328,17 @@ Patient searches are now supported, for example to search for Patients on NHS Nu
 <div markdown="span" class="alert alert-success" role="alert">
 GET http://127.0.0.1:8183/STU3/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210</div>
 
-This has been an overview of the HAPI RESTful server and was kept basic in order to show key aspects. A more detailed version of this project can be found in [careconnect-document](https://github.com/nhsconnect/careconnect-document/tree/master/ccri-document-server) which is a basic repository for storing FHIR Documents together with a simple [Angular2](https://angular.io/) FHIR Client App. The application adds a document index to the **Patient** index we have just built and provides storage for FHIR Documents.   
+{% include note.html content="This has been an overview of the HAPI RESTful server and was kept basic in order to show key aspects." %}
+
+## 6. Next Steps ##
+
+If you want to continue developing then there is a more detailed version of this project can be found in:
+- [careconnect-document](https://github.com/nhsconnect/careconnect-document/tree/master/ccri-document-server): is a basic repository for storing FHIR Documents together with a simple [Angular2](https://angular.io/) FHIR Client App. 
+
+This application adds a document index to the **Patient** index we have just built and provides storage for FHIR Documents.
+
+Get involved in the building your own Care Connect FHIR server by following the full journey:
+
+{% include custom/api_overview.svg %}
+
+{% include custom/contribute.html content=""%}
