@@ -32,12 +32,14 @@
 		.st7:hover {
             		transition: fill-opacity 0.2s ease-in;
             		fill-opacity: 0.2;
-          	}
+			cursor: pointer;
+	   	}
 
 		.st7:active {
 			transition: fill-opacity 0.1s ease-in;
 			fill-opacity: 0.4;
-		}
+			cursor: pointer;
+  		}
 	]]>
 	</style>
 
