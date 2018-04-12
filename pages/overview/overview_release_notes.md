@@ -9,6 +9,11 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 
 {% include important.html content="This site is under active development by NHS Digital on behalf of INTEROPen and is intended to provide all the technical resources you need to successfully develop the Care Connect APIs. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis." %}
 
+## 2.0.0-alpha.1 ##
+
+Changed
+  - Corrected hover states in enagement approach image
+
 ## 2.0.0-alpha.0 ##
 
 Added
@@ -17,6 +22,7 @@ Added
 Changed
   - Design & Build - story and linking to reflect current structure of pages
   - Minor updates throughout the pages for spelling and improvements
+  - Corrections to engagement image hove states
   
 ## 1.9.0-alpha.0 ##
 
