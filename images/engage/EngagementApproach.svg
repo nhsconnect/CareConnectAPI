@@ -30,36 +30,14 @@
 		.st20 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 
 		.st7:hover {
-			transition: fill-opacity 0.2s ease-in;
-			fill-opacity: 0.2;
-			filter: alpha(opacity=20);
-		}
+            		transition: fill-opacity 0.2s ease-in;
+            		fill-opacity: 0.2;
+          	}
 
 		.st7:active {
-			transition-duration: 0s;
+			transition: fill-opacity 0.1s ease-in;
 			fill-opacity: 0.4;
-			filter: alpha(opacity=40);
 		}
-  		@keyframes linkhover {
-			from {transform:scale(1);}
-			to {transform:scale(1.2);}
-		}
-
-		@keyframes linkpress {
-			from {transform:scale(1.2);}
-			to {transform:scale(0.9);}
-		}
-
-		.s_link:hover {
-		    	transform-origin: 50% 50%; 
-			animation: linkhover 0.1s 0s 1 normal ease-in forwards;
-		}
-		@-moz-document url-prefix() {.s_link:hover {transform: none}}
-		.s_link:active {
-		    	transform-origin: 50% 50%;
-		    	animation: linkpress 0s 0s 1 normal ease-in forwards;
-		}
-		@-moz-document url-prefix() {.s_link:hover {transform: none}}
 	]]>
 	</style>
 
