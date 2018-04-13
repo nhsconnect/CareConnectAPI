@@ -165,7 +165,7 @@ entries:
         - title: Overview
           url: /design_overview.html
           output: web
-        - title: Patterns / Topology
+        - title: Information Sharing Patterns
           url: /design_patterns.html
           output: web
         - title: Exchange Patterns
