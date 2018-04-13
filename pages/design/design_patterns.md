@@ -1,7 +1,7 @@
 ---
 title: Information Sharing Patterns
 keywords: design, build, access, security, pattern, topology
-tags: [design][toplogy]
+tags: [design,toplogy]
 sidebar: foundations_sidebar
 permalink: design_patterns.html
 summary: "Information Sharing Patterns (Topologies) demonstrate and describe how various design patterns can influence access, security and use of APIs"
