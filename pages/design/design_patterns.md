@@ -38,7 +38,7 @@ Below is a list of the more commonly used patterns that can be supported by one 
 
 # Patterns and Care Connect APIs #
 
-The Care Connect standard doesn't mandate a specific exchange paradigm so this will need to be decided upon when a Care Connect API is designed. The Information Sharing Pattern may have an influence how Care Connect APIs can be used and work within a solution. This implementation guide also offers [Case Studies](/engage_case_studies.html) to expose and demonstrate how Care Connect APIs can or have been used to interoperate with other systems, patterns, and level of digital maturity within and between organisations.
+The Care Connect standard doesn't mandate a specific exchange paradigm so this will need to be decided upon when a Care Connect API is designed. The Information Sharing Pattern may restrict the choice of Exchange Paradigm and how Care Connect APIs can be applied to a solution. This implementation guide also offers [Case Studies](/engage_case_studies.html) to expose and demonstrate how Care Connect APIs can or have been used to interoperate with other systems, patterns, and level of digital maturity within and between organisations.
 
 {% include note.html content="The [Care Connect Reference Implementation](/build_ri_overview.html) can be used for all of the exchange patterns listed above. Further configuration and extension would be necessary broadcast, message broker, registry repository and publish subscribe models. Please see the process and components described in the RESTful API Care Connect Reference Implementation and try using it for yourself."%}
 
