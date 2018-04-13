@@ -49,6 +49,6 @@ The Care Connect standard doesn't mandate a specific exchange paradigm so this w
 
 Other API consideration are shown below. Please click on the parts of the API process to continue your API creation journey.
 
-{% include custom/provide_api.svg %}
+<div style="text-align:center">{% include custom/provide_api.svg %}
 
-{% include custom/contribute.html content="Get in involved and contribute to the above API considerations"%}
+{% include custom/contribute.html content="Get in involved and contribute to the above API considerations "%}</div>
