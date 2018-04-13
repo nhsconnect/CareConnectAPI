@@ -1,19 +1,17 @@
 ---
-title: Exchange Patterns
+title: Exchange Paradigms
 keywords: design, build
 tags: [design, build]
 sidebar: foundations_sidebar
 permalink: design_exchange_patterns.html
-summary: "The Exchange Patterns introduce the three ways of exchanging FHIR Resources using RESTful API, messaging and documents."
+summary: "The Exchange Paradigms introduce ways of implementing FHIR Resources using RESTful API, messaging and documents."
 ---
 
 {% include custom/search.warnbanner.html %}
 
-## 1. Exchange Paradigms ##
+This section demonstrates how FHIR Exchange Paradigms relate to Information Sharing Patterns.
 
-This section has been included to show how CareConnectAPI fits in with traditional messaging and document exchanges. Also how these ways of exchanging FHIR resources relates to Information Sharing Patterns.
-
-The exchange patterns are complimentary, each having it's strengths and weaknesses. The best solution will probably to use a combination of pattern.  
+The exchange patterns are complimentary, each having it's strengths and weaknesses. A solution may combine Information Sharing Patterns or Paradigms.  
 
 ## 2. RESTful API
 
@@ -162,9 +160,9 @@ Send notifications and other information to remote systems while avoiding direct
 <p style="text-align:center;"><img src="images/build/FHIR Messaging.jpg" alt="View Results Screen" title="View Results Screen" style="width:75%"></p>
 <br><br>  
 
-There are many scenarios where messaging can't be driven entirely by the service owner. This is especially true in large organisations or in scenarios where health and social care organisations need to exchange data. In these situations we need an API that recognises a set of related resources but does not tie them into specific procedures, this may also be called a **MessagingAPI**.
+There are many scenarios where messaging can't be driven entirely by the consumer. This is especially true in large organisations or in scenarios where health and social care organisations need to exchange data. In these situations we need an API that recognises a set of related resources but does not tie them into specific procedures, this may also be called a **MessagingAPI**.
 
-For example a Referral Request will typically contain supporting information such as a referral letter, images/scans, or other resources relevant to the referral. How the Referral Request and other resources are handled is down to the service. The service handler may block (synchronous) while waiting for a response but typically the response will be generated later (asynchronously).
+For example a Referral Request will typically contain supporting information such as a referral letter, images/scans, or other resources relevant to the referral. While the requester determines the makeup of the Referral Request and other resources, the receiving service will determine how this is handled. The requester may block (synchronous) traffic while waiting for a response but typically the response will be generated later (asynchronously).
 
 
 <table width="30%">
