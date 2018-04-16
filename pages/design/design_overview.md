@@ -1,5 +1,5 @@
 ---
-title: Overview | Design & Build 
+title: Overview | Design 
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar
