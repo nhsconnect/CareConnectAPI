@@ -30,7 +30,7 @@ Rather than implementing a system specific API, we could utilise standards defin
 
 So rather than a wide variety of GetPatient, QueryPatient we have:
 
-<table style="width:60%">
+<table style="width:60%;margin-left:auto;margin-right:auto">
     <col width="50%">
     <tr>
         <td>
@@ -50,7 +50,7 @@ So rather than a wide variety of GetPatient, QueryPatient we have:
     </tr>
 </table>
 
-<table style="width:60%">
+<table style="width:60%;margin-left:auto;margin-right:auto">
     <col width="50%">
     <tr>
         <td>
@@ -70,7 +70,7 @@ So rather than a wide variety of GetPatient, QueryPatient we have:
     </tr>
 </table>
 
-<table style="width:60%">
+<table style="width:60%;margin-left:auto;margin-right:auto">
     <col width="50%">
     <tr>
         <td>
@@ -110,7 +110,7 @@ This type of interface may also be called as **ResourceAPI** and is useful for r
 
 The following table highlights a number of information sharing patterns as described in the NHS Developer network.
 
-<table style="width:60%">
+<table style="width:60%;margin-left:auto;margin-right:auto">
 <tr>
 <td>
   <a target='_blank' href="http://developer.nhs.uk/library/architecture/integration-patterns/portal/"><img class="alignnone size-full wp-image-9872" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Portal-e1422958326475.jpg" alt="tn_Portal" width="251" height="72" /></a>
@@ -168,7 +168,7 @@ There are many scenarios where messaging can't be driven entirely by the consume
 For example a Referral Request will typically contain supporting information such as a referral letter, images/scans, or other resources relevant to the referral. While the requester determines the makeup of the Referral Request and other resources, the receiving service will determine how this is handled. The requester may block (synchronous) traffic while waiting for a response but typically the response will be generated later (asynchronously).
 
 
-<table style="width:30%">
+<table style="width:30%;margin-left:auto;margin-right:auto">
     <tr>
         <td>
             <b>Request (FHIR Bundle)</b>
@@ -203,7 +203,7 @@ For example a Referral Request will typically contain supporting information suc
 
 ### Information Sharing Patterns ###
 
-<table style="width:80%">
+<table style="width:80%;margin-left:auto;margin-right:auto">
 <tr>
 <td>
 <a href="http://developer.nhs.uk/library/architecture/integration-patterns/message-broker/"><img class="alignnone size-full wp-image-9902" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Broker-e1422958425684.jpg" alt="tn_Broker" width="250" height="72" /></a>
@@ -269,7 +269,7 @@ Send documents to remote systems while avoiding direct coupling to remote proced
 
 A FHIR Document may be sent as the payload of a RESTful Response, Message or any Exchange Paradigm or Information Sharing Pattern. It provides a set of coherent information that is a statement of healthcare information, including clinical observations and services. A document is an immutable set of resources with a fixed presentation that can be authored and/or attested by humans, organizations and devices.
 
-<table style="width:30%">
+<table style="width:30%;margin-left:auto;margin-right:auto">
     <tr>
         <td>
             <b>Request (FHIR Bundle)</b>
@@ -298,7 +298,7 @@ A FHIR Document may be sent as the payload of a RESTful Response, Message or any
 
 ### Information Sharing Patterns ###
 
-<table style="width:80%">
+<table style="width:80%;margin-left:auto;margin-right:auto">
 <tr>
 <td>
 <a href="http://developer.nhs.uk/library/architecture/integration-patterns/message-broker/"><img class="alignnone size-full wp-image-9902" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Broker-e1422958425684.jpg" alt="tn_Broker" width="250" height="72" /></a>
