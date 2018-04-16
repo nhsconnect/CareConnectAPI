@@ -46,15 +46,6 @@ Please see or contribute to INTEROPen to support the wider community efforts of 
 
 The following diagram explains the elements of APIs allowing the development of APIs:
 
-{% include custom/provide_api.svg %}
-
-NHS Digital is contributing to progressing the profile development (see Overview section). Invitations are open for the INTEROPen community to get involved and progress the wider developer ecosystem as defined above. 
-
-
-# Contribute #
-
-This site is structured around Care Connect stakeholders including API users, developers and architects. Please get involved in the journey.
-
 <div style="text-align:center">{% include custom/provide_api.svg %}
 
 {% include custom/contribute.html content="Get in involved and contribute to the above API considerations "%}</div>
