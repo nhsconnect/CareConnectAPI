@@ -9,9 +9,13 @@ summary: "The Exchange Paradigms introduce ways of implementing FHIR Resources u
 
 {% include custom/search.warnbanner.html %}
 
-This section demonstrates how FHIR Exchange Paradigms relate to Information Sharing Patterns.
+FHIR is designed to support a wide variety of contexts and architectures which are explored here as Exchange Paradigms for the various Information Sharing Patterns. The most modern and granular paradigm is the RESTful API model. A RESTful API model is based on exposing operations such as create, read, update, delete (CRUD) and stateless access. This access is typically a granular way to access content and helps testing, security and monitoring of the exposed data. An important consideration of the RESTful model is that interactions are driven by the consumer of the data who will pull data by making requests to the provider when they need it. Small requests are expected from the consumer which the provider answers immediately while the consumer maintains state. This makes it possible for the consumer to provide richer experiences for end users.
 
-The exchange paradigms are complimentary, each having it's strengths and weaknesses. A solution may combine Information Sharing Patterns or Exchange Paradigms.  
+```
+A 'consumer' refers to either a client system or a person that has a need to retrieve data from a provider.
+```
+
+The Exchange Paradigms are complimentary, each having it's strengths and weaknesses. A solution may combine Information Sharing Patterns or Exchange Paradigms.  
 
 ## RESTful API ##
 
