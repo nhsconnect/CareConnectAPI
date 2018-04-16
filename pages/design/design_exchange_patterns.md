@@ -11,9 +11,9 @@ summary: "The Exchange Paradigms introduce ways of implementing FHIR Resources u
 
 This section demonstrates how FHIR Exchange Paradigms relate to Information Sharing Patterns.
 
-The exchange patterns are complimentary, each having it's strengths and weaknesses. A solution may combine Information Sharing Patterns or Paradigms.  
+The exchange paradigms are complimentary, each having it's strengths and weaknesses. A solution may combine Information Sharing Patterns or Paradigms.  
 
-## RESTful API
+## RESTful API ##
 
 <div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="{{ site.hl7_baseurl.stu3 }}http.html"><b>FHIR RESTful API</b></div>
 
@@ -253,7 +253,7 @@ To store resources in the Repository
 - [Child Health]({{ site.nhsd.child_health }})
 - [Digital Diagnostics Services (Pathology)]({{ site.nhsd.dds_link }})
 
-## 4. Documents ##
+## Documents ##
 
 <div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="{{ site.hl7_baseurl.stu3 }}documents.html"><b>FHIR Documents</b></div>
 
@@ -324,7 +324,7 @@ A **DocumentAPI** is an extension of the **MessagingAPI** which provides a set o
   - [Composition](https://data.developer.nhs.uk/fhir/candidaterelease-170816-getrecord/Profile.GetRecordQueryResponse-HTMLView/gpconnect-carerecord-composition-1.html)
 - [Transfer of Care eDischarge]({{ site.nhsd.toc }})
 
-## 5. Operations
+## Operations
 <div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="{{ site.hl7_baseurl.stu3 }}operations.html"><b>Operations</b></div>
 
 ```
