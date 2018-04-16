@@ -30,7 +30,7 @@ Rather than implementing a system specific API, we could utilise standards defin
 
 So rather than a wide variety of GetPatient, QueryPatient we have:
 
-<table width="60%">
+<table style="width:60%">
     <col width="50%">
     <tr>
         <td>
@@ -50,7 +50,7 @@ So rather than a wide variety of GetPatient, QueryPatient we have:
     </tr>
 </table>
 
-<table width="60%">
+<table style="width:60%">
     <col width="50%">
     <tr>
         <td>
@@ -70,7 +70,7 @@ So rather than a wide variety of GetPatient, QueryPatient we have:
     </tr>
 </table>
 
-<table width="60%">
+<table style="width:60%">
     <col width="50%">
     <tr>
         <td>
