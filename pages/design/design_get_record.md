@@ -251,20 +251,7 @@ Any FHIR request can be requested as a FHIR document using the operation ‘$doc
 
 ## FHIR Extended Operations ##
 
-It is possible to extend the basic interactions of a RESTful API (Create, Read, Update, Delete) with the ability to execute any custom defined operation. HL7 describe the need to add operations as being:
-- “Where the server needs to play an active role in formulating the content of the response, not merely return existing information.”
-- “Where the intended purpose is to cause side effects such as the modification of existing resources, or creation of new resources.”
-
-HL7 suggest that an operation has the following properties:
-- Each operation has a name
-- Each operation has a list of 'in' and 'out' parameters
-- Parameters are either resources, data types, or search parameters
-- Operations are subject to the same security constraints and requirements as the RESTful API
-- The URIs for the operation end-points are based on the existing RESTful API address scheme
-- Operations may make use of the existing repository of resources in their definitions
-- Operations may be performed on a specific resource, a resource type, or a whole system
-
-Using an extended operation to support the retrieval of a predefined set of resources as discussed above, there is an inherent risk of making a provider’s API more tightly coupled to specific consumers, requiring that they have a previously agreed contract and an understanding of these specific operations. Operations designed to meet one consumer’s needs may not be appropriate for subsequent consumers.
+While there is a risk of making a provider’s API more tightly coupled to specific consumers, an extended or custom operation provides a convenient way of providing a provider driven interpretation of what constitutes a full patient history. This does require an a previously agreed contract and an understanding of these specific operations. Operations designed to meet one consumer’s needs may not be appropriate for subsequent consumers.
 
 The example below (for demonstration and will not resolve) shows how a request could be created to execute an operation called getAll, which is intended to return a patient’s history.
 
