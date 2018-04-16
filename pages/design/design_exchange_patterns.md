@@ -51,6 +51,7 @@ So rather than a wide variety of GetPatient, QueryPatient we have:
 </table>
 
 <table width="60%">
+    <col width="50%">
     <tr>
         <td>
             <b>POST/PUT Request</b>
@@ -70,6 +71,7 @@ So rather than a wide variety of GetPatient, QueryPatient we have:
 </table>
 
 <table width="60%">
+    <col width="50%">
     <tr>
         <td>
             <b>DELETE Request</b>
