@@ -18,7 +18,7 @@ The Design & Build section contains descriptions of approaches and suggestions f
 	</tr></thead>
 <tr id="step1">
 	<td>Information Sharing Patterns</td>
-	<td>Describes the approaches to information sharing between systems as outlined within [developer.nhs.uk](https://developer.nhs.uk/library/architecture/integration-patterns/information-sharing-patterns-summary/). This provides the basic framework in which to apply a variety of data exchange paradigms which are supported by the FHIR standard.</td>
+	<td>Describes the approaches to information sharing between systems as outlined within [developer.nhs.uk](https://developer.nhs.uk/library/architecture/integration-patterns/information-sharing-patterns-summary/). This provides the basic framework in which to apply a variety of data exchange paradigms supported by the FHIR standard.</td>
 </tr>
 <tr id="step2">
 	<td>Exchange Paradigms</td>
