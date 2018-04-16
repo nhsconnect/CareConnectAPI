@@ -17,6 +17,56 @@ A 'consumer' refers to either a client system or a person that has a need to ret
 
 The Exchange Paradigms are complimentary, each having it's strengths and weaknesses. A solution may combine Information Sharing Patterns or Exchange Paradigms.  
 
+FHIR supports four exchange paradigms when accessing resources:
+
+<table width="100%">
+    <tr>
+        <td width="20%">
+            <b>REST</b>
+        </td>
+        <td width="40%">
+            Small, light-weight and loosely coupled.
+        </td>
+        <td width="40%">
+            <a target="_blank" href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Messages</b>
+        </td>
+        <td>
+            Multiple resources in a single exchange.
+        </td>
+        <td>
+            <a target="_blank" href="https://www.hl7.org/fhir/messaging.html">https://www.hl7.org/fhir/messaging.html</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Documents</b>
+        </td>
+        <td>
+            Multiple resources bundled to support data persistence and maximum compatibility.
+        </td>
+        <td>
+            <a target="_blank" href="https://www.hl7.org/fhir/documents.html">https://www.hl7.org/fhir/documents.html</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Services</b>
+        </td>
+        <td>
+            Custom support to address specific requirements that aren’t fully supported by other paradigms.
+        </td>
+        <td>
+            <a target="_blank" href="https://www.hl7.org/fhir/services.html">https://www.hl7.org/fhir/services.html</a>
+        </td>
+    </tr>
+</table>
+
+
 ## RESTful API ##
 
 <div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="{{ site.hl7_baseurl.stu3 }}http.html"><b>FHIR RESTful API</b></div>
