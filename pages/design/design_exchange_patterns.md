@@ -203,7 +203,7 @@ For example a Referral Request will typically contain supporting information suc
 
 ### Information Sharing Patterns ###
 
-<table style="width:80%;margin-left:auto;margin-right:auto">
+<table style="width:80%; margin-left:auto; margin-right:auto">
 <tr>
 <td>
 <a href="http://developer.nhs.uk/library/architecture/integration-patterns/message-broker/"><img class="alignnone size-full wp-image-9902" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Broker-e1422958425684.jpg" alt="tn_Broker" width="250" height="72" /></a>
