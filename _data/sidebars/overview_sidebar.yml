@@ -168,7 +168,7 @@ entries:
         - title: Information Sharing Patterns
           url: /design_patterns.html
           output: web
-        - title: Exchange Patterns
+        - title: Exchange Paradigms
           url: /design_exchange_patterns.html
           output: web
         - title: Access
