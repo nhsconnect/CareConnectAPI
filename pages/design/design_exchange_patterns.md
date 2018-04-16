@@ -255,6 +255,7 @@ To store resources in the Repository
 - [Social Care Assessment, Discharge and Withdrawal]({{ site.nhsd.scadw }})
 - [Child Health]({{ site.nhsd.child_health }})
 - [Digital Diagnostics Services (Pathology)]({{ site.nhsd.dds_link }})
+- [Transfer of Care eDischarge]({{ site.nhsd.toc }})
 
 ## Documents ##
 
