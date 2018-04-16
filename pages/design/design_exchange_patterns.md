@@ -229,8 +229,8 @@ To store resources in the Repository
 <tr>
 <td>
 <a href="http://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/"><img class="alignnone size-full wp-image-9912" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Repository-e1422959862898.jpg" alt="tn_Repository" width="250" height="72" /></a>
-</td style="vertical-align:middle">
-<td>To store resources in the Repository
+</td>
+<td style="vertical-align:middle">To store resources in the Repository
 <br>Use API to retrieve the resources
 </td>
 </tr>
