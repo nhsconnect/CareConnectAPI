@@ -11,7 +11,7 @@ summary: "The Exchange Paradigms introduce ways of implementing FHIR Resources u
 
 This section demonstrates how FHIR Exchange Paradigms relate to Information Sharing Patterns.
 
-The exchange paradigms are complimentary, each having it's strengths and weaknesses. A solution may combine Information Sharing Patterns or Paradigms.  
+The exchange paradigms are complimentary, each having it's strengths and weaknesses. A solution may combine Information Sharing Patterns or Exchange Paradigms.  
 
 ## RESTful API ##
 
@@ -31,6 +31,7 @@ Rather than implementing a system specific API, we could utilise standards defin
 So rather than a wide variety of GetPatient, QueryPatient we have:
 
 <table width="60%">
+    <col width="50%">
     <tr>
         <td>
             <b>GET Request</b>
