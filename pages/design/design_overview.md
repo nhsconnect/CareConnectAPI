@@ -22,7 +22,7 @@ The Design & Build section contains descriptions of approaches and suggestions f
 </tr>
 <tr id="step2">
 	<td>Exchange Paradigms</td>
-	<td>Describes access patterns necessary which influence the access, security and use of APIs. Depending on the Information Sharing Pattern or topology of the requesting and responding system. The relationship between the requestor and responder influences the choice of access mechanism, security of payload and access adopted by the solution.</td>
+	<td>Describes access patterns necessary which influence the access, security and use of APIs. Depending on the Information Sharing Pattern or topology of the requesting (consuming) and responding (providing) system. The relationship between the requestor and responder influences the choice of access mechanism, security of payload and access adopted by the solution.</td>
 </tr>
 <tr id="step2">
 	<td>Access</td>
