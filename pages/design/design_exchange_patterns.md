@@ -335,4 +335,23 @@ A FHIR Document may be sent as the payload of a RESTful Response, Message or any
 Execute a procedure on a remote system while avoiding direct coupling.
 ```
 
-[TODO]
+When providing a API, a number of operations may be available to support needs such as create, read, update, delete etc. These are widely documented in the form of POST, GET, PUT, DELETE etc. and provider and consumer are expected to understand these and simply declare which operations are supported by their API.
+
+It is possible also possible to extend these basic interactions with a custom defined operation. HL7 describe the need to add operations as being:
+- “Where the server needs to play an active role in formulating the content of the response, not merely return existing information.”
+- “Where the intended purpose is to cause side effects such as the modification of existing resources, or creation of new resources.”
+
+HL7 suggest that an operation has the following properties:
+- Each operation has a name
+- Each operation has a list of 'in' and 'out' parameters
+- Parameters are either resources, data types, or search parameters
+- Operations are subject to the same security constraints and requirements as the RESTful API
+- The URIs for the operation end-points are based on the existing RESTful API address scheme
+- Operations may make use of the existing repository of resources in their definitions
+- Operations may be performed on a specific resource, a resource type, or a whole system
+
+Using an extended operation to support the retrieval of a predefined set of resources as discussed above, there is an inherent risk of making a provider’s API more tightly coupled to specific consumers, requiring that they have a previously agreed contract and an understanding of these specific operations. Operations designed to meet one consumer’s needs may not be appropriate for subsequent consumers.
+
+### NHS FHIR Examples (Extended Operations)###
+
+- [GP Connect ($getAll)](/gpconnect/)
