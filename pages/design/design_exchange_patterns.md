@@ -141,7 +141,7 @@ The following table highlights a number of information sharing patterns as descr
 </tr>
 </table>
 
-### NHS FHIR Examples ###
+### NHS FHIR Examples (RESTful) ###
 
 - [CareConnectAPI](explore.html)
 - [GP Connect]({{ site.nhsd.gpconnectmain }})
@@ -249,7 +249,7 @@ To store resources in the Repository
 </table>
 
 
-### NHS FHIR Examples ###
+### NHS FHIR Examples (Messaging)###
 
 - [NHS FGM Service]({{ site.nhsd.fgm }})
 - [Social Care Assessment, Discharge and Withdrawal]({{ site.nhsd.scadw }})
@@ -321,13 +321,13 @@ A **DocumentAPI** is an extension of the **MessagingAPI** which provides a set o
 </tr>
 </table>
 
-### NHS FHIR Examples ###
+### NHS FHIR Examples (Documents)###
 
 - [GP Connect](/gpconnect/)
   - [Composition](https://data.developer.nhs.uk/fhir/candidaterelease-170816-getrecord/Profile.GetRecordQueryResponse-HTMLView/gpconnect-carerecord-composition-1.html)
 - [Transfer of Care eDischarge]({{ site.nhsd.toc }})
 
-## Operations
+## Operations ##
 <div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="{{ site.hl7_baseurl.stu3 }}operations.html"><b>Operations</b></div>
 
 ```
