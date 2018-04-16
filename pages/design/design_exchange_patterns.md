@@ -110,10 +110,10 @@ This type of interface may also be called as **ResourceAPI** and is useful for r
 
 The following table highlights a number of information sharing patterns as described in the NHS Developer network.
 
-<table style="width:60%;margin-left:auto;margin-right:auto">
+<table style="width:80%;margin-left:auto;margin-right:auto">
 <tr>
 <td>
-  <a target='_blank' href="http://developer.nhs.uk/library/architecture/integration-patterns/portal/"><img class="alignnone size-full wp-image-9872" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Portal-e1422958326475.jpg" alt="tn_Portal" width="251" height="72" /></a>
+<a target='_blank' href="http://developer.nhs.uk/library/architecture/integration-patterns/portal/"><img class="alignnone size-full wp-image-9872" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Portal-e1422958326475.jpg" alt="tn_Portal" width="251" height="72" /></a>
 </td>
 <td></td>
 </tr>
@@ -121,13 +121,13 @@ The following table highlights a number of information sharing patterns as descr
 <td>
 <a target='_blank' href="http://developer.nhs.uk/library/architecture/integration-patterns/registry-repository/"><img class="alignnone size-full wp-image-9922" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-RegistryRepository-e1422959886826.jpg" alt="tn_RegistryRepository" width="250" height="72" /></a>
 </td>
-<td>Consider using Messaging to populate the Repository</td>
+<td style="vertical-align:middle">Consider using Messaging to populate the Repository</td>
 </tr>
 <tr>
 <td>
 <a target='_blank' href="http://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/"><img class="alignnone size-full wp-image-9912" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Repository-e1422959862898.jpg" alt="tn_Repository" width="250" height="72" /></a>
 </td>
-<td>Consider using Messaging to populate the Repository</td>
+<td style="vertical-align:middle">Consider using Messaging to populate the Repository</td>
 </tr>
 <tr>
 <td>
@@ -221,7 +221,7 @@ For example a Referral Request will typically contain supporting information suc
 <td>
 <a href="http://developer.nhs.uk/library/architecture/integration-patterns/registry-repository/"><img class="alignnone size-full wp-image-9922" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-RegistryRepository-e1422959886826.jpg" alt="tn_RegistryRepository" width="250" height="72" /></a>
 </td>
-<td>
+<td style="vertical-align:middle">
 To store resources in the Repository
 <br>Use API to retrieve the resources
 </td>
@@ -229,7 +229,7 @@ To store resources in the Repository
 <tr>
 <td>
 <a href="http://developer.nhs.uk/library/architecture/integration-patterns/shared-repository/"><img class="alignnone size-full wp-image-9912" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-Repository-e1422959862898.jpg" alt="tn_Repository" width="250" height="72" /></a>
-</td>
+</td style="vertical-align:middle">
 <td>To store resources in the Repository
 <br>Use API to retrieve the resources
 </td>
@@ -238,7 +238,7 @@ To store resources in the Repository
 <td>
  <a href="http://developer.nhs.uk/library/architecture/integration-patterns/store-and-notify/"><img class="alignnone size-full wp-image-9832" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-StoreAndNotify-e1422958493685.jpg" alt="tn_StoreAndNotify" width="251" height="72" /></a>
 </td>
-<td>To store resources in the repository
+<td style="vertical-align:middle">To store resources in the repository
 <br>and provide Notification
 <br>Use API to retrieve the resources</td>
 </tr>
@@ -316,7 +316,7 @@ A FHIR Document may be sent as the payload of a RESTful Response, Message or any
 <td>
  <a href="http://developer.nhs.uk/library/architecture/integration-patterns/store-and-notify/"><img class="alignnone size-full wp-image-9832" src="http://developer.nhs.uk/wp-content/uploads/2015/02/tn-StoreAndNotify-e1422958493685.jpg" alt="tn_StoreAndNotify" width="251" height="72" /></a>
 </td>
-<td>To populate the repository. <br>Use Message or API for the notification<br>Use API to retrieve the document
+<td style="vertical-align:middle">To populate the repository. <br>Use Message or API for the notification<br>Use API to retrieve the document
 </td>
 </tr>
 </table>
