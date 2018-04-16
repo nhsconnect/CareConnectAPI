@@ -13,7 +13,7 @@ This section demonstrates how FHIR Exchange Paradigms relate to Information Shar
 
 The exchange patterns are complimentary, each having it's strengths and weaknesses. A solution may combine Information Sharing Patterns or Paradigms.  
 
-## 2. RESTful API
+## RESTful API
 
 <div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="{{ site.hl7_baseurl.stu3 }}http.html"><b>FHIR RESTful API</b></div>
 
@@ -103,7 +103,7 @@ This type of interface may also be called as **ResourceAPI** and is useful for r
 {% include note.html content="Please click on [Care Connect Reference Implementation](/build_ri_overview.html) which describes the RESTful API Care Connect Reference Implementaion and try using, deveoping and improving the CCRI."%}
 
 
-### 2.1. Information Sharing Patterns ###
+### Information Sharing Patterns ###
 
 The following table highlights a number of information sharing patterns as described in the NHS Developer network.
 
@@ -138,7 +138,7 @@ The following table highlights a number of information sharing patterns as descr
 </tr>
 </table>
 
-### 2.2. NHS FHIR Examples ###
+### NHS FHIR Examples ###
 
 - [CareConnectAPI](explore.html)
 - [GP Connect]({{ site.nhsd.gpconnectmain }})
@@ -150,7 +150,7 @@ The following table highlights a number of information sharing patterns as descr
 - [NHS e-Referral Service](https://nhsconnect.github.io/NHS-FHIR-eRS-Integration/Generated/)
 - [NHS National Record Locator Service](https://data.developer.nhs.uk/fhir/nrls-v1-draft-a/Chapter.1.About/index.html)
 
-## 3. Messaging ##
+## Messaging ##
 
 <div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-fire"></i>  <b><a href="{{ site.hl7_baseurl.stu3 }}messaging.html"><b>FHIR Messaging</b></div>
 
@@ -198,7 +198,7 @@ For example a Referral Request will typically contain supporting information suc
 - Information Governance concerns especially when used with broadcast pattern.
 - Messages need handling, this may be unnecessary for small transactions
 
-### 3.1. Information Sharing Patterns ###
+### Information Sharing Patterns ###
 
 <table width="80%">
 <tr>
@@ -246,7 +246,7 @@ To store resources in the Repository
 </table>
 
 
-### 3.2. NHS FHIR Examples ###
+### NHS FHIR Examples ###
 
 - [NHS FGM Service]({{ site.nhsd.fgm }})
 - [Social Care Assessment, Discharge and Withdrawal]({{ site.nhsd.scadw }})
@@ -293,7 +293,7 @@ A **DocumentAPI** is an extension of the **MessagingAPI** which provides a set o
 **Concerns**
 - More complex to develop
 
-### 4.1. Information Sharing Patterns ###
+### Information Sharing Patterns ###
 
 <table width="80%">
 <tr>
@@ -318,7 +318,7 @@ A **DocumentAPI** is an extension of the **MessagingAPI** which provides a set o
 </tr>
 </table>
 
-### 4.2. NHS FHIR Examples ###
+### NHS FHIR Examples ###
 
 - [GP Connect](/gpconnect/)
   - [Composition](https://data.developer.nhs.uk/fhir/candidaterelease-170816-getrecord/Profile.GetRecordQueryResponse-HTMLView/gpconnect-carerecord-composition-1.html)
