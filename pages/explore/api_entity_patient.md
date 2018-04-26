@@ -40,7 +40,7 @@ Fetches a bundle of all `Patient` resources for the specified patient or search 
 <th style="width:30%;">Path</th>
 </tr>
 <tr>
-<td><code class="highlighter-rouge">adddress-postalcode</code></td>
+<td><code class="highlighter-rouge">address-postalcode</code></td>
 <td><code class="highlighter-rouge">string</code></td>
 <td>A postalCode specified in an address</td>
 <td>MAY</td>
