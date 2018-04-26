@@ -157,7 +157,7 @@ This type of interface may also be called as **ResourceAPI** and is useful for r
 **Concerns**
 - Less suitable for large transfers of data between organisations and large systems.
 
-{% include note.html content="Please click on [Care Connect Reference Implementation](/build_ri_overview.html) which describes the RESTful API Care Connect Reference Implementaion and try using, deveoping and improving the CCRI."%}
+{% include note.html content="Please click on [Care Connect Reference Implementation](/build_ri_overview.html) which describes the RESTful API Care Connect Reference Implementaion and try using, developing and improving the CCRI."%}
 
 
 ### Information Sharing Patterns ###
@@ -217,7 +217,7 @@ Send notifications and other information to remote systems while avoiding direct
 <p style="text-align:center;"><img src="images/build/FHIR Messaging.jpg" alt="View Results Screen" title="View Results Screen" style="width:75%"></p>
 <br><br>  
 
-There are many scenarios where messaging can't be driven entirely by the consumer. This is especially true in large organisations or in scenarios where health and social care organisations need to exchange data. In these situations we need an API that recognises a set of related resources but does not tie them into specific procedures, this may also be called a **MessagingAPI**.
+There are many scenarios where messaging can not be driven entirely by the consumer. This is especially true in large organisations or in scenarios where health and social care organisations need to exchange data. In these situations we need an API that recognises a set of related resources but does not tie them into specific procedures, this may also be called a **MessagingAPI**.
 
 For example a Referral Request will typically contain supporting information such as a referral letter, images/scans, or other resources relevant to the referral. While the requester determines the makeup of the Referral Request and other resources, the receiving service will determine how this is handled. The requester may block (synchronous) traffic while waiting for a response but typically the response will be generated later (asynchronously).
 
@@ -389,13 +389,13 @@ A FHIR Document may be sent as the payload of a RESTful Response, Message or any
 Execute a procedure on a remote system while avoiding direct coupling.
 ```
 
-When providing a API, a number of operations may be available to support needs such as create, read, update, delete etc. These are widely documented in the form of POST, GET, PUT, DELETE etc. and provider and consumer are expected to understand these and simply declare which operations are supported by their API.
+When providing an API, a number of operations may be available to support needs such as create, read, update, delete etc. These are widely documented in the form of POST, GET, PUT, DELETE etc. and provider and consumer are expected to understand these and simply declare which operations are supported by their API.
 
 It is possible also possible to extend these basic interactions with a custom defined operation. HL7 describe the need to add operations as being:
 - “Where the server needs to play an active role in formulating the content of the response, not merely return existing information.”
 - “Where the intended purpose is to cause side effects such as the modification of existing resources, or creation of new resources.”
 
-HL7 suggest that an operation has the following properties:
+HL7 suggests that an operation has the following properties:
 - Each operation has a name
 - Each operation has a list of 'in' and 'out' parameters
 - Parameters are either resources, data types, or search parameters
