@@ -8,12 +8,12 @@ summary: A binary resource can contain any content, whether text, image, pdf, zi
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.nonecc.html resource="Binary" resourceurl= "https://data.developer.nhs.uk/fhir/nrls-v1-draft-a/Profile.RecordLocator/nrls-documentreference-1-0.html" page="" fhirname="Binary" fhirlink="binary.html" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.STU3.reference.html resource="Binary" page="" fhirname="Binary" fhirlink="binary.html" content="National Record Locator Service" userlink="" %}
 
 
 ## 1. Read Operation ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET [baseUrl]/DocumentReference/[id]</div>
+GET [baseUrl]/Binary/[id]</div>
 
 {% include custom/read.response.html resource="Binary" content="" %}
