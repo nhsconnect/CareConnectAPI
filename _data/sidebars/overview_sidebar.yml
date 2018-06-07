@@ -120,6 +120,15 @@ entries:
           - title: Encounter
             url: /api_workflow_encounter.html
             output: web
+      - title: Documents
+        output: web
+        subfolderitems:
+          - title: Binary
+            url: /api_documents_binary.html
+            output: web
+          - title: DocumentReference
+            url: /api_documents_documentreference.html
+            output: web
       - title: Foundation
         output: web
         subfolderitems:
