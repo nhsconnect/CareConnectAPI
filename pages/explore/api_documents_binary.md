@@ -57,10 +57,10 @@ Common health related MIME types are listed below:
       <td>FHIR Documents</td>
       <td>application/xml+fhir or application/json+fhir</td>
     </tr>
-    <tr>
+  <!--  <tr>
       <td>openEHR</td>
       <td>application/vnd.openehr+json</td>
-    </tr>
+    </tr> -->
   </tbody>
 </table>
 
