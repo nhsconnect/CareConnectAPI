@@ -10,8 +10,6 @@ summary: A DocumentReference resource is used to describe a document that is mad
 
 {% include custom/fhir.referencemin.html resource="DocumentReference" resourceurl= "" page="" fhirname="DocumentReference" fhirlink="documentreference.html" content="User Stories" userlink="" %}
 
-[SKETCH profile. Not official]
-
 ## 1. Read Operation ##
 
 <div markdown="span" class="alert alert-success" role="alert">
