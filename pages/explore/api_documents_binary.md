@@ -21,7 +21,9 @@ GET [baseUrl]/Binary/[id]</div>
 
 <p>All requests SHALL contain a valid ‘Authorization’ header and SHALL contain an ‘Accept’ header. The `Accept` header indicates the format of the response the client is able to understand, this maybe be one of the following <code class="highlighter-rouge">application/json+fhir</code> or <code class="highlighter-rouge">application/xml+fhir</code>, this will return the requested resource as <code class="highlighter-rouge">Binary</code> resource.</p>
 
-<p>The <code class="highlighter-rouge">Binary</code> can be returned in native format, this is achieved by adding the relevant mime type the Accept header (or use wild card <code class="highlighter-rouge">*/*</code>)</p>. Common health related MIME types are listed below:
+<p>The <code class="highlighter-rouge">Binary</code> can be returned in native format, this is achieved by adding the relevant mime type the Accept header (or use wild card <code class="highlighter-rouge">*/*</code>).</p>
+
+Common health related MIME types are listed below:
 
 <table>
   <thead>
@@ -53,7 +55,7 @@ GET [baseUrl]/Binary/[id]</div>
     </tr>
     <tr>
       <td>FHIR Documents</td>
-      <td>application/xml+fhir</td>
+      <td>application/xml+fhir or application/json+fhir</td>
     </tr>
     <tr>
       <td>openEHR</td>
