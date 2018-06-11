@@ -8,7 +8,7 @@ summary: A binary resource can contain any content, whether text, image, pdf, zi
 ---
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.STU3.reference.html resource="Binary" page="" fhirname="Binary" fhirlink="binary.html" content="National Record Locator Service" userlink="" %}
+{% include custom/fhir.STU3.referencemin.html resource="Binary" page="" fhirname="Binary" fhirlink="binary.html" content="" userlink="" %}
 
 
 ## 1. Read Operation ##

@@ -9,7 +9,7 @@ summary: Measurements and simple assertions made about a patient, device or othe
 
 {% include custom/search.warnbanner.html %}
 
-{% include custom/fhir.reference.html resource="Observation" page="CareConnect-Observation-1" fhirname="Observation" fhirlink="observation.html" content="User Stories" userlink="engage_michaelsstory.html" %}
+{% include custom/fhir.referencemin.html resource="Observation" page="CareConnect-Observation-1" fhirname="Observation" fhirlink="observation.html" content="User Stories"  %}
 
 ## 1. Read ##
 
