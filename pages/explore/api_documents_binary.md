@@ -11,7 +11,7 @@ summary: A binary resource can contain any content, whether text, image, pdf, zi
 {% include custom/fhir.referencemin.html resource="Binary" page="" fhirname="Binary" fhirlink="binary.html" content="" userlink="" %}
 
 
-## 1. Read Operation ##
+## 1. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET [baseUrl]/Binary/[id]</div>
