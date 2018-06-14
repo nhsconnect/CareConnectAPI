@@ -106,7 +106,6 @@ Explore the response in XML & JSON on the Reference Implementation below
 <div class="language-http highlighter-rouge">
 <pre class="highlight">
 <p style="font-size: 110%;">Reference Implementation</p>
-XML <a target="_blank" href="{{ site.fhir_ref_impl }}STU3/Binary/5b1e91f0ccf84d0001fffe6d&encoding=json">Binary viewer</a>
-JSON <a target="_blank" href="{{ site.fhir_ref_impl }}STU3/Binary/5b1e91f0ccf84d0001fffe6d&encoding=xml">Binary viewer</a>
+Direct link <a target="_blank" href="https://yellow.testlab.nhs.uk/careconnect-ri/STU3/Binary/5b1e91f0ccf84d0001fffe6d">Binary unstructured document download</a>
 </pre>
 </div>
