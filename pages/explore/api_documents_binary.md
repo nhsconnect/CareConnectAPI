@@ -92,4 +92,21 @@ Common health related MIME types are listed below:
 The binary is not searchable as the other API resources are, however, please refer to <a target="_blank" href="{{ site.fhir_ref_impl documentreference.html }}">DocumentReference</a> for a mechanism to gain access to Binary information through a API
 
 ## 3. Example ##
-<COMING SOON>
+
+<h3 id="32-response-headers">3.1 cURL</h3>
+
+Return a Binary resource, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+
+{% include custom/embedcurl.html title="Get Binary" command="curl -X GET -H 'Accept: application/json+fhir' -H 'Authorisation: BEARER [token]' -v 'https://yellow.testlab.nhs.uk/careconnect-ri/STU3/Binary/5b1e91f0ccf84d0001fffe6d'" %}
+
+
+<h3 id="32-response-headers">3.2 Explore the Response</h3>
+
+Explore the response in XML & JSON on the Reference Implementation below
+<div class="language-http highlighter-rouge">
+<pre class="highlight">
+<p style="font-size: 110%;">Reference Implementation</p>
+XML <a target="_blank" href="{{ site.fhir_ref_impl }}/STU3/Binary/5b1e91f0ccf84d0001fffe6d&encoding=json">Binary viewer</a>
+JSON <a target="_blank" href="{{ site.fhir_ref_impl }}/STU3/Binary/5b1e91f0ccf84d0001fffe6d&encoding=xml">Binary viewer</a>
+</pre>
+</div>
