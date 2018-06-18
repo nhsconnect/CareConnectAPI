@@ -12,8 +12,8 @@ summary: "Reference Implementation installation instructions"
 {% include warning.html content="all connections have an expiry time of 90 mins. Please referesh your OAuth2 tokens at the start of every interaction period to ensure you can connect with the Care Connect Reference Implementation." %}
 
 
-## Security guide 
-The following descriptions provide a high level overview of what can be accessed with the security access provided to access the Care Connect Reference Implementation. 
+## Security guide
+The following descriptions provide a high level overview of what can be accessed with the security access provided to access the Care Connect Reference Implementation.
 
 <p style="text-align:center;"><img src="images/build/security.png" alt="Security architecture" title="Security architecture" style="width:100%"></p>
 <br>
@@ -45,10 +45,12 @@ Resource scope required to access (at least 1 of)
 | MedicationRequest | user/MedicationPrescription.read |
 | MedicationStatement | user/MedicationStatement.read |
 | Immunization | user/Immunization.read |
+| DocumentReference | user/DocumentReference |
+| Binary | user/Binary |
 
 ## Postman usage examples
 
-The following screenshots show how to use the Care Connect Reference Implementation via Postman. The 6 steps shown below are:
+The following screenshots show how to use the Care Connect Reference Implementation via Postman. The 7 steps shown below are:
 1. Access Secure Endpoint
 1. Select OAuth2
 1. Get New Access Token
@@ -56,33 +58,35 @@ The following screenshots show how to use the Care Connect Reference Implementat
 1. Use Access Token
 1. Send Secure Request
 
+
 ### Get new access token
 
 Access Secure Endpoint & Select OAuth2
 
-<p style="text-align:center;"><img src="images/build/security_1.png" alt="Access Secure Endpoint" title="Access Secure Endpoint" style="width:100%"></p>
+<p style="text-align:center;"><img src="images/build/Security_Access_1.JPG" alt="Access Secure Endpoint" title="Access Secure Endpoint" style="width:100%"></p>
 <br>
 
-<p style="text-align:center;"><img src="images/build/security_2.png" alt="Create Access Token" title="Create Access Token" style="width:100%"></p>
 <br>
 
 ### Use Access Token
 
+{% include note.html content="In the example below we are using a pre-defined client using `client-credentials` grant. Please check OAuth2 documentation for the most appropriate grant for your setting." %}
+
 Please click the [Security Scopes](build_ri_security_scopes.html){:target="_blank"} for a list of example scopes and access tokens.
 
 Get New Access Token (expiry 90 mins), copy the details below this screenshot.
-<p style="text-align:center;"><img src="images/build/security_3.png" alt="Get New Access Token" title="Get New Access Token" style="width:80%"></p>
+<p style="text-align:center;"><img src="images/build/Security_3.JPG" alt="Get New Access Token" title="Get New Access Token" style="width:80%"></p>
 <br>
 
 Create Access Token example for Patient only access, please see [Security Scopes](build_ri_security_scopes.html){:target="_blank"} for more example scopes:
 
 | Credentials | Details (Please copy all details) |
 | ------------- |----------------|
-| Grant Type | Client Credentials | 
+| Grant Type | Client Credentials |
 | Token name (example) | OAuth2-PatientAccess |
 | Access Token URL | {{ site.fhir_ref_impl_sec }}token |
-| Client ID | a24a4d9f-c264-4af7-a8e5-248c24a6b707 |
-| Client Secret | MMpAOGBljYcEzBfn7q9-xgJqBlmR0BSiEyCrCjNNOUpR78kZtzqgKKU_4FgGRFNWbtc6jPIErLwoYwRgnlvijA |
+| Client ID | medication-access |
+| Client Secret | IShTVi8mRSV7bVREuU1freiDo79y_8fLX3BBw2nf2eIpv9A_r91VlVuF2LOiK_zLZAkBQCusEXLp_o6DEIgvaQ |
 | Client Authentication | 'Send as Basic Auth header' |
 
 
@@ -93,14 +97,37 @@ There are three steps the first time you use the token with the Reference Implem
 1. Ensure you only have one active token (expiry every 90 mins)
 1. Use the access token in a Request (The URL is the same as before but with the https:// prefix)
 
-<p style="text-align:center;"><img src="images/build/security_4.png" alt="Use Access Token" title="Use Access Token" style="width:100%"></p>
+<p style="text-align:center;"><img src="images/build/Security_4.JPG" alt="Use Access Token" title="Use Access Token" style="width:100%"></p>
 <br>
 
 ### Send Request
 
 Send Secure Request
-<p style="text-align:center;"><img src="images/build/security_5.png" alt="Send Secure Request" title="Send Secure Request" style="width:100%"></p>
+<p style="text-align:center;"><img src="images/build/Security_5.JPG" alt="Send Secure Request" title="Send Secure Request" style="width:100%"></p>
 <br>
+
+## Register OAuth2 Client ##
+
+The Capability Statement of a FHIR Server will indicate the location of the Authorisation Server.
+
+<p style="text-align:center;"><img src="images/build/Security_Capability_Statement.JPG" alt="Retrieve Capability Statement" title="Retrieve Capability Statement" style="width:80%"></p>
+
+From the <b>CapabilityStatement</b> we can see we can register our client at <b>https://yellow.testlab.nhs.uk/auth/register</b>. However it is more practical to do this using the Authorisation Servers user interface. Please follow this link [CareConnect Authorisation Server](https://yellow.testlab.nhs.uk/auth/) and log into the OAuth2 server using a google id by clicking on `Log In`.
+
+<p style="text-align:center;"><img src="images/build/Security_OAuth2_Main.JPG" alt="OAuth2 Login" title="OAuth2 Login" style="width:80%"></p>
+
+Now select 'Self-service client registration' from the menu and then select '+ New Client'.
+
+<p style="text-align:center;"><img src="images/build/Security_OAuth2_Register1.JPG" alt="OAuth2 Register Client" title="OAuth2 Register Client" style="width:80%"></p>
+Complete details, for details on Access Scopes please see [SMART on FHIR - Scopes and Launch Context](http://docs.smarthealthit.org/authorization/scopes-and-launch-context/).
+
+<p style="text-align:center;"><img src="images/build/Security_OAuth2_Register2.JPG" alt="OAuth2 Client Main" title="OAuth2 Client Main" style="width:50%"></p>
+
+<p style="text-align:center;"><img src="images/build/Security_OAuth2_Register3.JPG" alt="OAuth2 Client Access" title="OAuth2 Client Access" style="width:50%"></p>
+
+Take a note of the `client_id` and `client_secret` they will be used to establish the secure connection.
+
+<p style="text-align:center;"><img src="images/build/Security_OAuth2_Register4.png" alt="OAuth2 Client Secret" title="OAuth2 Client Secret" style="width:80%"></p>
 
 
 # Current Version #

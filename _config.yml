@@ -26,8 +26,8 @@ github_editme_path: /edit/develop/
 #twitter: true
 #twitter_username: twitter_username
 #twitter_site_hashtags: twitter_site_hashtags
-fhir_ref_impl: http://yellow.testlab.nhs.uk/careconnect-ri/
-fhir_ref_impl_sec: http://purple.testlab.nhs.uk:20080/
+fhir_ref_impl: https://yellow.testlab.nhs.uk/careconnect-ri/
+fhir_ref_impl_sec: https://yellow.testlab.nhs.uk/auth/
 
 fhir_profile_baseurl: https://fhir.hl7.org.uk/StructureDefinition/
 fhir_profile_stu3_baseurl: https://fhir.hl7.org.uk/STU3/StructureDefinition/
