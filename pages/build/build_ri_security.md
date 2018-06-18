@@ -13,9 +13,13 @@ summary: "Reference Implementation installation instructions"
 
 
 ## Security guide
+
 The following descriptions provide a high level overview of what can be accessed with the security access provided to access the Care Connect Reference Implementation.
 
 <p style="text-align:center;"><img src="images/build/security.png" alt="Security architecture" title="Security architecture" style="width:100%"></p>
+
+<br>
+The OAuth2 Secured resource endpoint is located at *{{ site.fhir_ref_impl_resource | xml_escape}}*
 <br>
 
 1. The data exposed by the secure Requests are identical to the standard REST Requests of the FHIR Care Connect API. The scopes demonstrated within the security demonstrate profile restriction on the HTTP REST API of a specific user/system/role. This will depend on specific systems.
