@@ -218,7 +218,10 @@ entries:
           - title: Security
             url: /build_ri_security.html
             output: web
-          - title: Security Scopes
+          - title: Security Authentication
+            url: /build_ri_security_access.html
+            output: web
+          - title: Security Authoristation
             url: /build_ri_security_scopes.html
             output: web
           - title: Feedback

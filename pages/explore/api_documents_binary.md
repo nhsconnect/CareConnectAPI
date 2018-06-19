@@ -89,7 +89,7 @@ Common health related MIME types are listed below:
 
 ## 2. Search ##
 
-The binary is not searchable as the other API resources are, however, please refer to <a target="_blank" href="{{ site.fhir_ref_impl documentreference.html }}">DocumentReference</a> for a mechanism to gain access to Binary information through a API
+The binary is not searchable as the other API resources are, however, please refer to [DocumentReference](api_documents_documentreference.html){:target="_blank"} for a mechanism to gain access to Binary information through a API.
 
 ## 3. Example ##
 
