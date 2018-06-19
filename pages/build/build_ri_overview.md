@@ -1,5 +1,5 @@
 ---
-title: Reference Implementation | Reference Implementation
+title: CCRI | Reference Implementation
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar
@@ -9,7 +9,7 @@ summary: "Provides an overview and background to the Reference Implementation an
 
 {% include important.html content="All information provided below is indicative and subject to on-going review." %}
 
-# Reference Implementation #
+# Care Connect Reference Implementation #
 
 The Reference Implementation allows developers to interact with Care Connect API profiles through server calls and an interactive website overlay. The Reference Implementation profiles exposed match the [Care Connect profiles](https://github.com/nhsconnect/CareConnect-profiles/tree/feature/stu3){:target="_blank"}. The Reference Implementation shows how these profiles can be completed with synthetic Reference Implementation data. The use of the Reference Implementation is to aid the process of designing and building Care Connect APIs by:
 - providing a code base as a Reference Implementation for a Care Connect FHIR API;
