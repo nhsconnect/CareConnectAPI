@@ -11,10 +11,10 @@ summary: "Secure Quickstart to the Reference Implementation"
 
 {% include warning.html content="all connections have an expiry time of 90 mins. Please referesh your OAuth2 tokens at the start of every interaction period to ensure you can connect with the Care Connect Reference Implementation." %}
 
-## Security Quickstart ## 
+## Security Quickstart ##
 
 This page describes a quickstart for users of the CCRI to explore a secure API connection to the CCRI. The security challenges are descried in more detail in the [Security](build_ri_security.html) section of the this Implementation Guide. The rest of this guide concentrates on how to:
-1. Pre-register OAuth2 Client - Access via Postman 
+1. Pre-registered OAuth2 Client - Access via Postman 
 2. Register OAuth2 Client - Access via an OAuth2 negotiated server
 
 To deploy a live instance of a Care Connect API where data is hosted and shared across system and organisational boundaries, please refer to [Security](build_ri_security.html) for background and understanding of the security considerations when creating your own implementation.
@@ -31,7 +31,7 @@ To Authenticate and connect with the CCRI via Postman emulates how a backend ser
 1. Send Secure Request
 
 
-### Get new access token ### 
+### Get new access token ###
 
 Access Secure Endpoint & Select OAuth2
 
@@ -40,7 +40,7 @@ Access Secure Endpoint & Select OAuth2
 
 <br>
 
-### Use Access Token ### 
+### Use Access Token ###
 
 {% include note.html content="In the example below we are using a pre-defined client using `client-credentials` grant. Please check OAuth2 documentation for the most appropriate grant for your setting." %}
 
@@ -72,7 +72,7 @@ There are three steps the first time you use the token with the Reference Implem
 <p style="text-align:center;"><img src="images/build/Security_4.JPG" alt="Use Access Token" title="Use Access Token" style="width:100%"></p>
 <br>
 
-### Send Request ### 
+### Send Request ###
 
 Send Secure Request
 <p style="text-align:center;"><img src="images/build/Security_5.JPG" alt="Send Secure Request" title="Send Secure Request" style="width:100%"></p>
@@ -87,9 +87,9 @@ Access via an OAuth2 client demonstrates how a website / mobile app could intera
 
 <p style="text-align:center;"><img src="images/build/Security_Capability_Statement.JPG" alt="Retrieve Capability Statement" title="Retrieve Capability Statement" style="width:80%"></p>
 
-The <b>CapabilityStatement</b> indicates secure access can be obtained by registering the client at <b>https://yellow.testlab.nhs.uk/auth/register</b>. 
+The <b>CapabilityStatement</b> indicates secure access can be obtained by registering the client at <b>https://yellow.testlab.nhs.uk/auth/register</b>.
 As a demonstration of how this can be achieved using an Authorisation Server user interface, please follow this link below and log into the OAuth2 server using a Google Id by clicking on `Log In` (top right hand corner).
-[CareConnect Authorisation Server](https://yellow.testlab.nhs.uk/auth/){:target="_blank"} 
+[CareConnect Authorisation Server](https://yellow.testlab.nhs.uk/auth/){:target="_blank"}
 
 <p style="text-align:center;"><img src="images/build/Security_OAuth2_Main.JPG" alt="OAuth2 Login" title="OAuth2 Login" style="width:80%"></p>
 
