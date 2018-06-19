@@ -218,10 +218,10 @@ entries:
           - title: Security
             url: /build_ri_security.html
             output: web
-          - title: Security Authentication
+          - title: Security Quickstart
             url: /build_ri_security_access.html
             output: web
-          - title: Security Authoristation
+          - title: Security Scopes
             url: /build_ri_security_scopes.html
             output: web
           - title: Feedback

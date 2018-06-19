@@ -1,5 +1,5 @@
 ---
-title: Reference Implementation | Security Scopes
+title: CCRI | Security Scopes
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar
@@ -12,13 +12,13 @@ summary: "Use of Security Scopes within the CCRI"
 {% include warning.html content="all connections have an expiry time of 90 mins. Please referesh your OAuth2 tokens at the start of every interaction period to ensure you can connect with the Care Connect Reference Implementation." %}
 
 
-## Security Authorisation 
+## Security Scopes  ##
 
-Security Authorisation can be managed in different ways inside Care Connect and FHIR. Within the RESTful version scopes can be defined which restrict access to profiles depending on the defined system or end user. Currently the Security Authorisation provides an example of restricting access to certain profiles. However, in the future it might be possible to dynamically create Scopes on profiles. The CCRI provides a demonstration of OAuth2 Users & Scopes.
+Security Scopes can be managed in different ways inside Care Connect and FHIR. Within the RESTful version scopes can be defined which restrict access to profiles depending on the defined system or end user. Currently the Security Scopes provides an example of restricting access to certain profiles. However, in the future it might be possible to dynamically create Scopes on profiles. The CCRI provides a demonstration of OAuth2 Users & Scopes.
 
 Please click on [Security](build_ri_security.html) for background and understanding of the security considerations when creating your own implementation.
 
-## HTTP Request to Get An OAuthToken
+## HTTP Request to Get An OAuthToken ##
 The Reference Implementation REST APIs are secured as an example using the OAuth 2.0 protocol to authorise and authenticate calls. OAuth2 is an industry open standard for authorisation, providing secure access to protected resources thereby reducing the hassle of asking for a username and password every time a user logs in. The OAuth2 Token is described below:
 
 ```

@@ -1,26 +1,26 @@
 ---
-title: CCRI | Security Authorisation
+title: CCRI | Security Quickstart
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar
 permalink: build_ri_security_access.html
-summary: "Secure Authorisation to the Reference Implementation"
+summary: "Secure Quickstart to the Reference Implementation"
 ---
 
 {% include important.html content="All information provided below is indicative and subject to on-going review." %}
 
 {% include warning.html content="all connections have an expiry time of 90 mins. Please referesh your OAuth2 tokens at the start of every interaction period to ensure you can connect with the Care Connect Reference Implementation." %}
 
-## Security Authentication
+## Security Quickstart ## 
 
-Security Authentication will eventually allow a Care Connect API to be deployed into a live environment where data is hosted and shared across system and organisational boundaries. Two step by step guides have been included in the Security Authentication section which demonstrate OAuth2 :
-1. Assigned Token - Access via Postman 
-2. Negotiated Token - Access via an OAuth2 negotiated server
+This page describes a quickstart for users of the CCRI to explore a secure API connection to the CCRI. The security challenges are descried in more detail in the [Security](build_ri_security.html) section of the this Implementation Guide. The rest of this guide concentrates on how to:
+1. Pre-register OAuth2 Client - Access via Postman 
+2. Register OAuth2 Client - Access via an OAuth2 negotiated server
 
-Please click on [Security](build_ri_security.html) for background and understanding of the security considerations when creating your own implementation.
+To deploy a live instance of a Care Connect API where data is hosted and shared across system and organisational boundaries, please refer to [Security](build_ri_security.html) for background and understanding of the security considerations when creating your own implementation.
 
 
-## Assigned Token
+## Pre-registered OAuth2 Client ##
 
 To Authenticate and connect with the CCRI via Postman emulates how a backend server might establish a secure connection. The following screenshots show how to use the Care Connect Reference Implementation via Postman. The 7 steps shown below are:
 1. Access Secure Endpoint
@@ -31,7 +31,7 @@ To Authenticate and connect with the CCRI via Postman emulates how a backend ser
 1. Send Secure Request
 
 
-### Get new access token
+### Get new access token ### 
 
 Access Secure Endpoint & Select OAuth2
 
@@ -40,7 +40,7 @@ Access Secure Endpoint & Select OAuth2
 
 <br>
 
-### Use Access Token
+### Use Access Token ### 
 
 {% include note.html content="In the example below we are using a pre-defined client using `client-credentials` grant. Please check OAuth2 documentation for the most appropriate grant for your setting." %}
 
@@ -72,7 +72,7 @@ There are three steps the first time you use the token with the Reference Implem
 <p style="text-align:center;"><img src="images/build/Security_4.JPG" alt="Use Access Token" title="Use Access Token" style="width:100%"></p>
 <br>
 
-### Send Request
+### Send Request ### 
 
 Send Secure Request
 <p style="text-align:center;"><img src="images/build/Security_5.JPG" alt="Send Secure Request" title="Send Secure Request" style="width:100%"></p>
@@ -81,7 +81,7 @@ Send Secure Request
 {% include note.html content="Although the access and exchange of information is secure the contents requested, transfered and ultimately exchanged require auditing and monitoring as described in the overall API approach." %}
 
 
-## Negotiated Token - OAuth2 Client ##
+## Register a OAuth2 Client ##
 
 Access via an OAuth2 client demonstrates how a website / mobile app could interact with an end user. The starting point for this lies in the Capability Statement of a FHIR Server which indicates the location of the Authorisation Server.
 
