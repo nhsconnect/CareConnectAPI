@@ -25,13 +25,13 @@ The Trust is also a major centre for teaching and research in association with t
 <br><br>
 
 ## User Stories ##
-<b>As a Clinician</b>
-<b>I want to</b> review any new results (for my duty of care) while away from my desk or workstation
-<b>So that</b> I can act on those results as quickly as possible
+<b>As a</b> Clinician<br>
+<b>I want to</b> review any new results (for my duty of care) while away from my desk or workstation<br>
+<b>So that</b> I can act on those results as quickly as possible.<br>
 <br>
-<b>As a Clinician</b>
-<b>I want to</b> acknowledge that I have reviewed a patient’s test results
-<b>So that</b> all other underlying systems can be updated with this information increasing the quality of care to a patient and improving efficiency amongst care teams
+<b>As a Clinician</b><br>
+<b>I want to</b> acknowledge that I have reviewed a patient’s test results<br>
+<b>So that</b> all other underlying systems can be updated with this information increasing the quality of care to a patient and improving efficiency amongst care teams.<br>
 
 ## Business Process ##
 
