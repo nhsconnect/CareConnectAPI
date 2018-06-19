@@ -30,5 +30,5 @@ The Trust is also a major centre for teaching and research in association with t
 <br><br>
 ## Use Case Diagram ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/southamptoncc/SouthamptonUHSUseCase.png" alt="Use Case Diagram showing the acknowlegement use cases being explored." title="Use Case Diagram showing the acknowlegement use cases being explored." style="width:75%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/southamptoncc/UHSBPMShowingScope.png" alt="Use Case Diagram showing the acknowlegement use cases being explored." title="Use Case Diagram showing the acknowlegement use cases being explored." style="width:75%"></p>
 <br><br>
