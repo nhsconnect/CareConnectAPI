@@ -1,5 +1,5 @@
 ---
-title: Reference Implementation | Navigate around the data in the RI
+title: CCRI | Navigate around the data in the Reference Implementation
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar

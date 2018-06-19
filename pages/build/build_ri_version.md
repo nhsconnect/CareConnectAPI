@@ -1,5 +1,5 @@
 ---
-title: Reference Implementation | Current Version of RI
+title: CCRI | Current Version of Reference Implementation
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar

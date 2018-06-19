@@ -1,5 +1,5 @@
 ---
-title: Reference Implementation | Security Guide & Examples
+title: CCRI | Security Guide & Examples
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar
@@ -32,21 +32,20 @@ A brief summary of the Notes on secured CCRI access:
 
 Before your application can access secured CCRI API data, it must obtain an access token that grants access to that API. A single access token can grant varying degrees of access to multiple APIs. A variable parameter called scope controls the set of resources and operations that an access token permits. During the access-token request, your application sends one or more values in the scope parameter. 
 
-If you know how to access an OAuth2 secured endpoint via tokens (server based interaction) or OAuth2 (web/app hosted interaction). There are currently two examples listed for secure access mechanisms provided within the CCRI, these are:
-- [Security Authentication](build_ri_security_access.html)
-- [Security Authorisation](build_ri_security_scopes.html)
+If you know how to access an OAuth2 secured endpoint via tokens (server based interaction) or OAuth2 (web/app hosted interaction). There are currently two themes described to help users use a secure API with the CCRI, these are described in the following links:
+- [Security Quickstart](build_ri_security_access.html)
+- [Security Scopes](build_ri_security_scopes.html)
 
-Security requires a combination of [Authentication & Authorisation](design_security.html){:target="_blank"} to ensure correct access to FHIR APIs. 
+{% include note.html content="The security described within the CCRI is a starting point to demonstrate some of the possibilities of securing a Care Connect API. Please refer to the Design/Security section for more detail." %}
 
-
-## Security Authentication
+## Security Quickstart
 
 Security Authentication will eventually allow a Care Connect API to be deployed into a live environment where data is hosted and shared across system and organisational boundaries. Two step by step guides have been included in the Security Authentication section which demonstrate OAuth2 :
 1. Access via Postman to Authenticate and connect with the Care Connect Reference Implementation. This access mechanism would often be found between systems
 2. Access via an OAuth2 negotiated server. This access mechanism would often be found between a website / mobile app and an end user
 
 
-## Security Authorisation 
+## Security Scopes 
 
 Security Authorisation can be managed in different ways inside Care Connect and FHIR. Within the RESTful version scopes can be defined which restrict access to profiles depending on the defined system or end user. Currently the Security Authorisation provides an example of restricting access to certain profiles. However, in the future it might be possible to dynamically create Scopes on profiles. The CCRI provides a demonstration of OAuth2 Users & Scopes.
 

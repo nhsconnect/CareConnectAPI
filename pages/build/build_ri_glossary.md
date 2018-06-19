@@ -1,5 +1,5 @@
 ---
-title: Reference Implementation |  Install glossary
+title: CCRI |  Install glossary
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar

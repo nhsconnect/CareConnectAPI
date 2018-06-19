@@ -1,5 +1,5 @@
 ---
-title: Reference Implementation | Installation instructions of RI
+title: CCRI | Installation instructions 
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar

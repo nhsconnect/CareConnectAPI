@@ -1,5 +1,5 @@
 ---
-title: Reference Implementation | Develop using the Reference Implementation
+title: CCRI | Develop using the Reference Implementation
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar

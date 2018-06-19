@@ -1,5 +1,5 @@
 ---
-title: Reference Implementation | Use of the RI
+title: CCRI | Use of the RI
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar

@@ -1,5 +1,5 @@
 ---
-title: Reference Implementation | Feedback
+title: CCRI | Feedback
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar
