@@ -19,7 +19,7 @@ MedXNote will be serviced by the Intersystems Ensemble - the Trust’s Integrati
 
 ## Client's Context ##
 
-University Hospital Southampton NHS Foundation Trust provides services to some 1.9 million people living in Southampton and south Hampshire, plus specialist services such as neurosciences, cardiac services and children's intensive care to more than 3.7 million people in central southern England and the Channel Islands.
+University Hospital Southampton NHS Foundation Trust provides services to some 1.9 million people living in Southampton and South Hampshire, plus specialist services such as neurosciences, cardiac services and children's intensive care to more than 3.7 million people in central southern England and the Channel Islands.
 
 The Trust is also a major centre for teaching and research in association with the University of Southampton and partners including the Medical Research Council and Wellcome Trust.
 <br><br>
