@@ -24,11 +24,18 @@ University Hospital Southampton NHS Foundation Trust provides services to some 1
 The Trust is also a major centre for teaching and research in association with the University of Southampton and partners including the Medical Research Council and Wellcome Trust.
 <br><br>
 
+## User Stories ##
+<b>As a Clinician</b>
+<b>I want to</b> review any new results (for my duty of care) while away from my desk or workstation
+<b>So that</b> I can act on those results as quickly as possible
+<br>
+<b>As a Clinician</b>
+<b>I want to</b> acknowledge that I have reviewed a patient’s test results
+<b>So that</b> all other underlying systems can be updated with this information increasing the quality of care to a patient and improving efficiency amongst care teams
+
 ## Business Process ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/southamptoncc/SouthamptonUHSBPM.png" alt="High level business process diagram showing the requirement to acknowledge the receipt of results." title="High level business process diagram showing the requirement to acknowledge the receipt of results." style="width:75%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/southamptoncc/UHSBPMShowingScope.png" alt="High level business process diagram showing the requirement to acknowledge the receipt of results." title="High level business process diagram showing the requirement to acknowledge the receipt of results." style="width:75%"></p>
 <br><br>
-## Use Case Diagram ##
 
-<p style="text-align:center;"><img src="images/engage/casestudies/southamptoncc/UHSBPMShowingScope.png" alt="Use Case Diagram showing the acknowlegement use cases being explored." title="Use Case Diagram showing the acknowlegement use cases being explored." style="width:75%"></p>
-<br><br>
+
