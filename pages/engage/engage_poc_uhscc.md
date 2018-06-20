@@ -38,4 +38,29 @@ The Trust is also a major centre for teaching and research in association with t
 <p style="text-align:center;"><img src="images/engage/casestudies/southamptoncc/UHSBPMShowingScope.png" alt="High level business process diagram showing the requirement to acknowledge the receipt of results." title="High level business process diagram showing the requirement to acknowledge the receipt of results." style="width:75%"></p>
 <br><br>
 
+## Sequence (As Is) ##
+
+<ul>
+<li>A User creates an order in eQuest.</li>
+<li>The Order is sent from eQuest to LabCentre.</li>
+<li>Results are returned from LabCentre to eQuest.</li>
+<li>eQuest sends results to Ensemble.</li>
+<li>Ensemble sends the results to 3rd party systems.</li>
+<li>User acknowledges results in eQuest.</li>
+</ul>
+
+## Sequence (To Be)
+
+<ul>
+<li>A User creates an order in eQuest.</li>
+<li>The Order is sent from eQuest to LabCentre.</li>
+<li>Results are returned from LabCentre to eQuest.</li>
+<li>eQuest sends the results to Ensemble.</li>
+<li>Ensemble sends results to 3rd party systems <b>(which includes MedXNotes if the user has subscribed)</b>.</li>
+<li>User acknowledges results in eQuest <b>or MedXNotes</b>.</li>
+<li><b>If the user acknowledges results in MedXNotes, the App will send the acknowledgement to Ensemble which will forward that back to eQuest.</b></li>
+<li><b>The FHIR response from eQuest will indicate if the post has been successful. The user may not have acknowledgement permissions or the result may have already been acknowledged by another user; in which case the response will indicate a failure.</b></li>
+</ul>
+
+
 
