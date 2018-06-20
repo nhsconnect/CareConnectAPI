@@ -62,5 +62,8 @@ The Trust is also a major centre for teaching and research in association with t
 <li><b>The FHIR response from eQuest will indicate if the post has been successful. The user may not have acknowledgement permissions or the result may have already been acknowledged by another user; in which case the response will indicate a failure.</b></li>
 </ol>
 
+## Sequence Diagram (To Be)
 
+<p style="text-align:center;"><img src="images/engage/casestudies/southamptoncc/Sequence Diagram (Showing Scope).svg" alt="To Be Sequence Diagram." title="Sequence diagram showing the expected message flow between systems." style="width:75%"></p>
+<br>
 
