@@ -58,7 +58,6 @@ The Trust is also a major centre for teaching and research in association with t
 <li>eQuest sends the results to Ensemble.</li>
 <li>Ensemble sends results to 3rd party systems <b>(which includes MedXNotes if the user has subscribed)</b>.</li>
 <li>User acknowledges results in eQuest <b>or MedXNotes</b>.</li>
-<li>User acknowledges results in eQuest <b>or MedXNotes</b>.</li>
 <li><b>If the user acknowledges results in MedXNotes, the App will send the acknowledgement to Ensemble which will forward that back to eQuest.</b></li>
 <li><b>The FHIR response from eQuest will indicate if the post has been successful. The user may not have acknowledgement permissions or the result may have already been acknowledged by another user; in which case the response will indicate a failure.</b></li>
 </ol>
