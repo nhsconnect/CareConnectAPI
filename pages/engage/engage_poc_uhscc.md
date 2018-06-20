@@ -36,7 +36,7 @@ The Trust is also a major centre for teaching and research in association with t
 ## Business Process ##
 
 <p style="text-align:center;"><img src="images/engage/casestudies/southamptoncc/UHSBPMShowingScope.png" alt="High level business process diagram showing the requirement to acknowledge the receipt of results." title="High level business process diagram showing the requirement to acknowledge the receipt of results." style="width:75%"></p>
-<br><br>
+<br>
 
 ## Sequence (As Is) ##
 
