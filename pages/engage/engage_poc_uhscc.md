@@ -67,3 +67,9 @@ The Trust is also a major centre for teaching and research in association with t
 <p style="text-align:center;"><img src="images/engage/casestudies/southamptoncc/Sequence Diagram (Showing Scope).svg" alt="To Be Sequence Diagram." title="Sequence diagram showing the expected message flow between systems." style="width:75%"></p>
 <br>
 
+## Proposed Solution ##
+
+An Encounter Resource may be used to represent patient interactions although for this purpose, it is not straightforward and adds complexity to a solution. A better solution using STU3 is a Task Resource. This has the disadvantage of not being part of the existing Care Connect profiled Resources.
+
+<p style="text-align:center;"><img src="images/engage/casestudies/southamptoncc/Results Acknowledgement Entity Diagram (Stu3).png" alt="Entity Relationship Model of acknowledgements using Task resources." title="Entity Relationship Model of acknowledgements using Task resources." style="width:75%"></p>
+<br>
