@@ -19,8 +19,7 @@ The pharmacists and technicians within secondary care would like to retrieve a p
 The Pharmacist does not have a consolidated view of a patient's medications because the information is distributed across a number of systems.
 <br><br>
 ## Business Process ##
-
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolPharmacistsHighLevel.png" alt="High level business process diagram showing the requirement to display medication from either a specific system or all systems." title="High level business process diagram showing the requirement to display medication from either a specific system or all systems." style="width:75%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BCC Business Process.svg" alt="High level business process diagram showing the requirement to display medication from either a specific system or all systems." title="High level business process diagram showing the requirement to display medication from either a specific system or all systems." style="width:75%"></p>
 <br><br>
 ## Use Case Diagram ##
 
