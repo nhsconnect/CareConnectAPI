@@ -62,13 +62,9 @@ Given that the essential elements of this requirement focus around medication, t
 While a <a href="api_medication_medicationstatement.html">MedicationStatement</a> is a resource that is designed to indicate the medication that is currently being taken by the patient, it has a broad scope when compared to a <a href="api_medication_medicationrequest.html">MedicationRequest</a>. A <a href="api_medication_medicationstatement.html">MedicationStatement</a> can include medications currently being taken, previously taken, and knowledge that could be sourced from the patient directly, or somebody that has a relationship with the patient. Once the medications are reconciled, a <a href="api_medication_medicationstatement.html">MedicationStatement</a> would be the best way to share current medications.
 
 The supplying systems are unlikely to have supporting data to create a <a href="https://www.hl7.org/fhir/medicationstatement.html">MedicationStatement</a> but should have a history of prescriptions that have been created for a patient. It is therefore better to request a list of prescriptions directly which is something that the supplying sytem can more reliably return, leaving the Pharmacist's reconcilliation process to determine which of these prescriptions are currently being taken.
-<div style="display:flex;flex-wrap:wrap;">
-<div style="flex:3;min-width:30em;"><p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesUpdated.png" alt="Diagram showing that the resources MedicationOrder, MedicationStatement, Patient and Practitioner have been identified as necessary profiles to support a solution for Bristol Connecting Care." title="Diagram showing that the resources MedicationOrder, MedicationStatement, Patient and Practitioner have been identified as necessary profiles to support a solution for Bristol Connecting Care." style="width:75%"></p></div>
-<div style="flex:1;min-width:20em;max-width:25em;border-style:solid;border-width:thin;border-color:#005eb8;border-radius:5px;padding:1em;margin-left:auto;margin-right:0px">
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesOriginal.png" alt="Diagram showing the first proposal which didn't include the use of MedicationOrder" style="width:75%"></p>
-<p><small><i>The first approach considered didn't include the MedicalStatement resource but simply proposed the use of MedicalOrder. Following clinical review it was highlighted that this would assume that all medications are prescribed which is not the case. Therefore, this was extended to include both MedicationStatement and MedicationOrder.</i></small></p>
-</div>
-</div>
+
+The following diagram shows an Entity Relationship containing the FHIR Medications Module. It also includes the Resource List which is the most appropriate method for accessing the current medications in this instance.
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BCC Entity Relationship.svg" alt="Entity relationship showing the FHIR Medications Module including the Resource List." title="Entity relationship showing the FHIR Medications Module including the Resource List." style="width:75%"></p>
 <br><br>
 ## Resources ##
 The resources used can be found by clicking on the links below:
