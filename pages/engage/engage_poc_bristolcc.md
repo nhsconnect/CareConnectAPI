@@ -65,7 +65,8 @@ The supplying systems are unlikely to have supporting data to create a <a href="
 
 The following diagram shows an Entity Relationship containing the FHIR Medications Module. It also includes the Resource List which is the most appropriate method for accessing the current medications in this instance.
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC Entity Relationship.svg" alt="Entity relationship showing the FHIR Medications Module including the Resource List." title="Entity relationship showing the FHIR Medications Module including the Resource List." style="width:75%"></p>
-<br><br>
+
+This diagram also highlights where most of the required dataset resides within the FHIR Medication Module.
 ## Resources ##
 The resources used can be found by clicking on the links below:
 <table style="min-width:100%;width:100%">
@@ -74,11 +75,11 @@ The resources used can be found by clicking on the links below:
 <th style="width:50%;">Individuals</th>
 </tr>
 <tr>
-<td><a href="api_medication_medicationorder.html">MedicationOrder</a></td>
+<td><a href="api_medication_medicationrequest.html">MedicationRequest</a></td>
 <td><a href="api_entity_patient.html">Patient</a></td>
 </tr>
 <tr>
-<td><a href="api_medication_medicationstatement.html">MedicationStatement</a></td>
+<td></td>
 <td><a href="api_entity_practitioner.html">Practitioner</a> (Problem)</td>
 </tr>
 </table>
