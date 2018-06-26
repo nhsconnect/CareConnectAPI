@@ -62,7 +62,7 @@ The following diagram shows an Entity Relationship containing the FHIR Medicatio
 
 This diagram also highlights where most of the required dataset resides within the FHIR Medication Module.
 ## Resources ##
-The resources used can be found by clicking on the links below:
+The 
 <table style="min-width:100%;width:100%">
 <tr id="clinical">
 <th style="width:50%;">Medication</th>
@@ -77,9 +77,6 @@ The resources used can be found by clicking on the links below:
 <td><a href="api_entity_practitioner.html">Practitioner</a> (Problem)</td>
 </tr>
 </table>
-
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/ERD.png" alt="Entity Relationship Diagram showing the applied profiles." title="Entity Relationship Diagram showing the applied profiles." style="width:75%"></p>
-<br><br>
 ## API Signatures ##
 
 As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verified' NHS Number.
