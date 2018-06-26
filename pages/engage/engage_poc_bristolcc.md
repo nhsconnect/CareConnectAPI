@@ -22,8 +22,7 @@ The Pharmacist does not have a consolidated view of a patient's medications beca
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BCC Business Process.svg" alt="High level business process diagram showing the requirement to display medication from either a specific system or all systems." title="High level business process diagram showing the requirement to display medication from either a specific system or all systems." style="width:75%"></p>
 <br><br>
 ## Use Case Diagram ##
-
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolUseCaseDiagram.png" alt="Use Case Diagram showing the Pharamacists use cases being explored." title="Use Case Diagram showing the Pharamacists use cases being explored." style="width:75%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BCC Sequence Diagram.svg" alt="Use Case Diagram showing the Pharamacists use cases being explored." title="Use Case Diagram showing the Pharamacists use cases being explored." style="width:75%"></p>
 <br><br>
 ## User Stories ##
 
