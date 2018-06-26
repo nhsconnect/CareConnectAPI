@@ -12,18 +12,14 @@ INTEROPen is working with health care providers and system vendors to prove the 
 -->
 ## Client's Context ##
 Connecting Care is a local electronic patient record that allows health and social care professionals directly involved in your care, to share a summary of your medical record.
-<br><br>
 ## Case Overview ##
 The pharmacists and technicians within secondary care would like to retrieve a patient's medications history to prepare a list or reconciled medications. While the pharmacist's need is around medication reconciliation, the requirement for interoperability is to obtain a list of "current" medications from external systems such as the GP systems.
 ## Problem Statement ##
 The Pharmacist does not have a consolidated view of a patient's medications because the information is distributed across a number of systems.
-<br><br>
 ## Business Process ##
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BCC Business Process.svg" alt="High level business process diagram showing the requirement to display medication from either a specific system or all systems." title="High level business process diagram showing the requirement to display medication from either a specific system or all systems." style="width:75%"></p>
-<br><br>
 ## Use Case Diagram ##
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BCC Sequence Diagram.svg" alt="Use Case Diagram showing the Pharamacists use cases being explored." title="Use Case Diagram showing the Pharamacists use cases being explored." style="width:75%"></p>
-<br><br>
 ## User Stories ##
 While the scope is initially demonstrated in the use case diagram, it is possible to refine the scope further within user stories that originate from conversations with the user. For example, from the perspective of the current Care Connect specification, security is outside of the scope of profile definition and further discussions would be required within the trust to clarify where responsibility lies.
 
@@ -38,7 +34,6 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to display patient medications from different sources in a single consolidated view so I can more easily reconcile them into a single list.</td></tr>
 <tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.</td></tr>
 </table>
-<br><br>
 ## Dataset ##
 <table style="width:100%;max-width:100%">
 <tr><td style="width:50%">Drug name (generic)</td><td>Issue date</td></tr>
@@ -55,7 +50,6 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td>Role of person</td><td>Issue status (either a date of issue or 'Not yet issued')</td></tr>
 <tr><td>Date authorised until</td><td></td></tr>
 </table>
-<br><br>
 ## FHIR Resource Mapping ##
 Given that the essential elements of this requirement focus around medication, the process of determining the best solution can start by looking at the <a href="https://www.hl7.org/fhir/medications-module.html">FHIR Medications Module</a>. This leads to a list of medication related Resources. The pharmicist is ultimately looking for what might be considered as current medications for any of the supporting systems. Ultimately there are two approaches to obtaining a list of medications: <a href="api_medication_medicationrequest.html">MedicationRequest</a> and <a href="api_medication_medicationstatement.html">MedicationStatement</a>.
 
