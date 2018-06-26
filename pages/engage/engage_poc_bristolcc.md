@@ -25,7 +25,6 @@ The Pharmacist does not have a consolidated view of a patient's medications beca
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BCC Sequence Diagram.svg" alt="Use Case Diagram showing the Pharamacists use cases being explored." title="Use Case Diagram showing the Pharamacists use cases being explored." style="width:75%"></p>
 <br><br>
 ## User Stories ##
-
 While the scope is initially demonstrated in the use case diagram, it is possible to refine the scope further within user stories that originate from conversations with the user. For example, from the perspective of the current Care Connect specification, security is outside of the scope of profile definition and further discussions would be required within the trust to clarify where responsibility lies.
 
 <table style="width:100%;max-width:100%"><thead><tr><th style="min-width:10em;">Feature</th><th>User Story</th></tr></thead>
@@ -41,7 +40,6 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 </table>
 <br><br>
 ## Dataset ##
-
 <table style="width:100%;max-width:100%">
 <tr><td style="width:50%">Drug name (generic)</td><td>Issue date</td></tr>
 <tr><td>Drug name (Brand) if applicable</td><td>Number of issues</td></tr>
@@ -58,8 +56,12 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td>Date authorised until</td><td></td></tr>
 </table>
 <br><br>
-## FHIR Resources ##
+## FHIR Resource Mapping ##
+Given that the essential elements of this requirement focus around medication, the process of determining the best solution can start by looking at the <a href="https://www.hl7.org/fhir/medications-module.html">FHIR Medications Module</a>. This leads to a list of medication related Resources. The pharmicist is ultimately looking for what might be considered as current medications for any of the supporting systems. Ultimately there are two approaches to obtaining a list of medications: <a href="https://www.hl7.org/fhir/medicationrequest.html">MedicationRequest</a> and <a href="https://www.hl7.org/fhir/medicationstatement.html">MedicationStatement</a>.
 
+While a <a href="https://www.hl7.org/fhir/medicationstatement.html">MedicationStatement</a> is a resource that is designed to indicate the medication that is currently being taken by the patient, it has a broad scope when compared to a <a href="https://www.hl7.org/fhir/medicationrequest.html">MedicationRequest</a>. A <a href="https://www.hl7.org/fhir/medicationstatement.html">MedicationStatement</a> can include medications currently being taken, previously taken, and knowledge that could be sourced from the patient directly, or somebody that has a relationship with the patient. Once the medications are reconciled, a <a href="https://www.hl7.org/fhir/medicationstatement.html">MedicationStatement</a> would be the best way to share current medications.
+
+The supplying systems are unlikely to have supporting data to create a <a href="https://www.hl7.org/fhir/medicationstatement.html">MedicationStatement</a> but should have a history of prescriptions that have been created for a patient. It is therefore better to request a list of prescriptions directly which is something that the supplying sytem can more reliably return, leaving the Pharmacist's reconcilliation process to determine which of these prescriptions are currently being taken.
 <div style="display:flex;flex-wrap:wrap;">
 <div style="flex:3;min-width:30em;"><p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRResourcesUpdated.png" alt="Diagram showing that the resources MedicationOrder, MedicationStatement, Patient and Practitioner have been identified as necessary profiles to support a solution for Bristol Connecting Care." title="Diagram showing that the resources MedicationOrder, MedicationStatement, Patient and Practitioner have been identified as necessary profiles to support a solution for Bristol Connecting Care." style="width:75%"></p></div>
 <div style="flex:1;min-width:20em;max-width:25em;border-style:solid;border-width:thin;border-color:#005eb8;border-radius:5px;padding:1em;margin-left:auto;margin-right:0px">
