@@ -37,9 +37,9 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 ## Dataset ##
 <table style="width:100%;max-width:100%">
   <tr><th>Data Item</th><th>Medication</th><th>MedicationRequest</th><th>MedicationStatement</th></tr>
-  <tr><td>Additional instructions</td><td></td><td></td><td></td></tr>
-  <tr><td>Cancellation reason</td><td></td><td></td><td></td></tr>
-  <tr><td>Date authorised until</td><td></td><td></td><td></td></tr>
+  <tr><td>Additional instructions</td><td></td><td>dosageInstruction.additionalInstruction</td><td></td></tr>
+  <tr><td>Cancellation reason</td><td></td><td>extension.statusReason</td><td></td></tr>
+  <tr><td>Date authorised until</td><td></td><td>dispenseRequest.validityPeriod.end</td><td></td></tr>
   <tr><td>Date of first issue</td><td></td><td></td><td></td></tr>
   <tr><td>Date of last issue</td><td></td><td></td><td></td></tr>
   <tr><td>Drug name (Brand) if applicable</td><td></td><td></td><td></td></tr>
@@ -50,18 +50,17 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
   <tr><td>Issue quantity</td><td></td><td></td><td></td></tr>
   <tr><td>Issue status (either a date of issue or 'Not yet issued')</td><td></td><td></td><td></td></tr>
   <tr><td>Issue type (acute, repeat, repeat dispensing or automatic)</td><td></td><td></td><td></td></tr>
-  <tr><td>Number of authorised issues</td><td></td><td></td><td></td></tr>
+  <tr><td>Number of authorised issues</td><td></td><td>dispenseRequest.numberOfRepeatsAllowed</td><td></td></tr>
   <tr><td>Number of issues</td><td></td><td></td><td></td></tr>
-  <tr><td>Person recorded</td><td></td><td></td><td></td></tr>
-  <tr><td>Prescribed dose</td><td></td><td></td><td></td></tr>
-  <tr><td>Prescribed frequency</td><td></td><td></td><td></td></tr>
-  <tr><td>Prescription data</td><td></td><td></td><td></td></tr>
-  <tr><td>Prescription delivery method</td><td></td><td></td><td></td></tr>
+  <tr><td>Person recorded</td><td></td><td>requester</td><td></td></tr>
+  <tr><td>Prescribed dose</td><td></td><td>dose</td><td></td></tr>
+  <tr><td>Prescribed frequency</td><td></td><td>rate</td><td></td></tr>
+  <tr><td>Prescription delivery method</td><td></td><td>method</td><td></td></tr>
   <tr><td>Product form</td><td></td><td></td><td></td></tr>
   <tr><td>Product strength</td><td></td><td></td><td></td></tr>
   <tr><td>Role of person</td><td></td><td></td><td></td></tr>
   <tr><td>Source system identity</td><td></td><td></td><td></td></tr>
-  <tr><td>Status of medication</td><td></td><td></td><td></td></tr>
+  <tr><td>Status of medication</td><td></td><td>status</td><td></td></tr>
 </table>
 ## FHIR Resource Mapping ##
 Given that the essential elements of this requirement focus around medication, the process of determining the best solution can start by looking at the <a href="https://www.hl7.org/fhir/medications-module.html">FHIR Medications Module</a>. This leads to a list of medication related Resources. The pharmicist is ultimately looking for what might be considered as current medications for any of the supporting systems. Ultimately there are two approaches to obtaining a list of medications: <a href="api_medication_medicationrequest.html">MedicationRequest</a> and <a href="api_medication_medicationstatement.html">MedicationStatement</a>.
