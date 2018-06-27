@@ -28,9 +28,9 @@ GET [baseUrl]/Binary/[id]</div>
 <p>Return a single <code class="highlighter-rouge">Binary</code> for the specified id.</p>
 
 
-<p>All requests SHALL contain a valid ‘Authorization’ header and SHALL contain an ‘Accept’ header. The `Accept` header indicates the format of the response the client is able to understand, this maybe be one of the following <code class="highlighter-rouge">application/json+fhir</code> or <code class="highlighter-rouge">application/xml+fhir</code>, this will return the requested resource as <code class="highlighter-rouge">Binary</code> resource.</p>
+<p>All requests SHALL contain a valid ‘Authorization’ header and SHALL contain an ‘Accept’ header. The `Accept` header indicates the format of the response the client is able to understand, this maybe be one of the following <code class="highlighter-rouge">application/json+fhir</code> or <code class="highlighter-rouge">application/xml+fhir</code>, this will return the requested resource as FHIR <code class="highlighter-rouge">Binary</code> resource.</p>
 
-<p>The <code class="highlighter-rouge">Binary</code> can be returned in native format, this is achieved by adding the relevant mime type the Accept header (or use wild card <code class="highlighter-rouge">*/*</code>).</p>
+<p>The <code class="highlighter-rouge">Binary</code> whill be returned in a native format (i.e. not contained within a FHIR resource) if no MIME type is not specified, an appropriate MIME type is included or a wild card <code class="highlighter-rouge">*/*</code>) is included within the request header.</p>
 
 Common health related MIME types are listed below:
 
