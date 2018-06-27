@@ -35,6 +35,7 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.</td></tr>
 </table>
 ## FHIR Resource Mapping ##
+An initial dataset was extracted from the initial requirements and these can be mapped to various FHIR Resources. It is possible to see that the required data items are spread across a number of different (but related) resources.
 <table style="font-size:small; width:100%; max-width:100%">
   <tr><th>Data Item</th><th>Medication</th><th>MedicationRequest</th><th>MedicationStatement</th></tr>
   <tr><td>Additional instructions</td><td></td><td>dosageInstruction.additionalInstruction</td><td>dosage.additionalInstruction</td></tr>
