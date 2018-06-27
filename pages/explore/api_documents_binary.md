@@ -10,6 +10,13 @@ summary: A binary resource can contain any content, whether text, image, pdf, zi
 
 {% include custom/fhir.referencemin.html resource="Binary" page="" fhirname="Binary" fhirlink="binary.html" content="" userlink="" %}
 
+There are situations where it is useful or required to handle pure binary content using the same framework as other resources. Typically, this is when the binary content is referred to from other FHIR Resources. Using the same framework means that the existing servers, security arrangements, code libraries etc. can handle additional related content. Typically, Binary resources are used for handling content such as:
+
+- PDF Documents
+- Images
+- HL7 Structured Documents (e.g. CDA or FHIR Documents)
+
+Binary resources behave slightly differently to all other resources on the RESTful API. Specifically, when a read request is made for the binary resource that doesn't explicitly specify the FHIR content types "application/fhir+xml" or "application/fhir+json", then the content should be returned using the content type stated in the resource. e.g. if the content type in the resource is "application/pdf", then the content should be returned as a PDF directly.
 
 ## 1. Read ##
 
