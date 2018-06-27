@@ -33,6 +33,8 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to display patient medications from different sources in a single consolidated view so I can more easily reconcile them into a single list.</td></tr>
 <tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.</td></tr>
 </table>
+## POC Architectural Overview ##
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC_POC_Case_Overview.svg" alt="Architectural overview showing the scope of the POC." title="Architectural overview showing the scope of the POC." style="width:75%"></p>
 ## FHIR Resource Mapping ##
 An initial dataset was extracted from the initial requirements and these can be mapped to various FHIR Resources. It is possible to see that the required data items are spread across a number of different (but related) resources.
 <table style="font-size:small; width:100%; max-width:100%">
