@@ -37,16 +37,15 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 ## Dataset ##
 <table style="width:100%;max-width:100%">
 <tr><td style="width:50%">Drug name (generic)</td><td>Issue date</td></tr>
+<tr><td>Additional instructions</td><td>Prescription delivery method</td></tr>
+<tr><td>Cancellation reason</td><td>Date of last issue</td></tr>
 <tr><td>Drug name (Brand) if applicable</td><td>Number of issues</td></tr>
-<tr><td>Product form</td><td>Number of authorised issues</td></tr>
-<tr><td>Product strength</td><td>Source system identity</td></tr>
+<tr><td>Person recorded</td><td>Issue quantity</td></tr>
 <tr><td>Prescribed dose</td><td>History of courses for same ingredient</td></tr>
 <tr><td>Prescribed frequency</td><td>Issue type (acute, repeat, repeat dispensing or automatic)</td></tr>
-<tr><td>Prescription data</td><td>Issue notes</td></tr>
-<tr><td>Additional instructions</td><td>Prescription delivery method</td></tr>
+<tr><td>Prescription data</td><td>Issue notes</td></tr><tr><td>Product form</td><td>Number of authorised issues</td></tr>
+<tr><td>Product strength</td><td>Source system identity</td></tr>
 <tr><td>Status of medication</td><td>Date of first issue</td></tr>
-<tr><td>Cancellation reason</td><td>Date of last issue</td></tr>
-<tr><td>Person recorded</td><td>Issue quantity</td></tr>
 <tr><td>Role of person</td><td>Issue status (either a date of issue or 'Not yet issued')</td></tr>
 <tr><td>Date authorised until</td><td></td></tr>
 </table>
@@ -55,7 +54,7 @@ Given that the essential elements of this requirement focus around medication, t
 
 While a <a href="api_medication_medicationstatement.html">MedicationStatement</a> is a resource that is designed to indicate the medication that is currently being taken by the patient, it has a broad scope when compared to a <a href="api_medication_medicationrequest.html">MedicationRequest</a>. A <a href="api_medication_medicationstatement.html">MedicationStatement</a> can include medications currently being taken, previously taken, and knowledge that could be sourced from the patient directly, or somebody that has a relationship with the patient. Once the medications are reconciled, a <a href="api_medication_medicationstatement.html">MedicationStatement</a> would be the best way to share current medications.
 
-The supplying systems are unlikely to have supporting data to create a <a href="api_medication_medicationstatement.html">MedicationStatement</a> but should have a history of prescriptions that have been created for a patient. It is therefore better to request a list of prescriptions directly which is something that the supplying sytem can more reliably return, leaving the Pharmacist's reconcilliation process to determine which of these prescriptions are currently being taken.
+The supplying systems are unlikely to have supporting data to create a <a href="api_medication_medicationstatement.html">MedicationStatement</a> but should have a history of prescriptions that have been created for a patient. It is therefore better to request a list of prescriptions directly which is something that the supplying sytem can more reliably return, leaving the Pharmacist's reconcilliation process to determine which of these prescriptions are currently being taken. This is acheived with a "<a href="https://www.hl7.org/fhir/lifecycle.html#current">Current Resource List</a>"; more specifically a $current-medication request.
 
 The following diagram shows an Entity Relationship containing the FHIR Medications Module. It also includes the Resource List which is the most appropriate method for accessing the current medications in this instance.
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC Entity Relationship.svg" alt="Entity relationship showing the FHIR Medications Module including the Resource List." title="Entity relationship showing the FHIR Medications Module including the Resource List." style="width:75%"></p>
