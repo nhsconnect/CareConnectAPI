@@ -18,7 +18,7 @@ There are situations where it is useful or required to handle pure binary conten
 
 Binary resources behave slightly differently to all other resources on the RESTful API. Specifically, when a read request is made for the binary resource that doesn't explicitly specify the FHIR content types "application/fhir+xml" or "application/fhir+json", then the content should be returned using the content type stated in the resource. e.g. if the content type in the resource is "application/pdf", then the content should be returned as a PDF directly.
 
-The HL7 specification states that "the intent is that unless specifically requested, the FHIR XML/JSON representation is not returned." This behaviour is implemented in the Reference Implementation and would be expected of any standard implementation.
+The HL7 specification states that "the intent is that unless specifically requested, the FHIR XML/JSON representation is not returned". This behaviour is implemented in the Reference Implementation and would be expected of any standard implementation.
 
 ## 1. Read ##
 
