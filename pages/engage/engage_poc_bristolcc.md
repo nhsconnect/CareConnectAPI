@@ -34,7 +34,7 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to display patient medications from different sources in a single consolidated view so I can more easily reconcile them into a single list.</td></tr>
 <tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.</td></tr>
 </table>
-## Dataset ##
+## FHIR Resource Mapping ##
 <table style="font-size:small; width:100%; max-width:100%">
   <tr><th>Data Item</th><th>Medication</th><th>MedicationRequest</th><th>MedicationStatement</th></tr>
   <tr><td>Additional instructions</td><td></td><td>dosageInstruction.additionalInstruction</td><td>dosage.additionalInstruction</td></tr>
@@ -62,7 +62,6 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
   <tr><td>Source system identity</td><td></td><td></td><td></td></tr>
   <tr><td>Status of medication</td><td></td><td>status</td><td>status</td></tr>
 </table>
-## FHIR Resource Mapping ##
 Given that the essential elements of this requirement focus around medication, the process of determining the best solution can start by looking at the <a href="https://www.hl7.org/fhir/medications-module.html">FHIR Medications Module</a>. This leads to a list of medication related Resources. The pharmicist is ultimately looking for what might be considered as current medications for any of the supporting systems. Ultimately there are two approaches to obtaining a list of medications: <a href="api_medication_medicationrequest.html">MedicationRequest</a> and <a href="api_medication_medicationstatement.html">MedicationStatement</a>.
 
 While a <a href="api_medication_medicationstatement.html">MedicationStatement</a> is a resource that is designed to indicate the medication that is currently being taken by the patient, it has a broad scope when compared to a <a href="api_medication_medicationrequest.html">MedicationRequest</a>. A <a href="api_medication_medicationstatement.html">MedicationStatement</a> can include medications currently being taken, previously taken, and knowledge that could be sourced from the patient directly, or somebody that has a relationship with the patient. Once the medications are reconciled, a <a href="api_medication_medicationstatement.html">MedicationStatement</a> would be the best way to share current medications.
@@ -73,22 +72,7 @@ The following diagram shows an Entity Relationship containing the FHIR Medicatio
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC Entity Relationship.svg" alt="Entity relationship showing the FHIR Medications Module including the Resource List." title="Entity relationship showing the FHIR Medications Module including the Resource List." style="width:75%"></p>
 
 This diagram also highlights where most of the required dataset resides within the FHIR Medication Module.
-## Resources ##
-The 
-<table style="min-width:100%;width:100%">
-<tr id="clinical">
-<th style="width:50%;">Medication</th>
-<th style="width:50%;">Individuals</th>
-</tr>
-<tr>
-<td><a href="api_medication_medicationrequest.html">MedicationRequest</a></td>
-<td><a href="api_entity_patient.html">Patient</a></td>
-</tr>
-<tr>
-<td></td>
-<td><a href="api_entity_practitioner.html">Practitioner</a> (Problem)</td>
-</tr>
-</table>
+
 ## API Signatures ##
 
 As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verified' NHS Number.
