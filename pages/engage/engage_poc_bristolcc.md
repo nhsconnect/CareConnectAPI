@@ -34,7 +34,7 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.</td></tr>
 </table>
 ## POC Architectural Overview ##
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC_POC_Case_Overview.svg" alt="Architectural overview showing the scope of the POC." title="Architectural overview showing the scope of the POC." style="width:75%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/HighLevelMeds.svg" alt="Architectural overview showing the scope of the POC." title="Architectural overview showing the scope of the POC." style="width:75%"></p>
 ## FHIR Resource Mapping ##
 An initial dataset was extracted from the initial requirements and these can be mapped to various FHIR Resources. It is possible to see that the required data items are spread across a number of different (but related) resources.
 <table style="font-size:small; width:100%; max-width:100%">
@@ -115,10 +115,10 @@ As a Pharmacist (Hospital Services) I want to know know the last issue of a pres
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
 ~~~
 <i>The last issue of a prescription can be deduced by ordering the returned medications</i>
-<br>
+<br><br>
 As a Pharmacist (Hospital Services) I want to display patient medications from different sources in a single consolidated view so I can more easily reconcile them into a single list.
 <i>CC profiles - MedicationStatement and it’s containing profiles are structured and can be returned in Json, Xml or any other format.</i>
-<br>
+<br><br>
 As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.
 
 <i>
