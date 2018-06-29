@@ -165,7 +165,7 @@ This can be found on the API page depending on which resource you are searching:
 <br><br>
 -->
 ## POC Sequence Diagram ##
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/Bristol CC Sequence Diagram.svg" alt="Sequence diagram showing the flow of information between actors" title="Sequence diagram showing the flow of information between actors" style="width:75%"></p>
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/Bristol CC Sequence Diagram.svg" alt="Sequence diagram showing the flow of information between actors" title="Sequence diagram showing the flow of information between actors" style="width:100%"></p>
 <br><br>
 ## Technical Architecture ##
 
