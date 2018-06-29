@@ -156,7 +156,7 @@ This can be found on the API page depending on which resource you are searching:
 </tr>
 <tr>
 <td><a href="api_medication_medicationstatement.html">MedicationStatement</a></td>
-<td><a href="api_entity_practitioner.html">Practitioner</a> (Problem)</td>
+<td></td>
 </tr>
 </table>
 ## POC Sequence Diagram ##
