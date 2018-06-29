@@ -73,7 +73,7 @@ Forming an API request for MedicationRequest that only returns 'current' Medicat
 The following diagram shows an Entity Relationship containing the FHIR Medications Module. It also includes the Resource List which is the most appropriate method for accessing the current medications in this instance.
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC Entity Relationship.svg" alt="Entity relationship showing the FHIR Medications Module including the Resource List." title="Entity relationship showing the FHIR Medications Module including the Resource List." style="width:75%"></p>
 
-This diagram also highlights where most of the required dataset resides within the FHIR Medication Module.
+This diagram also highlights where most of the required dataset resides within the FHIR Medication Module. Some of the required data will also require additional resources to fully satisfy and may also have to be derived.
 
 Bristol are initially retreiving medication history from a system which only records the prescription of controlled drugs. This means that the expected medication history for one patient held on the system is likely to be small. For this reason, the initial requests being implemented will be for <a href="api_medication_medicationrequest.html">MedicationRequest</a> using the following API signature.
 ~~~
@@ -85,7 +85,7 @@ While the intention at Bristol if to retreive prescription information from a va
 ## API Signature Examples ##
 ### Initial POC ###
 The initial POC proposal only requires all MedicationRequests to be returned from a single source.
-As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verified' NHS Number.
+<b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to retrieve a patient's medications using their NHS Number <b>so</b> that I can find prescribed medications for a patient when I know the 'Traced' and 'Verified' NHS Number.
 The following example is the simplest form of the request and does require the client to have retreived the patient identifier with a previous query against patient. All supplying systems that support MedicationRequest will support this approach.
 ~~~
 GET [baseUrl]/MedicationRequest?patient=[id]
@@ -95,7 +95,7 @@ An alternative approach to building the full request in a single call is possibl
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 ~~~
 <br>
-As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an Trust/Hospital Number or Master Patient ID (MPI)) so that I can find medications for a patient when I don't know the traced and verified NHS Number.
+<b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to retrieve a patient's medications using a local system number (e.g an Trust/Hospital Number or Master Patient ID (MPI)) <b>so</b> that I can find medications for a patient when I don't know the traced and verified NHS Number.
 ~~~
 GET [baseUrl]/MedicationRequest?patient=[id]
 ~~~
@@ -105,34 +105,34 @@ GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.example.nhs.uk/P
 ~~~
 <br>
 ### For future consideration ###
-As a Pharmacist (Hospital Services) I want retrieve all of a patient's medications from one or more specific systems so I can build an accurate list of reconciled medications.
+<b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to retrieve all of a patient's medications from one or more specific systems <b>so</b> I can build an accurate list of reconciled medications.
 ~~~
 GET [baseUrl]
 /MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
 ~~~
 <br>
-As a Pharmacist (Hospital Services) I want to know the first issue of a prescription of medication for the patient so that I know how long the patient has been on a particular medication and I can see if this has changed over time.
+<b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to know the first issue of a prescription of medication for the patient <b>so</b> that I know how long the patient has been on a particular medication and I can see if this has changed over time.
 ~~~
 GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
 ~~~
 <i>The first issue of a prescription can be deduced from the results.</i>
 <br>
-As a Pharmacist (Hospital Services) know the current issue of a prescription of medication for the patient so that I can include this in my reconciliation and I can identify how this have changed since the initial issue.
+<b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to know the current issue of a prescription of medication for the patient <b>so</b> that I can include this in my reconciliation and I can identify how this have changed since the initial issue.
 ~~~
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
 ~~~
 <i>The current issue of a prescription can be deduced from the list if issues by identifying the most recent in the returned list.</i>
 <br>
-As a Pharmacist (Hospital Services) I want to know know the last issue of a prescription of medication for the patient so that I know how long the patient was expected to be issued with that medication.
+<b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to know the last issue of a prescription of medication for the patient <b>so</b> that I know how long the patient was expected to be issued with that medication.
 ~~~
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
 ~~~
 <i>The last issue of a prescription can be deduced by ordering the returned medications</i>
 <br><br>
-As a Pharmacist (Hospital Services) I want to display patient medications from different sources in a single consolidated view so I can more easily reconcile them into a single list.
+<b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to display patient medications from different sources in a single consolidated view <b>so</b> I can more easily reconcile them into a single list.
 <i>CC profiles - MedicationStatement and it’s containing profiles are structured and can be returned in Json, Xml or any other format.</i>
 <br><br>
-As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.
+<b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to know if results have not been returned due to a error <b>so</b> that I can consider the impact of missing information on my reconciliation.
 
 <i>
 404- Resource not found<br>
@@ -164,8 +164,7 @@ This can be found on the API page depending on which resource you are searching:
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRBundle.png" alt="Diagram showing the bundle that is returned following a search" title="Diagram showing the bundle that is returned following a search"></p>
 <br><br>
 -->
-## API Sequence Diagrams ##
-
+## POC Sequence Diagram ##
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCCSequenceDiagram.png" alt="Sequence diagram showing the flow of information between actors" title="Sequence diagram showing the flow of information between actors" style="width:75%"></p>
 <br><br>
 ## Technical Architecture ##
