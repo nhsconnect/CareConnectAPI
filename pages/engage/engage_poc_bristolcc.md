@@ -167,10 +167,6 @@ This can be found on the API page depending on which resource you are searching:
 ## POC Sequence Diagram ##
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/Bristol CC Sequence Diagram.svg" alt="Sequence diagram showing the flow of information between actors" title="Sequence diagram showing the flow of information between actors" style="width:100%"></p>
 <br><br>
-## Technical Architecture ##
-
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/Bristol Technical Architecture.jpg" alt="Diagram showing an overview of the solution's architecture." title="Diagram showing an overview of the solution's architecture." style="width:100%"></p>
-<br><br>
 ## Acceptance Criteria ##
 
 While the acceptance criteria is not fully developed, below is an example of some possible criteria that could be defined.
