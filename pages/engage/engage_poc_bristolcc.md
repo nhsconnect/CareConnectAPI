@@ -33,8 +33,6 @@ While the scope is initially demonstrated in the use case diagram, it is possibl
 <tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to display patient medications from different sources in a single consolidated view so I can more easily reconcile them into a single list.</td></tr>
 <tr><td style="vertical-align:middle;">Medication List (View)</td><td>As a Pharmacist (Hospital Services) I want to know if results have not been returned due to a error so that I can consider the impact of missing information on my reconciliation.</td></tr>
 </table>
-## POC Architectural Overview ##
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/HighLevelMeds.svg" alt="Architectural overview showing the scope of the POC." title="Architectural overview showing the scope of the POC." style="width:75%"></p>
 ## FHIR Resource Mapping ##
 An initial dataset was extracted from the initial requirements and these can be mapped to various FHIR Resources. It is possible to see that the required data items are spread across a number of different (but related) resources.
 <table style="font-size:small; width:100%; max-width:100%">
@@ -70,7 +68,7 @@ While a <a href="api_medication_medicationstatement.html">MedicationStatement</a
 
 Supplying systems may not have sufficient data to create a <a href="api_medication_medicationstatement.html">MedicationStatement</a>, but may have a history of prescriptions that have been created for a patient. This is common amongst Primary Care systems. In this situation, it is possible to list prescriptions as a way of determining medication history. This leaves the Pharmacist's reconcilliation process to determine which of these prescriptions are "current". This could be challenging if the patient has an extensive history recorded by the providing system.
 
-While it is too complex to form an API request for MedicationRequest that only returns MedicationRequests which are considered 'current', FHIR does have provision for a dedicated operation that allows the provider to serve a list of current MedicationRequests (or MedicationStatements). This is acheived with a "<a href="https://www.hl7.org/fhir/lifecycle.html#current">Current Resource List</a>"; more specifically by adopting the <a href="https://www.hl7.org/fhir/search.html#current">list search mechanism</a> $current-medication.
+Forming an API request for MedicationRequest that only returns 'current' MedicationRequests is a complex requirement. Alternatively, FHIR does have provision for a dedicated operation that allows the provider to serve a list of current MedicationRequests (or MedicationStatements). This is achieved with a "<a href="https://www.hl7.org/fhir/lifecycle.html#current">Current Resource List</a>"; more specifically by adopting the <a href="https://www.hl7.org/fhir/search.html#current">list search mechanism</a> $current-medication.
 
 The following diagram shows an Entity Relationship containing the FHIR Medications Module. It also includes the Resource List which is the most appropriate method for accessing the current medications in this instance.
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/BristolCC Entity Relationship.svg" alt="Entity relationship showing the FHIR Medications Module including the Resource List." title="Entity relationship showing the FHIR Medications Module including the Resource List." style="width:75%"></p>
@@ -81,12 +79,21 @@ Bristol are initially retreiving medication history from a system which only rec
 ~~~
 GET [baseUlr]/MedicationRequest?patient.identity=https:/fhir.nhs.uk/Id/nhs-number|1111111111&patient.family=smith
 ~~~
+## POC Architectural Overview ##
+<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/HighLevelMeds.svg" alt="Architectural overview showing the scope of the POC." title="Architectural overview showing the scope of the POC." style="width:75%"></p>
+While the intention at Bristol if to retreive prescription information from a variety of systems, initially the plan is only to retreive prescription information from the Theseus system which will only have information about the prescription of controlled drugs. The number of records expected against for patient is expected to be small. For this reason, the first proof of concept will demonstrate MedicationRequests being returned from an appropriate query for patient, directly against the MedicationRequest resource.
 ## API Signature Examples ##
+### Initial POC ###
 As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using their NHS Number so that I can find prescribed medications for a patient when I know the 'Traced' and 'Verified' NHS Number.
+~~~
+GET [baseUrl]/MedicationRequest?patient=[patient indentifier]
+~~~
+or
 ~~~
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
 ~~~
 <br>
+### For future consideration ###
 As a Pharmacist (Hospital Services) I want to retrieve a patient's medications using a local system number (e.g an Trust/Hospital Number or Master Patient ID (MPI)) so that I can find medications for a patient when I don't know the traced and verified NHS Number.
 ~~~
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
