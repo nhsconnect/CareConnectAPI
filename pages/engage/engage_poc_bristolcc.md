@@ -132,6 +132,7 @@ GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-nu
 <i>The last issue of a prescription can be deduced by ordering the returned medications</i>
 <br><br><br>
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to display patient medications from different sources in a single consolidated view <b>so</b> I can more easily reconcile them into a single list.
+<br><br>
 <i>CC profiles - MedicationStatement and it’s containing profiles are structured and can be returned in Json, Xml or any other format.</i>
 <br><br><br>
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to know if results have not been returned due to a error <b>so</b> that I can consider the impact of missing information on my reconciliation.
