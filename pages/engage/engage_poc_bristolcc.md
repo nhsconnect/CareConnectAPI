@@ -115,13 +115,14 @@ GET [baseUrl]
 ~~~
 GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
 ~~~
-<i>The first issue of a prescription can be deduced from the results.</i><br><br>
+<i>The first issue of a prescription can be deduced from the results.</i>
+<br><br>
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to know the current issue of a prescription of medication for the patient <b>so</b> that I can include this in my reconciliation and I can identify how this have changed since the initial issue.
 ~~~
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
 ~~~
 <i>The current issue of a prescription can be deduced from the list if issues by identifying the most recent in the returned list.</i>
-<br>
+<br><br>
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to know the last issue of a prescription of medication for the patient <b>so</b> that I know how long the patient was expected to be issued with that medication.
 ~~~
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
