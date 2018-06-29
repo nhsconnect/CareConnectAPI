@@ -93,7 +93,8 @@ GET [baseUrl]/MedicationRequest?patient=[id]
 An alternative approach to building the full request in a single call is possible but the support of this is not mandated.
 ~~~
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210
-~~~<br>
+~~~
+<br>
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to retrieve a patient's medications using a local system number (e.g an Trust/Hospital Number or Master Patient ID (MPI)) <b>so</b> that I can find medications for a patient when I don't know the traced and verified NHS Number.
 ~~~
 GET [baseUrl]/MedicationRequest?patient=[id]
@@ -101,13 +102,15 @@ GET [baseUrl]/MedicationRequest?patient=[id]
 or
 ~~~
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
-~~~<br>
+~~~
+<br>
 ### For future consideration ###
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to retrieve all of a patient's medications from one or more specific systems <b>so</b> I can build an accurate list of reconciled medications.
 ~~~
 GET [baseUrl]
 /MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&identifier=https://theccg.systemsupplier.co.uk/Sys1|
-~~~<br>
+~~~
+<br>
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to know the first issue of a prescription of medication for the patient <b>so</b> that I know how long the patient has been on a particular medication and I can see if this has changed over time.
 ~~~
 GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
