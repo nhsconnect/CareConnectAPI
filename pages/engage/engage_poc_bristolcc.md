@@ -84,8 +84,10 @@ GET [baseUlr]/MedicationRequest?patient=[id]
 While the intention at Bristol if to retreive prescription information from a variety of systems, initially the plan is only to retreive prescription information from the Theseus system which will only have information about the prescription of controlled drugs. The number of records expected against for patient is expected to be small. For this reason, the first proof of concept will demonstrate MedicationRequests being returned from an appropriate query for patient, directly against the MedicationRequest resource.
 ## API Signature Examples ##
 ### Initial POC ###
-The initial POC proposal only requires all MedicationRequests to be returned from a single source.<br>
+The initial POC proposal only requires all MedicationRequests to be returned from a single source.
+<br>
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to retrieve a patient's medications using their NHS Number <b>so</b> that I can find prescribed medications for a patient when I know the 'Traced' and 'Verified' NHS Number.
+<br>
 The following example is the simplest form of the request and does require the client to have retreived the patient identifier with a previous query against patient. All supplying systems that support MedicationRequest will support this approach.
 ~~~
 GET [baseUrl]/MedicationRequest?patient=[id]
@@ -104,7 +106,7 @@ or
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.example.nhs.uk/PAS/Patient|123345
 ~~~
 <br>
-### For future consideration ###
+### For Future Consideration ###
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to retrieve all of a patient's medications from one or more specific systems <b>so</b> I can build an accurate list of reconciled medications.
 ~~~
 GET [baseUrl]
@@ -122,16 +124,16 @@ GET [baseUrl]/MedicationStatement?patient.identifier=https://fhir.nhs.uk/Id/nhs-
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
 ~~~
 <i>The current issue of a prescription can be deduced from the list if issues by identifying the most recent in the returned list.</i>
-<br><br>
+<br><br><br>
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to know the last issue of a prescription of medication for the patient <b>so</b> that I know how long the patient was expected to be issued with that medication.
 ~~~
 GET [baseUrl]/MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&code=http://snomed.info/sct|[SNOMED ConceptID of Drug]
 ~~~
 <i>The last issue of a prescription can be deduced by ordering the returned medications</i>
-<br><br>
+<br><br><br>
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to display patient medications from different sources in a single consolidated view <b>so</b> I can more easily reconcile them into a single list.
 <i>CC profiles - MedicationStatement and it’s containing profiles are structured and can be returned in Json, Xml or any other format.</i>
-<br><br>
+<br><br><br>
 <b>As a</b> Pharmacist (Hospital Services) <b>I want</b> to know if results have not been returned due to a error <b>so</b> that I can consider the impact of missing information on my reconciliation.
 
 <i>
@@ -157,13 +159,6 @@ This can be found on the API page depending on which resource you are searching:
 <td><a href="api_entity_practitioner.html">Practitioner</a> (Problem)</td>
 </tr>
 </table>
-
-<!--  KGM Removed. This is showing an old response which has been updated. 
-## Search Results ##
-
-<p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/FHIRBundle.png" alt="Diagram showing the bundle that is returned following a search" title="Diagram showing the bundle that is returned following a search"></p>
-<br><br>
--->
 ## POC Sequence Diagram ##
 <p style="text-align:center;"><img src="images/engage/casestudies/bristolcc/Bristol CC Sequence Diagram.svg" alt="Sequence diagram showing the flow of information between actors" title="Sequence diagram showing the flow of information between actors" style="width:100%"></p>
 <br><br>
