@@ -47,7 +47,7 @@ Security Authentication will eventually allow a Care Connect API to be deployed 
 
 ## Security Scopes 
 
-Security Authorisation can be managed in different ways inside Care Connect and FHIR. Within the RESTful version scopes can be defined which restrict access to profiles depending on the defined system or end user. Currently the Security Authorisation provides an example of restricting access to certain profiles. However, in the future it might be possible to dynamically create Scopes on profiles. The CCRI provides a demonstration of OAuth2 Users & Scopes.
+Security Authorisation can be managed in different ways inside Care Connect and FHIR. Within the RESTful version scopes can be defined which restrict access to profiles depending on the defined system or end user. Currently the Security Authorisation provides an example of restricting access to certain Resources. However, in the future it might be possible to dynamically create Scopes on Resources. The CCRI provides a demonstration of OAuth2 Users & Scopes.
 
 
 ## Resource scopes
