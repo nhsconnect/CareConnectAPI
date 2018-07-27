@@ -93,7 +93,7 @@ complaint | symptom | finding | diagnosis | problem | need" selected="symptom" n
 
 Return all Condition resources for Patient with an id of 1, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-{% include custom/embedcurl.html title="Search Condition" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Condition?patient=1'" %}
+{% include custom/embedcurl.html title="Search Condition" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Condition?patient=1'" %}
 
 
 <h3 id="32-response-headers">3.2 Explore the Response</h3>

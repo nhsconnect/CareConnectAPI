@@ -97,12 +97,12 @@ Because FHIR standardises the common entities of a healthcare domain, the syntax
 Starting with an initial query to obtain a specific resource reference:
 
 ```
-GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Patient?family=Delgado&birthdate=1942-01-30
+GET http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Patient?family=Delgado&birthdate=1942-01-30
 ```
 
 A patient resource can be retrieved which contains pointers to other resources:
 ```
-GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Patient/1010
+GET http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Patient/1010
 ```
 
 Those pointers can be any end point which is accessible to the consumer (this is an example and won’t resolve):
@@ -122,7 +122,7 @@ While this may seem onerous to the end user, it would in fact be largely transpa
 While accessing links from a resource that are “1 to 1” is relatively straightforward, accessing “1 to many” relationships can be more complex. While links to resources such as Practitioner are easily accessible from the Patient resource in the context of “generalPractitioner”, other contexts or resources do not link in this way. Instead, the ‘many’ side of the relationship references back to the ‘1’. For example, a Patient resource does not link to its allergies, instead AllergyIntolerance resources have a link back to the patient. Therefore, to obtain a list of allergies for a patient, all AllergyIntolerance resources must be queried for those that are related to the patient.
 
 ```
-http://yellow.testlab.nhs.uk/careconnect-ri/STU3/AllergyIntolerance?patient=1010
+http://yellow.testlab.nhs.uk/ccri-fhir/STU3/AllergyIntolerance?patient=1010
 ```
 
 So, to get a typical summary, the consumer might send the following sequence of requests…
@@ -190,13 +190,13 @@ An alternative to providing an extended operation would be to include support fo
 Appending the “_include” parameter to a request indicates to the provider that the specified resources that are related to the retrieved resources are to be included in the response. The following example returns MedicationRequests for a patient but the returned results will also include any related Patient resources.
 
 ```
-GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/MedicationRequest?_include=MedicationRequest:patient&patient=1010
+GET http://yellow.testlab.nhs.uk/ccri-fhir/STU3/MedicationRequest?_include=MedicationRequest:patient&patient=1010
 ```
 
 Appending the “_revinclude” parameter to a request indicates to the provider that all matching resources are returned and all other resources that refer to them.
 
 ```
-GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Encounter?_id=487&_revinclude=*
+GET http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Encounter?_id=487&_revinclude=*
 ```
 
 Consumers and providers need to take care not to request or return too many resources when using “_include” and “_revinclude”. Using recursive inclusions might lead to the retrieval of the full patient's record, or even more: resources are organized into an interlinked network and broad “_include” paths may eventually traverse all possible paths on the server. For providers, these recursive and wildcard _includes are demanding and may slow the search response time significantly.
@@ -256,7 +256,7 @@ While there is a risk of making a provider’s API more tightly coupled to speci
 The example below (for demonstration and will not resolve) shows how a request could be created to execute an operation called getAll, which is intended to return a patient’s history.
 
 ```
-GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Patient/1010/$getAll
+GET http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Patient/1010/$getAll
 ```
 
 These extended operations can be applied to the base FHIR endpoint, a resource type, a resource instance or a specific version of a resource.
@@ -264,7 +264,7 @@ These extended operations can be applied to the base FHIR endpoint, a resource t
 In the example above, we are suggesting that the $getAll operation will return the entire patient history which is likely to be undesirable (especially from the point of view of a provider or a consumer using a mobile device). It may be more likely that some parameterisation is desired so that the consumer can specify what they consider to be useful. This is supported by the extended operation in the form of <key,value> pairs in the body of the request (or appended to the URL when performing a HTTP GET).
 
 ```
-GET http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Patient/$getAll?subject=1010&recentEncounters=5
+GET http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Patient/$getAll?subject=1010&recentEncounters=5
 ```
 
 In the fabricated example above, an operation to $getAll could be qualified with parameters that restrict the returned history to a specific number of encounters. In this example, the $getAll operation may still return active allergies, conditions and current medications etc.

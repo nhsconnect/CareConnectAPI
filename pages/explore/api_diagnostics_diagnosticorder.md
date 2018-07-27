@@ -62,7 +62,7 @@ Search for all problems and health concerns for a patient. Fetches a bundle of a
 
 Return all DiagnosticOrder resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-{% include custom/embedcurl.html title="Search DiagnosticOrder" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Condition?patient.identifier=https://fhir.nhs.uk/Id/nhs-number%7C9876543210'" %}
+{% include custom/embedcurl.html title="Search DiagnosticOrder" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Condition?patient.identifier=https://fhir.nhs.uk/Id/nhs-number%7C9876543210'" %}
 
 
 <h3 id="32-response-headers">3.2 Explore the Response</h3>

@@ -69,7 +69,7 @@ Fetches a bundle of all `Organization` resources for the specified search criter
 
 Return all Organization resources with a ODS Code of C81010, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-{% include custom/embedcurl.html title="Search Organization" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Organization?identifier=C81010'" %}
+{% include custom/embedcurl.html title="Search Organization" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Organization?identifier=C81010'" %}
 
 
 <h3 id="32-response-headers">3.2 Explore the Response</h3>

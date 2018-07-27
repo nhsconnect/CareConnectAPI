@@ -51,7 +51,7 @@ Response Body:
 The value in the access token element of this response will then be passed in the Authorisation Header of subsequent requests. For Example:
 
 ```
-URL:  https://purple.testlab.nhs.uk/careconnect-ri/STU3/Patient/4
+URL:  https://purple.testlab.nhs.uk/ccri-fhir/STU3/Patient/4
 Method: GET
 Headers:
   Authorization: "Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0MTNjM...88wu62qGAOTcCeGdCuQ"

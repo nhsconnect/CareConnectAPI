@@ -106,7 +106,7 @@ The binary is not searchable as the other API resources are, however, please ref
 
 Return a Binary resource, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-{% include custom/embedcurl.html title="Get Binary" command="curl -X GET -H 'Accept: application/json+fhir' -H 'Authorisation: BEARER [token]' -v 'https://yellow.testlab.nhs.uk/careconnect-ri/STU3/Binary/5b1e91f0ccf84d0001fffe6d'" %}
+{% include custom/embedcurl.html title="Get Binary" command="curl -X GET -H 'Accept: application/json+fhir' -H 'Authorisation: BEARER [token]' -v 'https://yellow.testlab.nhs.uk/ccri-fhir/STU3/Binary/5b1e91f0ccf84d0001fffe6d'" %}
 
 
 <h3 id="32-response-headers">3.2 Explore the Response</h3>
@@ -115,6 +115,6 @@ Explore the response in XML & JSON on the Reference Implementation below
 <div class="language-http highlighter-rouge">
 <pre class="highlight">
 <p style="font-size: 110%;">Reference Implementation</p>
-Direct link <a target="_blank" href="https://yellow.testlab.nhs.uk/careconnect-ri/STU3/Binary/5b1e91f0ccf84d0001fffe6d">Binary unstructured document download</a>
+Direct link <a target="_blank" href="https://yellow.testlab.nhs.uk/ccri-fhir/STU3/Binary/5b1e91f0ccf84d0001fffe6d">Binary unstructured document download</a>
 </pre>
 </div>

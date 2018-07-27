@@ -156,8 +156,8 @@ services:
       - datasource.showDdl=true
       - datasource.cleardown.cron=0 19 21 * * *
       - datasource.dialect=org.hibernate.dialect.MySQL57Dialect
-      - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}/careconnect-ri/STU3
-      - datasource.serverBase=http://${FHIR_SERVER_BASE_HOST}/careconnect-ri/STU3
+      - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri-fhir/STU3
+      - datasource.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri-fhir/STU3
     ports:
       - 8080:8080
     extra_hosts:
@@ -192,9 +192,9 @@ services:
     build: ccri-fhirgateway
     image: thorlogic/ccri-fhirgateway:${CRRI_VERSION}
     environment:
-      - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}/careconnect-ri/STU3
-      - fhir.resource.serverBase=http://${FHIR_SERVER_BASE_HOST}/careconnect-ri/STU3
-      - fhir.restserver.serverBase=http4://${FHIR_SERVER_BASE_HOST}/careconnect-ri/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+      - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri-fhir/STU3
+      - fhir.resource.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri-fhir/STU3
+      - fhir.restserver.serverBase=http4://${FHIR_SERVER_BASE_HOST}/ccri-fhir/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
     depends_on:
       - ccri
     ports:

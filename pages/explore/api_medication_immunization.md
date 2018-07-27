@@ -91,7 +91,7 @@ Systems SHOULD support the following search combinations:
 
 Return all Immunization resources with an id of 1, the format of the response body will be xml. The Reference Implementation is hosted at '{{ site.fhir_ref_impl }}'.
 
-{% include custom/embedcurl.html title="Search Immunization" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect-ri/STU3/Immunization?patient=1'" %}
+{% include custom/embedcurl.html title="Search Immunization" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Immunization?patient=1'" %}
 
 <h3 id="32-response-headers">3.2 Explore the Response</h3>
 
