@@ -51,20 +51,20 @@ Response Body:
 The value in the access token element of this response will then be passed in the Authorisation Header of subsequent requests. For Example:
 
 ```
-URL:  https://purple.testlab.nhs.uk/ccri-fhir/STU3/Patient/4
+URL:  https://yellow.testlab.nhs.uk/ccri-fhir/STU3/Patient/4
 Method: GET
 Headers:
   Authorization: "Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0MTNjM...88wu62qGAOTcCeGdCuQ"
 ```
 
 
-# OAuth2 Scopes 
+# OAuth2 Scopes
 
 The following users can access Profiles within the Care Connect Reference Implementation. As such these OAuth2 users allows for the Mapping of Scopes to Profiles
 
 | Credentials | Details (Please copy all details) |
 | ------------- |----------------|
-| Grant Type | Client Credentials | 
+| Grant Type | Client Credentials |
 | Token name (example) | OAuth2-PatientAccess |
 | Access Token URL | {{ site.fhir_ref_impl_sec }}token |
 | Client Authentication | 'Send as Basic Auth header' |
@@ -76,8 +76,8 @@ Can only access the patient profiles.
 
 | Credentials | Details (Please copy all details) |
 | ------------- |----------------|
-| Client ID | a24a4d9f-c264-4af7-a8e5-248c24a6b707 |
-| Client Secret | MMpAOGBljYcEzBfn7q9-xgJqBlmR0BSiEyCrCjNNOUpR78kZtzqgKKU_4FgGRFNWbtc6jPIErLwoYwRgnlvijA |
+| Client ID | patient-access |
+| Client Secret | IShTVi8mRSV7bVREuU1freiDo79y_8fLX3BBw2nf2eIpv9A_r91VlVuF2LOiK_zLZAkBQCusEXLp_o6DEIgvaQ |
 
 A full list of scopes is described below:
 
@@ -89,7 +89,7 @@ Can only access a combination of patient, condition and medication profiles.
 
 | Credentials | Details |
 | ------------- |----------------|
-| Client Id | ed73b2cb-abd0-4f75-b9a2-5f9c0535b82c |
+| Client Id | clinical-access |
 | Client Secret | QOm0VcqJqa9stA1R0MJzHjCN_uYdo0PkY8OT68UCk2XDFxFrAUjajuqOvIom5dISjKshx2YiU51mXtx7W5UOwQ |
 
 
@@ -103,7 +103,7 @@ Can only access Publicly Available Information.
 
 | Credentials | Details |
 | ------------- |----------------|
-| Client ID | 256fcc31-97bd-47d4-acbf-12409676ad5a |
+| Client ID | limited-access |
 | Client Secret | AI8OGCYWjvnj-NY0zaP0H2e6_El_yO2pq43wK4YKk8UnBR_JZ5ivkmkXFtlkiL6LKWsL8H7ksab0V_Hk9c4OeMI |
 
 

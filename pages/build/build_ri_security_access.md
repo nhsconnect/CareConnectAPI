@@ -14,7 +14,7 @@ summary: "Secure Quickstart to the Reference Implementation"
 ## Security Quickstart ##
 
 This page describes a quickstart for users of the CCRI to explore a secure API connection to the CCRI. The security challenges are descried in more detail in the [Security](build_ri_security.html) section of the this Implementation Guide. The rest of this guide concentrates on how to:
-1. Pre-registered OAuth2 Client - Access via Postman 
+1. Pre-registered OAuth2 Client - Access via Postman
 2. Register OAuth2 Client - Access via an OAuth2 negotiated server
 
 To deploy a live instance of a Care Connect API where data is hosted and shared across system and organisational boundaries, please refer to [Security](build_ri_security.html) for background and understanding of the security considerations when creating your own implementation.
@@ -57,7 +57,7 @@ Create Access Token example for Patient only access, please see [Security Scopes
 | Grant Type | Client Credentials |
 | Token name (example) | OAuth2-PatientAccess |
 | Access Token URL | {{ site.fhir_ref_impl_sec }}token |
-| Client ID | medication-access |
+| Client ID | patient-access |
 | Client Secret | IShTVi8mRSV7bVREuU1freiDo79y_8fLX3BBw2nf2eIpv9A_r91VlVuF2LOiK_zLZAkBQCusEXLp_o6DEIgvaQ |
 | Client Authentication | 'Send as Basic Auth header' |
 
