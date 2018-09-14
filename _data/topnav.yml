@@ -9,7 +9,7 @@ topnav_dropdowns:
         - title: NHS Digital Profiles
           external_url: https://fhir.nhs.uk/
         - title: Care Connect Reference Implementation
-          external_url: http://yellow.testlab.nhs.uk/ccri/
+          external_url: https://data.developer.nhs.uk/ccri/
     - title: FHIR
       folderitems:
         - title: HL7 FHIR

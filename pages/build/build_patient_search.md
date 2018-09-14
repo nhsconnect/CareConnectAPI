@@ -53,10 +53,10 @@ The patient search can use any of the search parameters defined in the [Patient]
 GET [baseUrl]/Patient?birthdate=1998-03-13&name=bernie
 ```
 
-`[baseUrl]` needs to be replaced with an actual url, in the example below this is `http://yellow.testlab.nhs.uk/ccri-fhir/STU3`. The url would work within a web browser but a better tool to work with RESTful is [Postman](https://www.getpostman.com/)
+`[baseUrl]` needs to be replaced with an actual url, in the example below this is `https://data.developer.nhs.uk/ccri/STU3`. The url would work within a web browser but a better tool to work with RESTful is [Postman](https://www.getpostman.com/)
 
 ```
-http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Patient?birthdate=1998-03-13&name=bernie
+https://data.developer.nhs.uk/ccri/STU3/Patient?birthdate=1998-03-13&name=bernie
 ```
 
 A sample response is shown below
@@ -83,7 +83,7 @@ If you wish to know more details about this organisation, you will need to follo
 
 ```xml
 <managingOrganization>
-    <reference value=" http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Organization/1"/>
+    <reference value="https://data.developer.nhs.uk/ccri/STU3/Organization/1"/>
     <display value="Moir Medical Centre"/>
 </managingOrganization>
 ```
@@ -155,7 +155,7 @@ Firstly we need to setup the HAPI client which includes setting a FHIR context a
 
 // Create a client and post the transaction to the server
 
-     IGenericClient client = ctx.newRestfulGenericClient("http://yellow.testlab.nhs.uk/ccri-fhir/STU3/");
+     IGenericClient client = ctx.newRestfulGenericClient("https://data.developer.nhs.uk/ccri/STU3/");
 
 ```
 

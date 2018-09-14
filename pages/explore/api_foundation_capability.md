@@ -36,7 +36,7 @@ Retrieve the Capability statement from the FHIR Server, the format of the respon
 
 #### 2.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/careconnect/STU3/metadata?'" %}
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorization: BEARER [token]' -v 'https://data.developer.nhs.uk/ccri/STU3/metadata?'" %}
 
 ### 2.2 Response Body ###
 
@@ -45,8 +45,8 @@ Retrieve the Capability statement from the FHIR Server, the format of the respon
 <div class="language-http highlighter-rouge">
 <pre class="highlight">
 <h4>Reference Implementation</h4>
-XML <a target="_blank" href="http://yellow.testlab.nhs.uk/careconnect/conformance?serverId=home&pretty=false&encoding=xml">Capability Statement RI viewer</a>
-JSON <a target="_blank" href="http://yellow.testlab.nhs.uk/careconnect/conformance?serverId=home&pretty=false&encoding=json">Capability Statement RI viewer</a>
+XML <a target="_blank" href="https://data.developer.nhs.uk/ccri/conformance?serverId=home&pretty=false&encoding=xml">Capability Statement RI viewer</a>
+JSON <a target="_blank" href="https://data.developer.nhs.uk/ccri/conformance?serverId=home&pretty=false&encoding=json">Capability Statement RI viewer</a>
 </pre>
 </div>
 

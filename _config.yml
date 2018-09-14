@@ -26,9 +26,10 @@ github_editme_path: /edit/develop/
 #twitter: true
 #twitter_username: twitter_username
 #twitter_site_hashtags: twitter_site_hashtags
-fhir_ref_impl: https://yellow.testlab.nhs.uk/ccri/
-fhir_ref_impl_sec: https://yellow.testlab.nhs.uk/auth/
-fhir_ref_impl_resource: https://yellow.testlab.nhs.uk/ccri-smartonfhir/STU3/
+fhir_ref_impl: https://data.developer.nhs.uk/ccri/
+fhir_ref_impl_sec: https://data.developer.nhs.uk/ccri-auth/
+fhir_ref_impl_resource: https://data.developer.nhs.uk/ccri-smartonfhir/STU3/
+#fhir_ref_impl_resource: https://yellow.testlab.nhs.uk/ccri-smartonfhir/STU3/
 
 fhir_profile_baseurl: https://fhir.hl7.org.uk/StructureDefinition/
 fhir_profile_stu3_baseurl: https://fhir.hl7.org.uk/STU3/StructureDefinition/

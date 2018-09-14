@@ -87,9 +87,9 @@ Access via an OAuth2 client demonstrates how a website / mobile app could intera
 
 <p style="text-align:center;"><img src="images/build/Security_Capability_Statement.JPG" alt="Retrieve Capability Statement" title="Retrieve Capability Statement" style="width:80%"></p>
 
-The <b>CapabilityStatement</b> indicates secure access can be obtained by registering the client at <b>https://yellow.testlab.nhs.uk/auth/register</b>.
+The <b>CapabilityStatement</b> indicates secure access can be obtained by registering the client at <b>https://developer.nhs.uk/ccri-auth/register</b>.
 As a demonstration of how this can be achieved using an Authorisation Server user interface, please follow this link below and log into the OAuth2 server using a Google Id by clicking on `Log In` (top right hand corner).
-[CareConnect Authorisation Server](https://yellow.testlab.nhs.uk/auth/){:target="_blank"}
+[CareConnect Authorisation Server](https://developer.nhs.uk/ccri-auth/){:target="_blank"}
 
 <p style="text-align:center;"><img src="images/build/Security_OAuth2_Main.JPG" alt="OAuth2 Login" title="OAuth2 Login" style="width:80%"></p>
 

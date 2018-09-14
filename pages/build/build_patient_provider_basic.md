@@ -129,7 +129,7 @@ POST http://127.0.0.1:8183/STU3/Patient</div>
 <p style="text-align:center;"><img src="images/nosql/POSTMANpatientHeaders.PNG" style="width:50%;max-width: 50%;"></p>
 
 Then copy a FHIR Patient into the Body section.
-- This example uses [Patient/1](http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Patient?_pretty=true) from the CCRI server in the image below
+- This example uses [Patient/1](https://data.developer.nhs.uk/ccri/STU3/Patient?_pretty=true) from the CCRI server in the image below
 - Then click `Send`
 
 <p style="text-align:center;"><img src="images/nosql/POSTMANpatientCreate.PNG" style="width:100%;max-width: 100%;"></p>

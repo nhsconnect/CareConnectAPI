@@ -99,7 +99,7 @@ Systems SHOULD support the following search combinations:
 
 Return all DocumentReference resources for Patient with an id of 1173, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-{% include custom/embedcurl.html title="Search DocumentReference" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/ccri-fhir/STU3/DocumentReference?patient=1173'" %}
+{% include custom/embedcurl.html title="Search DocumentReference" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'https://data.developer.nhs.uk/ccri/STU3/DocumentReference?patient=1173'" %}
 
 
 <h3 id="32-response-headers">3.2 Explore the Response</h3>

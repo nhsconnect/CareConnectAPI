@@ -95,7 +95,7 @@ Systems SHOULD support the following search combinations:
 
 Return all DiagnosticReport resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
-{% include custom/embedcurl.html title="Search DiagnosticReport" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Condition?patient.identifier=https://fhir.nhs.uk/Id/nhs-number%7C9876543210'" %}
+{% include custom/embedcurl.html title="Search DiagnosticReport" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'https://data.developer.nhs.uk/ccri/STU3/Condition?patient.identifier=https://fhir.nhs.uk/Id/nhs-number%7C9876543210'" %}
 
 
 <h3 id="32-response-headers">3.2 Explore the Response</h3>

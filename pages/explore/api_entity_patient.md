@@ -147,7 +147,7 @@ Client systems SHALL provide at least two parameters of differing types, unless 
 
 Return all Patient resources with a NHS Number 9876543210, the format of the response body will be xml. The Reference Implementation is hosted at '{{ site.fhir_ref_impl }}'.
 
-{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'http://yellow.testlab.nhs.uk/ccri-fhir/STU3/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number%7C9876543210'" %}
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET -H 'Accept: application/xml+fhir' -H 'Authorisation: BEARER [token]' -v 'https://data.developer.nhs.uk/ccri/STU3/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number%7C9876543210'" %}
 
 <h3 id="32-response-headers">3.2 Explore the Response</h3>
 
