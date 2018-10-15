@@ -16,10 +16,188 @@ This document is intended to provide a technical introduction to the architectur
 
 1. Installation of Docker & Docker Compose.
 1. Creation of a docker-compose file.  
-Sample `docker-compose` files are shown in [Administration Scripts].  
+Sample `docker-compose` files is below.  
 1. Definition of environment variables
 1. Upload Sample Data
 
+This is an example of the `docker-compose.yml` file which defines several services in the core CCRI application.
+
+
+`docker-compose.yml`
+```YAML
+version: '2'
+services:
+
+  ccrisql:
+    container_name: ccrisql
+    image: thorlogic/ccri-sql${IMAGE_TAG}
+    environment:
+    - POSTGRES_DB=careconnect
+    - POSTGRES_USER=${MYSQL_DB_USER}
+    - POSTGRES_PASSWORD=${MYSQL_DB_PASSWORD}
+    ports:
+    - 5433:5432
+    networks:
+    - ccri_net
+
+  ccriserver:
+    container_name: ccriserver
+    image: thorlogic/ccri-fhirserver${IMAGE_TAG}
+    depends_on:
+      - ccrisql
+    links:
+      - ccrisql
+    environment:
+      - datasource.username=${MYSQL_DB_USER}
+      - datasource.password=${MYSQL_DB_PASSWORD}
+      - datasource.host=//ccrisql
+      - datasource.driver=org.postgresql.Driver
+      - datasource.path=5432/careconnect
+      - datasource.vendor=postgresql
+      - datasource.showSql=true
+      - datasource.showDdl=true
+      - datasource.cleardown.cron=0 19 21 * * *
+      - datasource.dialect=org.hibernate.dialect.PostgreSQL9Dialect
+      - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri/fhir/STU3
+      - datasource.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri/fhir/STU3
+    ports:
+      - 8109:8186
+    extra_hosts:
+      # Define an alias to loop back for REST Connections
+      - "${FHIR_SERVER_BASE_HOST}:127.0.0.1"
+    volumes:
+      - tomcat-log-volume:/usr/local/tomcat/logs
+    networks:
+      ccri_net:
+        ipv4_address: 172.168.240.10
+
+
+  ccrifhir:
+    container_name: ccrifhir
+    image: thorlogic/ccri-fhir${IMAGE_TAG}
+    environment:
+      - fhir.restserver.serverBase=http4://ccriserver:8186/ccri-fhirserver/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+      - fhir.restserver.edmsBase=http4://ccridocument:8181/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+      - fhir.restserver.tieBase=http4://ccriintegration:8182/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+      - jolokia.username=HSFAdmin
+      - jolokia.password=h5fadm!n
+      - ccri.software.version=3.7
+      - ccri.software.name=Care Connect RI FHIR Server
+      - ccri.server=Care Connect API (unsecured)
+      - ccri.server.base=https://data.developer.nhs.uk/ccri-fhir/STU3
+      - ccri.guide=https://nhsconnect.github.io/CareConnectAPI/
+    depends_on:
+      - ccriserver
+    ports:
+      - 8105:8183
+    extra_hosts:
+      - "${FHIR_SERVER_BASE_HOST}:172.168.240.10"
+    volumes:
+      - gateway-log-volume:/usr/local/tomcat/logs
+    networks:
+      ccri_net:
+        ipv4_address: 172.168.240.14
+
+  ccridataload:
+    container_name: ccridataload
+    image: thorlogic/ccri-dataload${IMAGE_TAG}
+    depends_on:
+    - ccriserver
+    environment:
+    - FHIR_SERVER=http://ccriserver:8186/ccri-fhirserver/STU3
+    - POSTGRES_JDBC=postgresql://ccrisql:5432/careconnect
+    - POSTGRES_USER=${MYSQL_DB_USER}
+    - POSTGRES_USERNAME=${MYSQL_DB_USER}
+    - POSTGRES_PASSWORD=${MYSQL_DB_PASSWORD}
+    networks:
+      ccri_net:
+        ipv4_address: 172.168.240.13
+
+
+  ccrimongo:
+      container_name: ccrimongo
+      image: mongo:3.6.3
+      ports:
+        - 27107:27107
+      networks:
+        - ccri_net
+
+  ccridocument:
+     container_name: ccridocument
+     image: thorlogic/ccri-document${IMAGE_TAG}
+     depends_on:
+       - ccrimongo
+     links:
+       - ccrimongo
+     environment:
+       - fhir.resource.serverBase=http://127.0.0.1:8080/careconnect-gateway/STU3
+       - fhir.resource.serverName=Care Connect RI FHIR Server
+       - fhir.resource.serverVersion=3.7.0-SNAPSHOT
+       - spring.data.mongodb.uri=mongodb://ccrimongo:27017/careconnect-nosql
+       - spring.data.mongodb.database=careconnect-nosql
+     ports:
+       - 8107:8181
+     volumes:
+       - mongo-log-volume:/usr/local/tomcat/logs
+     networks:
+       ccri_net:
+         ipv4_address: 172.168.240.11
+
+  ccriintegration:
+    container_name: ccriintegration
+    image: thorlogic/ccri-tie${IMAGE_TAG}
+    depends_on:
+    - ccriserver
+    environment:
+    - fhir.restserver.serverBase=http4://ccriserver:8186/ccri-fhirserver/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+    - fhir.restserver.eprBase=http://ccriserver:8186/ccri-fhirserver/STU3
+    - fhir.resource.serverName=Care Connect TIE FHIR Server
+    - fhir.resource.serverVersion=3.7.0-SNAPSHOT
+    ports:
+    - 8182:8182
+    volumes:
+    - tie-log-volume:/usr/local/tomcat/logs
+    networks:
+      ccri_net:
+        ipv4_address: 172.168.240.12
+
+  ccriui:
+    container_name: ccriui
+    image: thorlogic/ccri-management${IMAGE_TAG}
+    environment:
+    - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}:8183/ccri-fhir/STU3
+    - fhir.resource.serverBase=http://${FHIR_SERVER_BASE_HOST}:8105/ccri-fhir/STU3
+    - fhir.restserver.serverBase=http4://${FHIR_SERVER_BASE_HOST}/careconnect-ri/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+    - fhir.restserver.edmsBase=http4://127.0.0.1:8184/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+    depends_on:
+    - ccrifhir
+    ports:
+    - 81:8187
+    extra_hosts:
+    # Define an alias to the CCRI Container to ensure that the correct Server Base is displayed by HAPI
+    - "${FHIR_SERVER_BASE_HOST}:172.168.240.14"
+    networks:
+    - ccri_net
+
+volumes:
+  tomcat-log-volume:
+  gateway-log-volume:
+  gatewayssl-log-volume:
+  tie-log-volume:
+  mongo-log-volume:
+  sqlvol:
+
+networks:
+  ccri_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.168.240.0/24
+
+
+
+```
 
 ### Installation of Docker & Docker Compose
 
@@ -96,7 +274,7 @@ docker-compose up -d
 
 ```Bash
 # Restart the CCRI Server
-docker-compose restart ccri
+docker-compose restart
 ```
 
 
@@ -136,188 +314,7 @@ Other FHIR components - Optional
 * **ccriintegration** - This provides support for extended operations.
 <br>
 <br>
-This is an example of the `docker-compose.yml` file which defines several services in the core CCRI application.
 
-
-`docker-compose.yml`
-```YAML
-version: '2'
-services:
-
-  ccrisql:
-    container_name: ccrisql
-    image: thorlogic/ccri-sql${IMAGE_TAG}
-    environment:
-    - POSTGRES_DB=careconnect
-    - POSTGRES_USER=${MYSQL_DB_USER}
-    - POSTGRES_PASSWORD=${MYSQL_DB_PASSWORD}
-    ports:
-    - 5433:5432
-    networks:
-    - ccri_net
-
-  ccriserver:
-    container_name: ccriserver
-    image: thorlogic/ccri-fhirserver${IMAGE_TAG}
-    build: ccri-fhirserver
-    depends_on:
-      - ccrisql
-    links:
-      - ccrisql
-    environment:
-      - datasource.username=${MYSQL_DB_USER}
-      - datasource.password=${MYSQL_DB_PASSWORD}
-      - datasource.host=//ccrisql
-      - datasource.driver=org.postgresql.Driver
-      - datasource.path=5432/careconnect
-      - datasource.vendor=postgresql
-      - datasource.showSql=true
-      - datasource.showDdl=true
-      - datasource.cleardown.cron=0 19 21 * * *
-      - datasource.dialect=org.hibernate.dialect.PostgreSQL9Dialect
-      - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri/fhir/STU3
-      - datasource.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri/fhir/STU3
-    ports:
-      - 8109:8186
-    extra_hosts:
-      # Define an alias to loop back for REST Connections
-      - "${FHIR_SERVER_BASE_HOST}:127.0.0.1"
-    volumes:
-      - tomcat-log-volume:/usr/local/tomcat/logs
-    networks:
-      ccri_net:
-        ipv4_address: 172.168.240.10
-
-
-  ccrifhir:
-    container_name: ccrifhir
-    build: ccri-fhir
-    image: thorlogic/ccri-fhir${IMAGE_TAG}
-    environment:
-      - fhir.restserver.serverBase=http4://ccriserver:8186/ccri-fhirserver/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-      - fhir.restserver.edmsBase=http4://ccridocument:8181/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-      - fhir.restserver.tieBase=http4://ccriintegration:8182/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-      - jolokia.username=HSFAdmin
-      - jolokia.password=h5fadm!n
-      - ccri.software.version=3.7
-      - ccri.software.name=Care Connect RI FHIR Server
-      - ccri.server=Care Connect API (unsecured)
-      - ccri.server.base=https://data.developer.nhs.uk/ccri-fhir/STU3
-      - ccri.guide=https://nhsconnect.github.io/CareConnectAPI/
-    depends_on:
-      - ccriserver
-    ports:
-      - 8105:8183
-    extra_hosts:
-      - "${FHIR_SERVER_BASE_HOST}:172.168.240.10"
-    volumes:
-      - gateway-log-volume:/usr/local/tomcat/logs
-    networks:
-      ccri_net:
-        ipv4_address: 172.168.240.14
-
-  ccridataload:
-    container_name: ccridataload
-    image: thorlogic/ccri-dataload${IMAGE_TAG}
-    build: ccri-dataload
-    depends_on:
-    - ccriserver
-    environment:
-    - FHIR_SERVER=http://ccriserver:8186/ccri-fhirserver/STU3
-    - POSTGRES_JDBC=postgresql://ccrisql:5432/careconnect
-    - POSTGRES_USER=${MYSQL_DB_USER}
-    - POSTGRES_USERNAME=${MYSQL_DB_USER}
-    - POSTGRES_PASSWORD=${MYSQL_DB_PASSWORD}
-    networks:
-      ccri_net:
-        ipv4_address: 172.168.240.13
-
-
-  ccrimongo:
-      container_name: ccrimongo
-      image: mongo:3.6.3
-      ports:
-        - 27107:27107
-      networks:
-        - ccri_net
-
-  ccridocument:
-     container_name: ccridocument
-     image: thorlogic/ccri-document${IMAGE_TAG}
-     depends_on:
-       - ccrimongo
-     links:
-       - ccrimongo
-     environment:
-       - fhir.resource.serverBase=http://127.0.0.1:8080/careconnect-gateway/STU3
-       - fhir.resource.serverName=Care Connect RI FHIR Server
-       - fhir.resource.serverVersion=3.7.0-SNAPSHOT
-       - spring.data.mongodb.uri=mongodb://ccrimongo:27017/careconnect-nosql
-       - spring.data.mongodb.database=careconnect-nosql
-     ports:
-       - 8107:8181
-     volumes:
-       - mongo-log-volume:/usr/local/tomcat/logs
-     networks:
-       ccri_net:
-         ipv4_address: 172.168.240.11
-
-  ccriintegration:
-    container_name: ccriintegration
-    image: thorlogic/ccri-tie${IMAGE_TAG}
-    depends_on:
-    - ccriserver
-    environment:
-    - fhir.restserver.serverBase=http4://ccriserver:8186/ccri-fhirserver/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-    - fhir.restserver.eprBase=http://ccriserver:8186/ccri-fhirserver/STU3
-    - fhir.resource.serverName=Care Connect TIE FHIR Server
-    - fhir.resource.serverVersion=3.7.0-SNAPSHOT
-    ports:
-    - 8182:8182
-    volumes:
-    - tie-log-volume:/usr/local/tomcat/logs
-    networks:
-      ccri_net:
-        ipv4_address: 172.168.240.12
-
-  ccriui:
-    container_name: ccriui
-    build: ccri-management
-    image: thorlogic/ccri-management${IMAGE_TAG}
-    environment:
-    - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}:8183/ccri-fhir/STU3
-    - fhir.resource.serverBase=http://${FHIR_SERVER_BASE_HOST}:8105/ccri-fhir/STU3
-    - fhir.restserver.serverBase=http4://${FHIR_SERVER_BASE_HOST}/careconnect-ri/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-    - fhir.restserver.edmsBase=http4://127.0.0.1:8184/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-    depends_on:
-    - ccrifhir
-    ports:
-    - 81:8187
-    extra_hosts:
-    # Define an alias to the CCRI Container to ensure that the correct Server Base is displayed by HAPI
-    - "${FHIR_SERVER_BASE_HOST}:172.168.240.14"
-    networks:
-    - ccri_net
-
-volumes:
-  tomcat-log-volume:
-  gateway-log-volume:
-  gatewayssl-log-volume:
-  tie-log-volume:
-  mongo-log-volume:
-  sqlvol:
-
-networks:
-  ccri_net:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-      - subnet: 172.168.240.0/24
-
-
-
-```
 
 
 <table style="min-width:100%;width:100%">
