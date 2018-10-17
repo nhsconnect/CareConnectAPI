@@ -75,7 +75,46 @@ Common health related MIME types are listed below:
 
 <p>Although this page is describing a FHIR Binary endpoint, a Binary resource can be retrieved from any url. If a FHIR Binary endpoint is used then the resource SHALL be available as both a <code class="highlighter-rouge">Binary</code> resource and as a standard URL resource. The default behaviour is that of a URL resource</p>
 
-<h3 id="readresponse">1.1. Response</h3>
+For Binary resources, the result of a query are different when compared to the rest of FHIR. There are specific ways to indicate the format of the response expected by the server. This is via the client specifying the format of the response either via a <code class="highlighter-rouge">&#95;format</code> override on the query parameter of by using a “content-type” HTTP header in the request.
+
+
+<h3 id="readresponse">1.1. Query 1 - Default Query</h3>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET [baseUrl]/Binary/[id]   with no HTTP content-type header</div>
+
+MUST be supported.
+
+Server returns the document using the native mime type of the document – No FHIR resources are returned.
+
+<h3 id="readresponse">1.2. Query 2 - Format Override 1</h3>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET [baseUrl]/Binary/[id]?&#95;format=[format] 	with no HTTP Accept header   with no HTTP content-type header</div>
+
+MUST be supported.
+
+Server returns a FHIR Binary resource in the requested format with the “document” BASE64 encoded within the content element.
+
+<h3 id="readresponse">1.3. Query 3 - Format Override 2</h3>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET [baseUrl]/Binary/[id] 	with a HTTP Accept header of [format]</div>
+
+SHOULD be supported.
+
+Server returns a FHIR Binary resource in the requested format with the “document” BASE64 encoded within the content element
+
+<h3 id="readresponse">1.4. Query 4 - Format Override 3</h3>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET [baseUrl]/Binary/[id]?&#95;format=[format_1]	with a HTTP Accept header of [format_2]</div>
+
+SHOULD be supported.
+
+Server returns a FHIR Binary resource in the as per format_1 as <code class="highlighter-rouge">&#95;format</code> overrides the HTTP Accept headers. The “document” is BASE64 encoded within the content element
+
+<h3 id="readresponse">1.5. Response</h3>
 
 <p>A full set of response codes can be found here <a href="profiles_api_codes.html">API Response Codes</a>. FHIR Servers SHALL support the following response codes:</p>
 

@@ -20,12 +20,17 @@ Sample `docker-compose` files is below.
 1. Definition of environment variables
 1. Upload Sample Data
 
+These instructions have been tested on Apple Mac Mojave and Windows 10. On Windows 10 ensure you are using:
+
+1. Docker: Version 18.06.1-ce or above
+1. Docker Compose: Version 1.22.0 or above
+
 This is an example of the `docker-compose.yml` file which defines several services in the core CCRI application.
 
 
 `docker-compose.yml`
 ```YAML
-version: '2'
+version: '2.1'
 services:
 
   ccrisql:
