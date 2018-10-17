@@ -1,5 +1,5 @@
 ---
-title: CCRI | Installation instructions 
+title: CCRI | Installation instructions
 keywords: design, build, access, security, overview
 tags: [design, overview]
 sidebar: foundations_sidebar
@@ -16,10 +16,193 @@ This document is intended to provide a technical introduction to the architectur
 
 1. Installation of Docker & Docker Compose.
 1. Creation of a docker-compose file.  
-Sample `docker-compose` files are shown in [Administration Scripts].  
+Sample `docker-compose` files is below.  
 1. Definition of environment variables
 1. Upload Sample Data
 
+These instructions have been tested on Apple Mac Mojave and Windows 10. On Windows 10 ensure you are using:
+
+1. Docker: Version 18.06.1-ce or above
+1. Docker Compose: Version 1.22.0 or above
+
+This is an example of the `docker-compose.yml` file which defines several services in the core CCRI application.
+
+
+`docker-compose.yml`
+```YAML
+version: '2.1'
+services:
+
+  ccrisql:
+    container_name: ccrisql
+    image: thorlogic/ccri-sql${IMAGE_TAG}
+    environment:
+    - POSTGRES_DB=careconnect
+    - POSTGRES_USER=${MYSQL_DB_USER}
+    - POSTGRES_PASSWORD=${MYSQL_DB_PASSWORD}
+    ports:
+    - 5433:5432
+    networks:
+    - ccri_net
+
+  ccriserver:
+    container_name: ccriserver
+    image: thorlogic/ccri-fhirserver${IMAGE_TAG}
+    depends_on:
+      - ccrisql
+    links:
+      - ccrisql
+    environment:
+      - datasource.username=${MYSQL_DB_USER}
+      - datasource.password=${MYSQL_DB_PASSWORD}
+      - datasource.host=//ccrisql
+      - datasource.driver=org.postgresql.Driver
+      - datasource.path=5432/careconnect
+      - datasource.vendor=postgresql
+      - datasource.showSql=true
+      - datasource.showDdl=true
+      - datasource.cleardown.cron=0 19 21 * * *
+      - datasource.dialect=org.hibernate.dialect.PostgreSQL9Dialect
+      - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri/fhir/STU3
+      - datasource.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri/fhir/STU3
+    ports:
+      - 8109:8186
+    extra_hosts:
+      # Define an alias to loop back for REST Connections
+      - "${FHIR_SERVER_BASE_HOST}:127.0.0.1"
+    volumes:
+      - tomcat-log-volume:/usr/local/tomcat/logs
+    networks:
+      ccri_net:
+        ipv4_address: 172.168.240.10
+
+
+  ccrifhir:
+    container_name: ccrifhir
+    image: thorlogic/ccri-fhir${IMAGE_TAG}
+    environment:
+      - fhir.restserver.serverBase=http4://ccriserver:8186/ccri-fhirserver/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+      - fhir.restserver.edmsBase=http4://ccridocument:8181/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+      - fhir.restserver.tieBase=http4://ccriintegration:8182/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+      - jolokia.username=HSFAdmin
+      - jolokia.password=h5fadm!n
+      - ccri.software.version=3.7
+      - ccri.software.name=Care Connect RI FHIR Server
+      - ccri.server=Care Connect API (unsecured)
+      - ccri.server.base=https://data.developer.nhs.uk/ccri-fhir/STU3
+      - ccri.guide=https://nhsconnect.github.io/CareConnectAPI/
+    depends_on:
+      - ccriserver
+    ports:
+      - 8105:8183
+    extra_hosts:
+      - "${FHIR_SERVER_BASE_HOST}:172.168.240.10"
+    volumes:
+      - gateway-log-volume:/usr/local/tomcat/logs
+    networks:
+      ccri_net:
+        ipv4_address: 172.168.240.14
+
+  ccridataload:
+    container_name: ccridataload
+    image: thorlogic/ccri-dataload${IMAGE_TAG}
+    depends_on:
+    - ccriserver
+    environment:
+    - FHIR_SERVER=http://ccriserver:8186/ccri-fhirserver/STU3
+    - POSTGRES_JDBC=postgresql://ccrisql:5432/careconnect
+    - POSTGRES_USER=${MYSQL_DB_USER}
+    - POSTGRES_USERNAME=${MYSQL_DB_USER}
+    - POSTGRES_PASSWORD=${MYSQL_DB_PASSWORD}
+    networks:
+      ccri_net:
+        ipv4_address: 172.168.240.13
+
+
+  ccrimongo:
+      container_name: ccrimongo
+      image: mongo:3.6.3
+      ports:
+        - 27107:27107
+      networks:
+        - ccri_net
+
+  ccridocument:
+     container_name: ccridocument
+     image: thorlogic/ccri-document${IMAGE_TAG}
+     depends_on:
+       - ccrimongo
+     links:
+       - ccrimongo
+     environment:
+       - fhir.resource.serverBase=http://127.0.0.1:8080/careconnect-gateway/STU3
+       - fhir.resource.serverName=Care Connect RI FHIR Server
+       - fhir.resource.serverVersion=3.7.0-SNAPSHOT
+       - spring.data.mongodb.uri=mongodb://ccrimongo:27017/careconnect-nosql
+       - spring.data.mongodb.database=careconnect-nosql
+     ports:
+       - 8107:8181
+     volumes:
+       - mongo-log-volume:/usr/local/tomcat/logs
+     networks:
+       ccri_net:
+         ipv4_address: 172.168.240.11
+
+  ccriintegration:
+    container_name: ccriintegration
+    image: thorlogic/ccri-tie${IMAGE_TAG}
+    depends_on:
+    - ccriserver
+    environment:
+    - fhir.restserver.serverBase=http4://ccriserver:8186/ccri-fhirserver/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+    - fhir.restserver.eprBase=http://ccriserver:8186/ccri-fhirserver/STU3
+    - fhir.resource.serverName=Care Connect TIE FHIR Server
+    - fhir.resource.serverVersion=3.7.0-SNAPSHOT
+    ports:
+    - 8182:8182
+    volumes:
+    - tie-log-volume:/usr/local/tomcat/logs
+    networks:
+      ccri_net:
+        ipv4_address: 172.168.240.12
+
+  ccriui:
+    container_name: ccriui
+    image: thorlogic/ccri-management${IMAGE_TAG}
+    environment:
+    - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}:8183/ccri-fhir/STU3
+    - fhir.resource.serverBase=http://${FHIR_SERVER_BASE_HOST}:8105/ccri-fhir/STU3
+    - fhir.restserver.serverBase=http4://${FHIR_SERVER_BASE_HOST}/careconnect-ri/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+    - fhir.restserver.edmsBase=http4://127.0.0.1:8184/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+    depends_on:
+    - ccrifhir
+    ports:
+    - 81:8187
+    extra_hosts:
+    # Define an alias to the CCRI Container to ensure that the correct Server Base is displayed by HAPI
+    - "${FHIR_SERVER_BASE_HOST}:172.168.240.14"
+    networks:
+    - ccri_net
+
+volumes:
+  tomcat-log-volume:
+  gateway-log-volume:
+  gatewayssl-log-volume:
+  tie-log-volume:
+  mongo-log-volume:
+  sqlvol:
+
+networks:
+  ccri_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.168.240.0/24
+
+
+
+```
 
 ### Installation of Docker & Docker Compose
 
@@ -56,25 +239,20 @@ cd ccri-server
 ```
 
 In this folder we will need to create the following files:
-* `docker-compose.yaml` - the definition of the services which form the core of the CCRI Server application.
-* `docker-compose-elk.yaml` (optional) - This file defines the services which provide the log searching and monitoring using the ELK Stack.  This is only required if you are intending to view the activity on the server using Kibana.
+* `docker-compose.yml` - the definition of the services which form the core of the CCRI Server application.
 * `.env` - A configuration file which contains the environment settings specific to the installation.  These environment settings can be used to override the defaults defined in the `docker-compose` files.
 
 
 ### Define Environment Variables
-Edit the `.env` file to define the environment specific properties.
+Edit the `.env` file to define the environment specific properties. Previous versions of the CCRI used MySql, the current PostgreSql version reuses the same environment variables.
 
 Example `.env` file:
 ```Ini
-CRRI_VERSION=latest
-FHIR_SERVER_BASE_HOST=test.myserver.nhs.uk
+IMAGE_TAG=:latest
+FHIR_SERVER_BASE_HOST=localhost
 MYSQL_DB_USER=fhirjpa
 MYSQL_DB_PASSWORD=fhirjpa
-ELASTIC_SEARCH_USER=elasticsearch
-ELASTIC_SEARCH_PASSWORD=changeme
 ```
-
-NB - The details of the Elasticsearch User & Password are only required in the ELK Stack is being deployed.
 
 The name of the FHIR_SERVER_BASE_HOST will be be the host & domain which will be used to access the FHIR Gateway Server.  The client applications/browsers who access the FHIR Gateway must be able to resolve this address and so it should be added to the client's host file if this is not a public address.
 
@@ -99,180 +277,80 @@ For the command line in the root folder (e.g. `ccri-server`) of your installatio
 docker-compose up -d
 ```
 
-Note: There is a known issue which may cause the CCRI Server to fail to start on the first attempt.  The MySQL service will takes a considerable amount of time (~1 min) to initialise it's database the first time that it is started and this will prevent the CCRI Server making a connection to the database.  This can be resolved by either restarting all the services or by just restarting the CCRI Server once the MySQL database has been initialised.
-
 ```Bash
 # Restart the CCRI Server
-docker-compose restart ccri
+docker-compose restart
 ```
 
 
 (See Administration Scripts for more information)
 
 ### Load Sample data
-The sample data which has been used to populate the database can be requested from <apilabs@nhs.uk>
 
-## Installation of Sample Log Monitoring (Optional)
-The ELK Monitoring stack is defined in the `docker-compose-elk.yaml` file, this is an optional part of the installation and alternative log monitoring can be utilised.
-
-### ELK, Logstash & Kibana (ELK) Stack
-1. ELK - Supplied by the `sebp/elk` Docker Image
-We are using a single Docker image which combines Elasticsearch, Logstash, & Kibana into a single image.  This can be configured via the docker compose file and external configuration files.  For example, we are configuring the Logstash filters which parse the incoming log lines, extract specific fields and add additional tags.
-2. FileBeat
-Filebeat is used to collect the lines from the physical log files and then forward them to Logstash so that they can be parsed.  Filebeat's connection to the log files is the only physical connection between the 2 modules.
+A small set of sample data is provided.
 
 
 ## Sample Docker Compose Files
 ### Docker Compose File for CCRI
 
 The Docker Compose file for CCRI defines the following services:-
-* ccri - The CCRI Server
-* ccrigateway - The Gateway provides the public facing interface of the CCRI application.  It provides a HAPI-FHIR web interface and a REST interface.
-* ccrisql - The MySQL database which provides the data persistence for the FHIR Profiles.  This is only sample data to provide
+<br>
+<br>
+Core FHIR Server Functionality
+<br>
+<br>
+* **ccriserver** - The core CCRI FHIR Server which simulates an Electronic Patient Record (EPR)
+* **ccrifhir** - This provides the public facing FHIR Server on top of the core CCRI FHIR Server. The purpose of this is to limit the services an external user can access.
+* **ccridataload** - This loads a set of sample data into the CCRI FHIR Server
+* **ccrisql** - The PostgreSql database which provides the data persistence for the FHIR Resources.
 
-This is an example of the `docker-compose.yaml` file which defines the 3 services in the core CCRI application.
+<br>
+Additional FHIR Server (document storage) - Optional
+<br>
+<br>
+* **ccridocument** - A FHIR Server simulating an Electronic Document Management System (EDMS)
+* **ccrimongo** - A MongoDb which provides persistence for FHIR Documents and traditional documents (e.g. PDF)
+
+<br>
+Other FHIR components - Optional
+<br>
+<br>
+* **ccriui** - FHIR Explorer application which provides access to the CCRI FHIR Server via a user interface.
+* **ccriintegration** - This provides support for extended operations.
+<br>
+<br>
 
 
-`docker-compose.yaml`
-```YAML
-version: '3'
-services:
-  ccri:
-    container_name: ccri
-    build: ccri-fhirserver
-    image: thorlogic/ccri-fhirserver:${CRRI_VERSION}
-    depends_on:
-      - ccrisql
-    links:
-      - ccrisql
-    environment:
-      - datasource.username=${MYSQL_DB_USER}
-      - datasource.password=${MYSQL_DB_PASSWORD}
-      - datasource.host=//ccrisql
-      - datasource.driver=com.mysql.jdbc.Driver
-      - datasource.path=3306/careconnect?autoReconnect=true
-      - datasource.vendor=mysql
-      - datasource.showSql=true
-      - datasource.showDdl=true
-      - datasource.cleardown.cron=0 19 21 * * *
-      - datasource.dialect=org.hibernate.dialect.MySQL57Dialect
-      - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri-fhir/STU3
-      - datasource.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri-fhir/STU3
-    ports:
-      - 8080:8080
-    extra_hosts:
-      # Define an alias to loop back for REST Connections
-      - "${FHIR_SERVER_BASE_HOST}:127.0.0.1"
-    volumes:
-      - tomcat-log-volume:/usr/local/tomcat/logs
-    networks:
-      ccri_net:
-        ipv4_address: 172.168.240.10
 
-  ccrisql:
-    container_name: ccrisql
-    image: mysql:5.7.20
-    environment:
-      - MYSQL_ROOT_PASSWORD=mypassword
-      - MYSQL_DATABASE=careconnect
-      - MYSQL_USER=${MYSQL_DB_USER}
-      - MYSQL_PASSWORD=${MYSQL_DB_PASSWORD}
-    ports:
-      - 43306:3306
-    networks:
-      - ccri_net
-    command: mysqld --character-set-server=utf8 --collation-server=utf8_bin --innodb_lock_wait_timeout=300 --transaction-isolation=READ-UNCOMMITTED
-    healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-      timeout: 20s
-      retries: 10
+<table style="min-width:100%;width:100%">
 
-  ccrigateway:
-    container_name: ccrigateway
-    build: ccri-fhirgateway
-    image: thorlogic/ccri-fhirgateway:${CRRI_VERSION}
-    environment:
-      - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri-fhir/STU3
-      - fhir.resource.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri-fhir/STU3
-      - fhir.restserver.serverBase=http4://${FHIR_SERVER_BASE_HOST}/ccri-fhir/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-    depends_on:
-      - ccri
-    ports:
-      - 80:80
-    extra_hosts:
-      # Define an alias to the CCRI Container to ensure that the correct Server Base is displayed by HAPI
-      - "${FHIR_SERVER_BASE_HOST}:172.168.240.10"
-    volumes:
-      - gateway-log-volume:/usr/local/tomcat/logs
-    networks:
-      - ccri_net
+    <tr id="clinical">
+        <th style="width:15%;">Service</th>
+        <th style="width:15%;">Type</th>
+        <th style="width:40%;">Base access URL</th>
+    </tr>
+    <tr>
+        <td>ccriserver</td>
+        <td>FHIR Server</td>
+        <td>http://127.0.0.1:8109/ccri-fhirserver/STU3/</td>    
+    </tr>
+    <tr>
+        <td>ccrifhir</td>
+        <td>FHIR Server</td>
+        <td>http://127.0.0.1:8105/ccri-fhir/STU3/</td>    
+    </tr>
+    <tr>
+        <td>ccridocument</td>
+        <td>FHIR Server</td>
+        <td>http://127.0.0.1:8107/STU3/</td>    
+    </tr>
+    <tr>
+        <td>ccriui</td>
+        <td>FHIR Explorer Application</td>
+        <td>http://127.0.0.1:81/ccri/</td>    
+    </tr>
+</table>
 
-volumes:
-  tomcat-log-volume:
-  gateway-log-volume:
-
-networks:
-  ccri_net:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-      - subnet: 172.168.240.0/24
-
-```
-
-### Docker Compose File for Sample Log Monitoring
-
-`docker-compose-elk.yaml`
-```YAML
-version: '3'
-services:
-  elk:
-    image: sebp/elk:562
-    volumes:
-      - ./elk/logstash/conf/20-filter.conf:/etc/logstash/conf.d/20-filter.conf:ro
-    ports:
-      - "5601:5601"
-      - "9200:9200"
-      - "5044:5044"
-    networks:
-      - elknet
-
-  filebeat:
-    image: docker.elastic.co/beats/filebeat:5.6.2
-    volumes:
-      - tomcat-log-volume:/var/log/tomcat:ro
-      - gateway-log-volume:/var/log/gateway:ro
-      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
-      - ./elk/certs/logstash-beats.crt:/etc/pki/tls/certs/logstash-beats.crt:ro
-    depends_on:
-      - elk
-    links:
-      - elk
-    networks:
-      - elknet
-
-  nginx:
-    image: nginx
-    depends_on:
-      - elk
-    volumes:
-      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./nginx/conf.d/.htpasswd:/etc/nginx/.htpasswd:ro
-    ports:
-      - 20001:20001
-    networks:
-      - elknet
-
-volumes:
-  tomcat-log-volume:
-  gateway-log-volume:
-
-networks:
-  elknet:
-    driver: bridge
-
-```
 
 ## Administration Scripts
 
@@ -283,31 +361,25 @@ networks:
 docker-compose up -d
 ```
 
-#### Start Server with ELK Log Monitoring
-`startServerWithElk.sh`
-```Bash
-#!/usr/bin/env bash
-docker-compose -f docker-compose.yml -f docker-compose-elk.yml start
-```
 
 #### Stop Server
 `stopServer.sh`
 ```Bash
 #!/usr/bin/env bash
-docker-compose -f docker-compose.yml -f docker-compose-elk.yml stop
+docker-compose -f docker-compose.yml stop
 ```
 
 #### View Details of Running Docker Containers
 `serverStatus.sh`
 ```Bash
 #!/usr/bin/env bash
-docker-compose -f docker-compose.yml -f docker-compose-elk.yml ps
+docker-compose -f docker-compose.yml ps
 ```
 
 #### View the Logs for the CCRI Service
 ```Bash
 #!/usr/bin/env bash
-docker-compose logs ccri
+docker-compose logs ccriserver
 ```
 
 
