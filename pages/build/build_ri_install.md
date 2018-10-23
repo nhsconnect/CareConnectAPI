@@ -208,7 +208,7 @@ networks:
 
 Follow the instructions for the appropriate operating system on https://docs.docker.com/engine/installation/ to install Docker (minimum version 17.06.0) on the computer which will act as the CCRI Server.  Docker Community Edition (CE) is sufficient for our requirements.  
 
-Docker Compose will be automatically installed as part of Docker for Mac, and Docker for Windows.  Docker Compose will needed to be installed independently on Linux, (see https://docs.docker.com/compose/install/ )
+Docker Compose will be automatically installed as part of Docker for Mac, and Docker for Windows.  Docker Compose will need to be installed independently on Linux, (see https://docs.docker.com/compose/install/ )
 
 
 ##### Install Docker Compose on Linux
@@ -254,7 +254,7 @@ MYSQL_DB_USER=fhirjpa
 MYSQL_DB_PASSWORD=fhirjpa
 ```
 
-The name of the FHIR_SERVER_BASE_HOST will be be the host & domain which will be used to access the FHIR Gateway Server.  The client applications/browsers who access the FHIR Gateway must be able to resolve this address and so it should be added to the client's host file if this is not a public address.
+The name of the FHIR_SERVER_BASE_HOST will be the host and domain that will be used to access the FHIR Gateway Server. The client applications/browsers who access the FHIR Gateway must be able to resolve this address and so it should be added to the client's host file if this is not a public address.
 
 `\etc\hosts`
 ```
@@ -388,7 +388,7 @@ docker-compose logs ccriserver
 {% include version.html version="3" function="Provide 14 STU3 (PractionerRole added in STU3) Care Connect profiles with example data for one care setting with audit of use and accessible by unsecure API interaction
 " deliver="8th December 2017" %}
 
-Check out [Versions](build_ri_version.html) for more information about the current released version, downloading options, use and future verions.
+Check out [Versions](build_ri_version.html) for more information about the current released version, downloading options, use and future versions.
 
 
 # Contribute #
