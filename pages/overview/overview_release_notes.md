@@ -12,7 +12,8 @@ summary: Summary release notes of the versions released in Care Connect API Impl
 ## 2.3.1-alpha.0 ##
 
 Updated
-  - Minor spelling updates identified
+  - Minor spelling updates identified 
+  - Minor link updates
 
 ## 2.3.0-alpha.0 ##
 
