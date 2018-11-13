@@ -11,11 +11,11 @@ summary: "Guidance on using FHIR with Laboratory and Radiology"
 
 {% include custom/ihe.reference.html apicontent="[Observation](api_diagnostics_observation.html)" ihecontent="[IHE Laboratory (LAB) - Laboratory Testing Workflow](http://www.ihe.net/uploadedFiles/Documents/Laboratory/IHE_LAB_TF_Vol1.pdf)" patterncontent="[Message Broker](https://developer.nhs.uk/library/architecture/integration-patterns/message-broker/)" %}
 
+{% include important.html content="The following use case has been updated alongside UHS and is accurate at the time of being written. At has been left inside the guidance as an example of creating a Care Connect FHIR interface." %}
+
 ## 1. Overview ##
 
 {% include custom/usecase.html content="[University Hospital Southampton](engage_poc_uhscc.html)" %}
-
-[Work In Progress]
 
 Many [DiagnosticReport](http://hl7.org/fhir/DSTU2/diagnosticreport.html) will be generated from HL7v2 ORU messages and similarly [DiagnosticOrder](http://hl7.org/fhir/DSTU2/diagnosticorder.html) will be HLv2 ORM messages. Details on how they can be converted to [FHIR Messaging](design_exchange_patterns.html#3-messaging) can be found on this blog by [HL7 Message examples: version 2 and FHIR](http://ringholm.com/docs/04350_mapping_HL7v2_FHIR.htm). A java example which  converts a sample HL7v2 ORU^R01 message to FHIR resources calls can be found on [GitHub](https://github.com/nhsconnect/careconnect-java-examples/tree/master/UHSH7v2Diagnostics)
 

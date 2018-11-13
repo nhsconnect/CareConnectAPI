@@ -25,7 +25,7 @@ The Design & Build section contains descriptions of approaches and suggestions f
 	<td>Describes how the Care Connect Reference Implementation was built and offers inspiration for the design and connection of your own implementations</td>
 </tr>
 <tr id="step3">
-	<td>Build (Work in Progress)</td>
+	<td>Build</td>
 	<td>A collection of tools and descriptions of aspects to consider while building your own Care Connect implementation</td>
 </tr>
 </table>

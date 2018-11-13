@@ -83,7 +83,7 @@ Send Secure Request
 
 ## Register a OAuth2 Client ##
 
-Access via an OAuth2 client demonstrates how a website / mobile app could interact with an end user. The starting point for this lies in the Capability Statement of a FHIR Server which indicates the location of the Authorisation Server.
+Access via an OAuth2 client demonstrates how a website / mobile app could interact with an end user. The starting point for this lies in the Capability Statement (example) of a FHIR Server which indicates the location of the Authorisation Server.
 
 <p style="text-align:center;"><img src="images/build/Security_Capability_Statement.JPG" alt="Retrieve Capability Statement" title="Retrieve Capability Statement" style="width:80%"></p>
 
@@ -106,7 +106,7 @@ Complete your details, for details on Access Scopes please see [SMART on FHIR - 
 
 <p style="text-align:center;"><img src="images/build/Security_OAuth2_Register3.JPG" alt="OAuth2 Client Access" title="OAuth2 Client Access" style="width:50%"></p>
 
-Take a note of the `client_id` and `client_secret` they will be used to establish the secure connection. The diagram below shows a redacted screenshot of a access token.
+Take a note of the `client_id` and `client_secret` they will be used to establish the secure connection. The diagram below shows a redacted screenshot of an example access token.
 
 <p style="text-align:center;"><img src="images/build/Security_OAuth2_Register4.png" alt="OAuth2 Client Secret" title="OAuth2 Client Secret" style="width:80%"></p>
 

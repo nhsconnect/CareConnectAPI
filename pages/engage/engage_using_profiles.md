@@ -7,7 +7,7 @@ permalink: engage_using_profiles.html
 summary: "A process to help get you started using Care Connect Profiles in your environment"
 ---
 
-{% include important.html content="The process outlined is still a work in progress. Please try and it and let us know your experience of using it." %}
+{% include important.html content="The process outlined is an example of using Care Connect profiles to create use cases. Please try and it and let us know your experience of using it." %}
 
 INTEROPen has worked with health care providers and system vendors to help define how the INTEROPen community can start using the profiles. The process is being refined through proof of concepts and by the community. So please contribute to help improve the community and fulfill the potential of Care Connect.
 
