@@ -21,7 +21,7 @@ The development of the Care Connect standard relies on community engagement cura
 
 [Michael's story](http://www.interopen.org/content/IO4%20-%20Proposed%20project%20(Michael's%20story).pdf) has been widely developed, clinical assured and demonstrated at the [INTEROPen summit](https://docs.google.com/document/d/1j1ZKQjXAAxz-Arn9lKQXuwpmlv7kMoo_0jEmqgKQKOg/edit#). This scenario offers a theoretical platform on which to explore how Care Connect profiles may be mapped and a solution defined. While each scenario can support a number of user stories, these are expressed in a far simpler form to a real world counterpart. Also, these examples refer to a solution that is underpinned with some form of interoperability requirement. The translation into user stories doesn't attempt to describe the systems that would be required to support each definition. Currently, this page provides a simple association to a relevant profile that has been documented within this implementation guide.
 
-[Michael's Story](/CareConnectAPI/engage_michaelsstory.html)
+[Michael's Story](/engage_michaelsstory.html)
 <br><br>
 ## Bristol Connecting Care ##
  
