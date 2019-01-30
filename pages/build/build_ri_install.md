@@ -33,17 +33,19 @@ This is an example of the `docker-compose.yml` file which defines several servic
 version: '2.1'
 services:
 
+# Care Connect Query API
+
   ccrisql:
     container_name: ccrisql
     image: thorlogic/ccri-sql${IMAGE_TAG}
     environment:
-    - POSTGRES_DB=careconnect
-    - POSTGRES_USER=${MYSQL_DB_USER}
-    - POSTGRES_PASSWORD=${MYSQL_DB_PASSWORD}
+     - POSTGRES_DB=careconnect
+     - POSTGRES_USER=${MYSQL_DB_USER}
+     - POSTGRES_PASSWORD=${MYSQL_DB_PASSWORD}
     ports:
-    - 5433:5432
+     - 5434:5432
     networks:
-    - ccri_net
+     - ccri_net
 
   ccriserver:
     container_name: ccriserver
@@ -59,49 +61,29 @@ services:
       - datasource.driver=org.postgresql.Driver
       - datasource.path=5432/careconnect
       - datasource.vendor=postgresql
-      - datasource.showSql=true
-      - datasource.showDdl=true
+      - datasource.showSql=false
+      - datasource.showDdl=false
       - datasource.cleardown.cron=0 19 21 * * *
       - datasource.dialect=org.hibernate.dialect.PostgreSQL9Dialect
-      - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri/fhir/STU3
-      - datasource.serverBase=http://${FHIR_SERVER_BASE_HOST}/ccri/fhir/STU3
+      - ccri.implementation.description=Care Connect Reference Implementation
+      - ccri.software.version=3.7.1
+      - ccri.software.name=CCRI-Server
+      - ccri.server=Care Connect API (unsecured)
+      - ccri.server.base=http://${FHIR_SERVER_BASE_HOST}/ccri-fhir/STU3
+      - ccri.guide=https://nhsconnect.github.io/CareConnectAPI/
+      - ccri.CRUD_create=true
+      - ccri.oauth2=false
     ports:
-      - 8109:8186
+      - 8186:8186
     extra_hosts:
       # Define an alias to loop back for REST Connections
       - "${FHIR_SERVER_BASE_HOST}:127.0.0.1"
     volumes:
       - tomcat-log-volume:/usr/local/tomcat/logs
     networks:
-      ccri_net:
-        ipv4_address: 172.168.240.10
+      - ccri_net
 
-
-  ccrifhir:
-    container_name: ccrifhir
-    image: thorlogic/ccri-fhir${IMAGE_TAG}
-    environment:
-      - fhir.restserver.serverBase=http4://ccriserver:8186/ccri-fhirserver/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-      - fhir.restserver.edmsBase=http4://ccridocument:8181/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-      - fhir.restserver.tieBase=http4://ccriintegration:8182/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-      - jolokia.username=HSFAdmin
-      - jolokia.password=h5fadm!n
-      - ccri.software.version=3.7
-      - ccri.software.name=Care Connect RI FHIR Server
-      - ccri.server=Care Connect API (unsecured)
-      - ccri.server.base=https://data.developer.nhs.uk/ccri-fhir/STU3
-      - ccri.guide=https://nhsconnect.github.io/CareConnectAPI/
-    depends_on:
-      - ccriserver
-    ports:
-      - 8105:8183
-    extra_hosts:
-      - "${FHIR_SERVER_BASE_HOST}:172.168.240.10"
-    volumes:
-      - gateway-log-volume:/usr/local/tomcat/logs
-    networks:
-      ccri_net:
-        ipv4_address: 172.168.240.14
+# Data Load imports a set of sample data into the reference implementation (optional)
 
   ccridataload:
     container_name: ccridataload
@@ -109,19 +91,19 @@ services:
     depends_on:
     - ccriserver
     environment:
-    - FHIR_SERVER=http://ccriserver:8186/ccri-fhirserver/STU3
+    - FHIR_SERVER=http://ccriserver:8186/ccri-fhir/STU3
     - POSTGRES_JDBC=postgresql://ccrisql:5432/careconnect
     - POSTGRES_USER=${MYSQL_DB_USER}
     - POSTGRES_USERNAME=${MYSQL_DB_USER}
     - POSTGRES_PASSWORD=${MYSQL_DB_PASSWORD}
     networks:
-      ccri_net:
-        ipv4_address: 172.168.240.13
+    - ccri_net
 
+# Care Connect (Unstructured) Document API implementation
 
   ccrimongo:
       container_name: ccrimongo
-      image: mongo:3.6.3
+      image: mongo:4.0.3
       ports:
         - 27107:27107
       networks:
@@ -135,59 +117,93 @@ services:
      links:
        - ccrimongo
      environment:
-       - fhir.resource.serverBase=http://127.0.0.1:8080/careconnect-gateway/STU3
-       - fhir.resource.serverName=Care Connect RI FHIR Server
-       - fhir.resource.serverVersion=3.7.0-SNAPSHOT
+       - ccri.server.base=https://data.developer.nhs.uk/ccri-document/STU3
+       - ccri.software.version=3.7.1
+       - ccri.software.name=CCRI Document
+       - ccri.server=CCRI Document FHIR Server
+       - ccri.validate_flag=false
+       - ccri.guide=https://nhsconnect.github.io/CareConnectAPI/
        - spring.data.mongodb.uri=mongodb://ccrimongo:27017/careconnect-nosql
        - spring.data.mongodb.database=careconnect-nosql
      ports:
-       - 8107:8181
+       - 8181:8181
      volumes:
        - mongo-log-volume:/usr/local/tomcat/logs
      networks:
-       ccri_net:
-         ipv4_address: 172.168.240.11
+       - ccri_net
 
-  ccriintegration:
-    container_name: ccriintegration
-    image: thorlogic/ccri-tie${IMAGE_TAG}
+# Care Connect Get Record API and Transfer of Care Endpoint
+
+  ccrimessaging:
+    container_name: ccrimessaging
+    image: thorlogic/ccri-messaging${IMAGE_TAG}
     depends_on:
     - ccriserver
     environment:
-    - fhir.restserver.serverBase=http4://ccriserver:8186/ccri-fhirserver/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-    - fhir.restserver.eprBase=http://ccriserver:8186/ccri-fhirserver/STU3
-    - fhir.resource.serverName=Care Connect TIE FHIR Server
-    - fhir.resource.serverVersion=3.7.0-SNAPSHOT
+    - ccri.server.base=http://data.developer.nhs.uk/ccri-messaging/STU3
+    - ccri.edms.server.base=http://localhost:8181/ccri-document/STU3
+    - ccri.software.version=3.7
+    - ccri.software.name=CCRI Messaging
+    - ccri.server=CCRI Messaging FHIR Server
+    - ccri.validate_flag=false
+    - ccri.guide=https://nhsconnect.github.io/CareConnectAPI/
+    - fhir.restserver.eprBase=http4://ccriserver:8186/ccri-fhir/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+    - fhir.restserver.edmsBase=http4://ccridocument:8181/ccri-document/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
+    - fhir.restserver.tkwBase=http4://192.168.128.36?throwExceptionOnFailure=true&bridgeEndpoint=true
+    - org.slf4j.simpleLogger.defaultLogLevel=info
     ports:
     - 8182:8182
     volumes:
     - tie-log-volume:/usr/local/tomcat/logs
     networks:
-      ccri_net:
-        ipv4_address: 172.168.240.12
+      - ccri_net
 
-  ccriui:
-    container_name: ccriui
-    image: thorlogic/ccri-management${IMAGE_TAG}
-    environment:
-    - datasource.ui.serverBase=http://${FHIR_SERVER_BASE_HOST}:8183/ccri-fhir/STU3
-    - fhir.resource.serverBase=http://${FHIR_SERVER_BASE_HOST}:8105/ccri-fhir/STU3
-    - fhir.restserver.serverBase=http4://${FHIR_SERVER_BASE_HOST}/careconnect-ri/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-    - fhir.restserver.edmsBase=http4://127.0.0.1:8184/STU3?throwExceptionOnFailure=false&bridgeEndpoint=true
-    depends_on:
-    - ccrifhir
+# App to allow keycloak login to the apps
+  logon:
+    container_name: ccrilogon
+    image: thorlogic/ccri-logon${IMAGE_TAG}
     ports:
-    - 81:8187
+      - 4200:4200
+
+# Renders (Transfer Of Care) FHIR Documents and provides a FHIR document import
+
+  documentviewer:
+    container_name: ccridocumentviewer
+    image: thorlogic/ccri-documentviewer${IMAGE_TAG}
+    environment:
+    - fhir.resource.serverBase=http://localhost:8186/ccri-fhir/STU3
+    - fhir.messaging.serverBase=http://localhost:8182/ccri-messaging/STU3
+    depends_on:
+    - ccriserver
+    - ccrimessaging
+    ports:
+    - 8080:4201
     extra_hosts:
     # Define an alias to the CCRI Container to ensure that the correct Server Base is displayed by HAPI
-    - "${FHIR_SERVER_BASE_HOST}:172.168.240.14"
+    - "${FHIR_SERVER_BASE_HOST}:172.168.250.14"
     networks:
     - ccri_net
 
+# provides technical demonstration of the Care Connect API
+
+  fhirexplorer:
+    container_name: fhirexplorer
+    image: thorlogic/ccri-fhirexplorer${IMAGE_TAG}
+    environment:
+      - fhir.resource.serverBase=http://localhost:8186/ccri-fhir/STU3
+      - fhir.messaging.serverBase=http://localhost:8182/ccri-messaging/STU3
+    depends_on:
+      - ccriserver
+    ports:
+      - 8081:8188
+    extra_hosts:
+      # Define an alias to the CCRI Container to ensure that the correct Server Base is displayed by HAPI
+      - "${FHIR_SERVER_BASE_HOST}:172.168.250.14"
+    networks:
+      - ccri_net
+
 volumes:
   tomcat-log-volume:
-  gateway-log-volume:
-  gatewayssl-log-volume:
   tie-log-volume:
   mongo-log-volume:
   sqlvol:
@@ -195,10 +211,6 @@ volumes:
 networks:
   ccri_net:
     driver: bridge
-    ipam:
-      driver: default
-      config:
-      - subnet: 172.168.240.0/24
 
 
 
@@ -300,7 +312,6 @@ Core FHIR Server Functionality
 <br>
 <br>
 * **ccriserver** - The core CCRI FHIR Server which simulates an Electronic Patient Record (EPR)
-* **ccrifhir** - This provides the public facing FHIR Server on top of the core CCRI FHIR Server. The purpose of this is to limit the services an external user can access.
 * **ccridataload** - This loads a set of sample data into the CCRI FHIR Server
 * **ccrisql** - The PostgreSql database which provides the data persistence for the FHIR Resources.
 
@@ -315,8 +326,9 @@ Additional FHIR Server (document storage) - Optional
 Other FHIR components - Optional
 <br>
 <br>
-* **ccriui** - FHIR Explorer application which provides access to the CCRI FHIR Server via a user interface.
-* **ccriintegration** - This provides support for extended operations.
+* **fhirexplorer** - FHIR Explorer application which provides access to the CCRI FHIR Server via a user interface.
+* **documentviewer** - Application that provides 'Transfer of Care' FHIR Document rendering.
+* **ccrimessaging** - This provides support for extended operations and support for FHIR Messaging.
 <br>
 <br>
 
@@ -332,22 +344,27 @@ Other FHIR components - Optional
     <tr>
         <td>ccriserver</td>
         <td>FHIR Server</td>
-        <td>http://127.0.0.1:8109/ccri-fhirserver/STU3/</td>    
+        <td>http://127.0.0.1:8186/ccri-fhir/STU3/</td>    
     </tr>
     <tr>
-        <td>ccrifhir</td>
+        <td>ccrimessaging</td>
         <td>FHIR Server</td>
-        <td>http://127.0.0.1:8105/ccri-fhir/STU3/</td>    
+        <td>http://127.0.0.1:8182/ccri-messaging/STU3/</td>    
     </tr>
     <tr>
         <td>ccridocument</td>
         <td>FHIR Server</td>
-        <td>http://127.0.0.1:8107/STU3/</td>    
+        <td>http://127.0.0.1:8181/ccri-document/STU3/</td>    
     </tr>
     <tr>
-        <td>ccriui</td>
+        <td>fhirexplorer</td>
         <td>FHIR Explorer Application</td>
-        <td>http://127.0.0.1:81/ccri/</td>    
+        <td>http://127.0.0.1:8081/ccri/</td>    
+    </tr>
+    <tr>
+        <td>documentviewer</td>
+        <td>FHIR Document Viewer Application</td>
+        <td>http://127.0.0.1:8080/document-viewer/</td>    
     </tr>
 </table>
 
