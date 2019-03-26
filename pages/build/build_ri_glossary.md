@@ -26,7 +26,7 @@ The instructions are intended to be read alongside access to the source code for
 
 The high level architectural view of the Reference Implementation.
 
-<div style="text-align:center;"><img src="images/build/Tech_arch_R4.png" alt="High level architectural view" title="Technical view and docker containers" style="width:100%"></div>
+<div style="text-align:center;"><img src="images/build/Tech_arch_R5.png" alt="High level architectural view" title="Technical view and docker containers" style="width:100%"></div>
 <br>
 
 |Term|Description|

@@ -26,7 +26,7 @@ The following is a list of what is in scope for this released version of the Ref
 - Implemented using HTTP1.1 API standards
 - STU3 FHIR standard
 - Care Connect Patient profile published on the Implementation Guide alpha v1.8
-- HAPI server v3
+- HAPI Server v3
 - Synthetic RI data generated to complete the profile information
 
 
@@ -44,13 +44,13 @@ Are recorded in the Care Connect Reference Implementation which can be found:
 ## Download ##
 To download and run the code please follow the following links.
 <br/>
-Code: [Release 4 Git repository of code](https://github.com/nhsconnect/careconnect-reference-implementation/tree/v3.3.2){:target="_blank"}
+Code: [Release 5 Git repository of code](https://github.com/nhsconnect/careconnect-reference-implementation/tree/3.8){:target="_blank"}
 
 Clone: Version 3 Release 4 clone of repository by 
 
 ```Bash
 git clone git@github.com:nhsconnect/careconnect-reference-implementation.git
-git checkout tags/v3.3.2
+git checkout tags/3.8
 ```
 
 # Version Plan #

@@ -16,7 +16,7 @@ summary: "Security guidance to use the CCRI"
 
 This page provides an overview of the security guidance and access mechanisms to the Care Connect Reference Implementation (CCRI).
 
-<p style="text-align:center;"><img src="images/build/security.png" alt="Security architecture" title="Security architecture" style="width:100%"></p>
+<p style="text-align:center;"><img src="images/build/security_R5.png" alt="Security architecture" title="Security architecture" style="width:100%"></p>
 
 <br>
 The OAuth2 Secured resource endpoint is located at *{{ site.fhir_ref_impl_resource | xml_escape}}*
