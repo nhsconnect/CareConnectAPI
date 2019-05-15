@@ -12,7 +12,7 @@ summary: Providing an RESTful API for the first time is a journey. This page exp
 	
 # How to provide an API #
 
-The diagram below explains the parts involded in providing APIs. This implementation guide provides :
+The diagram below explains the parts involved in providing APIs. This implementation guide provides :
 - the starting point of providing APIs (in white);
 - descriptions and pointers of elements to getting working APIs within various infrastructures (in green); and
 - considerations when managing live API services (in yellow)
