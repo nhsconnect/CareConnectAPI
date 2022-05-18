@@ -200,3 +200,32 @@ There is no affiliation between INTEROPen and any of the suppliers listed below.
     <img style="max-width:100%;width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:0;" src="images/support/simplifier.png" alt="Simplifier Screenshot">
   </div>
 </div>
+
+
+## [MedVertical Records](https://medvertical.com/)
+
+<div style="display:flex;flex-wrap:wrap;padding:0 0 1em 0">
+  <div style="flex:3 1 60%;padding:0 0 1em 0;">
+    <p>Records allows you to view, validate and edit FHIR resources directly on any FHIR server. The list view is fully customizable and supports FHIRPath expressions. Individual resources are rendered as forms, considering profiles that display required fields and present validation messages in their context.</p>
+    <p>Records supports the following features:</p>
+    <ul>
+      <li>Customizable and filterable list view</li>
+      <li>Creation of new resources</li>
+      <li>Generation of form for resources based on profiles</li>
+      <li>Support of Slices and Extensions</li>
+      <li>Selection from simple value sets and CodeSystems</li>
+      <li>Instant & Server-side validation</li>
+      <li>Auto-fixing of errors in certain cases</li>
+      <li>Following direct and indirect references</li>
+    </ul>
+    <p>Records has been built to cover following Use Cases:</p>
+    <ul>
+      <li>View FHIR resources as a result of ETL route transformation and check validity against profiles</li>
+      <li>alidate, correct, and complete FHIR resources before processing them further for analysis</li>
+      <li>Document medical concepts directly on the FHIR server without the overhead of an eCRF system</li>
+    </ul>
+</div>
+  <div style="flex:1 6 40%;padding:0 1em 0 1em;min-width:15em;">
+    <img style="max-width:100%;width:100%;box-shadow: 0 0.2em 0.4em rgba(0, 94, 184,0.3);margin:0;" src="https://medvertical.com/fileadmin/editorial/records/patients_list.png" alt="Records Screenshot">
+  </div>
+</div>
